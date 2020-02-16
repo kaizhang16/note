@@ -1,0 +1,11 @@
+---
+title: "CSS"
+type: "docs"
+---
+
+# 对齐
+
+```css
+# 靠右对齐
+text-align: right;
+```

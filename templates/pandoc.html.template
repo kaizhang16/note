@@ -1,6 +1,9 @@
 <div class="book-page">
   <article class="markdown">
-    $body$
+$body$
+<div class="git-info">
+  更新于 $git-commit-date$
+</div>
   </article>
 </div>
 

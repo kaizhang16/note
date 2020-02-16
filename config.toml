@@ -1,9 +1,8 @@
 baseURL = "http://example.org/"
-languageCode = "en-us"
+languageCode = "zh-Hans"
 title = "凯的笔记"
 
 theme = "book"
-enableGitInfo = true
 
 [params]
   BookRepo = "https://github.com/kaizhang91/notes"
