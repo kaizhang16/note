@@ -1,0 +1,16 @@
+<div class="book-page">
+  <article class="markdown">
+    $body$
+  </article>
+</div>
+
+$if(toc)$
+<aside class="book-toc">
+  <nav id="$idprefix$TableOfContents" role="doc-toc">
+    $if(toc-title)$
+    <h2 id="$idprefix$toc-title">$toc-title$</h2>
+    $endif$
+    $table-of-contents$
+  </nav>
+</aside>
+$endif$

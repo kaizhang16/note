@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+/usr/bin/pandoc \
+  --from=markdown \
+  --to=html \
+  --mathjax \
+  --bibliography=content/references.bib \
+  --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
+  --metadata=link-citations:true \
+  --table-of-contents \
+  --template=templates/pandoc-template.html \
+  --quiet \
+  --metadata=toc-title:目录
