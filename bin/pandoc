@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+gitCommitDate=$(git show --format=%ci)
+
 /usr/bin/pandoc \
   --from=markdown \
   --to=html \
@@ -8,6 +10,7 @@
   --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --metadata=link-citations:true \
   --table-of-contents \
-  --template=templates/pandoc-template.html \
+  --template=templates/pandoc.html.template \
   --quiet \
-  --metadata=toc-title:目录
+  --metadata=toc-title:目录 \
+  --metadata="git-commit-date:${gitCommitDate}"
