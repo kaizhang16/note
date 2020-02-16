@@ -1,3 +1,10 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "凯的笔记"
+
+theme = "book"
+enableGitInfo = true
+
+[params]
+  BookSection = "*"
+  BookMenuBundle = "/menu"
