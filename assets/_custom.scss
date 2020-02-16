@@ -9,7 +9,17 @@
 }
 
 .git-info {
-    margin-top: 2em;
+    margin-top: 3em;
     text-align: right;
     color: #aaaaaa;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+
+    caption {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
 }
