@@ -3,10 +3,14 @@ title: "HTML"
 type: "docs"
 ---
 
-# Language Code
+# Language Code[@languageCodes]
 
 -----------------------------
 Language             ISO Code
 -------------------- --------
 Chinese (Simplified) zh-Hans
 -----------------------------
+
+: ISO 639-1 Language Codes {#tbl:languageCodes}
+
+# 参考文献
