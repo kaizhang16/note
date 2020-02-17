@@ -21,5 +21,12 @@ table {
     caption {
         margin-top: 1em;
         margin-bottom: 1.5em;
+        font-weight: bold;
+    }
+
+    tbody {
+        tr:hover {
+            background-color: #43494e;
+        }
     }
 }

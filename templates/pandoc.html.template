@@ -1,19 +1,6 @@
-<div class="book-page">
-  <article class="markdown">
 $body$
-<div class="git-info">
-  更新于 $git-commit-date$
-</div>
-  </article>
-</div>
 
-$if(toc)$
-<aside class="book-toc">
-  <nav id="$idprefix$TableOfContents" role="doc-toc">
-    $if(toc-title)$
-    <h2 id="$idprefix$toc-title">$toc-title$</h2>
-    $endif$
-    $table-of-contents$
-  </nav>
-</aside>
-$endif$
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="$idprefix$toc-title">$toc-title$</h2>
+  $table-of-contents$
+</nav>
