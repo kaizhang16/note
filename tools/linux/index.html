@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq Print strings without quotes[4] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01)." />
+<meta property="og:description" content="手册 tldr # 安装 sudo pacman -S tldr 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq 过滤[4] select(.name == &quot;TAG&quot;) Print strings without quotes[5] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/tools/linux/" />
-<meta property="article:modified_time" content="2020-02-17T18:11:23+08:00" />
+<meta property="article:modified_time" content="2020-02-17T21:29:11+08:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/en.search.min.1005b85d6998ab3ee08115fe0aef093f50c16fba78be0bc9c0847b03bbbafd54.js" integrity="sha256-EAW4XWmYqz7ggRX&#43;Cu8JP1DBb7p4vgvJwIR7A7u6/VQ="></script>
+<script defer src="/notes/en.search.min.688fd0742ab6cf229785aa869ca72a72f03ebb3b00f27850c6352e33de44eec7.js" integrity="sha256-aI/QdCq2zyKXhaqGnKcqcvA&#43;uzsA8nhQxjUuM95E7sc="></script>
 
 <!--
 Made with Book Theme
@@ -57,30 +57,31 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li><strong>数学</strong>
 <ul>
-<li><a href="math/linear-algebra">线性代数</a></li>
+<li><a href="/notes/math/linear-algebra/">线性代数</a></li>
 </ul>
 </li>
 <li><strong>视觉</strong>
 <ul>
-<li><a href="visual/unity">Unity</a></li>
+<li><a href="/notes/visual/unity/">Unity</a></li>
 </ul>
 </li>
 <li><strong>工具</strong>
 <ul>
-<li><a href="tools/writing">写作</a></li>
-<li><a href="tools/linux">Linux</a></li>
-<li><a href="tools/version-control">版本控制</a></li>
-<li><a href="tools/compress">压缩</a></li>
-<li><a href="tools/api">API</a></li>
+<li><a href="/notes/tools/writing/">写作</a></li>
+<li><a href="/notes/tools/linux/"class=active>Linux</a></li>
+<li><a href="/notes/tools/version-control/">版本控制</a></li>
+<li><a href="/notes/tools/compress/">压缩</a></li>
+<li><a href="/notes/tools/api/">API</a></li>
 </ul>
 </li>
 <li><strong>编程</strong>
 <ul>
-<li><a href="program/python">Python</a></li>
-<li><a href="program/golang">Golang</a></li>
-<li><a href="program/js">JavaScript</a></li>
-<li><a href="program/css">CSS</a></li>
-<li><a href="program/html">HTML</a></li>
+<li><a href="/notes/program/python/">Python</a></li>
+<li><a href="/notes/program/bash/">Bash</a></li>
+<li><a href="/notes/program/golang/">Golang</a></li>
+<li><a href="/notes/program/js/">JavaScript</a></li>
+<li><a href="/notes/program/css/">CSS</a></li>
+<li><a href="/notes/program/html/">HTML</a></li>
 </ul>
 </li>
 </ul>
@@ -132,37 +133,43 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="查找字符串">查找字符串</h1>
+<article class="markdown"><h1 id="手册">手册</h1>
+<h2 id="tldr">tldr</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 安装</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">sudo</span> pacman -S tldr</span></code></pre></div>
+<h1 id="查找字符串">查找字符串</h1>
 <h2 id="ripgrep">ripgrep</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 在 python 文件里搜索</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># 在 python 文件里搜索</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
 <h2 id="grepgrep">grep<span class="citation" data-cites="grep"><sup>[<a href="#ref-grep" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
 <h1 id="网络">网络</h1>
 <h2 id="curl">curl</h2>
 <h3 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">2</a>]</sup></span></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
 <h3 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">3</a>]</sup></span></h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
 <h1 id="终端">终端</h1>
 <h2 id="tmux">tmux</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># 列出会话</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">tmux</span> ls</span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># 创建新会话</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="ex">tmux</span> new -s myname</span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># 连接会话</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># 列出会话</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="ex">tmux</span> ls</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># 创建新会话</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="ex">tmux</span> new -s myname</span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="co"># 连接会话</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
 <h1 id="硬盘">硬盘</h1>
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
 </ul>
 <h1 id="jq">jq</h1>
-<h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
+<h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">4</a>]</sup></span></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
+<h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">5</a>]</sup></span></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
 <h1 id="cpu">CPU</h1>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-grep">
@@ -174,14 +181,21 @@ https://github.com/alex-shpak/hugo-book
 <div id="ref-curlUrlEncode">
 <p>[3] STACKOVERFLOW. How to urlencode data for curl command?[EB/OL](2017–08–14). <a href="https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command">https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command</a>.</p>
 </div>
+<div id="ref-jqCookbook">
+<p>[4] STEDOLAN. Cookbook[EB/OL](2019–10–05). <a href="https://github.com/stedolan/jq/wiki/Cookbook">https://github.com/stedolan/jq/wiki/Cookbook</a>.</p>
+</div>
 <div id="ref-jqNoQuotes">
-<p>[4] GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</p>
+<p>[5] GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</p>
 </div>
 </div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#手册">手册</a>
+  <ul>
+  <li><a href="#tldr">tldr</a></li>
+  </ul></li>
   <li><a href="#查找字符串">查找字符串</a>
   <ul>
   <li><a href="#ripgrep">ripgrep</a></li>
@@ -202,7 +216,8 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#硬盘">硬盘</a></li>
   <li><a href="#jq">jq</a>
   <ul>
-  <li><a href="#print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>5</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#cpu">CPU</a></li>
   <li><a href="#参考文献">参考文献</a></li>
@@ -219,9 +234,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/76875083b26b874392af58273d77959835a071ce" title='Last modified by kaizhang91 | 2020-02-17 18:11:23 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/3a035c92162d02faf4d8dbed9ba8fb88ef0eb682" title='Last modified by Kai Zhang | 2020-02-17 21:29:11 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-17 18:11:23 &#43;0800</span>
+      <span>2020-02-17 21:29:11 &#43;0800</span>
     </a>
   </div>
 
@@ -254,6 +269,11 @@ https://github.com/alex-shpak/hugo-book
   <script>
     
     document.querySelector(".book-toc").appendChild(document.getElementById("TableOfContents"));
+
+    
+    document.querySelectorAll("table").forEach(table => {
+        table.style.width = "80%";
+    });
 
     
     hljs.initHighlightingOnLoad();

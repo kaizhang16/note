@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Unity"><meta property="og:title" content="Unity" />
-<meta property="og:description" content="导入 .obj 文件时 x 轴会取反[1] 参考文献 [1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). https://stackoverflow.com/a/52044185.
-  目录  导入 .obj 文件时 x 轴会取反[1] 参考文献   " />
+<meta name="description" content="Bash"><meta property="og:title" content="Bash" />
+<meta property="og:description" content="颜色[1] 表 1: 终端颜色转义码列表    颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2] 表 2: 状态码    状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     备忘单 https://devhints.io/bash。
+参考文献 [1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详])." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/visual/unity/" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/program/bash/" />
 <meta property="article:modified_time" content="2020-02-17T21:29:11+08:00" />
-<title>Unity | 凯的笔记</title>
+<title>Bash | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -63,7 +63,7 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>视觉</strong>
 <ul>
-<li><a href="/notes/visual/unity/"class=active>Unity</a></li>
+<li><a href="/notes/visual/unity/">Unity</a></li>
 </ul>
 </li>
 <li><strong>工具</strong>
@@ -78,7 +78,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>编程</strong>
 <ul>
 <li><a href="/notes/program/python/">Python</a></li>
-<li><a href="/notes/program/bash/">Bash</a></li>
+<li><a href="/notes/program/bash/"class=active>Bash</a></li>
 <li><a href="/notes/program/golang/">Golang</a></li>
 <li><a href="/notes/program/js/">JavaScript</a></li>
 <li><a href="/notes/program/css/">CSS</a></li>
@@ -113,7 +113,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Unity</strong>
+  <strong>Bash</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -134,18 +134,96 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="导入-.obj-文件时-x-轴会取反unityimportobj">导入 <code>.obj</code> 文件时 x 轴会取反<span class="citation" data-cites="unityImportObj"><sup>[<a href="#ref-unityImportObj" role="doc-biblioref">1</a>]</sup></span></h1>
+<article class="markdown"><h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
+<div id="tbl:ansiEscapeCode">
+<table style="width:19%;">
+<caption>表 1: 终端颜色转义码列表</caption>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">颜色</th>
+<th style="text-align: left;">转义码</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">正常</td>
+<td style="text-align: left;"><code>\e[0m</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">红色</td>
+<td style="text-align: left;"><code>\e[31m</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">绿色</td>
+<td style="text-align: left;"><code>\e[32m</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<a href="#ref-bashExitCode" role="doc-biblioref">2</a>]</sup></span></h1>
+<div id="tbl:bashExitCode">
+<table style="width:43%;">
+<caption>表 2: 状态码</caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">状态码</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">其他错误</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">使用 shell 内建命令出错</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>126</code></td>
+<td style="text-align: left;">命令无法执行</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>127</code></td>
+<td style="text-align: left;">命令未找到</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>128</code></td>
+<td style="text-align: left;">无效的参数</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>130</code></td>
+<td style="text-align: left;">取消</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="备忘单">备忘单</h1>
+<p><a href="https://devhints.io/bash" class="uri">https://devhints.io/bash</a>。</p>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
-<div id="ref-unityImportObj">
-<p>[1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). <a href="https://stackoverflow.com/a/52044185">https://stackoverflow.com/a/52044185</a>.</p>
+<div id="ref-ansiEscapeCode">
+<p>[1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]). <a href="https://misc.flogisoft.com/bash/tip_colors_and_formatting">https://misc.flogisoft.com/bash/tip_colors_and_formatting</a>.</p>
+</div>
+<div id="ref-bashExitCode">
+<p>[2] ORNBO G. Linux and Unix exit code tutorial with examples[EB/OL](2019–11–16). <a href="https://shapeshed.com/unix-exit-codes/">https://shapeshed.com/unix-exit-codes/</a>.</p>
 </div>
 </div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#导入-.obj-文件时-x-轴会取反unityimportobj">导入 <code>.obj</code> 文件时 x 轴会取反<span class="citation" data-cites="unityImportObj"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#备忘单">备忘单</a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
