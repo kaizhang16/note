@@ -20,6 +20,15 @@
     </item>
     
     <item>
+      <title>Golang</title>
+      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/golang/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/golang/</guid>
+      <description>time 时间格式  2006-01-02 15:04:05 -0700  目录  time  时间格式    </description>
+    </item>
+    
+    <item>
       <title>HTML</title>
       <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -27,6 +36,16 @@
       <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</guid>
       <description>Language Code[1] 表 1: ISO 639-1 Language Codes    Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
   目录  Language Code[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/</guid>
+      <description>移动元素[1] newParent.appendChild(element); 参考文献 [1] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript.
+  目录  移动元素[1] 参考文献   </description>
     </item>
     
   </channel>

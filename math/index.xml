@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maths on 凯的笔记</title>
+    <link>https://kaizhang91.github.io/notes/math/</link>
+    <description>Recent content in Maths on 凯的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    
+	<atom:link href="https://kaizhang91.github.io/notes/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>线性代数</title>
+      <link>https://kaizhang91.github.io/notes/math/linear-algebra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/math/linear-algebra/</guid>
+      <description>相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  目录  相似矩阵   </description>
+    </item>
+    
+  </channel>
+</rss>

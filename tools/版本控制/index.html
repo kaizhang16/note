@@ -4,14 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="写作"><meta property="og:title" content="写作" />
-<meta property="og:description" content="Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
-Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book  Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
-目录  Pandoc 静态网站生成器  Hugo  常用命令 主题   Citation Style Language   " />
+<meta name="description" content="版本控制"><meta property="og:title" content="版本控制" />
+<meta property="og:description" content="Git Git Submodule # 下载 submodule git submodule update --init --force --recursive --depth=1 目录  Git  Git Submodule    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/tools/%E5%86%99%E4%BD%9C/" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" />
 
-<title>写作 | 凯的笔记</title>
+<title>版本控制 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -64,9 +62,9 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>工具</strong>
 <ul>
-<li><a href="/notes/tools/%E5%86%99%E4%BD%9C/"class=active>写作</a></li>
+<li><a href="/notes/tools/%E5%86%99%E4%BD%9C/">写作</a></li>
 <li><a href="/notes/tools/linux/">Linux</a></li>
-<li><a href="/notes/tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">版本控制</a></li>
+<li><a href="/notes/tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"class=active>版本控制</a></li>
 <li><a href="/notes/tools/api/">API</a></li>
 </ul>
 </li>
@@ -106,7 +104,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>写作</strong>
+  <strong>版本控制</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -127,40 +125,18 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="pandoc">Pandoc</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">pandoc</span> --print-default-template=html</span></code></pre></div>
-<h1 id="静态网站生成器">静态网站生成器</h1>
-<p>静态网站生成器列表：<a href="https://www.staticgen.com/" class="uri">https://www.staticgen.com/</a>。</p>
-<h2 id="hugo">Hugo</h2>
-<h3 id="常用命令">常用命令</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># 查看程序版本</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">hugo</span> version</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># 创建网站</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="ex">hugo</span> new site quickstart</span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># 添加内容</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="ex">hugo</span> new posts/my-first-post.md</span></code></pre></div>
-<h3 id="主题">主题</h3>
-<ul>
-<li>文档：<a href="https://github.com/alex-shpak/hugo-book" class="uri">https://github.com/alex-shpak/hugo-book</a></li>
-</ul>
-<h1 id="citation-style-language">Citation Style Language</h1>
-<p>Official repository for Citation Style Language (CSL) citation styles: <a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a>。</p>
+<article class="markdown"><h1 id="git">Git</h1>
+<h2 id="git-submodule">Git Submodule</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 下载 submodule</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#pandoc">Pandoc</a></li>
-  <li><a href="#静态网站生成器">静态网站生成器</a>
+  <li><a href="#git">Git</a>
   <ul>
-  <li><a href="#hugo">Hugo</a>
-  <ul>
-  <li><a href="#常用命令">常用命令</a></li>
-  <li><a href="#主题">主题</a></li>
+  <li><a href="#git-submodule">Git Submodule</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#citation-style-language">Citation Style Language</a></li>
   </ul>
 </nav>
 </article>

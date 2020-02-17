@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kaizhang91.github.io/notes/tools/api/</loc>
+    <lastmod>2020-02-17T13:39:34+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kaizhang91.github.io/notes/categories/</loc>
   </url>
   
@@ -11,12 +16,25 @@
   </url>
   
   <url>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/golang/</loc>
+  </url>
+  
+  <url>
     <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</loc>
   </url>
   
   <url>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/</loc>
+  </url>
+  
+  <url>
     <loc>https://kaizhang91.github.io/notes/tools/linux/</loc>
-    <lastmod>2020-02-17T11:22:39+08:00</lastmod>
+    <lastmod>2020-02-17T13:39:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/math/</loc>
+    <lastmod>2020-02-17T13:39:34+08:00</lastmod>
   </url>
   
   <url>
@@ -25,11 +43,20 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/tools/</loc>
-    <lastmod>2020-02-17T11:22:39+08:00</lastmod>
+    <lastmod>2020-02-17T13:39:34+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kaizhang91.github.io/notes/tools/%E5%86%99%E4%BD%9C/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/math/linear-algebra/</loc>
+    <lastmod>2020-02-17T13:39:34+08:00</lastmod>
   </url>
   
   <url>
@@ -38,7 +65,7 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/</loc>
-    <lastmod>2020-02-17T11:22:39+08:00</lastmod>
+    <lastmod>2020-02-17T13:39:34+08:00</lastmod>
   </url>
   
 </urlset>
