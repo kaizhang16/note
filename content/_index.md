@@ -10,13 +10,13 @@ type: docs
 - **视觉**
   - [Unity]({{< relref "/visual/unity" >}})
 - **工具**
-  - [写作]({{< relref "/tools/写作" >}})
+  - [写作]({{< relref "/tools/writing" >}})
   - [Linux]({{< relref "/tools/linux" >}})
-  - [版本控制]({{< relref "/tools/版本控制" >}})
+  - [版本控制]({{< relref "/tools/version-control" >}})
   - [API]({{< relref "/tools/api" >}})
 - **编程**
-  - [Python]({{< relref "/编程/python" >}})
-  - [Golang]({{< relref "/编程/golang" >}})
-  - [JavaScript]({{< relref "/编程/js" >}})
-  - [CSS]({{< relref "/编程/css" >}})
-  - [HTML]({{< relref "/编程/html" >}})
+  - [Python]({{< relref "/program/python" >}})
+  - [Golang]({{< relref "/program/golang" >}})
+  - [JavaScript]({{< relref "/program/js" >}})
+  - [CSS]({{< relref "/program/css" >}})
+  - [HTML]({{< relref "/program/html" >}})
