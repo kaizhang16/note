@@ -3,6 +3,15 @@ title: Linux
 type: docs
 ---
 
+# 手册
+
+## tldr
+
+```sh
+# 安装
+sudo pacman -S tldr
+```
+
 # 查找字符串
 
 ## ripgrep
@@ -54,6 +63,12 @@ tmux a -t myname
 - <https://github.com/bootandy/dust>
 
 # jq
+
+## 过滤[@jqCookbook]
+
+```sh
+select(.name == "TAG")
+```
 
 ## Print strings without quotes[@jqNoQuotes]
 

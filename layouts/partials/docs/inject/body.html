@@ -2,6 +2,11 @@
     // Table of contents
     document.querySelector(".book-toc").appendChild(document.getElementById("TableOfContents"));
 
+    // Table
+    document.querySelectorAll("table").forEach(table => {
+        table.style.width = "80%";
+    });
+
     // highlight.js
     hljs.initHighlightingOnLoad();
 </script>
