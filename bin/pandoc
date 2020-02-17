@@ -1,7 +1,5 @@
 #! /usr/bin/env bash
 
-gitCommitDate=$(git show --format=%ci)
-
 /usr/bin/pandoc \
   --from=markdown \
   --to=html \
@@ -14,5 +12,4 @@ gitCommitDate=$(git show --format=%ci)
   --quiet \
   --metadata=toc-title:目录 \
   --filter=pandoc-crossref \
-  --metadata=tableTitle:表 \
-  --metadata="git-commit-date:${gitCommitDate}"
+  --metadata=tableTitle:表
