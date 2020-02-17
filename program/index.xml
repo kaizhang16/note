@@ -54,7 +54,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/program/python/</guid>
-      <description>property class Parrot:  def __init__(self):  self._voltage = 100000   @property  def voltage(self):  &amp;quot;&amp;quot;&amp;quot;Get the current voltage.&amp;quot;&amp;quot;&amp;quot;  return self._voltage 目录  property   </description>
+      <description>内建函数[1] property 定义属性，默认只读。
+class Parrot:  def __init__(self):  self._voltage = 100000   @property  def voltage(self):  &amp;quot;&amp;quot;&amp;quot;Get the current voltage.&amp;quot;&amp;quot;&amp;quot;  return self._voltage classmethod 带 cls 的类方法。
+class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON. Built-in Functions[EB/OL]([日期不详]). https://docs.python.org/3/library/functions.html#built-in-functions.
+  目录  内建函数[1]  property classmethod  参考文献   </description>
     </item>
     
   </channel>

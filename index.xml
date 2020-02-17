@@ -72,7 +72,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/program/python/</guid>
-      <description>property class Parrot:  def __init__(self):  self._voltage = 100000   @property  def voltage(self):  &amp;quot;&amp;quot;&amp;quot;Get the current voltage.&amp;quot;&amp;quot;&amp;quot;  return self._voltage 目录  property   </description>
+      <description>内建函数[1] property 定义属性，默认只读。
+class Parrot:  def __init__(self):  self._voltage = 100000   @property  def voltage(self):  &amp;quot;&amp;quot;&amp;quot;Get the current voltage.&amp;quot;&amp;quot;&amp;quot;  return self._voltage classmethod 带 cls 的类方法。
+class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON. Built-in Functions[EB/OL]([日期不详]). https://docs.python.org/3/library/functions.html#built-in-functions.
+  目录  内建函数[1]  property classmethod  参考文献   </description>
     </item>
     
     <item>
@@ -94,6 +97,16 @@
       <description>Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
 目录  Pandoc 静态网站生成器  Hugo  常用命令 主题   Citation Style Language   </description>
+    </item>
+    
+    <item>
+      <title>压缩</title>
+      <link>https://kaizhang91.github.io/notes/tools/compress/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/tools/compress/</guid>
+      <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
+  目录  tar 打包时排除某些目录[1] 参考文献   </description>
     </item>
     
     <item>
