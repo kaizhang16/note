@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq Print strings without quotes[4] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu." />
+<meta property="og:description" content="查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq Print strings without quotes[4] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/tools/linux/" />
-<meta property="article:modified_time" content="2020-02-17T14:09:43+08:00" />
+<meta property="article:modified_time" content="2020-02-17T14:44:49+08:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/en.search.min.8d8710059f80be986941391fd9aa39b32bc08217218d898fc0aa6ecf043d894d.js" integrity="sha256-jYcQBZ&#43;AvphpQTkf2ao5syvAghchjYmPwKpuzwQ9iU0="></script>
+<script defer src="/notes/en.search.min.b2c8ce252951174ad857178c27a691abbda879894b6a9adfea5cd6d43bd33684.js" integrity="sha256-ssjOJSlRF0rYVxeMJ6aRq72oeYlLaprf6lzW1DvTNoQ="></script>
 
 <!--
 Made with Book Theme
@@ -144,11 +144,14 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
 <h1 id="终端">终端</h1>
 <h2 id="tmux">tmux</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># 创建新会话</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">tmux</span> new -s myname</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># 列出会话</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">tmux</span> ls</span>
 <span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># 连接会话</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># 创建新会话</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="ex">tmux</span> new -s myname</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># 连接会话</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
 <h1 id="硬盘">硬盘</h1>
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
@@ -214,9 +217,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/3b9b61f2a12e9b1f73a01dbd2cfc41e8544ecf62" title='Last modified by kaizhang91 | 2020-02-17 14:09:43 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/9d038ecc2d2c9384e3cd4ba3a7470310b56cf7e9" title='Last modified by Kai Zhang | 2020-02-17 14:44:49 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-17 14:09:43 &#43;0800</span>
+      <span>2020-02-17 14:44:49 &#43;0800</span>
     </a>
   </div>
 

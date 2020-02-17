@@ -63,7 +63,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/tools/linux/</guid>
-      <description>查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &amp;quot;string&amp;quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq Print strings without quotes[4] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.</description>
+      <description>查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &amp;quot;string&amp;quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq Print strings without quotes[4] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01).</description>
     </item>
     
     <item>
