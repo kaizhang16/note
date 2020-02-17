@@ -12,6 +12,8 @@ jobs:
       HUGO_VERSION: 0.64.1
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Install pandoc
       run: |
         curl -LO https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
