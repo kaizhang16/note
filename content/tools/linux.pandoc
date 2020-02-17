@@ -34,6 +34,18 @@ curl ... | tee /dev/null
 curl ... --data-urlencode "paramName=value"
 ```
 
+# 终端
+
+## tmux
+
+```sh
+# 创建新会话
+tmux new -s myname
+
+# 连接会话
+tmux a -t myname
+```
+
 # 硬盘
 
 - <https://github.com/bootandy/dust>
