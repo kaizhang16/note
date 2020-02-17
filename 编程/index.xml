@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编程s on 凯的笔记</title>
-    <link>http://example.org/%E7%BC%96%E7%A8%8B/</link>
+    <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/</link>
     <description>Recent content in 编程s on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     
-	<atom:link href="http://example.org/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CSS</title>
-      <link>http://example.org/%E7%BC%96%E7%A8%8B/css/</link>
+      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E7%BC%96%E7%A8%8B/css/</guid>
+      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/css/</guid>
       <description>对齐 # 靠右对齐 text-align: right; 目录  对齐   </description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>http://example.org/%E7%BC%96%E7%A8%8B/html/</link>
+      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/%E7%BC%96%E7%A8%8B/html/</guid>
+      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</guid>
       <description>Language Code[1] 表 1: ISO 639-1 Language Codes    Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
   目录  Language Code[1] 参考文献   </description>
     </item>
