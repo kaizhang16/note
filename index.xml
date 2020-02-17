@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>首页 on 凯的笔记</title>
+    <link>http://example.org/</link>
+    <description>Recent content in 首页 on 凯的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS</title>
+      <link>http://example.org/%E7%BC%96%E7%A8%8B/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/%E7%BC%96%E7%A8%8B/css/</guid>
+      <description>对齐 # 靠右对齐 text-align: right; 目录  对齐   </description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>http://example.org/%E7%BC%96%E7%A8%8B/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/%E7%BC%96%E7%A8%8B/html/</guid>
+      <description>Language Code[1] 表 1: ISO 639-1 Language Codes    Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
+  目录  Language Code[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://example.org/tools/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tools/linux/</guid>
+      <description>查看硬件信息 CPU cat /proc/cpuinfo jq Print strings without quotes[1] jq --raw-output ripgrep 参考文献 [1] GITHUB. Print strings without quotes[EB/OL](2013–12–20). https://github.com/stedolan/jq/issues/250.
+  目录  查看硬件信息  CPU  jq  Print strings without quotes[1]  ripgrep 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>写作</title>
+      <link>http://example.org/tools/%E5%86%99%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tools/%E5%86%99%E4%BD%9C/</guid>
+      <description>Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
+Hugo # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加内容 hugo new posts/my-first-post.md Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
+目录  Pandoc 静态网站生成器  Hugo  Citation Style Language   </description>
+    </item>
+    
+  </channel>
+</rss>
