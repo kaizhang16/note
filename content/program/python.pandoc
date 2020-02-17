@@ -3,7 +3,11 @@ title: "Python"
 type: "docs"
 ---
 
-# property
+# 内建函数[@pythonBuiltIn]
+
+## property
+
+定义属性，默认只读。
 
 ```py
 class Parrot:
@@ -15,3 +19,15 @@ class Parrot:
         """Get the current voltage."""
         return self._voltage
 ```
+
+## classmethod
+
+带 `cls` 的类方法。
+
+```py
+class C:
+    @classmethod
+    def f(cls, arg1, arg2, ...): ...
+```
+
+# 参考文献

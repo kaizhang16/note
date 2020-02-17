@@ -1,0 +1,4 @@
+{{ $filePath := .Get 0 }}
+{{ with .Site.GetPage $filePath }}
+{{ .Content }}
+{{ end }}

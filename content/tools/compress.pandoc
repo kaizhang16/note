@@ -1,0 +1,12 @@
+---
+title: "压缩"
+type: "docs"
+---
+
+# tar 打包时排除某些目录[@tarExclude]
+
+```sh
+tar --exclude='./folder1' --exclude='./folder2' -czvf filename.tar.gz .
+```
+
+# 参考文献
