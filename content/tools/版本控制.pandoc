@@ -1,0 +1,13 @@
+---
+title: "版本控制"
+type: "docs"
+---
+
+# Git
+
+## Git Submodule
+
+```sh
+# 下载 submodule
+git submodule update --init --force --recursive --depth=1
+```

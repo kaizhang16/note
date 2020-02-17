@@ -1,0 +1,12 @@
+---
+title: "JavaScript"
+type: "docs"
+---
+
+# 移动元素[@jsMoveElement]
+
+```js
+newParent.appendChild(element);
+```
+
+# 参考文献
