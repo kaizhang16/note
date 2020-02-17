@@ -39,6 +39,9 @@ curl ... --data-urlencode "paramName=value"
 ## tmux
 
 ```sh
+# 列出会话
+tmux ls
+
 # 创建新会话
 tmux new -s myname
 
