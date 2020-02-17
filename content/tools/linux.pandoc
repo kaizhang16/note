@@ -1,0 +1,55 @@
+---
+title: Linux
+type: docs
+---
+
+# 查找字符串
+
+## ripgrep
+
+```sh
+# 在 python 文件里搜索
+rg -tpy foo
+```
+
+## grep[@grep]
+
+```sh
+grep -rl "string" /path
+```
+
+# 网络
+
+## curl
+
+### 上传时显示进度条[@curlUploadProgress]
+
+```sh
+curl ... | tee /dev/null
+```
+
+### urlencode 参数[@curlUrlEncode]
+
+```sh
+curl ... --data-urlencode "paramName=value"
+```
+
+# 硬盘
+
+- <https://github.com/bootandy/dust>
+
+# jq
+
+## Print strings without quotes[@jqNoQuotes]
+
+```sh
+jq --raw-output
+```
+
+# CPU
+
+```sh
+cat /proc/cpuinfo
+```
+
+# 参考文献

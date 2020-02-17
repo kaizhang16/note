@@ -15,6 +15,8 @@ pandoc --print-default-template=html
 
 ## Hugo
 
+### 常用命令
+
 ```sh
 # 查看程序版本
 hugo version
@@ -25,6 +27,10 @@ hugo new site quickstart
 # 添加内容
 hugo new posts/my-first-post.md
 ```
+
+### 主题
+
+- 文档：<https://github.com/alex-shpak/hugo-book>
 
 # Citation Style Language
 
