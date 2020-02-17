@@ -15,6 +15,7 @@ type: docs
   - [版本控制]({{< relref "/tools/版本控制" >}})
   - [API]({{< relref "/tools/api" >}})
 - **编程**
+  - [Python]({{< relref "/编程/python" >}})
   - [Golang]({{< relref "/编程/golang" >}})
   - [JavaScript]({{< relref "/编程/js" >}})
   - [CSS]({{< relref "/编程/css" >}})
