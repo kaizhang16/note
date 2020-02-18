@@ -5,13 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="JavaScript"><meta property="og:title" content="JavaScript" />
-<meta property="og:description" content="导航到新地址[1] window.location.href = &#39;...&#39;; 得到链接的 href 属性[2] document.getElementById(&quot;aaa&quot;).href; 移动元素[3] newParent.appendChild(element); 参考文献 [1] STACKOVERFLOW. How to get the browser to navigate to URL in JavaScript [duplicate][EB/OL](2009–08–04). https://stackoverflow.com/a/1226718.
- [2] STACKOVERFLOW. Get local href value from anchor (a) tag[EB/OL](2013–03–15). https://stackoverflow.com/a/15439946.
- [3] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript.
-  目录  导航到新地址[1] 得到链接的 href 属性[2] 移动元素[3] 参考文献   " />
+<meta property="og:description" content="Array flatMap[1] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[2] window." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/program/js/" />
-<meta property="article:modified_time" content="2020-02-18T17:05:16+08:00" />
+<meta property="article:modified_time" content="2020-02-18T17:27:14+08:00" />
 <title>JavaScript | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -19,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.0b9159cbdd517f9d86b13bd67edd53f4fa5f34e67c29997951a50b523660b1bb.js" integrity="sha256-C5FZy91Rf52GsTvWft1T9PpfNOZ8KZl5UaULUjZgsbs="></script>
+<script defer src="/notes/cn.search.min.df81895ebd63d4a345a21766558c26f54c4f16999309e84470f5a70edc1f06d4.js" integrity="sha256-34GJXr1j1KNFohdmVYwm9UxPFpmTCehEcPWnDtwfBtQ="></script>
 
 <!--
 Made with Book Theme
@@ -136,31 +134,79 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<a href="#ref-jsNavigateURL" role="doc-biblioref">1</a>]</sup></span></h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">window</span>.<span class="va">location</span>.<span class="at">href</span> <span class="op">=</span> <span class="st">&#39;...&#39;</span><span class="op">;</span></span></code></pre></div>
-<h1 id="得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<a href="#ref-jsAHref" role="doc-biblioref">2</a>]</sup></span></h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1"></a><span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;aaa&quot;</span>).<span class="at">href</span><span class="op">;</span></span></code></pre></div>
-<h1 id="移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<a href="#ref-jsMoveElement" role="doc-biblioref">3</a>]</sup></span></h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">newParent</span>.<span class="at">appendChild</span>(element)<span class="op">;</span></span></code></pre></div>
+<article class="markdown"><h1 id="array">Array</h1>
+<h2 id="flatmapjsarrayflatmap">flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<a href="#ref-jsArrayFlatMap" role="doc-biblioref">1</a>]</sup></span></h2>
+<p>等价于先 <code>map()</code> 再 <code>flat()</code>。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">let</span> arr1 <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="va">arr1</span>.<span class="at">map</span>(x <span class="kw">=&gt;</span> [x <span class="op">*</span> <span class="dv">2</span>])<span class="op">;</span> </span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co">// [[2], [4], [6], [8]]</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="va">arr1</span>.<span class="at">flatMap</span>(x <span class="kw">=&gt;</span> [x <span class="op">*</span> <span class="dv">2</span>])<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">// [2, 4, 6, 8]</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">// only one level is flattened</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="va">arr1</span>.<span class="at">flatMap</span>(x <span class="kw">=&gt;</span> [[x <span class="op">*</span> <span class="dv">2</span>]])<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">// [[2], [4], [6], [8]]</span></span></code></pre></div>
+<h1 id="正则表达式">正则表达式</h1>
+<div id="tbl:jsCommonRegex">
+<table>
+<caption>表 1: JavaScript 常用正则表达式</caption>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 95%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">代码</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>\s</code></td>
+<td style="text-align: left;">单个空白字符，等价于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>\W</code></td>
+<td style="text-align: left;">非基本拉丁字母，等价于 <code>[^A-Za-z0-9_]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<a href="#ref-jsNavigateURL" role="doc-biblioref">2</a>]</sup></span></h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1"></a><span class="va">window</span>.<span class="va">location</span>.<span class="at">href</span> <span class="op">=</span> <span class="st">&#39;...&#39;</span><span class="op">;</span></span></code></pre></div>
+<h1 id="得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<a href="#ref-jsAHref" role="doc-biblioref">3</a>]</sup></span></h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;aaa&quot;</span>).<span class="at">href</span><span class="op">;</span></span></code></pre></div>
+<h1 id="移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<a href="#ref-jsMoveElement" role="doc-biblioref">4</a>]</sup></span></h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a><span class="va">newParent</span>.<span class="at">appendChild</span>(element)<span class="op">;</span></span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
+<div id="ref-jsArrayFlatMap">
+<p>[1] MDN. Array.prototype.flatMap()[EB/OL]([日期不详]). <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap</a>.</p>
+</div>
 <div id="ref-jsNavigateURL">
-<p>[1] STACKOVERFLOW. How to get the browser to navigate to URL in JavaScript [duplicate][EB/OL](2009–08–04). <a href="https://stackoverflow.com/a/1226718">https://stackoverflow.com/a/1226718</a>.</p>
+<p>[2] STACKOVERFLOW. How to get the browser to navigate to URL in JavaScript [duplicate][EB/OL](2009–08–04). <a href="https://stackoverflow.com/a/1226718">https://stackoverflow.com/a/1226718</a>.</p>
 </div>
 <div id="ref-jsAHref">
-<p>[2] STACKOVERFLOW. Get local href value from anchor (a) tag[EB/OL](2013–03–15). <a href="https://stackoverflow.com/a/15439946">https://stackoverflow.com/a/15439946</a>.</p>
+<p>[3] STACKOVERFLOW. Get local href value from anchor (a) tag[EB/OL](2013–03–15). <a href="https://stackoverflow.com/a/15439946">https://stackoverflow.com/a/15439946</a>.</p>
 </div>
 <div id="ref-jsMoveElement">
-<p>[3] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). <a href="https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript">https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript</a>.</p>
+<p>[4] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). <a href="https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript">https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript</a>.</p>
 </div>
 </div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#array">Array</a>
+  <ul>
+  <li><a href="#flatmapjsarrayflatmap">flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<span>1</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#正则表达式">正则表达式</a></li>
+  <li><a href="#导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<span>4</span>]</sup></span></a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -175,9 +221,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf4ff74b4d569cfad7a92e0ead7d0fb6ac11ee2f" title='最后修改者 Kai Zhang | 2020-02-18 17:05:16 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/6e98e9ca67d6e6a037383e33e58af38b1969ae50" title='最后修改者 Kai Zhang | 2020-02-18 17:27:14 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-18 17:05:16 &#43;0800</span>
+      <span>2020-02-18 17:27:14 &#43;0800</span>
     </a>
   </div>
 
@@ -213,7 +259,7 @@ https://github.com/alex-shpak/hugo-book
 
     
     document.querySelectorAll("table").forEach(table => {
-        table.style.width = "80%";
+        table.style.width = "auto";
     });
 
     

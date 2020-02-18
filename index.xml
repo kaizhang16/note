@@ -35,7 +35,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/program/css/</guid>
-      <description>对齐 # 靠右对齐 text-align: right; 目录  对齐   </description>
+      <description>对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
+  目录  对齐 width[1] 参考文献   </description>
     </item>
     
     <item>
@@ -63,10 +64,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/program/js/</guid>
-      <description>导航到新地址[1] window.location.href = &amp;#39;...&amp;#39;; 得到链接的 href 属性[2] document.getElementById(&amp;quot;aaa&amp;quot;).href; 移动元素[3] newParent.appendChild(element); 参考文献 [1] STACKOVERFLOW. How to get the browser to navigate to URL in JavaScript [duplicate][EB/OL](2009–08–04). https://stackoverflow.com/a/1226718.
- [2] STACKOVERFLOW. Get local href value from anchor (a) tag[EB/OL](2013–03–15). https://stackoverflow.com/a/15439946.
- [3] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript.
-  目录  导航到新地址[1] 得到链接的 href 属性[2] 移动元素[3] 参考文献   </description>
+      <description>Array flatMap[1] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&amp;gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&amp;gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[2] window.</description>
     </item>
     
     <item>

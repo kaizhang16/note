@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="CSS"><meta property="og:title" content="CSS" />
-<meta property="og:description" content="对齐 # 靠右对齐 text-align: right; 目录  对齐   " />
+<meta property="og:description" content="对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
+  目录  对齐 width[1] 参考文献   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/program/css/" />
-<meta property="article:modified_time" content="2020-02-17T15:51:29+08:00" />
+<meta property="article:modified_time" content="2020-02-18T17:27:14+08:00" />
 <title>CSS | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.0b9159cbdd517f9d86b13bd67edd53f4fa5f34e67c29997951a50b523660b1bb.js" integrity="sha256-C5FZy91Rf52GsTvWft1T9PpfNOZ8KZl5UaULUjZgsbs="></script>
+<script defer src="/notes/cn.search.min.df81895ebd63d4a345a21766558c26f54c4f16999309e84470f5a70edc1f06d4.js" integrity="sha256-34GJXr1j1KNFohdmVYwm9UxPFpmTCehEcPWnDtwfBtQ="></script>
 
 <!--
 Made with Book Theme
@@ -136,11 +137,23 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown"><h1 id="对齐">对齐</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1"></a># 靠右对齐</span>
 <span id="cb1-2"><a href="#cb1-2"></a>text-align<span class="in">: right</span>;</span></code></pre></div>
+<h1 id="widthcsswidth">width<span class="citation" data-cites="cssWidth"><sup>[<a href="#ref-cssWidth" role="doc-biblioref">1</a>]</sup></span></h1>
+<ul>
+<li>默认值：<code>auto</code></li>
+</ul>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-cssWidth">
+<p>[1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). <a href="https://www.w3schools.com/cssref/pr_dim_width.asp">https://www.w3schools.com/cssref/pr_dim_width.asp</a>.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#对齐">对齐</a></li>
+  <li><a href="#widthcsswidth">width<span class="citation" data-cites="cssWidth"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -154,9 +167,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/1fa9023a6622670c014fd4e172519f8da1063b9c" title='最后修改者 Kai Zhang | 2020-02-17 15:51:29 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/6e98e9ca67d6e6a037383e33e58af38b1969ae50" title='最后修改者 Kai Zhang | 2020-02-18 17:27:14 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-17 15:51:29 &#43;0800</span>
+      <span>2020-02-18 17:27:14 &#43;0800</span>
     </a>
   </div>
 
@@ -192,7 +205,7 @@ https://github.com/alex-shpak/hugo-book
 
     
     document.querySelectorAll("table").forEach(table => {
-        table.style.width = "80%";
+        table.style.width = "auto";
     });
 
     
