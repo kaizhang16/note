@@ -63,8 +63,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/program/js/</guid>
-      <description>移动元素[1] newParent.appendChild(element); 参考文献 [1] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript.
-  目录  移动元素[1] 参考文献   </description>
+      <description>导航到新地址[1] window.location.href = &amp;#39;...&amp;#39;; 得到链接的 href 属性[2] document.getElementById(&amp;quot;aaa&amp;quot;).href; 移动元素[3] newParent.appendChild(element); 参考文献 [1] STACKOVERFLOW. How to get the browser to navigate to URL in JavaScript [duplicate][EB/OL](2009–08–04). https://stackoverflow.com/a/1226718.
+ [2] STACKOVERFLOW. Get local href value from anchor (a) tag[EB/OL](2013–03–15). https://stackoverflow.com/a/15439946.
+ [3] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript.
+  目录  导航到新地址[1] 得到链接的 href 属性[2] 移动元素[3] 参考文献   </description>
     </item>
     
     <item>
