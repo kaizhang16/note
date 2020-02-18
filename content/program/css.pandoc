@@ -9,3 +9,9 @@ type: "docs"
 # 靠右对齐
 text-align: right;
 ```
+
+# width[@cssWidth]
+
+- 默认值：`auto`
+
+# 参考文献
