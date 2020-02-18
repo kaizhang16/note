@@ -9,4 +9,18 @@
 
     // highlight.js
     hljs.initHighlightingOnLoad();
+
+    // Search
+    const searchResults = document.getElementById("book-search-results");
+    document.getElementById("book-search-input").addEventListener("keyup", event => {
+        // Navigate to the first searchResults when press "Enter"
+        // 13 is "Enter" key
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            if (searchResults.childNodes.length > 0) {
+                const searchResult = searchResults.childNodes[0].childNodes[0];
+                window.location.href = searchResult.href;
+            }
+        }
+    });
 </script>
