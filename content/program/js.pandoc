@@ -3,6 +3,18 @@ title: "JavaScript"
 type: "docs"
 ---
 
+# 导航到新地址[@jsNavigateURL]
+
+```js
+window.location.href = '...';
+```
+
+# 得到链接的 href 属性[@jsAHref]
+
+```js
+document.getElementById("aaa").href;
+```
+
 # 移动元素[@jsMoveElement]
 
 ```js
