@@ -193,7 +193,10 @@ https://github.com/alex-shpak/hugo-book
 
   <script>
     
-    document.querySelector(".book-toc").appendChild(document.getElementById("TableOfContents"));
+    const tableOfContents = document.getElementById("TableOfContents");
+    const tableOfContents1 = tableOfContents.cloneNode(true);
+    document.querySelector(".book-toc").appendChild(tableOfContents);
+    document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
 
     
     document.querySelectorAll("table").forEach(table => {
