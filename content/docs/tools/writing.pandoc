@@ -1,6 +1,5 @@
 ---
 title: 写作
-type: docs
 ---
 
 # Pandoc
@@ -23,6 +22,9 @@ hugo version
 
 # 创建网站
 hugo new site quickstart
+
+# 添加主题
+git submodule add https://github.com/ribice/kiss.git themes/kiss
 
 # 添加内容
 hugo new posts/my-first-post.md
