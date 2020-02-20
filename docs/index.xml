@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>首页 on 凯的笔记</title>
-    <link>https://kaizhang91.github.io/notes/</link>
-    <description>Recent content in 首页 on 凯的笔记</description>
+    <title>Docs on 凯的笔记</title>
+    <link>https://kaizhang91.github.io/notes/docs/</link>
+    <description>Recent content in Docs on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     
-	<atom:link href="https://kaizhang91.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kaizhang91.github.io/notes/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

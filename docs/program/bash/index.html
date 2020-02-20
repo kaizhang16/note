@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bash"><meta property="og:title" content="Bash" />
+<meta property="og:description" content="颜色[1] 表 1: 终端颜色转义码列表    颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2] 表 2: 状态码    状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     备忘单 https://devhints.io/bash。
+参考文献 [1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详])." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/bash/" />
+<meta property="article:modified_time" content="2020-02-20T16:11:32+08:00" />
+<title>Bash | 凯的笔记</title>
+<link rel="icon" href="/notes/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
+
+
+<script defer src="/notes/cn.search.min.53e3909f3e1f89454bf24c8147ee69859ab6e701452c0d1976ef723f853b7f77.js" integrity="sha256-U&#43;OQnz4fiUVL8kyBR&#43;5phZq25wFFLA0Zdu9yP4U7f3c="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/notes"><span>凯的笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><strong>数学</strong>
+<ul>
+<li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
+</ul>
+</li>
+<li><strong>视觉</strong>
+<ul>
+<li><a href="/notes/docs/visual/unity/">Unity</a></li>
+</ul>
+</li>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/notes/docs/tools/writing/">写作</a></li>
+<li><a href="/notes/docs/tools/linux/">Linux</a></li>
+<li><a href="/notes/docs/tools/version-control/">版本控制</a></li>
+<li><a href="/notes/docs/tools/compress/">压缩</a></li>
+<li><a href="/notes/docs/tools/api/">API</a></li>
+</ul>
+</li>
+<li><strong>编程</strong>
+<ul>
+<li><a href="/notes/docs/program/python/">Python</a></li>
+<li><a href="/notes/docs/program/bash/"class=active>Bash</a></li>
+<li><a href="/notes/docs/program/golang/">Golang</a></li>
+<li><a href="/notes/docs/program/js/">JavaScript</a></li>
+<li><a href="/notes/docs/program/css/">CSS</a></li>
+<li><a href="/notes/docs/program/html/">HTML</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Bash</strong>
+
+  <label for="toc-control">
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+<article class="markdown"><h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
+<div id="tbl:ansiEscapeCode">
+<table style="width:19%;">
+<caption>表 1: 终端颜色转义码列表</caption>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">颜色</th>
+<th style="text-align: left;">转义码</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">正常</td>
+<td style="text-align: left;"><code>\e[0m</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">红色</td>
+<td style="text-align: left;"><code>\e[31m</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">绿色</td>
+<td style="text-align: left;"><code>\e[32m</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<a href="#ref-bashExitCode" role="doc-biblioref">2</a>]</sup></span></h1>
+<div id="tbl:bashExitCode">
+<table style="width:43%;">
+<caption>表 2: 状态码</caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">状态码</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">其他错误</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">使用 shell 内建命令出错</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>126</code></td>
+<td style="text-align: left;">命令无法执行</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>127</code></td>
+<td style="text-align: left;">命令未找到</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>128</code></td>
+<td style="text-align: left;">无效的参数</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>130</code></td>
+<td style="text-align: left;">取消</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="备忘单">备忘单</h1>
+<p><a href="https://devhints.io/bash" class="uri">https://devhints.io/bash</a>。</p>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-ansiEscapeCode">
+<p>[1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]). <a href="https://misc.flogisoft.com/bash/tip_colors_and_formatting">https://misc.flogisoft.com/bash/tip_colors_and_formatting</a>.</p>
+</div>
+<div id="ref-bashExitCode">
+<p>[2] ORNBO G. Linux and Unix exit code tutorial with examples[EB/OL](2019–11–16). <a href="https://shapeshed.com/unix-exit-codes/">https://shapeshed.com/unix-exit-codes/</a>.</p>
+</div>
+</div>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#备忘单">备忘单</a></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
+ 
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ee297298ca8047fff28deda94c98cadd2735eea7" title='最后修改者 Kai Zhang | 2020-02-20 16:11:32 &#43;0800' target="_blank" rel="noopener">
+      <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-02-20 16:11:32 &#43;0800</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  
+
+ 
+    </aside>
+    
+  </main>
+
+  <script>
+    
+    const tableOfContents = document.getElementById("TableOfContents");
+    const tableOfContents1 = tableOfContents.cloneNode(true);
+    document.querySelector(".book-toc").appendChild(tableOfContents);
+    document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
+
+    
+    document.querySelectorAll("table").forEach(table => {
+        table.style.width = "auto";
+    });
+
+    
+    hljs.initHighlightingOnLoad();
+
+    
+    const searchResults = document.getElementById("book-search-results");
+    document.getElementById("book-search-input").addEventListener("keyup", event => {
+        
+        
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            if (searchResults.childNodes.length > 0) {
+                const searchResult = searchResults.childNodes[0].childNodes[0];
+                window.location.href = searchResult.href;
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
