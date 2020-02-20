@@ -13,6 +13,7 @@ headless: true
   - [压缩]({{< relref "/docs/tools/compress" >}})
   - [API]({{< relref "/docs/tools/api" >}})
 - **编程**
+  - [TeX]({{< relref "/docs/program/TeX" >}})
   - [Python]({{< relref "/docs/program/python" >}})
   - [Bash]({{< relref "/docs/program/bash" >}})
   - [Golang]({{< relref "/docs/program/golang" >}})
