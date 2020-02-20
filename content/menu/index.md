@@ -3,19 +3,19 @@ headless: true
 ---
 
 - **数学**
-  - [线性代数]({{< relref "math/linear-algebra" >}})
+  - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
-  - [Unity]({{< relref "visual/unity" >}})
+  - [Unity]({{< relref "/docs/visual/unity" >}})
 - **工具**
-  - [写作]({{< relref "tools/writing" >}})
-  - [Linux]({{< relref "tools/linux" >}})
-  - [版本控制]({{< relref "tools/version-control" >}})
-  - [压缩]({{< relref "tools/compress" >}})
-  - [API]({{< relref "tools/api" >}})
+  - [写作]({{< relref "/docs/tools/writing" >}})
+  - [Linux]({{< relref "/docs/tools/linux" >}})
+  - [版本控制]({{< relref "/docs/tools/version-control" >}})
+  - [压缩]({{< relref "/docs/tools/compress" >}})
+  - [API]({{< relref "/docs/tools/api" >}})
 - **编程**
-  - [Python]({{< relref "program/python" >}})
-  - [Bash]({{< relref "program/bash" >}})
-  - [Golang]({{< relref "program/golang" >}})
-  - [JavaScript]({{< relref "program/js" >}})
-  - [CSS]({{< relref "program/css" >}})
-  - [HTML]({{< relref "program/html" >}})
+  - [Python]({{< relref "/docs/program/python" >}})
+  - [Bash]({{< relref "/docs/program/bash" >}})
+  - [Golang]({{< relref "/docs/program/golang" >}})
+  - [JavaScript]({{< relref "/docs/program/js" >}})
+  - [CSS]({{< relref "/docs/program/css" >}})
+  - [HTML]({{< relref "/docs/program/html" >}})

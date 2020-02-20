@@ -5,4 +5,4 @@ type: docs
 
 ## 笔记列表
 
-{{< include "menu/index.md" >}}
+{{< include "/menu/index.md" >}}

@@ -1,6 +1,5 @@
 ---
 title: "压缩"
-type: "docs"
 ---
 
 # tar 打包时排除某些目录[@tarExclude]
