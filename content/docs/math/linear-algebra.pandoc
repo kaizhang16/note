@@ -5,3 +5,9 @@ title: "线性代数"
 # 相似矩阵
 
 - 同一个线性变换在不同基下的矩阵称为相似矩阵
+
+# 正交矩阵[@linearAlgebraOrthogonalMatrix]
+
+$$\transpose{\matrix{Q}}\matrix{Q} = \matrix{Q}\transpose{\matrix{Q}} = \matrix{I}$$ {#eq:orthogonalMatrix}
+
+# 参考文献

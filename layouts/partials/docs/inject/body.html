@@ -26,4 +26,23 @@
             }
         }
     });
+
+    // MathJax configuration
+    MathJax = {
+        tex: {
+            macros: {
+                transformation: ["{\\mathcal{#1}}", 1],
+                bm: ["{\\boldsymbol{#1}}", 1],
+                vec: ["{\\bm{#1}}", 1],
+                matrix: ["{\\bm{#1}}", 1],
+                transpose: ["{#1}^{\\mathsf{T}}", 1],
+                sign: ["\\textrm{sign}"],
+                diag: ["\\textrm{diag}"],
+            }
+        }
+    };
 </script>
+
+<!-- MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
