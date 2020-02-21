@@ -4,6 +4,63 @@ title: "Python"
 
 # 内建函数[@pythonBuiltIn]
 
+## 字典[@pythonLoop]
+
+### 遍历
+
+```py
+>>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+>>> for k, v in knights.items():
+...     print(k, v)
+...
+gallahad the pure
+robin the brave
+```
+
+### 键是否存在[@pythonKeyExists]
+
+```py
+d = {"key1": 10, "key2": 23}
+
+if "key1" in d:
+    print("this will execute")
+
+if "nonexistent key" in d:
+    print("this will not")
+```
+
+### 合并字典[@pythonMergeDict]
+
+```py
+z = {**x, **y}
+```
+
+## +=
+
+```py
+x += y  # x = x + y
+```
+
+## open
+
+------------------------------------------------------------
+mode-string truncate? create? what's allowed
+----------- --------- ------- ------------------------------
+r           no        no      reading (only)
+
+w           yes       yes     writing (only)
+
+a           no        yes     writing (only), auto-appends
+
+r+          no        no      read and write
+
+w+          yes       yes     read and write
+
+a+          no        yes     read and (auto-appending) write
+-------------------------------------------------------------
+
+: 打开文件模式说明[@pythonOpenMode] {#tbl:openFileMode}
+
 ## property
 
 定义属性，默认只读。
@@ -27,6 +84,37 @@ class Parrot:
 class C:
     @classmethod
     def f(cls, arg1, arg2, ...): ...
+```
+
+# numpy
+
+```py
+import numpy as np
+```
+
+## 右乘列向量
+
+$$\matrix{A}\vec{x}$$ {#eq:rigthMultiplyColumnVector}
+
+```py
+np.dot(A, x)
+```
+
+## 范数[@pythonNorm]
+
+$$\lVert\vec{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}$$ {#eq:L2Norm}
+
+```py
+>>> np.linalg.norm([3, 4])
+5.0
+```
+
+## 奇异值分解
+
+$$\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}$$ {#eq:SVD}
+
+```py
+U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
 ```
 
 # 参考文献

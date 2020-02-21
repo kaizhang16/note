@@ -39,6 +39,26 @@ hugo new posts/my-first-post.md
 
 请参考 <https://github.com/peaceiris/actions-gh-pages#getting-started>。
 
+## MathJax
+
+```html
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+```
+
+> `MathJax` 对象需要在加载 MathJax 脚本前初始化。
+
 # Citation Style Language
 
 Official repository for Citation Style Language (CSL) citation styles:
