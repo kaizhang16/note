@@ -4,11 +4,11 @@
   --from=markdown \
   --to=html \
   --mathjax \
-  --bibliography=data/references.bib \
+  --bibliography=content/references.bib \
   --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --metadata=link-citations:true \
   --table-of-contents \
-  --template=data/pandoc.html.template \
+  --template=layouts/partials/pandoc.html.template \
   --quiet \
   --metadata=toc-title:目录 \
   --filter=pandoc-crossref \

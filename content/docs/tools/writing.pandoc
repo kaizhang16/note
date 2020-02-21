@@ -35,6 +35,10 @@ hugo new posts/my-first-post.md
 - 文档：<https://github.com/alex-shpak/hugo-book>
 - 博客：<https://github.com/ribice/kiss>
 
+## 部署到 GitHub Pages
+
+请参考 <https://github.com/peaceiris/actions-gh-pages#getting-started>。
+
 # Citation Style Language
 
 Official repository for Citation Style Language (CSL) citation styles:
