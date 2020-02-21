@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="数学表达式的 \(\TeX\) 表示 数学表达式的 \(\TeX\) 表示    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\langle, \rangle\) 内积 \langle, \rangle    公式对齐[1] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[2]。
- 参考文献 [1] OVERLEAF. Aligning equations with amsmath[EB/OL]([日期不详]). https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath." />
+<meta property="og:description" content="运算符 表 1: 运算符    运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes     数学表达式 表 2: 数学表达式    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}     公式对齐[1] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[2]。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
-<meta property="article:modified_time" content="2020-02-21T17:45:09+08:00" />
+<meta property="article:modified_time" content="2020-02-22T01:55:17+08:00" />
 <title>TeX | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.8166b2da5ef0677a861685ea79df6921687985d7d9875a70a52c8a1d0fcea2e5.js" integrity="sha256-gWay2l7wZ3qGFoXqed9pIWh5hdfZh1pwpSyKHQ/OouU="></script>
+<script defer src="/notes/cn.search.min.23965a639928885e298accb92080b2c376f50acf8ab450d6b56ea76f9ca4fde6.js" integrity="sha256-I5ZaY5koiF4pisy5IICyw3b1Cs&#43;KtFDWtW6nb5yk/eY="></script>
 
 <!--
 Made with Book Theme
@@ -83,6 +82,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/tex/"class=active>TeX</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/toml/">TOML</a></li>
 <li><a href="/notes/docs/program/golang/">Golang</a></li>
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
@@ -138,9 +138,40 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
-<article class="markdown"><h1 id="数学表达式的-tex-表示">数学表达式的 <span class="math inline">\(\TeX\)</span> 表示</h1>
+<article class="markdown"><h1 id="运算符">运算符</h1>
+<div id="tbl:TeXOperators">
+<table style="width:60%;">
+<caption>表 1: 运算符</caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 6%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">运算符</th>
+<th style="text-align: left;">含义</th>
+<th style="text-align: left;"><span class="math inline">\(\TeX\)</span> 表示</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\langle, \rangle\)</span></td>
+<td style="text-align: left;">内积</td>
+<td style="text-align: left;"><code>\langle, \rangle</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\otimes\)</span></td>
+<td style="text-align: left;">外积</td>
+<td style="text-align: left;"><code>\otimes</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="数学表达式">数学表达式</h1>
+<div id="tbl:TeXExpressions">
 <table style="width:90%;">
-<caption>数学表达式的 <span class="math inline">\(\TeX\)</span> 表示</caption>
+<caption>表 2: 数学表达式</caption>
 <colgroup>
 <col style="width: 38%" />
 <col style="width: 9%" />
@@ -165,12 +196,13 @@ https://github.com/alex-shpak/hugo-book
 <td style="text-align: left;"><code>\bar{p}</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\langle, \rangle\)</span></td>
-<td style="text-align: left;">内积</td>
-<td style="text-align: left;"><code>\langle, \rangle</code></td>
+<td style="text-align: left;"><span class="math inline">\(\set{R}\)</span></td>
+<td style="text-align: left;">实数集</td>
+<td style="text-align: left;"><code>\set{R}</code></td>
 </tr>
 </tbody>
 </table>
+</div>
 <h1 id="公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<a href="#ref-TeXAlign" role="doc-biblioref">1</a>]</sup></span></h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="ss">2x - 5y &amp;=  8 </span><span class="sc">\\</span><span class="ss"> </span></span>
@@ -192,7 +224,8 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#数学表达式的-tex-表示">数学表达式的 <span class="math inline">\(\TeX\)</span> 表示</a></li>
+  <li><a href="#运算符">运算符</a></li>
+  <li><a href="#数学表达式">数学表达式</a></li>
   <li><a href="#公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<span>1</span>]</sup></span></a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -208,9 +241,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b0063e2fd328589ec0de810e267b02a2daa4546c" title='最后修改者 Kai Zhang | 2020-02-21 17:45:09 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/fd5dfa73d2b941492d3fffb1f1b485353f977f91" title='最后修改者 Kai Zhang | 2020-02-22 01:55:17 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-21 17:45:09 &#43;0800</span>
+      <span>2020-02-22 01:55:17 &#43;0800</span>
     </a>
   </div>
 
@@ -273,13 +306,15 @@ https://github.com/alex-shpak/hugo-book
     MathJax = {
         tex: {
             macros: {
-                transformation: ["{\\mathcal{#1}}", 1],
                 bm: ["{\\boldsymbol{#1}}", 1],
-                vec: ["{\\bm{#1}}", 1],
-                matrix: ["{\\bm{#1}}", 1],
-                transpose: ["{#1}^{\\mathsf{T}}", 1],
-                sign: ["\\textrm{sign}"],
                 diag: ["\\textrm{diag}"],
+                matrix: ["{\\bm{#1}}", 1],
+                set: ["{\\mathbb{#1}}", 1],
+                sign: ["\\textrm{sign}"],
+                SO: ["\\textrm{SO}"],
+                transformation: ["{\\mathcal{#1}}", 1],
+                transpose: ["{#1}^{\\mathsf{T}}", 1],
+                vec: ["{\\bm{#1}}", 1],
             }
         }
     };

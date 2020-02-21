@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.8166b2da5ef0677a861685ea79df6921687985d7d9875a70a52c8a1d0fcea2e5.js" integrity="sha256-gWay2l7wZ3qGFoXqed9pIWh5hdfZh1pwpSyKHQ/OouU="></script>
+<script defer src="/notes/cn.search.min.23965a639928885e298accb92080b2c376f50acf8ab450d6b56ea76f9ca4fde6.js" integrity="sha256-I5ZaY5koiF4pisy5IICyw3b1Cs&#43;KtFDWtW6nb5yk/eY="></script>
 
 <!--
 Made with Book Theme
@@ -83,6 +83,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/toml/">TOML</a></li>
 <li><a href="/notes/docs/program/golang/">Golang</a></li>
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
@@ -230,13 +231,15 @@ https://github.com/alex-shpak/hugo-book
     MathJax = {
         tex: {
             macros: {
-                transformation: ["{\\mathcal{#1}}", 1],
                 bm: ["{\\boldsymbol{#1}}", 1],
-                vec: ["{\\bm{#1}}", 1],
-                matrix: ["{\\bm{#1}}", 1],
-                transpose: ["{#1}^{\\mathsf{T}}", 1],
-                sign: ["\\textrm{sign}"],
                 diag: ["\\textrm{diag}"],
+                matrix: ["{\\bm{#1}}", 1],
+                set: ["{\\mathbb{#1}}", 1],
+                sign: ["\\textrm{sign}"],
+                SO: ["\\textrm{SO}"],
+                transformation: ["{\\mathcal{#1}}", 1],
+                transpose: ["{#1}^{\\mathsf{T}}", 1],
+                vec: ["{\\bm{#1}}", 1],
             }
         }
     };

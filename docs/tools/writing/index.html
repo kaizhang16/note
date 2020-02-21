@@ -7,11 +7,10 @@
 <meta name="description" content="写作"><meta property="og:title" content="写作" />
 <meta property="og:description" content="Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
-目录  Pandoc 静态网站生成器  Hugo  常用命令 主题  部署到 GitHub Pages  Citation Style Language   " />
+MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]]  },  svg: {  fontCache: &#39;global&#39;  } }; &lt;/script&gt; &lt;scripttype=&quot;text/javascript&quot;id=&quot;MathJax-script&quot;async src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&quot;&gt; &lt;/script&gt;  MathJax 对象需要在加载 MathJax 脚本前初始化。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/writing/" />
-<meta property="article:modified_time" content="2020-02-21T17:45:09+08:00" />
+<meta property="article:modified_time" content="2020-02-22T01:55:17+08:00" />
 <title>写作 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -19,7 +18,7 @@ Citation Style Language Official repository for Citation Style Language (CSL) ci
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.8166b2da5ef0677a861685ea79df6921687985d7d9875a70a52c8a1d0fcea2e5.js" integrity="sha256-gWay2l7wZ3qGFoXqed9pIWh5hdfZh1pwpSyKHQ/OouU="></script>
+<script defer src="/notes/cn.search.min.23965a639928885e298accb92080b2c376f50acf8ab450d6b56ea76f9ca4fde6.js" integrity="sha256-I5ZaY5koiF4pisy5IICyw3b1Cs&#43;KtFDWtW6nb5yk/eY="></script>
 
 <!--
 Made with Book Theme
@@ -85,6 +84,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/toml/">TOML</a></li>
 <li><a href="/notes/docs/program/golang/">Golang</a></li>
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
@@ -164,6 +164,23 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 <h2 id="部署到-github-pages">部署到 GitHub Pages</h2>
 <p>请参考 <a href="https://github.com/peaceiris/actions-gh-pages#getting-started" class="uri">https://github.com/peaceiris/actions-gh-pages#getting-started</a>。</p>
+<h2 id="mathjax">MathJax</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>MathJax <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>  <span class="dt">tex</span><span class="op">:</span> <span class="op">{</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="dt">inlineMath</span><span class="op">:</span> [[<span class="st">&#39;$&#39;</span><span class="op">,</span> <span class="st">&#39;$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">(&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">)&#39;</span>]]</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="op">},</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="dt">svg</span><span class="op">:</span> <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>    <span class="dt">fontCache</span><span class="op">:</span> <span class="st">&#39;global&#39;</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="op">}</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="op">};</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> id=</span><span class="st">&quot;MathJax-script&quot;</span><span class="ot"> async</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="ot">  src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<blockquote>
+<p><code>MathJax</code> 对象需要在加载 MathJax 脚本前初始化。</p>
+</blockquote>
 <h1 id="citation-style-language">Citation Style Language</h1>
 <p>Official repository for Citation Style Language (CSL) citation styles: <a href="https://github.com/citation-style-language/styles" class="uri">https://github.com/citation-style-language/styles</a>。</p>
 
@@ -179,6 +196,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#主题">主题</a></li>
   </ul></li>
   <li><a href="#部署到-github-pages">部署到 GitHub Pages</a></li>
+  <li><a href="#mathjax">MathJax</a></li>
   </ul></li>
   <li><a href="#citation-style-language">Citation Style Language</a></li>
   </ul>
@@ -194,9 +212,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b0063e2fd328589ec0de810e267b02a2daa4546c" title='最后修改者 Kai Zhang | 2020-02-21 17:45:09 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/fd5dfa73d2b941492d3fffb1f1b485353f977f91" title='最后修改者 Kai Zhang | 2020-02-22 01:55:17 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-21 17:45:09 &#43;0800</span>
+      <span>2020-02-22 01:55:17 &#43;0800</span>
     </a>
   </div>
 
@@ -259,13 +277,15 @@ https://github.com/alex-shpak/hugo-book
     MathJax = {
         tex: {
             macros: {
-                transformation: ["{\\mathcal{#1}}", 1],
                 bm: ["{\\boldsymbol{#1}}", 1],
-                vec: ["{\\bm{#1}}", 1],
-                matrix: ["{\\bm{#1}}", 1],
-                transpose: ["{#1}^{\\mathsf{T}}", 1],
-                sign: ["\\textrm{sign}"],
                 diag: ["\\textrm{diag}"],
+                matrix: ["{\\bm{#1}}", 1],
+                set: ["{\\mathbb{#1}}", 1],
+                sign: ["\\textrm{sign}"],
+                SO: ["\\textrm{SO}"],
+                transformation: ["{\\mathcal{#1}}", 1],
+                transpose: ["{#1}^{\\mathsf{T}}", 1],
+                vec: ["{\\bm{#1}}", 1],
             }
         }
     };

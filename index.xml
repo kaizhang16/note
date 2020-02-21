@@ -83,10 +83,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/python/</guid>
-      <description>内建函数[1] property 定义属性，默认只读。
-class Parrot:  def __init__(self):  self._voltage = 100000   @property  def voltage(self):  &amp;quot;&amp;quot;&amp;quot;Get the current voltage.&amp;quot;&amp;quot;&amp;quot;  return self._voltage classmethod 带 cls 的类方法。
-class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON. Built-in Functions[EB/OL]([日期不详]). https://docs.python.org/3/library/functions.html#built-in-functions.
-  目录  内建函数[1]  property classmethod  参考文献   </description>
+      <description>内建函数[1] 字典[2] 遍历 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): ... print(k, v) ... gallahad the pure robin the brave 键是否存在[3] d = {&amp;quot;key1&amp;quot;: 10, &amp;quot;key2&amp;quot;: 23}  if &amp;quot;key1&amp;quot; in d:  print(&amp;quot;this will execute&amp;quot;)  if &amp;quot;nonexistent key&amp;quot; in d:  print(&amp;quot;this will not&amp;quot;) 合并字典[4] z = {**x, **y} += x += y # x = x + y open 表 1: 打开文件模式说明[5]    mode-string truncate?</description>
     </item>
     
     <item>
@@ -95,8 +92,17 @@ class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/tex/</guid>
-      <description>数学表达式的 \(\TeX\) 表示 数学表达式的 \(\TeX\) 表示    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\langle, \rangle\) 内积 \langle, \rangle    公式对齐[1] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[2]。
- 参考文献 [1] OVERLEAF. Aligning equations with amsmath[EB/OL]([日期不详]). https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath.</description>
+      <description>运算符 表 1: 运算符    运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes     数学表达式 表 2: 数学表达式    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}     公式对齐[1] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[2]。</description>
+    </item>
+    
+    <item>
+      <title>Toml</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/toml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/toml/</guid>
+      <description>Table[1] [table] 参考文献 [1] TOML. TOML[EB/OL]([日期不详]). https://github.com/toml-lang/toml.
+  目录  Table[1] 参考文献   </description>
     </item>
     
     <item>
@@ -117,8 +123,7 @@ class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON
       <guid>https://kaizhang91.github.io/notes/docs/tools/writing/</guid>
       <description>Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
-目录  Pandoc 静态网站生成器  Hugo  常用命令 主题  部署到 GitHub Pages  Citation Style Language   </description>
+MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;  MathJax 对象需要在加载 MathJax 脚本前初始化。</description>
     </item>
     
     <item>
@@ -147,8 +152,13 @@ Citation Style Language Official repository for Citation Style Language (CSL) ci
       
       <guid>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</guid>
       <description>相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[1] \[\transpose{\matrix{Q}}\matrix{Q} = \matrix{Q}\transpose{\matrix{Q}} = \matrix{I}\qquad(1)\]
+旋转矩阵[2] 旋转矩阵的集合：
+\[ \SO(n) = \{\matrix{R} \in \set{R}^{n\times n} \mid \matrix{R}\transpose{\matrix{R}} = \matrix{I}, \det(\matrix{R}) = 1\} \qquad(2)\]
+外积[3] \[\vec{u} \otimes \vec{v} = \vec{u}\transpose{\vec{v}}\qquad(3)\]
 参考文献 [1] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Orthogonal_matrix.
-  目录  相似矩阵 正交矩阵[1] 参考文献   </description>
+ [2] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.
+ [3] WIKIPEDIA. Outer product[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Outer_product.
+  目录  相似矩阵 正交矩阵[1] 旋转矩阵[2] 外积[3] 参考文献   </description>
     </item>
     
   </channel>
