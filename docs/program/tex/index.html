@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="数学表达式的 \(\TeX\) 表示 数学表达式的 \(\TeX\) 表示    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 $\{n \mid 0 \le n \le 19\}$    目录  数学表达式的 \(\TeX\) 表示   " />
+<meta property="og:description" content="数学表达式的 \(\TeX\) 表示 数学表达式的 \(\TeX\) 表示    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\langle, \rangle\) 内积 \langle, \rangle    公式对齐[1] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[2]。
+ 参考文献 [1] OVERLEAF. Aligning equations with amsmath[EB/OL]([日期不详]). https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
-<meta property="article:modified_time" content="2020-02-20T21:54:19+08:00" />
+<meta property="article:modified_time" content="2020-02-21T17:45:09+08:00" />
 <title>TeX | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.0b037a54076d2e754383e4bd90ce6dd61f03097834069b3b6be98866de1743d6.js" integrity="sha256-CwN6VAdtLnVDg&#43;S9kM5t1h8DCXg0Bps7a&#43;mIZt4XQ9Y="></script>
+<script defer src="/notes/cn.search.min.1f4f542d720c06f1f97bf694719ac1fcf967f2f041313c30282efec1cd0da56f.js" integrity="sha256-H09ULXIMBvH5e/aUcZrB/Pln8vBBMTwwKC7&#43;wc0NpW8="></script>
 
 <!--
 Made with Book Theme
@@ -142,11 +143,11 @@ https://github.com/alex-shpak/hugo-book
 
       
 <article class="markdown"><h1 id="数学表达式的-tex-表示">数学表达式的 <span class="math inline">\(\TeX\)</span> 表示</h1>
-<table style="width:88%;">
+<table style="width:90%;">
 <caption>数学表达式的 <span class="math inline">\(\TeX\)</span> 表示</caption>
 <colgroup>
 <col style="width: 38%" />
-<col style="width: 6%" />
+<col style="width: 9%" />
 <col style="width: 41%" />
 </colgroup>
 <thead>
@@ -160,15 +161,44 @@ https://github.com/alex-shpak/hugo-book
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\{n \mid 0 \le n \le 19\}\)</span></td>
 <td style="text-align: left;">集合</td>
-<td style="text-align: left;"><code>$\{n \mid 0 \le n \le 19\}$</code></td>
+<td style="text-align: left;"><code>\{n \mid 0 \le n \le 19\}</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\bar{p}\)</span></td>
+<td style="text-align: left;">平均值</td>
+<td style="text-align: left;"><code>\bar{p}</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\langle, \rangle\)</span></td>
+<td style="text-align: left;">内积</td>
+<td style="text-align: left;"><code>\langle, \rangle</code></td>
 </tr>
 </tbody>
 </table>
+<h1 id="公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<a href="#ref-TeXAlign" role="doc-biblioref">1</a>]</sup></span></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ss">2x - 5y &amp;=  8 </span><span class="sc">\\</span><span class="ss"> </span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ss">3x + 9y &amp;=  -12</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
+<blockquote>
+<p><code>align*</code> 表示不编号<span class="citation" data-cites="TeXAlignAsterisk"><sup>[<a href="#ref-TeXAlignAsterisk" role="doc-biblioref">2</a>]</sup></span>。</p>
+</blockquote>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-TeXAlign">
+<p>[1] OVERLEAF. Aligning equations with amsmath[EB/OL]([日期不详]). <a href="https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath">https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath</a>.</p>
+</div>
+<div id="ref-TeXAlignAsterisk">
+<p>[2] KOTTWITZ S. What’s the difference between align and align*?[EB/OL](2011–01–23). <a href="https://tex.stackexchange.com/a/9515">https://tex.stackexchange.com/a/9515</a>.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#数学表达式的-tex-表示">数学表达式的 <span class="math inline">\(\TeX\)</span> 表示</a></li>
+  <li><a href="#公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -182,9 +212,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/54578b2c1e6e6c71f0e9daca68ac2cdebb4eb468" title='最后修改者 Kai Zhang | 2020-02-20 21:54:19 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b0063e2fd328589ec0de810e267b02a2daa4546c" title='最后修改者 Kai Zhang | 2020-02-21 17:45:09 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-20 21:54:19 &#43;0800</span>
+      <span>2020-02-21 17:45:09 &#43;0800</span>
     </a>
   </div>
 

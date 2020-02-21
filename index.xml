@@ -95,7 +95,8 @@ class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/tex/</guid>
-      <description>数学表达式的 \(\TeX\) 表示 数学表达式的 \(\TeX\) 表示    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 $\{n \mid 0 \le n \le 19\}$    目录  数学表达式的 \(\TeX\) 表示   </description>
+      <description>数学表达式的 \(\TeX\) 表示 数学表达式的 \(\TeX\) 表示    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\langle, \rangle\) 内积 \langle, \rangle    公式对齐[1] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[2]。
+ 参考文献 [1] OVERLEAF. Aligning equations with amsmath[EB/OL]([日期不详]). https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath.</description>
     </item>
     
     <item>
@@ -115,8 +116,9 @@ class C:  @classmethod  def f(cls, arg1, arg2, ...): ... 参考文献 [1] PYTHON
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/writing/</guid>
       <description>Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
-Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
-目录  Pandoc 静态网站生成器  Hugo  常用命令 主题   Citation Style Language   </description>
+Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
+Citation Style Language Official repository for Citation Style Language (CSL) citation styles: https://github.com/citation-style-language/styles。
+目录  Pandoc 静态网站生成器  Hugo  常用命令 主题  部署到 GitHub Pages  Citation Style Language   </description>
     </item>
     
     <item>
