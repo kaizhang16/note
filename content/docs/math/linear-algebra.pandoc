@@ -10,4 +10,16 @@ title: "线性代数"
 
 $$\transpose{\matrix{Q}}\matrix{Q} = \matrix{Q}\transpose{\matrix{Q}} = \matrix{I}$$ {#eq:orthogonalMatrix}
 
+# 旋转矩阵[@高翔2017视觉]
+
+旋转矩阵的集合：
+
+$$
+\SO(n) = \{\matrix{R} \in \set{R}^{n\times n} \mid \matrix{R}\transpose{\matrix{R}} = \matrix{I}, \det(\matrix{R}) = 1\}
+$$ {#eq:SOn}
+
+# 外积[@linearAlgebraOuterProduct]
+
+$$\vec{u} \otimes \vec{v} = \vec{u}\transpose{\vec{v}}$$ {#eq:outerProduct}
+
 # 参考文献

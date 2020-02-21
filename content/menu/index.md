@@ -16,6 +16,7 @@ headless: true
   - [TeX]({{< relref "/docs/program/TeX" >}})
   - [Python]({{< relref "/docs/program/python" >}})
   - [Bash]({{< relref "/docs/program/bash" >}})
+  - [TOML]({{< relref "/docs/program/toml" >}})
   - [Golang]({{< relref "/docs/program/golang" >}})
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
