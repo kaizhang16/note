@@ -4,7 +4,7 @@
   --from=markdown \
   --to=html \
   --mathjax \
-  --bibliography=content/references.bib \
+  --bibliography=references.bib \
   --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --metadata=link-citations:true \
   --table-of-contents \
