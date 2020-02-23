@@ -8,7 +8,7 @@
 <meta property="og:description" content="内建函数[1] 字典[2] 遍历 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ... print(k, v) ... gallahad the pure robin the brave 键是否存在[3] d = {&quot;key1&quot;: 10, &quot;key2&quot;: 23}  if &quot;key1&quot; in d:  print(&quot;this will execute&quot;)  if &quot;nonexistent key&quot; in d:  print(&quot;this will not&quot;) 合并字典[4] z = {**x, **y} &#43;= x &#43;= y # x = x &#43; y open 表 1: 打开文件模式说明[5]    mode-string truncate?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/python/" />
-<meta property="article:modified_time" content="2020-02-22T01:55:17+08:00" />
+<meta property="article:modified_time" content="2020-02-23T15:10:56+08:00" />
 <title>Python | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
 
 
-<script defer src="/notes/cn.search.min.23965a639928885e298accb92080b2c376f50acf8ab450d6b56ea76f9ca4fde6.js" integrity="sha256-I5ZaY5koiF4pisy5IICyw3b1Cs&#43;KtFDWtW6nb5yk/eY="></script>
+<script defer src="/notes/cn.search.min.874ece0ff132bd0ac4af3883edb554b877f4cce067a18c69e13bdc7bd7300b1c.js" integrity="sha256-h07OD/EyvQrErziD7bVUuHf0zOBnoYxp4Tvce9cwCxw="></script>
 
 <!--
 Made with Book Theme
@@ -48,6 +48,8 @@ https://github.com/alex-shpak/hugo-book
   <div class="book-search-spinner spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
+
+
 
 
 
@@ -90,6 +92,8 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </li>
 </ul>
+
+
 
 
 
@@ -244,6 +248,9 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="奇异值分解">奇异值分解</h2>
 <p><span id="eq:SVD"><span class="math display">\[\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}\qquad(3)\]</span></span></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
+<h1 id="常用函数">常用函数</h1>
+<div class="sourceCode" id="cb11"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-pythonBuiltIn">
@@ -288,6 +295,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<span>6</span>]</sup></span></a></li>
   <li><a href="#奇异值分解">奇异值分解</a></li>
   </ul></li>
+  <li><a href="#常用函数">常用函数</a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -302,9 +310,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/fd5dfa73d2b941492d3fffb1f1b485353f977f91" title='最后修改者 Kai Zhang | 2020-02-22 01:55:17 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/43d3d17d855b8cdfd593b2b50327d1b6c1733c38" title='最后修改者 Kai Zhang | 2020-02-23 15:10:56 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-22 01:55:17 &#43;0800</span>
+      <span>2020-02-23 15:10:56 &#43;0800</span>
     </a>
   </div>
 
