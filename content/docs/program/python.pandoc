@@ -117,4 +117,11 @@ $$\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}$$ {#eq:SVD}
 U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
 ```
 
+# 常用函数
+
+```py
+def upper_first_char(str):
+    return '{}{}'.format(str[0].upper(), str[1:])
+```
+
 # 参考文献
