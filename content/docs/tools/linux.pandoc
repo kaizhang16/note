@@ -61,6 +61,12 @@ tmux a -t myname
 
 - <https://github.com/bootandy/dust>
 
+## du
+
+```sh
+du -sh /a/* | sort -rh | head -5
+```
+
 # jq
 
 ## 过滤[@jqCookbook]
