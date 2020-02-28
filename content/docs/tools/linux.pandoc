@@ -11,6 +11,20 @@ title: Linux
 sudo pacman -S tldr
 ```
 
+# rsync
+
+## 带进度条的复制
+
+```sh
+rsync --info=progress2 -rh ${source} ${dest}
+```
+
+## 指定私钥文件[@rsyncPrivateKey]
+
+```sh
+rsync -Pav -e "ssh -i $HOME/.ssh/somekey" username@hostname:/from/dir/ /to/dir/
+```
+
 # 查找字符串
 
 ## ripgrep
@@ -61,7 +75,7 @@ tmux a -t myname
 
 - <https://github.com/bootandy/dust>
 
-## du[@linuxDu]
+## du[@du]
 
 ```sh
 du -sh /a/* | sort -rh | head -5
