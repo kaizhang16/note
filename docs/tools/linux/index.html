@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="手册 tldr # 安装 sudo pacman -S tldr 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  jq 过滤[4] select(.name == &quot;TAG&quot;) Print strings without quotes[5] jq --raw-output CPU cat /proc/cpuinfo 参考文献 [1] ASKUBUNTU." />
+<meta property="og:description" content="手册 tldr # 安装 sudo pacman -S tldr 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du du -sh /a/* | sort -rh | head -5 jq 过滤[4] select(." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/linux/" />
-<meta property="article:modified_time" content="2020-02-20T16:11:32+08:00" />
+<meta property="article:modified_time" content="2020-02-28T12:54:51+08:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/notes/book.min.e802ea3b61106b4c170dee5810c86ffbb98ec5a26a279a7759b4f4bed41effd6.css" integrity="sha256-6ALqO2EQa0wXDe5YEMhv&#43;7mOxaJqJ5p3WbT0vtQe/9Y=">
+<link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.874ece0ff132bd0ac4af3883edb554b877f4cce067a18c69e13bdc7bd7300b1c.js" integrity="sha256-h07OD/EyvQrErziD7bVUuHf0zOBnoYxp4Tvce9cwCxw="></script>
+<script defer src="/notes/cn.search.min.66757fcc8ef956c179f4a4c2214afb05a4281b410454421929663817f45a8325.js" integrity="sha256-ZnV/zI75VsF59KTCIUr7BaQoG0EEVEIZKWY4F/RagyU="></script>
 
 <!--
 Made with Book Theme
@@ -142,6 +142,7 @@ https://github.com/alex-shpak/hugo-book
       </header>
 
       
+      
 <article class="markdown"><h1 id="手册">手册</h1>
 <h2 id="tldr">tldr</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 安装</span></span>
@@ -172,13 +173,15 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
 </ul>
+<h2 id="du">du</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
 <h1 id="jq">jq</h1>
 <h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
 <h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">5</a>]</sup></span></h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
 <h1 id="cpu">CPU</h1>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-grep">
@@ -222,7 +225,10 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#tmux">tmux</a></li>
   </ul></li>
-  <li><a href="#硬盘">硬盘</a></li>
+  <li><a href="#硬盘">硬盘</a>
+  <ul>
+  <li><a href="#du">du</a></li>
+  </ul></li>
   <li><a href="#jq">jq</a>
   <ul>
   <li><a href="#过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>4</span>]</sup></span></a></li>
@@ -234,6 +240,7 @@ https://github.com/alex-shpak/hugo-book
 </nav>
 </article>
  
+      
 
       <footer class="book-footer">
         
@@ -243,9 +250,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7326ccf7a93a3f03f82caf7afb380f7309474312" title='最后修改者 Kai Zhang | 2020-02-20 16:11:32 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/00d7b36363bd37bc067a1462ed31f195ac04590d" title='最后修改者 Kai Zhang | 2020-02-28 12:54:51 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-20 16:11:32 &#43;0800</span>
+      <span>2020-02-28 12:54:51 &#43;0800</span>
     </a>
   </div>
 
@@ -263,6 +270,8 @@ https://github.com/alex-shpak/hugo-book
  
       </footer>
       
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
     
