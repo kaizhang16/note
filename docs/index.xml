@@ -74,7 +74,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/linux/</guid>
-      <description>手册 tldr # 安装 sudo pacman -S tldr 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[1] grep -rl &amp;quot;string&amp;quot; /path 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du[4] du -sh /a/* | sort -rh | head -5 jq 过滤[5] select(.</description>
+      <description>手册 tldr # 安装 sudo pacman -S tldr rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[2] grep -rl &amp;quot;string&amp;quot; /path 网络 curl 上传时显示进度条[3] curl ... | tee /dev/null urlencode 参数[4] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
     </item>
     
     <item>
