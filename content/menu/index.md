@@ -14,6 +14,7 @@ headless: true
   - [压缩]({{< relref "/docs/tools/compress" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
+  - [包管理工具]({{< relref "/docs/tools/package-manager" >}})
   - [API]({{< relref "/docs/tools/api" >}})
   - [Word]({{< relref "/docs/tools/word" >}})
 - **编程**
