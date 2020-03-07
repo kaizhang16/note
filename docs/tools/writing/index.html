@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="写作"><meta property="og:title" content="写作" />
-<meta property="og:description" content="vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
+<meta property="og:description" content="vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 打开文件 nvim $(fzf) Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
 MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]]  },  svg: {  fontCache: &#39;global&#39;  } }; &lt;/script&gt; &lt;scripttype=&quot;text/javascript&quot;id=&quot;MathJax-script&quot;async src=&quot;https://cdn." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/writing/" />
-<meta property="article:modified_time" content="2020-03-07T11:10:13+00:00" />
+<meta property="article:modified_time" content="2020-03-07T15:21:28+00:00" />
 <title>写作 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -18,7 +18,7 @@ MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#3
 <link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.34d8dfa8cf020640b90ed332753ee9d0ee0ee57dbdf7232d8d1b7d3ae7c7eac7.js" integrity="sha256-NNjfqM8CBkC5DtMydT7p0O4O5X299yMtjRt9OufH6sc="></script>
+<script defer src="/notes/cn.search.min.8cdfcbca8ed0d05ca98decb74c90cb63aebcd58f5f323b54b7de213fc2544d44.js" integrity="sha256-jN/Lyo7Q0Fypjey3TJDLY6681Y9fMjtUt94hP8JUTUQ="></script>
 
 <!--
 Made with Book Theme
@@ -84,6 +84,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/compress/">压缩</a></li>
 <li><a href="/notes/docs/tools/curl/">curl</a></li>
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
+<li><a href="/notes/docs/tools/package-manager/">包管理工具</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
 </ul>
@@ -165,23 +166,25 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-2"><a href="#cb1-2"></a>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
 <h3 id="使用">使用</h3>
 <pre class="vim"><code>:PlugInstall  &quot; 安装插件</code></pre>
+<h2 id="打开文件">打开文件</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h1 id="pandoc">Pandoc</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pandoc</span> --print-default-template=html</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">pandoc</span> --print-default-template=html</span></code></pre></div>
 <h1 id="静态网站生成器">静态网站生成器</h1>
 <p>静态网站生成器列表：<a href="https://www.staticgen.com/" class="uri">https://www.staticgen.com/</a>。</p>
 <h2 id="hugo">Hugo</h2>
 <h3 id="常用命令">常用命令</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># 查看程序版本</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="ex">hugo</span> version</span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># 创建网站</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="ex">hugo</span> new site quickstart</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co"># 添加主题</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="fu">git</span> submodule add https://github.com/ribice/kiss.git themes/kiss</span>
-<span id="cb4-9"><a href="#cb4-9"></a></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co"># 添加内容</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="ex">hugo</span> new posts/my-first-post.md</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># 查看程序版本</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">hugo</span> version</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># 创建网站</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="ex">hugo</span> new site quickstart</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># 添加主题</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="fu">git</span> submodule add https://github.com/ribice/kiss.git themes/kiss</span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co"># 添加内容</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="ex">hugo</span> new posts/my-first-post.md</span></code></pre></div>
 <h3 id="主题">主题</h3>
 <ul>
 <li>文档：<a href="https://github.com/alex-shpak/hugo-book" class="uri">https://github.com/alex-shpak/hugo-book</a></li>
@@ -190,19 +193,19 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="部署到-github-pages">部署到 GitHub Pages</h2>
 <p>请参考 <a href="https://github.com/peaceiris/actions-gh-pages#getting-started" class="uri">https://github.com/peaceiris/actions-gh-pages#getting-started</a>。</p>
 <h2 id="mathjax">MathJax</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">&lt;script&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>MathJax <span class="op">=</span> <span class="op">{</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="dt">tex</span><span class="op">:</span> <span class="op">{</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="dt">inlineMath</span><span class="op">:</span> [[<span class="st">&#39;$&#39;</span><span class="op">,</span> <span class="st">&#39;$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">(&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">)&#39;</span>]]</span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="op">},</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>  <span class="dt">svg</span><span class="op">:</span> <span class="op">{</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>    <span class="dt">fontCache</span><span class="op">:</span> <span class="st">&#39;global&#39;</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>  <span class="op">}</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="op">};</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a><span class="kw">&lt;/script&gt;</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> id=</span><span class="st">&quot;MathJax-script&quot;</span><span class="ot"> async</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a><span class="ot">  src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>MathJax <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="dt">tex</span><span class="op">:</span> <span class="op">{</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>    <span class="dt">inlineMath</span><span class="op">:</span> [[<span class="st">&#39;$&#39;</span><span class="op">,</span> <span class="st">&#39;$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">(&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">)&#39;</span>]]</span>
+<span id="cb6-5"><a href="#cb6-5"></a>  <span class="op">},</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="dt">svg</span><span class="op">:</span> <span class="op">{</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>    <span class="dt">fontCache</span><span class="op">:</span> <span class="st">&#39;global&#39;</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="op">}</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="op">};</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> id=</span><span class="st">&quot;MathJax-script&quot;</span><span class="ot"> async</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="ot">  src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
 <blockquote>
 <p><code>MathJax</code> 对象需要在加载 MathJax 脚本前初始化。</p>
 </blockquote>
@@ -219,6 +222,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#安装">安装</a></li>
   <li><a href="#使用">使用</a></li>
   </ul></li>
+  <li><a href="#打开文件">打开文件</a></li>
   </ul></li>
   <li><a href="#pandoc">Pandoc</a></li>
   <li><a href="#静态网站生成器">静态网站生成器</a>
@@ -246,9 +250,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a77f315793e316bd0418f5bf0868e646034d8c1c" title='最后修改者 Kai Zhang | 2020-03-07 19:10:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/fd03a095f27c2bc793bdb28637d06ec61ec03660" title='最后修改者 Kai Zhang | 2020-03-07 23:21:28 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-07 19:10:13 &#43;0800</span>
+      <span>2020-03-07 23:21:28 &#43;0800</span>
     </a>
   </div>
 
