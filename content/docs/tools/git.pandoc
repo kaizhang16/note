@@ -1,0 +1,25 @@
+---
+title: "Git"
+---
+
+# Git Submodule
+
+## 下载 submodule
+
+```sh
+git submodule update --init --force --recursive --depth=1
+```
+
+## 更新 url
+
+```sh
+git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git
+```
+
+## 删除 submodule[@gitSubmoduleRm]
+
+```sh
+git rm <submodule path>
+```
+
+# 参考文献

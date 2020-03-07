@@ -1,0 +1,11 @@
+---
+title: "Curl"
+---
+
+# 得到响应中的 Location header[@curlLocation]
+
+```sh
+curl 'http://httpbin.org/redirect-to?url=http:/\example.com' -si | grep -oP 'Location: \K.*'
+```
+
+# 参考文献

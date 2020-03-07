@@ -36,6 +36,14 @@ title: "Bash"
 
 : 状态码 {#tbl:bashExitCode}
 
+# Heredoc
+
+```sh
+cat <<END
+hello world
+END
+```
+
 # 备忘单
 
 <https://devhints.io/bash>。
