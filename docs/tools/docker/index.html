@@ -27,10 +27,10 @@ https://github.com/alex-shpak/hugo-book
 <link rel="icon" href="/notes/favicon.ico" type="image/x-icon">
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css">
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
 
 </head>
 
@@ -215,7 +215,10 @@ https://github.com/alex-shpak/hugo-book
     
   </main>
 
-  <script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+<script>
     
     const tableOfContents = document.getElementById("TableOfContents");
     const tableOfContents1 = tableOfContents.cloneNode(true);
@@ -259,26 +262,9 @@ https://github.com/alex-shpak/hugo-book
     };
 
     
-    document.querySelectorAll("pre").forEach(pre => {
-        console.info("pre.classList", pre.classList);
-        pre.classList.remove("sourceCode");
-        console.info("pre.classList", pre.classList);
-        if (pre.classList.length < 1) {
-            return;
-        }
-
-        const language = pre.classList.item(0);
-        console.info("language", language);
-        let code = pre.querySelector("code");
-        if (code) {
-            code.classList.remove(language);
-            code.classList.add("language-" + language);
-            console.info("code.classList", code.classList);
-        }
-    });
-
+    hljs.initHighlightingOnLoad();
     
-    
+
 </script>
 
 
@@ -286,8 +272,7 @@ https://github.com/alex-shpak/hugo-book
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-core.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
 
 </body>
 
