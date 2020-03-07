@@ -2,6 +2,10 @@
 title: "JavaScript"
 ---
 
+# 字符串拼接[@jsConcat]
+
+要使用 `+` 而不是 `string.concat()`。
+
 # Array
 
 ## flatMap[@jsArrayFlatMap]
@@ -46,10 +50,28 @@ window.location.href = '...';
 document.getElementById("aaa").href;
 ```
 
+# 寻找元素
+
+```js
+var matches = document.querySelectorAll("p");
+```
+
 # 移动元素[@jsMoveElement]
 
 ```js
 newParent.appendChild(element);
+```
+
+# 改变元素的类[@jsChangeElementClass]
+
+```js
+document.getElementById("MyElement").classList.add('MyClass');
+
+document.getElementById("MyElement").classList.remove('MyClass');
+
+if ( document.getElementById("MyElement").classList.contains('MyClass') )
+
+document.getElementById("MyElement").classList.toggle('MyClass');
 ```
 
 # 参考文献
