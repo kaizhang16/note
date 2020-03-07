@@ -9,8 +9,9 @@ headless: true
 - **工具**
   - [写作]({{< relref "/docs/tools/writing" >}})
   - [Linux]({{< relref "/docs/tools/linux" >}})
-  - [版本控制]({{< relref "/docs/tools/version-control" >}})
+  - [Git]({{< relref "/docs/tools/git" >}})
   - [压缩]({{< relref "/docs/tools/compress" >}})
+  - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
   - [API]({{< relref "/docs/tools/api" >}})
 - **编程**
@@ -22,3 +23,5 @@ headless: true
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
+- **协议**
+  - [HTTP]({{< relref "/docs/protocols/http" >}})
