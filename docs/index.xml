@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/api/</guid>
-      <description>seafile  上传文件：https://download.seafile.com/published/web-api/v2.1/file-upload.md  目录  seafile   </description>
+      <description>seafile  上传文件：https://download.seafile.com/published/web-api/v2.1/file-upload.md Web API: https://seafile.gitbook.io/seafile-server-manual/developing/web-api  目录  seafile   </description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/bash/</guid>
-      <description>颜色[1] 表 1: 终端颜色转义码列表    颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2] 表 2: 状态码    状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     备忘单 https://devhints.io/bash。
+      <description>颜色[1] 表 1: 终端颜色转义码列表    颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2] 表 2: 状态码    状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     Heredoc cat &amp;lt;&amp;lt;END hello world END 备忘单 https://devhints.io/bash。
 参考文献 [1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]).</description>
     </item>
     
@@ -37,6 +37,26 @@
       <guid>https://kaizhang91.github.io/notes/docs/program/css/</guid>
       <description>对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
   目录  对齐 width[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>Curl</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/curl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/curl/</guid>
+      <description>得到响应中的 Location header[1] curl &amp;#39;http://httpbin.org/redirect-to?url=http:/\example.com&amp;#39; -si | grep -oP &amp;#39;Location: \K.*&amp;#39; 参考文献 [1] RANDOMIR. [EB/OL](2017–09–30). https://stackoverflow.com/a/46507651.
+  目录  得到响应中的 Location header[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/git/</guid>
+      <description>Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+  目录  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
     </item>
     
     <item>
@@ -56,6 +76,17 @@
       <guid>https://kaizhang91.github.io/notes/docs/program/html/</guid>
       <description>Language Code[1] 表 1: ISO 639-1 Language Codes    Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
   目录  Language Code[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://kaizhang91.github.io/notes/docs/protocols/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/protocols/http/</guid>
+      <description>URL vs URI[1] URL 用于定位，URI 用于标识。
+参考文献 [1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). https://stackoverflow.com/a/1984225.
+  目录  URL vs URI[1] 参考文献   </description>
     </item>
     
     <item>
@@ -131,9 +162,9 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/writing/</guid>
-      <description>Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
+      <description>vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;  MathJax 对象需要在加载 MathJax 脚本前初始化。</description>
+MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.</description>
     </item>
     
     <item>
@@ -144,15 +175,6 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <guid>https://kaizhang91.github.io/notes/docs/tools/compress/</guid>
       <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
   目录  tar 打包时排除某些目录[1] 参考文献   </description>
-    </item>
-    
-    <item>
-      <title>版本控制</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/version-control/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/tools/version-control/</guid>
-      <description>Git Git Submodule # 下载 submodule git submodule update --init --force --recursive --depth=1  # 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 目录  Git  Git Submodule    </description>
     </item>
     
     <item>

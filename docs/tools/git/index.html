@@ -4,19 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="版本控制"><meta property="og:title" content="版本控制" />
-<meta property="og:description" content="Git Git Submodule # 下载 submodule git submodule update --init --force --recursive --depth=1  # 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 目录  Git  Git Submodule    " />
+<meta name="description" content="Git"><meta property="og:title" content="Git" />
+<meta property="og:description" content="Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &lt;submodule path&gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+  目录  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/version-control/" />
-<meta property="article:modified_time" content="2020-02-20T21:54:19+08:00" />
-<title>版本控制 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/git/" />
+<meta property="article:modified_time" content="2020-03-07T11:10:13+00:00" />
+<title>Git | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.2c9dbd1919d461f439c88747b63cf44dcc9ebd7a61fd6515cdad624252844f0b.js" integrity="sha256-LJ29GRnUYfQ5yIdHtjz0TcyevXph/WUVza1iQlKETws="></script>
+<script defer src="/notes/cn.search.min.eb0edc2a1dbf38c36baca9b3745697886e46015838830582758907794e6fa381.js" integrity="sha256-6w7cKh2/OMNrrKmzdFaXiG5GAVg4gwWCdYkHeU5vo4E="></script>
 
 <!--
 Made with Book Theme
@@ -74,8 +75,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/tools/writing/">写作</a></li>
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
-<li><a href="/notes/docs/tools/version-control/"class=active>版本控制</a></li>
+<li><a href="/notes/docs/tools/git/"class=active>Git</a></li>
 <li><a href="/notes/docs/tools/compress/">压缩</a></li>
+<li><a href="/notes/docs/tools/curl/">curl</a></li>
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
 </ul>
@@ -90,6 +92,11 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
 <li><a href="/notes/docs/program/html/">HTML</a></li>
+</ul>
+</li>
+<li><strong>协议</strong>
+<ul>
+<li><a href="/notes/docs/protocols/http/">HTTP</a></li>
 </ul>
 </li>
 </ul>
@@ -122,7 +129,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>版本控制</strong>
+  <strong>Git</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -144,21 +151,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="git">Git</h1>
-<h2 id="git-submodule">Git Submodule</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 下载 submodule</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># 更新 url</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
+<article class="markdown"><h1 id="git-submodule">Git Submodule</h1>
+<h2 id="下载-submodule">下载 submodule</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span></code></pre></div>
+<h2 id="更新-url">更新 url</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
+<h2 id="删除-submodulegitsubmodulerm">删除 submodule<span class="citation" data-cites="gitSubmoduleRm"><sup>[<a href="#ref-gitSubmoduleRm" role="doc-biblioref">1</a>]</sup></span></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">git</span> rm <span class="op">&lt;</span>submodule path<span class="op">&gt;</span></span></code></pre></div>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-gitSubmoduleRm">
+<p>[1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). <a href="https://git-scm.com/docs/gitsubmodules">https://git-scm.com/docs/gitsubmodules</a>.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#git">Git</a>
+  <li><a href="#git-submodule">Git Submodule</a>
   <ul>
-  <li><a href="#git-submodule">Git Submodule</a></li>
+  <li><a href="#下载-submodule">下载 submodule</a></li>
+  <li><a href="#更新-url">更新 url</a></li>
+  <li><a href="#删除-submodulegitsubmodulerm">删除 submodule<span class="citation" data-cites="gitSubmoduleRm"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -173,9 +189,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/54578b2c1e6e6c71f0e9daca68ac2cdebb4eb468" title='最后修改者 Kai Zhang | 2020-02-20 21:54:19 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a77f315793e316bd0418f5bf0868e646034d8c1c" title='最后修改者 Kai Zhang | 2020-03-07 19:10:13 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-20 21:54:19 &#43;0800</span>
+      <span>2020-03-07 19:10:13 &#43;0800</span>
     </a>
   </div>
 

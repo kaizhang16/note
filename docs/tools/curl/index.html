@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Categories"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
-
-<title>Categories | 凯的笔记</title>
+<meta name="description" content="Curl"><meta property="og:title" content="Curl" />
+<meta property="og:description" content="得到响应中的 Location header[1] curl &#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39; -si | grep -oP &#39;Location: \K.*&#39; 参考文献 [1] RANDOMIR. [EB/OL](2017–09–30). https://stackoverflow.com/a/46507651.
+  目录  得到响应中的 Location header[1] 参考文献   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/curl/" />
+<meta property="article:modified_time" content="2020-03-07T11:10:13+00:00" />
+<title>Curl | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -18,7 +19,6 @@
 
 <script defer src="/notes/cn.search.min.eb0edc2a1dbf38c36baca9b3745697886e46015838830582758907794e6fa381.js" integrity="sha256-6w7cKh2/OMNrrKmzdFaXiG5GAVg4gwWCdYkHeU5vo4E="></script>
 
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -77,7 +77,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
 <li><a href="/notes/docs/tools/git/">Git</a></li>
 <li><a href="/notes/docs/tools/compress/">压缩</a></li>
-<li><a href="/notes/docs/tools/curl/">curl</a></li>
+<li><a href="/notes/docs/tools/curl/"class=active>curl</a></li>
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
 </ul>
@@ -129,7 +129,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>Curl</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -141,29 +141,7 @@ https://github.com/alex-shpak/hugo-book
     <input type="checkbox" class="hidden" id="toc-control" />
     <aside class="hidden clearfix">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
     </aside>
@@ -173,10 +151,22 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown">
-  <h1>Categories</h1>
-  
-  
+<article class="markdown"><h1 id="得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<a href="#ref-curlLocation" role="doc-biblioref">1</a>]</sup></span></h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> -si <span class="kw">|</span> <span class="fu">grep</span> -oP <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-curlLocation">
+<p>[1] RANDOMIR. [EB/OL](2017–09–30). <a href="https://stackoverflow.com/a/46507651">https://stackoverflow.com/a/46507651</a>.</p>
+</div>
+</div>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
 </article>
  
       
@@ -187,12 +177,24 @@ https://github.com/alex-shpak/hugo-book
 
 
 
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a77f315793e316bd0418f5bf0868e646034d8c1c" title='最后修改者 Kai Zhang | 2020-03-07 19:10:13 &#43;0800' target="_blank" rel="noopener">
+      <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-03-07 19:10:13 &#43;0800</span>
+    </a>
+  </div>
+
 
 
 </div>
 
  
         
+  
+  <div class="book-comments">
+
+</div>
   
  
       </footer>
@@ -204,29 +206,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>
