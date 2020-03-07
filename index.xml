@@ -78,6 +78,16 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     </item>
     
     <item>
+      <title>NGINX</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/nginx/</guid>
+      <description>编译安装  推荐安装 mainline 版本[1]。
+ # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf zlib-$ZLIB_VERSION.tar.gz curl -o nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  -L https://github.com/vkholodkov/nginx-upload-module/archive/$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz  # Compile and install cd nginx-$NGINX_VERSION ./configure \  --sbin-path=/usr/sbin/nginx \  --conf-path=/etc/nginx/nginx.</description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>https://kaizhang91.github.io/notes/docs/program/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
