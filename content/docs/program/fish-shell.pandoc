@@ -1,0 +1,9 @@
+---
+title: "fish-shell"
+---
+
+# 变量赋值
+
+```fish
+set a b
+```
