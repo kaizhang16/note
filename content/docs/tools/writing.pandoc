@@ -19,6 +19,12 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 :PlugInstall  " 安装插件
 ```
 
+## 打开文件
+
+```sh
+nvim $(fzf)
+```
+
 # Pandoc
 
 ```sh
