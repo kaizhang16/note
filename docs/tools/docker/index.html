@@ -260,19 +260,22 @@ https://github.com/alex-shpak/hugo-book
 
     
     document.querySelectorAll("pre").forEach(pre => {
-        console.info("classList", pre.classList);
+        console.info("pre.classList", pre.classList);
         pre.classList.remove("sourceCode");
-        console.info("classList", pre.classList);
-        if (pre.classList.length < 0) {
+        console.info("pre.classList", pre.classList);
+        if (pre.classList.length < 1) {
             return;
         }
 
         const language = pre.classList.item(0);
+        console.info("language", language);
         let code = pre.querySelector("code");
-        code.classList.remove(language);
-        code.classList.add("language-" + language);
-        console.info("classList", code.classList);
-    }
+        if (code) {
+            code.classList.remove(language);
+            code.classList.add("language-" + language);
+            console.info("code.classList", code.classList);
+        }
+    });
 
     
     
