@@ -11,6 +11,7 @@ headless: true
   - [Linux]({{< relref "/docs/tools/linux" >}})
   - [版本控制]({{< relref "/docs/tools/version-control" >}})
   - [压缩]({{< relref "/docs/tools/compress" >}})
+  - [NGINX]({{< relref "/docs/tools/nginx" >}})
   - [API]({{< relref "/docs/tools/api" >}})
 - **编程**
   - [TeX]({{< relref "/docs/program/TeX" >}})
