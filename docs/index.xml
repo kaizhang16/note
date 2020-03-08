@@ -199,9 +199,9 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/writing/</guid>
-      <description>vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 打开文件 nvim $(fzf) Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
+      <description>Pandoc pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.</description>
+MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&amp;quot;&amp;gt; &amp;lt;/script&amp;gt;  MathJax 对象需要在加载 MathJax 脚本前初始化。</description>
     </item>
     
     <item>
@@ -224,6 +224,15 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>搜索</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/search/</guid>
+      <description>ripgrep 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 目录  ripgrep  非正则匹配    </description>
+    </item>
+    
+    <item>
       <title>线性代数</title>
       <link>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -237,6 +246,17 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
  [2] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.
  [3] WIKIPEDIA. Outer product[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Outer_product.
   目录  相似矩阵 正交矩阵[1] 旋转矩阵[2] 外积[3] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>编辑器</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 打开文件 nvim $(fzf) 命令 关闭当前 buffer[1] :bd 快捷键  noremap 指 non-recursive map[2]  [1] HHH. How do I close a single buffer (out of many) in Vim?[EB/OL](2009–09–04). https://stackoverflow.com/a/1381652.
+ [2] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). https://stackoverflow.com/a/3776182.
+  目录  Vim  包管理器  安装 使用  打开文件 命令  关闭当前 buffer[1]  快捷键    </description>
     </item>
     
   </channel>
