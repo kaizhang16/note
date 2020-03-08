@@ -3,6 +3,8 @@ export PATH := bin:$(PATH)
 run:
 	hugo server
 
-build:
+clean:
 	rm -rf public
+
+build: clean
 	hugo

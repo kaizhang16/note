@@ -2,29 +2,6 @@
 title: 写作
 ---
 
-# vim
-
-## 包管理器
-
-### 安装
-
-```sh
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-### 使用
-
-```vim
-:PlugInstall  " 安装插件
-```
-
-## 打开文件
-
-```sh
-nvim $(fzf)
-```
-
 # Pandoc
 
 ```sh
