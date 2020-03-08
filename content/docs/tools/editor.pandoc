@@ -1,0 +1,38 @@
+---
+title: "编辑器"
+---
+
+# Vim
+
+## 包管理器
+
+### 安装
+
+```sh
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+### 使用
+
+```vim
+:PlugInstall  " 安装插件
+```
+
+## 打开文件
+
+```sh
+nvim $(fzf)
+```
+
+## 命令
+
+### 关闭当前 buffer[@vimCloseBuffer]
+
+```vim
+:bd
+```
+
+## 快捷键
+
+- `noremap` 指 non-recursive map[@vimNoremap]

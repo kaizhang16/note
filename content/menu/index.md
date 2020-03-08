@@ -7,9 +7,11 @@ headless: true
 - **视觉**
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **工具**
+  - [编辑器]({{< relref "/docs/tools/editor" >}})
   - [写作]({{< relref "/docs/tools/writing" >}})
-  - [Linux]({{< relref "/docs/tools/linux" >}})
+  - [搜索]({{< relref "/docs/tools/search" >}})
   - [Git]({{< relref "/docs/tools/git" >}})
+  - [Linux]({{< relref "/docs/tools/linux" >}})
   - [Docker]({{< relref "/docs/tools/docker" >}})
   - [压缩]({{< relref "/docs/tools/compress" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
