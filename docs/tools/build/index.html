@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="API"><meta property="og:title" content="API" />
-<meta property="og:description" content="seafile  上传文件：https://download.seafile.com/published/web-api/v2.1/file-upload.md Web API: https://seafile.gitbook.io/seafile-server-manual/developing/web-api  目录  seafile   " />
+<meta name="description" content="构建"><meta property="og:title" content="构建" />
+<meta property="og:description" content="cmake 安装 CMAKE_VERSION=3.17.0-rc2 curl -LO &#39;https://github.com/Kitware/CMake/releases/download/v3.17.0-rc2/cmake-$CMAKE_VERSION-Linux-x86_64.sh&#39; chmod u&#43;x cmake-$CMAKE_VERSION-Linux-x86_64.sh sudo ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  目录  cmake  安装 教程    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/api/" />
-<meta property="article:modified_time" content="2020-03-07T11:10:13+00:00" />
-<title>API | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/build/" />
+<meta property="article:modified_time" content="2020-03-19T06:10:42+00:00" />
+<title>构建 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -79,7 +79,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/writing/">写作</a></li>
 <li><a href="/notes/docs/tools/search/">搜索</a></li>
 <li><a href="/notes/docs/tools/git/">Git</a></li>
-<li><a href="/notes/docs/tools/build/">构建</a></li>
+<li><a href="/notes/docs/tools/build/"class=active>构建</a></li>
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
 <li><a href="/notes/docs/tools/docker/">Docker</a></li>
 <li><a href="/notes/docs/tools/compress/">压缩</a></li>
@@ -87,7 +87,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
 <li><a href="/notes/docs/tools/package-manager/">包管理工具</a></li>
 <li><a href="/notes/docs/tools/video/">视频</a></li>
-<li><a href="/notes/docs/tools/api/"class=active>API</a></li>
+<li><a href="/notes/docs/tools/api/">API</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
 </ul>
 </li>
@@ -140,7 +140,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>API</strong>
+  <strong>构建</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -162,16 +162,25 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="seafile">seafile</h1>
+<article class="markdown"><h1 id="cmake">cmake</h1>
+<h2 id="安装">安装</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">CMAKE_VERSION=</span>3.17.0-rc2</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">curl</span> -LO <span class="st">&#39;https://github.com/Kitware/CMake/releases/download/v3.17.0-rc2/cmake-$CMAKE_VERSION-Linux-x86_64.sh&#39;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">chmod</span> u+x cmake-<span class="va">$CMAKE_VERSION</span>-Linux-x86_64.sh</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">sudo</span> ./cmake-<span class="va">$CMAKE_VERSION</span>-Linux-x86_64.sh --skip-license --prefix=/usr/local</span></code></pre></div>
+<h2 id="教程">教程</h2>
 <ul>
-<li>上传文件：<a href="https://download.seafile.com/published/web-api/v2.1/file-upload.md" class="uri">https://download.seafile.com/published/web-api/v2.1/file-upload.md</a></li>
-<li>Web API: <a href="https://seafile.gitbook.io/seafile-server-manual/developing/web-api" class="uri">https://seafile.gitbook.io/seafile-server-manual/developing/web-api</a></li>
+<li><a href="https://cliutils.gitlab.io/modern-cmake/" class="uri">https://cliutils.gitlab.io/modern-cmake/</a></li>
 </ul>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#seafile">seafile</a></li>
+  <li><a href="#cmake">cmake</a>
+  <ul>
+  <li><a href="#安装">安装</a></li>
+  <li><a href="#教程">教程</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -186,9 +195,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a77f315793e316bd0418f5bf0868e646034d8c1c" title='最后修改者 Kai Zhang | 2020-03-07 19:10:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0cbfd11f8869a0539f0db714c23df2f3e7de1ae4" title='最后修改者 Kai Zhang | 2020-03-19 14:10:42 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-07 19:10:13 &#43;0800</span>
+      <span>2020-03-19 14:10:42 &#43;0800</span>
     </a>
   </div>
 

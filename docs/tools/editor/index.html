@@ -5,12 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="编辑器"><meta property="og:title" content="编辑器" />
-<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 打开文件 nvim $(fzf) 命令 关闭当前 buffer[1] :bd 快捷键  noremap 指 non-recursive map[2]  [1] HHH. How do I close a single buffer (out of many) in Vim?[EB/OL](2009–09–04). https://stackoverflow.com/a/1381652.
- [2] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). https://stackoverflow.com/a/3776182.
-  目录  Vim  包管理器  安装 使用  打开文件 命令  关闭当前 buffer[1]  快捷键    " />
+<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    状态码 含义    :bd 关闭当前 buffer[1]  2 使用 shell 内建命令出错     快捷键   noremap 指 non-recursive map[2]   [1] HHH. How do I close a single buffer (out of many) in Vim?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/editor/" />
-<meta property="article:modified_time" content="2020-03-08T02:54:28+00:00" />
+<meta property="article:modified_time" content="2020-03-19T06:10:42+00:00" />
 <title>编辑器 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -18,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.2f46b49b50fcf9f91319f1098b87af8c8387cfa87c621218b42cc9d3f03425c5.js" integrity="sha256-L0a0m1D8&#43;fkTGfEJi4evjIOHz6h8YhIYtCzJ0/A0JcU="></script>
+<script defer src="/notes/cn.search.min.08e417031771b5cef52aab4ddce2540bf84881b5bad4cf6ad37fc9eec8bb470e.js" integrity="sha256-COQXAxdxtc71KqtN3OJUC/hIgbW61M9q03/J7si7Rw4="></script>
 
 <!--
 Made with Book Theme
@@ -81,12 +79,14 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/writing/">写作</a></li>
 <li><a href="/notes/docs/tools/search/">搜索</a></li>
 <li><a href="/notes/docs/tools/git/">Git</a></li>
+<li><a href="/notes/docs/tools/build/">构建</a></li>
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
 <li><a href="/notes/docs/tools/docker/">Docker</a></li>
 <li><a href="/notes/docs/tools/compress/">压缩</a></li>
 <li><a href="/notes/docs/tools/curl/">curl</a></li>
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
 <li><a href="/notes/docs/tools/package-manager/">包管理工具</a></li>
+<li><a href="/notes/docs/tools/video/">视频</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
 </ul>
@@ -95,6 +95,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
+<li><a href="/notes/docs/program/c++/">C++</a></li>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
 <li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
@@ -168,15 +169,44 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-2"><a href="#cb1-2"></a>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
 <h3 id="使用">使用</h3>
 <pre class="vim"><code>:PlugInstall  &quot; 安装插件</code></pre>
+<h3 id="安装依赖的二进制">安装依赖的二进制</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
+<h3 id="coc">coc</h3>
+<pre class="vim"><code>:CocInstall coc-clangd</code></pre>
 <h2 id="打开文件">打开文件</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h2 id="命令">命令</h2>
-<h3 id="关闭当前-buffervimclosebuffer">关闭当前 buffer<span class="citation" data-cites="vimCloseBuffer"><sup>[<a href="#ref-vimCloseBuffer" role="doc-biblioref">1</a>]</sup></span></h3>
-<pre class="vim"><code>:bd</code></pre>
+<div id="tbl:vimCommands">
+<table style="width:56%;">
+<caption>表 1: Vim 命令</caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">状态码</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>:bd</code></td>
+<td style="text-align: left;">关闭当前 buffer<span class="citation" data-cites="vimCloseBuffer"><sup>[<a href="#ref-vimCloseBuffer" role="doc-biblioref">1</a>]</sup></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>2</code></td>
+<td style="text-align: left;">使用 shell 内建命令出错</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="快捷键">快捷键</h2>
+<blockquote>
 <ul>
 <li><code>noremap</code> 指 non-recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">2</a>]</sup></span></li>
 </ul>
+</blockquote>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-vimCloseBuffer">
 <p>[1] HHH. How do I close a single buffer (out of many) in Vim?[EB/OL](2009–09–04). <a href="https://stackoverflow.com/a/1381652">https://stackoverflow.com/a/1381652</a>.</p>
@@ -195,12 +225,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#安装">安装</a></li>
   <li><a href="#使用">使用</a></li>
+  <li><a href="#安装依赖的二进制">安装依赖的二进制</a></li>
+  <li><a href="#coc">coc</a></li>
   </ul></li>
   <li><a href="#打开文件">打开文件</a></li>
-  <li><a href="#命令">命令</a>
-  <ul>
-  <li><a href="#关闭当前-buffervimclosebuffer">关闭当前 buffer<span class="citation" data-cites="vimCloseBuffer"><sup>[<span>1</span>]</sup></span></a></li>
-  </ul></li>
+  <li><a href="#命令">命令</a></li>
   <li><a href="#快捷键">快捷键</a></li>
   </ul></li>
   </ul>
@@ -217,9 +246,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/85eaa0dfbe459206aaadad49d97560e13d323ab3" title='最后修改者 Kai Zhang | 2020-03-08 10:54:28 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0cbfd11f8869a0539f0db714c23df2f3e7de1ae4" title='最后修改者 Kai Zhang | 2020-03-19 14:10:42 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-08 10:54:28 &#43;0800</span>
+      <span>2020-03-19 14:10:42 &#43;0800</span>
     </a>
   </div>
 

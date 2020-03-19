@@ -30,6 +30,16 @@
     </item>
     
     <item>
+      <title>C&#43;&#43;</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</guid>
+      <description>代码风格  请参考： - https://llvm.org/docs/CodingStandards.html#llvm-coding-standards - https://google.github.io/styleguide/cppguide.html
+  Type names  名词 TextFileReader  Function names  动词 openFile   教程  https://isocpp.org/get-started  目录  代码风格 教程   </description>
+    </item>
+    
+    <item>
       <title>CSS</title>
       <link>https://kaizhang91.github.io/notes/docs/program/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -233,6 +243,15 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>构建</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/build/</guid>
+      <description>cmake 安装 CMAKE_VERSION=3.17.0-rc2 curl -LO &amp;#39;https://github.com/Kitware/CMake/releases/download/v3.17.0-rc2/cmake-$CMAKE_VERSION-Linux-x86_64.sh&amp;#39; chmod u+x cmake-$CMAKE_VERSION-Linux-x86_64.sh sudo ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  目录  cmake  安装 教程    </description>
+    </item>
+    
+    <item>
       <title>线性代数</title>
       <link>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -254,9 +273,16 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 打开文件 nvim $(fzf) 命令 关闭当前 buffer[1] :bd 快捷键  noremap 指 non-recursive map[2]  [1] HHH. How do I close a single buffer (out of many) in Vim?[EB/OL](2009–09–04). https://stackoverflow.com/a/1381652.
- [2] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). https://stackoverflow.com/a/3776182.
-  目录  Vim  包管理器  安装 使用  打开文件 命令  关闭当前 buffer[1]  快捷键    </description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    状态码 含义    :bd 关闭当前 buffer[1]  2 使用 shell 内建命令出错     快捷键   noremap 指 non-recursive map[2]   [1] HHH. How do I close a single buffer (out of many) in Vim?</description>
+    </item>
+    
+    <item>
+      <title>视频</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/video/</guid>
+      <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
     </item>
     
   </channel>
