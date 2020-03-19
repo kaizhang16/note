@@ -19,6 +19,18 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 :PlugInstall  " 安装插件
 ```
 
+### 安装依赖的二进制
+
+```sh
+pip install --user cmake_format
+```
+
+### coc
+
+```vim
+:CocInstall coc-clangd
+```
+
 ## 打开文件
 
 ```sh
@@ -27,12 +39,17 @@ nvim $(fzf)
 
 ## 命令
 
-### 关闭当前 buffer[@vimCloseBuffer]
+---------------------------------------
+状态码 含义
+------ --------------------------------
+`:bd`  关闭当前 buffer[@vimCloseBuffer]
 
-```vim
-:bd
-```
+`2`    使用 shell 内建命令出错
+---------------------------------------
+
+: Vim 命令 {#tbl:vimCommands}
+
 
 ## 快捷键
 
-- `noremap` 指 non-recursive map[@vimNoremap]
+> - `noremap` 指 non-recursive map[@vimNoremap]

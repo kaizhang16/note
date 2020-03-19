@@ -1,0 +1,11 @@
+---
+title: "视频"
+---
+
+# ffmpeg
+
+## 查看视频时长
+
+```sh
+ffmpeg -i {} 2>&1 | grep Duration
+```

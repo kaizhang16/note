@@ -1,0 +1,20 @@
+---
+title: "C++"
+---
+
+# 代码风格
+
+> 请参考：
+> - <https://llvm.org/docs/CodingStandards.html#llvm-coding-standards>
+> - <https://google.github.io/styleguide/cppguide.html>
+
+- Type names
+  - 名词
+  - `TextFileReader`
+- Function names
+  - 动词
+  - `openFile`
+
+# 教程
+
+- <https://isocpp.org/get-started>

@@ -1,0 +1,18 @@
+---
+title: "构建"
+---
+
+# cmake
+
+## 安装
+
+```sh
+CMAKE_VERSION=3.17.0-rc2
+curl -LO 'https://github.com/Kitware/CMake/releases/download/v3.17.0-rc2/cmake-$CMAKE_VERSION-Linux-x86_64.sh'
+chmod u+x cmake-$CMAKE_VERSION-Linux-x86_64.sh
+sudo ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local
+```
+
+## 教程
+
+- <https://cliutils.gitlab.io/modern-cmake/>
