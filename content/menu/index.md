@@ -18,6 +18,7 @@ headless: true
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
   - [包管理工具]({{< relref "/docs/tools/package-manager" >}})
+  - [图像]({{< relref "/docs/tools/image" >}})
   - [视频]({{< relref "/docs/tools/video" >}})
   - [API]({{< relref "/docs/tools/api" >}})
   - [Word]({{< relref "/docs/tools/word" >}})
