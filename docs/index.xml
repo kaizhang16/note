@@ -310,7 +310,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    状态码 含义    :bd 关闭当前 buffer[1]  2 使用 shell 内建命令出错     快捷键   noremap 指 non-recursive map[2]   [1] HHH. How do I close a single buffer (out of many) in Vim?</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    状态码 含义    :bd 关闭当前 buffer[1]  2 使用 shell 内建命令出错     快捷键   noremap 指 non-recursive map[2]   [1] HHH. How do I close a single buffer (out of many) in Vim?</description>
     </item>
     
     <item>
