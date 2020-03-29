@@ -29,6 +29,7 @@ pip install --user cmake_format
 
 ```vim
 :CocInstall coc-clangd
+:CocInstall coc-python
 ```
 
 ## 打开文件
