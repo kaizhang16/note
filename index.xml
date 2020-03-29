@@ -130,6 +130,15 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     
     <item>
       <title>Linux</title>
+      <link>https://kaizhang91.github.io/notes/docs/os/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/os/linux/</guid>
+      <description>Arch Linux 清除缓存 sudo paccache -rk0 目录  Arch Linux  清除缓存    </description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
