@@ -1,0 +1,11 @@
+---
+title: "Linux"
+---
+
+# Arch Linux
+
+## 清除缓存
+
+```sh
+sudo paccache -rk0
+```
