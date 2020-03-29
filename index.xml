@@ -60,6 +60,15 @@
     </item>
     
     <item>
+      <title>Dhall</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/dhall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/dhall/</guid>
+      <description>安装 Dhall 安装命令    操作系统 命令    Arch Linux sudo pacman -S dhall    目录  安装   </description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -268,6 +277,15 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/build/</guid>
       <description>cmake 安装 CMAKE_VERSION=3.17.0-rc2 curl -LO &amp;#39;https://github.com/Kitware/CMake/releases/download/v3.17.0-rc2/cmake-$CMAKE_VERSION-Linux-x86_64.sh&amp;#39; chmod u+x cmake-$CMAKE_VERSION-Linux-x86_64.sh sudo ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  目录  cmake  安装 教程    </description>
+    </item>
+    
+    <item>
+      <title>格式</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/format/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/format/</guid>
+      <description>json2toml pip3 install --user remarshal 目录  json2toml   </description>
     </item>
     
     <item>
