@@ -6,6 +6,21 @@ headless: true
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
   - [Unity]({{< relref "/docs/visual/unity" >}})
+- **编程**
+  - [TeX]({{< relref "/docs/program/TeX" >}})
+  - [Python]({{< relref "/docs/program/python" >}})
+  - [C++]({{< relref "/docs/program/c++" >}})
+  - [Bash]({{< relref "/docs/program/bash" >}})
+  - [fish-shell]({{< relref "/docs/program/fish-shell" >}})
+  - [TOML]({{< relref "/docs/program/toml" >}})
+  - [Golang]({{< relref "/docs/program/golang" >}})
+  - [JavaScript]({{< relref "/docs/program/js" >}})
+  - [CSS]({{< relref "/docs/program/css" >}})
+  - [HTML]({{< relref "/docs/program/html" >}})
+- **协议**
+  - [HTTP]({{< relref "/docs/protocols/http" >}})
+- **操作系统**
+  - [Linux]({{< relref "/docs/os/linux" >}})
 - **工具**
   - [编辑器]({{< relref "/docs/tools/editor" >}})
   - [写作]({{< relref "/docs/tools/writing" >}})
@@ -22,16 +37,3 @@ headless: true
   - [视频]({{< relref "/docs/tools/video" >}})
   - [API]({{< relref "/docs/tools/api" >}})
   - [Word]({{< relref "/docs/tools/word" >}})
-- **编程**
-  - [TeX]({{< relref "/docs/program/TeX" >}})
-  - [Python]({{< relref "/docs/program/python" >}})
-  - [C++]({{< relref "/docs/program/c++" >}})
-  - [Bash]({{< relref "/docs/program/bash" >}})
-  - [fish-shell]({{< relref "/docs/program/fish-shell" >}})
-  - [TOML]({{< relref "/docs/program/toml" >}})
-  - [Golang]({{< relref "/docs/program/golang" >}})
-  - [JavaScript]({{< relref "/docs/program/js" >}})
-  - [CSS]({{< relref "/docs/program/css" >}})
-  - [HTML]({{< relref "/docs/program/html" >}})
-- **协议**
-  - [HTTP]({{< relref "/docs/protocols/http" >}})
