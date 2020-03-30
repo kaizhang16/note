@@ -1,0 +1,13 @@
+---
+title: "加密"
+---
+
+# GPG
+
+## FAQ
+
+### gpg: WARNING: server 'gpg-agent' is older than us
+
+```sh
+gpgconf --kill -v gpg-agent
+```
