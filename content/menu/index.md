@@ -31,6 +31,7 @@ headless: true
   - [Linux]({{< relref "/docs/tools/linux" >}})
   - [Docker]({{< relref "/docs/tools/docker" >}})
   - [压缩]({{< relref "/docs/tools/compress" >}})
+  - [加密]({{< relref "/docs/tools/encryption" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
   - [包管理工具]({{< relref "/docs/tools/package-manager" >}})
