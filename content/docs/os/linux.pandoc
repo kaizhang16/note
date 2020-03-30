@@ -2,10 +2,34 @@
 title: "Linux"
 ---
 
-# Arch Linux
+# 发行版
 
-## 清除缓存
+## Arch Linux
+
+### 清除缓存
 
 ```sh
 sudo paccache -rk0
+```
+
+# 挂载
+
+## ntfs
+
+```sh
+sudo mount -t ntfs -o gid=$gid,uid=$uid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint
+```
+
+## samba
+
+----------------------------------------
+操作系统   命令
+---------- -----------------------------
+Ubuntu     `sudo apt install cifs-utils`
+----------------------------------------
+
+: samba 组件安装命令
+
+```sh
+sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint
 ```
