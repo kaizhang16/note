@@ -60,15 +60,6 @@
     </item>
     
     <item>
-      <title>Dhall</title>
-      <link>https://kaizhang91.github.io/notes/docs/program/dhall/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/program/dhall/</guid>
-      <description>安装 Dhall 安装命令    操作系统 命令    Arch Linux sudo pacman -S dhall    目录  安装   </description>
-    </item>
-    
-    <item>
       <title>Docker</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -139,20 +130,11 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     
     <item>
       <title>Linux</title>
-      <link>https://kaizhang91.github.io/notes/docs/os/linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/os/linux/</guid>
-      <description>Arch Linux 清除缓存 sudo paccache -rk0 目录  Arch Linux  清除缓存    </description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/linux/</guid>
-      <description>手册 tldr # 安装 sudo pacman -S tldr rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[2] grep -rl &amp;quot;string&amp;quot; /path 网络 curl 上传时显示进度条[3] curl ... | tee /dev/null urlencode 参数[4] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
+      <description>手册 tldr tldr 安装命令    操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr    rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[2] grep -rl &amp;quot;string&amp;quot; /path 网络 curl 上传时显示进度条[3] curl ... | tee /dev/null urlencode 参数[4] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
     </item>
     
     <item>
@@ -171,7 +153,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/python/</guid>
-      <description>内建函数[1] 字典[2] 遍历 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): ... print(k, v) ... gallahad the pure robin the brave 键是否存在[3] d = {&amp;quot;key1&amp;quot;: 10, &amp;quot;key2&amp;quot;: 23}  if &amp;quot;key1&amp;quot; in d:  print(&amp;quot;this will execute&amp;quot;)  if &amp;quot;nonexistent key&amp;quot; in d:  print(&amp;quot;this will not&amp;quot;) 合并字典[4] z = {**x, **y} += x += y # x = x + y open 表 1: 打开文件模式说明[5]    mode-string truncate?</description>
+      <description>内建函数[1] 类型 表 1: Python 类型    类型 含义    str 字符串     字典[2] 遍历 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): ... print(k, v) ... gallahad the pure robin the brave 键是否存在[3] d = {&amp;quot;key1&amp;quot;: 10, &amp;quot;key2&amp;quot;: 23}  if &amp;quot;key1&amp;quot; in d:  print(&amp;quot;this will execute&amp;quot;)  if &amp;quot;nonexistent key&amp;quot; in d:  print(&amp;quot;this will not&amp;quot;) 合并字典[4] z = {**x, **y} += x += y # x = x + y open 表 2: 打开文件模式说明[5]    mode-string truncate?</description>
     </item>
     
     <item>
@@ -280,15 +262,6 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
-      <title>格式</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/format/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/tools/format/</guid>
-      <description>json2toml pip3 install --user remarshal 目录  json2toml   </description>
-    </item>
-    
-    <item>
       <title>线性代数</title>
       <link>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -310,7 +283,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    状态码 含义    :bd 关闭当前 buffer[1]  2 使用 shell 内建命令出错     快捷键   noremap 指 non-recursive map[2]   [1] HHH. How do I close a single buffer (out of many) in Vim?</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   [1] HHH.</description>
     </item>
     
     <item>

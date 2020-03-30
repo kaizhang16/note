@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="编辑器"><meta property="og:title" content="编辑器" />
-<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    状态码 含义    :bd 关闭当前 buffer[1]  2 使用 shell 内建命令出错     快捷键   noremap 指 non-recursive map[2]   [1] HHH. How do I close a single buffer (out of many) in Vim?" />
+<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   [1] HHH." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/editor/" />
-<meta property="article:modified_time" content="2020-03-30T01:53:02+08:00" />
+<meta property="article:modified_time" content="2020-03-30T06:12:38+00:00" />
 <title>编辑器 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.98237333f26b2cd7ee859c289ba0ced90272e1c9d0df3ca39ad42ed4c0626f4d.js" integrity="sha256-mCNzM/JrLNfuhZwom6DO2QJy4cnQ3zyjmtQu1MBib00="></script>
+<script defer src="/notes/cn.search.min.926210c3b9bbd440b9f2a62ca648ba5a55773d86623b2ee410fa63ca4bf54aba.js" integrity="sha256-kmIQw7m71EC58qYspki6WlV3PYZiOy7kEPpjykv1Sro="></script>
 
 <!--
 Made with Book Theme
@@ -73,31 +73,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/visual/unity/">Unity</a></li>
 </ul>
 </li>
-<li><strong>编程</strong>
-<ul>
-<li><a href="/notes/docs/program/tex/">TeX</a></li>
-<li><a href="/notes/docs/program/python/">Python</a></li>
-<li><a href="/notes/docs/program/c++/">C++</a></li>
-<li><a href="/notes/docs/program/bash/">Bash</a></li>
-<li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
-<li><a href="/notes/docs/program/dhall/">Dhall</a></li>
-<li><a href="/notes/docs/program/toml/">TOML</a></li>
-<li><a href="/notes/docs/program/golang/">Golang</a></li>
-<li><a href="/notes/docs/program/js/">JavaScript</a></li>
-<li><a href="/notes/docs/program/css/">CSS</a></li>
-<li><a href="/notes/docs/program/html/">HTML</a></li>
-</ul>
-</li>
-<li><strong>协议</strong>
-<ul>
-<li><a href="/notes/docs/protocols/http/">HTTP</a></li>
-</ul>
-</li>
-<li><strong>操作系统</strong>
-<ul>
-<li><a href="/notes/docs/os/linux/">Linux</a></li>
-</ul>
-</li>
 <li><strong>工具</strong>
 <ul>
 <li><a href="/notes/docs/tools/editor/"class=active>编辑器</a></li>
@@ -113,9 +88,27 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/package-manager/">包管理工具</a></li>
 <li><a href="/notes/docs/tools/image/">图像</a></li>
 <li><a href="/notes/docs/tools/video/">视频</a></li>
-<li><a href="/notes/docs/tools/format/">格式</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
+</ul>
+</li>
+<li><strong>编程</strong>
+<ul>
+<li><a href="/notes/docs/program/tex/">TeX</a></li>
+<li><a href="/notes/docs/program/python/">Python</a></li>
+<li><a href="/notes/docs/program/c++/">C++</a></li>
+<li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
+<li><a href="/notes/docs/program/toml/">TOML</a></li>
+<li><a href="/notes/docs/program/golang/">Golang</a></li>
+<li><a href="/notes/docs/program/js/">JavaScript</a></li>
+<li><a href="/notes/docs/program/css/">CSS</a></li>
+<li><a href="/notes/docs/program/html/">HTML</a></li>
+</ul>
+</li>
+<li><strong>协议</strong>
+<ul>
+<li><a href="/notes/docs/protocols/http/">HTTP</a></li>
 </ul>
 </li>
 </ul>
@@ -180,8 +173,7 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="安装依赖的二进制">安装依赖的二进制</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
 <h3 id="coc">coc</h3>
-<pre class="vim"><code>:CocInstall coc-clangd
-:CocInstall coc-python</code></pre>
+<pre class="vim"><code>:CocInstall coc-clangd</code></pre>
 <h2 id="打开文件">打开文件</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h2 id="命令">命令</h2>
@@ -194,7 +186,7 @@ https://github.com/alex-shpak/hugo-book
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">状态码</th>
+<th style="text-align: left;">命令</th>
 <th style="text-align: left;">含义</th>
 </tr>
 </thead>
@@ -203,14 +195,31 @@ https://github.com/alex-shpak/hugo-book
 <td style="text-align: left;"><code>:bd</code></td>
 <td style="text-align: left;">关闭当前 buffer<span class="citation" data-cites="vimCloseBuffer"><sup>[<a href="#ref-vimCloseBuffer" role="doc-biblioref">1</a>]</sup></span></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;"><code>2</code></td>
-<td style="text-align: left;">使用 shell 内建命令出错</td>
-</tr>
 </tbody>
 </table>
 </div>
 <h2 id="快捷键">快捷键</h2>
+<div id="tbl:vimShotcuts">
+<table style="width:56%;">
+<caption>表 2: Vim 快捷键</caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">快捷键</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>\-f-Ctrl-x</code></td>
+<td style="text-align: left;">搜索文件并水平分割窗口打开</td>
+</tr>
+</tbody>
+</table>
+</div>
 <blockquote>
 <ul>
 <li><code>noremap</code> 指 non-recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">2</a>]</sup></span></li>
@@ -255,9 +264,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/6e4126c1728b4bc545e52b9d8b3242d0f979b4b7" title='最后修改者 Kai Zhang | 2020-03-30 01:53:02 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/d9211815ed7b0a9f4ca27b04e31286cac5a37a60" title='最后修改者 Kai Zhang | 2020-03-30 14:12:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-30 01:53:02 &#43;0800</span>
+      <span>2020-03-30 14:12:38 &#43;0800</span>
     </a>
   </div>
 

@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="手册 tldr # 安装 sudo pacman -S tldr rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[2] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[3] curl ... | tee /dev/null urlencode 参数[4] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github." />
+<meta property="og:description" content="手册 tldr tldr 安装命令    操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr    rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[2] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[3] curl ... | tee /dev/null urlencode 参数[4] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/linux/" />
-<meta property="article:modified_time" content="2020-02-28T15:19:13+08:00" />
+<meta property="article:modified_time" content="2020-03-30T06:12:38+00:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.98237333f26b2cd7ee859c289ba0ced90272e1c9d0df3ca39ad42ed4c0626f4d.js" integrity="sha256-mCNzM/JrLNfuhZwom6DO2QJy4cnQ3zyjmtQu1MBib00="></script>
+<script defer src="/notes/cn.search.min.926210c3b9bbd440b9f2a62ca648ba5a55773d86623b2ee410fa63ca4bf54aba.js" integrity="sha256-kmIQw7m71EC58qYspki6WlV3PYZiOy7kEPpjykv1Sro="></script>
 
 <!--
 Made with Book Theme
@@ -73,31 +73,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/visual/unity/">Unity</a></li>
 </ul>
 </li>
-<li><strong>编程</strong>
-<ul>
-<li><a href="/notes/docs/program/tex/">TeX</a></li>
-<li><a href="/notes/docs/program/python/">Python</a></li>
-<li><a href="/notes/docs/program/c++/">C++</a></li>
-<li><a href="/notes/docs/program/bash/">Bash</a></li>
-<li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
-<li><a href="/notes/docs/program/dhall/">Dhall</a></li>
-<li><a href="/notes/docs/program/toml/">TOML</a></li>
-<li><a href="/notes/docs/program/golang/">Golang</a></li>
-<li><a href="/notes/docs/program/js/">JavaScript</a></li>
-<li><a href="/notes/docs/program/css/">CSS</a></li>
-<li><a href="/notes/docs/program/html/">HTML</a></li>
-</ul>
-</li>
-<li><strong>协议</strong>
-<ul>
-<li><a href="/notes/docs/protocols/http/">HTTP</a></li>
-</ul>
-</li>
-<li><strong>操作系统</strong>
-<ul>
-<li><a href="/notes/docs/os/linux/">Linux</a></li>
-</ul>
-</li>
 <li><strong>工具</strong>
 <ul>
 <li><a href="/notes/docs/tools/editor/">编辑器</a></li>
@@ -113,9 +88,27 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/package-manager/">包管理工具</a></li>
 <li><a href="/notes/docs/tools/image/">图像</a></li>
 <li><a href="/notes/docs/tools/video/">视频</a></li>
-<li><a href="/notes/docs/tools/format/">格式</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
+</ul>
+</li>
+<li><strong>编程</strong>
+<ul>
+<li><a href="/notes/docs/program/tex/">TeX</a></li>
+<li><a href="/notes/docs/program/python/">Python</a></li>
+<li><a href="/notes/docs/program/c++/">C++</a></li>
+<li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
+<li><a href="/notes/docs/program/toml/">TOML</a></li>
+<li><a href="/notes/docs/program/golang/">Golang</a></li>
+<li><a href="/notes/docs/program/js/">JavaScript</a></li>
+<li><a href="/notes/docs/program/css/">CSS</a></li>
+<li><a href="/notes/docs/program/html/">HTML</a></li>
+</ul>
+</li>
+<li><strong>协议</strong>
+<ul>
+<li><a href="/notes/docs/protocols/http/">HTTP</a></li>
 </ul>
 </li>
 </ul>
@@ -172,48 +165,69 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown"><h1 id="手册">手册</h1>
 <h2 id="tldr">tldr</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># 安装</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">sudo</span> pacman -S tldr</span></code></pre></div>
+<table style="width:47%;">
+<caption>tldr 安装命令</caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">操作系统</th>
+<th style="text-align: left;">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Arch Linux</td>
+<td style="text-align: left;"><code>sudo pacman -S tldr</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">其他</td>
+<td style="text-align: left;"><code>yarn global add tldr</code></td>
+</tr>
+</tbody>
+</table>
 <h1 id="rsync">rsync</h1>
 <h2 id="带进度条的复制">带进度条的复制</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">rsync</span> --info=progress2 -rh <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">rsync</span> --info=progress2 -rh <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
 <h2 id="指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<a href="#ref-rsyncPrivateKey" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">rsync</span> -Pav -e <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">rsync</span> -Pav -e <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
 <h1 id="查找字符串">查找字符串</h1>
 <h2 id="ripgrep">ripgrep</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># 在 python 文件里搜索</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># 在 python 文件里搜索</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
 <h2 id="grepgrep">grep<span class="citation" data-cites="grep"><sup>[<a href="#ref-grep" role="doc-biblioref">2</a>]</sup></span></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
 <h1 id="网络">网络</h1>
 <h2 id="curl">curl</h2>
 <h3 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">3</a>]</sup></span></h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
 <h3 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">4</a>]</sup></span></h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
 <h1 id="终端">终端</h1>
 <h2 id="tmux">tmux</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># 列出会话</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="ex">tmux</span> ls</span>
-<span id="cb8-3"><a href="#cb8-3"></a></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co"># 创建新会话</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="ex">tmux</span> new -s myname</span>
-<span id="cb8-6"><a href="#cb8-6"></a></span>
-<span id="cb8-7"><a href="#cb8-7"></a><span class="co"># 连接会话</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># 列出会话</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="ex">tmux</span> ls</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># 创建新会话</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="ex">tmux</span> new -s myname</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co"># 连接会话</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
 <h1 id="硬盘">硬盘</h1>
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
 </ul>
 <h2 id="dudu">du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">5</a>]</sup></span></h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
 <h1 id="jq">jq</h1>
 <h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
 <h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">7</a>]</sup></span></h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
 <h1 id="cpu">CPU</h1>
-<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-rsyncPrivateKey">
@@ -293,9 +307,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/2a81251e0a4b9d2c770abe520e779f27933c6289" title='最后修改者 Kai Zhang | 2020-02-28 15:19:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/d9211815ed7b0a9f4ca27b04e31286cac5a37a60" title='最后修改者 Kai Zhang | 2020-03-30 14:12:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-28 15:19:13 &#43;0800</span>
+      <span>2020-03-30 14:12:38 &#43;0800</span>
     </a>
   </div>
 
