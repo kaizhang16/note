@@ -233,6 +233,15 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>加密</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/encryption/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/encryption/</guid>
+      <description>GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
+    </item>
+    
+    <item>
       <title>包管理工具</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/package-manager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
