@@ -60,6 +60,15 @@
     </item>
     
     <item>
+      <title>Dhall</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/dhall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/dhall/</guid>
+      <description>安装 Dhall 安装命令    操作系统 命令    Arch Linux sudo pacman -S dhall    目录  安装   </description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -126,6 +135,15 @@
       <description>字符串拼接[1] 要使用 + 而不是 string.concat()。
 Array flatMap[2] 等价于先 map() 再 flat()。
 let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&amp;gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&amp;gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window.</description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://kaizhang91.github.io/notes/docs/os/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/os/linux/</guid>
+      <description>Arch Linux 清除缓存 sudo paccache -rk0 目录  Arch Linux  清除缓存    </description>
     </item>
     
     <item>
@@ -262,6 +280,15 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>格式</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/format/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/format/</guid>
+      <description>json2toml pip3 install --user remarshal 目录  json2toml   </description>
+    </item>
+    
+    <item>
       <title>线性代数</title>
       <link>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -283,7 +310,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   [1] HHH.</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   [1] HHH.</description>
     </item>
     
     <item>
