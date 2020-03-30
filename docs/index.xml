@@ -35,8 +35,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</guid>
-      <description>代码风格  请参考： - https://llvm.org/docs/CodingStandards.html#llvm-coding-standards - https://google.github.io/styleguide/cppguide.html
-  Type names  名词 TextFileReader  Function names  动词 openFile   教程  https://isocpp.org/get-started  目录  代码风格 教程   </description>
+      <description>代码风格  请参考：
+ https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html    Type names  名词 TextFileReader  Function names  动词 openFile   教程  https://isocpp.org/get-started  目录  代码风格 教程   </description>
     </item>
     
     <item>
