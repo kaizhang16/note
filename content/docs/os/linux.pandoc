@@ -12,6 +12,12 @@ title: "Linux"
 sudo paccache -rk0
 ```
 
+# Virtual Box
+
+```sh
+sudo pacman -S xf86-video-vmware
+```
+
 # 挂载
 
 ## ntfs
