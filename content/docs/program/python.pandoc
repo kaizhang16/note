@@ -4,6 +4,16 @@ title: "Python"
 
 # 内建函数[@pythonBuiltIn]
 
+## 类型
+
+-----------
+类型 含义
+---- ------
+str  字符串
+-----------
+
+: Python 类型 {#tbl:types}
+
 ## 字典[@pythonLoop]
 
 ### 遍历
@@ -92,6 +102,16 @@ class C:
 import numpy as np
 ```
 
+## 数据类型[@numpyTypes]
+
+------------------------------
+NumPy 类型 C 类型 含义
+---------- ------ ------------
+np.float64 double 双精度浮点数
+------------------------------
+
+: NumPy 数据类型
+
 ## 右乘列向量
 
 $$\matrix{A}\vec{x}$$ {#eq:rigthMultiplyColumnVector}
@@ -115,6 +135,23 @@ $$\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}$$ {#eq:SVD}
 
 ```py
 U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
+```
+
+## 弧度 -> 角度
+
+```py
+>>> rad = np.arange(12.)*np.pi/6
+>>> np.degrees(rad)
+array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
+        270.,  300.,  330.])
+```
+
+# Pillow
+
+## 图像大小限制[@pillowMaxImagePixels]
+
+```py
+PIL.Image.MAX_IMAGE_PIXELS = 933120000
 ```
 
 # 常用函数
