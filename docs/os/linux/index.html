@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="Arch Linux 清除缓存 sudo paccache -rk0 目录  Arch Linux  清除缓存    " />
+<meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 挂载 ntfs sudo mount -t ntfs -o gid=$gid,uid=$uid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 目录  发行版  Arch Linux  清除缓存   挂载  ntfs samba    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/os/linux/" />
-<meta property="article:modified_time" content="2020-03-30T01:20:44+08:00" />
+<meta property="article:modified_time" content="2020-03-30T07:43:47+00:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.3fa48844821c23c04b54c162b222fcd1e0e4d85266b0e76aa497e8e3f4b68f4f.css" integrity="sha256-P6SIRIIcI8BLVMFisiL80eDk2FJmsOdqpJfo4/S2j08=">
 
 
-<script defer src="/notes/cn.search.min.7ca478f9faef81dc93af0fd758fbef3573fe03e3ed96eb0a4c24d1ca87647dc3.js" integrity="sha256-fKR4&#43;frvgdyTrw/XWPvvNXP&#43;A&#43;PtlusKTCTRyodkfcM="></script>
+<script defer src="/notes/cn.search.min.dfbd4a1867dc24cef3ca7424bd4c6eec49816c9a9808d3069297b6c16bcd7083.js" integrity="sha256-371KGGfcJM7zynQkvUxu7EmBbJqYCNMGkpe2wWvNcIM="></script>
 
 <!--
 Made with Book Theme
@@ -170,16 +170,49 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="arch-linux">Arch Linux</h1>
-<h2 id="清除缓存">清除缓存</h2>
+<article class="markdown"><h1 id="发行版">发行版</h1>
+<h2 id="arch-linux">Arch Linux</h2>
+<h3 id="清除缓存">清除缓存</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">sudo</span> paccache -rk0</span></code></pre></div>
+<h1 id="挂载">挂载</h1>
+<h2 id="ntfs">ntfs</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> mount -t ntfs -o gid=<span class="va">$gid</span>,uid=<span class="va">$uid</span>,dmask=022,fmask=133 /dev/<span class="va">$disk</span> /media/<span class="va">$mountpoint</span></span></code></pre></div>
+<h2 id="samba">samba</h2>
+<table style="width:57%;">
+<caption>samba 组件安装命令</caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">操作系统</th>
+<th style="text-align: left;">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ubuntu</td>
+<td style="text-align: left;"><code>sudo apt install cifs-utils</code></td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> mount -t cifs -o username=<span class="va">$username</span>,password=<span class="va">$password</span>,uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,dir_mode=0500,file_mode=0600 //<span class="va">$ip</span>/ar /media/<span class="va">$mountpoint</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#发行版">发行版</a>
+  <ul>
   <li><a href="#arch-linux">Arch Linux</a>
   <ul>
   <li><a href="#清除缓存">清除缓存</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#挂载">挂载</a>
+  <ul>
+  <li><a href="#ntfs">ntfs</a></li>
+  <li><a href="#samba">samba</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -195,9 +228,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/2c397eb7b1c57c7ae09b802eb7458e85843b59bb" title='最后修改者 Kai Zhang | 2020-03-30 01:20:44 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/e4acd06719d2a583d338736fbdd16f3123607e18" title='最后修改者 Kai Zhang | 2020-03-30 15:43:47 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-30 01:20:44 &#43;0800</span>
+      <span>2020-03-30 15:43:47 &#43;0800</span>
     </a>
   </div>
 
