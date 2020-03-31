@@ -32,7 +32,13 @@ sudo pacman -S xf86-video-vmware
 ## ntfs
 
 ```sh
-sudo mount -t ntfs -o gid=$gid,uid=$uid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint
+sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint
+```
+
+## vboxsf
+
+```sh
+sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint
 ```
 
 ## samba
