@@ -17,6 +17,8 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 ```vim
 :PlugInstall  " 安装插件
+:PlugUpdate   " 升级插件
+:PlugUpgrade  " 升级 plug
 ```
 
 ### 安装依赖的二进制

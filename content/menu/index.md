@@ -6,6 +6,8 @@ headless: true
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
   - [Unity]({{< relref "/docs/visual/unity" >}})
+- **计算机科学**
+  - [数据类型]({{< relref "/docs/cs/types" >}})
 - **编程**
   - [TeX]({{< relref "/docs/program/TeX" >}})
   - [Python]({{< relref "/docs/program/python" >}})

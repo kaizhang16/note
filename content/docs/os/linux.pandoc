@@ -21,6 +21,12 @@ sudo apt update
 sudo apt upgrade
 ```
 
+### add-apt-repository: command not found
+
+```sh
+sudo apt install software-properties-common
+```
+
 # Virtual Box
 
 ```sh
