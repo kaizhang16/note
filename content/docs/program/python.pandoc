@@ -4,19 +4,36 @@ title: "Python"
 
 # 内建函数[@pythonBuiltIn]
 
-## 类型
+## 数据类型
 
------------
-类型 含义
----- ------
-str  字符串
------------
+---------------
+数据类型 含义
+-------- ------
+str      字符串
+---------------
 
-: Python 类型 {#tbl:types}
+: Python 数据类型 {#tbl:types}
+
+## 运算符
+
+-----------------------
+运算符 含义 例子
+------ ---- -----------
+`**`   幂   `2**3 == 8`
+-----------------------
+
+: Python 运算符
 
 ## 字典[@pythonLoop]
 
-### 遍历
+### 遍历 list 并获取 index[@pythonEnumerate]
+
+```py
+for idx, val in enumerate(ints):
+    print(idx, val)
+```
+
+### 遍历字典
 
 ```py
 >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
@@ -86,6 +103,15 @@ class Parrot:
         return self._voltage
 ```
 
+## super
+
+```py
+class C(B):
+    def method(self, arg):
+        super().method(arg)    # This does the same thing as:
+                               # super(C, self).method(arg)
+```
+
 ## classmethod
 
 带 `cls` 的类方法。
@@ -112,12 +138,35 @@ np.float64 double 双精度浮点数
 
 : NumPy 数据类型
 
+## numpy.zeros
+
+初始化数组。
+
+```py
+>>> np.zeros(5)
+array([ 0.,  0.,  0.,  0.,  0.])
+
+>>> np.zeros((2, 1))
+array([[ 0.],
+       [ 0.]])
+```
+
 ## 右乘列向量
 
 $$\matrix{A}\vec{x}$$ {#eq:rigthMultiplyColumnVector}
 
 ```py
 np.dot(A, x)
+```
+
+## 竖向堆积
+
+```py
+>>> a = np.array([1, 2, 3])
+>>> b = np.array([2, 3, 4])
+>>> np.vstack((a,b))
+array([[1, 2, 3],
+       [2, 3, 4]])
 ```
 
 ## 范数[@pythonNorm]
@@ -136,6 +185,10 @@ $$\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}$$ {#eq:SVD}
 ```py
 U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
 ```
+
+## numpy.any
+
+测试某个轴上是否有一个元素为真。
 
 ## 弧度 -> 角度
 
