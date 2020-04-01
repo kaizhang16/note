@@ -4,10 +4,11 @@ title: "C++"
 
 # 代码风格
 
-> 请参考：
->
-> - <https://llvm.org/docs/CodingStandards.html#llvm-coding-standards>
-> - <https://google.github.io/styleguide/cppguide.html>
+## 文件后缀
+
+- 源代码：`cpp`
+
+## 命名规范
 
 - Type names
   - 名词
@@ -15,6 +16,11 @@ title: "C++"
 - Function names
   - 动词
   - `openFile`
+
+> 请参考：
+>
+> - <https://llvm.org/docs/CodingStandards.html#llvm-coding-standards>
+> - <https://google.github.io/styleguide/cppguide.html>
 
 # 教程
 

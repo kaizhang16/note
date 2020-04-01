@@ -60,3 +60,17 @@ Ubuntu     `sudo apt install cifs-utils`
 ```sh
 sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint
 ```
+
+# 查看目录
+
+## broot
+
+### 安装 broot
+
+----------------------------------------
+操作系统   命令
+---------- -----------------------------
+Arch Linux `sudo pacman -S broot`
+----------------------------------------
+
+: broot 安装命令

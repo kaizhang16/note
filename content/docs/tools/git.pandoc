@@ -2,7 +2,9 @@
 title: "Git"
 ---
 
-# delta
+# diff
+
+## 安装 delta
 
 ---------------------------------
 操作系统   命令
@@ -11,6 +13,12 @@ Arch Linux `yay -S git-delta`
 ---------------------------------
 
 : delta 安装命令
+
+## 与暂存区比较
+
+```sh
+git diff --cached
+```
 
 # Git Submodule
 
