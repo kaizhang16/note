@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/bash/</guid>
-      <description>颜色[1] 表 1: 终端颜色转义码列表    颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2] 表 2: 状态码    状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     Heredoc cat &amp;lt;&amp;lt;END hello world END 备忘单 https://devhints.io/bash。
+      <description>颜色[1]  表 1: 终端颜色转义码列表  颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2]  表 2: 状态码  状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     Heredoc cat &amp;lt;&amp;lt;END hello world END 备忘单 https://devhints.io/bash。
 参考文献 [1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]).</description>
     </item>
     
@@ -65,7 +65,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/dhall/</guid>
-      <description>安装 Dhall 安装命令    操作系统 命令    Arch Linux sudo pacman -S dhall    目录  安装   </description>
+      <description>安装  表 1: Dhall 安装命令  操作系统 命令    Arch Linux sudo pacman -S dhall     目录  安装   </description>
     </item>
     
     <item>
@@ -92,7 +92,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/git/</guid>
-      <description>diff 安装 delta delta 安装命令    操作系统 命令    Arch Linux yay -S git-delta    与暂存区比较 git diff --cached Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+      <description>diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta     与暂存区比较 git diff --cached Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
   目录  diff  安装 delta 与暂存区比较  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
     </item>
     
@@ -111,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/html/</guid>
-      <description>Language Code[1] 表 1: ISO 639-1 Language Codes    Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
+      <description>Language Code[1]  表 1: ISO 639-1 Language Codes  Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
   目录  Language Code[1] 参考文献   </description>
     </item>
     
@@ -171,7 +171,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/python/</guid>
-      <description>内建函数[1] 数据类型 表 1: Python 数据类型    数据类型 含义    str 字符串     运算符 Python 运算符    运算符 含义 例子    ** 幂 2**3 == 8    字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): ... print(k, v) .</description>
+      <description>内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): .</description>
     </item>
     
     <item>
@@ -180,7 +180,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/tex/</guid>
-      <description>运算符 表 1: 运算符    运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes     数学表达式 表 2: 数学表达式    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}     公式对齐[1] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[2]。</description>
+      <description>运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}     公式对齐[1] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[2]。</description>
     </item>
     
     <item>
@@ -295,7 +295,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/types/</guid>
       <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
-数据类型 数据类型    数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)    参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
+数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
   目录  科学计数法[1] 数据类型 参考文献   </description>
     </item>
     
@@ -339,7 +339,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   Android Studio 字体 编辑器字体 File -&amp;gt; Settings -&amp;gt; Editor -&amp;gt; Font。</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令  表 1: Vim 命令  命令 含义    :bd 关闭当前 buffer[1]     快捷键  表 2: Vim 快捷键  快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   Android Studio 字体 编辑器字体 File -&amp;gt; Settings -&amp;gt; Editor -&amp;gt; Font。</description>
     </item>
     
     <item>

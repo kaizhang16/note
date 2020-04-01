@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.3c3c9d47d14cac875166bd9083c9373531dd0dda07f1c9b9b17b0d5eb7b52ba8.js" integrity="sha256-PDydR9FMrIdRZr2Qg8k3NTHdDdoH8cm5sXsNXre1K6g="></script>
+<script defer src="/notes/cn.search.min.4707d6d4888c0dd2ccdf5344e0a4cfdd682e9b98603d23aea69a9fea28836aa8.js" integrity="sha256-RwfW1IiMDdLM31NE4KTP3Wgum5hgPSOuppqf6iiDaqg="></script>
 
 <!--
 Made with Book Theme
@@ -257,15 +257,6 @@ https://github.com/alex-shpak/hugo-book
     document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
 
     
-    document.querySelectorAll("table").forEach(table => {
-        
-        
-        
-        const tableWidth = table.caption.clientWidth + 1;
-        table.style.width = tableWidth + "px";
-    });
-
-    
     const searchResults = document.getElementById("book-search-results");
     document.getElementById("book-search-input").addEventListener("keyup", event => {
         
@@ -300,6 +291,17 @@ https://github.com/alex-shpak/hugo-book
     hljs.initHighlightingOnLoad();
     
 
+
+    
+    window.setTimeout(() => {
+        document.querySelectorAll("table").forEach(table => {
+            
+            
+            
+            const tableWidth = table.caption.clientWidth + 1;
+            table.style.width = tableWidth + "px";
+        });
+    }, 100);
 </script>
 
 

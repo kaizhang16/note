@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="运算符 表 1: 运算符    运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes     数学表达式 表 2: 数学表达式    数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}     公式对齐[1] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[2]。" />
+<meta property="og:description" content="运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}     公式对齐[1] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[2]。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
-<meta property="article:modified_time" content="2020-02-22T01:55:17+08:00" />
+<meta property="article:modified_time" content="2020-04-02T05:29:43+08:00" />
 <title>TeX | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.3c3c9d47d14cac875166bd9083c9373531dd0dda07f1c9b9b17b0d5eb7b52ba8.js" integrity="sha256-PDydR9FMrIdRZr2Qg8k3NTHdDdoH8cm5sXsNXre1K6g="></script>
+<script defer src="/notes/cn.search.min.4707d6d4888c0dd2ccdf5344e0a4cfdd682e9b98603d23aea69a9fea28836aa8.js" integrity="sha256-RwfW1IiMDdLM31NE4KTP3Wgum5hgPSOuppqf6iiDaqg="></script>
 
 <!--
 Made with Book Theme
@@ -179,65 +179,55 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown"><h1 id="运算符">运算符</h1>
 <div id="tbl:TeXOperators">
-<table style="width:60%;">
+<table>
 <caption>表 1: 运算符</caption>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 6%" />
-<col style="width: 26%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">运算符</th>
-<th style="text-align: left;">含义</th>
-<th style="text-align: left;"><span class="math inline">\(\TeX\)</span> 表示</th>
+<th>运算符</th>
+<th>含义</th>
+<th><span class="math inline">\(\TeX\)</span> 表示</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\langle, \rangle\)</span></td>
-<td style="text-align: left;">内积</td>
-<td style="text-align: left;"><code>\langle, \rangle</code></td>
+<td><span class="math inline">\(\langle, \rangle\)</span></td>
+<td>内积</td>
+<td><code>\langle, \rangle</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\otimes\)</span></td>
-<td style="text-align: left;">外积</td>
-<td style="text-align: left;"><code>\otimes</code></td>
+<td><span class="math inline">\(\otimes\)</span></td>
+<td>外积</td>
+<td><code>\otimes</code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <h1 id="数学表达式">数学表达式</h1>
 <div id="tbl:TeXExpressions">
-<table style="width:90%;">
+<table>
 <caption>表 2: 数学表达式</caption>
-<colgroup>
-<col style="width: 38%" />
-<col style="width: 9%" />
-<col style="width: 41%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">数学表达式</th>
-<th style="text-align: left;">含义</th>
-<th style="text-align: left;"><span class="math inline">\(\TeX\)</span> 表示</th>
+<th>数学表达式</th>
+<th>含义</th>
+<th><span class="math inline">\(\TeX\)</span> 表示</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\{n \mid 0 \le n \le 19\}\)</span></td>
-<td style="text-align: left;">集合</td>
-<td style="text-align: left;"><code>\{n \mid 0 \le n \le 19\}</code></td>
+<td><span class="math inline">\(\{n \mid 0 \le n \le 19\}\)</span></td>
+<td>集合</td>
+<td><code>\{n \mid 0 \le n \le 19\}</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\bar{p}\)</span></td>
-<td style="text-align: left;">平均值</td>
-<td style="text-align: left;"><code>\bar{p}</code></td>
+<td><span class="math inline">\(\bar{p}\)</span></td>
+<td>平均值</td>
+<td><code>\bar{p}</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\set{R}\)</span></td>
-<td style="text-align: left;">实数集</td>
-<td style="text-align: left;"><code>\set{R}</code></td>
+<td><span class="math inline">\(\set{R}\)</span></td>
+<td>实数集</td>
+<td><code>\set{R}</code></td>
 </tr>
 </tbody>
 </table>
@@ -281,9 +271,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/fd5dfa73d2b941492d3fffb1f1b485353f977f91" title='最后修改者 Kai Zhang | 2020-02-22 01:55:17 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7c91884fbf225baa727d6084482adf41cff8ed33" title='最后修改者 Kai Zhang | 2020-04-02 05:29:43 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-22 01:55:17 &#43;0800</span>
+      <span>2020-04-02 05:29:43 &#43;0800</span>
     </a>
   </div>
 
@@ -326,15 +316,6 @@ https://github.com/alex-shpak/hugo-book
     document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
 
     
-    document.querySelectorAll("table").forEach(table => {
-        
-        
-        
-        const tableWidth = table.caption.clientWidth + 1;
-        table.style.width = tableWidth + "px";
-    });
-
-    
     const searchResults = document.getElementById("book-search-results");
     document.getElementById("book-search-input").addEventListener("keyup", event => {
         
@@ -369,6 +350,17 @@ https://github.com/alex-shpak/hugo-book
     hljs.initHighlightingOnLoad();
     
 
+
+    
+    window.setTimeout(() => {
+        document.querySelectorAll("table").forEach(table => {
+            
+            
+            
+            const tableWidth = table.caption.clientWidth + 1;
+            table.style.width = tableWidth + "px";
+        });
+    }, 100);
 </script>
 
 

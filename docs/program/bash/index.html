@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Bash"><meta property="og:title" content="Bash" />
-<meta property="og:description" content="颜色[1] 表 1: 终端颜色转义码列表    颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2] 表 2: 状态码    状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     Heredoc cat &lt;&lt;END hello world END 备忘单 https://devhints.io/bash。
+<meta property="og:description" content="颜色[1]  表 1: 终端颜色转义码列表  颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2]  表 2: 状态码  状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     Heredoc cat &lt;&lt;END hello world END 备忘单 https://devhints.io/bash。
 参考文献 [1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详])." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/bash/" />
-<meta property="article:modified_time" content="2020-03-07T11:10:13+00:00" />
+<meta property="article:modified_time" content="2020-04-02T05:29:43+08:00" />
 <title>Bash | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.3c3c9d47d14cac875166bd9083c9373531dd0dda07f1c9b9b17b0d5eb7b52ba8.js" integrity="sha256-PDydR9FMrIdRZr2Qg8k3NTHdDdoH8cm5sXsNXre1K6g="></script>
+<script defer src="/notes/cn.search.min.4707d6d4888c0dd2ccdf5344e0a4cfdd682e9b98603d23aea69a9fea28836aa8.js" integrity="sha256-RwfW1IiMDdLM31NE4KTP3Wgum5hgPSOuppqf6iiDaqg="></script>
 
 <!--
 Made with Book Theme
@@ -180,72 +180,64 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown"><h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
 <div id="tbl:ansiEscapeCode">
-<table style="width:19%;">
+<table>
 <caption>表 1: 终端颜色转义码列表</caption>
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">颜色</th>
-<th style="text-align: left;">转义码</th>
+<th>颜色</th>
+<th>转义码</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">正常</td>
-<td style="text-align: left;"><code>\e[0m</code></td>
+<td>正常</td>
+<td><code>\e[0m</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">红色</td>
-<td style="text-align: left;"><code>\e[31m</code></td>
+<td>红色</td>
+<td><code>\e[31m</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">绿色</td>
-<td style="text-align: left;"><code>\e[32m</code></td>
+<td>绿色</td>
+<td><code>\e[32m</code></td>
 </tr>
 </tbody>
 </table>
 </div>
 <h1 id="状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<a href="#ref-bashExitCode" role="doc-biblioref">2</a>]</sup></span></h1>
 <div id="tbl:bashExitCode">
-<table style="width:43%;">
+<table>
 <caption>表 2: 状态码</caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 33%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">状态码</th>
-<th style="text-align: left;">含义</th>
+<th>状态码</th>
+<th>含义</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><code>1</code></td>
-<td style="text-align: left;">其他错误</td>
+<td><code>1</code></td>
+<td>其他错误</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>2</code></td>
-<td style="text-align: left;">使用 shell 内建命令出错</td>
+<td><code>2</code></td>
+<td>使用 shell 内建命令出错</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>126</code></td>
-<td style="text-align: left;">命令无法执行</td>
+<td><code>126</code></td>
+<td>命令无法执行</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>127</code></td>
-<td style="text-align: left;">命令未找到</td>
+<td><code>127</code></td>
+<td>命令未找到</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><code>128</code></td>
-<td style="text-align: left;">无效的参数</td>
+<td><code>128</code></td>
+<td>无效的参数</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><code>130</code></td>
-<td style="text-align: left;">取消</td>
+<td><code>130</code></td>
+<td>取消</td>
 </tr>
 </tbody>
 </table>
@@ -288,9 +280,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a77f315793e316bd0418f5bf0868e646034d8c1c" title='最后修改者 Kai Zhang | 2020-03-07 19:10:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7c91884fbf225baa727d6084482adf41cff8ed33" title='最后修改者 Kai Zhang | 2020-04-02 05:29:43 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-07 19:10:13 &#43;0800</span>
+      <span>2020-04-02 05:29:43 &#43;0800</span>
     </a>
   </div>
 
@@ -333,15 +325,6 @@ https://github.com/alex-shpak/hugo-book
     document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
 
     
-    document.querySelectorAll("table").forEach(table => {
-        
-        
-        
-        const tableWidth = table.caption.clientWidth + 1;
-        table.style.width = tableWidth + "px";
-    });
-
-    
     const searchResults = document.getElementById("book-search-results");
     document.getElementById("book-search-input").addEventListener("keyup", event => {
         
@@ -376,6 +359,17 @@ https://github.com/alex-shpak/hugo-book
     hljs.initHighlightingOnLoad();
     
 
+
+    
+    window.setTimeout(() => {
+        document.querySelectorAll("table").forEach(table => {
+            
+            
+            
+            const tableWidth = table.caption.clientWidth + 1;
+            table.style.width = tableWidth + "px";
+        });
+    }, 100);
 </script>
 
 

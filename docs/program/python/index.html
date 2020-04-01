@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Python"><meta property="og:title" content="Python" />
-<meta property="og:description" content="内建函数[1] 数据类型 表 1: Python 数据类型    数据类型 含义    str 字符串     运算符 Python 运算符    运算符 含义 例子    ** 幂 2**3 == 8    字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ... print(k, v) ." />
+<meta property="og:description" content="内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/python/" />
-<meta property="article:modified_time" content="2020-04-01T02:23:20+08:00" />
+<meta property="article:modified_time" content="2020-04-02T05:29:43+08:00" />
 <title>Python | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.3c3c9d47d14cac875166bd9083c9373531dd0dda07f1c9b9b17b0d5eb7b52ba8.js" integrity="sha256-PDydR9FMrIdRZr2Qg8k3NTHdDdoH8cm5sXsNXre1K6g="></script>
+<script defer src="/notes/cn.search.min.4707d6d4888c0dd2ccdf5344e0a4cfdd682e9b98603d23aea69a9fea28836aa8.js" integrity="sha256-RwfW1IiMDdLM31NE4KTP3Wgum5hgPSOuppqf6iiDaqg="></script>
 
 <!--
 Made with Book Theme
@@ -180,49 +180,42 @@ https://github.com/alex-shpak/hugo-book
 <article class="markdown"><h1 id="内建函数pythonbuiltin">内建函数<span class="citation" data-cites="pythonBuiltIn"><sup>[<a href="#ref-pythonBuiltIn" role="doc-biblioref">1</a>]</sup></span></h1>
 <h2 id="数据类型">数据类型</h2>
 <div id="tbl:types">
-<table style="width:25%;">
+<table>
 <caption>表 1: Python 数据类型</caption>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">数据类型</th>
-<th style="text-align: left;">含义</th>
+<th>数据类型</th>
+<th>含义</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">str</td>
-<td style="text-align: left;">字符串</td>
+<td>str</td>
+<td>字符串</td>
 </tr>
 </tbody>
 </table>
 </div>
 <h2 id="运算符">运算符</h2>
-<table style="width:33%;">
-<caption>Python 运算符</caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 6%" />
-<col style="width: 16%" />
-</colgroup>
+<div id="tbl:pythonOperators">
+<table>
+<caption>表 2: Python 运算符</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">运算符</th>
-<th style="text-align: left;">含义</th>
-<th style="text-align: left;">例子</th>
+<th>运算符</th>
+<th>含义</th>
+<th>例子</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><code>**</code></td>
-<td style="text-align: left;">幂</td>
-<td style="text-align: left;"><code>2**3 == 8</code></td>
+<td><code>**</code></td>
+<td>幂</td>
+<td><code>2**3 == 8</code></td>
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="字典pythonloop">字典<span class="citation" data-cites="pythonLoop"><sup>[<a href="#ref-pythonLoop" role="doc-biblioref">2</a>]</sup></span></h2>
 <h3 id="遍历-list-并获取-indexpythonenumerate">遍历 list 并获取 index<span class="citation" data-cites="pythonEnumerate"><sup>[<a href="#ref-pythonEnumerate" role="doc-biblioref">3</a>]</sup></span></h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">for</span> idx, val <span class="kw">in</span> <span class="bu">enumerate</span>(ints):</span>
@@ -248,58 +241,52 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb5"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>x <span class="op">+=</span> y  <span class="co"># x = x + y</span></span></code></pre></div>
 <h2 id="open">open</h2>
 <div id="tbl:openFileMode">
-<table style="width:85%;">
-<caption>表 2: 打开文件模式说明<span class="citation" data-cites="pythonOpenMode"><sup>[<a href="#ref-pythonOpenMode" role="doc-biblioref">6</a>]</sup></span></caption>
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 13%" />
-<col style="width: 11%" />
-<col style="width: 43%" />
-</colgroup>
+<table>
+<caption>表 3: 打开文件模式说明<span class="citation" data-cites="pythonOpenMode"><sup>[<a href="#ref-pythonOpenMode" role="doc-biblioref">6</a>]</sup></span></caption>
 <thead>
 <tr class="header">
 <th>mode-string</th>
-<th style="text-align: right;">truncate?</th>
+<th>truncate?</th>
 <th>create?</th>
-<th style="text-align: left;">what’s allowed</th>
+<th>what’s allowed</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>r</td>
-<td style="text-align: right;">no</td>
 <td>no</td>
-<td style="text-align: left;">reading (only)</td>
+<td>no</td>
+<td>reading (only)</td>
 </tr>
 <tr class="even">
 <td>w</td>
-<td style="text-align: right;">yes</td>
 <td>yes</td>
-<td style="text-align: left;">writing (only)</td>
+<td>yes</td>
+<td>writing (only)</td>
 </tr>
 <tr class="odd">
 <td>a</td>
-<td style="text-align: right;">no</td>
+<td>no</td>
 <td>yes</td>
-<td style="text-align: left;">writing (only), auto-appends</td>
+<td>writing (only), auto-appends</td>
 </tr>
 <tr class="even">
 <td>r+</td>
-<td style="text-align: right;">no</td>
 <td>no</td>
-<td style="text-align: left;">read and write</td>
+<td>no</td>
+<td>read and write</td>
 </tr>
 <tr class="odd">
 <td>w+</td>
-<td style="text-align: right;">yes</td>
 <td>yes</td>
-<td style="text-align: left;">read and write</td>
+<td>yes</td>
+<td>read and write</td>
 </tr>
 <tr class="even">
 <td>a+</td>
-<td style="text-align: right;">no</td>
+<td>no</td>
 <td>yes</td>
-<td style="text-align: left;">read and (auto-appending) write</td>
+<td>read and (auto-appending) write</td>
 </tr>
 </tbody>
 </table>
@@ -327,28 +314,25 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="numpy">numpy</h1>
 <div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 <h2 id="数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<a href="#ref-numpyTypes" role="doc-biblioref">7</a>]</sup></span></h2>
-<table style="width:43%;">
-<caption>NumPy 数据类型</caption>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 9%" />
-<col style="width: 18%" />
-</colgroup>
+<div id="tbl:numpyTypes">
+<table>
+<caption>表 4: NumPy 数据类型</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">NumPy 类型</th>
-<th style="text-align: left;">C 类型</th>
-<th style="text-align: left;">含义</th>
+<th>NumPy 类型</th>
+<th>C 类型</th>
+<th>含义</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">np.float64</td>
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">双精度浮点数</td>
+<td>np.float64</td>
+<td>double</td>
+<td>双精度浮点数</td>
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="numpy.zeros">numpy.zeros</h2>
 <p>初始化数组。</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">&gt;&gt;&gt;</span> np.zeros(<span class="dv">5</span>)</span>
@@ -468,9 +452,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/9a0a020bbca888403cf87affda56824bc97ae253" title='最后修改者 Kai Zhang | 2020-04-01 02:23:20 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7c91884fbf225baa727d6084482adf41cff8ed33" title='最后修改者 Kai Zhang | 2020-04-02 05:29:43 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-01 02:23:20 &#43;0800</span>
+      <span>2020-04-02 05:29:43 &#43;0800</span>
     </a>
   </div>
 
@@ -513,15 +497,6 @@ https://github.com/alex-shpak/hugo-book
     document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
 
     
-    document.querySelectorAll("table").forEach(table => {
-        
-        
-        
-        const tableWidth = table.caption.clientWidth + 1;
-        table.style.width = tableWidth + "px";
-    });
-
-    
     const searchResults = document.getElementById("book-search-results");
     document.getElementById("book-search-input").addEventListener("keyup", event => {
         
@@ -556,6 +531,17 @@ https://github.com/alex-shpak/hugo-book
     hljs.initHighlightingOnLoad();
     
 
+
+    
+    window.setTimeout(() => {
+        document.querySelectorAll("table").forEach(table => {
+            
+            
+            
+            const tableWidth = table.caption.clientWidth + 1;
+            table.style.width = tableWidth + "px";
+        });
+    }, 100);
 </script>
 
 
