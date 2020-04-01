@@ -11,15 +11,6 @@
     
     
     <item>
-      <title></title>
-      <link>https://kaizhang91.github.io/notes/docs/program/zsh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/program/zsh/</guid>
-      <description>/* vim: set filetype=markdown : */ title: “Zsh” 插件管理（antibody） 静态加载 antibody bundle &amp;lt; ~/.config/antibody/zsh_plugins.txt &amp;gt; ~/.config/antibody/zsh_plugins.sh 更新插件 antibody update 删除插件 antibody purge robbyrussell/oh-my-zsh 目录  /* vim: set filetype=markdown : */ title: “Zsh” 插件管理（antibody）  静态加载 更新插件 删除插件    </description>
-    </item>
-    
-    <item>
       <title>API</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -228,6 +219,15 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
 调整页边距 请参考 http://www.officexr.com/c/14244.html。
 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
 目录  插入引用 连续多项引用 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线   </description>
+    </item>
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/zsh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/zsh/</guid>
+      <description>插件管理 antibody 静态加载 antibody bundle &amp;lt; ~/.config/antibody/zsh_plugins.txt &amp;gt; ~/.config/antibody/zsh_plugins.sh 更新插件 antibody update 删除插件 antibody purge robbyrussell/oh-my-zsh 目录  插件管理  antibody  静态加载 更新插件 删除插件     </description>
     </item>
     
     <item>

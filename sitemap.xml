@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/zsh/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kaizhang91.github.io/notes/docs/tools/api/</loc>
     <lastmod>2020-03-07T11:10:13+00:00</lastmod>
   </url>
@@ -48,7 +43,7 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/</loc>
-    <lastmod>2020-04-01T02:23:20+08:00</lastmod>
+    <lastmod>2020-04-01T14:31:18+00:00</lastmod>
   </url>
   
   <url>
@@ -123,6 +118,11 @@
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/tools/word/</loc>
     <lastmod>2020-03-07T11:56:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/docs/program/zsh/</loc>
+    <lastmod>2020-04-01T14:31:18+00:00</lastmod>
   </url>
   
   <url>
