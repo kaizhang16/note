@@ -13,6 +13,7 @@ headless: true
   - [Python]({{< relref "/docs/program/python" >}})
   - [C++]({{< relref "/docs/program/c++" >}})
   - [Bash]({{< relref "/docs/program/bash" >}})
+  - [Zsh]({{< relref "/docs/program/zsh" >}})
   - [fish-shell]({{< relref "/docs/program/fish-shell" >}})
   - [Dhall]({{< relref "/docs/program/dhall" >}})
   - [TOML]({{< relref "/docs/program/toml" >}})

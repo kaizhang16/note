@@ -1,0 +1,24 @@
+/* vim: set filetype=markdown : */
+---
+title: "Zsh"
+---
+
+# 插件管理（antibody）
+
+## 静态加载
+
+```sh
+antibody bundle < ~/.config/antibody/zsh_plugins.txt > ~/.config/antibody/zsh_plugins.sh
+```
+
+## 更新插件
+
+```sh
+antibody update
+```
+
+## 删除插件
+
+```sh
+antibody purge robbyrussell/oh-my-zsh
+```
