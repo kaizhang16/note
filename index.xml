@@ -35,8 +35,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</guid>
-      <description>代码风格  请参考：
- https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html    Type names  名词 TextFileReader  Function names  动词 openFile   教程  https://isocpp.org/get-started  目录  代码风格 教程   </description>
+      <description>代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
+ https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  目录  代码风格  文件后缀 命名规范  教程   </description>
     </item>
     
     <item>
@@ -92,8 +92,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/git/</guid>
-      <description>delta delta 安装命令    操作系统 命令    Arch Linux yay -S git-delta    Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
-  目录  delta Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
+      <description>diff 安装 delta delta 安装命令    操作系统 命令    Arch Linux yay -S git-delta    与暂存区比较 git diff --cached Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+  目录  diff  安装 delta 与暂存区比较  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
     </item>
     
     <item>
@@ -143,7 +143,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/os/linux/</guid>
-      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新包 sudo apt update sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 目录  发行版  Arch Linux  清除缓存  Ubuntu  更新包 add-apt-repository: command not found   Virtual Box 挂载  ntfs vboxsf samba    </description>
+      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新包 sudo apt update sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 查看目录 broot 安装 broot broot 安装命令    操作系统 命令    Arch Linux sudo pacman -S broot    目录  发行版  Arch Linux  清除缓存  Ubuntu  更新包 add-apt-repository: command not found   Virtual Box 挂载  ntfs vboxsf samba  查看目录  broot  安装 broot     </description>
     </item>
     
     <item>

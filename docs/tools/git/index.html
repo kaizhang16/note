@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Git"><meta property="og:title" content="Git" />
-<meta property="og:description" content="delta delta 安装命令    操作系统 命令    Arch Linux yay -S git-delta    Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &lt;submodule path&gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
-  目录  delta Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   " />
+<meta property="og:description" content="diff 安装 delta delta 安装命令    操作系统 命令    Arch Linux yay -S git-delta    与暂存区比较 git diff --cached Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &lt;submodule path&gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+  目录  diff  安装 delta 与暂存区比较  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/git/" />
-<meta property="article:modified_time" content="2020-04-02T01:57:22+08:00" />
+<meta property="article:modified_time" content="2020-04-02T03:04:16+08:00" />
 <title>Git | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.5fcc715f73308efc560fb7f03f3379d5d46d552b410b5641e0059d6482230236.js" integrity="sha256-X8xxX3MwjvxWD7fwPzN51dRtVStBC1ZB4AWdZIIjAjY="></script>
+<script defer src="/notes/cn.search.min.10b6f4173a943e72ccd59068d280d4859f771ab9dc403d067a24328acdd0efd2.js" integrity="sha256-ELb0FzqUPnLM1ZBo0oDUhZ93GrncQD0GeiQyis3Q79I="></script>
 
 <!--
 Made with Book Theme
@@ -178,7 +178,8 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="delta">delta</h1>
+<article class="markdown"><h1 id="diff">diff</h1>
+<h2 id="安装-delta">安装 delta</h2>
 <table style="width:47%;">
 <caption>delta 安装命令</caption>
 <colgroup>
@@ -198,13 +199,15 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
+<h2 id="与暂存区比较">与暂存区比较</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> diff --cached</span></code></pre></div>
 <h1 id="git-submodule">Git Submodule</h1>
 <h2 id="下载-submodule">下载 submodule</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span></code></pre></div>
 <h2 id="更新-url">更新 url</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
 <h2 id="删除-submodulegitsubmodulerm">删除 submodule<span class="citation" data-cites="gitSubmoduleRm"><sup>[<a href="#ref-gitSubmoduleRm" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">git</span> rm <span class="op">&lt;</span>submodule path<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">git</span> rm <span class="op">&lt;</span>submodule path<span class="op">&gt;</span></span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-gitSubmoduleRm">
@@ -215,7 +218,11 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#delta">delta</a></li>
+  <li><a href="#diff">diff</a>
+  <ul>
+  <li><a href="#安装-delta">安装 delta</a></li>
+  <li><a href="#与暂存区比较">与暂存区比较</a></li>
+  </ul></li>
   <li><a href="#git-submodule">Git Submodule</a>
   <ul>
   <li><a href="#下载-submodule">下载 submodule</a></li>
@@ -237,9 +244,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/44e6bdedff9dc0ba7e25b15bba6f0551f0229641" title='最后修改者 Kai Zhang | 2020-04-02 01:57:22 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/add057d7da5995c6ea0c69b40cf44dd4f7027023" title='最后修改者 Kai Zhang | 2020-04-02 03:04:16 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 01:57:22 &#43;0800</span>
+      <span>2020-04-02 03:04:16 &#43;0800</span>
     </a>
   </div>
 
