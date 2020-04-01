@@ -6,23 +6,19 @@ title: "Python"
 
 ## 数据类型
 
----------------
-数据类型 含义
--------- ------
-str      字符串
----------------
+| 数据类型 | 含义   |
+|----------|--------|
+| str      | 字符串 |
 
 : Python 数据类型 {#tbl:types}
 
 ## 运算符
 
------------------------
-运算符 含义 例子
------- ---- -----------
-`**`   幂   `2**3 == 8`
------------------------
+| 运算符 | 含义 | 例子        |
+|--------|------|-------------|
+| `**`   | 幂   | `2**3 == 8` |
 
-: Python 运算符
+: Python 运算符 {#tbl:pythonOperators}
 
 ## 字典[@pythonLoop]
 
@@ -70,21 +66,14 @@ x += y  # x = x + y
 
 ## open
 
-------------------------------------------------------------
-mode-string truncate? create? what's allowed
------------ --------- ------- ------------------------------
-r           no        no      reading (only)
-
-w           yes       yes     writing (only)
-
-a           no        yes     writing (only), auto-appends
-
-r+          no        no      read and write
-
-w+          yes       yes     read and write
-
-a+          no        yes     read and (auto-appending) write
--------------------------------------------------------------
+| mode-string | truncate? | create? | what's allowed                  |
+|-------------|-----------|---------|---------------------------------|
+| r           | no        | no      | reading (only)                  |
+| w           | yes       | yes     | writing (only)                  |
+| a           | no        | yes     | writing (only), auto-appends    |
+| r+          | no        | no      | read and write                  |
+| w+          | yes       | yes     | read and write                  |
+| a+          | no        | yes     | read and (auto-appending) write |
 
 : 打开文件模式说明[@pythonOpenMode] {#tbl:openFileMode}
 
@@ -130,13 +119,11 @@ import numpy as np
 
 ## 数据类型[@numpyTypes]
 
-------------------------------
-NumPy 类型 C 类型 含义
----------- ------ ------------
-np.float64 double 双精度浮点数
-------------------------------
+| NumPy 类型 | C 类型 | 含义         |
+|------------|--------|--------------|
+| np.float64 | double | 双精度浮点数 |
 
-: NumPy 数据类型
+: NumPy 数据类型 {#tbl:numpyTypes}
 
 ## numpy.zeros
 

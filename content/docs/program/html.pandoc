@@ -4,11 +4,9 @@ title: "HTML"
 
 # Language Code[@languageCodes]
 
-------------------------------
-Language             ISO Code
--------------------- ---------
-Chinese (Simplified) zh-Hans
-------------------------------
+| Language             | ISO Code |
+|----------------------|----------|
+| Chinese (Simplified) | zh-Hans  |
 
 : ISO 639-1 Language Codes {#tbl:languageCodes}
 
