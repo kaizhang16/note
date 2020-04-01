@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.10b6f4173a943e72ccd59068d280d4859f771ab9dc403d067a24328acdd0efd2.js" integrity="sha256-ELb0FzqUPnLM1ZBo0oDUhZ93GrncQD0GeiQyis3Q79I="></script>
+<script defer src="/notes/cn.search.min.3c3c9d47d14cac875166bd9083c9373531dd0dda07f1c9b9b17b0d5eb7b52ba8.js" integrity="sha256-PDydR9FMrIdRZr2Qg8k3NTHdDdoH8cm5sXsNXre1K6g="></script>
 
 <!--
 Made with Book Theme
@@ -251,7 +251,8 @@ https://github.com/alex-shpak/hugo-book
 
     
     document.querySelectorAll("table").forEach(table => {
-        table.style.width = "auto";
+        const tableWidth = table.caption.clientWidth;
+        table.style.width = tableWidth + "px";
     });
 
     
