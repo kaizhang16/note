@@ -49,13 +49,11 @@ sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /me
 
 ## samba
 
-----------------------------------------
-操作系统   命令
----------- -----------------------------
-Ubuntu     `sudo apt install cifs-utils`
-----------------------------------------
+| 操作系统 | 命令                          |
+|----------|-------------------------------|
+| Ubuntu   | `sudo apt install cifs-utils` |
 
-: samba 组件安装命令
+: samba 组件安装命令 {#tbl:sambaInstall}
 
 ```sh
 sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint
@@ -67,10 +65,8 @@ sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,di
 
 ### 安装 broot
 
-----------------------------------------
-操作系统   命令
----------- -----------------------------
-Arch Linux `sudo pacman -S broot`
-----------------------------------------
+| 操作系统   | 命令                   |
+|------------|------------------------|
+| Arch Linux | `sudo pacman -S broot` |
 
-: broot 安装命令
+: broot 安装命令 {#tbl:brootInstall}
