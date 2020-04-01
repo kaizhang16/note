@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新包 sudo apt update sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 目录  发行版  Arch Linux  清除缓存  Ubuntu  更新包 add-apt-repository: command not found   Virtual Box 挂载  ntfs vboxsf samba    " />
+<meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o gid=$gid,uid=$uid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 目录  发行版  Arch Linux  清除缓存   Virtual Box 挂载  ntfs samba    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/os/linux/" />
-<meta property="article:modified_time" content="2020-04-01T02:23:20+08:00" />
+<meta property="article:modified_time" content="2020-03-31T01:55:03+08:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.dbb654aa95118f0c5a233981c4587e134e5335374a4a8974ef9389c3011d9b5a.js" integrity="sha256-27ZUqpURjwxaIzmBxFh&#43;E05TNTdKSol075OJwwEdm1o="></script>
+<script defer src="/notes/cn.search.min.23086321737d3cbf99131f5a83fb3fd2bc55f976fed941e32604bced0abe3f3d.js" integrity="sha256-IwhjIXN9PL&#43;ZEx9ag/s/0rxV&#43;Xb&#43;2UHjJgS87Qq&#43;Pz0="></script>
 
 <!--
 Made with Book Theme
@@ -73,17 +73,13 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/visual/unity/">Unity</a></li>
 </ul>
 </li>
-<li><strong>计算机科学</strong>
-<ul>
-<li><a href="/notes/docs/cs/types/">数据类型</a></li>
-</ul>
-</li>
 <li><strong>编程</strong>
 <ul>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
 <li><a href="/notes/docs/program/c++/">C++</a></li>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/zsh/">Zsh</a></li>
 <li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
 <li><a href="/notes/docs/program/dhall/">Dhall</a></li>
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
@@ -180,19 +176,11 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="arch-linux">Arch Linux</h2>
 <h3 id="清除缓存">清除缓存</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">sudo</span> paccache -rk0</span></code></pre></div>
-<h2 id="ubuntu">Ubuntu</h2>
-<h3 id="更新包">更新包</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> apt update</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">sudo</span> apt upgrade</span></code></pre></div>
-<h3 id="add-apt-repository-command-not-found">add-apt-repository: command not found</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> apt install software-properties-common</span></code></pre></div>
 <h1 id="virtual-box">Virtual Box</h1>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sudo</span> pacman -S xf86-video-vmware</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> pacman -S xf86-video-vmware</span></code></pre></div>
 <h1 id="挂载">挂载</h1>
 <h2 id="ntfs">ntfs</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">sudo</span> mount -t ntfs -o uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,dmask=022,fmask=133 /dev/<span class="va">$disk</span> /media/<span class="va">$mountpoint</span></span></code></pre></div>
-<h2 id="vboxsf">vboxsf</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sudo</span> mount -t vboxsf -o uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,rw,dmode=700,fmode=600 <span class="va">$share_name</span> /media/<span class="va">$mountpoint</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> mount -t ntfs -o gid=<span class="va">$gid</span>,uid=<span class="va">$uid</span>,dmask=022,fmask=133 /dev/<span class="va">$disk</span> /media/<span class="va">$mountpoint</span></span></code></pre></div>
 <h2 id="samba">samba</h2>
 <table style="width:57%;">
 <caption>samba 组件安装命令</caption>
@@ -213,7 +201,7 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">sudo</span> mount -t cifs -o username=<span class="va">$username</span>,password=<span class="va">$password</span>,uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,dir_mode=0500,file_mode=0600 //<span class="va">$ip</span>/ar /media/<span class="va">$mountpoint</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sudo</span> mount -t cifs -o username=<span class="va">$username</span>,password=<span class="va">$password</span>,uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,dir_mode=0500,file_mode=0600 //<span class="va">$ip</span>/ar /media/<span class="va">$mountpoint</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -224,17 +212,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#清除缓存">清除缓存</a></li>
   </ul></li>
-  <li><a href="#ubuntu">Ubuntu</a>
-  <ul>
-  <li><a href="#更新包">更新包</a></li>
-  <li><a href="#add-apt-repository-command-not-found">add-apt-repository: command not found</a></li>
-  </ul></li>
   </ul></li>
   <li><a href="#virtual-box">Virtual Box</a></li>
   <li><a href="#挂载">挂载</a>
   <ul>
   <li><a href="#ntfs">ntfs</a></li>
-  <li><a href="#vboxsf">vboxsf</a></li>
   <li><a href="#samba">samba</a></li>
   </ul></li>
   </ul>
@@ -251,9 +233,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/9a0a020bbca888403cf87affda56824bc97ae253" title='最后修改者 Kai Zhang | 2020-04-01 02:23:20 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7abc12682b5c670e24512be25ed183436554b067" title='最后修改者 Kai Zhang | 2020-03-31 01:55:03 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-01 02:23:20 &#43;0800</span>
+      <span>2020-03-31 01:55:03 &#43;0800</span>
     </a>
   </div>
 

@@ -4,21 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="数据类型"><meta property="og:title" content="数据类型" />
-<meta property="og:description" content="科学计数法[1] mEn 表示 \(m \times 10^n\)。
-数据类型 数据类型    数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)    参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
-  目录  科学计数法[1] 数据类型 参考文献   " />
+<meta name="description" content="Zsh"><meta property="og:title" content="" />
+<meta property="og:description" content="/* vim: set filetype=markdown : */ title: “Zsh” 插件管理（antibody） 静态加载 antibody bundle &lt; ~/.config/antibody/zsh_plugins.txt &gt; ~/.config/antibody/zsh_plugins.sh 更新插件 antibody update 删除插件 antibody purge robbyrussell/oh-my-zsh 目录  /* vim: set filetype=markdown : */ title: “Zsh” 插件管理（antibody）  静态加载 更新插件 删除插件    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/types/" />
-<meta property="article:modified_time" content="2020-04-01T02:23:20+08:00" />
-<title>数据类型 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/zsh/" />
+
+<title>Zsh | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.dbb654aa95118f0c5a233981c4587e134e5335374a4a8974ef9389c3011d9b5a.js" integrity="sha256-27ZUqpURjwxaIzmBxFh&#43;E05TNTdKSol075OJwwEdm1o="></script>
+<script defer src="/notes/cn.search.min.23086321737d3cbf99131f5a83fb3fd2bc55f976fed941e32604bced0abe3f3d.js" integrity="sha256-IwhjIXN9PL&#43;ZEx9ag/s/0rxV&#43;Xb&#43;2UHjJgS87Qq&#43;Pz0="></script>
 
 <!--
 Made with Book Theme
@@ -75,17 +73,13 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/visual/unity/">Unity</a></li>
 </ul>
 </li>
-<li><strong>计算机科学</strong>
-<ul>
-<li><a href="/notes/docs/cs/types/"class=active>数据类型</a></li>
-</ul>
-</li>
 <li><strong>编程</strong>
 <ul>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
 <li><a href="/notes/docs/program/c++/">C++</a></li>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/zsh/"class=active>Zsh</a></li>
 <li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
 <li><a href="/notes/docs/program/dhall/">Dhall</a></li>
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
@@ -156,7 +150,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>数据类型</strong>
+  <strong>Zsh</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -178,44 +172,27 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="科学计数法scientificnotation">科学计数法<span class="citation" data-cites="scientificNotation"><sup>[<a href="#ref-scientificNotation" role="doc-biblioref">1</a>]</sup></span></h1>
-<p><code>mEn</code> 表示 <span class="math inline">\(m \times 10^n\)</span>。</p>
-<h1 id="数据类型">数据类型</h1>
-<table style="width:72%;">
-<caption>数据类型</caption>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 9%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">数据类型</th>
-<th style="text-align: left;">bit 数</th>
-<th style="text-align: left;">精度</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">double</td>
-<td style="text-align: left;">64</td>
-<td style="text-align: left;"><span class="math inline">\(2^{-52}\)</span>，即 <span class="math inline">\(2.22\times 10^{-16}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-scientificNotation">
-<p>[1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Scientific_notation">https://en.wikipedia.org/wiki/Scientific_notation</a>.</p>
-</div>
-</div>
+<article class="markdown"><h2 id="vim-set-filetypemarkdown">/* vim: set filetype=markdown : */</h2>
+<h2 id="title-zsh">title: “Zsh”</h2>
+<h1 id="插件管理antibody">插件管理（antibody）</h1>
+<h2 id="静态加载">静态加载</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">antibody</span> bundle <span class="op">&lt;</span> ~/.config/antibody/zsh_plugins.txt <span class="op">&gt;</span> ~/.config/antibody/zsh_plugins.sh</span></code></pre></div>
+<h2 id="更新插件">更新插件</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">antibody</span> update</span></code></pre></div>
+<h2 id="删除插件">删除插件</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">antibody</span> purge robbyrussell/oh-my-zsh</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#科学计数法scientificnotation">科学计数法<span class="citation" data-cites="scientificNotation"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#数据类型">数据类型</a></li>
-  <li><a href="#参考文献">参考文献</a></li>
+  <li><a href="#vim-set-filetypemarkdown">/* vim: set filetype=markdown : */</a></li>
+  <li><a href="#title-zsh">title: “Zsh”</a></li>
+  <li><a href="#插件管理antibody">插件管理（antibody）</a>
+  <ul>
+  <li><a href="#静态加载">静态加载</a></li>
+  <li><a href="#更新插件">更新插件</a></li>
+  <li><a href="#删除插件">删除插件</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -230,9 +207,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/9a0a020bbca888403cf87affda56824bc97ae253" title='最后修改者 Kai Zhang | 2020-04-01 02:23:20 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/38b4d4dab5afb6c12084a0bb86b1dcf0f49b3044" title='最后修改者 Kai Zhang | 2020-04-01 21:27:25 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-01 02:23:20 &#43;0800</span>
+      <span>2020-04-01 21:27:25 &#43;0800</span>
     </a>
   </div>
 
