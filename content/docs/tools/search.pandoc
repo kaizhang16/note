@@ -2,10 +2,30 @@
 title: "搜索"
 ---
 
-# ripgrep
+# 查找字符串
 
-## 非正则匹配
+## ripgrep
+
+### 在 python 文件里搜索
+
+```sh
+rg -tpy foo
+```
+
+### 非正则匹配
 
 ```sh
 rg -F 'C-^'
+```
+
+### 在 pandoc 文件里搜索短线
+
+```sh
+rg -g '*.pandoc' -- ----
+```
+
+## grep[@grep]
+
+```sh
+grep -rl "string" /path
 ```

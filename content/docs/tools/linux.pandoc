@@ -27,21 +27,6 @@ rsync --info=progress2 -rh ${source} ${dest}
 rsync -Pav -e "ssh -i $HOME/.ssh/somekey" username@hostname:/from/dir/ /to/dir/
 ```
 
-# 查找字符串
-
-## ripgrep
-
-```sh
-# 在 python 文件里搜索
-rg -tpy foo
-```
-
-## grep[@grep]
-
-```sh
-grep -rl "string" /path
-```
-
 # 网络
 
 ## curl
