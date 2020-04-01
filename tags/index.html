@@ -272,7 +272,10 @@ https://github.com/alex-shpak/hugo-book
 
     
     document.querySelectorAll("table").forEach(table => {
-        const tableWidth = table.caption.clientWidth;
+        
+        
+        
+        const tableWidth = table.caption.clientWidth + 1;
         table.style.width = tableWidth + "px";
     });
 

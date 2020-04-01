@@ -277,7 +277,7 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/1679fdb0e68577b8102c0224f1e2de1b4dd26085" title='最后修改者 Kai Zhang | 2020-04-02 04:40:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/12d0f3a1b2681e73930f326b5e68c8ca6a4c1cb9" title='最后修改者 Kai Zhang | 2020-04-02 04:40:13 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-02 04:40:13 &#43;0800</span>
     </a>
@@ -323,7 +323,10 @@ https://github.com/alex-shpak/hugo-book
 
     
     document.querySelectorAll("table").forEach(table => {
-        const tableWidth = table.caption.clientWidth;
+        
+        
+        
+        const tableWidth = table.caption.clientWidth + 1;
         table.style.width = tableWidth + "px";
     });
 
