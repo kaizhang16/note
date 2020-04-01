@@ -37,7 +37,6 @@ headless: true
   - [加密]({{< relref "/docs/tools/encryption" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
-  - [包管理工具]({{< relref "/docs/tools/package-manager" >}})
   - [图像]({{< relref "/docs/tools/image" >}})
   - [视频]({{< relref "/docs/tools/video" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
