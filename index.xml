@@ -152,7 +152,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/os/linux/</guid>
-      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o gid=$gid,uid=$uid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 目录  发行版  Arch Linux  清除缓存   Virtual Box 挂载  ntfs samba    </description>
+      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新包 sudo apt update sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba samba 组件安装命令    操作系统 命令    Ubuntu sudo apt install cifs-utils    sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 目录  发行版  Arch Linux  清除缓存  Ubuntu  更新包 add-apt-repository: command not found   Virtual Box 挂载  ntfs vboxsf samba    </description>
     </item>
     
     <item>
@@ -180,7 +180,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/python/</guid>
-      <description>内建函数[1] 类型 表 1: Python 类型    类型 含义    str 字符串     字典[2] 遍历 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): ... print(k, v) ... gallahad the pure robin the brave 键是否存在[3] d = {&amp;quot;key1&amp;quot;: 10, &amp;quot;key2&amp;quot;: 23}  if &amp;quot;key1&amp;quot; in d:  print(&amp;quot;this will execute&amp;quot;)  if &amp;quot;nonexistent key&amp;quot; in d:  print(&amp;quot;this will not&amp;quot;) 合并字典[4] z = {**x, **y} += x += y # x = x + y open 表 2: 打开文件模式说明[5]    mode-string truncate?</description>
+      <description>内建函数[1] 数据类型 表 1: Python 数据类型    数据类型 含义    str 字符串     运算符 Python 运算符    运算符 含义 例子    ** 幂 2**3 == 8    字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): ... print(k, v) .</description>
     </item>
     
     <item>
@@ -289,6 +289,17 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>数据类型</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/types/</guid>
+      <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
+数据类型 数据类型    数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)    参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
+  目录  科学计数法[1] 数据类型 参考文献   </description>
+    </item>
+    
+    <item>
       <title>构建</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -328,7 +339,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   [1] HHH.</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-python 打开文件 nvim $(fzf) 命令 表 1: Vim 命令    命令 含义    :bd 关闭当前 buffer[1]     快捷键 表 2: Vim 快捷键    快捷键 含义    \-f-Ctrl-x 搜索文件并水平分割窗口打开       noremap 指 non-recursive map[2]   [1] HHH.</description>
     </item>
     
     <item>
