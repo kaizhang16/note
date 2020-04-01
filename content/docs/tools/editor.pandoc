@@ -62,3 +62,15 @@ nvim $(fzf)
 : Vim 快捷键 {#tbl:vimShotcuts}
 
 > - `noremap` 指 non-recursive map[@vimNoremap]
+
+# Android Studio
+
+## 字体
+
+### 编辑器字体
+
+`File` -> `Settings` -> `Editor` -> `Font`。
+
+### 菜单字体
+
+`File` -> `Settings` -> `Appearance & Behavior` -> `Appearance`。
