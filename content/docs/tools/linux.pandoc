@@ -6,15 +6,12 @@ title: Linux
 
 ## tldr
 
----------------------------------
-操作系统   命令
----------- ----------------------
-Arch Linux `sudo pacman -S tldr`
+| 操作系统   | 命令                   |
+|------------|------------------------|
+| Arch Linux | `sudo pacman -S tldr`  |
+| 其他       | `yarn global add tldr` |
 
-其他       `yarn global add tldr`
----------------------------------
-
-: tldr 安装命令
+: tldr 安装命令 {#tbl:tldrInstall}
 
 # rsync
 
