@@ -14,10 +14,15 @@ sudo paccache -rk0
 
 ## Ubuntu
 
-### 更新包
+### 更新源
 
 ```sh
 sudo apt update
+```
+
+### 更新包
+
+```sh
 sudo apt upgrade
 ```
 
@@ -25,6 +30,14 @@ sudo apt upgrade
 
 ```sh
 sudo apt install software-properties-common
+```
+
+## nix
+
+### 更新包
+
+```sh
+nix-channel --update
 ```
 
 # Virtual Box
