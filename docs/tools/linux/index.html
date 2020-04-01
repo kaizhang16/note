@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 查找字符串 ripgrep # 在 python 文件里搜索 rg -tpy foo grep[2] grep -rl &quot;string&quot; /path 网络 curl 上传时显示进度条[3] curl ... | tee /dev/null urlencode 参数[4] curl ." />
+<meta property="og:description" content="手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &quot;paramName=value&quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/linux/" />
-<meta property="article:modified_time" content="2020-04-02T04:40:13+08:00" />
+<meta property="article:modified_time" content="2020-04-02T05:44:25+08:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.4707d6d4888c0dd2ccdf5344e0a4cfdd682e9b98603d23aea69a9fea28836aa8.js" integrity="sha256-RwfW1IiMDdLM31NE4KTP3Wgum5hgPSOuppqf6iiDaqg="></script>
+<script defer src="/notes/cn.search.min.164e0b585bf2f13db041d66a1e208dfd18d977f0a3631d8116b6c009d6e8282f.js" integrity="sha256-Fk4LWFvy8T2wQdZqHiCN/RjZd/CjYx2BFrbACdboKC8="></script>
 
 <!--
 Made with Book Theme
@@ -205,63 +205,54 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">rsync</span> --info=progress2 -rh <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
 <h2 id="指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<a href="#ref-rsyncPrivateKey" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">rsync</span> -Pav -e <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
-<h1 id="查找字符串">查找字符串</h1>
-<h2 id="ripgrep">ripgrep</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># 在 python 文件里搜索</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
-<h2 id="grepgrep">grep<span class="citation" data-cites="grep"><sup>[<a href="#ref-grep" role="doc-biblioref">2</a>]</sup></span></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
 <h1 id="网络">网络</h1>
 <h2 id="curl">curl</h2>
-<h3 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">3</a>]</sup></span></h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
-<h3 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">4</a>]</sup></span></h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
+<h3 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">2</a>]</sup></span></h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
+<h3 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">3</a>]</sup></span></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
 <h1 id="终端">终端</h1>
 <h2 id="tmux">tmux</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># 列出会话</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="ex">tmux</span> ls</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># 创建新会话</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="ex">tmux</span> new -s myname</span>
-<span id="cb7-6"><a href="#cb7-6"></a></span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="co"># 连接会话</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># 列出会话</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">tmux</span> ls</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># 创建新会话</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="ex">tmux</span> new -s myname</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co"># 连接会话</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
 <h1 id="硬盘">硬盘</h1>
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
 </ul>
-<h2 id="dudu">du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">5</a>]</sup></span></h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
+<h2 id="dudu">du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">4</a>]</sup></span></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
 <h1 id="jq">jq</h1>
-<h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
-<h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">7</a>]</sup></span></h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
+<h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">5</a>]</sup></span></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
+<h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">6</a>]</sup></span></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
 <h1 id="cpu">CPU</h1>
-<div class="sourceCode" id="cb11"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-rsyncPrivateKey">
 <p>[1] GARTHWAITE D. Specify identity file with rsync[EB/OL](2014–05–01). <a href="https://unix.stackexchange.com/a/127355">https://unix.stackexchange.com/a/127355</a>.</p>
 </div>
-<div id="ref-grep">
-<p>[2] ASKUBUNTU. How to use "grep" command to find text including subdirectories[EB/OL](2011–08–01). <a href="https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories">https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories</a>.</p>
-</div>
 <div id="ref-curlUploadProgress">
-<p>[3] STACKOVERFLOW. cURL: How to display progress information while uploading?[EB/OL](2012–04–02). <a href="https://stackoverflow.com/questions/9973056/curl-how-to-display-progress-information-while-uploading/41860083">https://stackoverflow.com/questions/9973056/curl-how-to-display-progress-information-while-uploading/41860083</a>.</p>
+<p>[2] STACKOVERFLOW. cURL: How to display progress information while uploading?[EB/OL](2012–04–02). <a href="https://stackoverflow.com/questions/9973056/curl-how-to-display-progress-information-while-uploading/41860083">https://stackoverflow.com/questions/9973056/curl-how-to-display-progress-information-while-uploading/41860083</a>.</p>
 </div>
 <div id="ref-curlUrlEncode">
-<p>[4] STACKOVERFLOW. How to urlencode data for curl command?[EB/OL](2017–08–14). <a href="https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command">https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command</a>.</p>
+<p>[3] STACKOVERFLOW. How to urlencode data for curl command?[EB/OL](2017–08–14). <a href="https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command">https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command</a>.</p>
 </div>
 <div id="ref-du">
-<p>[5] KUMAR S. How to Find Out Top Directories and Files (Disk Space) in Linux[EB/OL](2016–01–16). <a href="https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/">https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/</a>.</p>
+<p>[4] KUMAR S. How to Find Out Top Directories and Files (Disk Space) in Linux[EB/OL](2016–01–16). <a href="https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/">https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/</a>.</p>
 </div>
 <div id="ref-jqCookbook">
-<p>[6] STEDOLAN. Cookbook[EB/OL](2019–10–05). <a href="https://github.com/stedolan/jq/wiki/Cookbook">https://github.com/stedolan/jq/wiki/Cookbook</a>.</p>
+<p>[5] STEDOLAN. Cookbook[EB/OL](2019–10–05). <a href="https://github.com/stedolan/jq/wiki/Cookbook">https://github.com/stedolan/jq/wiki/Cookbook</a>.</p>
 </div>
 <div id="ref-jqNoQuotes">
-<p>[7] GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</p>
+<p>[6] GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</p>
 </div>
 </div>
 
@@ -277,17 +268,12 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#带进度条的复制">带进度条的复制</a></li>
   <li><a href="#指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#查找字符串">查找字符串</a>
-  <ul>
-  <li><a href="#ripgrep">ripgrep</a></li>
-  <li><a href="#grepgrep">grep<span class="citation" data-cites="grep"><sup>[<span>2</span>]</sup></span></a></li>
-  </ul></li>
   <li><a href="#网络">网络</a>
   <ul>
   <li><a href="#curl">curl</a>
   <ul>
-  <li><a href="#上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<span>3</span>]</sup></span></a></li>
   </ul></li>
   </ul></li>
   <li><a href="#终端">终端</a>
@@ -296,12 +282,12 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#硬盘">硬盘</a>
   <ul>
-  <li><a href="#dudu">du<span class="citation" data-cites="du"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#dudu">du<span class="citation" data-cites="du"><sup>[<span>4</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#jq">jq</a>
   <ul>
-  <li><a href="#过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>6</span>]</sup></span></a></li>
-  <li><a href="#print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>7</span>]</sup></span></a></li>
+  <li><a href="#过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>6</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#cpu">CPU</a></li>
   <li><a href="#参考文献">参考文献</a></li>
@@ -319,9 +305,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/12d0f3a1b2681e73930f326b5e68c8ca6a4c1cb9" title='最后修改者 Kai Zhang | 2020-04-02 04:40:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/36e2a78369bbea2072cf01ee10fbdab3ada9ba44" title='最后修改者 Kai Zhang | 2020-04-02 05:44:25 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 04:40:13 &#43;0800</span>
+      <span>2020-04-02 05:44:25 &#43;0800</span>
     </a>
   </div>
 
