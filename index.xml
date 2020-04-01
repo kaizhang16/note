@@ -92,8 +92,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/git/</guid>
-      <description>Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
-  目录  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
+      <description>delta delta 安装命令    操作系统 命令    Arch Linux yay -S git-delta    Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+  目录  delta Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
     </item>
     
     <item>
