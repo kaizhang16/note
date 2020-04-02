@@ -18,6 +18,12 @@ title: "Git"
 git diff --cached
 ```
 
+# 设置跟踪的分支
+
+```sh
+git branch --set-upstream-to=origin/master
+```
+
 # Git Submodule
 
 ## 下载 submodule
