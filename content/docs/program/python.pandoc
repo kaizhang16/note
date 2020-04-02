@@ -77,6 +77,29 @@ x += y  # x = x + y
 
 : 打开文件模式说明[@pythonOpenMode] {#tbl:openFileMode}
 
+## 字符串复制
+
+```py
+'-' * 3
+```
+
+## 函数式编程
+
+### partial
+
+大致等价于：
+
+```py
+def partial(func, /, *args, **keywords):
+    def newfunc(*fargs, **fkeywords):
+        newkeywords = {**keywords, **fkeywords}
+        return func(*args, *fargs, **newkeywords)
+    newfunc.func = func
+    newfunc.args = args
+    newfunc.keywords = keywords
+    return newfunc
+```
+
 ## property
 
 定义属性，默认只读。
@@ -136,6 +159,18 @@ array([ 0.,  0.,  0.,  0.,  0.])
 >>> np.zeros((2, 1))
 array([[ 0.],
        [ 0.]])
+```
+
+## 算术平均
+
+```py
+>>> a = np.array([[1, 2], [3, 4]])
+>>> np.mean(a)
+2.5
+>>> np.mean(a, axis=0)
+array([2., 3.])
+>>> np.mean(a, axis=1)
+array([1.5, 3.5])
 ```
 
 ## 右乘列向量

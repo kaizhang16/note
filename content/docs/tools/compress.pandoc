@@ -2,10 +2,18 @@
 title: "压缩"
 ---
 
-# tar 打包时排除某些目录[@tarExclude]
+# tar
+
+## 打包时排除某些目录[@tarExclude]
 
 ```sh
 tar --exclude='./folder1' --exclude='./folder2' -czvf filename.tar.gz .
+```
+
+## 查看压缩包内容
+
+```
+tar -tvf filename.tar.gz
 ```
 
 # 参考文献
