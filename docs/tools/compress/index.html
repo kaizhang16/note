@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="压缩"><meta property="og:title" content="压缩" />
-<meta property="og:description" content="tar 打包时排除某些目录[1] tar --exclude=&#39;./folder1&#39; --exclude=&#39;./folder2&#39; -czvf filename.tar.gz . 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
-  目录  tar 打包时排除某些目录[1] 参考文献   " />
+<meta property="og:description" content="tar 打包时排除某些目录[1] tar --exclude=&#39;./folder1&#39; --exclude=&#39;./folder2&#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
+  目录  tar  打包时排除某些目录[1] 查看压缩包内容  参考文献   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/compress/" />
-<meta property="article:modified_time" content="2020-02-20T16:11:32+08:00" />
+<meta property="article:modified_time" content="2020-04-03T00:14:40+08:00" />
 <title>压缩 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.bb0b18c0f623d1e7d32035554a6586fb0fac69b837ee94bd5821632400f2c66d.js" integrity="sha256-uwsYwPYj0efTIDVVSmWG&#43;w&#43;sabg37pS9WCFjJADyxm0="></script>
+<script defer src="/notes/cn.search.min.c9298e89c8a61ffdc02d33a9c6698bd1b2937f892d91e8275e70875f2792114f.js" integrity="sha256-ySmOicimH/3ALTOpxmmL0bKTf4ktkegnXnCHXyeSEU8="></script>
 
 <!--
 Made with Book Theme
@@ -177,8 +177,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="tar-打包时排除某些目录tarexclude">tar 打包时排除某些目录<span class="citation" data-cites="tarExclude"><sup>[<a href="#ref-tarExclude" role="doc-biblioref">1</a>]</sup></span></h1>
+<article class="markdown"><h1 id="tar">tar</h1>
+<h2 id="打包时排除某些目录tarexclude">打包时排除某些目录<span class="citation" data-cites="tarExclude"><sup>[<a href="#ref-tarExclude" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">tar</span> --exclude=<span class="st">&#39;./folder1&#39;</span> --exclude=<span class="st">&#39;./folder2&#39;</span> -czvf filename.tar.gz .</span></code></pre></div>
+<h2 id="查看压缩包内容">查看压缩包内容</h2>
+<pre><code>tar -tvf filename.tar.gz</code></pre>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-tarExclude">
@@ -189,7 +192,11 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#tar-打包时排除某些目录tarexclude">tar 打包时排除某些目录<span class="citation" data-cites="tarExclude"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#tar">tar</a>
+  <ul>
+  <li><a href="#打包时排除某些目录tarexclude">打包时排除某些目录<span class="citation" data-cites="tarExclude"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#查看压缩包内容">查看压缩包内容</a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -205,9 +212,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7326ccf7a93a3f03f82caf7afb380f7309474312" title='最后修改者 Kai Zhang | 2020-02-20 16:11:32 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/5b7aab5addb6ae9cb325e055d8b903cf6878e6c0" title='最后修改者 Kai Zhang | 2020-04-03 00:14:40 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-20 16:11:32 &#43;0800</span>
+      <span>2020-04-03 00:14:40 &#43;0800</span>
     </a>
   </div>
 
