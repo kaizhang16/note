@@ -9,7 +9,9 @@ headless: true
 - **计算机科学**
   - [数据类型]({{< relref "/docs/cs/types" >}})
 - **编程**
+  - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})
+  - [Rust]({{< relref "/docs/program/Rust" >}})
   - [Python]({{< relref "/docs/program/python" >}})
   - [C++]({{< relref "/docs/program/c++" >}})
   - [Bash]({{< relref "/docs/program/bash" >}})

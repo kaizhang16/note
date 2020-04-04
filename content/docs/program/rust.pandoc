@@ -1,0 +1,13 @@
+---
+title: "Rust"
+---
+
+# Cargo
+
+## 新建项目
+
+```sh
+cargo new ${name}
+```
+
+> 默认使用 `--bin` 参数。
