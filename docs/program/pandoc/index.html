@@ -4,19 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="线性代数"><meta property="og:title" content="线性代数" />
-<meta property="og:description" content="相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[1] \[\transpose{\matrix{Q}}\matrix{Q} = \matrix{Q}\transpose{\matrix{Q}} = \matrix{I}\qquad(1)\]
-旋转矩阵[2] 旋转矩阵的集合：
-\[ \SO(n) = \{\matrix{R} \in \set{R}^{n\times n} \mid \matrix{R}\transpose{\matrix{R}} = \matrix{I}, \det(\matrix{R}) = 1\} \qquad(2)\]
-外积[3] \[\vec{u} \otimes \vec{v} = \vec{u}\transpose{\vec{v}}\qquad(3)\]
-参考文献 [1] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Orthogonal_matrix.
- [2] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.
- [3] WIKIPEDIA. Outer product[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Outer_product.
-  目录  相似矩阵 正交矩阵[1] 旋转矩阵[2] 外积[3] 参考文献   " />
+<meta name="description" content="Pandoc"><meta property="og:title" content="Pandoc" />
+<meta property="og:description" content=" 目录  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/math/linear-algebra/" />
-<meta property="article:modified_time" content="2020-02-22T01:55:17+08:00" />
-<title>线性代数 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/pandoc/" />
+<meta property="article:modified_time" content="2020-04-04T10:53:39+00:00" />
+<title>Pandoc | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -72,7 +65,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li><strong>数学</strong>
 <ul>
-<li><a href="/notes/docs/math/linear-algebra/"class=active>线性代数</a></li>
+<li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
 </ul>
 </li>
 <li><strong>视觉</strong>
@@ -87,7 +80,7 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>编程</strong>
 <ul>
-<li><a href="/notes/docs/program/pandoc/">Pandoc</a></li>
+<li><a href="/notes/docs/program/pandoc/"class=active>Pandoc</a></li>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/rust/">Rust</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
@@ -164,7 +157,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>线性代数</strong>
+  <strong>Pandoc</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -186,41 +179,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="相似矩阵">相似矩阵</h1>
-<ul>
-<li>同一个线性变换在不同基下的矩阵称为相似矩阵</li>
-</ul>
-<h1 id="正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">1</a>]</sup></span></h1>
-<p><span id="eq:orthogonalMatrix"><span class="math display">\[\transpose{\matrix{Q}}\matrix{Q} = \matrix{Q}\transpose{\matrix{Q}} = \matrix{I}\qquad(1)\]</span></span></p>
-<h1 id="旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<a href="#ref-高翔2017视觉" role="doc-biblioref">2</a>]</sup></span></h1>
-<p>旋转矩阵的集合：</p>
-<p><span id="eq:SOn"><span class="math display">\[
-\SO(n) = \{\matrix{R} \in \set{R}^{n\times n} \mid \matrix{R}\transpose{\matrix{R}} = \matrix{I}, \det(\matrix{R}) = 1\}
-\qquad(2)\]</span></span></p>
-<h1 id="外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<a href="#ref-linearAlgebraOuterProduct" role="doc-biblioref">3</a>]</sup></span></h1>
-<p><span id="eq:outerProduct"><span class="math display">\[\vec{u} \otimes \vec{v} = \vec{u}\transpose{\vec{v}}\qquad(3)\]</span></span></p>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-linearAlgebraOrthogonalMatrix">
-<p>[1] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Orthogonal_matrix">https://en.wikipedia.org/wiki/Orthogonal_matrix</a>.</p>
-</div>
-<div id="ref-高翔2017视觉">
-<p>[2] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.</p>
-</div>
-<div id="ref-linearAlgebraOuterProduct">
-<p>[3] WIKIPEDIA. Outer product[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>.</p>
-</div>
-</div>
+<article class="markdown">
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
-  <ul>
-  <li><a href="#相似矩阵">相似矩阵</a></li>
-  <li><a href="#正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#参考文献">参考文献</a></li>
-  </ul>
+  
 </nav>
 </article>
  
@@ -234,9 +197,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/fd5dfa73d2b941492d3fffb1f1b485353f977f91" title='最后修改者 Kai Zhang | 2020-02-22 01:55:17 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/9a640a0c90045057458871e26732bc2decefd698" title='最后修改者 Kai Zhang | 2020-04-04 18:53:39 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-22 01:55:17 &#43;0800</span>
+      <span>2020-04-04 18:53:39 &#43;0800</span>
     </a>
   </div>
 

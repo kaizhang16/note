@@ -175,12 +175,31 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     </item>
     
     <item>
+      <title>Pandoc</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/pandoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/pandoc/</guid>
+      <description> 目录  </description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>https://kaizhang91.github.io/notes/docs/program/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/python/</guid>
       <description>内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): .</description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/rust/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/rust/</guid>
+      <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
+ 目录  Cargo  新建项目    </description>
     </item>
     
     <item>
