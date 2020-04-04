@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Linux"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新源 sudo apt update 更新包 sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common nix 更新包 nix-channel --update Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     目录  发行版  Arch Linux  清除缓存  Ubuntu  更新源 更新包 add-apt-repository: command not found  nix  更新包   Virtual Box 挂载  ntfs vboxsf samba  查看目录  broot  安装 broot     " />
+<meta name="description" content="Flutter"><meta property="og:title" content="Flutter" />
+<meta property="og:description" content=" 目录  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/os/linux/" />
-<meta property="article:modified_time" content="2020-04-02T05:55:01+08:00" />
-<title>Linux | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/flutter/" />
+<meta property="article:modified_time" content="2020-04-04T10:34:35+00:00" />
+<title>Flutter | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -89,7 +89,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/dhall/">Dhall</a></li>
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
 <li><a href="/notes/docs/program/golang/">Golang</a></li>
-<li><a href="/notes/docs/program/flutter/">Flutter</a></li>
+<li><a href="/notes/docs/program/flutter/"class=active>Flutter</a></li>
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
 <li><a href="/notes/docs/program/html/">HTML</a></li>
@@ -102,7 +102,7 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>操作系统</strong>
 <ul>
-<li><a href="/notes/docs/os/linux/"class=active>Linux</a></li>
+<li><a href="/notes/docs/os/linux/">Linux</a></li>
 </ul>
 </li>
 <li><strong>工具</strong>
@@ -155,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Linux</strong>
+  <strong>Flutter</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -177,102 +177,11 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="发行版">发行版</h1>
-<h2 id="arch-linux">Arch Linux</h2>
-<h3 id="清除缓存">清除缓存</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">sudo</span> paccache -rk0</span></code></pre></div>
-<h2 id="ubuntu">Ubuntu</h2>
-<h3 id="更新源">更新源</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> apt update</span></code></pre></div>
-<h3 id="更新包">更新包</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> apt upgrade</span></code></pre></div>
-<h3 id="add-apt-repository-command-not-found">add-apt-repository: command not found</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">sudo</span> apt install software-properties-common</span></code></pre></div>
-<h2 id="nix">nix</h2>
-<h3 id="更新包-1">更新包</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">nix-channel</span> --update</span></code></pre></div>
-<h1 id="virtual-box">Virtual Box</h1>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sudo</span> pacman -S xf86-video-vmware</span></code></pre></div>
-<h1 id="挂载">挂载</h1>
-<h2 id="ntfs">ntfs</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">sudo</span> mount -t ntfs -o uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,dmask=022,fmask=133 /dev/<span class="va">$disk</span> /media/<span class="va">$mountpoint</span></span></code></pre></div>
-<h2 id="vboxsf">vboxsf</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">sudo</span> mount -t vboxsf -o uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,rw,dmode=700,fmode=600 <span class="va">$share_name</span> /media/<span class="va">$mountpoint</span></span></code></pre></div>
-<h2 id="samba">samba</h2>
-<div id="tbl:sambaInstall">
-<table>
-<caption>表 1: samba 组件安装命令</caption>
-<thead>
-<tr class="header">
-<th>操作系统</th>
-<th>命令</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Ubuntu</td>
-<td><code>sudo apt install cifs-utils</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">sudo</span> mount -t cifs -o username=<span class="va">$username</span>,password=<span class="va">$password</span>,uid=<span class="va">$uid</span>,gid=<span class="va">$gid</span>,dir_mode=0500,file_mode=0600 //<span class="va">$ip</span>/ar /media/<span class="va">$mountpoint</span></span></code></pre></div>
-<h1 id="查看目录">查看目录</h1>
-<h2 id="broot">broot</h2>
-<h3 id="安装-broot">安装 broot</h3>
-<div id="tbl:brootInstall">
-<table>
-<caption>表 2: broot 安装命令</caption>
-<thead>
-<tr class="header">
-<th>操作系统</th>
-<th>命令</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Arch Linux</td>
-<td><code>sudo pacman -S broot</code></td>
-</tr>
-</tbody>
-</table>
-</div>
+<article class="markdown">
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
-  <ul>
-  <li><a href="#发行版">发行版</a>
-  <ul>
-  <li><a href="#arch-linux">Arch Linux</a>
-  <ul>
-  <li><a href="#清除缓存">清除缓存</a></li>
-  </ul></li>
-  <li><a href="#ubuntu">Ubuntu</a>
-  <ul>
-  <li><a href="#更新源">更新源</a></li>
-  <li><a href="#更新包">更新包</a></li>
-  <li><a href="#add-apt-repository-command-not-found">add-apt-repository: command not found</a></li>
-  </ul></li>
-  <li><a href="#nix">nix</a>
-  <ul>
-  <li><a href="#更新包-1">更新包</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#virtual-box">Virtual Box</a></li>
-  <li><a href="#挂载">挂载</a>
-  <ul>
-  <li><a href="#ntfs">ntfs</a></li>
-  <li><a href="#vboxsf">vboxsf</a></li>
-  <li><a href="#samba">samba</a></li>
-  </ul></li>
-  <li><a href="#查看目录">查看目录</a>
-  <ul>
-  <li><a href="#broot">broot</a>
-  <ul>
-  <li><a href="#安装-broot">安装 broot</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
+  
 </nav>
 </article>
  
@@ -286,9 +195,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/294e5705ab4aa40d8bf6194bb2f58695521dbfe0" title='最后修改者 Kai Zhang | 2020-04-02 05:55:01 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/d0ee87d5e093a7dec215f98898536312e3ca023c" title='最后修改者 Kai Zhang | 2020-04-04 18:34:35 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 05:55:01 &#43;0800</span>
+      <span>2020-04-04 18:34:35 &#43;0800</span>
     </a>
   </div>
 
