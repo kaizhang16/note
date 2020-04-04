@@ -18,6 +18,7 @@ headless: true
   - [Dhall]({{< relref "/docs/program/dhall" >}})
   - [TOML]({{< relref "/docs/program/toml" >}})
   - [Golang]({{< relref "/docs/program/golang" >}})
+  - [Flutter]({{< relref "/docs/program/flutter" >}})
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
