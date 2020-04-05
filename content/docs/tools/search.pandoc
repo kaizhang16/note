@@ -2,6 +2,40 @@
 title: "搜索"
 ---
 
+# 搜索命令
+
+## navi
+
+### 安装
+
+| 操作系统   | 命令          |
+|------------|---------------|
+| Arch Linux | `yay -S navi` |
+
+: navi 安装命令 {#tbl:naviInstall}
+
+### 使用
+
+`Ctrl-g`。
+
+# 搜索目录
+
+## zoxide
+
+### 安装
+
+| 操作系统   | 命令            |
+|------------|-----------------|
+| Arch Linux | `yay -S zoxide` |
+
+: zoxide 安装命令 {#tbl:zoxideInstall}
+
+### 使用
+
+```sh
+zi
+```
+
 # 查找字符串
 
 ## ripgrep
