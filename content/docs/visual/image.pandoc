@@ -11,6 +11,20 @@ title: "图像"
 
 : 图像文件格式 {#tbl:imageFileFormats}
 
+# 压缩
+
+## JPG
+
+### jpegoptim
+
+#### 安装
+
+| 操作系统   | 命令                       |
+|------------|----------------------------|
+| Arch Linux | `sudo pacman -S jpegoptim` |
+
+: jpegoptim 安装命令 {#tbl:jpegoptimInstall}
+
 # Adobe Photoshop 2020
 
 ## 安装
