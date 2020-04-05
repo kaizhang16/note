@@ -2,6 +2,16 @@
 title: "数据库"
 ---
 
+# Entity Relationship Diagram
+
+## 安装
+
+```sh
+curl -LO 'https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64'
+chmod u+x erd_static-x86-64
+cp -i erd_static-x86-64 ~/.local/bin/erd
+```
+
 # SQL 命名规范
 
 | 类别        | 规范                           | 例子                          |
@@ -10,5 +20,15 @@ title: "数据库"
 | identifiers | snake case[@sqlNameConvention] | `lower_case_with_underscores` |
 
 : SQL 命名规范 {#tbl:sqlNameConvention}
+
+# PostgreSQL
+
+## 数据类型[@postgresDataTypes]
+
+| 数据类型 | 含义   |
+|----------|--------|
+| boolean  | 布尔值 |
+
+: PostgreSQL 数据类型 {#tbl:postgresDataTypes}
 
 # 参考文献
