@@ -5,6 +5,7 @@ headless: true
 - **数学**
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
+  - [图像]({{< relref "/docs/visual/image" >}})
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
   - [数据类型]({{< relref "/docs/cs/types" >}})
@@ -40,7 +41,6 @@ headless: true
   - [加密]({{< relref "/docs/tools/encryption" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
-  - [图像]({{< relref "/docs/tools/image" >}})
   - [视频]({{< relref "/docs/tools/video" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
   - [API]({{< relref "/docs/tools/api" >}})

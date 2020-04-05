@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 /usr/bin/pandoc \
-  --from=markdown \
+  --from=markdown+emoji \
   --to=html \
   --mathjax \
   --bibliography=references.bib \
