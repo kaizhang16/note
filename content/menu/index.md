@@ -5,10 +5,14 @@ headless: true
 - **数学**
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
+  - [图像]({{< relref "/docs/visual/image" >}})
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
   - [数据类型]({{< relref "/docs/cs/types" >}})
-- **编程**
+  - [Linux]({{< relref "/docs/cs/linux" >}})
+  - [数据库]({{< relref "/docs/cs/database" >}})
+  - [HTTP]({{< relref "/docs/cs/http" >}})
+- **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})
   - [Rust]({{< relref "/docs/program/Rust" >}})
@@ -24,10 +28,6 @@ headless: true
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
-- **协议**
-  - [HTTP]({{< relref "/docs/protocols/http" >}})
-- **操作系统**
-  - [Linux]({{< relref "/docs/os/linux" >}})
 - **工具**
   - [编辑器]({{< relref "/docs/tools/editor" >}})
   - [写作]({{< relref "/docs/tools/writing" >}})
@@ -40,7 +40,6 @@ headless: true
   - [加密]({{< relref "/docs/tools/encryption" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
-  - [图像]({{< relref "/docs/tools/image" >}})
   - [视频]({{< relref "/docs/tools/video" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
   - [API]({{< relref "/docs/tools/api" >}})

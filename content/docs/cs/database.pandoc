@@ -1,0 +1,13 @@
+---
+title: "数据库"
+---
+
+# SQL 命名规范
+
+| 类别 | 规范                        | 例子   |
+|------|-----------------------------|--------|
+| 表名 | 单数[@sqlTableNameSingular] | `user` |
+
+: SQL 命名规范 {#tbl:sqlNameConvention}
+
+# 参考文献
