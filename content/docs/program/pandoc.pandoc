@@ -2,3 +2,11 @@
 title: "Pandoc"
 ---
 
+# Extension
+
+- `+EXTENSION` 启用
+- `-EXTENSION` 禁用
+
+## emoji
+
+emoji 列表请参考 <https://github.com/ikatyang/emoji-cheat-sheet>。

@@ -9,7 +9,10 @@ headless: true
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
   - [数据类型]({{< relref "/docs/cs/types" >}})
-- **编程**
+  - [Linux]({{< relref "/docs/cs/linux" >}})
+  - [数据库]({{< relref "/docs/cs/database" >}})
+  - [HTTP]({{< relref "/docs/cs/http" >}})
+- **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})
   - [Rust]({{< relref "/docs/program/Rust" >}})
@@ -25,10 +28,6 @@ headless: true
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
-- **协议**
-  - [HTTP]({{< relref "/docs/protocols/http" >}})
-- **操作系统**
-  - [Linux]({{< relref "/docs/os/linux" >}})
 - **工具**
   - [编辑器]({{< relref "/docs/tools/editor" >}})
   - [写作]({{< relref "/docs/tools/writing" >}})
