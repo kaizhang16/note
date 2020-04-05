@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="搜索"><meta property="og:title" content="搜索" />
-<meta property="og:description" content="查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &#39;C-^&#39; 在 pandoc 文件里搜索短线 rg -g &#39;*.pandoc&#39; -- ---- grep[1] grep -rl &quot;string&quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.
-  目录  查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   " />
+<meta property="og:description" content="搜索命令 navi 安装  表 1: navi 安装命令  操作系统 命令    Arch Linux yay -S navi     使用 Ctrl-g。
+搜索目录 zoxide 安装  表 2: zoxide 安装命令  操作系统 命令    Arch Linux yay -S zoxide     使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &#39;C-^&#39; 在 pandoc 文件里搜索短线 rg -g &#39;*.pandoc&#39; -- ---- grep[1] grep -rl &quot;string&quot; /path 参考文献 [1] ASKUBUNTU." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/search/" />
-<meta property="article:modified_time" content="2020-04-02T05:47:18+08:00" />
+<meta property="article:modified_time" content="2020-04-06T00:03:34+08:00" />
 <title>搜索 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.5354853f90fdbdda779f873d13113e2bc8b80f017ff51329376bc7a8f3cb9dc6.js" integrity="sha256-U1SFP5D9vdp3n4c9ExE&#43;K8i4DwF/9RMpN2vHqPPLncY="></script>
+<script defer src="/notes/cn.search.min.8de6475996e55da5584a7746167a77b4243cea865182272fcdf32a0b7527a44b.js" integrity="sha256-jeZHWZblXaVYSndGFnp3tCQ86oZRgicvzfMqC3UnpEs="></script>
 
 <!--
 Made with Book Theme
@@ -173,16 +173,60 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="查找字符串">查找字符串</h1>
+<article class="markdown"><h1 id="搜索命令">搜索命令</h1>
+<h2 id="navi">navi</h2>
+<h3 id="安装">安装</h3>
+<div id="tbl:naviInstall">
+<table>
+<caption>表 1: navi 安装命令</caption>
+<thead>
+<tr class="header">
+<th>操作系统</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arch Linux</td>
+<td><code>yay -S navi</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="使用">使用</h3>
+<p><code>Ctrl-g</code>。</p>
+<h1 id="搜索目录">搜索目录</h1>
+<h2 id="zoxide">zoxide</h2>
+<h3 id="安装-1">安装</h3>
+<div id="tbl:zoxideInstall">
+<table>
+<caption>表 2: zoxide 安装命令</caption>
+<thead>
+<tr class="header">
+<th>操作系统</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arch Linux</td>
+<td><code>yay -S zoxide</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="使用-1">使用</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">zi</span></span></code></pre></div>
+<h1 id="查找字符串">查找字符串</h1>
 <h2 id="ripgrep">ripgrep</h2>
 <h3 id="在-python-文件里搜索">在 python 文件里搜索</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">rg</span> -tpy foo</span></code></pre></div>
 <h3 id="非正则匹配">非正则匹配</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">rg</span> -F <span class="st">&#39;C-^&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">rg</span> -F <span class="st">&#39;C-^&#39;</span></span></code></pre></div>
 <h3 id="在-pandoc-文件里搜索短线">在 pandoc 文件里搜索短线</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">rg</span> -g <span class="st">&#39;*.pandoc&#39;</span> -- ----</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">rg</span> -g <span class="st">&#39;*.pandoc&#39;</span> -- ----</span></code></pre></div>
 <h2 id="grepgrep">grep<span class="citation" data-cites="grep"><sup>[<a href="#ref-grep" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">grep</span> -rl <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-grep">
@@ -193,6 +237,22 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#搜索命令">搜索命令</a>
+  <ul>
+  <li><a href="#navi">navi</a>
+  <ul>
+  <li><a href="#安装">安装</a></li>
+  <li><a href="#使用">使用</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#搜索目录">搜索目录</a>
+  <ul>
+  <li><a href="#zoxide">zoxide</a>
+  <ul>
+  <li><a href="#安装-1">安装</a></li>
+  <li><a href="#使用-1">使用</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#查找字符串">查找字符串</a>
   <ul>
   <li><a href="#ripgrep">ripgrep</a>
@@ -218,9 +278,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/20cde3534c8544966a0b803c11e2816ec27d752a" title='最后修改者 Kai Zhang | 2020-04-02 05:47:18 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7a1de0c14042cc5f86c5b3acfd6be4b5d66f9c93" title='最后修改者 Kai Zhang | 2020-04-06 00:03:34 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 05:47:18 &#43;0800</span>
+      <span>2020-04-06 00:03:34 &#43;0800</span>
     </a>
   </div>
 
