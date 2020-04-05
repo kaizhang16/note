@@ -315,7 +315,8 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/database/</guid>
-      <description>SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user     参考文献 [1] GBN. Plural vs Singular Table Name[EB/OL](2012–02–23). https://dba.stackexchange.com/a/13737.
+      <description>SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores     参考文献 [1] GBN. Plural vs Singular Table Name[EB/OL](2012–02–23). https://dba.stackexchange.com/a/13737.
+ [2] LEONBLOY. PostgreSQL naming conventions[EB/OL](2010–05–20). https://stackoverflow.com/a/2878408/13200985.
   目录  SQL 命名规范 参考文献   </description>
     </item>
     
