@@ -8,11 +8,12 @@ title: "搜索"
 
 ### 安装
 
-| 操作系统   | 命令          |
-|------------|---------------|
-| Arch Linux | `yay -S navi` |
-
-: navi 安装命令 {#tbl:naviInstall}
+```sh
+NAVI_VERSION=2.4.1
+curl -LO "https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz"
+tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz
+mv -i navi ~/.local/bin/
+```
 
 ### 使用
 
@@ -24,11 +25,9 @@ title: "搜索"
 
 ### 安装
 
-| 操作系统   | 命令            |
-|------------|-----------------|
-| Arch Linux | `yay -S zoxide` |
-
-: zoxide 安装命令 {#tbl:zoxideInstall}
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh
+```
 
 ### 使用
 
