@@ -4,9 +4,10 @@ title: "数据库"
 
 # SQL 命名规范
 
-| 类别 | 规范                        | 例子   |
-|------|-----------------------------|--------|
-| 表名 | 单数[@sqlTableNameSingular] | `user` |
+| 类别        | 规范                           | 例子                          |
+|-------------|--------------------------------|-------------------------------|
+| 表名        | 单数[@sqlTableNameSingular]    | `user`                        |
+| identifiers | snake case[@sqlNameConvention] | `lower_case_with_underscores` |
 
 : SQL 命名规范 {#tbl:sqlNameConvention}
 
