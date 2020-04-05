@@ -7,8 +7,8 @@
 <meta name="description" content="Linux"><meta property="og:title" content="Linux" />
 <meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新源 sudo apt update 更新包 sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common nix 更新包 nix-channel --update Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     目录  发行版  Arch Linux  清除缓存  Ubuntu  更新源 更新包 add-apt-repository: command not found  nix  更新包   Virtual Box 挂载  ntfs vboxsf samba  查看目录  broot  安装 broot     " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/os/linux/" />
-<meta property="article:modified_time" content="2020-04-02T05:55:01+08:00" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/linux/" />
+<meta property="article:modified_time" content="2020-04-05T18:33:55+08:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.5be8f794ae44ffbd43c2c6f471f40b63c838bcf2ad8cce511c1a8b19d1f6d719.js" integrity="sha256-W&#43;j3lK5E/71Dwsb0cfQLY8g4vPKtjM5RHBqLGdH21xk="></script>
+<script defer src="/notes/cn.search.min.a05d929bb6a946dd8f8829353e7868b381acaca765b9e7a382f51670976573c8.js" integrity="sha256-oF2Sm7apRt2PiCk1Pnhos4GsrKdlueejgvUWcJdlc8g="></script>
 
 <!--
 Made with Book Theme
@@ -70,15 +70,19 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>视觉</strong>
 <ul>
+<li><a href="/notes/docs/visual/image/">图像</a></li>
 <li><a href="/notes/docs/visual/unity/">Unity</a></li>
 </ul>
 </li>
 <li><strong>计算机科学</strong>
 <ul>
 <li><a href="/notes/docs/cs/types/">数据类型</a></li>
+<li><a href="/notes/docs/cs/linux/"class=active>Linux</a></li>
+<li><a href="/notes/docs/cs/database/">数据库</a></li>
+<li><a href="/notes/docs/cs/http/">HTTP</a></li>
 </ul>
 </li>
-<li><strong>编程</strong>
+<li><strong>编程语言</strong>
 <ul>
 <li><a href="/notes/docs/program/pandoc/">Pandoc</a></li>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
@@ -97,16 +101,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/html/">HTML</a></li>
 </ul>
 </li>
-<li><strong>协议</strong>
-<ul>
-<li><a href="/notes/docs/protocols/http/">HTTP</a></li>
-</ul>
-</li>
-<li><strong>操作系统</strong>
-<ul>
-<li><a href="/notes/docs/os/linux/"class=active>Linux</a></li>
-</ul>
-</li>
 <li><strong>工具</strong>
 <ul>
 <li><a href="/notes/docs/tools/editor/">编辑器</a></li>
@@ -120,7 +114,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/encryption/">加密</a></li>
 <li><a href="/notes/docs/tools/curl/">curl</a></li>
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
-<li><a href="/notes/docs/tools/image/">图像</a></li>
 <li><a href="/notes/docs/tools/video/">视频</a></li>
 <li><a href="/notes/docs/tools/format/">格式</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
@@ -288,9 +281,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/294e5705ab4aa40d8bf6194bb2f58695521dbfe0" title='最后修改者 Kai Zhang | 2020-04-02 05:55:01 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/abd131a7ed398004ce13d1470f51fa420c231f90" title='最后修改者 Kai Zhang | 2020-04-05 18:33:55 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 05:55:01 &#43;0800</span>
+      <span>2020-04-05 18:33:55 &#43;0800</span>
     </a>
   </div>
 

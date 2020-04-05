@@ -4,21 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="HTTP"><meta property="og:title" content="HTTP" />
-<meta property="og:description" content="URL vs URI[1] URL 用于定位，URI 用于标识。
-参考文献 [1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). https://stackoverflow.com/a/1984225.
-  目录  URL vs URI[1] 参考文献   " />
+<meta name="description" content="图像"><meta property="og:title" content="图像" />
+<meta property="og:description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     Adobe Photoshop 2020 安装 请参考 https://www.isharepc.com/20181.html。
+目录  文件格式 Adobe Photoshop 2020  安装    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/protocols/http/" />
-<meta property="article:modified_time" content="2020-03-07T11:10:13+00:00" />
-<title>HTTP | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/visual/image/" />
+<meta property="article:modified_time" content="2020-04-05T17:20:45+08:00" />
+<title>图像 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.5be8f794ae44ffbd43c2c6f471f40b63c838bcf2ad8cce511c1a8b19d1f6d719.js" integrity="sha256-W&#43;j3lK5E/71Dwsb0cfQLY8g4vPKtjM5RHBqLGdH21xk="></script>
+<script defer src="/notes/cn.search.min.a05d929bb6a946dd8f8829353e7868b381acaca765b9e7a382f51670976573c8.js" integrity="sha256-oF2Sm7apRt2PiCk1Pnhos4GsrKdlueejgvUWcJdlc8g="></script>
 
 <!--
 Made with Book Theme
@@ -72,15 +71,19 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>视觉</strong>
 <ul>
+<li><a href="/notes/docs/visual/image/"class=active>图像</a></li>
 <li><a href="/notes/docs/visual/unity/">Unity</a></li>
 </ul>
 </li>
 <li><strong>计算机科学</strong>
 <ul>
 <li><a href="/notes/docs/cs/types/">数据类型</a></li>
+<li><a href="/notes/docs/cs/linux/">Linux</a></li>
+<li><a href="/notes/docs/cs/database/">数据库</a></li>
+<li><a href="/notes/docs/cs/http/">HTTP</a></li>
 </ul>
 </li>
-<li><strong>编程</strong>
+<li><strong>编程语言</strong>
 <ul>
 <li><a href="/notes/docs/program/pandoc/">Pandoc</a></li>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
@@ -99,16 +102,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/html/">HTML</a></li>
 </ul>
 </li>
-<li><strong>协议</strong>
-<ul>
-<li><a href="/notes/docs/protocols/http/"class=active>HTTP</a></li>
-</ul>
-</li>
-<li><strong>操作系统</strong>
-<ul>
-<li><a href="/notes/docs/os/linux/">Linux</a></li>
-</ul>
-</li>
 <li><strong>工具</strong>
 <ul>
 <li><a href="/notes/docs/tools/editor/">编辑器</a></li>
@@ -122,7 +115,6 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/encryption/">加密</a></li>
 <li><a href="/notes/docs/tools/curl/">curl</a></li>
 <li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
-<li><a href="/notes/docs/tools/image/">图像</a></li>
 <li><a href="/notes/docs/tools/video/">视频</a></li>
 <li><a href="/notes/docs/tools/format/">格式</a></li>
 <li><a href="/notes/docs/tools/api/">API</a></li>
@@ -159,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>HTTP</strong>
+  <strong>图像</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -181,20 +173,40 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<a href="#ref-urlVsURI" role="doc-biblioref">1</a>]</sup></span></h1>
-<p>URL 用于定位，URI 用于标识。</p>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-urlVsURI">
-<p>[1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). <a href="https://stackoverflow.com/a/1984225">https://stackoverflow.com/a/1984225</a>.</p>
+<article class="markdown"><h1 id="文件格式">文件格式</h1>
+<div id="tbl:imageFileFormats">
+<table>
+<caption>表 1: 图像文件格式</caption>
+<thead>
+<tr class="header">
+<th>图像格式</th>
+<th>无损？</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PNG</td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+</tr>
+<tr class="even">
+<td>JPG</td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
+<h1 id="adobe-photoshop-2020">Adobe Photoshop 2020</h1>
+<h2 id="安装">安装</h2>
+<p>请参考 <a href="https://www.isharepc.com/20181.html" class="uri">https://www.isharepc.com/20181.html</a>。</p>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#参考文献">参考文献</a></li>
+  <li><a href="#文件格式">文件格式</a></li>
+  <li><a href="#adobe-photoshop-2020">Adobe Photoshop 2020</a>
+  <ul>
+  <li><a href="#安装">安装</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -209,9 +221,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a77f315793e316bd0418f5bf0868e646034d8c1c" title='最后修改者 Kai Zhang | 2020-03-07 19:10:13 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/181ec8fe7255c061055bb4262e154df8b8f2aff2" title='最后修改者 Kai Zhang | 2020-04-05 17:20:45 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-07 19:10:13 &#43;0800</span>
+      <span>2020-04-05 17:20:45 &#43;0800</span>
     </a>
   </div>
 

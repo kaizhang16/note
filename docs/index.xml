@@ -126,10 +126,10 @@
     
     <item>
       <title>HTTP</title>
-      <link>https://kaizhang91.github.io/notes/docs/protocols/http/</link>
+      <link>https://kaizhang91.github.io/notes/docs/cs/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/protocols/http/</guid>
+      <guid>https://kaizhang91.github.io/notes/docs/cs/http/</guid>
       <description>URL vs URI[1] URL 用于定位，URI 用于标识。
 参考文献 [1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). https://stackoverflow.com/a/1984225.
   目录  URL vs URI[1] 参考文献   </description>
@@ -148,10 +148,10 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     
     <item>
       <title>Linux</title>
-      <link>https://kaizhang91.github.io/notes/docs/os/linux/</link>
+      <link>https://kaizhang91.github.io/notes/docs/cs/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/os/linux/</guid>
+      <guid>https://kaizhang91.github.io/notes/docs/cs/linux/</guid>
       <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新源 sudo apt update 更新包 sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common nix 更新包 nix-channel --update Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     目录  发行版  Arch Linux  清除缓存  Ubuntu  更新源 更新包 add-apt-repository: command not found  nix  更新包   Virtual Box 挂载  ntfs vboxsf samba  查看目录  broot  安装 broot     </description>
     </item>
     
@@ -180,7 +180,8 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/pandoc/</guid>
-      <description> 目录  </description>
+      <description>Extension  +EXTENSION 启用 -EXTENSION 禁用  emoji emoji 列表请参考 https://github.com/ikatyang/emoji-cheat-sheet。
+目录  Extension  emoji    </description>
     </item>
     
     <item>
@@ -290,12 +291,12 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>图像</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/image/</link>
+      <link>https://kaizhang91.github.io/notes/docs/visual/image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/tools/image/</guid>
-      <description>Adobe Photoshop 2020 安装 请参考 https://www.isharepc.com/20181.html。
-目录  Adobe Photoshop 2020  安装    </description>
+      <guid>https://kaizhang91.github.io/notes/docs/visual/image/</guid>
+      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     Adobe Photoshop 2020 安装 请参考 https://www.isharepc.com/20181.html。
+目录  文件格式 Adobe Photoshop 2020  安装    </description>
     </item>
     
     <item>
@@ -306,6 +307,16 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <guid>https://kaizhang91.github.io/notes/docs/tools/search/</guid>
       <description>查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.
   目录  查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   </description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/database/</guid>
+      <description>SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user     参考文献 [1] GBN. Plural vs Singular Table Name[EB/OL](2012–02–23). https://dba.stackexchange.com/a/13737.
+  目录  SQL 命名规范 参考文献   </description>
     </item>
     
     <item>
