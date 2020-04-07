@@ -1,0 +1,13 @@
+---
+title: "浏览器"
+---
+
+# Firefox
+
+## Tridactyl
+
+### 主题
+
+```vim
+: set theme dark
+```

@@ -29,6 +29,7 @@ headless: true
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
 - **工具**
+  - [浏览器]({{< relref "/docs/tools/browser" >}})
   - [编辑器]({{< relref "/docs/tools/editor" >}})
   - [写作]({{< relref "/docs/tools/writing" >}})
   - [搜索]({{< relref "/docs/tools/search" >}})
