@@ -23,12 +23,36 @@ cp -i erd_static-x86-64 ~/.local/bin/erd
 
 # PostgreSQL
 
+## 安装
+
+### Arch Linux
+
+```sh
+$ sudo pacman -S postgres
+$ sudo -iu postgres
+[postgres]$ initdb -D /var/lib/postgres/data
+[postgres]$ exit
+$ sudo systemctl start postgresql.service
+$ sudo systemctl enable postgresql.service
+```
+
 ## 数据类型[@postgresDataTypes]
 
-| 数据类型 | 含义   |
-|----------|--------|
-| boolean  | 布尔值 |
+| 数据类型   | 含义       |
+|------------|------------|
+| bool       | 布尔值     |
+| varchar(n) | 变长字符串 |
 
 : PostgreSQL 数据类型 {#tbl:postgresDataTypes}
+
+## psql 指令
+
+| 指令            | 含义               |
+|-----------------|--------------------|
+| \l              | list all databases |
+| \dt             | 列出表             |
+| \d <table_name> | 显示表定义         |
+
+: psql 指令 {#tbl:psqlCommands}
 
 # 参考文献
