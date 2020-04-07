@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="数据库"><meta property="og:title" content="数据库" />
-<meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores     PostgreSQL 数据类型[3]  表 2: PostgreSQL 数据类型  数据类型 含义    boolean 布尔值     参考文献 [1] GBN. Plural vs Singular Table Name[EB/OL](2012–02–23). https://dba.stackexchange.com/a/13737.
- [2] LEONBLOY." />
+<meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.service 数据类型[3]  表 2: PostgreSQL 数据类型  数据类型 含义    bool 布尔值  varchar(n) 变长字符串     psql 指令  表 3: psql 指令  指令 含义     list all databases   列出表  table_name&gt; 显示表定义     参考文献 [1] GBN." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/database/" />
-<meta property="article:modified_time" content="2020-04-05T23:21:18+08:00" />
+<meta property="article:modified_time" content="2020-04-07T15:22:59+08:00" />
 <title>数据库 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.9010ec725baca7964114dcb8c19857838624dcb3cf1207616b6666f13ee242f7.js" integrity="sha256-kBDsclusp5ZBFNy4wZhXg4Yk3LPPEgdha2Zm8T7iQvc="></script>
+<script defer src="/notes/cn.search.min.6f78df6825fe72fccc599c2b95af3051a4e2d334ce71aedde60c4f6e3fc07955.js" integrity="sha256-b3jfaCX&#43;cvzMWZwrla8wUaTi0zTOca7d5gxPbj/AeVU="></script>
 
 <!--
 Made with Book Theme
@@ -206,6 +205,14 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h1 id="postgresql">PostgreSQL</h1>
+<h2 id="安装-1">安装</h2>
+<h3 id="arch-linux">Arch Linux</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a>$ <span class="fu">sudo</span> pacman -S postgres</span>
+<span id="cb2-2"><a href="#cb2-2"></a>$ <span class="fu">sudo</span> -iu postgres</span>
+<span id="cb2-3"><a href="#cb2-3"></a>[<span class="ex">postgres</span>]$ initdb -D /var/lib/postgres/data</span>
+<span id="cb2-4"><a href="#cb2-4"></a>[<span class="ex">postgres</span>]$ exit</span>
+<span id="cb2-5"><a href="#cb2-5"></a>$ <span class="fu">sudo</span> systemctl start postgresql.service</span>
+<span id="cb2-6"><a href="#cb2-6"></a>$ <span class="fu">sudo</span> systemctl enable postgresql.service</span></code></pre></div>
 <h2 id="数据类型postgresdatatypes">数据类型<span class="citation" data-cites="postgresDataTypes"><sup>[<a href="#ref-postgresDataTypes" role="doc-biblioref">3</a>]</sup></span></h2>
 <div id="tbl:postgresDataTypes">
 <table>
@@ -218,8 +225,38 @@ https://github.com/alex-shpak/hugo-book
 </thead>
 <tbody>
 <tr class="odd">
-<td>boolean</td>
+<td>bool</td>
 <td>布尔值</td>
+</tr>
+<tr class="even">
+<td>varchar(n)</td>
+<td>变长字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="psql-指令">psql 指令</h2>
+<div id="tbl:psqlCommands">
+<table>
+<caption>表 3: psql 指令</caption>
+<thead>
+<tr class="header">
+<th>指令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>list all databases</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>列出表</td>
+</tr>
+<tr class="odd">
+<td>table_name&gt;</td>
+<td>显示表定义</td>
 </tr>
 </tbody>
 </table>
@@ -247,7 +284,12 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#sql-命名规范">SQL 命名规范</a></li>
   <li><a href="#postgresql">PostgreSQL</a>
   <ul>
+  <li><a href="#安装-1">安装</a>
+  <ul>
+  <li><a href="#arch-linux">Arch Linux</a></li>
+  </ul></li>
   <li><a href="#数据类型postgresdatatypes">数据类型<span class="citation" data-cites="postgresDataTypes"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#psql-指令">psql 指令</a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -264,9 +306,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b57a5117170b8ba0386d94ce0a99925995b504db" title='最后修改者 Kai Zhang | 2020-04-05 23:21:18 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/f98224258d6b97fbf23b3b55f8488a388f79229d" title='最后修改者 Kai Zhang | 2020-04-07 15:22:59 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-05 23:21:18 &#43;0800</span>
+      <span>2020-04-07 15:22:59 &#43;0800</span>
     </a>
   </div>
 
