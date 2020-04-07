@@ -175,6 +175,15 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     </item>
     
     <item>
+      <title>OAuth 2</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/oauth2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/oauth2/</guid>
+      <description>教程  https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2  目录  教程   </description>
+    </item>
+    
+    <item>
       <title>Pandoc</title>
       <link>https://kaizhang91.github.io/notes/docs/program/pandoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -355,7 +364,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/browser/</guid>
-      <description>Firefox Tridactyl 主题 : set theme dark 目录  Firefox  Tridactyl  主题     </description>
+      <description>Firefox Tridactyl 主题 : set theme dark 搜索 : unbind &amp;lt;C-f&amp;gt; 目录  Firefox  Tridactyl  主题 搜索     </description>
     </item>
     
     <item>
