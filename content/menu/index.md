@@ -12,6 +12,7 @@ headless: true
   - [Linux]({{< relref "/docs/cs/linux" >}})
   - [数据库]({{< relref "/docs/cs/database" >}})
   - [HTTP]({{< relref "/docs/cs/http" >}})
+  - [OAuth 2]({{< relref "/docs/cs/oauth2" >}})
 - **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})

@@ -11,3 +11,9 @@ title: "浏览器"
 ```vim
 : set theme dark
 ```
+
+### 搜索
+
+```vim
+: unbind <C-f>
+```
