@@ -11,3 +11,11 @@ cargo new ${name}
 ```
 
 > 默认使用 `--bin` 参数。
+
+# diesel
+
+## 安装
+
+```sh
+cargo install diesel_cli
+```
