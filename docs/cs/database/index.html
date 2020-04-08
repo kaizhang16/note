@@ -8,7 +8,7 @@
 <meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/database/" />
-<meta property="article:modified_time" content="2020-04-08T08:46:57+00:00" />
+<meta property="article:modified_time" content="2020-04-08T18:18:08+08:00" />
 <title>数据库 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.853f12ce7b9846d79ffd070a0abad8f76ecaa2efe33cbe0484cb94b5da0dedba.js" integrity="sha256-hT8SznuYRtef/QcKCrrY927Kou/jPL4EhMuUtdoN7bo="></script>
+<script defer src="/notes/cn.search.min.c5d427332f49170180bf60b7195c40b501a4532d34d2f6c33e355ba623bb9bee.js" integrity="sha256-xdQnMy9JFwGAv2C3GVxAtQGkUy000vbDPjVbpiO7m&#43;4="></script>
 
 <!--
 Made with Book Theme
@@ -263,19 +263,19 @@ https://github.com/alex-shpak/hugo-book
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
+<td><code>\du</code></td>
 <td>列出用户</td>
 </tr>
 <tr class="even">
-<td></td>
+<td><code>\l</code></td>
 <td>list all databases</td>
 </tr>
 <tr class="odd">
-<td></td>
+<td><code>\dt</code></td>
 <td>列出表</td>
 </tr>
 <tr class="even">
-<td>table_name&gt;</td>
+<td><code>\d &lt;table_name&gt;</code></td>
 <td>显示表定义</td>
 </tr>
 </tbody>
@@ -329,9 +329,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b69decfed79c8858aad4128d11023b76b6997337" title='最后修改者 Kai Zhang | 2020-04-08 16:46:57 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ad67816352588ae38427d036f6d9f0b1c0a1e228" title='最后修改者 Kai Zhang | 2020-04-08 18:18:08 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-08 16:46:57 &#43;0800</span>
+      <span>2020-04-08 18:18:08 &#43;0800</span>
     </a>
   </div>
 
