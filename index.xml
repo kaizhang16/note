@@ -209,7 +209,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang91.github.io/notes/docs/program/rust/</guid>
       <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- 目录  Cargo  新建项目    </description>
+ diesel 安装 cargo install diesel_cli 目录  Cargo  新建项目  diesel  安装    </description>
     </item>
     
     <item>
@@ -325,7 +325,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/database/</guid>
-      <description>Entity Relationship Diagram 安装 curl -LO &amp;#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&amp;#39; chmod u+x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.service 数据类型[3]  表 2: PostgreSQL 数据类型  数据类型 含义    bool 布尔值  varchar(n) 变长字符串     psql 指令  表 3: psql 指令  指令 含义     list all databases   列出表  table_name&amp;gt; 显示表定义     参考文献 [1] GBN.</description>
+      <description>Entity Relationship Diagram 安装 curl -LO &amp;#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&amp;#39; chmod u+x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.</description>
     </item>
     
     <item>
