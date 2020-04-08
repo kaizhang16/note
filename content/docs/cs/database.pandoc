@@ -71,12 +71,12 @@ createdb <name>
 
 ## psql 指令
 
-| 指令            | 含义               |
-|-----------------|--------------------|
-| \du             | 列出用户           |
-| \l              | list all databases |
-| \dt             | 列出表             |
-| \d <table_name> | 显示表定义         |
+| 指令              | 含义               |
+|-------------------|--------------------|
+| `\du`             | 列出用户           |
+| `\l`              | list all databases |
+| `\dt`             | 列出表             |
+| `\d <table_name>` | 显示表定义         |
 
 : psql 指令 {#tbl:psqlCommands}
 
