@@ -4,9 +4,17 @@ title: "部署"
 
 # Ansible
 
+## 安装
+
+| 操作系统 | 命令                          |
+|----------|-------------------------------|
+| nix      | `nix-env -iA nixpkgs.ansible` |
+
+: 安装 ansible {#tbl:installAnsible}
+
 ## 目录结构[@ansibleDirectoryLayout]
 
-```
+```sh
 inventories/
     production/
         hosts               # inventory file for production servers
@@ -40,5 +48,7 @@ roles/
     monitoring/
     fooapp/
 ```
+
+## Ansible Vault
 
 # 参考文献

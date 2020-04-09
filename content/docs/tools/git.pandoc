@@ -12,18 +12,6 @@ title: "Git"
 
 : delta 安装命令 {#tbl:deltaInstall}
 
-## 与暂存区比较
-
-```sh
-git diff --cached
-```
-
-# 设置跟踪的分支
-
-```sh
-git branch --set-upstream-to=origin/master
-```
-
 # Git Submodule
 
 ## 下载 submodule
