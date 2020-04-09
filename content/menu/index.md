@@ -9,13 +9,13 @@ headless: true
   - [视频]({{< relref "/docs/visual/video" >}})
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
+  - [安全]({{< relref "/docs/cs/security" >}})
   - [数据类型]({{< relref "/docs/cs/types" >}})
   - [Linux]({{< relref "/docs/cs/linux" >}})
   - [数据库]({{< relref "/docs/cs/database" >}})
   - [HTTP]({{< relref "/docs/cs/http" >}})
   - [OAuth 2]({{< relref "/docs/cs/oauth2" >}})
   - [压缩]({{< relref "/docs/cs/compress" >}})
-  - [加密]({{< relref "/docs/cs/encryption" >}})
   - [部署]({{< relref "/docs/cs/deploy" >}})
 - **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})

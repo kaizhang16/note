@@ -1,0 +1,21 @@
+---
+title: "安全"
+---
+
+# SSH
+
+## FAQ
+
+### pam_access(sshd:account): access denied for user
+
+请修改 `/etc/security/access.conf` 配置。
+
+# GPG
+
+## FAQ
+
+### gpg: WARNING: server 'gpg-agent' is older than us
+
+```sh
+gpgconf --kill -v gpg-agent
+```
