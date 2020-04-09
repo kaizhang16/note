@@ -14,18 +14,6 @@ sudo paccache -rk0
 
 ## Ubuntu
 
-### 更新源
-
-```sh
-sudo apt update
-```
-
-### 更新包
-
-```sh
-sudo apt upgrade
-```
-
 ### add-apt-repository: command not found
 
 ```sh
@@ -33,12 +21,6 @@ sudo apt install software-properties-common
 ```
 
 ## nix
-
-### 更新包
-
-```sh
-nix-channel --update
-```
 
 # Virtual Box
 
@@ -48,18 +30,6 @@ sudo pacman -S xf86-video-vmware
 
 # 挂载
 
-## ntfs
-
-```sh
-sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint
-```
-
-## vboxsf
-
-```sh
-sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint
-```
-
 ## samba
 
 | 操作系统 | 命令                          |
@@ -67,10 +37,6 @@ sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /me
 | Ubuntu   | `sudo apt install cifs-utils` |
 
 : samba 组件安装命令 {#tbl:sambaInstall}
-
-```sh
-sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint
-```
 
 # 查看目录
 
