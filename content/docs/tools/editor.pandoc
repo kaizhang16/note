@@ -15,7 +15,12 @@ title: "编辑器"
 
 ## 插件
 
-- `fcrespo82.markdown-table-formatter`
+| 插件 ID                                 | 用途       |
+|-----------------------------------------|------------|
+| `streetsidesoftware.code-spell-checker` | 拼写检查   |
+| `fcrespo82.markdown-table-formatter`    | 表格格式化 |
+
+: Visual Studio Code 插件
 
 # Vim
 
