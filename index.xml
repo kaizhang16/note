@@ -152,7 +152,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/linux/</guid>
-      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu 更新源 sudo apt update 更新包 sudo apt upgrade add-apt-repository: command not found sudo apt install software-properties-common nix 更新包 nix-channel --update Virtual Box sudo pacman -S xf86-video-vmware 挂载 ntfs sudo mount -t ntfs -o uid=$uid,gid=$gid,dmask=022,fmask=133 /dev/$disk /media/$mountpoint vboxsf sudo mount -t vboxsf -o uid=$uid,gid=$gid,rw,dmode=700,fmode=600 $share_name /media/$mountpoint samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     sudo mount -t cifs -o username=$username,password=$password,uid=$uid,gid=$gid,dir_mode=0500,file_mode=0600 //$ip/ar /media/$mountpoint 查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     目录  发行版  Arch Linux  清除缓存  Ubuntu  更新源 更新包 add-apt-repository: command not found  nix  更新包   Virtual Box 挂载  ntfs vboxsf samba  查看目录  broot  安装 broot     </description>
+      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     目录  发行版  Arch Linux  清除缓存  Ubuntu  add-apt-repository: command not found  nix  Virtual Box 挂载  samba  查看目录  broot  安装 broot     </description>
     </item>
     
     <item>
