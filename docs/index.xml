@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>API</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/tools/api/</guid>
-      <description>seafile  上传文件：https://download.seafile.com/published/web-api/v2.1/file-upload.md Web API: https://seafile.gitbook.io/seafile-server-manual/developing/web-api  目录  seafile   </description>
-    </item>
-    
-    <item>
       <title>Bash</title>
       <link>https://kaizhang91.github.io/notes/docs/program/bash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -47,16 +38,6 @@
       <guid>https://kaizhang91.github.io/notes/docs/program/css/</guid>
       <description>对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
   目录  对齐 width[1] 参考文献   </description>
-    </item>
-    
-    <item>
-      <title>Curl</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/curl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/tools/curl/</guid>
-      <description>得到响应中的 Location header[1] curl &amp;#39;http://httpbin.org/redirect-to?url=http:/\example.com&amp;#39; -si | grep -oP &amp;#39;Location: \K.*&amp;#39; 参考文献 [1] RANDOMIR. [EB/OL](2017–09–30). https://stackoverflow.com/a/46507651.
-  目录  得到响应中的 Location header[1] 参考文献   </description>
     </item>
     
     <item>
@@ -131,8 +112,8 @@
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/http/</guid>
       <description>URL vs URI[1] URL 用于定位，URI 用于标识。
-参考文献 [1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). https://stackoverflow.com/a/1984225.
-  目录  URL vs URI[1] 参考文献   </description>
+NGINX 编译安装  推荐安装 mainline 版本[2]。
+ # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf zlib-$ZLIB_VERSION.tar.gz curl -o nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  -L https://github.com/vkholodkov/nginx-upload-module/archive/$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz  # Compile and install cd nginx-$NGINX_VERSION .</description>
     </item>
     
     <item>
@@ -161,17 +142,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/linux/</guid>
-      <description>手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 网络 curl 上传时显示进度条[2] curl ... | tee /dev/null urlencode 参数[3] curl ... --data-urlencode &amp;quot;paramName=value&amp;quot; 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
-    </item>
-    
-    <item>
-      <title>NGINX</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/nginx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/tools/nginx/</guid>
-      <description>编译安装  推荐安装 mainline 版本[1]。
- # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf zlib-$ZLIB_VERSION.tar.gz curl -o nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  -L https://github.com/vkholodkov/nginx-upload-module/archive/$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz  # Compile and install cd nginx-$NGINX_VERSION ./configure \  --sbin-path=/usr/sbin/nginx \  --conf-path=/etc/nginx/nginx.</description>
+      <description>手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du[2] du -sh /a/* | sort -rh | head -5 jq 过滤[3] select(.</description>
     </item>
     
     <item>

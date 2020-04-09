@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="HTTP"><meta property="og:title" content="HTTP" />
 <meta property="og:description" content="URL vs URI[1] URL 用于定位，URI 用于标识。
-参考文献 [1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). https://stackoverflow.com/a/1984225.
-  目录  URL vs URI[1] 参考文献   " />
+NGINX 编译安装  推荐安装 mainline 版本[2]。
+ # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;&amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;&amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;&amp; tar -xzvf zlib-$ZLIB_VERSION.tar.gz curl -o nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  -L https://github.com/vkholodkov/nginx-upload-module/archive/$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  &amp;&amp; tar -xzvf nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz  # Compile and install cd nginx-$NGINX_VERSION ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/http/" />
-<meta property="article:modified_time" content="2020-04-05T18:33:55+08:00" />
+<meta property="article:modified_time" content="2020-04-09T08:21:41+00:00" />
 <title>HTTP | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.21472a380032333846d86671b026f99a7b0c59d45d2a694e40b15f6573b7ff55.js" integrity="sha256-IUcqOAAyMzhG2GZxsCb5mnsMWdRdKmlOQLFfZXO3/1U="></script>
+<script defer src="/notes/cn.search.min.2d1b7bb08e0972cd6ef5d4fae4a002ba73291699415b6247f43f40eb281d566f.js" integrity="sha256-LRt7sI4Jcs1u9dT65KACunMpFplBW2JH9D9A6ygdVm8="></script>
 
 <!--
 Made with Book Theme
@@ -117,10 +117,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/build/">构建</a></li>
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
 <li><a href="/notes/docs/tools/docker/">Docker</a></li>
-<li><a href="/notes/docs/tools/curl/">curl</a></li>
-<li><a href="/notes/docs/tools/nginx/">NGINX</a></li>
 <li><a href="/notes/docs/tools/format/">格式</a></li>
-<li><a href="/notes/docs/tools/api/">API</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
 </ul>
 </li>
@@ -178,10 +175,108 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown"><h1 id="url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<a href="#ref-urlVsURI" role="doc-biblioref">1</a>]</sup></span></h1>
 <p>URL 用于定位，URI 用于标识。</p>
+<h1 id="nginx">NGINX</h1>
+<h2 id="编译安装">编译安装</h2>
+<blockquote>
+<p>推荐安装 <code>mainline</code> 版本<span class="citation" data-cites="nginxVersion"><sup>[<a href="#ref-nginxVersion" role="doc-biblioref">2</a>]</sup></span>。</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Environment variables</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="va">NGINX_VERSION=</span>1.17.9</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="va">PCRE_VESION=</span>8.44</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="va">ZLIB_VERSION=</span>1.2.11</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="va">NGINX_UPLOAD_MODULE_VERSION=</span>2.3.0</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># Download source code</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="ex">curl</span> -LO https://nginx.org/download/nginx-<span class="va">$NGINX_VERSION</span>.tar.gz \</span>
+<span id="cb1-9"><a href="#cb1-9"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf nginx-<span class="va">$NGINX_VERSION</span>.tar.gz</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="ex">curl</span> -LO https://ftp.pcre.org/pub/pcre/pcre-<span class="va">$PCRE_VERSION</span>.tar.gz \</span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf pcre-<span class="va">$PCRE_VERSION</span>.tar.gz</span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="ex">curl</span> -LO https://www.zlib.net/zlib-<span class="va">$ZLIB_VERSION</span>.tar.gz \</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf zlib-<span class="va">$ZLIB_VERSION</span>.tar.gz</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="ex">curl</span> -o nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz \</span>
+<span id="cb1-15"><a href="#cb1-15"></a>  -L https://github.com/vkholodkov/nginx-upload-module/archive/<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz \</span>
+<span id="cb1-16"><a href="#cb1-16"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># Compile and install</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="bu">cd</span> nginx-<span class="va">$NGINX_VERSION</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="ex">./configure</span> \</span>
+<span id="cb1-21"><a href="#cb1-21"></a>  --sbin-path=/usr/sbin/nginx \</span>
+<span id="cb1-22"><a href="#cb1-22"></a>  --conf-path=/etc/nginx/nginx.conf \</span>
+<span id="cb1-23"><a href="#cb1-23"></a>  --pid-path=/run/nginx.pid \</span>
+<span id="cb1-24"><a href="#cb1-24"></a>  --with-http_ssl_module \</span>
+<span id="cb1-25"><a href="#cb1-25"></a>  --with-http_stub_status_module \</span>
+<span id="cb1-26"><a href="#cb1-26"></a>  --with-pcre=../pcre-<span class="va">$PCRE_VERSION</span> \</span>
+<span id="cb1-27"><a href="#cb1-27"></a>  --with-zlib=../zlib-<span class="va">$ZLIB_VERSION</span> \</span>
+<span id="cb1-28"><a href="#cb1-28"></a>  --add-module=../nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="fu">make</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="fu">make</span> install</span></code></pre></div>
+<h2 id="nginx-upload-module">nginx-upload-module</h2>
+<h3 id="配置例子">配置例子</h3>
+<pre class="nginx"><code>server {
+        location /api/upload/v1 {
+                auth_basic &quot;Administrator&#39;s Area&quot;;
+                auth_basic_user_file /etc/apache2/.htpasswd;
+
+                upload_pass @uploadServer;
+                upload_store /tmp/nginx;
+                upload_store_access user:r;
+
+                # Set specified fields in request body
+                upload_set_form_field $upload_field_name.name &quot;$upload_file_name&quot;;
+                upload_set_form_field $upload_field_name.content_type &quot;$upload_content_type&quot;;
+                upload_set_form_field $upload_field_name.path &quot;$upload_tmp_path&quot;;
+
+                upload_pass_form_field &quot;^submit$|^targetFilePaths$&quot;;
+
+                # Inform backend about hash and size of a file
+                upload_aggregate_form_field &quot;$upload_field_name.sha1&quot; &quot;$upload_file_sha1&quot;;
+                upload_aggregate_form_field &quot;$upload_field_name.size&quot; &quot;$upload_file_size&quot;;
+
+                upload_cleanup 400 404 499 500-505;
+
+        }
+
+        location @uploadServer {
+                proxy_pass http://upload-server;
+        }
+
+        location /upload-files/ {
+                alias /var/www/html/upload-files/;
+                try_files $uri $uri/ =404;
+                autoindex on;
+                autoindex_exact_size off;
+                autoindex_localtime on;
+        }
+}</code></pre>
+<h1 id="curl">curl</h1>
+<h2 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">3</a>]</sup></span></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
+<h2 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">4</a>]</sup></span></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
+<h2 id="得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<a href="#ref-curlLocation" role="doc-biblioref">5</a>]</sup></span></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> -si <span class="kw">|</span> <span class="fu">grep</span> -oP <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
+<h1 id="api">API</h1>
+<h2 id="seafile">seafile</h2>
+<ul>
+<li>上传文件：<a href="https://download.seafile.com/published/web-api/v2.1/file-upload.md" class="uri">https://download.seafile.com/published/web-api/v2.1/file-upload.md</a></li>
+<li>Web API: <a href="https://seafile.gitbook.io/seafile-server-manual/developing/web-api" class="uri">https://seafile.gitbook.io/seafile-server-manual/developing/web-api</a></li>
+</ul>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-urlVsURI">
 <p>[1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). <a href="https://stackoverflow.com/a/1984225">https://stackoverflow.com/a/1984225</a>.</p>
+</div>
+<div id="ref-nginxVersion">
+<p>[2] NGINX. NGINX 1.6 and 1.7 Released[EB/OL](2014–04–24). <a href="https://www.nginx.com/blog/nginx-1-6-1-7-released/#Which-Version-Should-I-Use">https://www.nginx.com/blog/nginx-1-6-1-7-released/#Which-Version-Should-I-Use</a>.</p>
+</div>
+<div id="ref-curlUploadProgress">
+<p>[3] STACKOVERFLOW. cURL: How to display progress information while uploading?[EB/OL](2012–04–02). <a href="https://stackoverflow.com/questions/9973056/curl-how-to-display-progress-information-while-uploading/41860083">https://stackoverflow.com/questions/9973056/curl-how-to-display-progress-information-while-uploading/41860083</a>.</p>
+</div>
+<div id="ref-curlUrlEncode">
+<p>[4] STACKOVERFLOW. How to urlencode data for curl command?[EB/OL](2017–08–14). <a href="https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command">https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command</a>.</p>
+</div>
+<div id="ref-curlLocation">
+<p>[5] RANDOMIR. [EB/OL](2017–09–30). <a href="https://stackoverflow.com/a/46507651">https://stackoverflow.com/a/46507651</a>.</p>
 </div>
 </div>
 
@@ -189,6 +284,24 @@ https://github.com/alex-shpak/hugo-book
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#nginx">NGINX</a>
+  <ul>
+  <li><a href="#编译安装">编译安装</a></li>
+  <li><a href="#nginx-upload-module">nginx-upload-module</a>
+  <ul>
+  <li><a href="#配置例子">配置例子</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#curl">curl</a>
+  <ul>
+  <li><a href="#上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<span>5</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#api">API</a>
+  <ul>
+  <li><a href="#seafile">seafile</a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -204,9 +317,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/abd131a7ed398004ce13d1470f51fa420c231f90" title='最后修改者 Kai Zhang | 2020-04-05 18:33:55 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/5a4a799ca030a4078562fed6c2666e794c5f6d2d" title='最后修改者 Kai Zhang | 2020-04-09 16:21:41 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-05 18:33:55 &#43;0800</span>
+      <span>2020-04-09 16:21:41 &#43;0800</span>
     </a>
   </div>
 
