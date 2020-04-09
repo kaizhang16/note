@@ -281,19 +281,19 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>加密</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/encryption/</link>
+      <link>https://kaizhang91.github.io/notes/docs/cs/encryption/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/tools/encryption/</guid>
+      <guid>https://kaizhang91.github.io/notes/docs/cs/encryption/</guid>
       <description>GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
     </item>
     
     <item>
       <title>压缩</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/compress/</link>
+      <link>https://kaizhang91.github.io/notes/docs/cs/compress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/tools/compress/</guid>
+      <guid>https://kaizhang91.github.io/notes/docs/cs/compress/</guid>
       <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
   目录  tar  打包时排除某些目录[1] 查看压缩包内容  参考文献   </description>
     </item>
@@ -393,10 +393,10 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>视频</title>
-      <link>https://kaizhang91.github.io/notes/docs/tools/video/</link>
+      <link>https://kaizhang91.github.io/notes/docs/visual/video/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/tools/video/</guid>
+      <guid>https://kaizhang91.github.io/notes/docs/visual/video/</guid>
       <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
     </item>
     
