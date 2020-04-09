@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Golang"><meta property="og:title" content="Golang" />
-<meta property="og:description" content="time 时间格式  2006-01-02 15:04:05 -0700  目录  time  时间格式    " />
+<meta name="description" content="部署"><meta property="og:title" content="部署" />
+<meta property="og:description" content="Ansible 目录结构[1] inventories/ production/ hosts # inventory file for production servers group_vars/ group1.yml # here we assign variables to particular groups group2.yml host_vars/ hostname1.yml # here we assign variables to particular systems hostname2.yml staging/ hosts # inventory file for staging environment group_vars/ group1.yml # here we assign variables to particular groups group2.yml host_vars/ stagehost1.yml # here we assign variables to particular systems stagehost2.yml library/ module_utils/ filter_plugins/ site.yml webservers.yml dbservers.yml roles/ common/ webtier/ monitoring/ fooapp/ 参考文献 [1] ANSIBLE." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/golang/" />
-<meta property="article:modified_time" content="2020-02-20T16:11:32+08:00" />
-<title>Golang | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/deploy/" />
+<meta property="article:modified_time" content="2020-04-09T08:44:25+00:00" />
+<title>部署 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -84,7 +84,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/cs/oauth2/">OAuth 2</a></li>
 <li><a href="/notes/docs/cs/compress/">压缩</a></li>
 <li><a href="/notes/docs/cs/encryption/">加密</a></li>
-<li><a href="/notes/docs/cs/deploy/">部署</a></li>
+<li><a href="/notes/docs/cs/deploy/"class=active>部署</a></li>
 </ul>
 </li>
 <li><strong>编程语言</strong>
@@ -99,7 +99,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
 <li><a href="/notes/docs/program/dhall/">Dhall</a></li>
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
-<li><a href="/notes/docs/program/golang/"class=active>Golang</a></li>
+<li><a href="/notes/docs/program/golang/">Golang</a></li>
 <li><a href="/notes/docs/program/flutter/">Flutter</a></li>
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
@@ -150,7 +150,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Golang</strong>
+  <strong>部署</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -172,19 +172,55 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="time">time</h1>
-<h2 id="时间格式">时间格式</h2>
-<ul>
-<li><code>2006-01-02 15:04:05 -0700</code></li>
-</ul>
+<article class="markdown"><h1 id="ansible">Ansible</h1>
+<h2 id="目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<a href="#ref-ansibleDirectoryLayout" role="doc-biblioref">1</a>]</sup></span></h2>
+<pre><code>inventories/
+    production/
+        hosts               # inventory file for production servers
+        group_vars/
+            group1.yml      # here we assign variables to particular groups
+            group2.yml
+        host_vars/
+            hostname1.yml   # here we assign variables to particular systems
+            hostname2.yml
+
+    staging/
+        hosts               # inventory file for staging environment
+        group_vars/
+            group1.yml      # here we assign variables to particular groups
+            group2.yml
+        host_vars/
+            stagehost1.yml  # here we assign variables to particular systems
+            stagehost2.yml
+
+library/
+module_utils/
+filter_plugins/
+
+site.yml
+webservers.yml
+dbservers.yml
+
+roles/
+    common/
+    webtier/
+    monitoring/
+    fooapp/</code></pre>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-ansibleDirectoryLayout">
+<p>[1] ANSIBLE. Alternative Directory Layout[EB/OL]([日期不详]). <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout">https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout</a>.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#time">time</a>
+  <li><a href="#ansible">Ansible</a>
   <ul>
-  <li><a href="#时间格式">时间格式</a></li>
+  <li><a href="#目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -199,9 +235,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7326ccf7a93a3f03f82caf7afb380f7309474312" title='最后修改者 Kai Zhang | 2020-02-20 16:11:32 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/e14904c64c11b2368c1451e7324de11671ef08a7" title='最后修改者 Kai Zhang | 2020-04-09 16:44:25 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-02-20 16:11:32 &#43;0800</span>
+      <span>2020-04-09 16:44:25 &#43;0800</span>
     </a>
   </div>
 

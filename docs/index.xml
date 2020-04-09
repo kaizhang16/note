@@ -371,5 +371,14 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
     </item>
     
+    <item>
+      <title>部署</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/deploy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/deploy/</guid>
+      <description>Ansible 目录结构[1] inventories/ production/ hosts # inventory file for production servers group_vars/ group1.yml # here we assign variables to particular groups group2.yml host_vars/ hostname1.yml # here we assign variables to particular systems hostname2.yml staging/ hosts # inventory file for staging environment group_vars/ group1.yml # here we assign variables to particular groups group2.yml host_vars/ stagehost1.yml # here we assign variables to particular systems stagehost2.yml library/ module_utils/ filter_plugins/ site.yml webservers.yml dbservers.yml roles/ common/ webtier/ monitoring/ fooapp/ 参考文献 [1] ANSIBLE.</description>
+    </item>
+    
   </channel>
 </rss>
