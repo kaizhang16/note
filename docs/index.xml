@@ -251,15 +251,6 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
-      <title>加密</title>
-      <link>https://kaizhang91.github.io/notes/docs/cs/encryption/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/cs/encryption/</guid>
-      <description>GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
-    </item>
-    
-    <item>
       <title>压缩</title>
       <link>https://kaizhang91.github.io/notes/docs/cs/compress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -277,6 +268,16 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <guid>https://kaizhang91.github.io/notes/docs/visual/image/</guid>
       <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     Adobe Photoshop 2020 安装 请参考 https://www.isharepc.com/20181.html。
 目录  文件格式 压缩  JPG  jpegoptim   Adobe Photoshop 2020  安装    </description>
+    </item>
+    
+    <item>
+      <title>安全</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/security/</guid>
+      <description>SSH FAQ pam_access(sshd:account): access denied for user 请修改 /etc/security/access.conf 配置。
+GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  SSH  FAQ  pam_access(sshd:account): access denied for user   GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
     </item>
     
     <item>
