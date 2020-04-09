@@ -16,6 +16,7 @@ headless: true
   - [OAuth 2]({{< relref "/docs/cs/oauth2" >}})
   - [压缩]({{< relref "/docs/cs/compress" >}})
   - [加密]({{< relref "/docs/cs/encryption" >}})
+  - [部署]({{< relref "/docs/cs/deploy" >}})
 - **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})
