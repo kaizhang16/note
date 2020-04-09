@@ -41,8 +41,5 @@ headless: true
   - [构建]({{< relref "/docs/tools/build" >}})
   - [Linux]({{< relref "/docs/tools/linux" >}})
   - [Docker]({{< relref "/docs/tools/docker" >}})
-  - [curl]({{< relref "/docs/tools/curl" >}})
-  - [NGINX]({{< relref "/docs/tools/nginx" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
-  - [API]({{< relref "/docs/tools/api" >}})
   - [Word]({{< relref "/docs/tools/word" >}})

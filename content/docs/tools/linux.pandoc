@@ -27,22 +27,6 @@ rsync --info=progress2 -rh ${source} ${dest}
 rsync -Pav -e "ssh -i $HOME/.ssh/somekey" username@hostname:/from/dir/ /to/dir/
 ```
 
-# 网络
-
-## curl
-
-### 上传时显示进度条[@curlUploadProgress]
-
-```sh
-curl ... | tee /dev/null
-```
-
-### urlencode 参数[@curlUrlEncode]
-
-```sh
-curl ... --data-urlencode "paramName=value"
-```
-
 # 终端
 
 ## tmux
