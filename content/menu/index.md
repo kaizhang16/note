@@ -6,6 +6,7 @@ headless: true
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
   - [图像]({{< relref "/docs/visual/image" >}})
+  - [视频]({{< relref "/docs/visual/video" >}})
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
   - [数据类型]({{< relref "/docs/cs/types" >}})
@@ -13,6 +14,8 @@ headless: true
   - [数据库]({{< relref "/docs/cs/database" >}})
   - [HTTP]({{< relref "/docs/cs/http" >}})
   - [OAuth 2]({{< relref "/docs/cs/oauth2" >}})
+  - [压缩]({{< relref "/docs/cs/compress" >}})
+  - [加密]({{< relref "/docs/cs/encryption" >}})
 - **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})
@@ -38,11 +41,8 @@ headless: true
   - [构建]({{< relref "/docs/tools/build" >}})
   - [Linux]({{< relref "/docs/tools/linux" >}})
   - [Docker]({{< relref "/docs/tools/docker" >}})
-  - [压缩]({{< relref "/docs/tools/compress" >}})
-  - [加密]({{< relref "/docs/tools/encryption" >}})
   - [curl]({{< relref "/docs/tools/curl" >}})
   - [NGINX]({{< relref "/docs/tools/nginx" >}})
-  - [视频]({{< relref "/docs/tools/video" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
   - [API]({{< relref "/docs/tools/api" >}})
   - [Word]({{< relref "/docs/tools/word" >}})
