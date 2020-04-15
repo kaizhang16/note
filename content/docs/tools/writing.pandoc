@@ -4,6 +4,15 @@ title: 写作
 
 # Pandoc
 
+## 安装
+
+```sh
+nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc
+nix-env -iA nixpkgs.haskellPackages.pandoc-crossref
+```
+
+## 打印默认模板
+
 ```sh
 pandoc --print-default-template=html
 ```
