@@ -8,7 +8,7 @@
 <meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/database/" />
-<meta property="article:modified_time" content="2020-04-18T19:21:55+08:00" />
+<meta property="article:modified_time" content="2020-04-18T20:06:24+08:00" />
 <title>数据库 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.3f3317de8742e2d5cba9ac5de793024d2b5439577f3175f0d88201e387cd950d.js" integrity="sha256-PzMX3odC4tXLqaxd55MCTStUOVd/MXXw2IIB44fNlQ0="></script>
+<script defer src="/notes/cn.search.min.c830da3cdf498ee2a9f2ccf9667d0fb63e22abc283db4ad0cce78bb7bed94c8f.js" integrity="sha256-yDDaPN9JjuKp8sz5Zn0Ptj4iq8KD20rQzOeLt77ZTI8="></script>
 
 <!--
 Made with Book Theme
@@ -278,9 +278,6 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="常用-sql-命令">常用 SQL 命令</h2>
-<h3 id="删除数据库">删除数据库</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">DROP</span> <span class="kw">DATABASE</span> <span class="op">&lt;</span><span class="kw">database</span><span class="op">&gt;</span>;</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-sqlTableNameSingular">
@@ -313,10 +310,6 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#创建数据库">创建数据库</a></li>
   <li><a href="#数据类型postgresdatatypes">数据类型<span class="citation" data-cites="postgresDataTypes"><sup>[<span>3</span>]</sup></span></a></li>
   <li><a href="#psql-指令">psql 指令</a></li>
-  <li><a href="#常用-sql-命令">常用 SQL 命令</a>
-  <ul>
-  <li><a href="#删除数据库">删除数据库</a></li>
-  </ul></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -333,9 +326,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/56d20b68d16731291089b48fa5b4b12af825640e" title='最后修改者 Kai Zhang | 2020-04-18 19:21:55 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/da194f1a2474204f7d554ac72d3f8a6b872ba194" title='最后修改者 Kai Zhang | 2020-04-18 20:06:24 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-18 19:21:55 &#43;0800</span>
+      <span>2020-04-18 20:06:24 &#43;0800</span>
     </a>
   </div>
 
