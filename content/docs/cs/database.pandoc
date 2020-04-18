@@ -80,12 +80,4 @@ createdb <name>
 
 : psql 指令 {#tbl:psqlCommands}
 
-## 常用 SQL 命令
-
-### 删除数据库
-
-```sql
-DROP DATABASE <database>;
-```
-
 # 参考文献
