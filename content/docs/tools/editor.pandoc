@@ -36,6 +36,12 @@ pip install --user cmake_format
 :CocInstall coc-rls
 ```
 
+| 编程语言 | lsp-server         |
+|----------|--------------------|
+| `dhall`  | `dhall-lsp-server` |
+
+: lsp-server {#tbl:lsp_server}
+
 ## 打开文件
 
 ```sh
@@ -62,6 +68,8 @@ nvim $(fzf)
 : Vim 快捷键 {#tbl:vimShotcuts}
 
 > - `noremap` 指 non-recursive map[@vimNoremap]
+> - `map` 指 recursive map[@vimNoremap]
+> - `nmap` 指 normal 模式下的 recursive map[@vimNoremap]
 
 # Visual Studio Code
 
