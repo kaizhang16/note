@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="编辑器"><meta property="og:title" content="编辑器" />
-<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 命令  表 2: Vim 命令  命令 含义    :bd 关闭当前 buffer[1]  :mkspell!" />
+<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  快捷键 含义    &lt;Leader&gt;f &#43; Ctrl-x 搜索文件并水平分割窗口打开  &lt;Leader&gt;q 关闭 buffer  &lt;Leader&gt;tf :NERDTreeFind  &lt;Leader&gt;tq :NERDTreeClose  &lt;Leader&gt;= :TableModeToggle  zg 标记为 good word  zr 更新 spell 二进制       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   命令  表 3: Vim 命令  命令 含义    :bd 关闭当前 buffer[2]  :mkspell!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/editor/" />
-<meta property="article:modified_time" content="2020-04-18T19:21:55+08:00" />
+<meta property="article:modified_time" content="2020-04-18T20:00:39+08:00" />
 <title>编辑器 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.b90a3bcd55dc2e601b2ec49a3e187990fd51d6accfde26d26b5f428187ad908f.js" integrity="sha256-uQo7zVXcLmAbLsSaPhh5kP1R1qzP3ibSa19CgYetkI8="></script>
+<script defer src="/notes/cn.search.min.3f3317de8742e2d5cba9ac5de793024d2b5439577f3175f0d88201e387cd950d.js" integrity="sha256-PzMX3odC4tXLqaxd55MCTStUOVd/MXXw2IIB44fNlQ0="></script>
 
 <!--
 Made with Book Theme
@@ -181,7 +181,10 @@ https://github.com/alex-shpak/hugo-book
 :PlugUpdate   &quot; 升级插件
 :PlugUpgrade  &quot; 升级 plug</code></pre>
 <h3 id="安装依赖的二进制">安装依赖的二进制</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
+<h4 id="rust">rust</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
+<h4 id="cmake">cmake</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
 <h3 id="coc">coc</h3>
 <pre class="vim"><code>:CocInstall coc-clangd
 :CocInstall coc-flutter
@@ -205,11 +208,60 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="打开文件">打开文件</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<h2 id="快捷键">快捷键</h2>
+<div id="tbl:vimShotcuts">
+<table>
+<caption>表 2: Vim 快捷键</caption>
+<thead>
+<tr class="header">
+<th>快捷键</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;Leader&gt;f</code> + <code>Ctrl-x</code></td>
+<td>搜索文件并水平分割窗口打开</td>
+</tr>
+<tr class="even">
+<td><code>&lt;Leader&gt;q</code></td>
+<td>关闭 buffer</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;Leader&gt;tf</code></td>
+<td><code>:NERDTreeFind</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;Leader&gt;tq</code></td>
+<td><code>:NERDTreeClose</code></td>
+</tr>
+<tr class="odd">
+<td><code>&lt;Leader&gt;=</code></td>
+<td><code>:TableModeToggle</code></td>
+</tr>
+<tr class="even">
+<td><code>zg</code></td>
+<td>标记为 good word</td>
+</tr>
+<tr class="odd">
+<td><code>zr</code></td>
+<td>更新 spell 二进制</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<ul>
+<li><code>noremap</code> 指 non-recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
+<li><code>map</code> 指 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
+<li><code>nmap</code> 指 normal 模式下的 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
+</ul>
+</blockquote>
 <h2 id="命令">命令</h2>
 <div id="tbl:vimCommands">
 <table>
-<caption>表 2: Vim 命令</caption>
+<caption>表 3: Vim 命令</caption>
 <thead>
 <tr class="header">
 <th>命令</th>
@@ -219,48 +271,15 @@ https://github.com/alex-shpak/hugo-book
 <tbody>
 <tr class="odd">
 <td><code>:bd</code></td>
-<td>关闭当前 buffer<span class="citation" data-cites="vimCloseBuffer"><sup>[<a href="#ref-vimCloseBuffer" role="doc-biblioref">1</a>]</sup></span></td>
+<td>关闭当前 buffer<span class="citation" data-cites="vimCloseBuffer"><sup>[<a href="#ref-vimCloseBuffer" role="doc-biblioref">2</a>]</sup></span></td>
 </tr>
 <tr class="even">
 <td><code>:mkspell! %</code></td>
-<td>更新 spell 文件</td>
+<td>更新 spell 二进制</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="快捷键">快捷键</h2>
-<div id="tbl:vimShotcuts">
-<table>
-<caption>表 3: Vim 快捷键</caption>
-<thead>
-<tr class="header">
-<th>快捷键</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>&lt;Leader&gt;f-Ctrl-x</code></td>
-<td>搜索文件并水平分割窗口打开</td>
-</tr>
-<tr class="even">
-<td><code>&lt;Leader&gt;t</code></td>
-<td>:NERDTreeFind</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;Leader&gt;=</code></td>
-<td>:TableModeToggle</td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<ul>
-<li><code>noremap</code> 指 non-recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">2</a>]</sup></span></li>
-<li><code>map</code> 指 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">2</a>]</sup></span></li>
-<li><code>nmap</code> 指 normal 模式下的 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">2</a>]</sup></span></li>
-</ul>
-</blockquote>
 <h1 id="visual-studio-code">Visual Studio Code</h1>
 <h2 id="快捷键-1">快捷键</h2>
 <table>
@@ -309,11 +328,11 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="菜单字体">菜单字体</h3>
 <p><code>File</code> -&gt; <code>Settings</code> -&gt; <code>Appearance &amp; Behavior</code> -&gt; <code>Appearance</code>。</p>
 <div id="refs" class="references" role="doc-bibliography">
-<div id="ref-vimCloseBuffer">
-<p>[1] HHH. How do I close a single buffer (out of many) in Vim?[EB/OL](2009–09–04). <a href="https://stackoverflow.com/a/1381652">https://stackoverflow.com/a/1381652</a>.</p>
-</div>
 <div id="ref-vimNoremap">
-<p>[2] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). <a href="https://stackoverflow.com/a/3776182">https://stackoverflow.com/a/3776182</a>.</p>
+<p>[1] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). <a href="https://stackoverflow.com/a/3776182">https://stackoverflow.com/a/3776182</a>.</p>
+</div>
+<div id="ref-vimCloseBuffer">
+<p>[2] HHH. How do I close a single buffer (out of many) in Vim?[EB/OL](2009–09–04). <a href="https://stackoverflow.com/a/1381652">https://stackoverflow.com/a/1381652</a>.</p>
 </div>
 </div>
 
@@ -330,8 +349,8 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#coc">coc</a></li>
   </ul></li>
   <li><a href="#打开文件">打开文件</a></li>
-  <li><a href="#命令">命令</a></li>
   <li><a href="#快捷键">快捷键</a></li>
+  <li><a href="#命令">命令</a></li>
   </ul></li>
   <li><a href="#visual-studio-code">Visual Studio Code</a>
   <ul>
@@ -360,9 +379,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/56d20b68d16731291089b48fa5b4b12af825640e" title='最后修改者 Kai Zhang | 2020-04-18 19:21:55 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/1e6db5d192c6e9be8cc669833a47d833ab982e89" title='最后修改者 Kai Zhang | 2020-04-18 20:00:39 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-18 19:21:55 &#43;0800</span>
+      <span>2020-04-18 20:00:39 &#43;0800</span>
     </a>
   </div>
 
