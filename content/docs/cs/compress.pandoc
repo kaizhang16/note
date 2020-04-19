@@ -16,4 +16,12 @@ tar --exclude='./folder1' --exclude='./folder2' -czvf filename.tar.gz .
 tar -tvf filename.tar.gz
 ```
 
+# 7z
+
+## 安装
+
+```sh
+nix-env -iA nixpkgs.p7zip
+```
+
 # 参考文献
