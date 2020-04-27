@@ -8,7 +8,7 @@
 <meta property="og:description" content="Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/deploy/" />
-<meta property="article:modified_time" content="2020-04-09T13:00:19+00:00" />
+<meta property="article:modified_time" content="2020-04-27T12:58:34+00:00" />
 <title>部署 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.f068b20ae1239d87cf599a9894eaf2617a3f016dad2e16c992cb2c448046b618.js" integrity="sha256-8GiyCuEjnYfPWZqYlOryYXo/AW2tLhbJksssRIBGthg="></script>
+<script defer src="/notes/cn.search.min.f4df8191c2ff81f0016ec75ec7e2201e94e3f59c3c4d10a6ab227fdf444ab763.js" integrity="sha256-9N&#43;BkcL/gfABbsdex&#43;IgHpTj9Zw8TRCmqyJ/30RKt2M="></script>
 
 <!--
 Made with Book Theme
@@ -78,6 +78,8 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>计算机科学</strong>
 <ul>
 <li><a href="/notes/docs/cs/security/">安全</a></li>
+<li><a href="/notes/docs/cs/network/">网络</a></li>
+<li><a href="/notes/docs/cs/transmission/">传输</a></li>
 <li><a href="/notes/docs/cs/types/">数据类型</a></li>
 <li><a href="/notes/docs/cs/linux/">Linux</a></li>
 <li><a href="/notes/docs/cs/database/">数据库</a></li>
@@ -104,6 +106,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
 <li><a href="/notes/docs/program/html/">HTML</a></li>
+<li><a href="/notes/docs/program/jinja/">Jinja</a></li>
 </ul>
 </li>
 <li><strong>工具</strong>
@@ -117,6 +120,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
 <li><a href="/notes/docs/tools/format/">格式</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
+<li><a href="/notes/docs/tools/project-management/">项目管理</a></li>
 </ul>
 </li>
 </ul>
@@ -173,7 +177,7 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown"><h1 id="ansible">Ansible</h1>
 <h2 id="安装">安装</h2>
-<div id="tbl:installAnsible">
+<div id="tbl:ansible_install">
 <table>
 <caption>表 1: 安装 ansible</caption>
 <thead>
@@ -223,11 +227,54 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-30"><a href="#cb1-30"></a>    <span class="ex">webtier/</span></span>
 <span id="cb1-31"><a href="#cb1-31"></a>    <span class="ex">monitoring/</span></span>
 <span id="cb1-32"><a href="#cb1-32"></a>    <span class="ex">fooapp/</span></span></code></pre></div>
+<h2 id="依赖">依赖</h2>
+<p><code>meta/main.yml</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre></div>
+<h2 id="嵌套循环">嵌套循环</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># main.yml</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">-</span><span class="at"> </span><span class="fu">include_tasks</span><span class="kw">:</span><span class="at"> inner.yml</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="at">  </span><span class="fu">loop_control</span><span class="kw">:</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="at">    </span><span class="fu">loop_var</span><span class="kw">:</span><span class="at"> outer_item</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co"># inner.yml</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="kw">-</span><span class="at"> </span><span class="fu">debug</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="at">    </span><span class="fu">msg</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;outer item={{ outer_item }} inner item={{ item }}&quot;</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="at">    </span><span class="kw">-</span><span class="at"> a</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="at">    </span><span class="kw">-</span><span class="at"> b</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="at">    </span><span class="kw">-</span><span class="at"> c</span></span></code></pre></div>
+<h2 id="自定义-ssh-端口">自定义 ssh 端口</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">[webservers]</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="dt">web01.somedomain.com ansible_port</span><span class="ot">=</span><span class="dv">1234</span></span></code></pre></div>
 <h2 id="ansible-vault">Ansible Vault</h2>
+<h1 id="systemd">systemd</h1>
+<h2 id="文件目录">文件目录</h2>
+<p>请放在 <code>/etc/systemd/system/</code> 下面。<span class="citation" data-cites="systemd_dir"><sup>[<a href="#ref-systemd_dir" role="doc-biblioref">2</a>]</sup></span></p>
+<h2 id="查看-mount-的转义路径">查看 mount 的转义路径</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">systemd-escape</span> -p --suffix=mount <span class="st">&quot;/tmp//waldi/foobar/&quot;</span></span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-ansibleDirectoryLayout">
 <p>[1] ANSIBLE. Alternative Directory Layout[EB/OL]([日期不详]). <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout">https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout</a>.</p>
+</div>
+<div id="ref-systemd_dir">
+<p>[2] KOMAR J. Where do I put my systemd unit file?[EB/OL](2017–05–25). <a href="https://unix.stackexchange.com/a/367237">https://unix.stackexchange.com/a/367237</a>.</p>
 </div>
 </div>
 
@@ -238,7 +285,15 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#安装">安装</a></li>
   <li><a href="#目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#依赖">依赖</a></li>
+  <li><a href="#嵌套循环">嵌套循环</a></li>
+  <li><a href="#自定义-ssh-端口">自定义 ssh 端口</a></li>
   <li><a href="#ansible-vault">Ansible Vault</a></li>
+  </ul></li>
+  <li><a href="#systemd">systemd</a>
+  <ul>
+  <li><a href="#文件目录">文件目录</a></li>
+  <li><a href="#查看-mount-的转义路径">查看 mount 的转义路径</a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -255,9 +310,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/13d46cc201c14981b3c9a8b79049bd0b9bab957d" title='最后修改者 Kai Zhang | 2020-04-09 21:00:19 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf88e1004241a99999b2d249e280bcda12371d02" title='最后修改者 Kai Zhang | 2020-04-27 20:58:34 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-09 21:00:19 &#43;0800</span>
+      <span>2020-04-27 20:58:34 &#43;0800</span>
     </a>
   </div>
 

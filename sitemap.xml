@@ -28,7 +28,7 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/</loc>
-    <lastmod>2020-04-19T05:10:32+00:00</lastmod>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>
@@ -43,7 +43,7 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/tools/git/</loc>
-    <lastmod>2020-04-09T13:00:19+00:00</lastmod>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>
@@ -58,12 +58,17 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/cs/http/</loc>
-    <lastmod>2020-04-09T08:21:41+00:00</lastmod>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/program/js/</loc>
     <lastmod>2020-03-07T14:21:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/docs/program/jinja/</loc>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>
@@ -126,6 +131,11 @@
   </url>
   
   <url>
+    <loc>https://kaizhang91.github.io/notes/docs/cs/transmission/</loc>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kaizhang91.github.io/notes/docs/tools/writing/</loc>
     <lastmod>2020-04-15T08:05:50+00:00</lastmod>
   </url>
@@ -137,7 +147,7 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/visual/image/</loc>
-    <lastmod>2020-04-06T01:38:10+08:00</lastmod>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>
@@ -182,7 +192,12 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/tools/editor/</loc>
-    <lastmod>2020-04-19T00:07:42+08:00</lastmod>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/docs/cs/network/</loc>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>
@@ -192,7 +207,12 @@
   
   <url>
     <loc>https://kaizhang91.github.io/notes/docs/cs/deploy/</loc>
-    <lastmod>2020-04-09T13:00:19+00:00</lastmod>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/docs/tools/project-management/</loc>
+    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
   </url>
   
   <url>

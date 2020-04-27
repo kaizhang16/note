@@ -73,7 +73,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/git/</guid>
-      <description>diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
+      <description>diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git 删除 submodule[1] git rm &amp;lt;submodule path&amp;gt; 参考文献 [1] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). https://git-scm.com/docs/gitsubmodules.
   目录  diff  安装 delta  Git Submodule  下载 submodule 更新 url 删除 submodule[1]  参考文献   </description>
     </item>
     
@@ -116,6 +116,15 @@ NGINX 编译安装  推荐安装 mainline 版本[2]。
       <description>字符串拼接[1] 要使用 + 而不是 string.concat()。
 Array flatMap[2] 等价于先 map() 再 flat()。
 let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&amp;gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&amp;gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window.</description>
+    </item>
+    
+    <item>
+      <title>Jinja</title>
+      <link>https://kaizhang91.github.io/notes/docs/program/jinja/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/program/jinja/</guid>
+      <description>for 循环 {% for item in navigation %} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ item.href }}&amp;quot;&amp;gt;{{ item.caption }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% endfor %} 目录  for 循环   </description>
     </item>
     
     <item>
@@ -231,6 +240,21 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     </item>
     
     <item>
+      <title>传输</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/transmission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/transmission/</guid>
+      <description>SSH Secure Shell。
+只让某些用户使用密码登录 PasswordAuthentication no Match User &amp;lt;username&amp;gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
+ SFTP SSH File Transfer Protocol。
+常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put /*.mp4 / -r，递归  下载 put /*.mp4 / -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+vsftpd Very Secure FTP Daemon。
+只允许某些用户访问[2] /etc/vsftpd.conf:
+userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd.</description>
+    </item>
+    
+    <item>
       <title>写作</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/writing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -257,8 +281,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/visual/image/</guid>
-      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     Adobe Photoshop 2020 安装 请参考 https://www.isharepc.com/20181.html。
-目录  文件格式 压缩  JPG  jpegoptim   Adobe Photoshop 2020  安装    </description>
+      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .. CC=/usr/bin/gcc CXX=/usr/bin/g++ make sudo make install Adobe Photoshop 2020 安装 请参考 https://www.</description>
     </item>
     
     <item>
@@ -351,7 +374,16 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &amp;lt;Leader&amp;gt;f + Ctrl-x  Buffer：关闭 buffer &amp;lt;Leader&amp;gt;q  文件树：:NERDTreeFind &amp;lt;Leader&amp;gt;tf  文件树：:NERDTreeClose &amp;lt;Leader&amp;gt;tq  表格：:TableModeToggle &amp;lt;Leader&amp;gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands    插件  Visual Studio Code 插件  插件 ID 用途    streetsidesoftware.</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &amp;lt;Leader&amp;gt;f + Ctrl-x  Buffer：关闭 buffer &amp;lt;Leader&amp;gt;q  文件树：:NERDTreeFind &amp;lt;Leader&amp;gt;tf  文件树：:NERDTreeClose &amp;lt;Leader&amp;gt;tq  表格：:TableModeToggle &amp;lt;Leader&amp;gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands    插件  Visual Studio Code 插件  插件 ID 用途    streetsidesoftware.</description>
+    </item>
+    
+    <item>
+      <title>网络</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/network/</guid>
+      <description>iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &amp;lt;rule_number&amp;gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    </description>
     </item>
     
     <item>
@@ -370,6 +402,16 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/deploy/</guid>
       <description>Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
+    </item>
+    
+    <item>
+      <title>项目管理</title>
+      <link>https://kaizhang91.github.io/notes/docs/tools/project-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/tools/project-management/</guid>
+      <description>confluence 新建子页面 创建页面 -&amp;gt; 创建页面。
+目录  confluence  新建子页面    </description>
     </item>
     
   </channel>

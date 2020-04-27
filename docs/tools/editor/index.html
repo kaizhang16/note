@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="编辑器"><meta property="og:title" content="编辑器" />
-<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands    插件  Visual Studio Code 插件  插件 ID 用途    streetsidesoftware." />
+<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands    插件  Visual Studio Code 插件  插件 ID 用途    streetsidesoftware." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/editor/" />
-<meta property="article:modified_time" content="2020-04-19T00:07:42+08:00" />
+<meta property="article:modified_time" content="2020-04-27T12:58:34+00:00" />
 <title>编辑器 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.f068b20ae1239d87cf599a9894eaf2617a3f016dad2e16c992cb2c448046b618.js" integrity="sha256-8GiyCuEjnYfPWZqYlOryYXo/AW2tLhbJksssRIBGthg="></script>
+<script defer src="/notes/cn.search.min.f4df8191c2ff81f0016ec75ec7e2201e94e3f59c3c4d10a6ab227fdf444ab763.js" integrity="sha256-9N&#43;BkcL/gfABbsdex&#43;IgHpTj9Zw8TRCmqyJ/30RKt2M="></script>
 
 <!--
 Made with Book Theme
@@ -78,6 +78,8 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>计算机科学</strong>
 <ul>
 <li><a href="/notes/docs/cs/security/">安全</a></li>
+<li><a href="/notes/docs/cs/network/">网络</a></li>
+<li><a href="/notes/docs/cs/transmission/">传输</a></li>
 <li><a href="/notes/docs/cs/types/">数据类型</a></li>
 <li><a href="/notes/docs/cs/linux/">Linux</a></li>
 <li><a href="/notes/docs/cs/database/">数据库</a></li>
@@ -104,6 +106,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
 <li><a href="/notes/docs/program/html/">HTML</a></li>
+<li><a href="/notes/docs/program/jinja/">Jinja</a></li>
 </ul>
 </li>
 <li><strong>工具</strong>
@@ -117,6 +120,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/linux/">Linux</a></li>
 <li><a href="/notes/docs/tools/format/">格式</a></li>
 <li><a href="/notes/docs/tools/word/">Word</a></li>
+<li><a href="/notes/docs/tools/project-management/">项目管理</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +214,7 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="打开文件">打开文件</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h2 id="快捷键">快捷键</h2>
-<div id="tbl:vimShotcuts">
+<div id="tbl:vim_shotcuts">
 <table>
 <caption>表 2: Vim 快捷键</caption>
 <thead>
@@ -270,6 +274,28 @@ https://github.com/alex-shpak/hugo-book
 <li><code>nmap</code> 指 normal 模式下的 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
 </ul>
 </blockquote>
+<h2 id="寄存器">寄存器</h2>
+<div id="tbl:vim_registers">
+<table>
+<caption>表 3: Vim 寄存器</caption>
+<thead>
+<tr class="header">
+<th>变量</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>%</code></td>
+<td>当前文件的路径</td>
+</tr>
+<tr class="even">
+<td><code>#</code></td>
+<td>上一个文件的路径</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h1 id="visual-studio-code">Visual Studio Code</h1>
 <h2 id="快捷键-1">快捷键</h2>
 <table>
@@ -337,6 +363,7 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#打开文件">打开文件</a></li>
   <li><a href="#快捷键">快捷键</a></li>
+  <li><a href="#寄存器">寄存器</a></li>
   </ul></li>
   <li><a href="#visual-studio-code">Visual Studio Code</a>
   <ul>
@@ -365,9 +392,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ed2c0e6aea11c90fbe0601fec92485a75bdc1873" title='最后修改者 Kai Zhang | 2020-04-19 00:07:42 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf88e1004241a99999b2d249e280bcda12371d02" title='最后修改者 Kai Zhang | 2020-04-27 20:58:34 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-19 00:07:42 &#43;0800</span>
+      <span>2020-04-27 20:58:34 &#43;0800</span>
     </a>
   </div>
 

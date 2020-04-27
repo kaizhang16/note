@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="压缩"><meta property="og:title" content="压缩" />
-<meta property="og:description" content="tar 打包时排除某些目录[1] tar --exclude=&#39;./folder1&#39; --exclude=&#39;./folder2&#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 7z 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
-  目录  tar  打包时排除某些目录[1] 查看压缩包内容  7z  安装  参考文献   " />
+<meta name="description" content="传输"><meta property="og:title" content="传输" />
+<meta property="og:description" content="SSH Secure Shell。
+只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
+ SFTP SSH File Transfer Protocol。
+常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put /*.mp4 / -r，递归  下载 put /*.mp4 / -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+vsftpd Very Secure FTP Daemon。
+只允许某些用户访问[2] /etc/vsftpd.conf:
+userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/compress/" />
-<meta property="article:modified_time" content="2020-04-19T05:10:32+00:00" />
-<title>压缩 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/transmission/" />
+<meta property="article:modified_time" content="2020-04-27T12:58:34+00:00" />
+<title>传输 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -80,13 +85,13 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/cs/security/">安全</a></li>
 <li><a href="/notes/docs/cs/network/">网络</a></li>
-<li><a href="/notes/docs/cs/transmission/">传输</a></li>
+<li><a href="/notes/docs/cs/transmission/"class=active>传输</a></li>
 <li><a href="/notes/docs/cs/types/">数据类型</a></li>
 <li><a href="/notes/docs/cs/linux/">Linux</a></li>
 <li><a href="/notes/docs/cs/database/">数据库</a></li>
 <li><a href="/notes/docs/cs/http/">HTTP</a></li>
 <li><a href="/notes/docs/cs/oauth2/">OAuth 2</a></li>
-<li><a href="/notes/docs/cs/compress/"class=active>压缩</a></li>
+<li><a href="/notes/docs/cs/compress/">压缩</a></li>
 <li><a href="/notes/docs/cs/deploy/">部署</a></li>
 </ul>
 </li>
@@ -154,7 +159,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>压缩</strong>
+  <strong>传输</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -176,34 +181,96 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="tar">tar</h1>
-<h2 id="打包时排除某些目录tarexclude">打包时排除某些目录<span class="citation" data-cites="tarExclude"><sup>[<a href="#ref-tarExclude" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">tar</span> --exclude=<span class="st">&#39;./folder1&#39;</span> --exclude=<span class="st">&#39;./folder2&#39;</span> -czvf filename.tar.gz .</span></code></pre></div>
-<h2 id="查看压缩包内容">查看压缩包内容</h2>
-<pre><code>tar -tvf filename.tar.gz</code></pre>
-<h1 id="z">7z</h1>
-<h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">nix-env</span> -iA nixpkgs.p7zip</span></code></pre></div>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<article class="markdown"><h1 id="ssh">SSH</h1>
+<p>Secure Shell。</p>
+<h2 id="只让某些用户使用密码登录">只让某些用户使用密码登录</h2>
+<pre class="ssh"><code>PasswordAuthentication no
+
+Match User &lt;username&gt;
+    PasswordAuthentication yes</code></pre>
+<blockquote>
+<p><code>Match</code> 在遇到下一个 <code>Match</code> 前一直有效，与缩进无关。</p>
+</blockquote>
+<h1 id="sftp">SFTP</h1>
+<p>SSH File Transfer Protocol。</p>
+<h2 id="常见命令">常见命令</h2>
+<div id="tbl:SFTP_commands">
+<table>
+<caption>表 1: SFTP 常见命令</caption>
+<thead>
+<tr class="header">
+<th>功能</th>
+<th>命令</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>上传</td>
+<td>put <local_dir>/*.mp4 <remote_dir>/</td>
+<td><code>-r</code>，递归</td>
+</tr>
+<tr class="even">
+<td>下载</td>
+<td>put <remote_dir>/*.mp4 <local_dir>/</td>
+<td><code>-r</code>，递归</td>
+</tr>
+<tr class="odd">
+<td>移动文件</td>
+<td><code>rename</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="internal-sftp-vs-sftp-server">internal-sftp vs sftp-server</h2>
+<p>推荐使用 internal-sftp。<span class="citation" data-cites="sftp_internal_vs_server"><sup>[<a href="#ref-sftp_internal_vs_server" role="doc-biblioref">1</a>]</sup></span></p>
+<h1 id="vsftpd">vsftpd</h1>
+<p>Very Secure FTP Daemon。</p>
+<h2 id="只允许某些用户访问vsftpd_allow_centain_users">只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<a href="#ref-vsftpd_allow_centain_users" role="doc-biblioref">2</a>]</sup></span></h2>
+<p><code>/etc/vsftpd.conf</code>:</p>
+<pre class="conf"><code>userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO</code></pre>
+<h2 id="invalidargumentvsftpd_invalid_argument">INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<a href="#ref-vsftpd_invalid_argument" role="doc-biblioref">3</a>]</sup></span></h2>
+<p><code>/etc/vsftpd.conf</code>:</p>
+<pre class="conf"><code>listen=YES</code></pre>
+<h2 id="login-incorrectvsftpd_530">530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<a href="#ref-vsftpd_530" role="doc-biblioref">4</a>]</sup></span></h2>
+<p><code>/etc/vsftpd.conf</code>:</p>
+<pre class="conf"><code>pam_service_name=ftp</code></pre>
 <div id="refs" class="references" role="doc-bibliography">
-<div id="ref-tarExclude">
-<p>[1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). <a href="https://stackoverflow.com/a/984259">https://stackoverflow.com/a/984259</a>.</p>
+<div id="ref-sftp_internal_vs_server">
+<p>[1] PRIKRYL M. OpenSSH: Difference between internal-sftp and sftp-server[EB/OL](2015–01–17). <a href="https://serverfault.com/a/660325">https://serverfault.com/a/660325</a>.</p>
+</div>
+<div id="ref-vsftpd_allow_centain_users">
+<p>[2] MARK. vsftpd: allow access only for certain users[EB/OL](2011–03–06). <a href="https://serverfault.com/a/243821">https://serverfault.com/a/243821</a>.</p>
+</div>
+<div id="ref-vsftpd_invalid_argument">
+<p>[3] JACK S. vsftpd-cannot read config file even when file exists[EB/OL](2016–09–15). <a href="https://askubuntu.com/a/825114">https://askubuntu.com/a/825114</a>.</p>
+</div>
+<div id="ref-vsftpd_530">
+<p>[4] AZKERM. vsftpd: 530 Login incorrect[EB/OL](2014–01–31). <a href="https://askubuntu.com/a/413694">https://askubuntu.com/a/413694</a>.</p>
 </div>
 </div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#tar">tar</a>
+  <li><a href="#ssh">SSH</a>
   <ul>
-  <li><a href="#打包时排除某些目录tarexclude">打包时排除某些目录<span class="citation" data-cites="tarExclude"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#查看压缩包内容">查看压缩包内容</a></li>
+  <li><a href="#只让某些用户使用密码登录">只让某些用户使用密码登录</a></li>
   </ul></li>
-  <li><a href="#z">7z</a>
+  <li><a href="#sftp">SFTP</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
+  <li><a href="#常见命令">常见命令</a></li>
+  <li><a href="#internal-sftp-vs-sftp-server">internal-sftp vs sftp-server</a></li>
   </ul></li>
-  <li><a href="#参考文献">参考文献</a></li>
+  <li><a href="#vsftpd">vsftpd</a>
+  <ul>
+  <li><a href="#只允许某些用户访问vsftpd_allow_centain_users">只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#invalidargumentvsftpd_invalid_argument">INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#login-incorrectvsftpd_530">530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<span>4</span>]</sup></span></a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -218,9 +285,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4408e73fea1230b666192e0c57b7799651c40d7d" title='最后修改者 Kai Zhang | 2020-04-19 13:10:32 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf88e1004241a99999b2d249e280bcda12371d02" title='最后修改者 Kai Zhang | 2020-04-27 20:58:34 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-19 13:10:32 &#43;0800</span>
+      <span>2020-04-27 20:58:34 &#43;0800</span>
     </a>
   </div>
 
