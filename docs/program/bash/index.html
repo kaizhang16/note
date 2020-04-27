@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Bash"><meta property="og:title" content="Bash" />
-<meta property="og:description" content="颜色[1]  表 1: 终端颜色转义码列表  颜色 转义码    正常 \e[0m  红色 \e[31m  绿色 \e[32m     状态码[2]  表 2: 状态码  状态码 含义    1 其他错误  2 使用 shell 内建命令出错  126 命令无法执行  127 命令未找到  128 无效的参数  130 取消     Heredoc cat &lt;&lt;END hello world END 备忘单 https://devhints.io/bash。
-参考文献 [1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详])." />
+<meta property="og:description" content="快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     IO 重定向 将 stderr 和 stdout 追加到同一个文件：
+cmd &gt;&gt;file.txt 2&gt;&amp;1 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     例子 $ test_file_path=&quot;/a/b." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/bash/" />
-<meta property="article:modified_time" content="2020-04-02T05:29:43+08:00" />
+<meta property="article:modified_time" content="2020-04-27T13:15:40+00:00" />
 <title>Bash | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.f4df8191c2ff81f0016ec75ec7e2201e94e3f59c3c4d10a6ab227fdf444ab763.js" integrity="sha256-9N&#43;BkcL/gfABbsdex&#43;IgHpTj9Zw8TRCmqyJ/30RKt2M="></script>
+<script defer src="/notes/cn.search.min.db106eb52c5668673595cbd6c4d1ff2cec8290a1cd1e849f0d80a0b19c9ac7ce.js" integrity="sha256-2xButSxWaGc1lcvWxNH/LOyCkKHNHoSfDYCgsZyax84="></script>
 
 <!--
 Made with Book Theme
@@ -176,10 +176,87 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
+<article class="markdown"><h1 id="快捷键">快捷键</h1>
+<div id="tbl:bash_shortcuts">
+<table>
+<caption>表 1: Bash 快捷键</caption>
+<thead>
+<tr class="header">
+<th>功能</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>将光标移动到行首</td>
+<td><code>Ctrl-a</code></td>
+</tr>
+<tr class="even">
+<td>将光标移动到行尾</td>
+<td><code>Ctrl-e</code></td>
+</tr>
+<tr class="odd">
+<td>将光标向前移动一个单词</td>
+<td><code>Alt-f</code></td>
+</tr>
+<tr class="even">
+<td>将光标向后移动一个单词</td>
+<td><code>Alt-b</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="io-重定向">IO 重定向</h1>
+<p>将 <code>stderr</code> 和 <code>stdout</code> 追加到同一个文件：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">cmd</span> <span class="op">&gt;&gt;</span>file.txt <span class="op">2&gt;&amp;1</span></span></code></pre></div>
+<h1 id="变量替换parameter-substitution">变量替换（Parameter Substitution）</h1>
+<div id="tbl:bash_parameter_substitution">
+<table>
+<caption>表 2: Bash 变量替换</caption>
+<thead>
+<tr class="header">
+<th>语法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>${#var}</code></td>
+<td>String length</td>
+</tr>
+<tr class="even">
+<td><code>${var#Pattern}</code></td>
+<td>从 <code>$var</code> 前面移除最短匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+<tr class="odd">
+<td><code>${var##Pattern}</code></td>
+<td>从 <code>$var</code> 前面移除最长匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+<tr class="even">
+<td><code>${var%Pattern}</code></td>
+<td>从 <code>$var</code> 后面移除最短匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+<tr class="odd">
+<td><code>${var%%Pattern}</code></td>
+<td>从 <code>$var</code> 后面移除最长匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="例子">例子</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a>$ <span class="va">test_file_path=</span><span class="st">&quot;/a/b.c&quot;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>$ <span class="bu">echo</span> <span class="va">${test_file_path##</span>*/<span class="va">}</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="ex">b.c</span></span></code></pre></div>
+<h1 id="heredoc">Heredoc</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">cat</span> <span class="op">&lt;&lt;END</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>hello world</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="op">END</span></span></code></pre></div>
+<h1 id="备忘单">备忘单</h1>
+<p><a href="https://devhints.io/bash" class="uri">https://devhints.io/bash</a>。</p>
+<h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
 <div id="tbl:ansiEscapeCode">
 <table>
-<caption>表 1: 终端颜色转义码列表</caption>
+<caption>表 3: 终端颜色转义码列表</caption>
 <thead>
 <tr class="header">
 <th>颜色</th>
@@ -205,7 +282,7 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<a href="#ref-bashExitCode" role="doc-biblioref">2</a>]</sup></span></h1>
 <div id="tbl:bashExitCode">
 <table>
-<caption>表 2: 状态码</caption>
+<caption>表 4: 状态码</caption>
 <thead>
 <tr class="header">
 <th>状态码</th>
@@ -240,12 +317,6 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="heredoc">Heredoc</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">cat</span> <span class="op">&lt;&lt;END</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>hello world</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="op">END</span></span></code></pre></div>
-<h1 id="备忘单">备忘单</h1>
-<p><a href="https://devhints.io/bash" class="uri">https://devhints.io/bash</a>。</p>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-ansiEscapeCode">
@@ -259,10 +330,16 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#快捷键">快捷键</a></li>
+  <li><a href="#io-重定向">IO 重定向</a></li>
+  <li><a href="#变量替换parameter-substitution">变量替换（Parameter Substitution）</a>
+  <ul>
+  <li><a href="#例子">例子</a></li>
+  </ul></li>
   <li><a href="#heredoc">Heredoc</a></li>
   <li><a href="#备忘单">备忘单</a></li>
+  <li><a href="#颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<span>2</span>]</sup></span></a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -278,9 +355,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7c91884fbf225baa727d6084482adf41cff8ed33" title='最后修改者 Kai Zhang | 2020-04-02 05:29:43 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/3139d464d36e5235e7ca2e5fe1b5ca835a2f037a" title='最后修改者 Kai Zhang | 2020-04-27 21:15:40 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 05:29:43 &#43;0800</span>
+      <span>2020-04-27 21:15:40 &#43;0800</span>
     </a>
   </div>
 
