@@ -2,6 +2,57 @@
 title: "Bash"
 ---
 
+# 快捷键
+
+| 功能                   | 快捷键   |
+|------------------------|----------|
+| 将光标移动到行首       | `Ctrl-a` |
+| 将光标移动到行尾       | `Ctrl-e` |
+| 将光标向前移动一个单词 | `Alt-f`  |
+| 将光标向后移动一个单词 | `Alt-b`  |
+
+: Bash 快捷键 {#tbl:bash_shortcuts}
+
+# IO 重定向
+
+将 `stderr` 和 `stdout` 追加到同一个文件：
+
+```sh
+cmd >>file.txt 2>&1
+```
+
+# 变量替换（Parameter Substitution）
+
+| 语法              | 含义                                         |
+|-------------------|----------------------------------------------|
+| `${#var}`         | String length                                |
+| `${var#Pattern}`  | 从 `$var` 前面移除最短匹配 `$Pattern` 的部分 |
+| `${var##Pattern}` | 从 `$var` 前面移除最长匹配 `$Pattern` 的部分 |
+| `${var%Pattern}`  | 从 `$var` 后面移除最短匹配 `$Pattern` 的部分 |
+| `${var%%Pattern}` | 从 `$var` 后面移除最长匹配 `$Pattern` 的部分 |
+
+: Bash 变量替换 {#tbl:bash_parameter_substitution}
+
+## 例子
+
+```bash
+$ test_file_path="/a/b.c"
+$ echo ${test_file_path##*/}
+b.c
+```
+
+# Heredoc
+
+```sh
+cat <<END
+hello world
+END
+```
+
+# 备忘单
+
+<https://devhints.io/bash>。
+
 # 颜色[@ansiEscapeCode]
 
 | 颜色 | 转义码   |
@@ -24,17 +75,5 @@ title: "Bash"
 | `130`  | 取消                    |
 
 : 状态码 {#tbl:bashExitCode}
-
-# Heredoc
-
-```sh
-cat <<END
-hello world
-END
-```
-
-# 备忘单
-
-<https://devhints.io/bash>。
 
 # 参考文献
