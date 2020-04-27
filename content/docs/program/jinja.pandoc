@@ -1,0 +1,11 @@
+---
+title: "Jinja"
+---
+
+# for 循环
+
+```j2
+{% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% endfor %}
+```

@@ -10,7 +10,7 @@ title: "部署"
 |----------|-------------------------------|
 | nix      | `nix-env -iA nixpkgs.ansible` |
 
-: 安装 ansible {#tbl:installAnsible}
+: 安装 ansible {#tbl:ansible_install}
 
 ## 目录结构[@ansibleDirectoryLayout]
 
@@ -49,6 +49,66 @@ roles/
     fooapp/
 ```
 
+## 依赖
+
+`meta/main.yml`:
+
+```yml
+dependencies:
+  - role: wheel
+    vars:
+      n: 1
+  - role: wheel
+    vars:
+      n: 2
+  - role: wheel
+    vars:
+      n: 3
+  - role: wheel
+    vars:
+      n: 4
+```
+
+## 嵌套循环
+
+```yml
+# main.yml
+- include_tasks: inner.yml
+  loop:
+    - 1
+    - 2
+    - 3
+  loop_control:
+    loop_var: outer_item
+
+# inner.yml
+- debug:
+    msg: "outer item={{ outer_item }} inner item={{ item }}"
+  loop:
+    - a
+    - b
+    - c
+```
+
+## 自定义 ssh 端口
+
+```ini
+[webservers]
+web01.somedomain.com ansible_port=1234
+```
+
 ## Ansible Vault
+
+# systemd
+
+## 文件目录
+
+请放在 `/etc/systemd/system/` 下面。[@systemd_dir]
+
+## 查看 mount 的转义路径
+
+```sh
+systemd-escape -p --suffix=mount "/tmp//waldi/foobar/"
+```
 
 # 参考文献

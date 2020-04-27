@@ -25,6 +25,21 @@ title: "图像"
 
 : jpegoptim 安装命令 {#tbl:jpegoptimInstall}
 
+# colmap
+
+## 安装[@colmap_installation]
+
+```sh
+git clone https://github.com/colmap/colmap.git
+cd colmap
+git checkout dev
+mkdir build
+cd build
+CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake ..
+CC=/usr/bin/gcc CXX=/usr/bin/g++ make
+sudo make install
+```
+
 # Adobe Photoshop 2020
 
 ## 安装

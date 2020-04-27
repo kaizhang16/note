@@ -1,0 +1,66 @@
+---
+title: "传输"
+---
+
+# SSH
+
+Secure Shell。
+
+## 只让某些用户使用密码登录
+
+```ssh
+PasswordAuthentication no
+
+Match User <username>
+    PasswordAuthentication yes
+```
+
+> `Match` 在遇到下一个 `Match` 前一直有效，与缩进无关。
+
+# SFTP
+
+SSH File Transfer Protocol。
+
+## 常见命令
+
+| 功能     | 命令                                | 选项       |
+|----------|-------------------------------------|------------|
+| 上传     | put <local_dir>/*.mp4 <remote_dir>/ | `-r`，递归 |
+| 下载     | put <remote_dir>/*.mp4 <local_dir>/ | `-r`，递归 |
+| 移动文件 | `rename`                            |            |
+
+: SFTP 常见命令 {#tbl:SFTP_commands}
+
+## internal-sftp vs sftp-server
+
+推荐使用 internal-sftp。[@sftp_internal_vs_server]
+
+# vsftpd
+
+Very Secure FTP Daemon。
+
+## 只允许某些用户访问[@vsftpd_allow_centain_users]
+
+`/etc/vsftpd.conf`:
+
+```conf
+userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO
+```
+
+## INVALIDARGUMENT[@vsftpd_invalid_argument]
+
+`/etc/vsftpd.conf`:
+
+```conf
+listen=YES
+```
+
+## 530 Login incorrect[@vsftpd_530]
+
+`/etc/vsftpd.conf`:
+
+```conf
+pam_service_name=ftp
+```
