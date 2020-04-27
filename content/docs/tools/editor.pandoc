@@ -71,11 +71,20 @@ nvim $(fzf)
 | 拼写检查：标记为 good word       | `zg`                   |
 | 拼写检查：更新二进制             | `zr`                   |
 
-: Vim 快捷键 {#tbl:vimShotcuts}
+: Vim 快捷键 {#tbl:vim_shotcuts}
 
 > - `noremap` 指 non-recursive map[@vimNoremap]
 > - `map` 指 recursive map[@vimNoremap]
 > - `nmap` 指 normal 模式下的 recursive map[@vimNoremap]
+
+## 寄存器
+
+| 变量 | 含义             |
+|------|------------------|
+| `%`  | 当前文件的路径   |
+| `#`  | 上一个文件的路径 |
+
+: Vim 寄存器 {#tbl:vim_registers}
 
 # Visual Studio Code
 

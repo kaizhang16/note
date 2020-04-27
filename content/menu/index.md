@@ -10,6 +10,8 @@ headless: true
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
   - [安全]({{< relref "/docs/cs/security" >}})
+  - [网络]({{< relref "/docs/cs/network" >}})
+  - [传输]({{< relref "/docs/cs/transmission" >}})
   - [数据类型]({{< relref "/docs/cs/types" >}})
   - [Linux]({{< relref "/docs/cs/linux" >}})
   - [数据库]({{< relref "/docs/cs/database" >}})
@@ -33,6 +35,7 @@ headless: true
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
+  - [Jinja]({{< relref "/docs/program/jinja" >}})
 - **工具**
   - [浏览器]({{< relref "/docs/tools/browser" >}})
   - [编辑器]({{< relref "/docs/tools/editor" >}})
@@ -43,3 +46,4 @@ headless: true
   - [Linux]({{< relref "/docs/tools/linux" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
   - [Word]({{< relref "/docs/tools/word" >}})
+  - [项目管理]({{< relref "/docs/tools/project-management" >}})

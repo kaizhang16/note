@@ -6,11 +6,12 @@ title: "Git"
 
 ## 安装 delta
 
-| 操作系统     | 命令               |
-|--------------|--------------------|
-| Arch Linux   | `yay -S git-delta` |
+| 操作系统   | 命令                                    |
+|------------|-----------------------------------------|
+| Arch Linux | `yay -S git-delta`                      |
+| Nix        | `nix-env -iA nixpkgs.gitAndTools.delta` |
 
-: delta 安装命令 {#tbl:deltaInstall}
+: delta 安装命令 {#tbl:install_delta}
 
 # Git Submodule
 

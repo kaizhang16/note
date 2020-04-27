@@ -1,0 +1,29 @@
+---
+title: "网络"
+---
+
+# iptables
+
+## 列出 nat 规则
+
+```sh
+iptables -t nat -L
+```
+
+## 列出 prerouting 规则
+
+```sh
+sudo iptables -t nat -v -L PREROUTING -n --line-number
+```
+
+## 删除 prerouting 规则
+
+```sh
+sudo iptables -t nat -D PREROUTING <rule_number>
+```
+
+## 端口转发
+
+```sh
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+```

@@ -88,6 +88,16 @@ server {
 }
 ```
 
+# httpie
+
+## 安装 httpie
+
+| 操作系统 | 命令                         |
+|----------|------------------------------|
+| Nix      | `nix-env -iA nixpkgs.httpie` |
+
+: httpie 安装命令 {#tbl:install_httpie}
+
 # curl
 
 ## 上传时显示进度条[@curlUploadProgress]
