@@ -42,6 +42,7 @@ pip install --user cmake_format
 :CocInstall coc-flutter
 :CocInstall coc-python
 :CocInstall coc-rls
+:CocInstall coc-yaml
 ```
 
 | 编程语言 | lsp-server         |
