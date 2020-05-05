@@ -60,6 +60,12 @@ $ sudo -iu postgres
 createdb <name>
 ```
 
+## 注释
+
+```sql
+-- 注释
+```
+
 ## 数据类型[@postgresDataTypes]
 
 | 数据类型   | 含义       |

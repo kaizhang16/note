@@ -2,3 +2,10 @@
 title: "Flutter"
 ---
 
+# Dart
+
+## 合并数组
+
+```dart
+var newList = [...list1, ...list2, ...list3];
+```

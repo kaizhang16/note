@@ -6,6 +6,15 @@ title: "HTTP"
 
 URL 用于定位，URI 用于标识。
 
+# 状态码
+
+| 状态码 | 含义               |
+|--------|--------------------|
+| 401    | 认证失败           |
+| 403    | 已认证，但没有权限 |
+
+: HTTP 状态码[@http_401] {#tbl:http_status_code}
+
 # NGINX
 
 ## 编译安装
@@ -116,6 +125,22 @@ curl ... --data-urlencode "paramName=value"
 
 ```sh
 curl 'http://httpbin.org/redirect-to?url=http:/\example.com' -si | grep -oP 'Location: \K.*'
+```
+
+# Open API
+
+## redoc
+
+### 安装
+
+```sh
+yarn global add redoc-cli
+```
+
+### 生成 API 文档
+
+```sh
+redoc-cli bundle <openapi_file_path>
 ```
 
 # API
