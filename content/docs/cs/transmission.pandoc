@@ -23,11 +23,11 @@ SSH File Transfer Protocol。
 
 ## 常见命令
 
-| 功能     | 命令                                | 选项       |
-|----------|-------------------------------------|------------|
-| 上传     | put <local_dir>/*.mp4 <remote_dir>/ | `-r`，递归 |
-| 下载     | put <remote_dir>/*.mp4 <local_dir>/ | `-r`，递归 |
-| 移动文件 | `rename`                            |            |
+| 功能     | 命令                                  | 选项       |
+|----------|---------------------------------------|------------|
+| 上传     | `put <local_dir>/*.mp4 <remote_dir>/` | `-r`，递归 |
+| 下载     | `put <remote_dir>/*.mp4 <local_dir>/` | `-r`，递归 |
+| 移动文件 | `rename`                              |            |
 
 : SFTP 常见命令 {#tbl:SFTP_commands}
 

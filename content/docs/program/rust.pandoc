@@ -29,3 +29,24 @@ cargo install diesel_cli
 | `&[T]` | slice |
 
 : Rust 类型 {#tbl:rust_type}
+
+## 类型转换
+
+| 类型                 | 转换方法 |
+|----------------------|----------|
+| `Option` -> `Result` | `ok_or`  |
+
+: Rust 类型转换 {#tbl:rust_type_convert}
+
+## Vec
+
+### 合并[@rust_vector_concat]
+
+```rust
+let mut a = vec![1, 2, 3];
+let b = vec![4, 5, 6];
+
+a.extend(b);
+assert_eq!(a, [1, 2, 3, 4, 5, 6]);
+// b is moved and can't be used anymore
+```

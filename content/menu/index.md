@@ -12,7 +12,7 @@ headless: true
   - [安全]({{< relref "/docs/cs/security" >}})
   - [网络]({{< relref "/docs/cs/network" >}})
   - [传输]({{< relref "/docs/cs/transmission" >}})
-  - [数据类型]({{< relref "/docs/cs/types" >}})
+  - [数据类型]({{< relref "/docs/cs/data-type" >}})
   - [Linux]({{< relref "/docs/cs/linux" >}})
   - [数据库]({{< relref "/docs/cs/database" >}})
   - [HTTP]({{< relref "/docs/cs/http" >}})
