@@ -32,10 +32,10 @@ headless: true
   - [TOML]({{< relref "/docs/program/toml" >}})
   - [Golang]({{< relref "/docs/program/golang" >}})
   - [Flutter]({{< relref "/docs/program/flutter" >}})
+  - [模板]({{< relref "/docs/program/template" >}})
   - [JavaScript]({{< relref "/docs/program/js" >}})
   - [CSS]({{< relref "/docs/program/css" >}})
   - [HTML]({{< relref "/docs/program/html" >}})
-  - [Jinja]({{< relref "/docs/program/jinja" >}})
 - **工具**
   - [浏览器]({{< relref "/docs/tools/browser" >}})
   - [编辑器]({{< relref "/docs/tools/editor" >}})

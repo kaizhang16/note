@@ -19,3 +19,13 @@ cargo new ${name}
 ```sh
 cargo install diesel_cli
 ```
+
+# 语法
+
+## 类型
+
+| 语法 | 含义  |
+|------|-------|
+| &[T] | slice |
+
+: Rust 类型 {#tbl:rust_type}
