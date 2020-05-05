@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Jinja"><meta property="og:title" content="Jinja" />
-<meta property="og:description" content="for 循环 {% for item in navigation %} &lt;li&gt;&lt;a href=&quot;{{ item.href }}&quot;&gt;{{ item.caption }}&lt;/a&gt;&lt;/li&gt; {% endfor %} 目录  for 循环   " />
+<meta name="description" content="模板"><meta property="og:title" content="模板" />
+<meta property="og:description" content="Jinja for 循环 {% for item in navigation %} &lt;li&gt;&lt;a href=&quot;{{ item.href }}&quot;&gt;{{ item.caption }}&lt;/a&gt;&lt;/li&gt; {% endfor %} Tera raw {% raw %} Hello {{ name }} {% endraw %} 目录  Jinja  for 循环  Tera  raw    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/jinja/" />
-<meta property="article:modified_time" content="2020-04-27T12:58:34+00:00" />
-<title>Jinja | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/template/" />
+<meta property="article:modified_time" content="2020-05-05T14:31:12+00:00" />
+<title>模板 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.db106eb52c5668673595cbd6c4d1ff2cec8290a1cd1e849f0d80a0b19c9ac7ce.js" integrity="sha256-2xButSxWaGc1lcvWxNH/LOyCkKHNHoSfDYCgsZyax84="></script>
+<script defer src="/notes/cn.search.min.db60e2b6a3bcfa99f0c0a688c314c92e7f85bd5d911bf2b2c38e41f1cb57f8d1.js" integrity="sha256-22DitqO8&#43;pnwwKaIwxTJLn&#43;FvV2RG/Kyw45B8ctX&#43;NE="></script>
 
 <!--
 Made with Book Theme
@@ -103,10 +103,10 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
 <li><a href="/notes/docs/program/golang/">Golang</a></li>
 <li><a href="/notes/docs/program/flutter/">Flutter</a></li>
+<li><a href="/notes/docs/program/template/"class=active>模板</a></li>
 <li><a href="/notes/docs/program/js/">JavaScript</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
 <li><a href="/notes/docs/program/html/">HTML</a></li>
-<li><a href="/notes/docs/program/jinja/"class=active>Jinja</a></li>
 </ul>
 </li>
 <li><strong>工具</strong>
@@ -153,7 +153,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Jinja</strong>
+  <strong>模板</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -175,15 +175,28 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="for-循环">for 循环</h1>
+<article class="markdown"><h1 id="jinja">Jinja</h1>
+<h2 id="for-循环">for 循环</h2>
 <pre class="j2"><code>{% for item in navigation %}
     &lt;li&gt;&lt;a href=&quot;{{ item.href }}&quot;&gt;{{ item.caption }}&lt;/a&gt;&lt;/li&gt;
 {% endfor %}</code></pre>
+<h1 id="tera">Tera</h1>
+<h2 id="raw">raw</h2>
+<pre class="tera"><code>{% raw %}
+  Hello {{ name }}
+{% endraw %}</code></pre>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#jinja">Jinja</a>
+  <ul>
   <li><a href="#for-循环">for 循环</a></li>
+  </ul></li>
+  <li><a href="#tera">Tera</a>
+  <ul>
+  <li><a href="#raw">raw</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -198,9 +211,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf88e1004241a99999b2d249e280bcda12371d02" title='最后修改者 Kai Zhang | 2020-04-27 20:58:34 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/f55a0937809e60ef655cd15b122fc1acd9fb387a" title='最后修改者 Kai Zhang | 2020-05-05 22:31:12 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-27 20:58:34 &#43;0800</span>
+      <span>2020-05-05 22:31:12 &#43;0800</span>
     </a>
   </div>
 
