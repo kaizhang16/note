@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="数据类型"><meta property="og:title" content="数据类型" />
 <meta property="og:description" content="科学计数法[1] mEn 表示 \(m \times 10^n\)。
-数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
-  目录  科学计数法[1] 数据类型 参考文献   " />
+数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40&#43;08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30&#43;08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
+  目录  科学计数法[1] 数据类型 时间格式 参考文献   " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/types/" />
-<meta property="article:modified_time" content="2020-04-02T05:29:43+08:00" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/data-type/" />
+<meta property="article:modified_time" content="2020-05-05T15:32:52+00:00" />
 <title>数据类型 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.db60e2b6a3bcfa99f0c0a688c314c92e7f85bd5d911bf2b2c38e41f1cb57f8d1.js" integrity="sha256-22DitqO8&#43;pnwwKaIwxTJLn&#43;FvV2RG/Kyw45B8ctX&#43;NE="></script>
+<script defer src="/notes/cn.search.min.4c3069e137146a06f772e810e4c4b6dcf10830ceec0f98cd1213e2cff3011bd7.js" integrity="sha256-TDBp4TcUagb3cugQ5MS23PEIMM7sD5jNEhPiz/MBG9c="></script>
 
 <!--
 Made with Book Theme
@@ -82,7 +82,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/cs/security/">安全</a></li>
 <li><a href="/notes/docs/cs/network/">网络</a></li>
 <li><a href="/notes/docs/cs/transmission/">传输</a></li>
-<li><a href="/notes/docs/cs/types/"class=active>数据类型</a></li>
+<li><a href="/notes/docs/cs/data-type/"class=active>数据类型</a></li>
 <li><a href="/notes/docs/cs/linux/">Linux</a></li>
 <li><a href="/notes/docs/cs/database/">数据库</a></li>
 <li><a href="/notes/docs/cs/http/">HTTP</a></li>
@@ -199,6 +199,31 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
+<h1 id="时间格式">时间格式</h1>
+<div id="tbl:time_format">
+<table>
+<caption>表 2: 时间格式</caption>
+<thead>
+<tr class="header">
+<th>标准</th>
+<th>例子</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>rfc-3339</td>
+<td>2020-05-05 22:59:40+08:00</td>
+<td><code>date --rfc-3339=seconds</code></td>
+</tr>
+<tr class="even">
+<td>iso-8601</td>
+<td>2020-05-05T22:58:30+08:00</td>
+<td><code>date -Iseconds</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-scientificNotation">
@@ -211,6 +236,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#科学计数法scientificnotation">科学计数法<span class="citation" data-cites="scientificNotation"><sup>[<span>1</span>]</sup></span></a></li>
   <li><a href="#数据类型">数据类型</a></li>
+  <li><a href="#时间格式">时间格式</a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -226,9 +252,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/7c91884fbf225baa727d6084482adf41cff8ed33" title='最后修改者 Kai Zhang | 2020-04-02 05:29:43 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ba85a184b5096a095e70196667ad4ef32dd19e9a" title='最后修改者 Kai Zhang | 2020-05-05 23:32:52 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-02 05:29:43 &#43;0800</span>
+      <span>2020-05-05 23:32:52 &#43;0800</span>
     </a>
   </div>
 

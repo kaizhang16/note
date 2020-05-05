@@ -64,7 +64,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/flutter/</guid>
-      <description> 目录  </description>
+      <description>Dart 合并数组 var newList = [...list1, ...list2, ...list3]; 目录  Dart  合并数组    </description>
     </item>
     
     <item>
@@ -103,8 +103,8 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/http/</guid>
       <description>URL vs URI[1] URL 用于定位，URI 用于标识。
-NGINX 编译安装  推荐安装 mainline 版本[2]。
- # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf zlib-$ZLIB_VERSION.tar.gz curl -o nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  -L https://github.com/vkholodkov/nginx-upload-module/archive/$NGINX_UPLOAD_MODULE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-upload-module-$NGINX_UPLOAD_MODULE_VERSION.tar.gz  # Compile and install cd nginx-$NGINX_VERSION .</description>
+状态码  表 1: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
+ # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf zlib-$ZLIB_VERSION.</description>
     </item>
     
     <item>
@@ -171,7 +171,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang91.github.io/notes/docs/program/rust/</guid>
       <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- diesel 安装 cargo install diesel_cli 语法 类型  表 1: Rust 类型  语法 含义    &amp;amp;[T] slice     目录  Cargo  新建项目  diesel  安装  语法  类型    </description>
+ diesel 安装 cargo install diesel_cli 语法 类型  表 1: Rust 类型  语法 含义    &amp;amp;[T] slice     类型转换  表 2: Rust 类型转换  类型 转换方法    Option -&amp;gt; Result ok_or     Vec 合并[1] let mut a = vec![1, 2, 3]; let b = vec![4, 5, 6];  a.</description>
     </item>
     
     <item>
@@ -239,7 +239,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <description>SSH Secure Shell。
 只让某些用户使用密码登录 PasswordAuthentication no Match User &amp;lt;username&amp;gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
  SFTP SSH File Transfer Protocol。
-常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put /*.mp4 / -r，递归  下载 put /*.mp4 / -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &amp;lt;local_dir&amp;gt;/*.mp4 &amp;lt;remote_dir&amp;gt;/ -r，递归  下载 put &amp;lt;remote_dir&amp;gt;/*.mp4 &amp;lt;local_dir&amp;gt;/ -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
 vsftpd Very Secure FTP Daemon。
 只允许某些用户访问[2] /etc/vsftpd.conf:
 userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd.</description>
@@ -307,13 +307,13 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
     
     <item>
       <title>数据类型</title>
-      <link>https://kaizhang91.github.io/notes/docs/cs/types/</link>
+      <link>https://kaizhang91.github.io/notes/docs/cs/data-type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/cs/types/</guid>
+      <guid>https://kaizhang91.github.io/notes/docs/cs/data-type/</guid>
       <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
-数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
-  目录  科学计数法[1] 数据类型 参考文献   </description>
+数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
+  目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
     </item>
     
     <item>
