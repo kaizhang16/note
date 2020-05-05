@@ -24,8 +24,8 @@ cargo install diesel_cli
 
 ## 类型
 
-| 语法 | 含义  |
-|------|-------|
-| &[T] | slice |
+| 语法   | 含义  |
+|--------|-------|
+| `&[T]` | slice |
 
 : Rust 类型 {#tbl:rust_type}
