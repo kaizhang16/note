@@ -2,6 +2,14 @@
 title: "CSS"
 ---
 
+# selector
+
+| 例子      | 含义                               |
+|-----------|------------------------------------|
+| `div > p` | 父元素为 `<div>` 的所有 `<p>` 元素 |
+
+: CSS selector {#tbl:css_selector}
+
 # 对齐
 
 ```css
