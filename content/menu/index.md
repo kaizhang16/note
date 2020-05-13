@@ -9,6 +9,7 @@ headless: true
   - [视频]({{< relref "/docs/visual/video" >}})
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
+  - [编码]({{< relref "/docs/cs/encoding" >}})
   - [安全]({{< relref "/docs/cs/security" >}})
   - [网络]({{< relref "/docs/cs/network" >}})
   - [传输]({{< relref "/docs/cs/transmission" >}})

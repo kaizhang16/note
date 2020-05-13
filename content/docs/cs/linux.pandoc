@@ -49,3 +49,17 @@ sudo pacman -S xf86-video-vmware
 | Arch Linux | `sudo pacman -S broot` |
 
 : broot 安装命令 {#tbl:brootInstall}
+
+# Core Pattern
+
+```sh
+# ulimit -c unlimited
+# sysctl -w kernel.core_pattern=core.%p
+# sysctl --system  # 使更改生效
+```
+
+# Sed
+
+```sh
+sed 's/Hello/Hi/g' <file_name> > file
+```

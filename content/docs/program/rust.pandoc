@@ -12,14 +12,6 @@ cargo new ${name}
 
 > 默认使用 `--bin` 参数。
 
-# diesel
-
-## 安装
-
-```sh
-cargo install diesel_cli
-```
-
 # 语法
 
 ## 类型
@@ -38,7 +30,21 @@ cargo install diesel_cli
 
 : Rust 类型转换 {#tbl:rust_type_convert}
 
+## Iterator
+
+| 方法         | 作用       |
+|--------------|------------|
+| `filter_map` | 过滤并映射 |
+
+: Itertor 方法列表 {#tbl:iterator_methods}
+
 ## Vec
+
+| 方法     | 含义         |
+|----------|--------------|
+| `remove` | 移除某个元素 |
+
+: Vec 常用方法 {#tbl:vec_methods}
 
 ### 合并[@rust_vector_concat]
 
@@ -50,3 +56,27 @@ a.extend(b);
 assert_eq!(a, [1, 2, 3, 4, 5, 6]);
 // b is moved and can't be used anymore
 ```
+
+## 静态 slice[@rust_static_slice]
+
+```rust
+static NUMBERS: &'static [i32] = &[1, 2, 3, 4, 5];
+```
+
+# diesel
+
+## 安装
+
+```sh
+cargo install diesel_cli
+```
+
+## 用法
+
+| 方法   | 含义                    |
+|--------|-------------------------|
+| `load` | `SELECT` 后返回多条记录 |
+
+: diesel 常用方法 {#tbl:diesel_methods}
+
+# 参考文献

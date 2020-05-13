@@ -4,8 +4,69 @@ title: "Flutter"
 
 # Dart
 
+## 运算符
+
+| 符号 | 含义                                |
+|------|-------------------------------------|
+| `??` | if null[@dart_double_question_mark] |
+
+: Dart 运算符 {#tbl:dart_operator}
+
 ## 合并数组
 
 ```dart
 var newList = [...list1, ...list2, ...list3];
 ```
+
+# Flutter
+
+## 联网权限[@flutter_internet]
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+## 开发
+
+### 编译
+
+```sh
+flutter build apk --split-per-abi --verbose
+```
+
+### 安装
+
+> 把手机连到电脑上。
+
+```sh
+flutter install
+```
+
+## 语法
+
+### switch
+
+```dart
+var command = 'OPEN';
+switch (command) {
+  case 'CLOSED':
+    executeClosed();
+    break;
+  case 'PENDING':
+    executePending();
+    break;
+  case 'APPROVED':
+    executeApproved();
+    break;
+  case 'DENIED':
+    executeDenied();
+    break;
+  case 'OPEN':
+    executeOpen();
+    break;
+  default:
+    executeUnknown();
+}
+```
+
+# 参考文献

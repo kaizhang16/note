@@ -2,8 +2,18 @@
 title: "fish-shell"
 ---
 
-# 变量赋值
+# 语法
+
+## 变量赋值
 
 ```fish
 set a b
 ```
+
+# find
+
+```fish
+find . -type f -exec echo '{}' \;
+```
+
+> 括号需要加引号[@fish_find_exec]。
