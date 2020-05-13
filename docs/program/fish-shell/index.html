@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="fish-shell"><meta property="og:title" content="fish-shell" />
-<meta property="og:description" content="变量赋值 set a b 目录  变量赋值   " />
+<meta property="og:description" content="语法 变量赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
+ [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
+  目录  语法  变量赋值  find   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/fish-shell/" />
-<meta property="article:modified_time" content="2020-03-07T11:56:57+00:00" />
+<meta property="article:modified_time" content="2020-05-13T14:40:58+00:00" />
 <title>fish-shell | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +18,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.4c3069e137146a06f772e810e4c4b6dcf10830ceec0f98cd1213e2cff3011bd7.js" integrity="sha256-TDBp4TcUagb3cugQ5MS23PEIMM7sD5jNEhPiz/MBG9c="></script>
+<script defer src="/notes/cn.search.min.80135c6d809e9efed90fa69f4bc9e4035905d2bf77fb978043ed1cb3e4f541b7.js" integrity="sha256-gBNcbYCenv7ZD6afS8nkA1kF0r93&#43;5eAQ&#43;0cs&#43;T1Qbc="></script>
 
 <!--
 Made with Book Theme
@@ -77,6 +79,7 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>计算机科学</strong>
 <ul>
+<li><a href="/notes/docs/cs/encoding/">编码</a></li>
 <li><a href="/notes/docs/cs/security/">安全</a></li>
 <li><a href="/notes/docs/cs/network/">网络</a></li>
 <li><a href="/notes/docs/cs/transmission/">传输</a></li>
@@ -175,13 +178,28 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="变量赋值">变量赋值</h1>
+<article class="markdown"><h1 id="语法">语法</h1>
+<h2 id="变量赋值">变量赋值</h2>
 <pre class="fish"><code>set a b</code></pre>
+<h1 id="find">find</h1>
+<pre class="fish"><code>find . -type f -exec echo &#39;{}&#39; \;</code></pre>
+<blockquote>
+<p>括号需要加引号<span class="citation" data-cites="fish_find_exec"><sup>[<a href="#ref-fish_find_exec" role="doc-biblioref">1</a>]</sup></span>。</p>
+</blockquote>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-fish_find_exec">
+<p>[1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). <a href="https://unix.stackexchange.com/a/301232">https://unix.stackexchange.com/a/301232</a>.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#语法">语法</a>
+  <ul>
   <li><a href="#变量赋值">变量赋值</a></li>
+  </ul></li>
+  <li><a href="#find">find</a></li>
   </ul>
 </nav>
 </article>
@@ -196,9 +214,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/77296b5368aa99fe15a7d514844eee7a21159a5b" title='最后修改者 Kai Zhang | 2020-03-07 19:56:57 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4ed4b979ef711df3414ec3f05cd3d051f8917584" title='最后修改者 Kai Zhang | 2020-05-13 22:40:58 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-03-07 19:56:57 &#43;0800</span>
+      <span>2020-05-13 22:40:58 &#43;0800</span>
     </a>
   </div>
 
