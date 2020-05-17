@@ -106,8 +106,8 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/http/</guid>
       <description>URL vs URI[1] URL 用于定位，URI 用于标识。
-状态码  表 1: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
- # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf nginx-$NGINX_VERSION.tar.gz curl -LO https://ftp.pcre.org/pub/pcre/pcre-$PCRE_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf pcre-$PCRE_VERSION.tar.gz curl -LO https://www.zlib.net/zlib-$ZLIB_VERSION.tar.gz \  &amp;amp;&amp;amp; tar -xzvf zlib-$ZLIB_VERSION.</description>
+httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
+ # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.</description>
     </item>
     
     <item>
@@ -174,7 +174,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang91.github.io/notes/docs/program/rust/</guid>
       <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- 语法 类型  表 1: Rust 类型  语法 含义    &amp;amp;[T] slice     类型转换  表 2: Rust 类型转换  类型 转换方法    Option -&amp;gt; Result ok_or     Iterator  表 3: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 4: Vec 常用方法  方法 含义    remove 移除某个元素     合并[1] let mut a = vec!</description>
+ 语法 类型  表 1: Rust 类型  语法 含义    &amp;amp;[T] slice     类型转换  表 2: Rust 类型转换  类型 转换方法    Option -&amp;gt; Result ok_or     String 多行 String[1] let string = &amp;quot;line one line two&amp;quot;; Iterator  表 3: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 4: Vec 常用方法  方法 含义    remove 移除某个元素     合并[2] let mut a = vec!</description>
     </item>
     
     <item>
