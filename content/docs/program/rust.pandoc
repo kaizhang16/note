@@ -30,6 +30,15 @@ cargo new ${name}
 
 : Rust 类型转换 {#tbl:rust_type_convert}
 
+## String
+
+### 多行 String[@rust_string_multiple_line]
+
+```rust
+let string = "line one
+line two";
+```
+
 ## Iterator
 
 | 方法         | 作用       |
@@ -73,9 +82,10 @@ cargo install diesel_cli
 
 ## 用法
 
-| 方法   | 含义                    |
-|--------|-------------------------|
-| `load` | `SELECT` 后返回多条记录 |
+| 方法         | 含义                    |
+|--------------|-------------------------|
+| `load`       | `SELECT` 后返回多条记录 |
+| `into_boxed` | 用于改变 query          |
 
 : diesel 常用方法 {#tbl:diesel_methods}
 
