@@ -6,6 +6,24 @@ title: "HTTP"
 
 URL 用于定位，URI 用于标识。
 
+# httpie
+
+## 安装 httpie
+
+| 操作系统 | 命令                         |
+|----------|------------------------------|
+| Nix      | `nix-env -iA nixpkgs.httpie` |
+
+: httpie 安装命令 {#tbl:install_httpie}
+
+## 用法
+
+### Query Parameters
+
+```sh
+param==value
+```
+
 # 状态码
 
 | 状态码 | 含义               |
@@ -96,16 +114,6 @@ server {
         }
 }
 ```
-
-# httpie
-
-## 安装 httpie
-
-| 操作系统 | 命令                         |
-|----------|------------------------------|
-| Nix      | `nix-env -iA nixpkgs.httpie` |
-
-: httpie 安装命令 {#tbl:install_httpie}
 
 # curl
 

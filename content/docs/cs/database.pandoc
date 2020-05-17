@@ -86,4 +86,21 @@ createdb <name>
 
 : psql 指令 {#tbl:psqlCommands}
 
+## 参数替换[@postgres_parameter_substitution]
+
+```sql
+PREPARE fooplan (int, text, bool, numeric) AS
+    INSERT INTO foo VALUES($1, $2, $3, $4);
+EXECUTE fooplan(1, 'Hunter Valley', 't', 200.00);
+```
+
+## 模糊查找[@postgres_pattern_match]
+
+`LIKE` 时间和空间复杂度上限更容易控制。
+
+## 按拼音排序[@postgres_collate]
+
+```sql
+SELECT * FROM a ORDER BY c1 COLLATE "zh_CN";
+```
 # 参考文献
