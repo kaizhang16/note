@@ -151,6 +151,15 @@ yarn global add redoc-cli
 redoc-cli bundle <openapi_file_path>
 ```
 
+## 语法
+
+| type   | format | 含义   |
+|--------|--------|--------|
+| number | float  | float  |
+| number | double | double |
+
+: Open API 数据类型 {#tbl:openapi_data_type}
+
 # API
 
 ## seafile
