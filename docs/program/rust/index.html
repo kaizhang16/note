@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Rust"><meta property="og:title" content="Rust" />
 <meta property="og:description" content="Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- 语法 类型  表 1: Rust 类型  语法 含义    &amp;[T] slice     类型转换  表 2: Rust 类型转换  类型 转换方法    Option -&gt; Result ok_or     String 多行 String[1] let string = &quot;line one line two&quot;; Iterator  表 3: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 4: Vec 常用方法  方法 含义    remove 移除某个元素     合并[2] let mut a = vec!" />
+ 语法 命名惯例[1]  表 1: Rust 命名惯例  类型 惯例    crate snake_case, prefer single word  首字母缩写词 Uuid，而不是 UUID     module[2]  如果模块 foo 没有子模块，则代码放在 foo.rs 如果模块 foo 有子模块，则代码放在 foo/mod.rs  类型  表 2: Rust 类型  语法 含义    &amp;[T] slice     类型转换  表 3: Rust 类型转换  类型 转换方法    Option -&gt; Result ok_or     String 多行 String[3] let string = &quot;line one line two&quot;; Iterator  表 4: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 5: Vec 常用方法  方法 含义    remove 移除某个元素     合并[4] let mut a = vec!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/rust/" />
-<meta property="article:modified_time" content="2020-05-17T12:25:27+00:00" />
+<meta property="article:modified_time" content="2020-05-21T09:06:30+00:00" />
 <title>Rust | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.df8f70b78764547847692df0b094c8dd79e56fc40b8c67b6d2551159775160c2.js" integrity="sha256-349wt4dkVHhHaS3wsJTI3Xnlb8QLjGe20lURWXdRYMI="></script>
+<script defer src="/notes/cn.search.min.d9b1dbf3782ae295ea5cfede8f8d31c2a1f071c50346184d41b803ea571d0f40.js" integrity="sha256-2bHb83gq4pXqXP7ej40xwqHwccUDRhhNQbgD6lcdD0A="></script>
 
 <!--
 Made with Book Theme
@@ -184,10 +184,37 @@ https://github.com/alex-shpak/hugo-book
 <p>默认使用 <code>--bin</code> 参数。</p>
 </blockquote>
 <h1 id="语法">语法</h1>
+<h2 id="命名惯例rust_name_convention">命名惯例<span class="citation" data-cites="rust_name_convention"><sup>[<a href="#ref-rust_name_convention" role="doc-biblioref">1</a>]</sup></span></h2>
+<div id="tbl:rust_name_convention">
+<table>
+<caption>表 1: Rust 命名惯例</caption>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>惯例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>crate</td>
+<td>snake_case, prefer single word</td>
+</tr>
+<tr class="even">
+<td>首字母缩写词</td>
+<td>Uuid，而不是 UUID</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="modulerust_module">module<span class="citation" data-cites="rust_module"><sup>[<a href="#ref-rust_module" role="doc-biblioref">2</a>]</sup></span></h2>
+<ul>
+<li>如果模块 <code>foo</code> 没有子模块，则代码放在 <code>foo.rs</code></li>
+<li>如果模块 <code>foo</code> 有子模块，则代码放在 <code>foo/mod.rs</code></li>
+</ul>
 <h2 id="类型">类型</h2>
 <div id="tbl:rust_type">
 <table>
-<caption>表 1: Rust 类型</caption>
+<caption>表 2: Rust 类型</caption>
 <thead>
 <tr class="header">
 <th>语法</th>
@@ -205,7 +232,7 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="类型转换">类型转换</h2>
 <div id="tbl:rust_type_convert">
 <table>
-<caption>表 2: Rust 类型转换</caption>
+<caption>表 3: Rust 类型转换</caption>
 <thead>
 <tr class="header">
 <th>类型</th>
@@ -221,13 +248,13 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="string">String</h2>
-<h3 id="多行-stringrust_string_multiple_line">多行 String<span class="citation" data-cites="rust_string_multiple_line"><sup>[<a href="#ref-rust_string_multiple_line" role="doc-biblioref">1</a>]</sup></span></h3>
+<h3 id="多行-stringrust_string_multiple_line">多行 String<span class="citation" data-cites="rust_string_multiple_line"><sup>[<a href="#ref-rust_string_multiple_line" role="doc-biblioref">3</a>]</sup></span></h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">let</span> string = <span class="st">&quot;line one</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="st">line two&quot;</span>;</span></code></pre></div>
 <h2 id="iterator">Iterator</h2>
 <div id="tbl:iterator_methods">
 <table>
-<caption>表 3: Itertor 方法列表</caption>
+<caption>表 4: Itertor 方法列表</caption>
 <thead>
 <tr class="header">
 <th>方法</th>
@@ -245,7 +272,7 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="vec">Vec</h2>
 <div id="tbl:vec_methods">
 <table>
-<caption>表 4: Vec 常用方法</caption>
+<caption>表 5: Vec 常用方法</caption>
 <thead>
 <tr class="header">
 <th>方法</th>
@@ -260,22 +287,53 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h3 id="合并rust_vector_concat">合并<span class="citation" data-cites="rust_vector_concat"><sup>[<a href="#ref-rust_vector_concat" role="doc-biblioref">2</a>]</sup></span></h3>
+<h3 id="合并rust_vector_concat">合并<span class="citation" data-cites="rust_vector_concat"><sup>[<a href="#ref-rust_vector_concat" role="doc-biblioref">4</a>]</sup></span></h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">let</span> <span class="kw">mut</span> a = <span class="pp">vec!</span><span class="op">[</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span><span class="op">]</span>;</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="kw">let</span> b = <span class="pp">vec!</span><span class="op">[</span><span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span><span class="op">]</span>;</span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
 <span id="cb3-4"><a href="#cb3-4"></a>a.extend(b);</span>
 <span id="cb3-5"><a href="#cb3-5"></a><span class="pp">assert_eq!</span>(a, <span class="op">[</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span><span class="op">]</span>);</span>
 <span id="cb3-6"><a href="#cb3-6"></a><span class="co">// b is moved and can&#39;t be used anymore</span></span></code></pre></div>
-<h2 id="静态-slicerust_static_slice">静态 slice<span class="citation" data-cites="rust_static_slice"><sup>[<a href="#ref-rust_static_slice" role="doc-biblioref">3</a>]</sup></span></h2>
+<h2 id="静态-slicerust_static_slice">静态 slice<span class="citation" data-cites="rust_static_slice"><sup>[<a href="#ref-rust_static_slice" role="doc-biblioref">5</a>]</sup></span></h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">static</span> NUMBERS: &amp;<span class="ot">&#39;static</span> <span class="op">[</span><span class="dt">i32</span><span class="op">]</span> = &amp;<span class="op">[</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span><span class="op">]</span>;</span></code></pre></div>
+<h2 id="enumrust_enum">Enum<span class="citation" data-cites="rust_enum"><sup>[<a href="#ref-rust_enum" role="doc-biblioref">6</a>]</sup></span></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">enum</span> IpAddrKind <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>    V4,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    V6,</span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="fmtdisplayrust_fmt_display">fmt::Display<span class="citation" data-cites="rust_fmt_display"><sup>[<a href="#ref-rust_fmt_display" role="doc-biblioref">7</a>]</sup></span></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">impl</span> <span class="pp">fmt::</span><span class="bu">Display</span> <span class="kw">for</span> Foo <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="kw">fn</span> fmt(&amp;<span class="kw">self</span>, f: &amp;<span class="kw">mut</span> <span class="pp">fmt::</span>Formatter) -&gt; <span class="pp">fmt::</span><span class="dt">Result</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>        <span class="pp">write!</span>(f, <span class="st">&quot;{:?}&quot;</span>, <span class="kw">self</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a>        <span class="co">// or, alternatively:</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>        <span class="co">// fmt::Debug::fmt(self, f)</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>    <span class="op">}</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="op">}</span></span></code></pre></div>
+<h2 id="macro">macro</h2>
+<div id="tbl:rust_macro">
+<table>
+<caption>表 6: Rust 宏</caption>
+<thead>
+<tr class="header">
+<th>macro</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>#[allow(non_snake_case)]</code></td>
+<td>关闭 snake_case 警告</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h1 id="diesel">diesel</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">cargo</span> install diesel_cli</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">cargo</span> install diesel_cli</span></code></pre></div>
 <h2 id="用法">用法</h2>
 <div id="tbl:diesel_methods">
 <table>
-<caption>表 5: diesel 常用方法</caption>
+<caption>表 7: diesel 常用方法</caption>
 <thead>
 <tr class="header">
 <th>方法</th>
@@ -291,19 +349,35 @@ https://github.com/alex-shpak/hugo-book
 <td><code>into_boxed</code></td>
 <td>用于改变 query</td>
 </tr>
+<tr class="odd">
+<td><code>ge</code></td>
+<td><code>&gt;=</code></td>
+</tr>
 </tbody>
 </table>
 </div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
+<div id="ref-rust_name_convention">
+<p>[1] RUST. Naming conventions[EB/OL]([日期不详]). <a href="https://doc.rust-lang.org/1.0.0/style/style/naming/README.html">https://doc.rust-lang.org/1.0.0/style/style/naming/README.html</a>.</p>
+</div>
+<div id="ref-rust_module">
+<p>[2] RUST. mod and the Filesystem[EB/OL]([日期不详]). <a href="https://doc.rust-lang.org/1.30.0/book/2018-edition/ch07-01-mod-and-the-filesystem.html">https://doc.rust-lang.org/1.30.0/book/2018-edition/ch07-01-mod-and-the-filesystem.html</a>.</p>
+</div>
 <div id="ref-rust_string_multiple_line">
-<p>[1] HUON. What is the syntax for a multiline string literal?[EB/OL](2015–04–07). <a href="https://stackoverflow.com/a/29483453/13200985">https://stackoverflow.com/a/29483453/13200985</a>.</p>
+<p>[3] HUON. What is the syntax for a multiline string literal?[EB/OL](2015–04–07). <a href="https://stackoverflow.com/a/29483453/13200985">https://stackoverflow.com/a/29483453/13200985</a>.</p>
 </div>
 <div id="ref-rust_vector_concat">
-<p>[2] LUD. Best way to concatenate vectors in Rust[EB/OL](2016–11–24). <a href="https://stackoverflow.com/a/40795247/13200985">https://stackoverflow.com/a/40795247/13200985</a>.</p>
+<p>[4] LUD. Best way to concatenate vectors in Rust[EB/OL](2016–11–24). <a href="https://stackoverflow.com/a/40795247/13200985">https://stackoverflow.com/a/40795247/13200985</a>.</p>
 </div>
 <div id="ref-rust_static_slice">
-<p>[3] MORGAN C. How to specify const array in global scope in Rust?[EB/OL](2014–05–22). <a href="https://stackoverflow.com/a/23810557/13200985">https://stackoverflow.com/a/23810557/13200985</a>.</p>
+<p>[5] MORGAN C. How to specify const array in global scope in Rust?[EB/OL](2014–05–22). <a href="https://stackoverflow.com/a/23810557/13200985">https://stackoverflow.com/a/23810557/13200985</a>.</p>
+</div>
+<div id="ref-rust_enum">
+<p>[6] RUST. Defining an Enum[EB/OL]([日期不详]). <a href="https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html">https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html</a>.</p>
+</div>
+<div id="ref-rust_fmt_display">
+<p>[7] MATVEEV V. How do I get an enum as a string?[EB/OL](2015–09–22). <a href="https://stackoverflow.com/a/32712140/13200985">https://stackoverflow.com/a/32712140/13200985</a>.</p>
 </div>
 </div>
 
@@ -316,18 +390,23 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#语法">语法</a>
   <ul>
+  <li><a href="#命名惯例rust_name_convention">命名惯例<span class="citation" data-cites="rust_name_convention"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#modulerust_module">module<span class="citation" data-cites="rust_module"><sup>[<span>2</span>]</sup></span></a></li>
   <li><a href="#类型">类型</a></li>
   <li><a href="#类型转换">类型转换</a></li>
   <li><a href="#string">String</a>
   <ul>
-  <li><a href="#多行-stringrust_string_multiple_line">多行 String<span class="citation" data-cites="rust_string_multiple_line"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#多行-stringrust_string_multiple_line">多行 String<span class="citation" data-cites="rust_string_multiple_line"><sup>[<span>3</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#iterator">Iterator</a></li>
   <li><a href="#vec">Vec</a>
   <ul>
-  <li><a href="#合并rust_vector_concat">合并<span class="citation" data-cites="rust_vector_concat"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#合并rust_vector_concat">合并<span class="citation" data-cites="rust_vector_concat"><sup>[<span>4</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#静态-slicerust_static_slice">静态 slice<span class="citation" data-cites="rust_static_slice"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#静态-slicerust_static_slice">静态 slice<span class="citation" data-cites="rust_static_slice"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#enumrust_enum">Enum<span class="citation" data-cites="rust_enum"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#fmtdisplayrust_fmt_display">fmt::Display<span class="citation" data-cites="rust_fmt_display"><sup>[<span>7</span>]</sup></span></a></li>
+  <li><a href="#macro">macro</a></li>
   </ul></li>
   <li><a href="#diesel">diesel</a>
   <ul>
@@ -349,9 +428,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/06e1e242e13de9fb43d55d779d19c109dc2bcfb5" title='最后修改者 Kai Zhang | 2020-05-17 20:25:27 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/60daa5732c4809634dd0fe164b558c48a1d26af0" title='最后修改者 Kai Zhang | 2020-05-21 17:06:30 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-17 20:25:27 &#43;0800</span>
+      <span>2020-05-21 17:06:30 &#43;0800</span>
     </a>
   </div>
 

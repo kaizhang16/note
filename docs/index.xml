@@ -174,7 +174,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang91.github.io/notes/docs/program/rust/</guid>
       <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- 语法 类型  表 1: Rust 类型  语法 含义    &amp;amp;[T] slice     类型转换  表 2: Rust 类型转换  类型 转换方法    Option -&amp;gt; Result ok_or     String 多行 String[1] let string = &amp;quot;line one line two&amp;quot;; Iterator  表 3: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 4: Vec 常用方法  方法 含义    remove 移除某个元素     合并[2] let mut a = vec!</description>
+ 语法 命名惯例[1]  表 1: Rust 命名惯例  类型 惯例    crate snake_case, prefer single word  首字母缩写词 Uuid，而不是 UUID     module[2]  如果模块 foo 没有子模块，则代码放在 foo.rs 如果模块 foo 有子模块，则代码放在 foo/mod.rs  类型  表 2: Rust 类型  语法 含义    &amp;amp;[T] slice     类型转换  表 3: Rust 类型转换  类型 转换方法    Option -&amp;gt; Result ok_or     String 多行 String[3] let string = &amp;quot;line one line two&amp;quot;; Iterator  表 4: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 5: Vec 常用方法  方法 含义    remove 移除某个元素     合并[4] let mut a = vec!</description>
     </item>
     
     <item>
