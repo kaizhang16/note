@@ -66,12 +66,13 @@ createdb <name>
 -- 注释
 ```
 
-## 数据类型[@postgresDataTypes]
+## 数据类型[@postgres_data_types]
 
-| 数据类型   | 含义       |
-|------------|------------|
-| bool       | 布尔值     |
-| varchar(n) | 变长字符串 |
+| 数据类型     | 含义       |
+|--------------|------------|
+| `bool`       | 布尔值     |
+| `varchar(n)` | 变长字符串 |
+| `real`       | float      |
 
 : PostgreSQL 数据类型 {#tbl:postgresDataTypes}
 
