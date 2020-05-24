@@ -16,12 +16,25 @@ cargo new ${name}
 
 ## 命名惯例[@rust_name_convention]
 
-| 类型         | 惯例                           |
-|--------------|--------------------------------|
-| crate        | snake_case, prefer single word |
-| 首字母缩写词 | Uuid，而不是 UUID              |
+| 项目               | 惯例                             |
+|--------------------|----------------------------------|
+| Crates             | `snake_case`, prefer single word |
+| Modules            | `snake_case`                     |
+| Types              | `CamelCase`                      |
+| Traits             | `CamelCase`                      |
+| Functions          | `snake_case`                     |
+| Methods            | `snake_case`                     |
+| 一般的构造函数     | `new` 或者 `with_more_details`   |
+| 转换构造函数       | `from_some_other_type`           |
+| Local variables    | `snake_case`                     |
+| Static variables   | `SCREAMING_SNAKE_CASE`           |
+| Constant variables | `SCREAMING_SNAKE_CASE`           |
+| Type parameters    | 简洁的 `CamelCase`，比如 `T`     |
+| Lifetimes          | 简短的小写字母，比如 `'a`        |
 
 : Rust 命名惯例 {#tbl:rust_name_convention}
+
+> - 首字母缩写词写成 Uuid，而不是 UUID
 
 ## module[@rust_module]
 
@@ -59,7 +72,7 @@ line two";
 |--------------|------------|
 | `filter_map` | 过滤并映射 |
 
-: Itertor 方法列表 {#tbl:iterator_methods}
+: Iterator 方法列表 {#tbl:iterator_methods}
 
 ## Vec
 

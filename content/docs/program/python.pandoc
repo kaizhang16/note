@@ -225,7 +225,9 @@ U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
 
 测试某个轴上是否有一个元素为真。
 
-## 弧度 -> 角度
+## numpy.degrees
+
+弧度 -> 角度：
 
 ```py
 >>> rad = np.arange(12.)*np.pi/6
@@ -234,7 +236,9 @@ array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
         270.,  300.,  330.])
 ```
 
-## 角度 -> 弧度
+## numpy.deg2rad
+
+角度 -> 弧度：
 
 ```py
 >>> np.deg2rad(180)
@@ -254,6 +258,14 @@ PIL.Image.MAX_IMAGE_PIXELS = 933120000
 ```py
 def upper_first_char(str):
     return '{}{}'.format(str[0].upper(), str[1:])
+```
+
+# anaconda
+
+## 卸载[@anaconda_uninstall]
+
+```sh
+rm -rf ~/anaconda3
 ```
 
 # 参考文献
