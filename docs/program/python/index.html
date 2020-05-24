@@ -8,7 +8,7 @@
 <meta property="og:description" content="内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/python/" />
-<meta property="article:modified_time" content="2020-05-21T09:06:30+00:00" />
+<meta property="article:modified_time" content="2020-05-24T08:30:16+00:00" />
 <title>Python | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.d9b1dbf3782ae295ea5cfede8f8d31c2a1f071c50346184d41b803ea571d0f40.js" integrity="sha256-2bHb83gq4pXqXP7ej40xwqHwccUDRhhNQbgD6lcdD0A="></script>
+<script defer src="/notes/cn.search.min.8a13fb4a5a224056386c83227ceb94e2105872ff11c50583b3407daf2674026d.js" integrity="sha256-ihP7SloiQFY4bIMifOuU4hBYcv8RxQWDs0B9ryZ0Am0="></script>
 
 <!--
 Made with Book Theme
@@ -65,6 +65,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li><strong>数学</strong>
 <ul>
+<li><a href="/notes/docs/math/statistics/">统计</a></li>
 <li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
 </ul>
 </li>
@@ -387,12 +388,14 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb18"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
 <h2 id="numpy.any">numpy.any</h2>
 <p>测试某个轴上是否有一个元素为真。</p>
-<h2 id="弧度---角度">弧度 -&gt; 角度</h2>
+<h2 id="numpy.degrees">numpy.degrees</h2>
+<p>弧度 -&gt; 角度：</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;&gt;&gt;</span> rad <span class="op">=</span> np.arange(<span class="fl">12.</span>)<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">6</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="op">&gt;&gt;&gt;</span> np.degrees(rad)</span>
 <span id="cb19-3"><a href="#cb19-3"></a>array([   <span class="fl">0.</span>,   <span class="fl">30.</span>,   <span class="fl">60.</span>,   <span class="fl">90.</span>,  <span class="fl">120.</span>,  <span class="fl">150.</span>,  <span class="fl">180.</span>,  <span class="fl">210.</span>,  <span class="fl">240.</span>,</span>
 <span id="cb19-4"><a href="#cb19-4"></a>        <span class="fl">270.</span>,  <span class="fl">300.</span>,  <span class="fl">330.</span>])</span></code></pre></div>
-<h2 id="角度---弧度">角度 -&gt; 弧度</h2>
+<h2 id="numpy.deg2rad">numpy.deg2rad</h2>
+<p>角度 -&gt; 弧度：</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">&gt;&gt;&gt;</span> np.deg2rad(<span class="dv">180</span>)</span>
 <span id="cb20-2"><a href="#cb20-2"></a><span class="fl">3.1415926535897931</span></span></code></pre></div>
 <h1 id="pillow">Pillow</h1>
@@ -401,6 +404,9 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="常用函数">常用函数</h1>
 <div class="sourceCode" id="cb22"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
 <span id="cb22-2"><a href="#cb22-2"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
+<h1 id="anaconda">anaconda</h1>
+<h2 id="卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<a href="#ref-anaconda_uninstall" role="doc-biblioref">11</a>]</sup></span></h2>
+<div class="sourceCode" id="cb23"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-pythonBuiltIn">
@@ -432,6 +438,9 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <div id="ref-pillowMaxImagePixels">
 <p>[10] ALFE. Pillow in Python won’t let me open image (《exceeds limit》)[EB/OL](2018–07–03). <a href="https://stackoverflow.com/a/51152514">https://stackoverflow.com/a/51152514</a>.</p>
+</div>
+<div id="ref-anaconda_uninstall">
+<p>[11] ANACONDA. Uninstalling Anaconda[EB/OL]([日期不详]). <a href="https://docs.anaconda.com/anaconda/install/uninstall/#uninstalling-anaconda">https://docs.anaconda.com/anaconda/install/uninstall/#uninstalling-anaconda</a>.</p>
 </div>
 </div>
 
@@ -474,14 +483,18 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<span>9</span>]</sup></span></a></li>
   <li><a href="#奇异值分解">奇异值分解</a></li>
   <li><a href="#numpy.any">numpy.any</a></li>
-  <li><a href="#弧度---角度">弧度 -&gt; 角度</a></li>
-  <li><a href="#角度---弧度">角度 -&gt; 弧度</a></li>
+  <li><a href="#numpy.degrees">numpy.degrees</a></li>
+  <li><a href="#numpy.deg2rad">numpy.deg2rad</a></li>
   </ul></li>
   <li><a href="#pillow">Pillow</a>
   <ul>
   <li><a href="#图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<span>10</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#常用函数">常用函数</a></li>
+  <li><a href="#anaconda">anaconda</a>
+  <ul>
+  <li><a href="#卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<span>11</span>]</sup></span></a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -497,9 +510,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/60daa5732c4809634dd0fe164b558c48a1d26af0" title='最后修改者 Kai Zhang | 2020-05-21 17:06:30 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4dbb6fdc9252e656b3844b7e0c75aed640a6094c" title='最后修改者 Kai Zhang | 2020-05-24 16:30:16 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-21 17:06:30 &#43;0800</span>
+      <span>2020-05-24 16:30:16 &#43;0800</span>
     </a>
   </div>
 
@@ -562,6 +575,7 @@ https://github.com/alex-shpak/hugo-book
                 bm: ["{\\boldsymbol{#1}}", 1],
                 diag: ["\\textrm{diag}"],
                 matrix: ["{\\bm{#1}}", 1],
+                median: ["\\textrm{median}"],
                 set: ["{\\mathbb{#1}}", 1],
                 sign: ["\\textrm{sign}"],
                 SO: ["\\textrm{SO}"],

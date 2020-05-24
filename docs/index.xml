@@ -154,8 +154,8 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/pandoc/</guid>
-      <description>Extension  +EXTENSION 启用 -EXTENSION 禁用  emoji emoji 列表请参考 https://github.com/ikatyang/emoji-cheat-sheet。
-目录  Extension  emoji    </description>
+      <description>引用  在方括号里 分号分隔  [@smith04; @doe99] Extension  +EXTENSION 启用 -EXTENSION 禁用  emoji emoji 列表请参考 https://github.com/ikatyang/emoji-cheat-sheet。
+目录  引用 Extension  emoji    </description>
     </item>
     
     <item>
@@ -174,7 +174,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang91.github.io/notes/docs/program/rust/</guid>
       <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- 语法 命名惯例[1]  表 1: Rust 命名惯例  类型 惯例    crate snake_case, prefer single word  首字母缩写词 Uuid，而不是 UUID     module[2]  如果模块 foo 没有子模块，则代码放在 foo.rs 如果模块 foo 有子模块，则代码放在 foo/mod.rs  类型  表 2: Rust 类型  语法 含义    &amp;amp;[T] slice     类型转换  表 3: Rust 类型转换  类型 转换方法    Option -&amp;gt; Result ok_or     String 多行 String[3] let string = &amp;quot;line one line two&amp;quot;; Iterator  表 4: Itertor 方法列表  方法 作用    filter_map 过滤并映射     Vec  表 5: Vec 常用方法  方法 含义    remove 移除某个元素     合并[4] let mut a = vec!</description>
+ 语法 命名惯例[1]  表 1: Rust 命名惯例  项目 惯例    Crates snake_case, prefer single word  Modules snake_case  Types CamelCase  Traits CamelCase  Functions snake_case  Methods snake_case  一般的构造函数 new 或者 with_more_details  转换构造函数 from_some_other_type  Local variables snake_case  Static variables SCREAMING_SNAKE_CASE  Constant variables SCREAMING_SNAKE_CASE  Type parameters 简洁的 CamelCase，比如 T  Lifetimes 简短的小写字母，比如 &#39;a       首字母缩写词写成 Uuid，而不是 UUID   module[2]  如果模块 foo 没有子模块，则代码放在 foo.</description>
     </item>
     
     <item>
@@ -369,6 +369,19 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
  [2] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.
  [3] WIKIPEDIA. Outer product[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Outer_product.
   目录  相似矩阵 正交矩阵[1] 旋转矩阵[2] 外积[3] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>统计</title>
+      <link>https://kaizhang91.github.io/notes/docs/math/statistics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/math/statistics/</guid>
+      <description>中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
+则中位数为：
+\[ \median(x) = \begin{cases} x_{((n+1)/2)}, &amp;amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp;amp; n \text{为偶数} \end{cases} \]
+目录  中位数   </description>
     </item>
     
     <item>

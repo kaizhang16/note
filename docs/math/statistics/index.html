@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="网络"><meta property="og:title" content="网络" />
-<meta property="og:description" content="iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &lt;rule_number&gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    " />
+<meta name="description" content="统计"><meta property="og:title" content="统计" />
+<meta property="og:description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
+则中位数为：
+\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \]
+目录  中位数   " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/network/" />
-<meta property="article:modified_time" content="2020-04-27T12:58:34+00:00" />
-<title>网络 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/math/statistics/" />
+<meta property="article:modified_time" content="2020-05-24T08:30:16+00:00" />
+<title>统计 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -65,7 +69,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li><strong>数学</strong>
 <ul>
-<li><a href="/notes/docs/math/statistics/">统计</a></li>
+<li><a href="/notes/docs/math/statistics/"class=active>统计</a></li>
 <li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
 </ul>
 </li>
@@ -80,7 +84,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/cs/encoding/">编码</a></li>
 <li><a href="/notes/docs/cs/security/">安全</a></li>
-<li><a href="/notes/docs/cs/network/"class=active>网络</a></li>
+<li><a href="/notes/docs/cs/network/">网络</a></li>
 <li><a href="/notes/docs/cs/transmission/">传输</a></li>
 <li><a href="/notes/docs/cs/data-type/">数据类型</a></li>
 <li><a href="/notes/docs/cs/linux/">Linux</a></li>
@@ -155,7 +159,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>网络</strong>
+  <strong>统计</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -177,26 +181,22 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="iptables">iptables</h1>
-<h2 id="列出-nat-规则">列出 nat 规则</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">iptables</span> -t nat -L</span></code></pre></div>
-<h2 id="列出-prerouting-规则">列出 prerouting 规则</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">sudo</span> iptables -t nat -v -L PREROUTING -n --line-number</span></code></pre></div>
-<h2 id="删除-prerouting-规则">删除 prerouting 规则</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">sudo</span> iptables -t nat -D PREROUTING <span class="op">&lt;</span>rule_number<span class="op">&gt;</span></span></code></pre></div>
-<h2 id="端口转发">端口转发</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">iptables</span> -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080</span></code></pre></div>
+<article class="markdown"><h1 id="中位数">中位数</h1>
+<p>先把 <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> 从小到大排序，得到</p>
+<p><span class="math display">\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]</span></p>
+<p>则中位数为：</p>
+<p><span class="math display">\[
+\median(x) = 
+\begin{cases}
+x_{((n+1)/2)}, &amp; n \text{为奇数} \\
+\frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp; n \text{为偶数}
+\end{cases}
+\]</span></p>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#iptables">iptables</a>
-  <ul>
-  <li><a href="#列出-nat-规则">列出 nat 规则</a></li>
-  <li><a href="#列出-prerouting-规则">列出 prerouting 规则</a></li>
-  <li><a href="#删除-prerouting-规则">删除 prerouting 规则</a></li>
-  <li><a href="#端口转发">端口转发</a></li>
-  </ul></li>
+  <li><a href="#中位数">中位数</a></li>
   </ul>
 </nav>
 </article>
@@ -211,9 +211,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf88e1004241a99999b2d249e280bcda12371d02" title='最后修改者 Kai Zhang | 2020-04-27 20:58:34 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4dbb6fdc9252e656b3844b7e0c75aed640a6094c" title='最后修改者 Kai Zhang | 2020-05-24 16:30:16 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-27 20:58:34 &#43;0800</span>
+      <span>2020-05-24 16:30:16 &#43;0800</span>
     </a>
   </div>
 
