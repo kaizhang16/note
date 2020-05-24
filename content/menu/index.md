@@ -3,6 +3,7 @@ headless: true
 ---
 
 - **数学**
+  - [统计]({{< relref "/docs/math/statistics" >}})
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
 - **视觉**
   - [图像]({{< relref "/docs/visual/image" >}})

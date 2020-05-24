@@ -2,6 +2,15 @@
 title: "Pandoc"
 ---
 
+# 引用
+
+- 在方括号里
+- 分号分隔
+
+```pandoc
+[@smith04; @doe99]
+```
+
 # Extension
 
 - `+EXTENSION` 启用
