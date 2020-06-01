@@ -47,5 +47,5 @@ headless: true
   - [构建]({{< relref "/docs/tools/build" >}})
   - [Linux]({{< relref "/docs/tools/linux" >}})
   - [格式]({{< relref "/docs/tools/format" >}})
-  - [Word]({{< relref "/docs/tools/word" >}})
+  - [Windows]({{< relref "/docs/tools/windows" >}})
   - [项目管理]({{< relref "/docs/tools/project-management" >}})
