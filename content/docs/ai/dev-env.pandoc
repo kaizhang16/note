@@ -1,0 +1,50 @@
+---
+title: "开发环境"
+---
+
+# Docker
+
+## Docker >= 19.03
+
+```sh
+#### Test nvidia-smi with the latest official CUDA image
+docker run --gpus=all nvidia/cuda:10.2-base nvidia-smi
+```
+
+## Docker < 19.03
+
+```sh
+#### Test nvidia-smi with the latest official CUDA image
+nvidia-docker run nvidia/cuda:10.2-base nvidia-smi
+```
+
+# Jupyter
+
+## jupyter_contrib_nbextensions
+
+### 安装
+
+```sh
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+```
+
+### 使用
+
+打开 `http://<host>:<port>/nbextensions` 管理。
+
+# PyTorch
+
+## 安装
+
+```sh
+pip install torch torchvision
+```
+
+## Tensor
+
+- tensor 可以用 GPU 加速计算
+
+| tensor 方法 | 含义     |
+|-------------|----------|
+| `size()`    | 得到维数 |
