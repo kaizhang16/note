@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pandoc"><meta property="og:title" content="Pandoc" />
-<meta property="og:description" content="引用  在方括号里 分号分隔  [@smith04; @doe99] Extension  &#43;EXTENSION 启用 -EXTENSION 禁用  emoji emoji 列表请参考 https://github.com/ikatyang/emoji-cheat-sheet。
-目录  引用 Extension  emoji    " />
+<meta name="description" content="开发环境"><meta property="og:title" content="开发环境" />
+<meta property="og:description" content="Docker Docker &gt;= 19.03 #### Test nvidia-smi with the latest official CUDA image docker run --gpus=all nvidia/cuda:10.2-base nvidia-smi Docker &lt; 19.03 #### Test nvidia-smi with the latest official CUDA image nvidia-docker run nvidia/cuda:10.2-base nvidia-smi Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。
+PyTorch 安装 pip install torch torchvision Tensor  tensor 可以用 GPU 加速计算    tensor 方法 含义    size() 得到维数    目录  Docker  Docker &gt;= 19." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/pandoc/" />
-<meta property="article:modified_time" content="2020-05-24T08:30:16+00:00" />
-<title>Pandoc | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/dev-env/" />
+<meta property="article:modified_time" content="2020-06-08T14:21:38+00:00" />
+<title>开发环境 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -68,7 +68,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/ai/machine-learning/">机器学习</a></li>
 <li><a href="/notes/docs/ai/nlp/">自然语言处理</a></li>
-<li><a href="/notes/docs/ai/dev-env/">开发环境</a></li>
+<li><a href="/notes/docs/ai/dev-env/"class=active>开发环境</a></li>
 </ul>
 </li>
 <li><strong>数学</strong>
@@ -101,7 +101,7 @@ https://github.com/alex-shpak/hugo-book
 </li>
 <li><strong>编程语言</strong>
 <ul>
-<li><a href="/notes/docs/program/pandoc/"class=active>Pandoc</a></li>
+<li><a href="/notes/docs/program/pandoc/">Pandoc</a></li>
 <li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/rust/">Rust</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
@@ -163,7 +163,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Pandoc</strong>
+  <strong>开发环境</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -185,27 +185,62 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="引用">引用</h1>
+<article class="markdown"><h1 id="docker">Docker</h1>
+<h2 id="docker-19.03">Docker &gt;= 19.03</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#### Test nvidia-smi with the latest official CUDA image</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">docker</span> run --gpus=all nvidia/cuda:10.2-base nvidia-smi</span></code></pre></div>
+<h2 id="docker-19.03-1">Docker &lt; 19.03</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#### Test nvidia-smi with the latest official CUDA image</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="ex">nvidia-docker</span> run nvidia/cuda:10.2-base nvidia-smi</span></code></pre></div>
+<h1 id="jupyter">Jupyter</h1>
+<h2 id="jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</h2>
+<h3 id="安装">安装</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pip</span> install jupyter_contrib_nbextensions</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">jupyter</span> contrib nbextension install --user</span></code></pre></div>
+<h3 id="使用">使用</h3>
+<p>打开 <code>http://&lt;host&gt;:&lt;port&gt;/nbextensions</code> 管理。</p>
+<h1 id="pytorch">PyTorch</h1>
+<h2 id="安装-1">安装</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">pip</span> install torch torchvision</span></code></pre></div>
+<h2 id="tensor">Tensor</h2>
 <ul>
-<li>在方括号里</li>
-<li>分号分隔</li>
+<li>tensor 可以用 GPU 加速计算</li>
 </ul>
-<pre class="pandoc"><code>[@smith04; @doe99]</code></pre>
-<h1 id="extension">Extension</h1>
-<ul>
-<li><code>+EXTENSION</code> 启用</li>
-<li><code>-EXTENSION</code> 禁用</li>
-</ul>
-<h2 id="emoji">emoji</h2>
-<p>emoji 列表请参考 <a href="https://github.com/ikatyang/emoji-cheat-sheet" class="uri">https://github.com/ikatyang/emoji-cheat-sheet</a>。</p>
+<table>
+<thead>
+<tr class="header">
+<th>tensor 方法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>size()</code></td>
+<td>得到维数</td>
+</tr>
+</tbody>
+</table>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#引用">引用</a></li>
-  <li><a href="#extension">Extension</a>
+  <li><a href="#docker">Docker</a>
   <ul>
-  <li><a href="#emoji">emoji</a></li>
+  <li><a href="#docker-19.03">Docker &gt;= 19.03</a></li>
+  <li><a href="#docker-19.03-1">Docker &lt; 19.03</a></li>
+  </ul></li>
+  <li><a href="#jupyter">Jupyter</a>
+  <ul>
+  <li><a href="#jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</a>
+  <ul>
+  <li><a href="#安装">安装</a></li>
+  <li><a href="#使用">使用</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#pytorch">PyTorch</a>
+  <ul>
+  <li><a href="#安装-1">安装</a></li>
+  <li><a href="#tensor">Tensor</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -221,9 +256,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4dbb6fdc9252e656b3844b7e0c75aed640a6094c" title='最后修改者 Kai Zhang | 2020-05-24 16:30:16 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0d3550fde6aac554e672c121659db52ec16c6c1f" title='最后修改者 Kai Zhang | 2020-06-08 22:21:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-24 16:30:16 &#43;0800</span>
+      <span>2020-06-08 22:21:38 &#43;0800</span>
     </a>
   </div>
 

@@ -292,6 +292,16 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
     </item>
     
     <item>
+      <title>开发环境</title>
+      <link>https://kaizhang91.github.io/notes/docs/ai/dev-env/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/ai/dev-env/</guid>
+      <description>Docker Docker &amp;gt;= 19.03 #### Test nvidia-smi with the latest official CUDA image docker run --gpus=all nvidia/cuda:10.2-base nvidia-smi Docker &amp;lt; 19.03 #### Test nvidia-smi with the latest official CUDA image nvidia-docker run nvidia/cuda:10.2-base nvidia-smi Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。
+PyTorch 安装 pip install torch torchvision Tensor  tensor 可以用 GPU 加速计算    tensor 方法 含义    size() 得到维数    目录  Docker  Docker &amp;gt;= 19.</description>
+    </item>
+    
+    <item>
       <title>搜索</title>
       <link>https://kaizhang91.github.io/notes/docs/tools/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -320,6 +330,15 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
 数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
   目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://kaizhang91.github.io/notes/docs/ai/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/ai/machine-learning/</guid>
+      <description>中位数 目录  中位数   </description>
     </item>
     
     <item>
@@ -414,6 +433,16 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       
       <guid>https://kaizhang91.github.io/notes/docs/cs/network/</guid>
       <description>iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &amp;lt;rule_number&amp;gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    </description>
+    </item>
+    
+    <item>
+      <title>自然语言处理</title>
+      <link>https://kaizhang91.github.io/notes/docs/ai/nlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/ai/nlp/</guid>
+      <description>LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+目录  LSTM 与 GRU   </description>
     </item>
     
     <item>
