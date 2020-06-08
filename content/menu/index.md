@@ -2,6 +2,10 @@
 headless: true
 ---
 
+- **AI**
+  - [机器学习]({{< relref "/docs/ai/machine-learning" >}})
+  - [自然语言处理]({{< relref "/docs/ai/nlp" >}})
+  - [开发环境]({{< relref "/docs/ai/dev-env" >}})
 - **数学**
   - [统计]({{< relref "/docs/math/statistics" >}})
   - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
