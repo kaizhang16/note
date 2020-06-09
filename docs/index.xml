@@ -297,8 +297,8 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/ai/dev-env/</guid>
-      <description>Docker Docker &amp;gt;= 19.03 #### Test nvidia-smi with the latest official CUDA image docker run --gpus=all nvidia/cuda:10.2-base nvidia-smi Docker &amp;lt; 19.03 #### Test nvidia-smi with the latest official CUDA image nvidia-docker run nvidia/cuda:10.2-base nvidia-smi Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。
-PyTorch 安装 pip install torch torchvision Tensor  tensor 可以用 GPU 加速计算    tensor 方法 含义    size() 得到维数    目录  Docker  Docker &amp;gt;= 19.</description>
+      <description>Docker Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。
+PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 with torch.no_grad():  for data in testloader:  images, labels = data  outputs = net(images)  _, predicted = torch.max(outputs.data, 1)  total += labels.</description>
     </item>
     
     <item>
