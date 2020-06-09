@@ -7,15 +7,13 @@ title: "开发环境"
 ## Docker >= 19.03
 
 ```sh
-#### Test nvidia-smi with the latest official CUDA image
-docker run --gpus=all nvidia/cuda:10.2-base nvidia-smi
+docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi
 ```
 
 ## Docker < 19.03
 
 ```sh
-#### Test nvidia-smi with the latest official CUDA image
-nvidia-docker run nvidia/cuda:10.2-base nvidia-smi
+nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi
 ```
 
 # Jupyter
@@ -41,10 +39,47 @@ jupyter contrib nbextension install --user
 pip install torch torchvision
 ```
 
+## 计算精度
+
+```py
+correct = 0
+total = 0
+with torch.no_grad():
+    for data in testloader:
+        images, labels = data
+        outputs = net(images)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
+print('Accuracy of the network on the 10000 test images: %d %%' % (
+    100 * correct / total))
+```
+
 ## Tensor
 
-- tensor 可以用 GPU 加速计算
+- Tensor 可以用 GPU 加速计算
+- 带 `_` 后缀的方法改变张量
+- Tensor 在 CPU 上时，与 NumPy array 共享内存
+- `with torch.no_grad():` 可以不计算梯度
 
-| tensor 方法 | 含义     |
-|-------------|----------|
-| `size()`    | 得到维数 |
+| Tensor 方法    | 含义                                       |
+|----------------|--------------------------------------------|
+| `size()`       | 得到维数                                   |
+| `view()`       | resize（某个 size 为 -1 时用其他维数推断） |
+| `item()`       | 得到里面的数字                             |
+| `numpy()`      | 返回 NumPy array                           |
+| `from_numpy()` | 由 NumPy array 得到张量                    |
+| `detach()`     | 不再参与计算                               |
+
+: torch.Tensor 常用方法 {#tbl:torch_methods}
+
+## device
+
+```py
+device = torch.device("cuda")
+```
+
+## Module
+
+`net.zero_grad()` 可以清空存在的梯度，不然梯度会累积。
