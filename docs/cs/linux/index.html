@@ -8,7 +8,7 @@
 <meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/linux/" />
-<meta property="article:modified_time" content="2020-05-13T14:40:58+00:00" />
+<meta property="article:modified_time" content="2020-06-16T09:37:35+00:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.7a67948daea7cb200a977bcb1ccefc6dceeb6c47ed93f70f5232f535a3654cf8.js" integrity="sha256-emeUja6nyyAKl3vLHM78bc7rbEftk/cPUjL1NaNlTPg="></script>
+<script defer src="/notes/cn.search.min.db5e6e1774c9d577397a1e7df5db1084ceadffa5bc2808994e157bc2c07928b0.js" integrity="sha256-215uF3TJ1Xc5eh599dsQhM6t/6W8KAiZThV7wsB5KLA="></script>
 
 <!--
 Made with Book Theme
@@ -239,6 +239,8 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co"># sysctl --system  # 使更改生效</span></span></code></pre></div>
 <h1 id="sed">Sed</h1>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">sed</span> <span class="st">&#39;s/Hello/Hi/g&#39;</span> <span class="op">&lt;</span>file_name<span class="op">&gt;</span> <span class="op">&gt;</span> file</span></code></pre></div>
+<h1 id="壁纸">壁纸</h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">nix-env</span> -iA nixpkgs.variety</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -269,6 +271,7 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#core-pattern">Core Pattern</a></li>
   <li><a href="#sed">Sed</a></li>
+  <li><a href="#壁纸">壁纸</a></li>
   </ul>
 </nav>
 </article>
@@ -283,9 +286,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4ed4b979ef711df3414ec3f05cd3d051f8917584" title='最后修改者 Kai Zhang | 2020-05-13 22:40:58 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a6837941c5981400014e5ad3ff7bd71c5ae82a7a" title='最后修改者 Kai Zhang | 2020-06-16 17:37:35 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-13 22:40:58 &#43;0800</span>
+      <span>2020-06-16 17:37:35 &#43;0800</span>
     </a>
   </div>
 
@@ -352,6 +355,7 @@ https://github.com/alex-shpak/hugo-book
                 set: ["{\\mathbb{#1}}", 1],
                 sign: ["\\textrm{sign}"],
                 SO: ["\\textrm{SO}"],
+                tanh: ["\\textrm{tanh}"],
                 transformation: ["{\\mathcal{#1}}", 1],
                 transpose: ["{#1}^{\\mathsf{T}}", 1],
                 vec: ["{\\bm{#1}}", 1],
