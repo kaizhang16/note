@@ -56,12 +56,15 @@ print('Accuracy of the network on the 10000 test images: %d %%' % (
     100 * correct / total))
 ```
 
+## 模型
+
+- evaluate 模型时，代码需要包含在 `with torch.no_grad():` 里，避免计算梯度
+
 ## Tensor
 
 - Tensor 可以用 GPU 加速计算
 - 带 `_` 后缀的方法改变张量
 - Tensor 在 CPU 上时，与 NumPy array 共享内存
-- `with torch.no_grad():` 可以不计算梯度
 
 | Tensor 方法    | 含义                                       |
 |----------------|--------------------------------------------|
