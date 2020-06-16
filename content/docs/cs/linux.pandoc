@@ -63,3 +63,9 @@ sudo pacman -S xf86-video-vmware
 ```sh
 sed 's/Hello/Hi/g' <file_name> > file
 ```
+
+# 壁纸
+
+```sh
+nix-env -iA nixpkgs.variety
+```

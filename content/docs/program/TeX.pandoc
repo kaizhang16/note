@@ -4,10 +4,11 @@ title: "TeX"
 
 # 运算符
 
-| 运算符             | 含义 | $\TeX$ 表示        |
-|--------------------|------|--------------------|
-| $\langle, \rangle$ | 内积 | `\langle, \rangle` |
-| $\otimes$          | 外积 | `\otimes`          |
+| 运算符             | 含义             | $\TeX$ 表示        |
+|--------------------|------------------|--------------------|
+| $\langle, \rangle$ | 内积             | `\langle, \rangle` |
+| $\otimes$          | 外积             | `\otimes`          |
+| $\odot$            | Hadamard product | `\odot`[@TeX_odot] |
 
 : 运算符 {#tbl:TeXOperators}
 
@@ -18,6 +19,7 @@ title: "TeX"
 | $\{n \mid 0 \le n \le 19\}$ | 集合   | `\{n \mid 0 \le n \le 19\}` |
 | $\bar{p}$                   | 平均值 | `\bar{p}`                   |
 | $\set{R}$                   | 实数集 | `\set{R}`                   |
+| $\tilde{A}$                 | 变体   | `\tilde{A}`                 |
 
 : 数学表达式 {#tbl:TeXExpressions}
 
@@ -25,7 +27,7 @@ title: "TeX"
 
 ```tex
 \begin{align}
-2x - 5y &=  8 \\ 
+2x - 5y &=  8 \\
 3x + 9y &=  -12
 \end{align}
 ```

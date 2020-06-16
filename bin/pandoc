@@ -1,5 +1,6 @@
 #! /usr/bin/env bash
 
+# ~/.nix-profile/bin/pandoc \
 /usr/bin/pandoc \
   --from=markdown+emoji \
   --to=html \

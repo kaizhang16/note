@@ -5,3 +5,48 @@ title: "自然语言处理"
 # LSTM 与 GRU
 
 请参考 <https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21>。
+
+## LSTM
+
+请参考 <https://colah.github.io/posts/2015-08-Understanding-LSTMs/>。
+
+Forget gate:
+
+$$
+f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
+$$ {#eq:lstm_forget_gate}
+
+Input gate:
+
+$$
+i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
+$$ {#eq:lstm_input_gate}
+
+Cell state:
+
+$$
+\begin{align}
+\tilde{C}_t &= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\
+C_t &= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
+\end{align}
+$$ {#eq:lstm_C}
+
+Output:
+
+$$
+\begin{align}
+o_t &= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+h_t &= o_t \odot \tanh(C_t)
+\end{align}
+$$ {#eq:lstm_output}
+
+## GRU
+
+$$
+\begin{align}
+z_t &= \sigma(W_z \cdot [h_{t-1}, x_t]) \\
+r_t &= \sigma(W_r \cdot [h_{t-1}, x_t]) \\
+\tilde{h}_t &= \tanh(W_h \cdot [r_t \odot h_{t-1}, x_t]) \\
+h_t &= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
+\end{align}
+$$ {#eq:gru}
