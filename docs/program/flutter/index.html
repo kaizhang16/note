@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.db5e6e1774c9d577397a1e7df5db1084ceadffa5bc2808994e157bc2c07928b0.js" integrity="sha256-215uF3TJ1Xc5eh599dsQhM6t/6W8KAiZThV7wsB5KLA="></script>
+<script defer src="/notes/cn.search.min.fd835632ef1ce322b638ea96b8cdf06d0f7cc959722bd0096361bb6540498ee4.js" integrity="sha256-/YNWMu8c4yK2OOqWuM3wbQ98yVlyK9AJY2G7ZUBJjuQ="></script>
 
 <!--
 Made with Book Theme
@@ -96,7 +96,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/cs/http/">HTTP</a></li>
 <li><a href="/notes/docs/cs/oauth2/">OAuth 2</a></li>
 <li><a href="/notes/docs/cs/compress/">压缩</a></li>
-<li><a href="/notes/docs/cs/deploy/">部署</a></li>
+<li><a href="/notes/docs/cs/ci/">持续集成</a></li>
 </ul>
 </li>
 <li><strong>编程语言</strong>
@@ -323,65 +323,73 @@ switch (command) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 
 <script>
-    
-    const tableOfContents = document.getElementById("TableOfContents");
-    const tableOfContents1 = tableOfContents.cloneNode(true);
-    document.querySelector(".book-toc").appendChild(tableOfContents);
-    document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
+  
+  const tableOfContents = document.getElementById("TableOfContents");
+  const tableOfContents1 = tableOfContents.cloneNode(true);
+  document.querySelector(".book-toc").appendChild(tableOfContents);
+  document
+    .getElementById("toc-control")
+    .nextElementSibling.appendChild(tableOfContents1);
 
-    
-    const searchResults = document.getElementById("book-search-results");
-    document.getElementById("book-search-input").addEventListener("keyup", event => {
-        
-        
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            if (searchResults.childNodes.length > 0) {
-                const searchResult = searchResults.childNodes[0].childNodes[0];
-                window.location.href = searchResult.href;
-            }
+  
+  const searchResults = document.getElementById("book-search-results");
+  document
+    .getElementById("book-search-input")
+    .addEventListener("keyup", (event) => {
+      
+      
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        if (searchResults.childNodes.length > 0) {
+          const searchResult = searchResults.childNodes[0].childNodes[0];
+          window.location.href = searchResult.href;
         }
+      }
     });
 
-    
-    MathJax = {
-        tex: {
-            macros: {
-                bm: ["{\\boldsymbol{#1}}", 1],
-                diag: ["\\textrm{diag}"],
-                matrix: ["{\\bm{#1}}", 1],
-                median: ["\\textrm{median}"],
-                set: ["{\\mathbb{#1}}", 1],
-                sign: ["\\textrm{sign}"],
-                SO: ["\\textrm{SO}"],
-                tanh: ["\\textrm{tanh}"],
-                transformation: ["{\\mathcal{#1}}", 1],
-                transpose: ["{#1}^{\\mathsf{T}}", 1],
-                vec: ["{\\bm{#1}}", 1],
-            }
-        }
-    };
+  
+  MathJax = {
+    tex: {
+      macros: {
+        bm: ["{\\boldsymbol{#1}}", 1],
+        diag: ["\\textrm{diag}"],
+        matrix: ["{\\bm{#1}}", 1],
+        median: ["\\textrm{median}"],
+        set: ["{\\mathbb{#1}}", 1],
+        sign: ["\\textrm{sign}"],
+        SO: ["\\textrm{SO}"],
+        tanh: ["\\textrm{tanh}"],
+        transformation: ["{\\mathcal{#1}}", 1],
+        transpose: ["{#1}^{\\mathsf{T}}", 1],
+        vec: ["{\\bm{#1}}", 1],
+      },
+    },
+  };
 
-    
-    hljs.initHighlightingOnLoad();
-    
+  
+  hljs.initHighlightingOnLoad();
+  
 
 
-    
-    window.setTimeout(() => {
-        document.querySelectorAll("table").forEach(table => {
-            
-            
-            
-            const tableWidth = table.caption.clientWidth + 1;
-            table.style.width = tableWidth + "px";
-        });
-    }, 100);
+  
+  window.setTimeout(() => {
+    document.querySelectorAll("table").forEach((table) => {
+      
+      
+      
+      const tableWidth = table.caption.clientWidth + 1;
+      table.style.width = tableWidth + "px";
+    });
+  }, 100);
 </script>
 
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
 
 
 

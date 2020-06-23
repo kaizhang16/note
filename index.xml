@@ -221,10 +221,11 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
 横向纸张 请参考 https://support.office.com/zh-cn/article/%E5%B0%86%E9%A1%B5%E9%9D%A2%E6%96%B9%E5%90%91%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%A8%AA%E5%90%91%E6%88%96%E7%BA%B5%E5%90%91-9b5ac1af-9998-4a37-962b-a82b689572a9。
 调整页边距 请参考 http://www.officexr.com/c/14244.html。
 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
+修改脚注上方的横线 请参考 https://zhidao.baidu.com/question/1895317289698826500.html。
 PPT 插入圆角矩阵 请参考 https://zhidao.baidu.com/question/520937235.html。
 调整圆角矩形的圆角大小 调整小黄点位置，具体请参考 https://zhidao.baidu.com/question/309456592.html。
 取色器 请参考 https://support.office.com/zh-cn/article/%E4%BD%BF%E7%94%A8%E5%8F%96%E8%89%B2%E5%99%A8%E5%8C%B9%E9%85%8D%E5%B9%BB%E7%81%AF%E7%89%87%E4%B8%8A%E7%9A%84%E9%A2%9C%E8%89%B2-d5e7a32a-da6c-4bed-9f1e-8797f07174e9。
-目录  Word  插入引用 连续多项引用 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线  PPT  插入圆角矩阵 调整圆角矩形的圆角大小 取色器    </description>
+目录  Word  插入引用 连续多项引用 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线 修改脚注上方的横线  PPT  插入圆角矩阵 调整圆角矩形的圆角大小 取色器    </description>
     </item>
     
     <item>
@@ -299,6 +300,15 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <guid>https://kaizhang91.github.io/notes/docs/ai/dev-env/</guid>
       <description>Docker Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。
 PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 with torch.no_grad():  for data in testloader:  images, labels = data  outputs = net(images)  _, predicted = torch.max(outputs.data, 1)  total += labels.</description>
+    </item>
+    
+    <item>
+      <title>持续集成</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/ci/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/ci/</guid>
+      <description>Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
     </item>
     
     <item>
@@ -460,15 +470,6 @@ Output:
       
       <guid>https://kaizhang91.github.io/notes/docs/visual/video/</guid>
       <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
-    </item>
-    
-    <item>
-      <title>部署</title>
-      <link>https://kaizhang91.github.io/notes/docs/cs/deploy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/notes/docs/cs/deploy/</guid>
-      <description>Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
     </item>
     
     <item>
