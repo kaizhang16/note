@@ -2,48 +2,52 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
 
 <script>
-    // Table of contents
-    const tableOfContents = document.getElementById("TableOfContents");
-    const tableOfContents1 = tableOfContents.cloneNode(true);
-    document.querySelector(".book-toc").appendChild(tableOfContents);
-    document.getElementById("toc-control").nextElementSibling.appendChild(tableOfContents1);
+  // Table of contents
+  const tableOfContents = document.getElementById("TableOfContents");
+  const tableOfContents1 = tableOfContents.cloneNode(true);
+  document.querySelector(".book-toc").appendChild(tableOfContents);
+  document
+    .getElementById("toc-control")
+    .nextElementSibling.appendChild(tableOfContents1);
 
-    // Search
-    const searchResults = document.getElementById("book-search-results");
-    document.getElementById("book-search-input").addEventListener("keyup", event => {
-        // Navigate to the first searchResults when press "Enter"
-        // 13 is "Enter" key
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            if (searchResults.childNodes.length > 0) {
-                const searchResult = searchResults.childNodes[0].childNodes[0];
-                window.location.href = searchResult.href;
-            }
+  // Search
+  const searchResults = document.getElementById("book-search-results");
+  document
+    .getElementById("book-search-input")
+    .addEventListener("keyup", (event) => {
+      // Navigate to the first searchResults when press "Enter"
+      // 13 is "Enter" key
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        if (searchResults.childNodes.length > 0) {
+          const searchResult = searchResults.childNodes[0].childNodes[0];
+          window.location.href = searchResult.href;
         }
+      }
     });
 
-    // MathJax configuration
-    MathJax = {
-        tex: {
-            macros: {
-                bm: ["{\\boldsymbol{#1}}", 1],
-                diag: ["\\textrm{diag}"],
-                matrix: ["{\\bm{#1}}", 1],
-                median: ["\\textrm{median}"],
-                set: ["{\\mathbb{#1}}", 1],
-                sign: ["\\textrm{sign}"],
-                SO: ["\\textrm{SO}"],
-                tanh: ["\\textrm{tanh}"],
-                transformation: ["{\\mathcal{#1}}", 1],
-                transpose: ["{#1}^{\\mathsf{T}}", 1],
-                vec: ["{\\bm{#1}}", 1],
-            }
-        }
-    };
+  // MathJax configuration
+  MathJax = {
+    tex: {
+      macros: {
+        bm: ["{\\boldsymbol{#1}}", 1],
+        diag: ["\\textrm{diag}"],
+        matrix: ["{\\bm{#1}}", 1],
+        median: ["\\textrm{median}"],
+        set: ["{\\mathbb{#1}}", 1],
+        sign: ["\\textrm{sign}"],
+        SO: ["\\textrm{SO}"],
+        tanh: ["\\textrm{tanh}"],
+        transformation: ["{\\mathcal{#1}}", 1],
+        transpose: ["{#1}^{\\mathsf{T}}", 1],
+        vec: ["{\\bm{#1}}", 1],
+      },
+    },
+  };
 
-    // Code
-    hljs.initHighlightingOnLoad();
-    /*
+  // Code
+  hljs.initHighlightingOnLoad();
+  /*
     document.querySelectorAll("pre").forEach(pre => {
         console.info("pre.classList", pre.classList);
         pre.classList.remove("sourceCode");
@@ -63,21 +67,25 @@
     });
     */
 
-    // Table
-    window.setTimeout(() => {
-        document.querySelectorAll("table").forEach(table => {
-            // console.info("caption", table.caption.clientWidth);
-            // console.info("tHead", table.tHead.clientWidth);
-            // console.info("tBody", table.tBodies[0].clientWidth);
-            const tableWidth = table.caption.clientWidth + 1;
-            table.style.width = tableWidth + "px";
-        });
-    }, 100);
+  // Table
+  window.setTimeout(() => {
+    document.querySelectorAll("table").forEach((table) => {
+      // console.info("caption", table.caption.clientWidth);
+      // console.info("tHead", table.tHead.clientWidth);
+      // console.info("tBody", table.tBodies[0].clientWidth);
+      const tableWidth = table.caption.clientWidth + 1;
+      table.style.width = tableWidth + "px";
+    });
+  }, 100);
 </script>
 
 <!-- MathJax -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
 
 <!-- Prism -->
 <!--

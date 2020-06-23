@@ -1,5 +1,5 @@
 ---
-title: "部署"
+title: "持续集成"
 ---
 
 # Ansible
@@ -110,5 +110,14 @@ web01.somedomain.com ansible_port=1234
 ```sh
 systemd-escape -p --suffix=mount "/tmp//waldi/foobar/"
 ```
+
+# GitHub
+
+## Actions
+
+### 加密信息
+
+请参考
+<https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets>。
 
 # 参考文献

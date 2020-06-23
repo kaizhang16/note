@@ -24,7 +24,7 @@ headless: true
   - [HTTP]({{< relref "/docs/cs/http" >}})
   - [OAuth 2]({{< relref "/docs/cs/oauth2" >}})
   - [压缩]({{< relref "/docs/cs/compress" >}})
-  - [部署]({{< relref "/docs/cs/deploy" >}})
+  - [持续集成]({{< relref "/docs/cs/ci" >}})
 - **编程语言**
   - [Pandoc]({{< relref "/docs/program/pandoc" >}})
   - [TeX]({{< relref "/docs/program/TeX" >}})
