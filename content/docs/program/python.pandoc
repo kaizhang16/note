@@ -147,6 +147,12 @@ class C:
     def f(cls, arg1, arg2, ...): ...
 ```
 
+# 三元操作符[@python_ternary]
+
+```py
+a if condition else b
+```
+
 # numpy
 
 ```py
@@ -244,6 +250,23 @@ array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
 >>> np.deg2rad(180)
 3.1415926535897931
 ```
+
+# pandas
+
+## join
+
+| 方法               | 含义            |
+|--------------------|-----------------|
+| `DataFrame.join()` | 按 `index` join |
+
+# pytorch
+
+## RNN
+
+| 函数                   | 用途                          |
+|------------------------|-------------------------------|
+| `pad_packed_sequence`  | 为变长序列填充 0              |
+| `pack_padded_sequence` | 把填充过 0 的序列变成变长序列 |
 
 # Pillow
 
