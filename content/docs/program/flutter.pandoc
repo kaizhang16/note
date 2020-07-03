@@ -28,6 +28,10 @@ var newList = [...list1, ...list2, ...list3];
 
 ## 开发
 
+### Android 手机打开 USB 调试
+
+请参考 <https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html>。
+
 ### 编译
 
 ```sh

@@ -147,10 +147,18 @@ class C:
     def f(cls, arg1, arg2, ...): ...
 ```
 
-# 三元操作符[@python_ternary]
+## 三元操作符[@python_ternary]
 
 ```py
 a if condition else b
+```
+
+## 迭代器
+
+### 找到第一个符合条件的元素[@python_iter_find_first]
+
+```py
+next(obj for obj in objs if obj.val==5)
 ```
 
 # numpy
@@ -255,9 +263,10 @@ array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
 
 ## join
 
-| 方法               | 含义            |
-|--------------------|-----------------|
-| `DataFrame.join()` | 按 `index` join |
+| 方法                | 含义            |
+|---------------------|-----------------|
+| `DataFrame.join()`  | 按 `index` join |
+| `DataFrame.merge()` | 按 `on` join    |
 
 # pytorch
 
