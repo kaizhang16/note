@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Flutter"><meta property="og:title" content="Flutter" />
-<meta property="og:description" content="Dart 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     合并数组 var newList = [...list1, ...list2, ...list3]; Flutter 联网权限[2] &lt;uses-permissionandroid:name=&quot;android.permission.INTERNET&quot; /&gt; 开发 编译 flutter build apk --split-per-abi --verbose 安装  把手机连到电脑上。
+<meta property="og:description" content="Dart 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     合并数组 var newList = [...list1, ...list2, ...list3]; Flutter 联网权限[2] &lt;uses-permissionandroid:name=&quot;android.permission.INTERNET&quot; /&gt; 开发 Android 手机打开 USB 调试 请参考 https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html。
+编译 flutter build apk --split-per-abi --verbose 安装  把手机连到电脑上。
  flutter install 语法 switch var command = &#39;OPEN&#39;; switch (command) { case &#39;CLOSED&#39;: executeClosed(); break; case &#39;PENDING&#39;: executePending(); break; case &#39;APPROVED&#39;: executeApproved(); break; case &#39;DENIED&#39;: executeDenied(); break; case &#39;OPEN&#39;: executeOpen(); break; default: executeUnknown(); } 参考文献 [1] SURAGCH." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/flutter/" />
-<meta property="article:modified_time" content="2020-05-13T14:40:58+00:00" />
+<meta property="article:modified_time" content="2020-07-03T07:07:38+00:00" />
 <title>Flutter | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +18,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.fd835632ef1ce322b638ea96b8cdf06d0f7cc959722bd0096361bb6540498ee4.js" integrity="sha256-/YNWMu8c4yK2OOqWuM3wbQ98yVlyK9AJY2G7ZUBJjuQ="></script>
+<script defer src="/notes/cn.search.min.0a568f3396cfd51b4c462c3f02624e2ce2fef7d312255190bc54866d562d6d1b.js" integrity="sha256-ClaPM5bP1RtMRiw/AmJOLOL&#43;99MSJVGQvFSGbVYtbRs="></script>
 
 <!--
 Made with Book Theme
@@ -210,6 +211,8 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="联网权限flutter_internet">联网权限<span class="citation" data-cites="flutter_internet"><sup>[<a href="#ref-flutter_internet" role="doc-biblioref">2</a>]</sup></span></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;uses-permission</span><span class="ot"> android:name=</span><span class="st">&quot;android.permission.INTERNET&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
 <h2 id="开发">开发</h2>
+<h3 id="android-手机打开-usb-调试">Android 手机打开 USB 调试</h3>
+<p>请参考 <a href="https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html" class="uri">https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html</a>。</p>
 <h3 id="编译">编译</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">flutter</span> build apk --split-per-abi --verbose</span></code></pre></div>
 <h3 id="安装">安装</h3>
@@ -262,6 +265,7 @@ switch (command) {
   <li><a href="#联网权限flutter_internet">联网权限<span class="citation" data-cites="flutter_internet"><sup>[<span>2</span>]</sup></span></a></li>
   <li><a href="#开发">开发</a>
   <ul>
+  <li><a href="#android-手机打开-usb-调试">Android 手机打开 USB 调试</a></li>
   <li><a href="#编译">编译</a></li>
   <li><a href="#安装">安装</a></li>
   </ul></li>
@@ -285,9 +289,9 @@ switch (command) {
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4ed4b979ef711df3414ec3f05cd3d051f8917584" title='最后修改者 Kai Zhang | 2020-05-13 22:40:58 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/91c0718606c777ed20d6a19825bea466465e38c4" title='最后修改者 Kai Zhang | 2020-07-03 15:07:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-13 22:40:58 &#43;0800</span>
+      <span>2020-07-03 15:07:38 &#43;0800</span>
     </a>
   </div>
 

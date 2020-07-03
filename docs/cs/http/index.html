@@ -10,7 +10,7 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
  # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/http/" />
-<meta property="article:modified_time" content="2020-05-21T09:06:30+00:00" />
+<meta property="article:modified_time" content="2020-07-03T07:07:38+00:00" />
 <title>HTTP | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -18,7 +18,7 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.fd835632ef1ce322b638ea96b8cdf06d0f7cc959722bd0096361bb6540498ee4.js" integrity="sha256-/YNWMu8c4yK2OOqWuM3wbQ98yVlyK9AJY2G7ZUBJjuQ="></script>
+<script defer src="/notes/cn.search.min.0a568f3396cfd51b4c462c3f02624e2ce2fef7d312255190bc54866d562d6d1b.js" integrity="sha256-ClaPM5bP1RtMRiw/AmJOLOL&#43;99MSJVGQvFSGbVYtbRs="></script>
 
 <!--
 Made with Book Theme
@@ -267,6 +267,24 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb2-28"><a href="#cb2-28"></a>  --add-module=../nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span></span>
 <span id="cb2-29"><a href="#cb2-29"></a><span class="fu">make</span></span>
 <span id="cb2-30"><a href="#cb2-30"></a><span class="fu">make</span> install</span></code></pre></div>
+<h2 id="websocket">websocket</h2>
+<pre class="nginx"><code>http {
+    map $http_upgrade $connection_upgrade {
+        default upgrade;
+        &#39;&#39;      close;
+    }
+
+    server {
+        ...
+
+        location /chat/ {
+            proxy_pass http://backend;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection $connection_upgrade;
+        }
+    }
+}</code></pre>
 <h2 id="nginx-upload-module">nginx-upload-module</h2>
 <h3 id="配置例子">配置例子</h3>
 <pre class="nginx"><code>server {
@@ -307,17 +325,17 @@ https://github.com/alex-shpak/hugo-book
 }</code></pre>
 <h1 id="curl">curl</h1>
 <h2 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
 <h2 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">5</a>]</sup></span></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
 <h2 id="得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<a href="#ref-curlLocation" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> -si <span class="kw">|</span> <span class="fu">grep</span> -oP <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> -si <span class="kw">|</span> <span class="fu">grep</span> -oP <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
 <h1 id="open-api">Open API</h1>
 <h2 id="redoc">redoc</h2>
 <h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">yarn</span> global add redoc-cli</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">yarn</span> global add redoc-cli</span></code></pre></div>
 <h3 id="生成-api-文档">生成 API 文档</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">redoc-cli</span> bundle <span class="op">&lt;</span>openapi_file_path<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">redoc-cli</span> bundle <span class="op">&lt;</span>openapi_file_path<span class="op">&gt;</span></span></code></pre></div>
 <h2 id="语法">语法</h2>
 <div id="tbl:openapi_data_type">
 <table>
@@ -387,6 +405,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#nginx">NGINX</a>
   <ul>
   <li><a href="#编译安装">编译安装</a></li>
+  <li><a href="#websocket">websocket</a></li>
   <li><a href="#nginx-upload-module">nginx-upload-module</a>
   <ul>
   <li><a href="#配置例子">配置例子</a></li>
@@ -426,9 +445,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/60daa5732c4809634dd0fe164b558c48a1d26af0" title='最后修改者 Kai Zhang | 2020-05-21 17:06:30 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/91c0718606c777ed20d6a19825bea466465e38c4" title='最后修改者 Kai Zhang | 2020-07-03 15:07:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-21 17:06:30 &#43;0800</span>
+      <span>2020-07-03 15:07:38 &#43;0800</span>
     </a>
   </div>
 
