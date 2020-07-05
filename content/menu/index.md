@@ -14,6 +14,7 @@ headless: true
   - [视频]({{< relref "/docs/visual/video" >}})
   - [Unity]({{< relref "/docs/visual/unity" >}})
 - **计算机科学**
+  - [算法]({{< relref "/docs/cs/algorithm" >}})
   - [编码]({{< relref "/docs/cs/encoding" >}})
   - [安全]({{< relref "/docs/cs/security" >}})
   - [网络]({{< relref "/docs/cs/network" >}})
