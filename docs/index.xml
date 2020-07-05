@@ -27,7 +27,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       
       <guid>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</guid>
       <description>代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
- https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  目录  代码风格  文件后缀 命名规范  教程   </description>
+ https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 初始化  代码 含义    std::vector&amp;lt;int&amp;gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     目录  代码风格  文件后缀 命名规范  教程 vector  常用方法    </description>
     </item>
     
     <item>
@@ -390,6 +390,16 @@ PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 
     </item>
     
     <item>
+      <title>算法</title>
+      <link>https://kaizhang91.github.io/notes/docs/cs/algorithm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/docs/cs/algorithm/</guid>
+      <description>数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能 高效地增删查改。
+遍历数组 void traverse(int[] arr) {  for (int i = 0; i &amp;lt; arr.length; i++) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !</description>
+    </item>
+    
+    <item>
       <title>线性代数</title>
       <link>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -435,7 +445,7 @@ PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &amp;lt;Leader&amp;gt;f + Ctrl-x  Buffer：关闭 buffer &amp;lt;Leader&amp;gt;q  文件树：:NERDTreeFind &amp;lt;Leader&amp;gt;tf  文件树：:NERDTreeClose &amp;lt;Leader&amp;gt;tq  表格：:TableModeToggle &amp;lt;Leader&amp;gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands    插件  Visual Studio Code 插件  插件 ID 用途    streetsidesoftware.</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &amp;lt;Leader&amp;gt;f + Ctrl-x  Buffer：关闭 buffer &amp;lt;Leader&amp;gt;q  文件树：:NERDTreeFind &amp;lt;Leader&amp;gt;tf  文件树：:NERDTreeClose &amp;lt;Leader&amp;gt;tq  表格：:TableModeToggle &amp;lt;Leader&amp;gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    streetsidesoftware.</description>
     </item>
     
     <item>
