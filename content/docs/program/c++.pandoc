@@ -25,3 +25,17 @@ title: "C++"
 # 教程
 
 - <https://isocpp.org/get-started>
+
+# vector
+
+## 常用方法
+
+| 代码                                            | 含义               |
+|-------------------------------------------------|--------------------|
+| `std::vector<int> vector1(length, 0);`          | 初始化为 0         |
+| `size()`                                        | 返回元素个数       |
+| `push_back(val)`                                | 在末尾添加元素 val |
+| `pop_back()`                                    | 删除最后一个元素   |
+| `std::find(v.begin(), v.end(), val) != v.end()` | v 包含 val         |
+
+: vector 初始化 {#tbl:vector_methods}
