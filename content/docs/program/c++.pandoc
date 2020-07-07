@@ -38,4 +38,14 @@ title: "C++"
 | `pop_back()`                                    | 删除最后一个元素   |
 | `std::find(v.begin(), v.end(), val) != v.end()` | v 包含 val         |
 
-: vector 初始化 {#tbl:vector_methods}
+: vector 常用方法 {#tbl:vector_methods}
+
+# set
+
+## 常用方法
+
+| 代码                     | 含义       |
+|--------------------------|------------|
+| `s.find(val) != s.end()` | s 包含 val |
+
+: set 常用方法 {#tbl:set_methods}

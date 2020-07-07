@@ -116,25 +116,25 @@ def backtrack(路径, 选择列表):
 ```c++
 // 计算从起点 start 到终点 target 的最近距离
 int BFS(Node start, Node target) {
-    Queue<Node> q; // 核心数据结构
-    Set<Node> visited; // 避免走回头路
+    queue<Node> q; // 核心数据结构
+    set<Node> visited; // 避免走回头路
 
     q.push(start); // 将起点加入队列
-    visited.add(start);
+    visited.insert(start);
     int step = 0; // 记录扩散的步数
 
-    while(q not empty) {
-        int sz = q.size();
-        for (int i = 0; i < sz; i++) {
+    while(q.size() > 0) {
+        int size0 = q.size();
+        for (int i = 0; i < size0; i++) {
             Node cur = q.front();
             q.pop();
-            if (cur is target) {
+            if (cur == target) {
                 return step;
             }
             for (Node x : cur.adj()) {
-                if (x not in visited) {
+                if (visited.find(x) == visited.end()) {
                     q.push(x);
-                    visited.add(x);
+                    visited.insert(x);
                 }
             }
         }
