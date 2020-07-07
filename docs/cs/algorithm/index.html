@@ -9,7 +9,7 @@
 遍历数组 void traverse(int[] arr) {  for (int i = 0; i &lt; arr.length; i&#43;&#43;) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/algorithm/" />
-<meta property="article:modified_time" content="2020-07-05T12:24:01+00:00" />
+<meta property="article:modified_time" content="2020-07-07T13:21:27+00:00" />
 <title>算法 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.6f0dbb541d91fd0ac25165a8d8d8a43643279a7f104b1ab1b8e4d0b5561e3e5e.js" integrity="sha256-bw27VB2R/QrCUWWo2NikNkMnmn8QSxqxuOTQtVYePl4="></script>
+<script defer src="/notes/cn.search.min.e9da1dc5f6158a298f01b073ed488bc486f71fa30f5090c84de8009716a6cd08.js" integrity="sha256-6dodxfYViimPAbBz7UiLxIb3H6MPUJDITegAlxamzQg="></script>
 
 <!--
 Made with Book Theme
@@ -295,6 +295,34 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb6-8"><a href="#cb6-8"></a>        做选择</span>
 <span id="cb6-9"><a href="#cb6-9"></a>        backtrack(路径, 选择列表)</span>
 <span id="cb6-10"><a href="#cb6-10"></a>        撤销选择</span></code></pre></div>
+<h1 id="bfs">BFS</h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">// 计算从起点 start 到终点 target 的最近距离</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="dt">int</span> BFS(Node start, Node target) {</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    Queue&lt;Node&gt; q; <span class="co">// 核心数据结构</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    Set&lt;Node&gt; visited; <span class="co">// 避免走回头路</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    q.push(start); <span class="co">// 将起点加入队列</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>    visited.add(start);</span>
+<span id="cb7-8"><a href="#cb7-8"></a>    <span class="dt">int</span> step = <span class="dv">0</span>; <span class="co">// 记录扩散的步数</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10"></a>    <span class="cf">while</span>(q <span class="kw">not</span> empty) {</span>
+<span id="cb7-11"><a href="#cb7-11"></a>        <span class="dt">int</span> sz = q.size();</span>
+<span id="cb7-12"><a href="#cb7-12"></a>        <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; sz; i++) {</span>
+<span id="cb7-13"><a href="#cb7-13"></a>            Node cur = q.front();</span>
+<span id="cb7-14"><a href="#cb7-14"></a>            q.pop();</span>
+<span id="cb7-15"><a href="#cb7-15"></a>            <span class="cf">if</span> (cur is target) {</span>
+<span id="cb7-16"><a href="#cb7-16"></a>                <span class="cf">return</span> step;</span>
+<span id="cb7-17"><a href="#cb7-17"></a>            }</span>
+<span id="cb7-18"><a href="#cb7-18"></a>            <span class="cf">for</span> (Node x : cur.adj()) {</span>
+<span id="cb7-19"><a href="#cb7-19"></a>                <span class="cf">if</span> (x <span class="kw">not</span> in visited) {</span>
+<span id="cb7-20"><a href="#cb7-20"></a>                    q.push(x);</span>
+<span id="cb7-21"><a href="#cb7-21"></a>                    visited.add(x);</span>
+<span id="cb7-22"><a href="#cb7-22"></a>                }</span>
+<span id="cb7-23"><a href="#cb7-23"></a>            }</span>
+<span id="cb7-24"><a href="#cb7-24"></a>        }</span>
+<span id="cb7-25"><a href="#cb7-25"></a>        step++;</span>
+<span id="cb7-26"><a href="#cb7-26"></a>    }</span>
+<span id="cb7-27"><a href="#cb7-27"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -312,6 +340,7 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#动态规划">动态规划</a></li>
   <li><a href="#回溯法">回溯法</a></li>
+  <li><a href="#bfs">BFS</a></li>
   </ul>
 </nav>
 </article>
@@ -326,9 +355,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/f25cbfdb6223b429f0ff8ee61be5f163c5ac1f5b" title='最后修改者 Kai Zhang | 2020-07-05 20:24:01 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/82f4e085038e03c8a55324a1972ea2e9702731a7" title='最后修改者 Kai Zhang | 2020-07-07 21:21:27 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-05 20:24:01 &#43;0800</span>
+      <span>2020-07-07 21:21:27 &#43;0800</span>
     </a>
   </div>
 
