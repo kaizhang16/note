@@ -27,7 +27,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       
       <guid>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</guid>
       <description>代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
- https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 初始化  代码 含义    std::vector&amp;lt;int&amp;gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     目录  代码风格  文件后缀 命名规范  教程 vector  常用方法    </description>
+ https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 常用方法  代码 含义    std::vector&amp;lt;int&amp;gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     set 常用方法  表 2: set 常用方法  代码 含义    s.</description>
     </item>
     
     <item>
