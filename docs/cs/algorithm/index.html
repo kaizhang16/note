@@ -9,7 +9,7 @@
 遍历数组 void traverse(int[] arr) {  for (int i = 0; i &lt; arr.length; i&#43;&#43;) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/algorithm/" />
-<meta property="article:modified_time" content="2020-07-07T14:54:43+00:00" />
+<meta property="article:modified_time" content="2020-07-08T13:26:58+00:00" />
 <title>算法 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.6dc2ef3961772ada0edfdaf6fe269b5e5909f7e19d92f585269ad5f940d22537.js" integrity="sha256-bcLvOWF3KtoO39r2/iabXlkJ9&#43;GdkvWFJprV&#43;UDSJTc="></script>
+<script defer src="/notes/cn.search.min.1e5f8b14c5d1a18e803155cd1a60ec52b9b4d8647016b73fd3556edf20705587.js" integrity="sha256-Hl&#43;LFMXRoY6AMVXNGmDsUrm02GRwFrc/01Vu3yBwVYc="></script>
 
 <!--
 Made with Book Theme
@@ -323,6 +323,22 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb7-25"><a href="#cb7-25"></a>        step++;</span>
 <span id="cb7-26"><a href="#cb7-26"></a>    }</span>
 <span id="cb7-27"><a href="#cb7-27"></a>}</span></code></pre></div>
+<h1 id="二分搜索">二分搜索</h1>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1"></a><span class="dt">int</span> binary_search(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> target) {</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="dt">int</span> left = <span class="dv">0</span>;</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="dt">int</span> right = nums.size();</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">while</span> (left &lt; right) {</span>
+<span id="cb8-5"><a href="#cb8-5"></a>        <span class="dt">int</span> mid = left + (right - left) / <span class="dv">2</span>; <span class="co">// 防止溢出</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>        <span class="cf">if</span> (nums[mid] == target) {</span>
+<span id="cb8-7"><a href="#cb8-7"></a>            <span class="cf">return</span> mid;</span>
+<span id="cb8-8"><a href="#cb8-8"></a>        } <span class="cf">else</span> <span class="cf">if</span> (nums[mid] &lt; target) {</span>
+<span id="cb8-9"><a href="#cb8-9"></a>            left = mid + <span class="dv">1</span>;</span>
+<span id="cb8-10"><a href="#cb8-10"></a>        } <span class="cf">else</span> {</span>
+<span id="cb8-11"><a href="#cb8-11"></a>            right = mid;</span>
+<span id="cb8-12"><a href="#cb8-12"></a>        }</span>
+<span id="cb8-13"><a href="#cb8-13"></a>    }</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
+<span id="cb8-15"><a href="#cb8-15"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -341,6 +357,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#动态规划">动态规划</a></li>
   <li><a href="#回溯法">回溯法</a></li>
   <li><a href="#bfs">BFS</a></li>
+  <li><a href="#二分搜索">二分搜索</a></li>
   </ul>
 </nav>
 </article>
@@ -355,9 +372,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0bedc13bb751c7cfb26cd17d401b6b35a1bd0607" title='最后修改者 Kai Zhang | 2020-07-07 22:54:43 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/807d346469f09b22d61951fc2f57ed548e4b420b" title='最后修改者 Kai Zhang | 2020-07-08 21:26:58 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-07 22:54:43 &#43;0800</span>
+      <span>2020-07-08 21:26:58 &#43;0800</span>
     </a>
   </div>
 
