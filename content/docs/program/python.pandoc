@@ -175,19 +175,6 @@ import numpy as np
 
 : NumPy 数据类型 {#tbl:numpyTypes}
 
-## numpy.zeros
-
-初始化数组。
-
-```py
->>> np.zeros(5)
-array([ 0.,  0.,  0.,  0.,  0.])
-
->>> np.zeros((2, 1))
-array([[ 0.],
-       [ 0.]])
-```
-
 ## 算术平均
 
 ```py
@@ -239,15 +226,32 @@ U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
 
 测试某个轴上是否有一个元素为真。
 
-## numpy.degrees
+## numpy.arccos
 
-弧度 -> 角度：
+cos 的逆运算。
 
 ```py
->>> rad = np.arange(12.)*np.pi/6
->>> np.degrees(rad)
-array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
-        270.,  300.,  330.])
+>>> np.arccos([1, -1])
+array([ 0.        ,  3.14159265])
+```
+
+## numpy.arctan2
+
+```py
+>>> x = np.array([-1, +1, +1, -1])
+>>> y = np.array([-1, -1, +1, +1])
+>>> np.arctan2(y, x) * 180 / np.pi
+array([-135.,  -45.,   45.,  135.])
+```
+
+## numpy.clip
+
+等价于 `np.minimum(a_max, np.maximum(a, a_min))`。
+
+```py
+>>> a = np.arange(10)
+>>> np.clip(a, 1, 8)
+array([1, 1, 2, 3, 4, 5, 6, 7, 8, 8])
 ```
 
 ## numpy.deg2rad
@@ -259,13 +263,28 @@ array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
 3.1415926535897931
 ```
 
-## numpy.arctan2
+## numpy.degrees
+
+弧度 -> 角度：
 
 ```py
->>> x = np.array([-1, +1, +1, -1])
->>> y = np.array([-1, -1, +1, +1])
->>> np.arctan2(y, x) * 180 / np.pi
-array([-135.,  -45.,   45.,  135.])
+>>> rad = np.arange(12.)*np.pi/6
+>>> np.degrees(rad)
+array([   0.,   30.,   60.,   90.,  120.,  150.,  180.,  210.,  240.,
+        270.,  300.,  330.])
+```
+
+## numpy.zeros
+
+初始化数组。
+
+```py
+>>> np.zeros(5)
+array([ 0.,  0.,  0.,  0.,  0.])
+
+>>> np.zeros((2, 1))
+array([[ 0.],
+       [ 0.]])
 ```
 
 # pandas
