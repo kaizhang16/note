@@ -69,3 +69,11 @@ sed 's/Hello/Hi/g' <file_name> > file
 ```sh
 nix-env -iA nixpkgs.variety
 ```
+
+# 常用命令
+
+## 合并文件
+
+```sh
+cat * > merged-file
+```
