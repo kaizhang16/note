@@ -8,7 +8,7 @@
 <meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/linux/" />
-<meta property="article:modified_time" content="2020-06-16T09:37:35+00:00" />
+<meta property="article:modified_time" content="2020-07-28T10:56:21+00:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.1e5f8b14c5d1a18e803155cd1a60ec52b9b4d8647016b73fd3556edf20705587.js" integrity="sha256-Hl&#43;LFMXRoY6AMVXNGmDsUrm02GRwFrc/01Vu3yBwVYc="></script>
+<script defer src="/notes/cn.search.min.6655da1ca3e3e0514f7d4b34087236b1041c08ebddd91128eb40aa9c0a9e466b.js" integrity="sha256-ZlXaHKPj4FFPfUs0CHI2sQQcCOvd2REo60CqnAqeRms="></script>
 
 <!--
 Made with Book Theme
@@ -242,6 +242,9 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">sed</span> <span class="st">&#39;s/Hello/Hi/g&#39;</span> <span class="op">&lt;</span>file_name<span class="op">&gt;</span> <span class="op">&gt;</span> file</span></code></pre></div>
 <h1 id="壁纸">壁纸</h1>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">nix-env</span> -iA nixpkgs.variety</span></code></pre></div>
+<h1 id="常用命令">常用命令</h1>
+<h2 id="合并文件">合并文件</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">cat</span> * <span class="op">&gt;</span> merged-file</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -273,6 +276,10 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#core-pattern">Core Pattern</a></li>
   <li><a href="#sed">Sed</a></li>
   <li><a href="#壁纸">壁纸</a></li>
+  <li><a href="#常用命令">常用命令</a>
+  <ul>
+  <li><a href="#合并文件">合并文件</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -287,9 +294,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a6837941c5981400014e5ad3ff7bd71c5ae82a7a" title='最后修改者 Kai Zhang | 2020-06-16 17:37:35 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/6f22111431605a64d15344f2fe44d80ac44e6e26" title='最后修改者 Kai Zhang | 2020-07-28 18:56:21 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-06-16 17:37:35 &#43;0800</span>
+      <span>2020-07-28 18:56:21 &#43;0800</span>
     </a>
   </div>
 
