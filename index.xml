@@ -55,9 +55,10 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/fish-shell/</guid>
-      <description>语法 变量赋值 set a b find find . -type f -exec echo &amp;#39;{}&amp;#39; \;  括号需要加引号[1]。
+      <description>语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
+赋值 set a b find find . -type f -exec echo &amp;#39;{}&amp;#39; \;  括号需要加引号[1]。
  [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
-  目录  语法  变量赋值  find   </description>
+  目录  语法  变量  表示 赋值   find   </description>
     </item>
     
     <item>
