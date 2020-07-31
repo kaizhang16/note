@@ -8,7 +8,7 @@
 <meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/linux/" />
-<meta property="article:modified_time" content="2020-07-28T10:56:21+00:00" />
+<meta property="article:modified_time" content="2020-07-31T08:39:25+00:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.3aedb6dee60d901359abc79d83bb4a7305c1d98cb9a2a98415c73531e3412f74.js" integrity="sha256-Ou223uYNkBNZq8edg7tKcwXB2Yy5oqmEFcc1MeNBL3Q="></script>
+<script defer src="/notes/cn.search.min.48876428ed8ac8b2d8b471803b54bbdbb09c4e23e16ecd50763b2bafac10a359.js" integrity="sha256-SIdkKO2KyLLYtHGAO1S727CcTiPhbs1Qdjsrr6wQo1k="></script>
 
 <!--
 Made with Book Theme
@@ -245,6 +245,8 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="常用命令">常用命令</h1>
 <h2 id="合并文件">合并文件</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">cat</span> * <span class="op">&gt;</span> merged-file</span></code></pre></div>
+<h2 id="把-windows-的-crlf-变为-linux-的-lf">把 windows 的 CR+LF 变为 Linux 的 LF</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">dos2unix</span> myfile.txt</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -279,6 +281,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#常用命令">常用命令</a>
   <ul>
   <li><a href="#合并文件">合并文件</a></li>
+  <li><a href="#把-windows-的-crlf-变为-linux-的-lf">把 windows 的 CR+LF 变为 Linux 的 LF</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -294,9 +297,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/6f22111431605a64d15344f2fe44d80ac44e6e26" title='最后修改者 Kai Zhang | 2020-07-28 18:56:21 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/83b73ba2b8c0d37b8ef8f89d2babc61adfed387a" title='最后修改者 Kai Zhang | 2020-07-31 16:39:25 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-28 18:56:21 &#43;0800</span>
+      <span>2020-07-31 16:39:25 &#43;0800</span>
     </a>
   </div>
 
