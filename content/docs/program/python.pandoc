@@ -161,6 +161,20 @@ a if condition else b
 next(obj for obj in objs if obj.val==5)
 ```
 
+### 计算文件的行数[@python_iter_row_count]
+
+```py
+row_count = sum(1 for row in file_object)
+```
+
+## FAQ
+
+### Python3: UnicodeEncodeError: 'ascii' codec can't encode character[@python_faq_unicode]
+
+```sh
+PYTHONIOENCODING=utf-8 python3 script.py
+```
+
 # numpy
 
 ```py
@@ -304,6 +318,26 @@ array([[ 0.],
 |------------------------|-------------------------------|
 | `pad_packed_sequence`  | 为变长序列填充 0              |
 | `pack_padded_sequence` | 把填充过 0 的序列变成变长序列 |
+
+# tqdm
+
+## 安装
+
+```sh
+pip install tqdm
+```
+
+## 基于迭代器
+
+```py
+from tqdm import tqdm
+from time import sleep
+
+text = ""
+for char in tqdm(["a", "b", "c", "d"], desc='demo', total=4):
+    sleep(0.25)
+    text = text + char
+```
 
 # Pillow
 
