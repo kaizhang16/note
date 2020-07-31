@@ -2,6 +2,17 @@
 title: "Git"
 ---
 
+# 基本操作
+
+## 恢复文件[@git_undo]
+
+```sh
+# this restores the file status in the index
+git reset -- <file>
+# then check out a copy from the index
+git checkout -- <file>
+```
+
 # diff
 
 ## 安装 delta
