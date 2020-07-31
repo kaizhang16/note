@@ -78,7 +78,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/git/</guid>
-      <description>基本操作 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.</description>
+      <description>常见操作 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.</description>
     </item>
     
     <item>
@@ -281,7 +281,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/visual/image/</guid>
-      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .. CC=/usr/bin/gcc CXX=/usr/bin/g++ make sudo make install Adobe Photoshop 2020 安装 请参考 https://www.</description>
+      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384+0+0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .</description>
     </item>
     
     <item>

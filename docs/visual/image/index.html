@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="图像"><meta property="og:title" content="图像" />
-<meta property="og:description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake .. CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; make sudo make install Adobe Photoshop 2020 安装 请参考 https://www." />
+<meta property="og:description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/visual/image/" />
-<meta property="article:modified_time" content="2020-04-27T12:58:34+00:00" />
+<meta property="article:modified_time" content="2020-07-31T09:40:03+00:00" />
 <title>图像 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
 
 
-<script defer src="/notes/cn.search.min.48876428ed8ac8b2d8b471803b54bbdbb09c4e23e16ecd50763b2bafac10a359.js" integrity="sha256-SIdkKO2KyLLYtHGAO1S727CcTiPhbs1Qdjsrr6wQo1k="></script>
+<script defer src="/notes/cn.search.min.6430e47c7bbed076592422f96002f799090f0d1c1dbd29ec5f8842a10be4dded.js" integrity="sha256-ZDDkfHu&#43;0HZZJCL5YAL3mQkPDRwdvSnsX4hCoQvk3e0="></script>
 
 <!--
 Made with Book Theme
@@ -207,6 +207,9 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
+<h1 id="imagemagick">ImageMagick</h1>
+<h2 id="裁剪中间部分">裁剪中间部分</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">convert</span> a.png -gravity center -crop 16384x16384+0+0 b.png</span></code></pre></div>
 <h1 id="压缩">压缩</h1>
 <h2 id="jpg">JPG</h2>
 <h3 id="jpegoptim">jpegoptim</h3>
@@ -230,14 +233,14 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="colmap">colmap</h1>
 <h2 id="安装colmap_installation">安装<span class="citation" data-cites="colmap_installation"><sup>[<a href="#ref-colmap_installation" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> clone https://github.com/colmap/colmap.git</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">cd</span> colmap</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">git</span> checkout dev</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">mkdir</span> build</span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="bu">cd</span> build</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">cmake</span> ..</span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">make</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> clone https://github.com/colmap/colmap.git</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">cd</span> colmap</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">git</span> checkout dev</span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="fu">mkdir</span> build</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">cd</span> build</span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">cmake</span> ..</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">make</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="fu">sudo</span> make install</span></code></pre></div>
 <h1 id="adobe-photoshop-2020">Adobe Photoshop 2020</h1>
 <h2 id="安装-1">安装</h2>
 <p>请参考 <a href="https://www.isharepc.com/20181.html" class="uri">https://www.isharepc.com/20181.html</a>。</p>
@@ -251,6 +254,10 @@ https://github.com/alex-shpak/hugo-book
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#文件格式">文件格式</a></li>
+  <li><a href="#imagemagick">ImageMagick</a>
+  <ul>
+  <li><a href="#裁剪中间部分">裁剪中间部分</a></li>
+  </ul></li>
   <li><a href="#压缩">压缩</a>
   <ul>
   <li><a href="#jpg">JPG</a>
@@ -280,9 +287,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/bf88e1004241a99999b2d249e280bcda12371d02" title='最后修改者 Kai Zhang | 2020-04-27 20:58:34 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c1371aed5d8550c52e04a034aa6789586c377594" title='最后修改者 Kai Zhang | 2020-07-31 17:40:03 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-04-27 20:58:34 &#43;0800</span>
+      <span>2020-07-31 17:40:03 &#43;0800</span>
     </a>
   </div>
 
