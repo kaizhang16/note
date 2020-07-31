@@ -11,6 +11,14 @@ title: "图像"
 
 : 图像文件格式 {#tbl:imageFileFormats}
 
+# ImageMagick
+
+## 裁剪中间部分
+
+```sh
+convert a.png -gravity center -crop 16384x16384+0+0 b.png
+```
+
 # 压缩
 
 ## JPG
