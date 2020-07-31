@@ -77,3 +77,9 @@ nix-env -iA nixpkgs.variety
 ```sh
 cat * > merged-file
 ```
+
+## 把 windows 的 CR+LF 变为 Linux 的 LF
+
+```sh
+dos2unix myfile.txt
+```
