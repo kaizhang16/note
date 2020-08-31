@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="C&#43;&#43;"><meta property="og:title" content="C&#43;&#43;" />
-<meta property="og:description" content="代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
- https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 常用方法  代码 含义    std::vector&lt;int&gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     set 常用方法  表 2: set 常用方法  代码 含义    s." />
+<meta name="description" content="文献管理"><meta property="og:title" content="文献管理" />
+<meta property="og:description" content="Zotero 安装 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&gt; 首选项 -&gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
+Zotfile  访问 https://github.com/jlegewie/zotfile/releases，下载最新版本的 xpi 文件 打开工具 -&gt; 插件 -&gt; 齿轮图标 -&gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&gt; 首选项 -&gt; 高级 -&gt; 文件和文件夹，把根目录改为坚果云的某个目录， 将来 pdf 等文件会存到这里 打开工具 -&gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要 与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创 建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%F_}{%y_}{%t} Format for Patents 写 {%F_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/" />
-<meta property="article:modified_time" content="2020-07-07T14:54:43+00:00" />
-<title>C&#43;&#43; | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/reference-management/" />
+<meta property="article:modified_time" content="2020-08-31T05:50:38+00:00" />
+<title>文献管理 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -104,7 +104,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/program/bash/">Bash</a></li>
 <li><a href="/notes/docs/program/css/">CSS</a></li>
-<li><a href="/notes/docs/program/c++/"class=active>C++</a></li>
+<li><a href="/notes/docs/program/c++/">C++</a></li>
 <li><a href="/notes/docs/program/dhall/">Dhall</a></li>
 <li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
 <li><a href="/notes/docs/program/flutter/">Flutter</a></li>
@@ -130,7 +130,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/tools/build/">构建</a></li>
 <li><a href="/notes/docs/tools/browser/">浏览器</a></li>
 <li><a href="/notes/docs/tools/search/">搜索</a></li>
-<li><a href="/notes/docs/tools/reference-management/">文献管理</a></li>
+<li><a href="/notes/docs/tools/reference-management/"class=active>文献管理</a></li>
 <li><a href="/notes/docs/tools/project-management/">项目管理</a></li>
 <li><a href="/notes/docs/tools/writing/">写作</a></li>
 </ul>
@@ -165,7 +165,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>C&#43;&#43;</strong>
+  <strong>文献管理</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -187,106 +187,78 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="代码风格">代码风格</h1>
-<h2 id="文件后缀">文件后缀</h2>
+<article class="markdown"><h1 id="zotero">Zotero</h1>
+<h2 id="安装">安装</h2>
+<h3 id="zotero-1">Zotero</h3>
 <ul>
-<li>源代码：<code>cpp</code></li>
-</ul>
-<h2 id="命名规范">命名规范</h2>
+<li>从 <a href="https://www.zotero.org/download/" class="uri">https://www.zotero.org/download/</a> 下载 Zotero，安装到本地</li>
+<li>打开<code>编辑 -&gt; 首选项 -&gt; 同步</code>：
 <ul>
-<li>Type names
-<ul>
-<li>名词</li>
-<li><code>TextFileReader</code></li>
-</ul></li>
-<li>Function names
-<ul>
-<li>动词</li>
-<li><code>openFile</code></li>
+<li>登录 zotero 账户，用于同步元信息</li>
+<li>取消勾选<code>同步全文内容</code>（Zotero 只有 300M 免费空间，容量不够）</li>
+<li>取消勾选<code>同步文献库中的附件</code></li>
+<li>取消勾选<code>使用 Zotero 云存储同步群组文献库中的附件</code></li>
 </ul></li>
 </ul>
-<blockquote>
-<p>请参考：</p>
+<h3 id="zotero-connector">Zotero Connector</h3>
+<p>访问 <a href="https://www.zotero.org/download/" class="uri">https://www.zotero.org/download/</a>，把 Zotero Connector 安装到浏览器。</p>
+<h3 id="zotfile">Zotfile</h3>
 <ul>
-<li><a href="https://llvm.org/docs/CodingStandards.html#llvm-coding-standards" class="uri">https://llvm.org/docs/CodingStandards.html#llvm-coding-standards</a></li>
-<li><a href="https://google.github.io/styleguide/cppguide.html" class="uri">https://google.github.io/styleguide/cppguide.html</a></li>
-</ul>
-</blockquote>
-<h1 id="教程">教程</h1>
+<li>访问 <a href="https://github.com/jlegewie/zotfile/releases" class="uri">https://github.com/jlegewie/zotfile/releases</a>，下载最新版本的 xpi 文件</li>
+<li>打开<code>工具 -&gt; 插件 -&gt; 齿轮图标 -&gt; Install Add-on From File...</code>，安装到 Zotero</li>
+<li>重启 Zotero</li>
+<li>打开<code>编辑 -&gt; 首选项 -&gt; 高级 -&gt; 文件和文件夹</code>，把<code>根目录</code>改为坚果云的某个目录， 将来 pdf 等文件会存到这里</li>
+<li>打开<code>工具 -&gt; Zotfile Preferences...</code>：
 <ul>
-<li><a href="https://isocpp.org/get-started" class="uri">https://isocpp.org/get-started</a></li>
+<li>打开 <code>General Settings</code>：
+<ul>
+<li>把 <code>Source Folder For Attaching New Files</code> 改为浏览器的下载目录，将来使用 <code>Attach New File</code> 的时候会从这个目录移动最新的文件</li>
+<li>把 <code>Location of Files</code> 改为 <code>Custom Location: 坚果云的某个目录</code>，注意需要 与上面的<code>根目录</code>保持一致</li>
+<li>选中 <code>Use subfolder defined by</code>，后面填入 <code>/%c</code>，表示会按<code>条目</code>左侧的分类创 建文件夹存储文件</li>
+</ul></li>
+<li>打开 <code>Renaming Rules</code>：
+<ul>
+<li><code>Format for all Item Type except Patents</code> 写 <code>{%F_}{%y_}{%t}</code></li>
+<li><code>Format for Patents</code> 写 <code>{%F_}{%y_}{%t}</code></li>
+</ul></li>
+<li>打开 <code>Advanced Settings</code>：
+<ul>
+<li><code>Only work with the following filetypes</code> 写 <code>pdf,doc,docx,txt,rtf,djvu,caj,epub</code></li>
+</ul></li>
+</ul></li>
 </ul>
-<h1 id="vector">vector</h1>
-<h2 id="常用方法">常用方法</h2>
-<div id="tbl:vector_methods">
-<table>
-<caption>表 1: vector 常用方法</caption>
-<thead>
-<tr class="header">
-<th>代码</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>std::vector&lt;int&gt; vector1(length, 0);</code></td>
-<td>初始化为 0</td>
-</tr>
-<tr class="even">
-<td><code>size()</code></td>
-<td>返回元素个数</td>
-</tr>
-<tr class="odd">
-<td><code>push_back(val)</code></td>
-<td>在末尾添加元素 val</td>
-</tr>
-<tr class="even">
-<td><code>pop_back()</code></td>
-<td>删除最后一个元素</td>
-</tr>
-<tr class="odd">
-<td><code>std::find(v.begin(), v.end(), val) != v.end()</code></td>
-<td>v 包含 val</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="set">set</h1>
-<h2 id="常用方法-1">常用方法</h2>
-<div id="tbl:set_methods">
-<table>
-<caption>表 2: set 常用方法</caption>
-<thead>
-<tr class="header">
-<th>代码</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>s.find(val) != s.end()</code></td>
-<td>s 包含 val</td>
-</tr>
-</tbody>
-</table>
-</div>
+<h3 id="zotero-fullcreator">zotero-fullcreator</h3>
+<ul>
+<li>访问 <a href="https://github.com/normanfoster/zotero-fullcreator" class="uri">https://github.com/normanfoster/zotero-fullcreator</a>，下载 xpi 文件</li>
+<li>打开<code>工具 -&gt; 插件 -&gt; 齿轮图标 -&gt; Install Add-on From File...</code>，安装到 Zotero</li>
+<li>重启 Zotero</li>
+<li>在<code>条目</code>表格里：
+<ul>
+<li>取消勾选<code>创建者</code></li>
+<li>勾选 <code>Author(s)</code></li>
+<li>可以把 <code>Author(s)</code> 移动到第 2 列</li>
+</ul></li>
+</ul>
+<h2 id="使用">使用</h2>
+<ul>
+<li>在 Google Scholar 或者中国知网上用 Zotero Connector 添加新条目</li>
+<li>用 Sci-Hub 或者中国知网下载文献</li>
+<li>在新条目上右键单击，选 <code>Attach New File</code>，注意观察下是不是刚刚下载的文献</li>
+</ul>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#代码风格">代码风格</a>
+  <li><a href="#zotero">Zotero</a>
   <ul>
-  <li><a href="#文件后缀">文件后缀</a></li>
-  <li><a href="#命名规范">命名规范</a></li>
+  <li><a href="#安装">安装</a>
+  <ul>
+  <li><a href="#zotero-1">Zotero</a></li>
+  <li><a href="#zotero-connector">Zotero Connector</a></li>
+  <li><a href="#zotfile">Zotfile</a></li>
+  <li><a href="#zotero-fullcreator">zotero-fullcreator</a></li>
   </ul></li>
-  <li><a href="#教程">教程</a></li>
-  <li><a href="#vector">vector</a>
-  <ul>
-  <li><a href="#常用方法">常用方法</a></li>
-  </ul></li>
-  <li><a href="#set">set</a>
-  <ul>
-  <li><a href="#常用方法-1">常用方法</a></li>
+  <li><a href="#使用">使用</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -302,9 +274,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0bedc13bb751c7cfb26cd17d401b6b35a1bd0607" title='最后修改者 Kai Zhang | 2020-07-07 22:54:43 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/79f0cbf776139448d935b97f3a8fd17152cbeaad" title='最后修改者 Kai Zhang | 2020-08-31 13:50:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-07 22:54:43 &#43;0800</span>
+      <span>2020-08-31 13:50:38 &#43;0800</span>
     </a>
   </div>
 
