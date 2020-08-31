@@ -1,0 +1,57 @@
+---
+title: "文献管理"
+---
+
+# Zotero
+
+## 安装
+
+### Zotero
+
+- 从 <https://www.zotero.org/download/> 下载 Zotero，安装到本地
+- 打开`编辑 -> 首选项 -> 同步`：
+  - 登录 zotero 账户，用于同步元信息
+  - 取消勾选`同步全文内容`（Zotero 只有 300M 免费空间，容量不够）
+  - 取消勾选`同步文献库中的附件`
+  - 取消勾选`使用 Zotero 云存储同步群组文献库中的附件`
+
+### Zotero Connector
+
+访问 <https://www.zotero.org/download/>，把 Zotero Connector 安装到浏览器。
+
+### Zotfile
+
+- 访问 <https://github.com/jlegewie/zotfile/releases>，下载最新版本的 xpi 文件
+- 打开`工具 -> 插件 -> 齿轮图标 -> Install Add-on From File...`，安装到 Zotero
+- 重启 Zotero
+- 打开`编辑 -> 首选项 -> 高级 -> 文件和文件夹`，把`根目录`改为坚果云的某个目录，
+  将来 pdf 等文件会存到这里
+- 打开`工具 -> Zotfile Preferences...`：
+  - 打开 `General Settings`：
+    - 把 `Source Folder For Attaching New Files` 改为浏览器的下载目录，将来使用
+      `Attach New File` 的时候会从这个目录移动最新的文件
+    - 把 `Location of Files` 改为 `Custom Location: 坚果云的某个目录`，注意需要
+      与上面的`根目录`保持一致
+    - 选中 `Use subfolder defined by`，后面填入 `/%c`，表示会按`条目`左侧的分类创
+      建文件夹存储文件
+  - 打开 `Renaming Rules`：
+    - `Format for all Item Type except Patents` 写 `{%F_}{%y_}{%t}`
+    - `Format for Patents` 写 `{%F_}{%y_}{%t}`
+  - 打开 `Advanced Settings`：
+    - `Only work with the following filetypes` 写 `pdf,doc,docx,txt,rtf,djvu,caj,epub`
+
+### zotero-fullcreator
+
+- 访问 <https://github.com/normanfoster/zotero-fullcreator>，下载 xpi 文件
+- 打开`工具 -> 插件 -> 齿轮图标 -> Install Add-on From File...`，安装到 Zotero
+- 重启 Zotero
+- 在`条目`表格里：
+  - 取消勾选`创建者`
+  - 勾选 `Author(s)`
+  - 可以把 `Author(s)` 移动到第 2 列
+
+## 使用
+
+- 在 Google Scholar 或者中国知网上用 Zotero Connector 添加新条目
+- 用 Sci-Hub 或者中国知网下载文献
+- 在新条目上右键单击，选 `Attach New File`，注意观察下是不是刚刚下载的文献
