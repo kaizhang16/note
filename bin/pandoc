@@ -2,7 +2,7 @@
 
 # ~/.nix-profile/bin/pandoc \
 /usr/bin/pandoc \
-  --from=markdown+emoji \
+  --from=markdown+emoji+east_asian_line_breaks \
   --to=html \
   --mathjax \
   --bibliography=references.bib \
