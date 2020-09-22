@@ -8,15 +8,15 @@
 <meta property="og:description" content="内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/python/" />
-<meta property="article:modified_time" content="2020-07-31T07:20:49+00:00" />
+<meta property="article:modified_time" content="2020-09-22T11:59:04+00:00" />
 <title>Python | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
+<link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.3aa421e5f4f2418ec3e54bace6df8fbe0bdc00ebab7a982520d1fac5f2bfd04a.js" integrity="sha256-OqQh5fTyQY7D5Uus5t&#43;PvgvcAOurepglINH6xfK/0Eo="></script>
+<script defer src="/notes/cn.search.min.c82a17abecc8660258ff5a608c3b4f5412ef3227ada85613be5c2b240aefd605.js" integrity="sha256-yCoXq&#43;zIZgJY/1pgjDtPVBLvMietqFYTvlwrJArv1gU="></script>
 
 <!--
 Made with Book Theme
@@ -65,7 +65,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li><strong>AI</strong>
 <ul>
-<li><a href="/notes/docs/ai/machine-learning/">机器学习</a></li>
+<li><a href="/notes/docs/ai/machine_learning/">机器学习</a></li>
 <li><a href="/notes/docs/ai/dev-env/">开发环境</a></li>
 <li><a href="/notes/docs/ai/nlp/">自然语言处理</a></li>
 </ul>
@@ -351,8 +351,13 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="faq">FAQ</h2>
 <h3 id="python3-unicodeencodeerror-ascii-codec-cant-encode-characterpython_faq_unicode">Python3: UnicodeEncodeError: ‘ascii’ codec can’t encode character<span class="citation" data-cites="python_faq_unicode"><sup>[<a href="#ref-python_faq_unicode" role="doc-biblioref">11</a>]</sup></span></h3>
 <div class="sourceCode" id="cb15"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1"></a><span class="va">PYTHONIOENCODING=</span>utf-8 <span class="ex">python3</span> script.py</span></code></pre></div>
+<h1 id="jupyter">jupyter</h1>
+<h2 id="安装">安装</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="ex">pip</span> install jupyterlab</span></code></pre></div>
+<h2 id="使用">使用</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1"></a><span class="ex">jupyter</span> lab</span></code></pre></div>
 <h1 id="numpy">numpy</h1>
-<div class="sourceCode" id="cb16"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 <h2 id="数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<a href="#ref-numpyTypes" role="doc-biblioref">12</a>]</sup></span></h2>
 <div id="tbl:numpyTypes">
 <table>
@@ -374,63 +379,63 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="算术平均">算术平均</h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a)</span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="fl">2.5</span></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb17-5"><a href="#cb17-5"></a>array([<span class="fl">2.</span>, <span class="fl">3.</span>])</span>
-<span id="cb17-6"><a href="#cb17-6"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb17-7"><a href="#cb17-7"></a>array([<span class="fl">1.5</span>, <span class="fl">3.5</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a)</span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="fl">2.5</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb19-5"><a href="#cb19-5"></a>array([<span class="fl">2.</span>, <span class="fl">3.</span>])</span>
+<span id="cb19-6"><a href="#cb19-6"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb19-7"><a href="#cb19-7"></a>array([<span class="fl">1.5</span>, <span class="fl">3.5</span>])</span></code></pre></div>
 <h2 id="右乘列向量">右乘列向量</h2>
 <p><span id="eq:rigthMultiplyColumnVector"><span class="math display">\[\matrix{A}\vec{x}\qquad(1)\]</span></span></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>np.dot(A, x)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>np.dot(A, x)</span></code></pre></div>
 <h2 id="竖向堆积">竖向堆积</h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="op">&gt;&gt;&gt;</span> np.vstack((a,b))</span>
-<span id="cb19-4"><a href="#cb19-4"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb19-5"><a href="#cb19-5"></a>       [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="op">&gt;&gt;&gt;</span> np.vstack((a,b))</span>
+<span id="cb21-4"><a href="#cb21-4"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb21-5"><a href="#cb21-5"></a>       [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]])</span></code></pre></div>
 <h2 id="范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<a href="#ref-pythonNorm" role="doc-biblioref">13</a>]</sup></span></h2>
 <p><span id="eq:L2Norm"><span class="math display">\[\lVert\vec{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}\qquad(2)\]</span></span></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">&gt;&gt;&gt;</span> np.linalg.norm([<span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="fl">5.0</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="op">&gt;&gt;&gt;</span> np.linalg.norm([<span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="fl">5.0</span></span></code></pre></div>
 <h2 id="奇异值分解">奇异值分解</h2>
 <p><span id="eq:SVD"><span class="math display">\[\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}\qquad(3)\]</span></span></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
 <h2 id="numpy.any">numpy.any</h2>
 <p>测试某个轴上是否有一个元素为真。</p>
 <h2 id="numpy.arccos">numpy.arccos</h2>
 <p>cos 的逆运算。</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="op">&gt;&gt;&gt;</span> np.arccos([<span class="dv">1</span>, <span class="dv">-1</span>])</span>
-<span id="cb22-2"><a href="#cb22-2"></a>array([ <span class="fl">0.</span>        ,  <span class="fl">3.14159265</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="op">&gt;&gt;&gt;</span> np.arccos([<span class="dv">1</span>, <span class="dv">-1</span>])</span>
+<span id="cb24-2"><a href="#cb24-2"></a>array([ <span class="fl">0.</span>        ,  <span class="fl">3.14159265</span>])</span></code></pre></div>
 <h2 id="numpy.arctan2">numpy.arctan2</h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="dv">-1</span>])</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">-1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>])</span>
-<span id="cb23-3"><a href="#cb23-3"></a><span class="op">&gt;&gt;&gt;</span> np.arctan2(y, x) <span class="op">*</span> <span class="dv">180</span> <span class="op">/</span> np.pi</span>
-<span id="cb23-4"><a href="#cb23-4"></a>array([<span class="op">-</span><span class="fl">135.</span>,  <span class="fl">-45.</span>,   <span class="fl">45.</span>,  <span class="fl">135.</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="dv">-1</span>])</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">-1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="op">&gt;&gt;&gt;</span> np.arctan2(y, x) <span class="op">*</span> <span class="dv">180</span> <span class="op">/</span> np.pi</span>
+<span id="cb25-4"><a href="#cb25-4"></a>array([<span class="op">-</span><span class="fl">135.</span>,  <span class="fl">-45.</span>,   <span class="fl">45.</span>,  <span class="fl">135.</span>])</span></code></pre></div>
 <h2 id="numpy.clip">numpy.clip</h2>
 <p>等价于 <code>np.minimum(a_max, np.maximum(a, a_min))</code>。</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
-<span id="cb24-2"><a href="#cb24-2"></a><span class="op">&gt;&gt;&gt;</span> np.clip(a, <span class="dv">1</span>, <span class="dv">8</span>)</span>
-<span id="cb24-3"><a href="#cb24-3"></a>array([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">8</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="op">&gt;&gt;&gt;</span> np.clip(a, <span class="dv">1</span>, <span class="dv">8</span>)</span>
+<span id="cb26-3"><a href="#cb26-3"></a>array([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">8</span>])</span></code></pre></div>
 <h2 id="numpy.deg2rad">numpy.deg2rad</h2>
 <p>角度 -&gt; 弧度：</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="op">&gt;&gt;&gt;</span> np.deg2rad(<span class="dv">180</span>)</span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="fl">3.1415926535897931</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="op">&gt;&gt;&gt;</span> np.deg2rad(<span class="dv">180</span>)</span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="fl">3.1415926535897931</span></span></code></pre></div>
 <h2 id="numpy.degrees">numpy.degrees</h2>
 <p>弧度 -&gt; 角度：</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="op">&gt;&gt;&gt;</span> rad <span class="op">=</span> np.arange(<span class="fl">12.</span>)<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">6</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="op">&gt;&gt;&gt;</span> np.degrees(rad)</span>
-<span id="cb26-3"><a href="#cb26-3"></a>array([   <span class="fl">0.</span>,   <span class="fl">30.</span>,   <span class="fl">60.</span>,   <span class="fl">90.</span>,  <span class="fl">120.</span>,  <span class="fl">150.</span>,  <span class="fl">180.</span>,  <span class="fl">210.</span>,  <span class="fl">240.</span>,</span>
-<span id="cb26-4"><a href="#cb26-4"></a>        <span class="fl">270.</span>,  <span class="fl">300.</span>,  <span class="fl">330.</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="op">&gt;&gt;&gt;</span> rad <span class="op">=</span> np.arange(<span class="fl">12.</span>)<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">6</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="op">&gt;&gt;&gt;</span> np.degrees(rad)</span>
+<span id="cb28-3"><a href="#cb28-3"></a>array([   <span class="fl">0.</span>,   <span class="fl">30.</span>,   <span class="fl">60.</span>,   <span class="fl">90.</span>,  <span class="fl">120.</span>,  <span class="fl">150.</span>,  <span class="fl">180.</span>,  <span class="fl">210.</span>,  <span class="fl">240.</span>,</span>
+<span id="cb28-4"><a href="#cb28-4"></a>        <span class="fl">270.</span>,  <span class="fl">300.</span>,  <span class="fl">330.</span>])</span></code></pre></div>
 <h2 id="numpy.zeros">numpy.zeros</h2>
 <p>初始化数组。</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="op">&gt;&gt;&gt;</span> np.zeros(<span class="dv">5</span>)</span>
-<span id="cb27-2"><a href="#cb27-2"></a>array([ <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>])</span>
-<span id="cb27-3"><a href="#cb27-3"></a></span>
-<span id="cb27-4"><a href="#cb27-4"></a><span class="op">&gt;&gt;&gt;</span> np.zeros((<span class="dv">2</span>, <span class="dv">1</span>))</span>
-<span id="cb27-5"><a href="#cb27-5"></a>array([[ <span class="fl">0.</span>],</span>
-<span id="cb27-6"><a href="#cb27-6"></a>       [ <span class="fl">0.</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="op">&gt;&gt;&gt;</span> np.zeros(<span class="dv">5</span>)</span>
+<span id="cb29-2"><a href="#cb29-2"></a>array([ <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>])</span>
+<span id="cb29-3"><a href="#cb29-3"></a></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="op">&gt;&gt;&gt;</span> np.zeros((<span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb29-5"><a href="#cb29-5"></a>array([[ <span class="fl">0.</span>],</span>
+<span id="cb29-6"><a href="#cb29-6"></a>       [ <span class="fl">0.</span>]])</span></code></pre></div>
 <h1 id="pandas">pandas</h1>
 <h2 id="join">join</h2>
 <table>
@@ -472,25 +477,25 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 <h1 id="tqdm">tqdm</h1>
-<h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1"></a><span class="ex">pip</span> install tqdm</span></code></pre></div>
+<h2 id="安装-1">安装</h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1"></a><span class="ex">pip</span> install tqdm</span></code></pre></div>
 <h2 id="基于迭代器">基于迭代器</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
-<span id="cb29-2"><a href="#cb29-2"></a><span class="im">from</span> time <span class="im">import</span> sleep</span>
-<span id="cb29-3"><a href="#cb29-3"></a></span>
-<span id="cb29-4"><a href="#cb29-4"></a>text <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb29-5"><a href="#cb29-5"></a><span class="cf">for</span> char <span class="kw">in</span> tqdm([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>], desc<span class="op">=</span><span class="st">&#39;demo&#39;</span>, total<span class="op">=</span><span class="dv">4</span>):</span>
-<span id="cb29-6"><a href="#cb29-6"></a>    sleep(<span class="fl">0.25</span>)</span>
-<span id="cb29-7"><a href="#cb29-7"></a>    text <span class="op">=</span> text <span class="op">+</span> char</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="im">from</span> time <span class="im">import</span> sleep</span>
+<span id="cb31-3"><a href="#cb31-3"></a></span>
+<span id="cb31-4"><a href="#cb31-4"></a>text <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a><span class="cf">for</span> char <span class="kw">in</span> tqdm([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>], desc<span class="op">=</span><span class="st">&#39;demo&#39;</span>, total<span class="op">=</span><span class="dv">4</span>):</span>
+<span id="cb31-6"><a href="#cb31-6"></a>    sleep(<span class="fl">0.25</span>)</span>
+<span id="cb31-7"><a href="#cb31-7"></a>    text <span class="op">=</span> text <span class="op">+</span> char</span></code></pre></div>
 <h1 id="pillow">Pillow</h1>
 <h2 id="图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<a href="#ref-pillowMaxImagePixels" role="doc-biblioref">14</a>]</sup></span></h2>
-<div class="sourceCode" id="cb30"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a>PIL.Image.MAX_IMAGE_PIXELS <span class="op">=</span> <span class="dv">933120000</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"></a>PIL.Image.MAX_IMAGE_PIXELS <span class="op">=</span> <span class="dv">933120000</span></span></code></pre></div>
 <h1 id="常用函数">常用函数</h1>
-<div class="sourceCode" id="cb31"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
-<span id="cb31-2"><a href="#cb31-2"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
+<span id="cb33-2"><a href="#cb33-2"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
 <h1 id="anaconda">anaconda</h1>
 <h2 id="卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<a href="#ref-anaconda_uninstall" role="doc-biblioref">15</a>]</sup></span></h2>
-<div class="sourceCode" id="cb32"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-pythonBuiltIn">
@@ -579,6 +584,11 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#python3-unicodeencodeerror-ascii-codec-cant-encode-characterpython_faq_unicode">Python3: UnicodeEncodeError: ‘ascii’ codec can’t encode character<span class="citation" data-cites="python_faq_unicode"><sup>[<span>11</span>]</sup></span></a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#jupyter">jupyter</a>
+  <ul>
+  <li><a href="#安装">安装</a></li>
+  <li><a href="#使用">使用</a></li>
+  </ul></li>
   <li><a href="#numpy">numpy</a>
   <ul>
   <li><a href="#数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<span>12</span>]</sup></span></a></li>
@@ -605,7 +615,7 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#tqdm">tqdm</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
+  <li><a href="#安装-1">安装</a></li>
   <li><a href="#基于迭代器">基于迭代器</a></li>
   </ul></li>
   <li><a href="#pillow">Pillow</a>
@@ -632,9 +642,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/2b19269f4872d9fb164c615adb5e9021da8fb2b8" title='最后修改者 Kai Zhang | 2020-07-31 15:20:49 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c42476c9dcf243390e44b6d6259623cd788226b9" title='最后修改者 Kai Zhang | 2020-09-22 19:59:04 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-31 15:20:49 &#43;0800</span>
+      <span>2020-09-22 19:59:04 &#43;0800</span>
     </a>
   </div>
 
@@ -698,14 +708,24 @@ https://github.com/alex-shpak/hugo-book
   MathJax = {
     tex: {
       macros: {
+        AveP: ["\\textrm{AveP}"],
         bm: ["{\\boldsymbol{#1}}", 1],
+        d: ["\\textrm{d}"],
         diag: ["\\textrm{diag}"],
+        FN: ["\\textrm{FN}"],
+        FP: ["\\textrm{FP}"],
+        FPR: ["\\textrm{FPR}"],
+        MAP: ["\\textrm{MAP}"],
         matrix: ["{\\bm{#1}}", 1],
         median: ["\\textrm{median}"],
+        rel: ["\\textrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
         sign: ["\\textrm{sign}"],
         SO: ["\\textrm{SO}"],
         tanh: ["\\textrm{tanh}"],
+        TN: ["\\textrm{TN}"],
+        TP: ["\\textrm{TP}"],
+        TPR: ["\\textrm{TPR}"],
         transformation: ["{\\mathcal{#1}}", 1],
         transpose: ["{#1}^{\\mathsf{T}}", 1],
         vec: ["{\\bm{#1}}", 1],

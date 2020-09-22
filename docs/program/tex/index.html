@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}     公式对齐[2] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[3]。" />
+<meta property="og:description" content="运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}     集合操作  表 3: 集合操作  数学表达式 含义 \(\TeX\) 表示    \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     公式对齐[2] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[3]。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
-<meta property="article:modified_time" content="2020-06-16T09:37:35+00:00" />
+<meta property="article:modified_time" content="2020-09-22T11:59:04+00:00" />
 <title>TeX | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/notes/book.min.7935a9f0ab7bd10d98bc7fe790a1401e8e555c5a37ae993b6662ad533b8601f2.css" integrity="sha256-eTWp8Kt70Q2YvH/nkKFAHo5VXFo3rpk7ZmKtUzuGAfI=">
+<link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.3aa421e5f4f2418ec3e54bace6df8fbe0bdc00ebab7a982520d1fac5f2bfd04a.js" integrity="sha256-OqQh5fTyQY7D5Uus5t&#43;PvgvcAOurepglINH6xfK/0Eo="></script>
+<script defer src="/notes/cn.search.min.c82a17abecc8660258ff5a608c3b4f5412ef3227ada85613be5c2b240aefd605.js" integrity="sha256-yCoXq&#43;zIZgJY/1pgjDtPVBLvMietqFYTvlwrJArv1gU="></script>
 
 <!--
 Made with Book Theme
@@ -65,7 +65,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
 <li><strong>AI</strong>
 <ul>
-<li><a href="/notes/docs/ai/machine-learning/">机器学习</a></li>
+<li><a href="/notes/docs/ai/machine_learning/">机器学习</a></li>
 <li><a href="/notes/docs/ai/dev-env/">开发环境</a></li>
 <li><a href="/notes/docs/ai/nlp/">自然语言处理</a></li>
 </ul>
@@ -213,6 +213,16 @@ https://github.com/alex-shpak/hugo-book
 <td>Hadamard product</td>
 <td><code>\odot</code><span class="citation" data-cites="TeX_odot"><sup>[<a href="#ref-TeX_odot" role="doc-biblioref">1</a>]</sup></span></td>
 </tr>
+<tr class="even">
+<td><span class="math inline">\(\int_0^1 p(r)\d r\)</span></td>
+<td>积分</td>
+<td><code>\int_0^1 p(r)\d r</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\sum_{k=1}^n P(k)\)</span></td>
+<td>求和</td>
+<td><code>\sum_{k=1}^n P(k)</code></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -251,6 +261,31 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
+<h1 id="集合操作">集合操作</h1>
+<div id="tbl:set_operation">
+<table>
+<caption>表 3: 集合操作</caption>
+<thead>
+<tr class="header">
+<th>数学表达式</th>
+<th>含义</th>
+<th><span class="math inline">\(\TeX\)</span> 表示</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\cap B\)</span></td>
+<td>A 与 B 的交集</td>
+<td><code>A\cap B</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\vert A\vert\)</span></td>
+<td>A 的元素个数</td>
+<td><code>\vert A\vert</code></td>
+</tr>
+</tbody>
+</table>
+</div>
 <h1 id="公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<a href="#ref-TeXAlign" role="doc-biblioref">2</a>]</sup></span></h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="ss">2x - 5y &amp;=  8 </span><span class="sc">\\</span></span>
@@ -277,6 +312,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#运算符">运算符</a></li>
   <li><a href="#数学表达式">数学表达式</a></li>
+  <li><a href="#集合操作">集合操作</a></li>
   <li><a href="#公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<span>2</span>]</sup></span></a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -293,9 +329,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a6837941c5981400014e5ad3ff7bd71c5ae82a7a" title='最后修改者 Kai Zhang | 2020-06-16 17:37:35 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c42476c9dcf243390e44b6d6259623cd788226b9" title='最后修改者 Kai Zhang | 2020-09-22 19:59:04 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-06-16 17:37:35 &#43;0800</span>
+      <span>2020-09-22 19:59:04 &#43;0800</span>
     </a>
   </div>
 
@@ -359,14 +395,24 @@ https://github.com/alex-shpak/hugo-book
   MathJax = {
     tex: {
       macros: {
+        AveP: ["\\textrm{AveP}"],
         bm: ["{\\boldsymbol{#1}}", 1],
+        d: ["\\textrm{d}"],
         diag: ["\\textrm{diag}"],
+        FN: ["\\textrm{FN}"],
+        FP: ["\\textrm{FP}"],
+        FPR: ["\\textrm{FPR}"],
+        MAP: ["\\textrm{MAP}"],
         matrix: ["{\\bm{#1}}", 1],
         median: ["\\textrm{median}"],
+        rel: ["\\textrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
         sign: ["\\textrm{sign}"],
         SO: ["\\textrm{SO}"],
         tanh: ["\\textrm{tanh}"],
+        TN: ["\\textrm{TN}"],
+        TP: ["\\textrm{TP}"],
+        TPR: ["\\textrm{TPR}"],
         transformation: ["{\\mathcal{#1}}", 1],
         transpose: ["{#1}^{\\mathsf{T}}", 1],
         vec: ["{\\bm{#1}}", 1],

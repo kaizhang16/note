@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="机器学习"><meta property="og:title" content="机器学习" />
+<meta property="og:description" content="中位数 评估指标  表 1: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[1]：
+\[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]
+在信息检索领域这样定义[2]：
+\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]
+P@n 只考虑 top n 个查询结果。[2]
+AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/machine_learning/" />
+<meta property="article:modified_time" content="2020-09-22T11:59:04+00:00" />
+<title>机器学习 | 凯的笔记</title>
+<link rel="icon" href="/notes/favicon.png" type="image/x-icon">
+
+
+<link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
+
+
+<script defer src="/notes/cn.search.min.c82a17abecc8660258ff5a608c3b4f5412ef3227ada85613be5c2b240aefd605.js" integrity="sha256-yCoXq&#43;zIZgJY/1pgjDtPVBLvMietqFYTvlwrJArv1gU="></script>
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+<link rel="icon" href="/notes/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css">
+
+
+
+
+</head>
+
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/notes"><span>凯的笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <ul>
+<li><strong>AI</strong>
+<ul>
+<li><a href="/notes/docs/ai/machine_learning/"class=active>机器学习</a></li>
+<li><a href="/notes/docs/ai/dev-env/">开发环境</a></li>
+<li><a href="/notes/docs/ai/nlp/">自然语言处理</a></li>
+</ul>
+</li>
+<li><strong>数学</strong>
+<ul>
+<li><a href="/notes/docs/math/statistics/">统计</a></li>
+<li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
+</ul>
+</li>
+<li><strong>视觉</strong>
+<ul>
+<li><a href="/notes/docs/visual/unity/">Unity</a></li>
+<li><a href="/notes/docs/visual/video/">视频</a></li>
+<li><a href="/notes/docs/visual/image/">图像</a></li>
+</ul>
+</li>
+<li><strong>计算机科学</strong>
+<ul>
+<li><a href="/notes/docs/cs/http/">HTTP</a></li>
+<li><a href="/notes/docs/cs/linux/">Linux</a></li>
+<li><a href="/notes/docs/cs/oauth2/">OAuth 2</a></li>
+<li><a href="/notes/docs/cs/security/">安全</a></li>
+<li><a href="/notes/docs/cs/encoding/">编码</a></li>
+<li><a href="/notes/docs/cs/ci/">持续集成</a></li>
+<li><a href="/notes/docs/cs/transmission/">传输</a></li>
+<li><a href="/notes/docs/cs/database/">数据库</a></li>
+<li><a href="/notes/docs/cs/data-type/">数据类型</a></li>
+<li><a href="/notes/docs/cs/algorithm/">算法</a></li>
+<li><a href="/notes/docs/cs/network/">网络</a></li>
+<li><a href="/notes/docs/cs/compress/">压缩</a></li>
+</ul>
+</li>
+<li><strong>编程语言</strong>
+<ul>
+<li><a href="/notes/docs/program/bash/">Bash</a></li>
+<li><a href="/notes/docs/program/css/">CSS</a></li>
+<li><a href="/notes/docs/program/c++/">C++</a></li>
+<li><a href="/notes/docs/program/dhall/">Dhall</a></li>
+<li><a href="/notes/docs/program/fish-shell/">fish-shell</a></li>
+<li><a href="/notes/docs/program/flutter/">Flutter</a></li>
+<li><a href="/notes/docs/program/golang/">Golang</a></li>
+<li><a href="/notes/docs/program/html/">HTML</a></li>
+<li><a href="/notes/docs/program/js/">JavaScript</a></li>
+<li><a href="/notes/docs/program/pandoc/">Pandoc</a></li>
+<li><a href="/notes/docs/program/python/">Python</a></li>
+<li><a href="/notes/docs/program/rust/">Rust</a></li>
+<li><a href="/notes/docs/program/tex/">TeX</a></li>
+<li><a href="/notes/docs/program/toml/">TOML</a></li>
+<li><a href="/notes/docs/program/zsh/">Zsh</a></li>
+<li><a href="/notes/docs/program/template/">模板</a></li>
+</ul>
+</li>
+<li><strong>工具</strong>
+<ul>
+<li><a href="/notes/docs/tools/git/">Git</a></li>
+<li><a href="/notes/docs/tools/linux/">Linux</a></li>
+<li><a href="/notes/docs/tools/windows/">Windows</a></li>
+<li><a href="/notes/docs/tools/editor/">编辑器</a></li>
+<li><a href="/notes/docs/tools/format/">格式</a></li>
+<li><a href="/notes/docs/tools/build/">构建</a></li>
+<li><a href="/notes/docs/tools/browser/">浏览器</a></li>
+<li><a href="/notes/docs/tools/search/">搜索</a></li>
+<li><a href="/notes/docs/tools/reference-management/">文献管理</a></li>
+<li><a href="/notes/docs/tools/project-management/">项目管理</a></li>
+<li><a href="/notes/docs/tools/writing/">写作</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>机器学习</strong>
+
+  <label for="toc-control">
+    <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+  </label>
+</div>
+
+
+  
+    <input type="checkbox" class="hidden" id="toc-control" />
+    <aside class="hidden clearfix">
+      
+  
+
+
+    </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown"><h1 id="中位数">中位数</h1>
+<h1 id="评估指标">评估指标</h1>
+<div id="tbl:confusion_matrix">
+<table>
+<caption>表 1: 混淆矩阵</caption>
+<thead>
+<tr class="header">
+<th></th>
+<th>实际 Positive</th>
+<th>实际 Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>预测 Positive</td>
+<td>True Positive</td>
+<td>False Positive（误报，Type I Error）</td>
+</tr>
+<tr class="even">
+<td>预测 Negative</td>
+<td>False Negative（漏报，Type II Error）</td>
+<td>True Negative</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="精确率precision">精确率（Precision）</h2>
+<p>你认为的正样本，有多少猜对了（猜的精确性如何）<span class="citation" data-cites="ml_precision_recall"><sup>[<a href="#ref-ml_precision_recall" role="doc-biblioref">1</a>]</sup></span>：</p>
+<p><span id="eq:precision"><span class="math display">\[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]</span></span></p>
+<p>在信息检索领域这样定义<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">2</a>]</sup></span>：</p>
+<p><span id="eq:precision_information_retrieval"><span class="math display">\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]</span></span></p>
+<h3 id="pn">P@n</h3>
+<p>只考虑 top n 个查询结果。<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">2</a>]</sup></span></p>
+<h3 id="avepaverage-precisionml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">2</a>]</sup></span></h3>
+<p><span id="eq:AveP"><span class="math display">\[\AveP = \int_0^1 p(r)\d r\qquad(3)\]</span></span> <span id="eq:AveP_sum"><span class="math display">\[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\]</span></span> <span id="eq:AveP_k"><span class="math display">\[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]</span></span></p>
+<p>其中，</p>
+<ul>
+<li><span class="math inline">\(k\)</span> 表示在检索文档序列里的排名</li>
+<li><span class="math inline">\(n\)</span> 表示检索文档的总数，<span class="math inline">\(P(k)\)</span> 表示 top k 的精确率</li>
+<li><span class="math inline">\(\Delta r(k)\)</span> 表示从项 <span class="math inline">\(k-1\)</span> 到 <span class="math inline">\(k\)</span> 的召回率变化</li>
+<li><span class="math inline">\(\rel(k)\)</span> 是指示函数，项 <span class="math inline">\(k\)</span> 是相关文档时为 <span class="math inline">\(1\)</span>，项 <span class="math inline">\(k\)</span> 不是相关文档时为 <span class="math inline">\(0\)</span></li>
+</ul>
+<h3 id="mapmean-average-precision">MAP(Mean Average Precision)</h3>
+<p><span id="eq:map"><span class="math display">\[\MAP = \frac{\sum_{q=1}^Q \AveP(q)}{Q}\qquad(6)\]</span></span></p>
+<p>其中 <span class="math inline">\(Q\)</span> 表示查询总数。</p>
+<h2 id="召回率recall">召回率（Recall）</h2>
+<p>正样本有多少被找出来了（召回了多少）<span class="citation" data-cites="ml_precision_recall"><sup>[<a href="#ref-ml_precision_recall" role="doc-biblioref">1</a>]</sup></span>：</p>
+<p><span id="eq:recall"><span class="math display">\[R = \frac{\TP}{\TP + \FN}\qquad(7)\]</span></span></p>
+<h2 id="准确率accuracy">准确率（Accuracy）</h2>
+<p>预测正确的结果占总样本的比例<span class="citation" data-cites="ml_accuracy"><sup>[<a href="#ref-ml_accuracy" role="doc-biblioref">3</a>]</sup></span>：</p>
+<p><span id="eq:accuracy"><span class="math display">\[A = \frac{\TP+\TN}{\TP+\TN+\FP+\FN}\qquad(8)\]</span></span></p>
+<h2 id="f_1"><span class="math inline">\(F_1\)</span></h2>
+<p>Precision 与 Recall 的调和均值：</p>
+<p><span id="eq:f1"><span class="math display">\[\frac{2}{F_1} = \frac{1}{P} + \frac{1}{R}\qquad(9)\]</span></span></p>
+<h2 id="真阳性率tprml_tpr_fpr">真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">4</a>]</sup></span></h2>
+<p>在所有实际为阳性的样本中，被正确地判断为阳性之比率：</p>
+<p><span id="eq:tpr"><span class="math display">\[ \TPR = \frac{\TP}{\TP + \FN}\qquad(10)\]</span></span></p>
+<p>与召回率定义相同。</p>
+<h2 id="伪阳性率fprml_tpr_fpr">伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">4</a>]</sup></span></h2>
+<p>在所有实际为阴性的样本中，被错误地判断为阳性之比率：</p>
+<p><span id="eq:fpr"><span class="math display">\[ \FPR = \frac{\FP}{\FP + \TN}\qquad(11)\]</span></span></p>
+<h2 id="roc-与-precision-recall-曲线ml_roc">ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">5</a>]</sup></span></h2>
+<figure>
+<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr.png
+" id="fig:roc_pr" style="width:80.0%" alt="" /><figcaption>图 1: 一个 ROC 与 Precision-Recall 曲线例子</figcaption>
+</figure>
+<figure>
+<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr.gif
+" id="fig:roc_pr_dynamic" style="width:80.0%" alt="" /><figcaption>图 2: ROC 与 Precision-Recall 曲线随阈值的动态变化</figcaption>
+</figure>
+<h3 id="roc-与-p-r-曲线的比较ml_roc">ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">5</a>]</sup></span></h3>
+<figure>
+<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr_imbalance.png
+" id="fig:roc_pr_imbalance" style="width:80.0%" alt="" /><figcaption>图 3: 样本不平衡时，ROC 与 Precision-Recall 曲线的比较</figcaption>
+</figure>
+<ul>
+<li>当正负样本不平衡时，P-R 曲线对误报更敏感</li>
+</ul>
+<h3 id="aucarea-under-the-curve">AUC(Area Under the Curve)</h3>
+<h4 id="roc-auc">ROC AUC</h4>
+<figure>
+<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_auc.svg
+" id="fig:roc_auc" style="width:80.0%" alt="" /><figcaption>图 4: ROC AUC 示意图</figcaption>
+</figure>
+<p>ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。<span class="citation" data-cites="ml_roc_auc"><sup>[<a href="#ref-ml_roc_auc" role="doc-biblioref">6</a>]</sup></span></p>
+<h4 id="pr-auc">PR AUC</h4>
+<p>PR AUC 表示在不同召回率阈值下的平均精确率。<span class="citation" data-cites="ml_pr_auc"><sup>[<a href="#ref-ml_pr_auc" role="doc-biblioref">7</a>]</sup></span></p>
+<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-ml_precision_recall">
+<p>[1] 张俊博. 如何解释召回率与精确率？[EB/OL](2018–05–08). <a href="https://www.zhihu.com/question/19645541/answer/360749257">https://www.zhihu.com/question/19645541/answer/360749257</a>.</p>
+</div>
+<div id="ref-ml_evaluation_measures">
+<p>[2] WIKIPEDIA. Evaluation measures (information retrieval)[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)">https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)</a>.</p>
+</div>
+<div id="ref-ml_accuracy">
+<p>[3] EASYAI. 一文看懂机器学习指标：准确率、精准率、召回率、F1、ROC曲线、AUC曲线[EB/OL](2019–11–21). <a href="https://medium.com/@pkqiang49/%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8C%87%E6%A0%87-%E5%87%86%E7%A1%AE%E7%8E%87-%E7%B2%BE%E5%87%86%E7%8E%87-%E5%8F%AC%E5%9B%9E%E7%8E%87-f1-roc%E6%9B%B2%E7%BA%BF-auc%E6%9B%B2%E7%BA%BF-19b1ed9e9260">https://medium.com/@pkqiang49/%E4%B8%80%E6%96%87%E7%9C%8B%E6%87%82%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%8C%87%E6%A0%87-%E5%87%86%E7%A1%AE%E7%8E%87-%E7%B2%BE%E5%87%86%E7%8E%87-%E5%8F%AC%E5%9B%9E%E7%8E%87-f1-roc%E6%9B%B2%E7%BA%BF-auc%E6%9B%B2%E7%BA%BF-19b1ed9e9260</a>.</p>
+</div>
+<div id="ref-ml_tpr_fpr">
+<p>[4] 维基百科. ROC 曲线[EB/OL]([日期不详]). <a href="https://zh.wikipedia.org/zh-cn/ROC%E6%9B%B2%E7%BA%BF">https://zh.wikipedia.org/zh-cn/ROC%E6%9B%B2%E7%BA%BF</a>.</p>
+</div>
+<div id="ref-ml_roc">
+<p>[5] AZEVEDO C. On ROC and Precision-Recall curves[EB/OL]([日期不详]). <a href="https://towardsdatascience.com/on-roc-and-precision-recall-curves-c23e9b63820c">https://towardsdatascience.com/on-roc-and-precision-recall-curves-c23e9b63820c</a>.</p>
+</div>
+<div id="ref-ml_roc_auc">
+<p>[6] GOOGLE. 分类 (Classification)：ROC 和曲线下面积[EB/OL]([日期不详]). <a href="https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=zh-cn">https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=zh-cn</a>.</p>
+</div>
+<div id="ref-ml_pr_auc">
+<p>[7] NEPTUNE.AI. F1 Score vs ROC AUC vs Accuracy vs PR AUC: Which Evaluation Metric Should You Choose?[EB/OL](2019–11–04). <a href="https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc#3">https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc#3</a>.</p>
+</div>
+</div>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#中位数">中位数</a></li>
+  <li><a href="#评估指标">评估指标</a>
+  <ul>
+  <li><a href="#精确率precision">精确率（Precision）</a>
+  <ul>
+  <li><a href="#pn">P@n</a></li>
+  <li><a href="#avepaverage-precisionml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#mapmean-average-precision">MAP(Mean Average Precision)</a></li>
+  </ul></li>
+  <li><a href="#召回率recall">召回率（Recall）</a></li>
+  <li><a href="#准确率accuracy">准确率（Accuracy）</a></li>
+  <li><a href="#f_1"><span class="math inline">\(F_1\)</span></a></li>
+  <li><a href="#真阳性率tprml_tpr_fpr">真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#伪阳性率fprml_tpr_fpr">伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#roc-与-precision-recall-曲线ml_roc">ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<span>5</span>]</sup></span></a>
+  <ul>
+  <li><a href="#roc-与-p-r-曲线的比较ml_roc">ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#aucarea-under-the-curve">AUC(Area Under the Curve)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex justify-between">
+
+
+
+  <div>
+    
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c42476c9dcf243390e44b6d6259623cd788226b9" title='最后修改者 Kai Zhang | 2020-09-22 19:59:04 &#43;0800' target="_blank" rel="noopener">
+      <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-09-22 19:59:04 &#43;0800</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+      </footer>
+      
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  
+
+ 
+    </aside>
+    
+  </main>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+<script>
+  
+  const tableOfContents = document.getElementById("TableOfContents");
+  const tableOfContents1 = tableOfContents.cloneNode(true);
+  document.querySelector(".book-toc").appendChild(tableOfContents);
+  document
+    .getElementById("toc-control")
+    .nextElementSibling.appendChild(tableOfContents1);
+
+  
+  const searchResults = document.getElementById("book-search-results");
+  document
+    .getElementById("book-search-input")
+    .addEventListener("keyup", (event) => {
+      
+      
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        if (searchResults.childNodes.length > 0) {
+          const searchResult = searchResults.childNodes[0].childNodes[0];
+          window.location.href = searchResult.href;
+        }
+      }
+    });
+
+  
+  MathJax = {
+    tex: {
+      macros: {
+        AveP: ["\\textrm{AveP}"],
+        bm: ["{\\boldsymbol{#1}}", 1],
+        d: ["\\textrm{d}"],
+        diag: ["\\textrm{diag}"],
+        FN: ["\\textrm{FN}"],
+        FP: ["\\textrm{FP}"],
+        FPR: ["\\textrm{FPR}"],
+        MAP: ["\\textrm{MAP}"],
+        matrix: ["{\\bm{#1}}", 1],
+        median: ["\\textrm{median}"],
+        rel: ["\\textrm{rel}"],
+        set: ["{\\mathbb{#1}}", 1],
+        sign: ["\\textrm{sign}"],
+        SO: ["\\textrm{SO}"],
+        tanh: ["\\textrm{tanh}"],
+        TN: ["\\textrm{TN}"],
+        TP: ["\\textrm{TP}"],
+        TPR: ["\\textrm{TPR}"],
+        transformation: ["{\\mathcal{#1}}", 1],
+        transpose: ["{#1}^{\\mathsf{T}}", 1],
+        vec: ["{\\bm{#1}}", 1],
+      },
+    },
+  };
+
+  
+  hljs.initHighlightingOnLoad();
+  
+
+
+  
+  window.setTimeout(() => {
+    document.querySelectorAll("table").forEach((table) => {
+      
+      
+      
+      const tableWidth = table.caption.clientWidth + 1;
+      table.style.width = tableWidth + "px";
+    });
+  }, 100);
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

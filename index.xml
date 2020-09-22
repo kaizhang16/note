@@ -183,7 +183,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/tex/</guid>
-      <description>运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}     公式对齐[2] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[3]。</description>
+      <description>运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}     集合操作  表 3: 集合操作  数学表达式 含义 \(\TeX\) 表示    \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     公式对齐[2] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[3]。</description>
     </item>
     
     <item>
@@ -357,11 +357,16 @@ Zotfile  访问 https://github.com/jlegewie/zotfile/releases，下载最新版�
     
     <item>
       <title>机器学习</title>
-      <link>https://kaizhang91.github.io/notes/docs/ai/machine-learning/</link>
+      <link>https://kaizhang91.github.io/notes/docs/ai/machine_learning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/ai/machine-learning/</guid>
-      <description>中位数 目录  中位数   </description>
+      <guid>https://kaizhang91.github.io/notes/docs/ai/machine_learning/</guid>
+      <description>中位数 评估指标  表 1: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[1]：
+\[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
+在信息检索领域这样定义[2]：
+\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]
+P@n 只考虑 top n 个查询结果。[2]
+AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]</description>
     </item>
     
     <item>
