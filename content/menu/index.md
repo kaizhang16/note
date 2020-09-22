@@ -3,7 +3,7 @@ headless: true
 ---
 
 - **AI**
-  - [机器学习]({{< relref "/docs/ai/machine-learning" >}})
+  - [机器学习]({{< relref "/docs/ai/machine_learning" >}})
   - [开发环境]({{< relref "/docs/ai/dev-env" >}})
   - [自然语言处理]({{< relref "/docs/ai/nlp" >}})
 - **数学**
