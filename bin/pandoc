@@ -13,4 +13,6 @@
   --quiet \
   --metadata=toc-title:目录 \
   --filter=pandoc-crossref \
-  --metadata=tableTitle:表
+  --metadata=tableTitle:表 \
+  --metadata=figureTitle:图 \
+  --metadata=figPrefix:图.

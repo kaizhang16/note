@@ -4,11 +4,13 @@ title: "TeX"
 
 # 运算符
 
-| 运算符             | 含义             | $\TeX$ 表示        |
-|--------------------|------------------|--------------------|
-| $\langle, \rangle$ | 内积             | `\langle, \rangle` |
-| $\otimes$          | 外积             | `\otimes`          |
-| $\odot$            | Hadamard product | `\odot`[@TeX_odot] |
+| 运算符              | 含义             | $\TeX$ 表示         |
+|---------------------|------------------|---------------------|
+| $\langle, \rangle$  | 内积             | `\langle, \rangle`  |
+| $\otimes$           | 外积             | `\otimes`           |
+| $\odot$             | Hadamard product | `\odot`[@TeX_odot]  |
+| $\int_0^1 p(r)\d r$ | 积分             | `\int_0^1 p(r)\d r` |
+| $\sum_{k=1}^n P(k)$ | 求和             | `\sum_{k=1}^n P(k)` |
 
 : 运算符 {#tbl:TeXOperators}
 
@@ -22,6 +24,15 @@ title: "TeX"
 | $\tilde{A}$                 | 变体   | `\tilde{A}`                 |
 
 : 数学表达式 {#tbl:TeXExpressions}
+
+# 集合操作
+
+| 数学表达式     | 含义          | $\TeX$ 表示    |
+|----------------|---------------|----------------|
+| $A\cap B$      | A 与 B 的交集 | `A\cap B`      |
+| $\vert A\vert$ | A 的元素个数  | `\vert A\vert` |
+
+: 集合操作 {#tbl:set_operation}
 
 # 公式对齐[@TeXAlign]
 
