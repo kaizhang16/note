@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="开发环境"><meta property="og:title" content="开发环境" />
-<meta property="og:description" content="Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。
-PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 with torch.no_grad():  for data in testloader:  images, labels = data  outputs = net(images)  _, predicted = torch.max(outputs.data, 1)  total &#43;= labels." />
+<meta property="og:description" content="Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。
+PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 with torch.no_grad():  for data in testloader:  images, labels = data  outputs = net(images)  _, predicted = torch." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/dev-env/" />
-<meta property="article:modified_time" content="2020-06-16T09:37:35+00:00" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/dev_env/" />
+<meta property="article:modified_time" content="2020-09-27T11:21:01+00:00" />
 <title>开发环境 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -17,7 +17,7 @@ PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 
 <link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.c82a17abecc8660258ff5a608c3b4f5412ef3227ada85613be5c2b240aefd605.js" integrity="sha256-yCoXq&#43;zIZgJY/1pgjDtPVBLvMietqFYTvlwrJArv1gU="></script>
+<script defer src="/notes/cn.search.min.226697864065abaa8df70b5026a41ded484a74e23a202db91b811935b2016e09.js" integrity="sha256-ImaXhkBlq6qN9wtQJqQd7UhKdOI6IC25G4EZNbIBbgk="></script>
 
 <!--
 Made with Book Theme
@@ -67,7 +67,8 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>AI</strong>
 <ul>
 <li><a href="/notes/docs/ai/machine_learning/">机器学习</a></li>
-<li><a href="/notes/docs/ai/dev-env/"class=active>开发环境</a></li>
+<li><a href="/notes/docs/ai/dev_env/"class=active>开发环境</a></li>
+<li><a href="/notes/docs/ai/recommend_system/">推荐系统</a></li>
 <li><a href="/notes/docs/ai/nlp/">自然语言处理</a></li>
 </ul>
 </li>
@@ -192,29 +193,34 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">docker</span> run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
 <h2 id="docker-19.03-1">Docker &lt; 19.03</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="ex">nvidia-docker</span> run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
+<h1 id="jupyter-lab">Jupyter Lab</h1>
+<h2 id="安装">安装</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pip</span> install jupyterlab</span></code></pre></div>
+<h2 id="使用">使用</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">jupyter</span> lab</span></code></pre></div>
 <h1 id="jupyter">Jupyter</h1>
 <h2 id="jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</h2>
-<h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">pip</span> install jupyter_contrib_nbextensions</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="ex">jupyter</span> contrib nbextension install --user</span></code></pre></div>
-<h3 id="使用">使用</h3>
+<h3 id="安装-1">安装</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">pip</span> install jupyter_contrib_nbextensions</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="ex">jupyter</span> contrib nbextension install --user</span></code></pre></div>
+<h3 id="使用-1">使用</h3>
 <p>打开 <code>http://&lt;host&gt;:&lt;port&gt;/nbextensions</code> 管理。</p>
 <h1 id="pytorch">PyTorch</h1>
-<h2 id="安装-1">安装</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">pip</span> install torch torchvision</span></code></pre></div>
+<h2 id="安装-2">安装</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">pip</span> install torch torchvision</span></code></pre></div>
 <h2 id="计算精度">计算精度</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>correct <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="cf">with</span> torch.no_grad():</span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="cf">for</span> data <span class="kw">in</span> testloader:</span>
-<span id="cb5-5"><a href="#cb5-5"></a>        images, labels <span class="op">=</span> data</span>
-<span id="cb5-6"><a href="#cb5-6"></a>        outputs <span class="op">=</span> net(images)</span>
-<span id="cb5-7"><a href="#cb5-7"></a>        _, predicted <span class="op">=</span> torch.<span class="bu">max</span>(outputs.data, <span class="dv">1</span>)</span>
-<span id="cb5-8"><a href="#cb5-8"></a>        total <span class="op">+=</span> labels.size(<span class="dv">0</span>)</span>
-<span id="cb5-9"><a href="#cb5-9"></a>        correct <span class="op">+=</span> (predicted <span class="op">==</span> labels).<span class="bu">sum</span>().item()</span>
-<span id="cb5-10"><a href="#cb5-10"></a></span>
-<span id="cb5-11"><a href="#cb5-11"></a><span class="bu">print</span>(<span class="st">&#39;Accuracy of the network on the 10000 test images: </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%%</span><span class="st">&#39;</span> <span class="op">%</span> (</span>
-<span id="cb5-12"><a href="#cb5-12"></a>    <span class="dv">100</span> <span class="op">*</span> correct <span class="op">/</span> total))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>correct <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="cf">for</span> data <span class="kw">in</span> testloader:</span>
+<span id="cb7-5"><a href="#cb7-5"></a>        images, labels <span class="op">=</span> data</span>
+<span id="cb7-6"><a href="#cb7-6"></a>        outputs <span class="op">=</span> net(images)</span>
+<span id="cb7-7"><a href="#cb7-7"></a>        _, predicted <span class="op">=</span> torch.<span class="bu">max</span>(outputs.data, <span class="dv">1</span>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a>        total <span class="op">+=</span> labels.size(<span class="dv">0</span>)</span>
+<span id="cb7-9"><a href="#cb7-9"></a>        correct <span class="op">+=</span> (predicted <span class="op">==</span> labels).<span class="bu">sum</span>().item()</span>
+<span id="cb7-10"><a href="#cb7-10"></a></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="bu">print</span>(<span class="st">&#39;Accuracy of the network on the 10000 test images: </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%%</span><span class="st">&#39;</span> <span class="op">%</span> (</span>
+<span id="cb7-12"><a href="#cb7-12"></a>    <span class="dv">100</span> <span class="op">*</span> correct <span class="op">/</span> total))</span></code></pre></div>
 <h2 id="模型">模型</h2>
 <ul>
 <li>evaluate 模型时，代码需要包含在 <code>with torch.no_grad():</code> 里，避免计算梯度</li>
@@ -263,7 +269,7 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="device">device</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span>)</span></code></pre></div>
 <h2 id="module">Module</h2>
 <p><code>net.zero_grad()</code> 可以清空存在的梯度，不然梯度会累积。</p>
 
@@ -275,17 +281,22 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#docker-19.03">Docker &gt;= 19.03</a></li>
   <li><a href="#docker-19.03-1">Docker &lt; 19.03</a></li>
   </ul></li>
-  <li><a href="#jupyter">Jupyter</a>
-  <ul>
-  <li><a href="#jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</a>
+  <li><a href="#jupyter-lab">Jupyter Lab</a>
   <ul>
   <li><a href="#安装">安装</a></li>
   <li><a href="#使用">使用</a></li>
   </ul></li>
+  <li><a href="#jupyter">Jupyter</a>
+  <ul>
+  <li><a href="#jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</a>
+  <ul>
+  <li><a href="#安装-1">安装</a></li>
+  <li><a href="#使用-1">使用</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#pytorch">PyTorch</a>
   <ul>
-  <li><a href="#安装-1">安装</a></li>
+  <li><a href="#安装-2">安装</a></li>
   <li><a href="#计算精度">计算精度</a></li>
   <li><a href="#模型">模型</a></li>
   <li><a href="#tensor">Tensor</a></li>
@@ -306,9 +317,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a6837941c5981400014e5ad3ff7bd71c5ae82a7a" title='最后修改者 Kai Zhang | 2020-06-16 17:37:35 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/945b2f48fd59cc5326f2502a4b5f5149509dfa37" title='最后修改者 Kai Zhang | 2020-09-27 19:21:01 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-06-16 17:37:35 &#43;0800</span>
+      <span>2020-09-27 19:21:01 &#43;0800</span>
     </a>
   </div>
 
@@ -374,6 +385,7 @@ https://github.com/alex-shpak/hugo-book
       macros: {
         AveP: ["\\textrm{AveP}"],
         bm: ["{\\boldsymbol{#1}}", 1],
+        cos: ["\\textrm{cos}"],
         d: ["\\textrm{d}"],
         diag: ["\\textrm{diag}"],
         FN: ["\\textrm{FN}"],
@@ -381,10 +393,12 @@ https://github.com/alex-shpak/hugo-book
         FPR: ["\\textrm{FPR}"],
         MAP: ["\\textrm{MAP}"],
         matrix: ["{\\bm{#1}}", 1],
+        mean: ["{\\overline{#1}}", 1],
         median: ["\\textrm{median}"],
         rel: ["\\textrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
         sign: ["\\textrm{sign}"],
+        sim: ["\\textrm{sim}"],
         SO: ["\\textrm{SO}"],
         tanh: ["\\textrm{tanh}"],
         TN: ["\\textrm{TN}"],

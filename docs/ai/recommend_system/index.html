@@ -4,18 +4,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="传输"><meta property="og:title" content="传输" />
-<meta property="og:description" content="SSH Secure Shell。
-只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
- SFTP SSH File Transfer Protocol。
-常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/ -r，递归  下载 put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/ -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
-vsftpd Very Secure FTP Daemon。
-只允许某些用户访问[2] /etc/vsftpd.conf:
-userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd." />
+<meta name="description" content="推荐系统"><meta property="og:title" content="推荐系统" />
+<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏      ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息     协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/transmission/" />
-<meta property="article:modified_time" content="2020-05-05T15:32:52+00:00" />
-<title>传输 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/recommend_system/" />
+<meta property="article:modified_time" content="2020-09-27T11:21:01+00:00" />
+<title>推荐系统 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -73,7 +67,7 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/notes/docs/ai/machine_learning/">机器学习</a></li>
 <li><a href="/notes/docs/ai/dev_env/">开发环境</a></li>
-<li><a href="/notes/docs/ai/recommend_system/">推荐系统</a></li>
+<li><a href="/notes/docs/ai/recommend_system/"class=active>推荐系统</a></li>
 <li><a href="/notes/docs/ai/nlp/">自然语言处理</a></li>
 </ul>
 </li>
@@ -98,7 +92,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/cs/security/">安全</a></li>
 <li><a href="/notes/docs/cs/encoding/">编码</a></li>
 <li><a href="/notes/docs/cs/ci/">持续集成</a></li>
-<li><a href="/notes/docs/cs/transmission/"class=active>传输</a></li>
+<li><a href="/notes/docs/cs/transmission/">传输</a></li>
 <li><a href="/notes/docs/cs/database/">数据库</a></li>
 <li><a href="/notes/docs/cs/data-type/">数据类型</a></li>
 <li><a href="/notes/docs/cs/algorithm/">算法</a></li>
@@ -171,7 +165,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>传输</strong>
+  <strong>推荐系统</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -193,96 +187,133 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="ssh">SSH</h1>
-<p>Secure Shell。</p>
-<h2 id="只让某些用户使用密码登录">只让某些用户使用密码登录</h2>
-<pre class="ssh"><code>PasswordAuthentication no
-
-Match User &lt;username&gt;
-    PasswordAuthentication yes</code></pre>
-<blockquote>
-<p><code>Match</code> 在遇到下一个 <code>Match</code> 前一直有效，与缩进无关。</p>
-</blockquote>
-<h1 id="sftp">SFTP</h1>
-<p>SSH File Transfer Protocol。</p>
-<h2 id="常见命令">常见命令</h2>
-<div id="tbl:SFTP_commands">
+<article class="markdown"><h1 id="术语">术语</h1>
+<div id="tbl:terminology">
 <table>
-<caption>表 1: SFTP 常见命令</caption>
+<caption>表 1: 术语</caption>
 <thead>
 <tr class="header">
-<th>功能</th>
-<th>命令</th>
-<th>选项</th>
+<th>缩写</th>
+<th>全称</th>
+<th>含义</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>上传</td>
-<td><code>put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/</code></td>
-<td><code>-r</code>，递归</td>
+<td>C</td>
+<td>Context</td>
+<td>场景</td>
 </tr>
 <tr class="even">
-<td>下载</td>
-<td><code>put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/</code></td>
-<td><code>-r</code>，递归</td>
+<td>CVR</td>
+<td>Conversion Rate</td>
+<td>转化率</td>
 </tr>
 <tr class="odd">
-<td>移动文件</td>
-<td><code>rename</code></td>
-<td></td>
+<td>I</td>
+<td>Item</td>
+<td>物品</td>
+</tr>
+<tr class="even">
+<td>U</td>
+<td>User</td>
+<td>用户</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="internal-sftp-vs-sftp-server">internal-sftp vs sftp-server</h2>
-<p>推荐使用 internal-sftp。<span class="citation" data-cites="sftp_internal_vs_server"><sup>[<a href="#ref-sftp_internal_vs_server" role="doc-biblioref">1</a>]</sup></span></p>
-<h1 id="vsftpd">vsftpd</h1>
-<p>Very Secure FTP Daemon。</p>
-<h2 id="只允许某些用户访问vsftpd_allow_centain_users">只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<a href="#ref-vsftpd_allow_centain_users" role="doc-biblioref">2</a>]</sup></span></h2>
-<p><code>/etc/vsftpd.conf</code>:</p>
-<pre class="conf"><code>userlist_enable=YES
-userlist_file=/etc/vsftpd.userlist
-userlist_deny=NO</code></pre>
-<h2 id="invalidargumentvsftpd_invalid_argument">INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<a href="#ref-vsftpd_invalid_argument" role="doc-biblioref">3</a>]</sup></span></h2>
-<p><code>/etc/vsftpd.conf</code>:</p>
-<pre class="conf"><code>listen=YES</code></pre>
-<h2 id="login-incorrectvsftpd_530">530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<a href="#ref-vsftpd_530" role="doc-biblioref">4</a>]</sup></span></h2>
-<p><code>/etc/vsftpd.conf</code>:</p>
-<pre class="conf"><code>pam_service_name=ftp</code></pre>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-sftp_internal_vs_server">
-<p>[1] PRIKRYL M. OpenSSH: Difference between internal-sftp and sftp-server[EB/OL](2015–01–17). <a href="https://serverfault.com/a/660325">https://serverfault.com/a/660325</a>.</p>
+<h1 id="架构">架构</h1>
+<figure>
+<img src=" https://kaizhang91.github.io/notes/fig/ai/recommend_system/architecture.webp
+" id="fig:architecture" alt="" /><figcaption>图 1: 推荐系统架构</figcaption>
+</figure>
+<h1 id="算法">算法</h1>
+<h2 id="不同算法的优缺点">不同算法的优缺点</h2>
+<div id="tbl:pros_cons">
+<table>
+<caption>表 2: 不同算法的优缺点</caption>
+<thead>
+<tr class="header">
+<th>算法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>UserCF</td>
+<td>符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢）</td>
+<td>用户数远大于物品数</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>社交特性更强，适于发现热点</td>
+<td>用户历史数据向量很稀疏</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ItemCF</td>
+<td>适于兴趣变化较为稳定的应用</td>
+<td>泛化能力弱，头部效应强</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>直观，可解释性强</td>
+<td>无法有效引入场景信息</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="ref-vsftpd_allow_centain_users">
-<p>[2] MARK. vsftpd: allow access only for certain users[EB/OL](2011–03–06). <a href="https://serverfault.com/a/243821">https://serverfault.com/a/243821</a>.</p>
-</div>
-<div id="ref-vsftpd_invalid_argument">
-<p>[3] JACK S. vsftpd-cannot read config file even when file exists[EB/OL](2016–09–15). <a href="https://askubuntu.com/a/825114">https://askubuntu.com/a/825114</a>.</p>
-</div>
-<div id="ref-vsftpd_530">
-<p>[4] AZKERM. vsftpd: 530 Login incorrect[EB/OL](2014–01–31). <a href="https://askubuntu.com/a/413694">https://askubuntu.com/a/413694</a>.</p>
-</div>
-</div>
+<h2 id="协同过滤">协同过滤</h2>
+<h3 id="共现矩阵">共现矩阵</h3>
+<p>用户为行坐标（记用户总数为 <span class="math inline">\(m\)</span>）、物品为列坐标（即物品总数为 <span class="math inline">\(n\)</span>）的 <span class="math inline">\(m\times n\)</span> 维矩阵。</p>
+<h3 id="相似度">相似度</h3>
+<h4 id="余弦相似度">余弦相似度</h4>
+<p><span id="eq:cosine_similarity"><span class="math display">\[\sim(\vec{i},\vec{j}) = \cos(\vec{i}, \vec{j}) = \frac{\vec{i}\cdot\vec{j}}{\lVert\vec{i}\rVert\cdot\lVert\vec{j}\rVert}\qquad(1)\]</span></span></p>
+<p>其中，<span class="math inline">\(\vec{i}\)</span>、<span class="math inline">\(\vec{j}\)</span> 均表示用户向量。</p>
+<h4 id="皮尔逊相关系数">皮尔逊相关系数</h4>
+<p><span id="eq:pearsion_coefficient"><span class="math display">\[\sim(i,j) = \frac{\sum_{p\in P}(R_{i,p} - \mean{R_i})(R_{j,p}-\mean{R_j})}{\sqrt{\sum_{p\in P}(R_{i,p}-\mean{R_i})^2}\sqrt{\sum_{p\in P}(R_{j,p}-\mean{R_j})^2}}\qquad(2)\]</span></span></p>
+<p>其中，<span class="math inline">\(R_{i,p}\)</span> 表示用户 <span class="math inline">\(i\)</span> 对物品 <span class="math inline">\(p\)</span> 的评分；<span class="math inline">\(\mean{R_i}\)</span> 表示用户 <span class="math inline">\(i\)</span> 对所有物品的平均评分；<span class="math inline">\(P\)</span> 代表所有物品的集合。</p>
+<blockquote>
+<p>皮尔逊相关系数减小了用户评分偏置的影响。</p>
+</blockquote>
+<h4 id="皮尔逊相关系数拓展">皮尔逊相关系数拓展</h4>
+<p><span id="eq:pearsion_coefficient_item"><span class="math display">\[\sim(i,j) = \frac{\sum_{p\in P}(R_{i,p} - \mean{R_p})(R_{j,p}-\mean{R_p})}{\sqrt{\sum_{p\in P}(R_{i,p}-\mean{R_p})^2}\sqrt{\sum_{p\in P}(R_{j,p}-\mean{R_p})^2}}\qquad(3)\]</span></span></p>
+<p>其中，<span class="math inline">\(R_{i,p}\)</span> 表示用户 <span class="math inline">\(i\)</span> 对物品 <span class="math inline">\(p\)</span> 的评分；<span class="math inline">\(\mean{R_p}\)</span> 表示物品 <span class="math inline">\(p\)</span> 的平均评分；<span class="math inline">\(P\)</span> 代表所有物品的集合。</p>
+<blockquote>
+<p>式. 3 减小了物品评分偏置的影响。</p>
+</blockquote>
+<h3 id="usercf">UserCF</h3>
+<p>基于用户的协同过滤。</p>
+<p><span id="eq:user_cf"><span class="math display">\[R_{u,p} = \frac{\sum_{s\in S}w_{u,s}R_{s,p}}{\sum_{s\in S}w_{u,s}}\qquad(4)\]</span></span></p>
+<p>其中，<span class="math inline">\(R_{s,p}\)</span> 表示用户 <span class="math inline">\(s\)</span> 对物品 <span class="math inline">\(p\)</span> 的评分；<span class="math inline">\(w_{u,s}\)</span> 表示用户 <span class="math inline">\(u\)</span> 与用户 <span class="math inline">\(s\)</span> 的相似度。</p>
+<h3 id="itemcf">ItemCF</h3>
+<p>基于物品相似度的协同过滤。</p>
+<p><span id="eq:item_cf"><span class="math display">\[R_{u,p} = \sum_{h\in H}w_{p,h}R_{u,h}\qquad(5)\]</span></span></p>
+<p>其中，<span class="math inline">\(R_{u,h}\)</span> 表示用户 <span class="math inline">\(u\)</span> 对物品 <span class="math inline">\(h\)</span> 的评分；<span class="math inline">\(w_{p,h}\)</span> 表示物品 <span class="math inline">\(p\)</span> 与物品 <span class="math inline">\(h\)</span> 的相似度；<span class="math inline">\(H\)</span> 表示用户 <span class="math inline">\(u\)</span> 的正反馈物品集合。</p>
+<h1 id="参考文献">参考文献</h1>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#ssh">SSH</a>
+  <li><a href="#术语">术语</a></li>
+  <li><a href="#架构">架构</a></li>
+  <li><a href="#算法">算法</a>
   <ul>
-  <li><a href="#只让某些用户使用密码登录">只让某些用户使用密码登录</a></li>
-  </ul></li>
-  <li><a href="#sftp">SFTP</a>
+  <li><a href="#不同算法的优缺点">不同算法的优缺点</a></li>
+  <li><a href="#协同过滤">协同过滤</a>
   <ul>
-  <li><a href="#常见命令">常见命令</a></li>
-  <li><a href="#internal-sftp-vs-sftp-server">internal-sftp vs sftp-server</a></li>
+  <li><a href="#共现矩阵">共现矩阵</a></li>
+  <li><a href="#相似度">相似度</a></li>
+  <li><a href="#usercf">UserCF</a></li>
+  <li><a href="#itemcf">ItemCF</a></li>
   </ul></li>
-  <li><a href="#vsftpd">vsftpd</a>
-  <ul>
-  <li><a href="#只允许某些用户访问vsftpd_allow_centain_users">只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#invalidargumentvsftpd_invalid_argument">INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#login-incorrectvsftpd_530">530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<span>4</span>]</sup></span></a></li>
   </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -297,9 +328,9 @@ userlist_deny=NO</code></pre>
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ba85a184b5096a095e70196667ad4ef32dd19e9a" title='最后修改者 Kai Zhang | 2020-05-05 23:32:52 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/945b2f48fd59cc5326f2502a4b5f5149509dfa37" title='最后修改者 Kai Zhang | 2020-09-27 19:21:01 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-05-05 23:32:52 &#43;0800</span>
+      <span>2020-09-27 19:21:01 &#43;0800</span>
     </a>
   </div>
 
