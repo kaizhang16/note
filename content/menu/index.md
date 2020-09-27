@@ -4,7 +4,8 @@ headless: true
 
 - **AI**
   - [机器学习]({{< relref "/docs/ai/machine_learning" >}})
-  - [开发环境]({{< relref "/docs/ai/dev-env" >}})
+  - [开发环境]({{< relref "/docs/ai/dev_env" >}})
+  - [推荐系统]({{< relref "/docs/ai/recommend_system" >}})
   - [自然语言处理]({{< relref "/docs/ai/nlp" >}})
 - **数学**
   - [统计]({{< relref "/docs/math/statistics" >}})

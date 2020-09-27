@@ -175,20 +175,6 @@ row_count = sum(1 for row in file_object)
 PYTHONIOENCODING=utf-8 python3 script.py
 ```
 
-# jupyter
-
-## 安装
-
-```sh
-pip install jupyterlab
-```
-
-## 使用
-
-```sh
-jupyter lab
-```
-
 # numpy
 
 ```py

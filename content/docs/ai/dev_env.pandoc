@@ -16,6 +16,20 @@ docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi
 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi
 ```
 
+# Jupyter Lab
+
+## 安装
+
+```sh
+pip install jupyterlab
+```
+
+## 使用
+
+```sh
+jupyter lab
+```
+
 # Jupyter
 
 ## jupyter_contrib_nbextensions

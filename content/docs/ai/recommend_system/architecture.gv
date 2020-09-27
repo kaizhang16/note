@@ -1,0 +1,13 @@
+digraph G {
+    rankdir=LR;
+    node [ shape=record ];
+
+    input [ label="候选物品库" ];
+    model [ label="推荐模型 f(U, I, C)" ];
+    output [ label="推荐物品列表" ];
+    condition [ label="{用户信息|物品信息|场景信息}" ];
+
+    condition -> model;
+    input -> model;
+    model -> output;
+}
