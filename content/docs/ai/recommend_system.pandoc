@@ -1,0 +1,89 @@
+---
+title: "推荐系统"
+---
+
+# 术语
+
+| 缩写 | 全称            | 含义   |
+|------|-----------------|--------|
+| C    | Context         | 场景   |
+| CVR  | Conversion Rate | 转化率 |
+| I    | Item            | 物品   |
+| U    | User            | 用户   |
+
+: 术语 {#tbl:terminology}
+
+# 架构
+
+![推荐系统架构]({{< static_ref "fig/ai/recommend_system/architecture.webp" >}}){#fig:architecture}
+
+# 算法
+
+## 不同算法的优缺点
+
+| 算法   | 优点                                           | 缺点                   |
+|--------|------------------------------------------------|------------------------|
+| UserCF | 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） | 用户数远大于物品数     |
+|        | 社交特性更强，适于发现热点                     | 用户历史数据向量很稀疏 |
+|        |                                                |                        |
+| ItemCF | 适于兴趣变化较为稳定的应用                     | 泛化能力弱，头部效应强 |
+|        | 直观，可解释性强                               | 无法有效引入场景信息   |
+
+: 不同算法的优缺点 {#tbl:pros_cons}
+
+## 协同过滤
+
+### 共现矩阵
+
+用户为行坐标（记用户总数为 $m$）、物品为列坐标（即物品总数为 $n$）的 $m\times n$
+维矩阵。
+
+### 相似度
+
+#### 余弦相似度
+
+$$\sim(\vec{i},\vec{j}) = \cos(\vec{i}, \vec{j}) = \frac{\vec{i}\cdot\vec{j}}{\lVert\vec{i}\rVert\cdot\lVert\vec{j}\rVert}$$ {#eq:cosine_similarity}
+
+其中，$\vec{i}$、$\vec{j}$ 均表示用户向量。
+
+#### 皮尔逊相关系数
+
+$$\sim(i,j) = \frac{\sum_{p\in P}(R_{i,p} - \mean{R_i})(R_{j,p}-\mean{R_j})}{\sqrt{\sum_{p\in P}(R_{i,p}-\mean{R_i})^2}\sqrt{\sum_{p\in P}(R_{j,p}-\mean{R_j})^2}}$$
+{#eq:pearsion_coefficient}
+
+其中，$R_{i,p}$ 表示用户 $i$ 对物品 $p$ 的评分；$\mean{R_i}$ 表示用户 $i$ 对所有
+物品的平均评分；$P$ 代表所有物品的集合。
+
+> 皮尔逊相关系数减小了用户评分偏置的影响。
+
+#### 皮尔逊相关系数拓展
+
+$$\sim(i,j) = \frac{\sum_{p\in P}(R_{i,p} - \mean{R_p})(R_{j,p}-\mean{R_p})}{\sqrt{\sum_{p\in P}(R_{i,p}-\mean{R_p})^2}\sqrt{\sum_{p\in P}(R_{j,p}-\mean{R_p})^2}}$$
+{#eq:pearsion_coefficient_item}
+
+其中，$R_{i,p}$ 表示用户 $i$ 对物品 $p$ 的评分；$\mean{R_p}$ 表示物品 $p$
+的平均评分；$P$ 代表所有物品的集合。
+
+> [@eq:pearsion_coefficient_item] 减小了物品评分偏置的影响。
+
+### UserCF
+
+基于用户的协同过滤。
+
+$$R_{u,p} = \frac{\sum_{s\in S}w_{u,s}R_{s,p}}{\sum_{s\in S}w_{u,s}}$$
+{#eq:user_cf}
+
+其中，$R_{s,p}$ 表示用户 $s$ 对物品 $p$ 的评分；$w_{u,s}$ 表示用户 $u$
+与用户 $s$ 的相似度。
+
+### ItemCF
+
+基于物品相似度的协同过滤。
+
+$$R_{u,p} = \sum_{h\in H}w_{p,h}R_{u,h}$$
+{#eq:item_cf}
+
+其中，$R_{u,h}$ 表示用户 $u$ 对物品 $h$ 的评分；$w_{p,h}$ 表示物品 $p$
+与物品 $h$ 的相似度；$H$ 表示用户 $u$ 的正反馈物品集合。
+
+# 参考文献

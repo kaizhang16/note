@@ -15,4 +15,5 @@
   --filter=pandoc-crossref \
   --metadata=tableTitle:表 \
   --metadata=figureTitle:图 \
-  --metadata=figPrefix:图.
+  --metadata=figPrefix:图. \
+  --metadata=eqnPrefix:式.
