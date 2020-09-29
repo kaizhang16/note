@@ -104,7 +104,7 @@ PR AUC 表示在不同召回率阈值下的平均精确率。[@ml_pr_auc]
 
 # 信息论
 
-## 条件熵
+## 条件熵[@conditional_entropy]
 
 $$
 \begin{align}
@@ -121,7 +121,7 @@ $$f(z) = \frac{1}{1+e^{-z}}$$ {#eq:sigmoid}
 
 # 损失函数
 
-## 交叉熵
+## 交叉熵[@cross_entropy]
 
 $$H(p, q) = -E_p[\log q]$$ {#eq:cross_entropy}
 
