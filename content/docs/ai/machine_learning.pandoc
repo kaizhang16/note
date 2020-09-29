@@ -102,4 +102,31 @@ ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）
 
 PR AUC 表示在不同召回率阈值下的平均精确率。[@ml_pr_auc]
 
+# 信息论
+
+## 条件熵
+
+$$
+\begin{align}
+H(Y\mid X) &= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
+&= -\sum_{x\in\mathcal{X},y\in\mathcal{Y}}p(x,y)\log\frac{p(x,y)}{p(x)}
+\end{align}
+$$ {#eq:conditional_entropy}
+
+# 输出层
+
+## sigmoid
+
+$$f(z) = \frac{1}{1+e^{-z}}$$ {#eq:sigmoid}
+
+# 损失函数
+
+## 交叉熵
+
+$$H(p, q) = -E_p[\log q]$$ {#eq:cross_entropy}
+
+在离散情况下为
+
+$$H(p, q) = -\sum_{x\in\mathcal{X}}p(x)\log q(x)$$ {#eq:cross_entropy_discrete}
+
 # 参考文献
