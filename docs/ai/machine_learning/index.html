@@ -13,7 +13,7 @@ P@n 只考虑 top n 个查询结果。[2]
 AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/machine_learning/" />
-<meta property="article:modified_time" content="2020-09-29T07:43:17+00:00" />
+<meta property="article:modified_time" content="2020-09-29T08:17:05+00:00" />
 <title>机器学习 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -21,7 +21,7 @@ AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum
 <link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.0880d5189906c0bfc3a50c725b54eba0abac5aad239b919b6cb0a43c12cb462d.js" integrity="sha256-CIDVGJkGwL/DpQxyW1TroKusWq0jm5GbbLCkPBLLRi0="></script>
+<script defer src="/notes/cn.search.min.afee7113efdd8b4e47a73b9bd01aea20518b47bb02a1764308adb1a1c9b12c05.js" integrity="sha256-r&#43;5xE&#43;/di05Hpzub0BrqIFGLR7sCoXZDCK2xocmxLAU="></script>
 
 <!--
 Made with Book Theme
@@ -280,7 +280,7 @@ https://github.com/alex-shpak/hugo-book
 <h4 id="pr-auc">PR AUC</h4>
 <p>PR AUC 表示在不同召回率阈值下的平均精确率。<span class="citation" data-cites="ml_pr_auc"><sup>[<a href="#ref-ml_pr_auc" role="doc-biblioref">7</a>]</sup></span></p>
 <h1 id="信息论">信息论</h1>
-<h2 id="条件熵">条件熵</h2>
+<h2 id="条件熵conditional_entropy">条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<a href="#ref-conditional_entropy" role="doc-biblioref">8</a>]</sup></span></h2>
 <p><span id="eq:conditional_entropy"><span class="math display">\[
 \begin{align}
 H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
@@ -291,7 +291,7 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <h2 id="sigmoid">sigmoid</h2>
 <p><span id="eq:sigmoid"><span class="math display">\[f(z) = \frac{1}{1+e^{-z}}\qquad(13)\]</span></span></p>
 <h1 id="损失函数">损失函数</h1>
-<h2 id="交叉熵">交叉熵</h2>
+<h2 id="交叉熵cross_entropy">交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<a href="#ref-cross_entropy" role="doc-biblioref">9</a>]</sup></span></h2>
 <p><span id="eq:cross_entropy"><span class="math display">\[H(p, q) = -E_p[\log q]\qquad(14)\]</span></span></p>
 <p>在离散情况下为</p>
 <p><span id="eq:cross_entropy_discrete"><span class="math display">\[H(p, q) = -\sum_{x\in\mathcal{X}}p(x)\log q(x)\qquad(15)\]</span></span></p>
@@ -317,6 +317,12 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 </div>
 <div id="ref-ml_pr_auc">
 <p>[7] NEPTUNE.AI. F1 Score vs ROC AUC vs Accuracy vs PR AUC: Which Evaluation Metric Should You Choose?[EB/OL](2019–11–04). <a href="https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc#3">https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc#3</a>.</p>
+</div>
+<div id="ref-conditional_entropy">
+<p>[8] WIKIPEDIA. Conditional entropy[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Conditional_entropy">https://en.wikipedia.org/wiki/Conditional_entropy</a>.</p>
+</div>
+<div id="ref-cross_entropy">
+<p>[9] WIKIPEDIA. Cross entropy[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Cross_entropy">https://en.wikipedia.org/wiki/Cross_entropy</a>.</p>
 </div>
 </div>
 
@@ -345,7 +351,7 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
   </ul></li>
   <li><a href="#信息论">信息论</a>
   <ul>
-  <li><a href="#条件熵">条件熵</a></li>
+  <li><a href="#条件熵conditional_entropy">条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<span>8</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#输出层">输出层</a>
   <ul>
@@ -353,7 +359,7 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
   </ul></li>
   <li><a href="#损失函数">损失函数</a>
   <ul>
-  <li><a href="#交叉熵">交叉熵</a></li>
+  <li><a href="#交叉熵cross_entropy">交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<span>9</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -370,9 +376,9 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0f83f8057c21422f1ca57f47a7e10b495d50a95f" title='最后修改者 Kai Zhang | 2020-09-29 15:43:17 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/3fbc222c9b79bc1afb56a51b165064d4abb8a042" title='最后修改者 Kai Zhang | 2020-09-29 16:17:05 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-29 15:43:17 &#43;0800</span>
+      <span>2020-09-29 16:17:05 &#43;0800</span>
     </a>
   </div>
 
