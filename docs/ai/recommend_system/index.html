@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="推荐系统"><meta property="og:title" content="推荐系统" />
-<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便加入场景信息   空间复杂度低 不好冷启动   便于与神经网络集成      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
+<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/recommend_system/" />
-<meta property="article:modified_time" content="2020-09-29T03:59:24+00:00" />
+<meta property="article:modified_time" content="2020-09-29T07:43:17+00:00" />
 <title>推荐系统 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.f279a421f51d9de13c08f0fe2d2a5d80e176e83845d4966d2c0273a32e768690.js" integrity="sha256-8nmkIfUdneE8CPD&#43;LSpdgOF26DhF1JZtLAJzoy52hpA="></script>
+<script defer src="/notes/cn.search.min.0880d5189906c0bfc3a50c725b54eba0abac5aad239b919b6cb0a43c12cb462d.js" integrity="sha256-CIDVGJkGwL/DpQxyW1TroKusWq0jm5GbbLCkPBLLRi0="></script>
 
 <!--
 Made with Book Theme
@@ -205,16 +205,21 @@ https://github.com/alex-shpak/hugo-book
 <td>场景</td>
 </tr>
 <tr class="even">
+<td>CTR</td>
+<td>Click Through Rate</td>
+<td>点击率</td>
+</tr>
+<tr class="odd">
 <td>CVR</td>
 <td>Conversion Rate</td>
 <td>转化率</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>I</td>
 <td>Item</td>
 <td>物品</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>U</td>
 <td>User</td>
 <td>用户</td>
@@ -263,7 +268,7 @@ https://github.com/alex-shpak/hugo-book
 <tr class="odd">
 <td>矩阵分解</td>
 <td>泛化能力强</td>
-<td>不方便加入场景信息</td>
+<td>不方便融合特征</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -273,6 +278,26 @@ https://github.com/alex-shpak/hugo-book
 <tr class="odd">
 <td></td>
 <td>便于与神经网络集成</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>逻辑回归</td>
+<td>融合多种特征</td>
+<td>无法特征交叉、筛选</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>假设 <span class="math inline">\(y\)</span> 服从伯努利分布，有物理意义</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>是各特征的加权和，可解释性强</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>易于并行化、模型简单、易于训练</td>
 <td></td>
 </tr>
 </tbody>
@@ -327,6 +352,19 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="消除用户和物品打分的偏差">消除用户和物品打分的偏差</h3>
 <p><span id="eq:matrix_factorization_r_bias"><span class="math display">\[\hat{r}_{ui} = \mu + b_i + b_u + \T{\v{q}}_i\v{p}_u\qquad(9)\]</span></span></p>
 <p>其中，<span class="math inline">\(\mu\)</span> 是全局偏差，<span class="math inline">\(b_i\)</span> 是物品偏差，<span class="math inline">\(b_u\)</span> 是用户偏差。</p>
+<h2 id="逻辑回归">逻辑回归</h2>
+<h3 id="输出">输出</h3>
+<p><span id="eq:lr_output"><span class="math display">\[\hat{y} = \sigmoid(\T{\v{x}}\v{w} + b)\qquad(10)\]</span></span></p>
+<h3 id="损失函数">损失函数</h3>
+<p><span id="eq:lr_loss"><span class="math display">\[
+\begin{align}
+J(\v{w}) &amp;= \frac{1}{m}\sum_{i=1}^m H(p(\v{y}), p(\hat{\v{y}})) \\
+&amp;= -\frac{1}{m}\sum_{i=1}^m[y_i\log f_{\v{w}}(\v{x}_i) + (1-y_i)\log (1-f_{\v{w}}(\v{x}_i))]
+\end{align}
+\qquad(11)\]</span></span></p>
+<blockquote>
+<p>也可以用极大似然估计解释，<span class="math inline">\(P(y\mid \v{x};\v{w}) = (f_{\v{w}}(\v{x}))^y(1-f_{\v{w}}(\v{x}))^{1-y}\)</span>。</p>
+</blockquote>
 <h1 id="参考文献">参考文献</h1>
 
 <nav id="TableOfContents" role="doc-toc">
@@ -350,6 +388,11 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#梯度下降">梯度下降</a></li>
   <li><a href="#消除用户和物品打分的偏差">消除用户和物品打分的偏差</a></li>
   </ul></li>
+  <li><a href="#逻辑回归">逻辑回归</a>
+  <ul>
+  <li><a href="#输出">输出</a></li>
+  <li><a href="#损失函数">损失函数</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -366,9 +409,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/58a6576568706e6a814a75f9506bc22a13f26fcc" title='最后修改者 Kai Zhang | 2020-09-29 11:59:24 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0f83f8057c21422f1ca57f47a7e10b495d50a95f" title='最后修改者 Kai Zhang | 2020-09-29 15:43:17 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-29 11:59:24 &#43;0800</span>
+      <span>2020-09-29 15:43:17 &#43;0800</span>
     </a>
   </div>
 
@@ -436,17 +479,21 @@ https://github.com/alex-shpak/hugo-book
         bm: ["{\\boldsymbol{#1}}", 1],
         cos: ["\\mathrm{cos}"],
         d: ["\\mathrm{d}"],
+        data: ["\\mathrm{data}"],
         diag: ["\\mathrm{diag}"],
         FN: ["\\mathrm{FN}"],
         FP: ["\\mathrm{FP}"],
         FPR: ["\\mathrm{FPR}"],
+        log: ["\\mathrm{log}\\,"],
         MAP: ["\\mathrm{MAP}"],
         m: ["{\\bm{#1}}", 1],
         mean: ["{\\bar{#1}}", 1],
         median: ["\\mathrm{median}"],
         min: ["\\mathrm{min}"],
+        model: ["\\mathrm{model}"],
         rel: ["\\mathrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
+        sigmoid: ["\\mathrm{sigmoid}"],
         sign: ["\\mathrm{sign}"],
         sim: ["\\mathrm{sim}"],
         SNR: ["\\mathrm{SNR}"],

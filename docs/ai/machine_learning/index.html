@@ -13,7 +13,7 @@ P@n 只考虑 top n 个查询结果。[2]
 AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/machine_learning/" />
-<meta property="article:modified_time" content="2020-09-22T11:59:04+00:00" />
+<meta property="article:modified_time" content="2020-09-29T07:43:17+00:00" />
 <title>机器学习 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -21,7 +21,7 @@ AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum
 <link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.f279a421f51d9de13c08f0fe2d2a5d80e176e83845d4966d2c0273a32e768690.js" integrity="sha256-8nmkIfUdneE8CPD&#43;LSpdgOF26DhF1JZtLAJzoy52hpA="></script>
+<script defer src="/notes/cn.search.min.0880d5189906c0bfc3a50c725b54eba0abac5aad239b919b6cb0a43c12cb462d.js" integrity="sha256-CIDVGJkGwL/DpQxyW1TroKusWq0jm5GbbLCkPBLLRi0="></script>
 
 <!--
 Made with Book Theme
@@ -279,6 +279,22 @@ https://github.com/alex-shpak/hugo-book
 <p>ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。<span class="citation" data-cites="ml_roc_auc"><sup>[<a href="#ref-ml_roc_auc" role="doc-biblioref">6</a>]</sup></span></p>
 <h4 id="pr-auc">PR AUC</h4>
 <p>PR AUC 表示在不同召回率阈值下的平均精确率。<span class="citation" data-cites="ml_pr_auc"><sup>[<a href="#ref-ml_pr_auc" role="doc-biblioref">7</a>]</sup></span></p>
+<h1 id="信息论">信息论</h1>
+<h2 id="条件熵">条件熵</h2>
+<p><span id="eq:conditional_entropy"><span class="math display">\[
+\begin{align}
+H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
+&amp;= -\sum_{x\in\mathcal{X},y\in\mathcal{Y}}p(x,y)\log\frac{p(x,y)}{p(x)}
+\end{align}
+\qquad(12)\]</span></span></p>
+<h1 id="输出层">输出层</h1>
+<h2 id="sigmoid">sigmoid</h2>
+<p><span id="eq:sigmoid"><span class="math display">\[f(z) = \frac{1}{1+e^{-z}}\qquad(13)\]</span></span></p>
+<h1 id="损失函数">损失函数</h1>
+<h2 id="交叉熵">交叉熵</h2>
+<p><span id="eq:cross_entropy"><span class="math display">\[H(p, q) = -E_p[\log q]\qquad(14)\]</span></span></p>
+<p>在离散情况下为</p>
+<p><span id="eq:cross_entropy_discrete"><span class="math display">\[H(p, q) = -\sum_{x\in\mathcal{X}}p(x)\log q(x)\qquad(15)\]</span></span></p>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-ml_precision_recall">
@@ -327,6 +343,18 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#aucarea-under-the-curve">AUC(Area Under the Curve)</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#信息论">信息论</a>
+  <ul>
+  <li><a href="#条件熵">条件熵</a></li>
+  </ul></li>
+  <li><a href="#输出层">输出层</a>
+  <ul>
+  <li><a href="#sigmoid">sigmoid</a></li>
+  </ul></li>
+  <li><a href="#损失函数">损失函数</a>
+  <ul>
+  <li><a href="#交叉熵">交叉熵</a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -342,9 +370,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c42476c9dcf243390e44b6d6259623cd788226b9" title='最后修改者 Kai Zhang | 2020-09-22 19:59:04 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/0f83f8057c21422f1ca57f47a7e10b495d50a95f" title='最后修改者 Kai Zhang | 2020-09-29 15:43:17 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-22 19:59:04 &#43;0800</span>
+      <span>2020-09-29 15:43:17 &#43;0800</span>
     </a>
   </div>
 
@@ -412,17 +440,21 @@ https://github.com/alex-shpak/hugo-book
         bm: ["{\\boldsymbol{#1}}", 1],
         cos: ["\\mathrm{cos}"],
         d: ["\\mathrm{d}"],
+        data: ["\\mathrm{data}"],
         diag: ["\\mathrm{diag}"],
         FN: ["\\mathrm{FN}"],
         FP: ["\\mathrm{FP}"],
         FPR: ["\\mathrm{FPR}"],
+        log: ["\\mathrm{log}\\,"],
         MAP: ["\\mathrm{MAP}"],
         m: ["{\\bm{#1}}", 1],
         mean: ["{\\bar{#1}}", 1],
         median: ["\\mathrm{median}"],
         min: ["\\mathrm{min}"],
+        model: ["\\mathrm{model}"],
         rel: ["\\mathrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
+        sigmoid: ["\\mathrm{sigmoid}"],
         sign: ["\\mathrm{sign}"],
         sim: ["\\mathrm{sim}"],
         SNR: ["\\mathrm{SNR}"],

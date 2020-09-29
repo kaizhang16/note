@@ -320,7 +320,7 @@ PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/ai/recommend_system/</guid>
-      <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便加入场景信息   空间复杂度低 不好冷启动   便于与神经网络集成      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
+      <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
     </item>
     
     <item>
