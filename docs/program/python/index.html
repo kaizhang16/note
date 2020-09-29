@@ -8,7 +8,7 @@
 <meta property="og:description" content="内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/python/" />
-<meta property="article:modified_time" content="2020-09-27T11:21:01+00:00" />
+<meta property="article:modified_time" content="2020-09-29T03:59:24+00:00" />
 <title>Python | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.226697864065abaa8df70b5026a41ded484a74e23a202db91b811935b2016e09.js" integrity="sha256-ImaXhkBlq6qN9wtQJqQd7UhKdOI6IC25G4EZNbIBbgk="></script>
+<script defer src="/notes/cn.search.min.f279a421f51d9de13c08f0fe2d2a5d80e176e83845d4966d2c0273a32e768690.js" integrity="sha256-8nmkIfUdneE8CPD&#43;LSpdgOF26DhF1JZtLAJzoy52hpA="></script>
 
 <!--
 Made with Book Theme
@@ -74,7 +74,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>数学</strong>
 <ul>
 <li><a href="/notes/docs/math/statistics/">统计</a></li>
-<li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
+<li><a href="/notes/docs/math/linear_algebra/">线性代数</a></li>
 </ul>
 </li>
 <li><strong>视觉</strong>
@@ -383,7 +383,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb17-6"><a href="#cb17-6"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb17-7"><a href="#cb17-7"></a>array([<span class="fl">1.5</span>, <span class="fl">3.5</span>])</span></code></pre></div>
 <h2 id="右乘列向量">右乘列向量</h2>
-<p><span id="eq:rigthMultiplyColumnVector"><span class="math display">\[\matrix{A}\vec{x}\qquad(1)\]</span></span></p>
+<p><span id="eq:rigthMultiplyColumnVector"><span class="math display">\[\m{A}\v{x}\qquad(1)\]</span></span></p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>np.dot(A, x)</span></code></pre></div>
 <h2 id="竖向堆积">竖向堆积</h2>
 <div class="sourceCode" id="cb19"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
@@ -392,11 +392,11 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb19-4"><a href="#cb19-4"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
 <span id="cb19-5"><a href="#cb19-5"></a>       [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]])</span></code></pre></div>
 <h2 id="范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<a href="#ref-pythonNorm" role="doc-biblioref">13</a>]</sup></span></h2>
-<p><span id="eq:L2Norm"><span class="math display">\[\lVert\vec{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}\qquad(2)\]</span></span></p>
+<p><span id="eq:L2Norm"><span class="math display">\[\lVert\v{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}\qquad(2)\]</span></span></p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">&gt;&gt;&gt;</span> np.linalg.norm([<span class="dv">3</span>, <span class="dv">4</span>])</span>
 <span id="cb20-2"><a href="#cb20-2"></a><span class="fl">5.0</span></span></code></pre></div>
 <h2 id="奇异值分解">奇异值分解</h2>
-<p><span id="eq:SVD"><span class="math display">\[\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}\qquad(3)\]</span></span></p>
+<p><span id="eq:SVD"><span class="math display">\[\m{A} = \m{U}\m{D}\T{\m{V}}\qquad(3)\]</span></span></p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
 <h2 id="numpy.any">numpy.any</h2>
 <p>测试某个轴上是否有一个元素为真。</p>
@@ -633,9 +633,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/945b2f48fd59cc5326f2502a4b5f5149509dfa37" title='最后修改者 Kai Zhang | 2020-09-27 19:21:01 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/58a6576568706e6a814a75f9506bc22a13f26fcc" title='最后修改者 Kai Zhang | 2020-09-29 11:59:24 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-27 19:21:01 &#43;0800</span>
+      <span>2020-09-29 11:59:24 &#43;0800</span>
     </a>
   </div>
 
@@ -699,30 +699,32 @@ https://github.com/alex-shpak/hugo-book
   MathJax = {
     tex: {
       macros: {
-        AveP: ["\\textrm{AveP}"],
+        AveP: ["\\mathrm{AveP}"],
         bm: ["{\\boldsymbol{#1}}", 1],
-        cos: ["\\textrm{cos}"],
-        d: ["\\textrm{d}"],
-        diag: ["\\textrm{diag}"],
-        FN: ["\\textrm{FN}"],
-        FP: ["\\textrm{FP}"],
-        FPR: ["\\textrm{FPR}"],
-        MAP: ["\\textrm{MAP}"],
-        matrix: ["{\\bm{#1}}", 1],
-        mean: ["{\\overline{#1}}", 1],
-        median: ["\\textrm{median}"],
-        rel: ["\\textrm{rel}"],
+        cos: ["\\mathrm{cos}"],
+        d: ["\\mathrm{d}"],
+        diag: ["\\mathrm{diag}"],
+        FN: ["\\mathrm{FN}"],
+        FP: ["\\mathrm{FP}"],
+        FPR: ["\\mathrm{FPR}"],
+        MAP: ["\\mathrm{MAP}"],
+        m: ["{\\bm{#1}}", 1],
+        mean: ["{\\bar{#1}}", 1],
+        median: ["\\mathrm{median}"],
+        min: ["\\mathrm{min}"],
+        rel: ["\\mathrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
-        sign: ["\\textrm{sign}"],
-        sim: ["\\textrm{sim}"],
-        SO: ["\\textrm{SO}"],
-        tanh: ["\\textrm{tanh}"],
-        TN: ["\\textrm{TN}"],
-        TP: ["\\textrm{TP}"],
-        TPR: ["\\textrm{TPR}"],
+        sign: ["\\mathrm{sign}"],
+        sim: ["\\mathrm{sim}"],
+        SNR: ["\\mathrm{SNR}"],
+        SO: ["\\mathrm{SO}"],
+        tanh: ["\\mathrm{tanh}"],
+        TN: ["\\mathrm{TN}"],
+        TP: ["\\mathrm{TP}"],
+        TPR: ["\\mathrm{TPR}"],
         transformation: ["{\\mathcal{#1}}", 1],
-        transpose: ["{#1}^{\\mathsf{T}}", 1],
-        vec: ["{\\bm{#1}}", 1],
+        T: ["{#1}^{\\mathsf{T}}", 1],
+        v: ["{\\bm{#1}}", 1],
       },
     },
   };

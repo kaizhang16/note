@@ -183,7 +183,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/program/tex/</guid>
-      <description>运算符  表 1: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)  \(\lVert a\rVert\) 模长 \lVert a\rVert     数学表达式  表 2: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\bar{p}\) 平均值 \bar{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}     集合操作  表 3: 集合操作  数学表达式 含义 \(\TeX\) 表示    \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     公式对齐[2] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[3]。</description>
+      <description>矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}     集合  表 2: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     运算符  表 3: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)  \(\lVert a\rVert\) 模长 \lVert a\rVert     数学表达式  表 4: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align}  align* 表示不编号[3]。</description>
     </item>
     
     <item>
@@ -320,7 +320,7 @@ PyTorch 安装 pip install torch torchvision 计算精度 correct = 0 total = 0 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/ai/recommend_system/</guid>
-      <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏      ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息     协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
+      <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便加入场景信息   空间复杂度低 不好冷启动   便于与神经网络集成      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
     </item>
     
     <item>
@@ -426,18 +426,19 @@ AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum
     
     <item>
       <title>线性代数</title>
-      <link>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</link>
+      <link>https://kaizhang91.github.io/notes/docs/math/linear_algebra/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/docs/math/linear-algebra/</guid>
-      <description>相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[1] \[\transpose{\matrix{Q}}\matrix{Q} = \matrix{Q}\transpose{\matrix{Q}} = \matrix{I}\qquad(1)\]
-旋转矩阵[2] 旋转矩阵的集合：
-\[ \SO(n) = \{\matrix{R} \in \set{R}^{n\times n} \mid \matrix{R}\transpose{\matrix{R}} = \matrix{I}, \det(\matrix{R}) = 1\} \qquad(2)\]
-外积[3] \[\vec{u} \otimes \vec{v} = \vec{u}\transpose{\vec{v}}\qquad(3)\]
-参考文献 [1] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Orthogonal_matrix.
- [2] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.
- [3] WIKIPEDIA. Outer product[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Outer_product.
-  目录  相似矩阵 正交矩阵[1] 旋转矩阵[2] 外积[3] 参考文献   </description>
+      <guid>https://kaizhang91.github.io/notes/docs/math/linear_algebra/</guid>
+      <description>术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+其中，若记 \(\m{A}_{ji} = a + bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
+相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
+旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
+外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]</description>
     </item>
     
     <item>

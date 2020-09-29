@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
 
 
-<script defer src="/notes/cn.search.min.226697864065abaa8df70b5026a41ded484a74e23a202db91b811935b2016e09.js" integrity="sha256-ImaXhkBlq6qN9wtQJqQd7UhKdOI6IC25G4EZNbIBbgk="></script>
+<script defer src="/notes/cn.search.min.f279a421f51d9de13c08f0fe2d2a5d80e176e83845d4966d2c0273a32e768690.js" integrity="sha256-8nmkIfUdneE8CPD&#43;LSpdgOF26DhF1JZtLAJzoy52hpA="></script>
 
 <!--
 Made with Book Theme
@@ -75,7 +75,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>数学</strong>
 <ul>
 <li><a href="/notes/docs/math/statistics/">统计</a></li>
-<li><a href="/notes/docs/math/linear-algebra/">线性代数</a></li>
+<li><a href="/notes/docs/math/linear_algebra/">线性代数</a></li>
 </ul>
 </li>
 <li><strong>视觉</strong>
@@ -369,30 +369,32 @@ https://github.com/alex-shpak/hugo-book
   MathJax = {
     tex: {
       macros: {
-        AveP: ["\\textrm{AveP}"],
+        AveP: ["\\mathrm{AveP}"],
         bm: ["{\\boldsymbol{#1}}", 1],
-        cos: ["\\textrm{cos}"],
-        d: ["\\textrm{d}"],
-        diag: ["\\textrm{diag}"],
-        FN: ["\\textrm{FN}"],
-        FP: ["\\textrm{FP}"],
-        FPR: ["\\textrm{FPR}"],
-        MAP: ["\\textrm{MAP}"],
-        matrix: ["{\\bm{#1}}", 1],
-        mean: ["{\\overline{#1}}", 1],
-        median: ["\\textrm{median}"],
-        rel: ["\\textrm{rel}"],
+        cos: ["\\mathrm{cos}"],
+        d: ["\\mathrm{d}"],
+        diag: ["\\mathrm{diag}"],
+        FN: ["\\mathrm{FN}"],
+        FP: ["\\mathrm{FP}"],
+        FPR: ["\\mathrm{FPR}"],
+        MAP: ["\\mathrm{MAP}"],
+        m: ["{\\bm{#1}}", 1],
+        mean: ["{\\bar{#1}}", 1],
+        median: ["\\mathrm{median}"],
+        min: ["\\mathrm{min}"],
+        rel: ["\\mathrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
-        sign: ["\\textrm{sign}"],
-        sim: ["\\textrm{sim}"],
-        SO: ["\\textrm{SO}"],
-        tanh: ["\\textrm{tanh}"],
-        TN: ["\\textrm{TN}"],
-        TP: ["\\textrm{TP}"],
-        TPR: ["\\textrm{TPR}"],
+        sign: ["\\mathrm{sign}"],
+        sim: ["\\mathrm{sim}"],
+        SNR: ["\\mathrm{SNR}"],
+        SO: ["\\mathrm{SO}"],
+        tanh: ["\\mathrm{tanh}"],
+        TN: ["\\mathrm{TN}"],
+        TP: ["\\mathrm{TP}"],
+        TPR: ["\\mathrm{TPR}"],
         transformation: ["{\\mathcal{#1}}", 1],
-        transpose: ["{#1}^{\\mathsf{T}}", 1],
-        vec: ["{\\bm{#1}}", 1],
+        T: ["{#1}^{\\mathsf{T}}", 1],
+        v: ["{\\bm{#1}}", 1],
       },
     },
   };

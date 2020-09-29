@@ -4,12 +4,20 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}     集合  表 2: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     运算符  表 3: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)  \(\lVert a\rVert\) 模长 \lVert a\rVert     数学表达式  表 4: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[3]。" />
+<meta name="description" content="线性代数"><meta property="og:title" content="线性代数" />
+<meta property="og:description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
+相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
+旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
+外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/docs/math/linear_algebra/" />
 <meta property="article:modified_time" content="2020-09-29T03:59:24+00:00" />
-<title>TeX | 凯的笔记</title>
+<title>线性代数 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
@@ -74,7 +82,7 @@ https://github.com/alex-shpak/hugo-book
 <li><strong>数学</strong>
 <ul>
 <li><a href="/notes/docs/math/statistics/">统计</a></li>
-<li><a href="/notes/docs/math/linear_algebra/">线性代数</a></li>
+<li><a href="/notes/docs/math/linear_algebra/"class=active>线性代数</a></li>
 </ul>
 </li>
 <li><strong>视觉</strong>
@@ -114,7 +122,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/notes/docs/program/pandoc/">Pandoc</a></li>
 <li><a href="/notes/docs/program/python/">Python</a></li>
 <li><a href="/notes/docs/program/rust/">Rust</a></li>
-<li><a href="/notes/docs/program/tex/"class=active>TeX</a></li>
+<li><a href="/notes/docs/program/tex/">TeX</a></li>
 <li><a href="/notes/docs/program/toml/">TOML</a></li>
 <li><a href="/notes/docs/program/zsh/">Zsh</a></li>
 <li><a href="/notes/docs/program/template/">模板</a></li>
@@ -165,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>TeX</strong>
+  <strong>线性代数</strong>
 
   <label for="toc-control">
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
@@ -187,170 +195,83 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-<article class="markdown"><h1 id="矩阵">矩阵</h1>
-<div id="tbl:matrix">
-<table>
-<caption>表 1: 矩阵相关表示</caption>
-<thead>
-<tr class="header">
-<th>数学表达式</th>
-<th>含义</th>
-<th><span class="math inline">\(\TeX\)</span> 表示</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\m{A}\)</span></td>
-<td>矩阵</td>
-<td><code>\m{A}</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\T{A}\)</span></td>
-<td>转置</td>
-<td><code>\T{A}</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="集合">集合</h1>
-<div id="tbl:set">
-<table>
-<caption>表 2: 集合相关表示</caption>
-<thead>
-<tr class="header">
-<th>数学表达式</th>
-<th>含义</th>
-<th><span class="math inline">\(\TeX\)</span> 表示</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\{n \mid 0 \le n \le 19\}\)</span></td>
-<td>集合</td>
-<td><code>\{n \mid 0 \le n \le 19\}</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(A\cap B\)</span></td>
-<td>A 与 B 的交集</td>
-<td><code>A\cap B</code></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\vert A\vert\)</span></td>
-<td>A 的元素个数</td>
-<td><code>\vert A\vert</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="运算符">运算符</h1>
-<div id="tbl:TeXOperators">
-<table>
-<caption>表 3: 运算符</caption>
-<thead>
-<tr class="header">
-<th>运算符</th>
-<th>含义</th>
-<th><span class="math inline">\(\TeX\)</span> 表示</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\langle, \rangle\)</span></td>
-<td>内积</td>
-<td><code>\langle, \rangle</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\otimes\)</span></td>
-<td>外积</td>
-<td><code>\otimes</code></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\odot\)</span></td>
-<td>Hadamard product</td>
-<td><code>\odot</code><span class="citation" data-cites="TeX_odot"><sup>[<a href="#ref-TeX_odot" role="doc-biblioref">1</a>]</sup></span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\int_0^1 p(r)\d r\)</span></td>
-<td>积分</td>
-<td><code>\int_0^1 p(r)\d r</code></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\sum_{k=1}^n P(k)\)</span></td>
-<td>求和</td>
-<td><code>\sum_{k=1}^n P(k)</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\lVert a\rVert\)</span></td>
-<td>模长</td>
-<td><code>\lVert a\rVert</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="数学表达式">数学表达式</h1>
-<div id="tbl:TeXExpressions">
-<table>
-<caption>表 4: 数学表达式</caption>
-<thead>
-<tr class="header">
-<th>数学表达式</th>
-<th>含义</th>
-<th><span class="math inline">\(\TeX\)</span> 表示</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\mean{p}\)</span></td>
-<td>平均值</td>
-<td><code>\mean{p}</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\set{R}\)</span></td>
-<td>实数集</td>
-<td><code>\set{R}</code></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\tilde{A}\)</span></td>
-<td>变体</td>
-<td><code>\tilde{A}</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\hat{y}\)</span></td>
-<td>计算值</td>
-<td><code>\hat{y}</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<a href="#ref-TeXAlign" role="doc-biblioref">2</a>]</sup></span></h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="ss">2x - 5y &amp;=  8 </span><span class="sc">\\</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="ss">3x + 9y &amp;=  -12</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
+<article class="markdown"><h1 id="术语">术语</h1>
+<h2 id="共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<a href="#ref-conjugate_transpose" role="doc-biblioref">1</a>]</sup></span></h2>
+<p><span id="eq:conjugate_matrix"><span class="math display">\[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]</span></span></p>
+<p>其中，若记 <span class="math inline">\(\m{A}_{ji} = a + bi\)</span>，则 <span class="math inline">\((\m{A}_{ji})^* = a - bi\)</span>。</p>
+<h2 id="相似矩阵">相似矩阵</h2>
+<ul>
+<li>同一个线性变换在不同基下的矩阵称为相似矩阵</li>
+</ul>
+<h2 id="正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">2</a>]</sup></span></h2>
+<p><span id="eq:orthogonalMatrix"><span class="math display">\[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]</span></span></p>
+<h2 id="酉矩阵linearalgebraorthogonalmatrix">酉矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">2</a>]</sup></span></h2>
+<p><span id="eq:unitary_matrix"><span class="math display">\[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]</span></span></p>
+<h2 id="正规矩阵">正规矩阵</h2>
+<p><span id="eq:norm_matrix"><span class="math display">\[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]</span></span></p>
+<p>当且仅当 <span class="math inline">\(\m{A} = \m{U}\m{\Lambda}\m{U}^*\)</span> 时，方阵 <span class="math inline">\(\m{A}\)</span> 是正规矩阵。其中， <span class="math inline">\(\m{U}\)</span> 是酉矩阵；<span class="math inline">\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\)</span> 是对角阵； <span class="math inline">\(\m{U}\)</span> 的列向量是对应于特征值 <span class="math inline">\(\lambda_1,\dots,\lambda_n\)</span> 的特征向量。</p>
+<h2 id="旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<a href="#ref-高翔2017视觉" role="doc-biblioref">3</a>]</sup></span></h2>
+<p>旋转矩阵的集合：</p>
+<p><span id="eq:SOn"><span class="math display">\[
+\SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\}
+\qquad(5)\]</span></span></p>
+<h2 id="外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<a href="#ref-linearAlgebraOuterProduct" role="doc-biblioref">4</a>]</sup></span></h2>
+<p><span id="eq:outerProduct"><span class="math display">\[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]</span></span></p>
+<h1 id="svd奇异值分解">SVD（奇异值分解）</h1>
+<p>对任意一个 <span class="math inline">\(m\times n\)</span> 的复矩阵 <span class="math inline">\(M\)</span>，有 <span class="math inline">\(\m{M} = \m{U}\m{\Sigma}\m{V}^*\)</span>。其中，</p>
+<p><span id="eq:svd_u_eigen"><span class="math display">\[\m{M}\m{M}^* = \m{U}(\m{\Sigma}\m{\Sigma}^*)\m{U}^*\qquad(7)\]</span></span> <span id="eq:svd_v_eigen"><span class="math display">\[\m{M}^*\m{M} = \m{V}(\m{\Sigma}^*\m{\Sigma})\m{V}^*\qquad(8)\]</span></span></p>
+<p><span class="math inline">\(\m{\Sigma}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维的对角阵，且元素按大小排列。</p>
+<h1 id="pca主成分分析">PCA（主成分分析）</h1>
+<h2 id="snr信噪比">SNR（信噪比）</h2>
+<p><span id="eq:snr"><span class="math display">\[\SNR = \frac{\sigma^2_{\mathrm{signal}}}{\sigma^2_{\mathrm{noise}}}\qquad(9)\]</span></span></p>
+<h2 id="协方差矩阵">协方差矩阵</h2>
+<p>设 <span class="math inline">\(\m{X}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维矩阵，其中，<span class="math inline">\(m\)</span> 为特征数，<span class="math inline">\(n\)</span> 为样本数，则协方差矩阵为：</p>
+<p><span id="eq:covariance_matrix"><span class="math display">\[\m{C}_{\m{X}} = \frac{1}{n}\m{X}\T{\m{X}}\qquad(10)\]</span></span></p>
+<h2 id="问题定义">问题定义</h2>
+<p>寻找矩阵 <span class="math inline">\(\m{P}\)</span>，使得 <span class="math inline">\(\m{C}_{\m{Y}}\)</span> 为对角阵，且元素按大小排列。其中，<span class="math inline">\(\m{Y} = \m{P}\m{X}\)</span>。</p>
+<p>解：记 <span class="math inline">\(\m{X}\)</span> 的奇异值分解为 <span class="math inline">\(\m{X} = \m{U}\m{\Sigma}\T{\m{V}}\)</span>，那么 <span class="math inline">\(\m{P} = \T{\m{U}}\)</span>。</p>
 <blockquote>
-<p><code>align*</code> 表示不编号<span class="citation" data-cites="TeXAlignAsterisk"><sup>[<a href="#ref-TeXAlignAsterisk" role="doc-biblioref">3</a>]</sup></span>。</p>
+<ul>
+<li>主成分的方向是 <span class="math inline">\(\m{P}\)</span> 的行向量，即 <span class="math inline">\(\m{U}\)</span> 的列向量，即 <span class="math inline">\(\m{X}\m{X}^*\)</span> 的特征向量</li>
+<li><span class="math inline">\(\m{Y} = \m{\Sigma}\T{\m{V}}\)</span></li>
+</ul>
 </blockquote>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
-<div id="ref-TeX_odot">
-<p>[1] HOLT K. Element-wise (or pointwise) operations notation?[EB/OL](2013–12–10). <a href="https://math.stackexchange.com/a/601545">https://math.stackexchange.com/a/601545</a>.</p>
+<div id="ref-conjugate_transpose">
+<p>[1] WIKIPEDIA. Conjugate transpose[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Conjugate_transpose">https://en.wikipedia.org/wiki/Conjugate_transpose</a>.</p>
 </div>
-<div id="ref-TeXAlign">
-<p>[2] OVERLEAF. Aligning equations with amsmath[EB/OL]([日期不详]). <a href="https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath">https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath</a>.</p>
+<div id="ref-linearAlgebraOrthogonalMatrix">
+<p>[2] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Orthogonal_matrix">https://en.wikipedia.org/wiki/Orthogonal_matrix</a>.</p>
 </div>
-<div id="ref-TeXAlignAsterisk">
-<p>[3] KOTTWITZ S. What’s the difference between align and align*?[EB/OL](2011–01–23). <a href="https://tex.stackexchange.com/a/9515">https://tex.stackexchange.com/a/9515</a>.</p>
+<div id="ref-高翔2017视觉">
+<p>[3] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.</p>
+</div>
+<div id="ref-linearAlgebraOuterProduct">
+<p>[4] WIKIPEDIA. Outer product[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>.</p>
 </div>
 </div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#矩阵">矩阵</a></li>
-  <li><a href="#集合">集合</a></li>
-  <li><a href="#运算符">运算符</a></li>
-  <li><a href="#数学表达式">数学表达式</a></li>
-  <li><a href="#公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#术语">术语</a>
+  <ul>
+  <li><a href="#共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#相似矩阵">相似矩阵</a></li>
+  <li><a href="#正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#酉矩阵linearalgebraorthogonalmatrix">酉矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#正规矩阵">正规矩阵</a></li>
+  <li><a href="#旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<span>4</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#svd奇异值分解">SVD（奇异值分解）</a></li>
+  <li><a href="#pca主成分分析">PCA（主成分分析）</a>
+  <ul>
+  <li><a href="#snr信噪比">SNR（信噪比）</a></li>
+  <li><a href="#协方差矩阵">协方差矩阵</a></li>
+  <li><a href="#问题定义">问题定义</a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
