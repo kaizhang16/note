@@ -9,7 +9,7 @@ headless: true
   - [自然语言处理]({{< relref "/docs/ai/nlp" >}})
 - **数学**
   - [统计]({{< relref "/docs/math/statistics" >}})
-  - [线性代数]({{< relref "/docs/math/linear-algebra" >}})
+  - [线性代数]({{< relref "/docs/math/linear_algebra" >}})
 - **视觉**
   - [Unity]({{< relref "/docs/visual/unity" >}})
   - [视频]({{< relref "/docs/visual/video" >}})
