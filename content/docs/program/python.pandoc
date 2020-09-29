@@ -203,7 +203,7 @@ array([1.5, 3.5])
 
 ## 右乘列向量
 
-$$\matrix{A}\vec{x}$$ {#eq:rigthMultiplyColumnVector}
+$$\m{A}\v{x}$$ {#eq:rigthMultiplyColumnVector}
 
 ```py
 np.dot(A, x)
@@ -221,7 +221,7 @@ array([[1, 2, 3],
 
 ## 范数[@pythonNorm]
 
-$$\lVert\vec{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}$$ {#eq:L2Norm}
+$$\lVert\v{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}$$ {#eq:L2Norm}
 
 ```py
 >>> np.linalg.norm([3, 4])
@@ -230,7 +230,7 @@ $$\lVert\vec{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}$$
 
 ## 奇异值分解
 
-$$\matrix{A} = \matrix{U}\matrix{D}\transpose{\matrix{V}}$$ {#eq:SVD}
+$$\m{A} = \m{U}\m{D}\T{\m{V}}$$ {#eq:SVD}
 
 ```py
 U, d, Vt = np.linalg.svd(A)  # U @ np.diag(d) @ Vt == A
