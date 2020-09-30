@@ -253,6 +253,28 @@ $$
 
 ## XGBoost
 
+### 树的输出
+
+$$f^{(t)}(\v{x}) = w_{q(\v{x})}, \v{w}\in \R^T, q: \R^d\to \{1,2,\cdots,T\}$$
+
+其中，$T$ 为叶子节点的数量；$d$ 为 $\v{x}$ 的维度；$q$ 把 $\v{x}$ 映射到某个叶子
+序号。
+
+$$w_j = -\frac{G_j}{H_j + \lambda}$$
+$$G_j = \sum_{i\in I_j}g_i$$
+$$H_j = \sum_{i\in I_j}h_i$$
+$$I_j = \{i\mid q(\v{x}_i) = j\}$$
+$$g_i = \frac{\partial l(y_i, \hat{y}_i^{(t-1)})}{\partial\hat{y}_i^{(t-1)}}$$
+$$h_i = \frac{\partial^2 l(y_i, \hat{y}_i^{(t-1)})}{{\partial\hat{y}_i^{(t-1)}}^2}$$
+
+### 树的损失函数
+
+$$J(f^{(t)}) = -\frac{1}{2}\sum_{j=1}^T\frac{G_j^2}{H_j+\lambda} + \gamma T$$
+
+### 节点分裂的增益
+
+$$\mathrm{Gain} = \frac{1}{2}\left[\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{(G_L+G_R)^2}{H_L+H_R+\lambda}\right] - \gamma$$
+
 优点：
 
 - 比 GBDT 性能更好
