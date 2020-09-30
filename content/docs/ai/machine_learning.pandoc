@@ -129,4 +129,152 @@ $$H(p, q) = -E_p[\log q]$$ {#eq:cross_entropy}
 
 $$H(p, q) = -\sum_{x\in\mathcal{X}}p(x)\log q(x)$$ {#eq:cross_entropy_discrete}
 
+# 传统机器学习算法
+
+## 决策树
+
+- 分类树：$y$ 离散
+- 回归树：$y$ 连续
+
+### ID3[@decision_tree]
+
+父节点的熵：
+
+$$H(D) = -\sum_{k=1}^K\frac{|C_k|}{|D|}\log\frac{|C_k|}{|D|}$$
+
+知道某个属性 A 后的条件熵：
+
+$$H(D\mid A) = \sum_{i=1}^n\frac{|D_i|}{|D|}H(D_i)$$
+
+信息增益：
+
+$$\mathrm{Gain}(D, A) = H(D) - H(D\mid A)$$
+
+缺点：
+
+- 信息增益偏向 $|A|$ 大的属性
+
+### C4.5
+
+信息增益比：
+
+$$\mathrm{Gain_{\mathrm{ratio}}}(D, A) = \frac{\mathrm{Gain}(D,A)}{H_A(D)}$$
+
+其中，$H_A(D) = -\sum_{i=1}^n\frac{|D_i|}{|D|}\log\frac{|D_i|}{|D|}$。
+
+缺点：
+
+- 多叉树
+- 只能分类
+
+### CART
+
+#### 分类
+
+基尼系数：
+
+$$\mathrm{Gini}(D) = \sum_{k=1}^K\frac{|C_k|}{|D|}\left(1-\frac{|C_k|}{|D|}\right)$$
+$$\mathrm{Gini}(D, A) = \frac{|D_1|}{|D|}\mathrm{Gini}(D_1) + \frac{|D_2|}{|D|}\mathrm{Gini}(D_2)$$
+
+用 $\mathrm{Gini}(D, A)$ 最小的属性 A 及切分点 a 分割 D。
+
+#### 回归
+
+按照
+
+$$\min_{a, s}\left[\min_{c_1}\sum_{x_i\in D_1}(y_i - c_1)^2 + \min_{c_2}\sum_{x_i\in D_2}(y_i - c_2)^2\right]$$
+
+选择属性 $a$ 与切分点 $s$。
+
+## 随机森林
+
+对 $b=1,\dots,B$：
+
+- 从 $X,Y$ 进行 $n$ 次有放回的抽样，记为 $X_b,Y_b$
+- 对 $X_b,Y_b$ 训练决策树 $f_b$；每次分裂时只从特征的随机子集里选择
+- $\hat{f} = \frac{1}{B}\sum_{b=1}^B f_b(x)$
+
+优点：
+
+- 泛化能力强
+- 能处理高维数据，可以降维
+- 可以处理缺失数据
+- 可以并行
+
+缺点：
+
+- 黑盒
+- 噪声较大时容易过拟合
+
+## GBDT
+
+全称为 Gradient Boosting Decision Tree。
+
+优点：
+
+- 比随机森林性能好
+- 需要迭代训练，即串行计算
+
+### 损失函数
+
+Square loss:
+
+$$L(y, F) = \frac{1}{2}(y-F(x))^2$$
+
+Absolute loss:
+
+$$L(y, F) = |y-F(x)|$$
+
+Huber loss:
+
+$$
+L(y, F) =
+\begin{cases}
+\frac{1}{2}(y-F(x))^2, & |y-F(x)| \le\delta\\
+\delta(|y-F(x)| - \frac{\delta}{2}), & |y-F(x)| > \delta
+\end{cases}
+$$
+
+| 损失函数      | 优点 | 缺点         |
+|---------------|------|--------------|
+| Square loss   |      | 对噪声敏感   |
+| Absolute loss |      | 对噪声鲁棒   |
+| Huber loss    |      | 对噪声更鲁棒 |
+
+: 不同损失函数的比较 {#tbl:gbdt_loss_compare}
+
+### 回归的学习步骤
+
+1. 初始化 $F(x) = \frac{\sum_{i=1}^n y_i}{n}$
+2. 计算负梯度：$-g(x_i) = -\frac{\partial L(y_i,F(x_i))}{\partial F(x_i)}$
+3. 按 $-g(x_i)$ 拟合回归树 $h$
+4. 更新 F，$F := F + \rho h$
+5. 终止或者跳到步骤 2
+
+## XGBoost
+
+优点：
+
+- 比 GBDT 性能更好
+- 并行优化
+
+与 GBDT 的区别：
+
+- 除了支持 CART 树，还支持线性分类器
+- 加了二阶导数
+- 加了正则项，防止过拟合
+- 支持列抽样
+- 可以自动学习缺失值的分裂方向
+- 预先排序，并行计算不同特征的增益
+
+## LightGBM
+
+与 XGBoost 的区别：
+
+- XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，
+  占用内存小，计算复杂度低
+- XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise
+- XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代
+  价小，能并行计算
+
 # 参考文献
