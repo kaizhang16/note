@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}     集合  表 2: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     运算符  表 3: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)  \(\lVert a\rVert\) 模长 \lVert a\rVert     数学表达式  表 4: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align}  align* 表示不编号[3]。" />
+<meta property="og:description" content="矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}     集合  表 2: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     运算符  表 3: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)  \(\lVert a\rVert\) 模长 \lVert a\rVert     数学表达式  表 4: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}  \(\set{R}\) 实数集 \set{R}  \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align} \]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
-<meta property="article:modified_time" content="2020-09-29T03:59:24+00:00" />
+<meta property="article:modified_time" content="2020-09-30T06:30:19+00:00" />
 <title>TeX | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
+<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
 
 
-<script defer src="/notes/cn.search.min.afee7113efdd8b4e47a73b9bd01aea20518b47bb02a1764308adb1a1c9b12c05.js" integrity="sha256-r&#43;5xE&#43;/di05Hpzub0BrqIFGLR7sCoXZDCK2xocmxLAU="></script>
+<script defer src="/notes/cn.search.min.bec147b36b52e2a2cf8578bb8641f0616133e64a8747be0d88db973fb9f10cc7.js" integrity="sha256-vsFHs2tS4qLPhXi7hkHwYWEz5kqHR74NiNuXP7nxDMc="></script>
 
 <!--
 Made with Book Theme
@@ -323,6 +323,12 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h1 id="公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<a href="#ref-TeXAlign" role="doc-biblioref">2</a>]</sup></span></h1>
+<p><span class="math display">\[
+\begin{align}
+2x - 5y &amp;=  8 \\
+3x + 9y &amp;=  -12
+\end{align}
+\]</span></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="ss">2x - 5y &amp;=  8 </span><span class="sc">\\</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="ss">3x + 9y &amp;=  -12</span></span>
@@ -330,6 +336,19 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><code>align*</code> 表示不编号<span class="citation" data-cites="TeXAlignAsterisk"><sup>[<a href="#ref-TeXAlignAsterisk" role="doc-biblioref">3</a>]</sup></span>。</p>
 </blockquote>
+<h1 id="cases">cases</h1>
+<p><span class="math display">\[
+f(x) =
+\begin{cases}
+\frac{x^2-x}{x}, &amp; \mathrm{if }\; x\ge 1\\
+0, &amp; \mathrm{otherwise}
+\end{cases}
+\]</span></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1"></a>f(x) =</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">\begin</span>{<span class="ex">cases</span>}</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="sc">\frac</span><span class="ss">{x^2-x}{x}, &amp; </span><span class="sc">\mathrm</span><span class="ss">{if }</span><span class="sc">\;</span><span class="ss"> x</span><span class="sc">\ge</span><span class="ss"> 1</span><span class="sc">\\</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="ss">0, &amp; </span><span class="sc">\mathrm</span><span class="ss">{otherwise}</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="kw">\end</span>{<span class="ex">cases</span>}</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-TeX_odot">
@@ -351,6 +370,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#运算符">运算符</a></li>
   <li><a href="#数学表达式">数学表达式</a></li>
   <li><a href="#公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#cases">cases</a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -366,9 +386,9 @@ https://github.com/alex-shpak/hugo-book
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/58a6576568706e6a814a75f9506bc22a13f26fcc" title='最后修改者 Kai Zhang | 2020-09-29 11:59:24 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c0c5b1a856cbb144501be5de6aee31a3a5191587" title='最后修改者 Kai Zhang | 2020-09-30 14:30:19 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-29 11:59:24 &#43;0800</span>
+      <span>2020-09-30 14:30:19 &#43;0800</span>
     </a>
   </div>
 
@@ -446,7 +466,6 @@ https://github.com/alex-shpak/hugo-book
         m: ["{\\bm{#1}}", 1],
         mean: ["{\\bar{#1}}", 1],
         median: ["\\mathrm{median}"],
-        min: ["\\mathrm{min}"],
         model: ["\\mathrm{model}"],
         rel: ["\\mathrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],

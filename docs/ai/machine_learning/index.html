@@ -13,15 +13,15 @@ P@n 只考虑 top n 个查询结果。[2]
 AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/machine_learning/" />
-<meta property="article:modified_time" content="2020-09-29T08:17:05+00:00" />
+<meta property="article:modified_time" content="2020-09-30T06:30:19+00:00" />
 <title>机器学习 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
 
-<link rel="stylesheet" href="/notes/book.min.d37ca7e733398d8d85b70ea21774808beace282a02376b553fe439d83885795a.css" integrity="sha256-03yn5zM5jY2Ftw6iF3SAi&#43;rOKCoCN2tVP&#43;Q52DiFeVo=">
+<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
 
 
-<script defer src="/notes/cn.search.min.afee7113efdd8b4e47a73b9bd01aea20518b47bb02a1764308adb1a1c9b12c05.js" integrity="sha256-r&#43;5xE&#43;/di05Hpzub0BrqIFGLR7sCoXZDCK2xocmxLAU="></script>
+<script defer src="/notes/cn.search.min.bec147b36b52e2a2cf8578bb8641f0616133e64a8747be0d88db973fb9f10cc7.js" integrity="sha256-vsFHs2tS4qLPhXi7hkHwYWEz5kqHR74NiNuXP7nxDMc="></script>
 
 <!--
 Made with Book Theme
@@ -295,6 +295,139 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <p><span id="eq:cross_entropy"><span class="math display">\[H(p, q) = -E_p[\log q]\qquad(14)\]</span></span></p>
 <p>在离散情况下为</p>
 <p><span id="eq:cross_entropy_discrete"><span class="math display">\[H(p, q) = -\sum_{x\in\mathcal{X}}p(x)\log q(x)\qquad(15)\]</span></span></p>
+<h1 id="传统机器学习算法">传统机器学习算法</h1>
+<h2 id="决策树">决策树</h2>
+<ul>
+<li>分类树：<span class="math inline">\(y\)</span> 离散</li>
+<li>回归树：<span class="math inline">\(y\)</span> 连续</li>
+</ul>
+<h3 id="id3decision_tree">ID3<span class="citation" data-cites="decision_tree"><sup>[<a href="#ref-decision_tree" role="doc-biblioref">10</a>]</sup></span></h3>
+<p>父节点的熵：</p>
+<p><span class="math display">\[H(D) = -\sum_{k=1}^K\frac{|C_k|}{|D|}\log\frac{|C_k|}{|D|}\]</span></p>
+<p>知道某个属性 A 后的条件熵：</p>
+<p><span class="math display">\[H(D\mid A) = \sum_{i=1}^n\frac{|D_i|}{|D|}H(D_i)\]</span></p>
+<p>信息增益：</p>
+<p><span class="math display">\[\mathrm{Gain}(D, A) = H(D) - H(D\mid A)\]</span></p>
+<p>缺点：</p>
+<ul>
+<li>信息增益偏向 <span class="math inline">\(|A|\)</span> 大的属性</li>
+</ul>
+<h3 id="c4.5">C4.5</h3>
+<p>信息增益比：</p>
+<p><span class="math display">\[\mathrm{Gain_{\mathrm{ratio}}}(D, A) = \frac{\mathrm{Gain}(D,A)}{H_A(D)}\]</span></p>
+<p>其中，<span class="math inline">\(H_A(D) = -\sum_{i=1}^n\frac{|D_i|}{|D|}\log\frac{|D_i|}{|D|}\)</span>。</p>
+<p>缺点：</p>
+<ul>
+<li>多叉树</li>
+<li>只能分类</li>
+</ul>
+<h3 id="cart">CART</h3>
+<h4 id="分类">分类</h4>
+<p>基尼系数：</p>
+<p><span class="math display">\[\mathrm{Gini}(D) = \sum_{k=1}^K\frac{|C_k|}{|D|}\left(1-\frac{|C_k|}{|D|}\right)\]</span> <span class="math display">\[\mathrm{Gini}(D, A) = \frac{|D_1|}{|D|}\mathrm{Gini}(D_1) + \frac{|D_2|}{|D|}\mathrm{Gini}(D_2)\]</span></p>
+<p>用 <span class="math inline">\(\mathrm{Gini}(D, A)\)</span> 最小的属性 A 及切分点 a 分割 D。</p>
+<h4 id="回归">回归</h4>
+<p>按照</p>
+<p><span class="math display">\[\min_{a, s}\left[\min_{c_1}\sum_{x_i\in D_1}(y_i - c_1)^2 + \min_{c_2}\sum_{x_i\in D_2}(y_i - c_2)^2\right]\]</span></p>
+<p>选择属性 <span class="math inline">\(a\)</span> 与切分点 <span class="math inline">\(s\)</span>。</p>
+<h2 id="随机森林">随机森林</h2>
+<p>对 <span class="math inline">\(b=1,\dots,B\)</span>：</p>
+<ul>
+<li>从 <span class="math inline">\(X,Y\)</span> 进行 <span class="math inline">\(n\)</span> 次有放回的抽样，记为 <span class="math inline">\(X_b,Y_b\)</span></li>
+<li>对 <span class="math inline">\(X_b,Y_b\)</span> 训练决策树 <span class="math inline">\(f_b\)</span>；每次分裂时只从特征的随机子集里选择</li>
+<li><span class="math inline">\(\hat{f} = \frac{1}{B}\sum_{b=1}^B f_b(x)\)</span></li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>泛化能力强</li>
+<li>能处理高维数据，可以降维</li>
+<li>可以处理缺失数据</li>
+<li>可以并行</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>黑盒</li>
+<li>噪声较大时容易过拟合</li>
+</ul>
+<h2 id="gbdt">GBDT</h2>
+<p>全称为 Gradient Boosting Decision Tree。</p>
+<p>优点：</p>
+<ul>
+<li>比随机森林性能好</li>
+<li>需要迭代训练，即串行计算</li>
+</ul>
+<h3 id="损失函数-1">损失函数</h3>
+<p>Square loss:</p>
+<p><span class="math display">\[L(y, F) = \frac{1}{2}(y-F(x))^2\]</span></p>
+<p>Absolute loss:</p>
+<p><span class="math display">\[L(y, F) = |y-F(x)|\]</span></p>
+<p>Huber loss:</p>
+<p><span class="math display">\[
+L(y, F) =
+\begin{cases}
+\frac{1}{2}(y-F(x))^2, &amp; |y-F(x)| \le\delta\\
+\delta(|y-F(x)| - \frac{\delta}{2}), &amp; |y-F(x)| &gt; \delta
+\end{cases}
+\]</span></p>
+<div id="tbl:gbdt_loss_compare">
+<table>
+<caption>表 2: 不同损失函数的比较</caption>
+<thead>
+<tr class="header">
+<th>损失函数</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Square loss</td>
+<td></td>
+<td>对噪声敏感</td>
+</tr>
+<tr class="even">
+<td>Absolute loss</td>
+<td></td>
+<td>对噪声鲁棒</td>
+</tr>
+<tr class="odd">
+<td>Huber loss</td>
+<td></td>
+<td>对噪声更鲁棒</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="回归的学习步骤">回归的学习步骤</h3>
+<ol type="1">
+<li>初始化 <span class="math inline">\(F(x) = \frac{\sum_{i=1}^n y_i}{n}\)</span></li>
+<li>计算负梯度：<span class="math inline">\(-g(x_i) = -\frac{\partial L(y_i,F(x_i))}{\partial F(x_i)}\)</span></li>
+<li>按 <span class="math inline">\(-g(x_i)\)</span> 拟合回归树 <span class="math inline">\(h\)</span></li>
+<li>更新 F，<span class="math inline">\(F := F + \rho h\)</span></li>
+<li>终止或者跳到步骤 2</li>
+</ol>
+<h2 id="xgboost">XGBoost</h2>
+<p>优点：</p>
+<ul>
+<li>比 GBDT 性能更好</li>
+<li>并行优化</li>
+</ul>
+<p>与 GBDT 的区别：</p>
+<ul>
+<li>除了支持 CART 树，还支持线性分类器</li>
+<li>加了二阶导数</li>
+<li>加了正则项，防止过拟合</li>
+<li>支持列抽样</li>
+<li>可以自动学习缺失值的分裂方向</li>
+<li>预先排序，并行计算不同特征的增益</li>
+</ul>
+<h2 id="lightgbm">LightGBM</h2>
+<p>与 XGBoost 的区别：</p>
+<ul>
+<li>XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低</li>
+<li>XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise</li>
+<li>XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算</li>
+</ul>
 <h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-ml_precision_recall">
@@ -323,6 +456,9 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 </div>
 <div id="ref-cross_entropy">
 <p>[9] WIKIPEDIA. Cross entropy[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Cross_entropy">https://en.wikipedia.org/wiki/Cross_entropy</a>.</p>
+</div>
+<div id="ref-decision_tree">
+<p>[10] 阿泽. 【机器学习】决策树（上）——ID3、C4.5、CART（非常详细）[EB/OL](2019–10–09). <a href="https://zhuanlan.zhihu.com/p/85731206">https://zhuanlan.zhihu.com/p/85731206</a>.</p>
 </div>
 </div>
 
@@ -361,6 +497,23 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
   <ul>
   <li><a href="#交叉熵cross_entropy">交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<span>9</span>]</sup></span></a></li>
   </ul></li>
+  <li><a href="#传统机器学习算法">传统机器学习算法</a>
+  <ul>
+  <li><a href="#决策树">决策树</a>
+  <ul>
+  <li><a href="#id3decision_tree">ID3<span class="citation" data-cites="decision_tree"><sup>[<span>10</span>]</sup></span></a></li>
+  <li><a href="#c4.5">C4.5</a></li>
+  <li><a href="#cart">CART</a></li>
+  </ul></li>
+  <li><a href="#随机森林">随机森林</a></li>
+  <li><a href="#gbdt">GBDT</a>
+  <ul>
+  <li><a href="#损失函数-1">损失函数</a></li>
+  <li><a href="#回归的学习步骤">回归的学习步骤</a></li>
+  </ul></li>
+  <li><a href="#xgboost">XGBoost</a></li>
+  <li><a href="#lightgbm">LightGBM</a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -376,9 +529,9 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/3fbc222c9b79bc1afb56a51b165064d4abb8a042" title='最后修改者 Kai Zhang | 2020-09-29 16:17:05 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/c0c5b1a856cbb144501be5de6aee31a3a5191587" title='最后修改者 Kai Zhang | 2020-09-30 14:30:19 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-29 16:17:05 &#43;0800</span>
+      <span>2020-09-30 14:30:19 &#43;0800</span>
     </a>
   </div>
 
@@ -456,7 +609,6 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
         m: ["{\\bm{#1}}", 1],
         mean: ["{\\bar{#1}}", 1],
         median: ["\\mathrm{median}"],
-        min: ["\\mathrm{min}"],
         model: ["\\mathrm{model}"],
         rel: ["\\mathrm{rel}"],
         set: ["{\\mathbb{#1}}", 1],
