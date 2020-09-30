@@ -47,6 +47,13 @@ title: "TeX"
 
 # 公式对齐[@TeXAlign]
 
+$$
+\begin{align}
+2x - 5y &=  8 \\
+3x + 9y &=  -12
+\end{align}
+$$
+
 ```tex
 \begin{align}
 2x - 5y &=  8 \\
@@ -55,5 +62,23 @@ title: "TeX"
 ```
 
 > `align*` 表示不编号[@TeXAlignAsterisk]。
+
+# cases
+
+$$
+f(x) =
+\begin{cases}
+\frac{x^2-x}{x}, & \mathrm{if }\; x\ge 1\\
+0, & \mathrm{otherwise}
+\end{cases}
+$$
+
+```tex
+f(x) =
+\begin{cases}
+\frac{x^2-x}{x}, & \mathrm{if }\; x\ge 1\\
+0, & \mathrm{otherwise}
+\end{cases}
+```
 
 # 参考文献
