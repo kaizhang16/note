@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="TeX"><meta property="og:title" content="TeX" />
-<meta property="og:description" content="矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}     集合  表 2: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     运算符  表 3: 运算符  运算符 含义 \(\TeX\) 表示    \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r  \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)  \(\lVert a\rVert\) 模长 \lVert a\rVert     数学表达式  表 4: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}  \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align} \]" />
+<meta property="og:description" content="矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     函数  表 2: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     集合  表 3: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     统计  表 4: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     运算符  表 5: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 6: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;= 8 \\ 3x &#43; 9y &amp;= -12 \end{align} \]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/tex/" />
-<meta property="article:modified_time" content="2020-09-30T08:05:54+00:00" />
+<meta property="article:modified_time" content="2020-10-06T10:01:22+00:00" />
 <title>TeX | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
 
 
-<script defer src="/notes/cn.search.min.52ea9599c848514ed5e2279b485846e76cbd4c4b0a44da9220e24e1222fbf95c.js" integrity="sha256-UuqVmchIUU7V4iebSFhG52y9TEsKRNqSIOJOEiL7&#43;Vw="></script>
+<script defer src="/notes/cn.search.min.918729f91a14fff3344d681141beee7c24543fafb9131a494b2ffdd202ffbdb8.js" integrity="sha256-kYcp&#43;RoU//M0TWgRQb7ufCRUP6&#43;5ExpJSy/90gL/vbg="></script>
 
 <!--
 Made with Book Theme
@@ -209,13 +209,58 @@ https://github.com/alex-shpak/hugo-book
 <td>转置</td>
 <td><code>\T{A}</code></td>
 </tr>
+<tr class="odd">
+<td><span class="math inline">\(\langle, \rangle\)</span></td>
+<td>内积</td>
+<td><code>\langle, \rangle</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\otimes\)</span></td>
+<td>外积</td>
+<td><code>\otimes</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\odot\)</span></td>
+<td>Hadamard product</td>
+<td><code>\odot</code><span class="citation" data-cites="TeX_odot"><sup>[<a href="#ref-TeX_odot" role="doc-biblioref">1</a>]</sup></span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\lVert a\rVert\)</span></td>
+<td>模长</td>
+<td><code>\lVert a\rVert</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="函数">函数</h1>
+<div id="tbl:function">
+<table>
+<caption>表 2: 函数相关表示</caption>
+<thead>
+<tr class="header">
+<th>数学表达式</th>
+<th>含义</th>
+<th><span class="math inline">\(\TeX\)</span> 表示</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(f: \R^2\to\R\)</span></td>
+<td>函数的作用域</td>
+<td><code>f: \R^2\to\R</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\int_0^1 p(r)\d r\)</span></td>
+<td>积分</td>
+<td><code>\int_0^1 p(r)\d r</code></td>
+</tr>
 </tbody>
 </table>
 </div>
 <h1 id="集合">集合</h1>
 <div id="tbl:set">
 <table>
-<caption>表 2: 集合相关表示</caption>
+<caption>表 3: 集合相关表示</caption>
 <thead>
 <tr class="header">
 <th>数学表达式</th>
@@ -247,55 +292,10 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="运算符">运算符</h1>
-<div id="tbl:TeXOperators">
+<h1 id="统计">统计</h1>
+<div id="tbl:statistics">
 <table>
-<caption>表 3: 运算符</caption>
-<thead>
-<tr class="header">
-<th>运算符</th>
-<th>含义</th>
-<th><span class="math inline">\(\TeX\)</span> 表示</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\langle, \rangle\)</span></td>
-<td>内积</td>
-<td><code>\langle, \rangle</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\otimes\)</span></td>
-<td>外积</td>
-<td><code>\otimes</code></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\odot\)</span></td>
-<td>Hadamard product</td>
-<td><code>\odot</code><span class="citation" data-cites="TeX_odot"><sup>[<a href="#ref-TeX_odot" role="doc-biblioref">1</a>]</sup></span></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\int_0^1 p(r)\d r\)</span></td>
-<td>积分</td>
-<td><code>\int_0^1 p(r)\d r</code></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\sum_{k=1}^n P(k)\)</span></td>
-<td>求和</td>
-<td><code>\sum_{k=1}^n P(k)</code></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\lVert a\rVert\)</span></td>
-<td>模长</td>
-<td><code>\lVert a\rVert</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="数学表达式">数学表达式</h1>
-<div id="tbl:TeXExpressions">
-<table>
-<caption>表 4: 数学表达式</caption>
+<caption>表 4: 统计相关表示</caption>
 <thead>
 <tr class="header">
 <th>数学表达式</th>
@@ -309,12 +309,47 @@ https://github.com/alex-shpak/hugo-book
 <td>平均值</td>
 <td><code>\mean{p}</code></td>
 </tr>
-<tr class="even">
+</tbody>
+</table>
+</div>
+<h1 id="运算符">运算符</h1>
+<div id="tbl:TeXOperators">
+<table>
+<caption>表 5: 运算符</caption>
+<thead>
+<tr class="header">
+<th>运算符</th>
+<th>含义</th>
+<th><span class="math inline">\(\TeX\)</span> 表示</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\sum_{k=1}^n P(k)\)</span></td>
+<td>求和</td>
+<td><code>\sum_{k=1}^n P(k)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="数学表达式">数学表达式</h1>
+<div id="tbl:TeXExpressions">
+<table>
+<caption>表 6: 数学表达式</caption>
+<thead>
+<tr class="header">
+<th>数学表达式</th>
+<th>含义</th>
+<th><span class="math inline">\(\TeX\)</span> 表示</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td><span class="math inline">\(\tilde{A}\)</span></td>
 <td>变体</td>
 <td><code>\tilde{A}</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\hat{y}\)</span></td>
 <td>计算值</td>
 <td><code>\hat{y}</code></td>
@@ -366,7 +401,9 @@ f(x) =
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#矩阵">矩阵</a></li>
+  <li><a href="#函数">函数</a></li>
   <li><a href="#集合">集合</a></li>
+  <li><a href="#统计">统计</a></li>
   <li><a href="#运算符">运算符</a></li>
   <li><a href="#数学表达式">数学表达式</a></li>
   <li><a href="#公式对齐texalign">公式对齐<span class="citation" data-cites="TeXAlign"><sup>[<span>2</span>]</sup></span></a></li>
@@ -386,9 +423,9 @@ f(x) =
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b000f6c777953bf03e97c5f2007360039ec7f5e2" title='最后修改者 Kai Zhang | 2020-09-30 16:05:54 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/905f8a56ec66780d26d8395c5349aa6ead19bc88" title='最后修改者 Kai Zhang | 2020-10-06 18:01:22 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-30 16:05:54 &#43;0800</span>
+      <span>2020-10-06 18:01:22 &#43;0800</span>
     </a>
   </div>
 
