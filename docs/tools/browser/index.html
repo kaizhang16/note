@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="浏览器"><meta property="og:title" content="浏览器" />
+<meta name="description" content="Firefox Tridactyl 设置 主题 : set theme dark 搜索 : unbind &lt;C-f&gt; 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  Firefox  Tridactyl  设置 快捷键     ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="浏览器" />
 <meta property="og:description" content="Firefox Tridactyl 设置 主题 : set theme dark 搜索 : unbind &lt;C-f&gt; 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  Firefox  Tridactyl  设置 快捷键     " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/browser/" />
 <meta property="article:modified_time" content="2020-04-19T00:07:42+08:00" />
 <title>浏览器 | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -34,8 +31,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -48,7 +46,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -151,7 +149,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -168,26 +166,27 @@ https://github.com/alex-shpak/hugo-book
   <strong>浏览器</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="firefox">Firefox</h1>
+  <article class="markdown"><h1 id="firefox">Firefox</h1>
 <h2 id="tridactyl">Tridactyl</h2>
 <h3 id="设置">设置</h3>
 <h4 id="主题">主题</h4>
@@ -244,13 +243,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ed2c0e6aea11c90fbe0601fec92485a75bdc1873" title='最后修改者 Kai Zhang | 2020-04-19 00:07:42 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ed2c0e6aea11c90fbe0601fec92485a75bdc1873" title='最后修改者 Kai Zhang | 2020-04-19 00:07:42 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-04-19 00:07:42 &#43;0800</span>
     </a>
@@ -262,14 +259,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -292,9 +290,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -354,17 +350,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

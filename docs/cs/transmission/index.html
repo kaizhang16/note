@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="传输"><meta property="og:title" content="传输" />
+<meta name="description" content="SSH Secure Shell。
+只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
+ SFTP SSH File Transfer Protocol。
+常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/ -r，递归  下载 put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/ -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+vsftpd Very Secure FTP Daemon。
+只允许某些用户访问[2] /etc/vsftpd.conf:
+userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="传输" />
 <meta property="og:description" content="SSH Secure Shell。
 只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
  SFTP SSH File Transfer Protocol。
@@ -16,14 +23,10 @@ userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDA
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/transmission/" />
 <meta property="article:modified_time" content="2020-05-05T15:32:52+00:00" />
 <title>传输 | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -40,8 +43,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -54,7 +58,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -157,7 +161,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -174,26 +178,27 @@ https://github.com/alex-shpak/hugo-book
   <strong>传输</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="ssh">SSH</h1>
+  <article class="markdown"><h1 id="ssh">SSH</h1>
 <p>Secure Shell。</p>
 <h2 id="只让某些用户使用密码登录">只让某些用户使用密码登录</h2>
 <pre class="ssh"><code>PasswordAuthentication no
@@ -291,13 +296,11 @@ userlist_deny=NO</code></pre>
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ba85a184b5096a095e70196667ad4ef32dd19e9a" title='最后修改者 Kai Zhang | 2020-05-05 23:32:52 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/ba85a184b5096a095e70196667ad4ef32dd19e9a" title='最后修改者 Kai Zhang | 2020-05-05 23:32:52 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-05-05 23:32:52 &#43;0800</span>
     </a>
@@ -309,14 +312,15 @@ userlist_deny=NO</code></pre>
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -339,9 +343,7 @@ userlist_deny=NO</code></pre>
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -401,17 +403,6 @@ userlist_deny=NO</code></pre>
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

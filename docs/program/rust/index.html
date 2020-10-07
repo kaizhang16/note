@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rust"><meta property="og:title" content="Rust" />
+<meta name="description" content="Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
+ 语法 命名惯例[1]  表 1: Rust 命名惯例  项目 惯例    Crates snake_case, prefer single word  Modules snake_case  Types CamelCase  Traits CamelCase  Functions snake_case  Methods snake_case  一般的构造函数 new 或者 with_more_details  转换构造函数 from_some_other_type  Local variables snake_case  Static variables SCREAMING_SNAKE_CASE  Constant variables SCREAMING_SNAKE_CASE  Type parameters 简洁的 CamelCase，比如 T  Lifetimes 简短的小写字母，比如 &#39;a       首字母缩写词写成 Uuid，而不是 UUID   module[2]  如果模块 foo 没有子模块，则代码放在 foo.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Rust" />
 <meta property="og:description" content="Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
  语法 命名惯例[1]  表 1: Rust 命名惯例  项目 惯例    Crates snake_case, prefer single word  Modules snake_case  Types CamelCase  Traits CamelCase  Functions snake_case  Methods snake_case  一般的构造函数 new 或者 with_more_details  转换构造函数 from_some_other_type  Local variables snake_case  Static variables SCREAMING_SNAKE_CASE  Constant variables SCREAMING_SNAKE_CASE  Type parameters 简洁的 CamelCase，比如 T  Lifetimes 简短的小写字母，比如 &#39;a       首字母缩写词写成 Uuid，而不是 UUID   module[2]  如果模块 foo 没有子模块，则代码放在 foo." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/rust/" />
 <meta property="article:modified_time" content="2020-05-24T08:30:16+00:00" />
 <title>Rust | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,8 +33,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -49,7 +48,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -152,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -169,28 +168,29 @@ https://github.com/alex-shpak/hugo-book
   <strong>Rust</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="cargo">Cargo</h1>
+  <article class="markdown"><h1 id="cargo">Cargo</h1>
 <h2 id="新建项目">新建项目</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">cargo</span> new <span class="va">${name}</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">cargo</span> new <span class="va">${name}</span></span></code></pre></div>
 <blockquote>
 <p>默认使用 <code>--bin</code> 参数。</p>
 </blockquote>
@@ -309,8 +309,8 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h2 id="string">String</h2>
 <h3 id="多行-stringrust_string_multiple_line">多行 String<span class="citation" data-cites="rust_string_multiple_line"><sup>[<a href="#ref-rust_string_multiple_line" role="doc-biblioref">3</a>]</sup></span></h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">let</span> string = <span class="st">&quot;line one</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="st">line two&quot;</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">let</span> string <span class="op">=</span> <span class="st">&quot;line one</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="st">line two&quot;</span><span class="op">;</span></span></code></pre></div>
 <h2 id="iterator">Iterator</h2>
 <div id="tbl:iterator_methods">
 <table>
@@ -348,27 +348,27 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h3 id="合并rust_vector_concat">合并<span class="citation" data-cites="rust_vector_concat"><sup>[<a href="#ref-rust_vector_concat" role="doc-biblioref">4</a>]</sup></span></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">let</span> <span class="kw">mut</span> a = <span class="pp">vec!</span><span class="op">[</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span><span class="op">]</span>;</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="kw">let</span> b = <span class="pp">vec!</span><span class="op">[</span><span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span><span class="op">]</span>;</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>a.extend(b);</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="pp">assert_eq!</span>(a, <span class="op">[</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span><span class="op">]</span>);</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="co">// b is moved and can&#39;t be used anymore</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">let</span> <span class="kw">mut</span> a <span class="op">=</span> <span class="pp">vec!</span>[<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="kw">let</span> b <span class="op">=</span> <span class="pp">vec!</span>[<span class="dv">4</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">6</span>]<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>a<span class="op">.</span>extend(b)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="pp">assert_eq!</span>(a<span class="op">,</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span><span class="op">,</span> <span class="dv">6</span>])<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="co">// b is moved and can&#39;t be used anymore</span></span></code></pre></div>
 <h2 id="静态-slicerust_static_slice">静态 slice<span class="citation" data-cites="rust_static_slice"><sup>[<a href="#ref-rust_static_slice" role="doc-biblioref">5</a>]</sup></span></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">static</span> NUMBERS: &amp;<span class="ot">&#39;static</span> <span class="op">[</span><span class="dt">i32</span><span class="op">]</span> = &amp;<span class="op">[</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span><span class="op">]</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">static</span> NUMBERS<span class="op">:</span> <span class="op">&amp;</span><span class="ot">&#39;static</span> [<span class="dt">i32</span>] <span class="op">=</span> <span class="op">&amp;</span>[<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">;</span></span></code></pre></div>
 <h2 id="enumrust_enum">Enum<span class="citation" data-cites="rust_enum"><sup>[<a href="#ref-rust_enum" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">enum</span> IpAddrKind <span class="op">{</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>    V4,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    V6,</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">enum</span> IpAddrKind <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    V4<span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    V6<span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="fmtdisplayrust_fmt_display">fmt::Display<span class="citation" data-cites="rust_fmt_display"><sup>[<a href="#ref-rust_fmt_display" role="doc-biblioref">7</a>]</sup></span></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">impl</span> <span class="pp">fmt::</span><span class="bu">Display</span> <span class="kw">for</span> Foo <span class="op">{</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="kw">fn</span> fmt(&amp;<span class="kw">self</span>, f: &amp;<span class="kw">mut</span> <span class="pp">fmt::</span>Formatter) -&gt; <span class="pp">fmt::</span><span class="dt">Result</span> <span class="op">{</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>        <span class="pp">write!</span>(f, <span class="st">&quot;{:?}&quot;</span>, <span class="kw">self</span>)</span>
-<span id="cb6-4"><a href="#cb6-4"></a>        <span class="co">// or, alternatively:</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>        <span class="co">// fmt::Debug::fmt(self, f)</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>    <span class="op">}</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a><span class="op">}</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="kw">impl</span> <span class="pp">fmt::</span><span class="bu">Display</span> <span class="kw">for</span> Foo <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="kw">fn</span> fmt(<span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span> f<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> <span class="pp">fmt::</span>Formatter) <span class="op">-&gt;</span> <span class="pp">fmt::</span><span class="dt">Result</span> <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>        <span class="pp">write!</span>(f<span class="op">,</span> <span class="st">&quot;{:?}&quot;</span><span class="op">,</span> <span class="kw">self</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>        <span class="co">// or, alternatively:</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>        <span class="co">// fmt::Debug::fmt(self, f)</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>    <span class="op">}</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="macro">macro</h2>
 <div id="tbl:rust_macro">
 <table>
@@ -389,7 +389,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="diesel">diesel</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">cargo</span> install diesel_cli</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="ex">cargo</span> install diesel_cli</span></code></pre></div>
 <h2 id="用法">用法</h2>
 <div id="tbl:diesel_methods">
 <table>
@@ -416,7 +416,7 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-rust_name_convention">
 <p>[1] RUST. Naming conventions[EB/OL]([日期不详]). <a href="https://doc.rust-lang.org/1.0.0/style/style/naming/README.html">https://doc.rust-lang.org/1.0.0/style/style/naming/README.html</a>.</p>
@@ -482,13 +482,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4dbb6fdc9252e656b3844b7e0c75aed640a6094c" title='最后修改者 Kai Zhang | 2020-05-24 16:30:16 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4dbb6fdc9252e656b3844b7e0c75aed640a6094c" title='最后修改者 Kai Zhang | 2020-05-24 16:30:16 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-05-24 16:30:16 &#43;0800</span>
     </a>
@@ -500,14 +498,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -530,9 +529,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -592,17 +589,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

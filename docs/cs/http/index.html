@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="HTTP"><meta property="og:title" content="HTTP" />
+<meta name="description" content="URL vs URI[1] URL 用于定位，URI 用于标识。
+httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
+ # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="HTTP" />
 <meta property="og:description" content="URL vs URI[1] URL 用于定位，URI 用于标识。
 httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
  # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx." />
@@ -12,14 +15,10 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/http/" />
 <meta property="article:modified_time" content="2020-07-03T07:07:38+00:00" />
 <title>HTTP | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -36,8 +35,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -50,7 +50,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -153,7 +153,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -170,26 +170,27 @@ https://github.com/alex-shpak/hugo-book
   <strong>HTTP</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<a href="#ref-urlVsURI" role="doc-biblioref">1</a>]</sup></span></h1>
+  <article class="markdown"><h1 id="url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<a href="#ref-urlVsURI" role="doc-biblioref">1</a>]</sup></span></h1>
 <p>URL 用于定位，URI 用于标识。</p>
 <h1 id="httpie">httpie</h1>
 <h2 id="安装-httpie">安装 httpie</h2>
@@ -212,7 +213,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h2 id="用法">用法</h2>
 <h3 id="query-parameters">Query Parameters</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="va">param=</span>=<span class="ex">value</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="va">param=</span>=<span class="ex">value</span></span></code></pre></div>
 <h1 id="状态码">状态码</h1>
 <div id="tbl:http_status_code">
 <table>
@@ -240,36 +241,36 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p>推荐安装 <code>mainline</code> 版本<span class="citation" data-cites="nginxVersion"><sup>[<a href="#ref-nginxVersion" role="doc-biblioref">3</a>]</sup></span>。</p>
 </blockquote>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Environment variables</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="va">NGINX_VERSION=</span>1.17.9</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="va">PCRE_VESION=</span>8.44</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="va">ZLIB_VERSION=</span>1.2.11</span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="va">NGINX_UPLOAD_MODULE_VERSION=</span>2.3.0</span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># Download source code</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="ex">curl</span> -LO https://nginx.org/download/nginx-<span class="va">$NGINX_VERSION</span>.tar.gz \</span>
-<span id="cb2-9"><a href="#cb2-9"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf nginx-<span class="va">$NGINX_VERSION</span>.tar.gz</span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="ex">curl</span> -LO https://ftp.pcre.org/pub/pcre/pcre-<span class="va">$PCRE_VERSION</span>.tar.gz \</span>
-<span id="cb2-11"><a href="#cb2-11"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf pcre-<span class="va">$PCRE_VERSION</span>.tar.gz</span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="ex">curl</span> -LO https://www.zlib.net/zlib-<span class="va">$ZLIB_VERSION</span>.tar.gz \</span>
-<span id="cb2-13"><a href="#cb2-13"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf zlib-<span class="va">$ZLIB_VERSION</span>.tar.gz</span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="ex">curl</span> -o nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz \</span>
-<span id="cb2-15"><a href="#cb2-15"></a>  -L https://github.com/vkholodkov/nginx-upload-module/archive/<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz \</span>
-<span id="cb2-16"><a href="#cb2-16"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz</span>
-<span id="cb2-17"><a href="#cb2-17"></a></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co"># Compile and install</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="bu">cd</span> nginx-<span class="va">$NGINX_VERSION</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="ex">./configure</span> \</span>
-<span id="cb2-21"><a href="#cb2-21"></a>  --sbin-path=/usr/sbin/nginx \</span>
-<span id="cb2-22"><a href="#cb2-22"></a>  --conf-path=/etc/nginx/nginx.conf \</span>
-<span id="cb2-23"><a href="#cb2-23"></a>  --pid-path=/run/nginx.pid \</span>
-<span id="cb2-24"><a href="#cb2-24"></a>  --with-http_ssl_module \</span>
-<span id="cb2-25"><a href="#cb2-25"></a>  --with-http_stub_status_module \</span>
-<span id="cb2-26"><a href="#cb2-26"></a>  --with-pcre=../pcre-<span class="va">$PCRE_VERSION</span> \</span>
-<span id="cb2-27"><a href="#cb2-27"></a>  --with-zlib=../zlib-<span class="va">$ZLIB_VERSION</span> \</span>
-<span id="cb2-28"><a href="#cb2-28"></a>  --add-module=../nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a><span class="fu">make</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="fu">make</span> install</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># Environment variables</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="va">NGINX_VERSION=</span>1.17.9</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="va">PCRE_VESION=</span>8.44</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="va">ZLIB_VERSION=</span>1.2.11</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="va">NGINX_UPLOAD_MODULE_VERSION=</span>2.3.0</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co"># Download source code</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="ex">curl</span> -LO https://nginx.org/download/nginx-<span class="va">$NGINX_VERSION</span>.tar.gz <span class="kw">\</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf nginx-<span class="va">$NGINX_VERSION</span>.tar.gz</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="ex">curl</span> -LO https://ftp.pcre.org/pub/pcre/pcre-<span class="va">$PCRE_VERSION</span>.tar.gz <span class="kw">\</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf pcre-<span class="va">$PCRE_VERSION</span>.tar.gz</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="ex">curl</span> -LO https://www.zlib.net/zlib-<span class="va">$ZLIB_VERSION</span>.tar.gz <span class="kw">\</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf zlib-<span class="va">$ZLIB_VERSION</span>.tar.gz</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a><span class="ex">curl</span> -o nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz <span class="kw">\</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>  <span class="ex">-L</span> https://github.com/vkholodkov/nginx-upload-module/archive/<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz <span class="kw">\</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>  <span class="kw">&amp;&amp;</span> <span class="fu">tar</span> -xzvf nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span>.tar.gz</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a><span class="co"># Compile and install</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a><span class="bu">cd</span> nginx-<span class="va">$NGINX_VERSION</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a><span class="ex">./configure</span> <span class="kw">\</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>  <span class="ex">--sbin-path</span>=/usr/sbin/nginx <span class="kw">\</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>  <span class="ex">--conf-path</span>=/etc/nginx/nginx.conf <span class="kw">\</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>  <span class="ex">--pid-path</span>=/run/nginx.pid <span class="kw">\</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>  <span class="ex">--with-http_ssl_module</span> <span class="kw">\</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>  <span class="ex">--with-http_stub_status_module</span> <span class="kw">\</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>  <span class="ex">--with-pcre</span>=../pcre-<span class="va">$PCRE_VERSION</span> <span class="kw">\</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>  <span class="ex">--with-zlib</span>=../zlib-<span class="va">$ZLIB_VERSION</span> <span class="kw">\</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a>  <span class="ex">--add-module</span>=../nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a><span class="fu">make</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a><span class="fu">make</span> install</span></code></pre></div>
 <h2 id="websocket">websocket</h2>
 <pre class="nginx"><code>http {
     map $http_upgrade $connection_upgrade {
@@ -328,17 +329,17 @@ https://github.com/alex-shpak/hugo-book
 }</code></pre>
 <h1 id="curl">curl</h1>
 <h2 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
 <h2 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">5</a>]</sup></span></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">curl</span> ... --data-urlencode <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
 <h2 id="得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<a href="#ref-curlLocation" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> -si <span class="kw">|</span> <span class="fu">grep</span> -oP <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> -si <span class="kw">|</span> <span class="fu">grep</span> -oP <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
 <h1 id="open-api">Open API</h1>
 <h2 id="redoc">redoc</h2>
 <h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">yarn</span> global add redoc-cli</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="ex">yarn</span> global add redoc-cli</span></code></pre></div>
 <h3 id="生成-api-文档">生成 API 文档</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="ex">redoc-cli</span> bundle <span class="op">&lt;</span>openapi_file_path<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="ex">redoc-cli</span> bundle <span class="op">&lt;</span>openapi_file_path<span class="op">&gt;</span></span></code></pre></div>
 <h2 id="语法">语法</h2>
 <div id="tbl:openapi_data_type">
 <table>
@@ -370,7 +371,7 @@ https://github.com/alex-shpak/hugo-book
 <li>上传文件：<a href="https://download.seafile.com/published/web-api/v2.1/file-upload.md" class="uri">https://download.seafile.com/published/web-api/v2.1/file-upload.md</a></li>
 <li>Web API: <a href="https://seafile.gitbook.io/seafile-server-manual/developing/web-api" class="uri">https://seafile.gitbook.io/seafile-server-manual/developing/web-api</a></li>
 </ul>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-urlVsURI">
 <p>[1] PATE R. What is the difference between a URI, a URL and a URN?[EB/OL](2009–12–31). <a href="https://stackoverflow.com/a/1984225">https://stackoverflow.com/a/1984225</a>.</p>
@@ -442,13 +443,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/91c0718606c777ed20d6a19825bea466465e38c4" title='最后修改者 Kai Zhang | 2020-07-03 15:07:38 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/91c0718606c777ed20d6a19825bea466465e38c4" title='最后修改者 Kai Zhang | 2020-07-03 15:07:38 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-07-03 15:07:38 &#43;0800</span>
     </a>
@@ -460,14 +459,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -490,9 +490,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -552,17 +550,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

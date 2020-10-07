@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="数据库"><meta property="og:title" content="数据库" />
+<meta name="description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数据库" />
 <meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/database/" />
 <meta property="article:modified_time" content="2020-05-21T09:06:30+00:00" />
 <title>数据库 | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -34,8 +31,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -48,7 +46,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -151,7 +149,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -168,30 +166,31 @@ https://github.com/alex-shpak/hugo-book
   <strong>数据库</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="entity-relationship-diagram">Entity Relationship Diagram</h1>
+  <article class="markdown"><h1 id="entity-relationship-diagram">Entity Relationship Diagram</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">curl</span> -LO <span class="st">&#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">chmod</span> u+x erd_static-x86-64</span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">cp</span> -i erd_static-x86-64 ~/.local/bin/erd</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">curl</span> -LO <span class="st">&#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="fu">chmod</span> u+x erd_static-x86-64</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="fu">cp</span> -i erd_static-x86-64 ~/.local/bin/erd</span></code></pre></div>
 <h1 id="sql-命名规范">SQL 命名规范</h1>
 <div id="tbl:sqlNameConvention">
 <table>
@@ -225,25 +224,25 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="postgresql">PostgreSQL</h1>
 <h2 id="安装-1">安装</h2>
 <h3 id="arch-linux">Arch Linux</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a>$ <span class="fu">sudo</span> pacman -S postgres</span>
-<span id="cb2-2"><a href="#cb2-2"></a>$ <span class="fu">sudo</span> -iu postgres</span>
-<span id="cb2-3"><a href="#cb2-3"></a>[<span class="ex">postgres</span>]$ initdb -D /var/lib/postgres/data</span>
-<span id="cb2-4"><a href="#cb2-4"></a>[<span class="ex">postgres</span>]$ exit</span>
-<span id="cb2-5"><a href="#cb2-5"></a>$ <span class="fu">sudo</span> systemctl start postgresql.service</span>
-<span id="cb2-6"><a href="#cb2-6"></a>$ <span class="fu">sudo</span> systemctl enable postgresql.service</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>$ <span class="fu">sudo</span> pacman -S postgres</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>$ <span class="fu">sudo</span> -iu postgres</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>[<span class="ex">postgres</span>]$ initdb -D /var/lib/postgres/data</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>[<span class="ex">postgres</span>]$ exit</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>$ <span class="fu">sudo</span> systemctl start postgresql.service</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>$ <span class="fu">sudo</span> systemctl enable postgresql.service</span></code></pre></div>
 <h3 id="ubuntu">Ubuntu</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">UBUNTU_VERSION=</span>xenial</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">echo</span> <span class="st">&quot;deb http://apt.postgresql.org/pub/repos/apt/ </span><span class="va">$UBUNTU_VERSION</span><span class="st">-pgdg main&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/pgdg.list</span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">wget</span> --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add -</span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="fu">sudo</span> apt update</span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="fu">sudo</span> apt install postgresql</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="va">UBUNTU_VERSION=</span>xenial</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;deb http://apt.postgresql.org/pub/repos/apt/ </span><span class="va">$UBUNTU_VERSION</span><span class="st">-pgdg main&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/pgdg.list</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="fu">wget</span> --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add -</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="fu">sudo</span> apt install postgresql</span></code></pre></div>
 <h2 id="创建用户">创建用户</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a>$ <span class="fu">sudo</span> -iu postgres</span>
-<span id="cb4-2"><a href="#cb4-2"></a>[<span class="ex">postgres</span>]$ createuser --interactive <span class="co"># --pwprompt 要求输入密码</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>$ <span class="fu">sudo</span> -iu postgres</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>[<span class="ex">postgres</span>]$ createuser --interactive # --pwprompt 要求输入密码</span></code></pre></div>
 <h2 id="创建数据库">创建数据库</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1"></a><span class="ex">createdb</span> <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">createdb</span> <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code></pre></div>
 <h2 id="注释">注释</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">-- 注释</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="co">-- 注释</span></span></code></pre></div>
 <h2 id="数据类型postgres_data_types">数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<a href="#ref-postgres_data_types" role="doc-biblioref">3</a>]</sup></span></h2>
 <div id="tbl:postgresDataTypes">
 <table>
@@ -301,14 +300,14 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="参数替换postgres_parameter_substitution">参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<a href="#ref-postgres_parameter_substitution" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">PREPARE</span> fooplan (<span class="dt">int</span>, text, bool, <span class="dt">numeric</span>) <span class="kw">AS</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>    <span class="kw">INSERT</span> <span class="kw">INTO</span> foo <span class="kw">VALUES</span>($<span class="dv">1</span>, $<span class="dv">2</span>, $<span class="dv">3</span>, $<span class="dv">4</span>);</span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">EXECUTE</span> fooplan(<span class="dv">1</span>, <span class="st">&#39;Hunter Valley&#39;</span>, <span class="st">&#39;t&#39;</span>, <span class="fl">200.00</span>);</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">PREPARE</span> fooplan (<span class="dt">int</span>, text, bool, <span class="dt">numeric</span>) <span class="kw">AS</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="kw">INSERT</span> <span class="kw">INTO</span> foo <span class="kw">VALUES</span>($<span class="dv">1</span>, $<span class="dv">2</span>, $<span class="dv">3</span>, $<span class="dv">4</span>);</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="kw">EXECUTE</span> fooplan(<span class="dv">1</span>, <span class="st">&#39;Hunter Valley&#39;</span>, <span class="st">&#39;t&#39;</span>, <span class="fl">200.00</span>);</span></code></pre></div>
 <h2 id="模糊查找postgres_pattern_match">模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<a href="#ref-postgres_pattern_match" role="doc-biblioref">5</a>]</sup></span></h2>
 <p><code>LIKE</code> 时间和空间复杂度上限更容易控制。</p>
 <h2 id="按拼音排序postgres_collate">按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<a href="#ref-postgres_collate" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> a <span class="kw">ORDER</span> <span class="kw">BY</span> c1 COLLATE <span class="ot">&quot;zh_CN&quot;</span>;</span></code></pre></div>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> a <span class="kw">ORDER</span> <span class="kw">BY</span> c1 COLLATE <span class="ot">&quot;zh_CN&quot;</span>;</span></code></pre></div>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-sqlTableNameSingular">
 <p>[1] GBN. Plural vs Singular Table Name[EB/OL](2012–02–23). <a href="https://dba.stackexchange.com/a/13737">https://dba.stackexchange.com/a/13737</a>.</p>
@@ -363,13 +362,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/60daa5732c4809634dd0fe164b558c48a1d26af0" title='最后修改者 Kai Zhang | 2020-05-21 17:06:30 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/60daa5732c4809634dd0fe164b558c48a1d26af0" title='最后修改者 Kai Zhang | 2020-05-21 17:06:30 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-05-21 17:06:30 &#43;0800</span>
     </a>
@@ -381,14 +378,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -411,9 +409,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -473,17 +469,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

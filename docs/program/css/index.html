@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CSS"><meta property="og:title" content="CSS" />
+<meta name="description" content="selector  表 1: CSS selector  例子 含义    div &gt; p 父元素为 &lt;div&gt; 的所有 &lt;p&gt; 元素     对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
+  目录  selector 对齐 width[1] 参考文献   ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="CSS" />
 <meta property="og:description" content="selector  表 1: CSS selector  例子 含义    div &gt; p 父元素为 &lt;div&gt; 的所有 &lt;p&gt; 元素     对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
   目录  selector 对齐 width[1] 参考文献   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/program/css/" />
 <meta property="article:modified_time" content="2020-05-13T14:40:58+00:00" />
 <title>CSS | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,8 +33,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -49,7 +48,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -152,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -169,26 +168,27 @@ https://github.com/alex-shpak/hugo-book
   <strong>CSS</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="selector">selector</h1>
+  <article class="markdown"><h1 id="selector">selector</h1>
 <div id="tbl:css_selector">
 <table>
 <caption>表 1: CSS selector</caption>
@@ -207,13 +207,13 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h1 id="对齐">对齐</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1"></a># 靠右对齐</span>
-<span id="cb1-2"><a href="#cb1-2"></a>text-align<span class="in">: right</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a># 靠右对齐</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>text-align<span class="in">: right</span>;</span></code></pre></div>
 <h1 id="widthcsswidth">width<span class="citation" data-cites="cssWidth"><sup>[<a href="#ref-cssWidth" role="doc-biblioref">1</a>]</sup></span></h1>
 <ul>
 <li>默认值：<code>auto</code></li>
 </ul>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-cssWidth">
 <p>[1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). <a href="https://www.w3schools.com/cssref/pr_dim_width.asp">https://www.w3schools.com/cssref/pr_dim_width.asp</a>.</p>
@@ -235,13 +235,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4ed4b979ef711df3414ec3f05cd3d051f8917584" title='最后修改者 Kai Zhang | 2020-05-13 22:40:58 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/4ed4b979ef711df3414ec3f05cd3d051f8917584" title='最后修改者 Kai Zhang | 2020-05-13 22:40:58 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-05-13 22:40:58 &#43;0800</span>
     </a>
@@ -253,14 +251,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -283,9 +282,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -345,17 +342,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

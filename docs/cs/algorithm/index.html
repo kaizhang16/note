@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="算法"><meta property="og:title" content="算法" />
+<meta name="description" content="数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。
+遍历数组 void traverse(int[] arr) {  for (int i = 0; i &lt; arr.length; i&#43;&#43;) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="算法" />
 <meta property="og:description" content="数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。
 遍历数组 void traverse(int[] arr) {  for (int i = 0; i &lt; arr.length; i&#43;&#43;) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/cs/algorithm/" />
 <meta property="article:modified_time" content="2020-08-11T13:23:43+00:00" />
 <title>算法 | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -35,8 +33,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -49,7 +48,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -152,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -169,26 +168,27 @@ https://github.com/alex-shpak/hugo-book
   <strong>算法</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="数据结构的存储方式">数据结构的存储方式</h1>
+  <article class="markdown"><h1 id="数据结构的存储方式">数据结构的存储方式</h1>
 <div id="tbl:data_structure_store">
 <table>
 <caption>表 1: 数据结构的存储方式</caption>
@@ -231,61 +231,61 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="数据结构的基本操作">数据结构的基本操作</h1>
 <p>任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。</p>
 <h2 id="遍历数组">遍历数组</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">void</span> traverse(<span class="dt">int</span>[] arr) {</span>
-<span id="cb1-2"><a href="#cb1-2"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; arr.length; i++) {</span>
-<span id="cb1-3"><a href="#cb1-3"></a>        <span class="co">// 迭代访问 arr[i]</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>    }</span>
-<span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">void</span> traverse(<span class="dt">int</span>[] arr) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; arr.length; i++) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>        <span class="co">// 迭代访问 arr[i]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    }</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>}</span></code></pre></div>
 <h2 id="遍历链表">遍历链表</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> ListNode {</span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="dt">int</span> val;</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    ListNode next;</span>
-<span id="cb2-4"><a href="#cb2-4"></a>}</span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="dt">void</span> traverse(ListNode head) {</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    <span class="cf">for</span> (ListNode p = head; p != null; p = p.next) {</span>
-<span id="cb2-8"><a href="#cb2-8"></a>        <span class="co">// 迭代访问 p.val</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>    }</span>
-<span id="cb2-10"><a href="#cb2-10"></a>}</span>
-<span id="cb2-11"><a href="#cb2-11"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="dt">void</span> traverse(ListNode head) {</span>
-<span id="cb2-13"><a href="#cb2-13"></a>    <span class="co">// 递归访问 head.val</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>    traverse(head.next)</span>
-<span id="cb2-15"><a href="#cb2-15"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">class</span> ListNode {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="dt">int</span> val;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    ListNode next;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="dt">void</span> traverse(ListNode head) {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    <span class="cf">for</span> (ListNode p = head; p != null; p = p.next) {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>        <span class="co">// 迭代访问 p.val</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>    }</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="dt">void</span> traverse(ListNode head) {</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>    <span class="co">// 递归访问 head.val</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>    traverse(head.next)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>}</span></code></pre></div>
 <h3 id="遍历二叉树">遍历二叉树</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> TreeNode {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="dt">int</span> val;</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    TreeNode left, right;</span>
-<span id="cb3-4"><a href="#cb3-4"></a>}</span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="dt">void</span> traverse(TreeNode root) {</span>
-<span id="cb3-7"><a href="#cb3-7"></a>    <span class="co">// 前序遍历</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>    traverse(root.left)</span>
-<span id="cb3-9"><a href="#cb3-9"></a>    <span class="co">// 中序遍历</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a>    traverse(root.right)</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    <span class="co">// 后序遍历</span></span>
-<span id="cb3-12"><a href="#cb3-12"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">class</span> TreeNode {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="dt">int</span> val;</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    TreeNode left, right;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="dt">void</span> traverse(TreeNode root) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>    <span class="co">// 前序遍历</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>    traverse(root.left)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>    <span class="co">// 中序遍历</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>    traverse(root.right)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>    <span class="co">// 后序遍历</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>}</span></code></pre></div>
 <h3 id="遍历-n-叉树">遍历 N 叉树</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> TreeNode {</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="dt">int</span> val;</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    TreeNode[] children;</span>
-<span id="cb4-4"><a href="#cb4-4"></a>}</span>
-<span id="cb4-5"><a href="#cb4-5"></a></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="dt">void</span> traverse(TreeNode root) {</span>
-<span id="cb4-7"><a href="#cb4-7"></a>    <span class="cf">for</span> (TreeNode child : root.children) {</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        traverse(child);</span>
-<span id="cb4-9"><a href="#cb4-9"></a>    }</span>
-<span id="cb4-10"><a href="#cb4-10"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">class</span> TreeNode {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="dt">int</span> val;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    TreeNode[] children;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a><span class="dt">void</span> traverse(TreeNode root) {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="cf">for</span> (TreeNode child : root.children) {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>        traverse(child);</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>    }</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>}</span></code></pre></div>
 <h3 id="遍历图">遍历图</h3>
 <p>用 <code>visited</code> 数组做标记。</p>
 <h1 id="动态规划">动态规划</h1>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a><span class="pp"># </span><span class="er">初始化 base case</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>dp[<span class="dv">0</span>][<span class="dv">0</span>][...] = base</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="pp"># </span><span class="er">进行状态转移</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="cf">for</span> 状态<span class="dv">1</span> in 状态<span class="dv">1</span>的所有取值:</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="cf">for</span> 状态<span class="dv">2</span> in 状态<span class="dv">2</span>的所有取值:</span>
-<span id="cb5-6"><a href="#cb5-6"></a>        <span class="cf">for</span> ...</span>
-<span id="cb5-7"><a href="#cb5-7"></a>            dp[状态<span class="dv">1</span>][状态<span class="dv">2</span>][...] = 求最值(选择<span class="dv">1</span>, 选择<span class="fl">2.</span><span class="er">.</span>.)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="pp"># </span><span class="er">初始化 base case</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>dp[<span class="dv">0</span>][<span class="dv">0</span>][...] = base</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a><span class="pp"># </span><span class="er">进行状态转移</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a><span class="cf">for</span> 状态<span class="dv">1</span> in 状态<span class="dv">1</span>的所有取值:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="cf">for</span> 状态<span class="dv">2</span> in 状态<span class="dv">2</span>的所有取值:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>        <span class="cf">for</span> ...</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>            dp[状态<span class="dv">1</span>][状态<span class="dv">2</span>][...] = 求最值(选择<span class="dv">1</span>, 选择<span class="fl">2.</span><span class="er">.</span>.)</span></code></pre></div>
 <h2 id="字符串状态模板">字符串状态模板</h2>
 <ul>
 <li>在子数组 <code>array[0..i]</code> 中，以 <code>array[i]</code> 结尾的目标子序列的长度是 <code>dp[i]</code></li>
@@ -293,84 +293,84 @@ https://github.com/alex-shpak/hugo-book
 <li>在子数组 <code>array[i..j]</code> 中，目标子序列的长度为 <code>dp[i][j]</code></li>
 </ul>
 <h1 id="回溯法">回溯法</h1>
-<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>result <span class="op">=</span> []</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">def</span> backtrack(路径, 选择列表):</span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="cf">if</span> 满足结束条件:</span>
-<span id="cb6-4"><a href="#cb6-4"></a>        result.add(路径)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>        <span class="cf">return</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a>    <span class="cf">for</span> 选择 <span class="kw">in</span> 选择列表:</span>
-<span id="cb6-8"><a href="#cb6-8"></a>        做选择</span>
-<span id="cb6-9"><a href="#cb6-9"></a>        backtrack(路径, 选择列表)</span>
-<span id="cb6-10"><a href="#cb6-10"></a>        撤销选择</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>result <span class="op">=</span> []</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="kw">def</span> backtrack(路径, 选择列表):</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    <span class="cf">if</span> 满足结束条件:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>        result.add(路径)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>        <span class="cf">return</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    <span class="cf">for</span> 选择 <span class="kw">in</span> 选择列表:</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>        做选择</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>        backtrack(路径, 选择列表)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>        撤销选择</span></code></pre></div>
 <h1 id="bfs">BFS</h1>
-<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">// 计算从起点 start 到终点 target 的最近距离</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="dt">int</span> BFS(Node start, Node target) {</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    queue&lt;Node&gt; q; <span class="co">// 核心数据结构</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    set&lt;Node&gt; visited; <span class="co">// 避免走回头路</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a></span>
-<span id="cb7-6"><a href="#cb7-6"></a>    q.push(start); <span class="co">// 将起点加入队列</span></span>
-<span id="cb7-7"><a href="#cb7-7"></a>    visited.insert(start);</span>
-<span id="cb7-8"><a href="#cb7-8"></a>    <span class="dt">int</span> step = <span class="dv">0</span>; <span class="co">// 记录扩散的步数</span></span>
-<span id="cb7-9"><a href="#cb7-9"></a></span>
-<span id="cb7-10"><a href="#cb7-10"></a>    <span class="cf">while</span>(q.size() &gt; <span class="dv">0</span>) {</span>
-<span id="cb7-11"><a href="#cb7-11"></a>        <span class="dt">int</span> size0 = q.size();</span>
-<span id="cb7-12"><a href="#cb7-12"></a>        <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; size0; i++) {</span>
-<span id="cb7-13"><a href="#cb7-13"></a>            Node cur = q.front();</span>
-<span id="cb7-14"><a href="#cb7-14"></a>            q.pop();</span>
-<span id="cb7-15"><a href="#cb7-15"></a>            <span class="cf">if</span> (cur == target) {</span>
-<span id="cb7-16"><a href="#cb7-16"></a>                <span class="cf">return</span> step;</span>
-<span id="cb7-17"><a href="#cb7-17"></a>            }</span>
-<span id="cb7-18"><a href="#cb7-18"></a>            <span class="cf">for</span> (Node x : cur.adj()) {</span>
-<span id="cb7-19"><a href="#cb7-19"></a>                <span class="cf">if</span> (visited.find(x) == visited.end()) {</span>
-<span id="cb7-20"><a href="#cb7-20"></a>                    q.push(x);</span>
-<span id="cb7-21"><a href="#cb7-21"></a>                    visited.insert(x);</span>
-<span id="cb7-22"><a href="#cb7-22"></a>                }</span>
-<span id="cb7-23"><a href="#cb7-23"></a>            }</span>
-<span id="cb7-24"><a href="#cb7-24"></a>        }</span>
-<span id="cb7-25"><a href="#cb7-25"></a>        step++;</span>
-<span id="cb7-26"><a href="#cb7-26"></a>    }</span>
-<span id="cb7-27"><a href="#cb7-27"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co">// 计算从起点 start 到终点 target 的最近距离</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="dt">int</span> BFS(Node start, Node target) {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>    queue&lt;Node&gt; q; <span class="co">// 核心数据结构</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    set&lt;Node&gt; visited; <span class="co">// 避免走回头路</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    q.push(start); <span class="co">// 将起点加入队列</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    visited.insert(start);</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    <span class="dt">int</span> step = <span class="dv">0</span>; <span class="co">// 记录扩散的步数</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>    <span class="cf">while</span>(q.size() &gt; <span class="dv">0</span>) {</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>        <span class="dt">int</span> size0 = q.size();</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; size0; i++) {</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>            Node cur = q.front();</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>            q.pop();</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>            <span class="cf">if</span> (cur == target) {</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>                <span class="cf">return</span> step;</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a>            }</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a>            <span class="cf">for</span> (Node x : cur.adj()) {</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a>                <span class="cf">if</span> (visited.find(x) == visited.end()) {</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true"></a>                    q.push(x);</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true"></a>                    visited.insert(x);</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true"></a>                }</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true"></a>            }</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true"></a>        }</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true"></a>        step++;</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true"></a>    }</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="二分搜索">二分搜索</h1>
-<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1"></a><span class="dt">int</span> binary_search(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> target) {</span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="dt">int</span> left = <span class="dv">0</span>;</span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="dt">int</span> right = nums.size();</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="cf">while</span> (left &lt; right) {</span>
-<span id="cb8-5"><a href="#cb8-5"></a>        <span class="dt">int</span> mid = left + (right - left) / <span class="dv">2</span>; <span class="co">// 防止溢出</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a>        <span class="cf">if</span> (nums[mid] == target) {</span>
-<span id="cb8-7"><a href="#cb8-7"></a>            <span class="cf">return</span> mid;</span>
-<span id="cb8-8"><a href="#cb8-8"></a>        } <span class="cf">else</span> <span class="cf">if</span> (nums[mid] &lt; target) {</span>
-<span id="cb8-9"><a href="#cb8-9"></a>            left = mid + <span class="dv">1</span>;</span>
-<span id="cb8-10"><a href="#cb8-10"></a>        } <span class="cf">else</span> {</span>
-<span id="cb8-11"><a href="#cb8-11"></a>            right = mid;</span>
-<span id="cb8-12"><a href="#cb8-12"></a>        }</span>
-<span id="cb8-13"><a href="#cb8-13"></a>    }</span>
-<span id="cb8-14"><a href="#cb8-14"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
-<span id="cb8-15"><a href="#cb8-15"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="dt">int</span> binary_search(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> target) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="dt">int</span> left = <span class="dv">0</span>;</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    <span class="dt">int</span> right = nums.size();</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="cf">while</span> (left &lt; right) {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>        <span class="dt">int</span> mid = left + (right - left) / <span class="dv">2</span>; <span class="co">// 防止溢出</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>        <span class="cf">if</span> (nums[mid] == target) {</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>            <span class="cf">return</span> mid;</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (nums[mid] &lt; target) {</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>            left = mid + <span class="dv">1</span>;</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>            right = mid;</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>        }</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    }</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="滑动窗口">滑动窗口</h1>
-<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1"></a><span class="dt">void</span> sliding_window(string s, string t) {</span>
-<span id="cb9-2"><a href="#cb9-2"></a>    unordered_map&lt;<span class="dt">char</span>, <span class="dt">int</span>&gt; need, window;</span>
-<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">for</span> (<span class="dt">char</span> c : t) need[c]++;</span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="dt">int</span> left = <span class="dv">0</span>, right = <span class="dv">0</span>;</span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="dt">int</span> valid = <span class="dv">0</span>;</span>
-<span id="cb9-6"><a href="#cb9-6"></a>    <span class="cf">while</span> (right &lt; s.size()) {</span>
-<span id="cb9-7"><a href="#cb9-7"></a>        <span class="co">// c 是将要移入窗口的字符</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a>        <span class="dt">char</span> c = s[right]</span>
-<span id="cb9-9"><a href="#cb9-9"></a>        <span class="co">// 右移窗口</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a>        right++;</span>
-<span id="cb9-11"><a href="#cb9-11"></a>        <span class="co">// 进行窗口内数据的一系列更新</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a>        <span class="co">// debug 信息</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a>        printf(<span class="st">&quot;window: [</span><span class="sc">%d</span><span class="st">, </span><span class="sc">%d</span><span class="st">]</span><span class="sc">\n</span><span class="st">&quot;</span>, left, right);</span>
-<span id="cb9-14"><a href="#cb9-14"></a>        <span class="co">// 判断左侧窗口是否要收缩</span></span>
-<span id="cb9-15"><a href="#cb9-15"></a>        <span class="cf">while</span> (window needs shrink) {</span>
-<span id="cb9-16"><a href="#cb9-16"></a>            <span class="co">// d 是将要移出窗口的字符</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a>            <span class="dt">char</span> d = s[left];</span>
-<span id="cb9-18"><a href="#cb9-18"></a>            <span class="co">// 右移窗口</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a>            left++;</span>
-<span id="cb9-20"><a href="#cb9-20"></a>            <span class="co">// 进行窗口内数据的一系列更新</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a>        }</span>
-<span id="cb9-22"><a href="#cb9-22"></a>    }</span>
-<span id="cb9-23"><a href="#cb9-23"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="dt">void</span> sliding_window(string s, string t) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    unordered_map&lt;<span class="dt">char</span>, <span class="dt">int</span>&gt; need, window;</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">char</span> c : t) need[c]++;</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    <span class="dt">int</span> left = <span class="dv">0</span>, right = <span class="dv">0</span>;</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    <span class="dt">int</span> valid = <span class="dv">0</span>;</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    <span class="cf">while</span> (right &lt; s.size()) {</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>        <span class="co">// c 是将要移入窗口的字符</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>        <span class="dt">char</span> c = s[right]</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>        <span class="co">// 右移窗口</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>        right++;</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>        <span class="co">// 进行窗口内数据的一系列更新</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>        <span class="co">// debug 信息</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true"></a>        printf(<span class="st">&quot;window: [</span><span class="sc">%d</span><span class="st">, </span><span class="sc">%d</span><span class="st">]</span><span class="sc">\n</span><span class="st">&quot;</span>, left, right);</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true"></a>        <span class="co">// 判断左侧窗口是否要收缩</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true"></a>        <span class="cf">while</span> (window needs shrink) {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true"></a>            <span class="co">// d 是将要移出窗口的字符</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true"></a>            <span class="dt">char</span> d = s[left];</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true"></a>            <span class="co">// 右移窗口</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true"></a>            left++;</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true"></a>            <span class="co">// 进行窗口内数据的一系列更新</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true"></a>        }</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true"></a>    }</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -402,13 +402,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/236a8612c646151adc6d51800690e891a7ab5d71" title='最后修改者 Kai Zhang | 2020-08-11 21:23:43 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/236a8612c646151adc6d51800690e891a7ab5d71" title='最后修改者 Kai Zhang | 2020-08-11 21:23:43 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-08-11 21:23:43 &#43;0800</span>
     </a>
@@ -420,14 +418,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -450,9 +449,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -512,17 +509,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

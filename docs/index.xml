@@ -5,11 +5,7 @@
     <link>https://kaizhang91.github.io/notes/docs/</link>
     <description>Recent content in Docs on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
-    
-	<atom:link href="https://kaizhang91.github.io/notes/docs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/notes/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash</title>
       <link>https://kaizhang91.github.io/notes/docs/program/bash/</link>
@@ -471,7 +467,7 @@ AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/notes/docs/tools/editor/</guid>
-      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &amp;lt;Leader&amp;gt;f + Ctrl-x  Buffer：关闭 buffer &amp;lt;Leader&amp;gt;q  文件树：:NERDTreeFind &amp;lt;Leader&amp;gt;tf  文件树：:NERDTreeClose &amp;lt;Leader&amp;gt;tq  表格：:TableModeToggle &amp;lt;Leader&amp;gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    streetsidesoftware.</description>
+      <description>Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &amp;quot; 安装插件 :PlugUpdate &amp;quot; 升级插件 :PlugUpgrade &amp;quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &amp;lt;Leader&amp;gt;f + Ctrl-x  Buffer：关闭 buffer &amp;lt;Leader&amp;gt;q  文件树：:NERDTreeFind &amp;lt;Leader&amp;gt;tf  文件树：:NERDTreeClose &amp;lt;Leader&amp;gt;tq  表格：:TableModeToggle &amp;lt;Leader&amp;gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    esbenp.</description>
     </item>
     
     <item>

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="线性代数"><meta property="og:title" content="线性代数" />
+<meta name="description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
+相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
+旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
+外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="线性代数" />
 <meta property="og:description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
 其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
 相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
@@ -18,14 +27,10 @@
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/math/linear_algebra/" />
 <meta property="article:modified_time" content="2020-09-29T03:59:24+00:00" />
 <title>线性代数 | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -42,8 +47,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -56,7 +62,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -159,7 +165,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -176,26 +182,27 @@ https://github.com/alex-shpak/hugo-book
   <strong>线性代数</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="术语">术语</h1>
+  <article class="markdown"><h1 id="术语">术语</h1>
 <h2 id="共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<a href="#ref-conjugate_transpose" role="doc-biblioref">1</a>]</sup></span></h2>
 <p><span id="eq:conjugate_matrix"><span class="math display">\[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]</span></span></p>
 <p>其中，若记 <span class="math inline">\(\m{A}_{ji} = a + bi\)</span>，则 <span class="math inline">\((\m{A}_{ji})^* = a - bi\)</span>。</p>
@@ -236,7 +243,7 @@ https://github.com/alex-shpak/hugo-book
 <li><span class="math inline">\(\m{Y} = \m{\Sigma}\T{\m{V}}\)</span></li>
 </ul>
 </blockquote>
-<h1 class="unnumbered" id="参考文献" class="unnumbered">参考文献</h1>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-conjugate_transpose">
 <p>[1] WIKIPEDIA. Conjugate transpose[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Conjugate_transpose">https://en.wikipedia.org/wiki/Conjugate_transpose</a>.</p>
@@ -281,13 +288,11 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/58a6576568706e6a814a75f9506bc22a13f26fcc" title='最后修改者 Kai Zhang | 2020-09-29 11:59:24 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/58a6576568706e6a814a75f9506bc22a13f26fcc" title='最后修改者 Kai Zhang | 2020-09-29 11:59:24 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2020-09-29 11:59:24 &#43;0800</span>
     </a>
@@ -299,14 +304,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -329,9 +335,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -391,17 +395,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 

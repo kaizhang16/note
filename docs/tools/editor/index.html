@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="cn" dir=>
 
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="编辑器"><meta property="og:title" content="编辑器" />
-<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    streetsidesoftware." />
+<meta name="description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    esbenp.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="编辑器" />
+<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    esbenp." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/tools/editor/" />
-<meta property="article:modified_time" content="2020-07-05T12:24:01+00:00" />
+<meta property="article:modified_time" content="2020-10-07T16:56:03+08:00" />
 <title>编辑器 | 凯的笔记</title>
+<link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
-
-
-<link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
-
-
-<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
-
+<link rel="stylesheet" href="/notes/book.min.52c62c541d0e1072240987f6853983733e396f321c16cbf67806ee278941b164.css" integrity="sha256-UsYsVB0OEHIkCYf2hTmDcz45bzIcFsv2eAbuJ4lBsWQ=">
+<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -34,8 +31,9 @@ https://github.com/alex-shpak/hugo-book
 
 </head>
 
-<body>
-  <input type="checkbox" class="hidden" id="menu-control" />
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       
@@ -48,7 +46,7 @@ https://github.com/alex-shpak/hugo-book
 
 <div class="book-search">
   <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner spinner hidden"></div>
+  <div class="book-search-spinner hidden"></div>
   <ul id="book-search-results"></ul>
 </div>
 
@@ -151,7 +149,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
 
 
  
@@ -168,39 +166,40 @@ https://github.com/alex-shpak/hugo-book
   <strong>编辑器</strong>
 
   <label for="toc-control">
+    
     <img src="/notes/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
   </label>
 </div>
 
 
   
-    <input type="checkbox" class="hidden" id="toc-control" />
-    <aside class="hidden clearfix">
-      
+  <aside class="hidden clearfix">
+    
   
 
 
-    </aside>
+  </aside>
   
  
       </header>
 
       
       
-<article class="markdown"><h1 id="vim">Vim</h1>
+  <article class="markdown"><h1 id="vim">Vim</h1>
 <h2 id="包管理器">包管理器</h2>
 <h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">curl</span> -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \</span>
-<span id="cb1-2"><a href="#cb1-2"></a>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">curl</span> -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs <span class="kw">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="ex">https</span>://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
 <h3 id="使用">使用</h3>
 <pre class="vim"><code>:PlugInstall  &quot; 安装插件
 :PlugUpdate   &quot; 升级插件
 :PlugUpgrade  &quot; 升级 plug</code></pre>
 <h3 id="安装依赖的二进制">安装依赖的二进制</h3>
 <h4 id="rust">rust</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
 <h4 id="cmake">cmake</h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
 <h3 id="coc">coc</h3>
 <pre class="vim"><code>:CocInstall coc-clangd
 :CocInstall coc-flutter
@@ -225,7 +224,7 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="打开文件">打开文件</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h2 id="快捷键">快捷键</h2>
 <div id="tbl:vim_shotcuts">
 <table>
@@ -346,13 +345,23 @@ https://github.com/alex-shpak/hugo-book
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>streetsidesoftware.code-spell-checker</code></td>
-<td>拼写检查</td>
+<td><code>esbenp.prettier-vscode</code></td>
+<td>格式化</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><code>fcrespo82.markdown-table-formatter</code></td>
 <td>表格格式化</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>cheshirekow.cmake-format</code></td>
+<td>cmake 格式化</td>
+<td><code>pip install cmake_format</code></td>
+</tr>
+<tr class="even">
+<td><code>streetsidesoftware.code-spell-checker</code></td>
+<td>拼写检查</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -364,11 +373,6 @@ https://github.com/alex-shpak/hugo-book
 <td><code>llvm-vs-code-extensions.vscode-clangd</code></td>
 <td>C、C++</td>
 <td></td>
-</tr>
-<tr class="odd">
-<td><code>cheshirekow.cmake-format</code></td>
-<td>cmake 格式化</td>
-<td><code>pip install cmake_format</code></td>
 </tr>
 </tbody>
 </table>
@@ -421,15 +425,13 @@ https://github.com/alex-shpak/hugo-book
 
       <footer class="book-footer">
         
-  <div class="flex justify-between">
+  <div class="flex flex-wrap justify-between">
 
 
 
-  <div>
-    
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/f25cbfdb6223b429f0ff8ee61be5f163c5ac1f5b" title='最后修改者 Kai Zhang | 2020-07-05 20:24:01 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/dc5aa01981488181817faede9c219dd51c6e2d29" title='最后修改者 Kai Zhang | 2020-10-07 16:56:03 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-07-05 20:24:01 &#43;0800</span>
+      <span>2020-10-07 16:56:03 &#43;0800</span>
     </a>
   </div>
 
@@ -439,14 +441,15 @@ https://github.com/alex-shpak/hugo-book
 
  
         
+      </footer>
+
+      
   
   <div class="book-comments">
 
 </div>
   
  
-      </footer>
-      
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
@@ -469,9 +472,7 @@ https://github.com/alex-shpak/hugo-book
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   
   const searchResults = document.getElementById("book-search-results");
@@ -531,17 +532,6 @@ https://github.com/alex-shpak/hugo-book
   hljs.initHighlightingOnLoad();
   
 
-
-  
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      
-      
-      
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 
