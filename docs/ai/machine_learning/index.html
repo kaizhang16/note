@@ -13,7 +13,7 @@ P@n 只考虑 top n 个查询结果。[2]
 AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/machine_learning/" />
-<meta property="article:modified_time" content="2020-09-30T08:05:54+00:00" />
+<meta property="article:modified_time" content="2020-10-07T14:48:21+08:00" />
 <title>机器学习 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -21,7 +21,7 @@ AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum
 <link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
 
 
-<script defer src="/notes/cn.search.min.918729f91a14fff3344d681141beee7c24543fafb9131a494b2ffdd202ffbdb8.js" integrity="sha256-kYcp&#43;RoU//M0TWgRQb7ufCRUP6&#43;5ExpJSy/90gL/vbg="></script>
+<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
 
 <!--
 Made with Book Theme
@@ -255,17 +255,14 @@ https://github.com/alex-shpak/hugo-book
 <p><span id="eq:fpr"><span class="math display">\[ \FPR = \frac{\FP}{\FP + \TN}\qquad(11)\]</span></span></p>
 <h2 id="roc-与-precision-recall-曲线ml_roc">ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">5</a>]</sup></span></h2>
 <figure>
-<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr.png
-" id="fig:roc_pr" style="width:80.0%" alt="" /><figcaption>图 1: 一个 ROC 与 Precision-Recall 曲线例子</figcaption>
+<img src="https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr.png" id="fig:roc_pr" style="width:80.0%" alt="" /><figcaption>图 1: 一个 ROC 与 Precision-Recall 曲线例子</figcaption>
 </figure>
 <figure>
-<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr.gif
-" id="fig:roc_pr_dynamic" style="width:80.0%" alt="" /><figcaption>图 2: ROC 与 Precision-Recall 曲线随阈值的动态变化</figcaption>
+<img src="https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr.gif" id="fig:roc_pr_dynamic" style="width:80.0%" alt="" /><figcaption>图 2: ROC 与 Precision-Recall 曲线随阈值的动态变化</figcaption>
 </figure>
 <h3 id="roc-与-p-r-曲线的比较ml_roc">ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">5</a>]</sup></span></h3>
 <figure>
-<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr_imbalance.png
-" id="fig:roc_pr_imbalance" style="width:80.0%" alt="" /><figcaption>图 3: 样本不平衡时，ROC 与 Precision-Recall 曲线的比较</figcaption>
+<img src="https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_pr_imbalance.png" id="fig:roc_pr_imbalance" style="width:80.0%" alt="" /><figcaption>图 3: 样本不平衡时，ROC 与 Precision-Recall 曲线的比较</figcaption>
 </figure>
 <ul>
 <li>当正负样本不平衡时，P-R 曲线对误报更敏感</li>
@@ -273,8 +270,7 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="aucarea-under-the-curve">AUC(Area Under the Curve)</h3>
 <h4 id="roc-auc">ROC AUC</h4>
 <figure>
-<img src=" https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_auc.svg
-" id="fig:roc_auc" style="width:80.0%" alt="" /><figcaption>图 4: ROC AUC 示意图</figcaption>
+<img src="https://kaizhang91.github.io/notes/fig/ai/machine_learning/roc_auc.svg" id="fig:roc_auc" style="width:80.0%" alt="" /><figcaption>图 4: ROC AUC 示意图</figcaption>
 </figure>
 <p>ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。<span class="citation" data-cites="ml_roc_auc"><sup>[<a href="#ref-ml_roc_auc" role="doc-biblioref">6</a>]</sup></span></p>
 <h4 id="pr-auc">PR AUC</h4>
@@ -382,18 +378,18 @@ L(y, F) =
 <tbody>
 <tr class="odd">
 <td>Square loss</td>
-<td></td>
+<td>数学性质好</td>
 <td>对噪声敏感</td>
 </tr>
 <tr class="even">
 <td>Absolute loss</td>
-<td></td>
 <td>对噪声鲁棒</td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>Huber loss</td>
-<td></td>
 <td>对噪声更鲁棒</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -542,9 +538,9 @@ L(y, F) =
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/b000f6c777953bf03e97c5f2007360039ec7f5e2" title='最后修改者 Kai Zhang | 2020-09-30 16:05:54 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/28bc2cd5b41f327d9ffc534fc0b45a6b08fc7146" title='最后修改者 Kai Zhang | 2020-10-07 14:48:21 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-09-30 16:05:54 &#43;0800</span>
+      <span>2020-10-07 14:48:21 &#43;0800</span>
     </a>
   </div>
 

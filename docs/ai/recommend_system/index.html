@@ -8,7 +8,7 @@
 <meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/recommend_system/" />
-<meta property="article:modified_time" content="2020-10-06T10:01:22+00:00" />
+<meta property="article:modified_time" content="2020-10-07T14:48:21+08:00" />
 <title>推荐系统 | 凯的笔记</title>
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/notes/book.min.8de2c8a2b5fa747b4ce910193be490c9875734ed2667d2b3bc3cace0afbb3f44.css" integrity="sha256-jeLIorX6dHtM6RAZO&#43;SQyYdXNO0mZ9KzvDys4K&#43;7P0Q=">
 
 
-<script defer src="/notes/cn.search.min.918729f91a14fff3344d681141beee7c24543fafb9131a494b2ffdd202ffbdb8.js" integrity="sha256-kYcp&#43;RoU//M0TWgRQb7ufCRUP6&#43;5ExpJSy/90gL/vbg="></script>
+<script defer src="/notes/cn.search.min.dd129d29b8bcb2559abedb358c3329a9487fc617b5caa9dbfc74d528d250c52d.js" integrity="sha256-3RKdKbi8slWavts1jDMpqUh/xhe1yqnb/HTVKNJQxS0="></script>
 
 <!--
 Made with Book Theme
@@ -229,8 +229,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="架构">架构</h1>
 <figure>
-<img src=" https://kaizhang91.github.io/notes/fig/ai/recommend_system/architecture.webp
-" id="fig:architecture" alt="" /><figcaption>图 1: 推荐系统架构</figcaption>
+<img src="https://kaizhang91.github.io/notes/fig/ai/recommend_system/architecture.webp" id="fig:architecture" alt="" /><figcaption>图 1: 推荐系统架构</figcaption>
 </figure>
 <h1 id="算法">算法</h1>
 <h2 id="不同算法的优缺点">不同算法的优缺点</h2>
@@ -421,6 +420,9 @@ J(\v{w}) &amp;= \frac{1}{m}\sum_{i=1}^m H(p(\v{y}), p(\hat{\v{y}})) \\
 <p><span id="eq:ffm"><span class="math display">\[\phi\mathrm{FFM}(\v{w},\v{x}) =
 \sum_{j_1=1}^{n-1}\sum_{j_2=j_1+1}^n (\v{w}_{j_1,f_2}\cdot\v{w}_{j_2,f_1})x_{j_1}x_{j_2}\qquad(14)\]</span></span></p>
 <h2 id="gbdt-lr">GBDT + LR</h2>
+<figure>
+<img src="https://kaizhang91.github.io/notes/fig/ai/recommend_system/GBDT&#43;LR_architecture.jpg" id="fig:GBDT_LR_architecture" alt="" /><figcaption>图 2: GBDT+LR 架构</figcaption>
+</figure>
 <h1 id="参考文献">参考文献</h1>
 
 <nav id="TableOfContents" role="doc-toc">
@@ -472,9 +474,9 @@ J(\v{w}) &amp;= \frac{1}{m}\sum_{i=1}^m H(p(\v{y}), p(\hat{\v{y}})) \\
 
   <div>
     
-    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/905f8a56ec66780d26d8395c5349aa6ead19bc88" title='最后修改者 Kai Zhang | 2020-10-06 18:01:22 &#43;0800' target="_blank" rel="noopener">
+    <a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/28bc2cd5b41f327d9ffc534fc0b45a6b08fc7146" title='最后修改者 Kai Zhang | 2020-10-07 14:48:21 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-10-06 18:01:22 &#43;0800</span>
+      <span>2020-10-07 14:48:21 &#43;0800</span>
     </a>
   </div>
 

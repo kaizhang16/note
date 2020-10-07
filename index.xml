@@ -221,7 +221,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
 正负号 请参考 https://zhidao.baidu.com/question/538973023.html。
 分页符 请参考 https://www.office68.com/word/8512.html。
 横向纸张 请参考 https://support.office.com/zh-cn/article/%E5%B0%86%E9%A1%B5%E9%9D%A2%E6%96%B9%E5%90%91%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%A8%AA%E5%90%91%E6%88%96%E7%BA%B5%E5%90%91-9b5ac1af-9998-4a37-962b-a82b689572a9。
-调整页边距 请参考 http://www.officexr.com/c/14244.html。
+调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
 修改脚注上方的横线 请参考 https://zhidao.baidu.com/question/1895317289698826500.html。
 PPT 插入圆角矩阵 请参考 https://zhidao.baidu.com/question/520937235.html。
