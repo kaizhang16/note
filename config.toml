@@ -10,3 +10,4 @@ enableGitInfo = true
   BookRepo = "https://github.com/kaizhang91/notes"
   BookMenuBundle = "/menu"
   BookDateFormat = "2006-01-02 15:04:05 -0700"
+  BookTheme = "dark"
