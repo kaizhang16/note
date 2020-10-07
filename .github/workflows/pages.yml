@@ -7,41 +7,40 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-      PANDOC_VERSION: 2.9.1.1
-      PANDOC_CROSSREF_VERSION: 0.3.6.1b
-      HUGO_VERSION: 0.64.1
+      PANDOC_VERSION: 2.10.1
+      PANDOC_CROSSREF_VERSION: 0.3.8.1
+      HUGO_VERSION: 0.76.1
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Install pandoc
-      run: |
-        curl -LO https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
-        tar -xzvf pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
-        sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc /usr/bin/
-        sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc-citeproc /usr/local/bin/
-    - name: Install pandoc-crossref
-      run: |
-        PANDOC_VERSION_UNDERSCORE=$(echo ${PANDOC_VERSION} | tr '.' '_')
-        curl -LO https://github.com/lierdakil/pandoc-crossref/releases/download/v${PANDOC_CROSSREF_VERSION}/linux-pandoc_${PANDOC_VERSION_UNDERSCORE}.tar.gz
-        tar -xzvf linux-pandoc_${PANDOC_VERSION_UNDERSCORE}.tar.gz
-        sudo mv -f pandoc-crossref /usr/local/bin
-    - name: Install csl
-      run: |
-        curl -LO https://raw.githubusercontent.com/citation-style-language/styles/master/china-national-standard-gb-t-7714-2015-numeric.csl
-        mkdir -p $HOME/.csl/
-        mv -f china-national-standard-gb-t-7714-2015-numeric.csl $HOME/.csl/
-    - name: Install hugo
-      run: |
-        curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-        tar -xzvf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-        sudo mv -f hugo /usr/local/bin
-    - name: Checkout submodules
-      run: git submodule update --init --force --recursive
-    - name: Build
-      run: make build
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./public
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install pandoc
+        run: |
+          curl -LO https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
+          tar -xzvf pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
+          sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc /usr/bin/
+          sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc-citeproc /usr/local/bin/
+      - name: Install pandoc-crossref
+        run: |
+          curl -LO https://github.com/lierdakil/pandoc-crossref/releases/download/v${PANDOC_CROSSREF_VERSION}/pandoc-crossref-Linux.tar.xz
+          tar -xvf pandoc-crossref-Linux.tar.xz
+          sudo mv -f pandoc-crossref /usr/local/bin
+      - name: Install csl
+        run: |
+          curl -LO https://raw.githubusercontent.com/citation-style-language/styles/master/china-national-standard-gb-t-7714-2015-numeric.csl
+          mkdir -p $HOME/.csl/
+          mv -f china-national-standard-gb-t-7714-2015-numeric.csl $HOME/.csl/
+      - name: Install hugo
+        run: |
+          curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+          tar -xzvf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+          sudo mv -f hugo /usr/local/bin
+      - name: Checkout submodules
+        run: git submodule update --init --force --recursive
+      - name: Build
+        run: make build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public

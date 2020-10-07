@@ -6,9 +6,7 @@
   const tableOfContents = document.getElementById("TableOfContents");
   const tableOfContents1 = tableOfContents.cloneNode(true);
   document.querySelector(".book-toc").appendChild(tableOfContents);
-  document
-    .getElementById("toc-control")
-    .nextElementSibling.appendChild(tableOfContents1);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
 
   // Search
   const searchResults = document.getElementById("book-search-results");
@@ -85,17 +83,6 @@
         }
     });
     */
-
-  // Table
-  window.setTimeout(() => {
-    document.querySelectorAll("table").forEach((table) => {
-      // console.info("caption", table.caption.clientWidth);
-      // console.info("tHead", table.tHead.clientWidth);
-      // console.info("tBody", table.tBodies[0].clientWidth);
-      const tableWidth = table.caption.clientWidth + 1;
-      table.style.width = tableWidth + "px";
-    });
-  }, 100);
 </script>
 
 <!-- MathJax -->
