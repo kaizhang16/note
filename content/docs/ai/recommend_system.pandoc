@@ -178,4 +178,6 @@ $$\phi\mathrm{FFM}(\v{w},\v{x}) =
 
 ## GBDT + LR
 
+![GBDT+LR 架构]({{< static_ref "fig/ai/recommend_system/GBDT+LR_architecture.jpg" >}}){#fig:GBDT_LR_architecture}
+
 # 参考文献
