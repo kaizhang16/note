@@ -101,14 +101,14 @@ nvim $(fzf)
 
 ## 插件
 
-| 插件 ID                                 | 用途         | 依赖                       |
-|-----------------------------------------|--------------|----------------------------|
-| `esbenp.prettier-vscode`                | 格式化       |                            |
-| `fcrespo82.markdown-table-formatter`    | 表格格式化   |                            |
-| `cheshirekow.cmake-format`              | cmake 格式化 | `pip install cmake_format` |
-| `streetsidesoftware.code-spell-checker` | 拼写检查     |                            |
-| `stkb.rewrap`                           | 断行         |                            |
-| `llvm-vs-code-extensions.vscode-clangd` | C、C++       |                            |
+| 插件 ID                               | 用途         | 依赖                     |
+|---------------------------------------|--------------|--------------------------|
+| esbenp.prettier-vscode                | 格式化       |                          |
+| fcrespo82.markdown-table-formatter    | 表格格式化   |                          |
+| cheshirekow.cmake-format              | cmake 格式化 | pip install cmake_format |
+| streetsidesoftware.code-spell-checker | 拼写检查     |                          |
+| stkb.rewrap                           | 断行         |                          |
+| llvm-vs-code-extensions.vscode-clangd | C、C++       |                          |
 
 : Visual Studio Code 插件
 
