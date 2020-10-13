@@ -4,13 +4,14 @@ title: "推荐系统"
 
 # 术语
 
-| 缩写 | 全称               | 含义   |
-|------|--------------------|--------|
-| C    | Context            | 场景   |
-| CTR  | Click Through Rate | 点击率 |
-| CVR  | Conversion Rate    | 转化率 |
-| I    | Item               | 物品   |
-| U    | User               | 用户   |
+| 缩写 | 全称                  | 含义       |
+|------|-----------------------|------------|
+| C    | Context               | 场景       |
+| CTR  | Click Through Rate    | 点击率     |
+| CVR  | Conversion Rate       | 转化率     |
+| I    | Item                  | 物品       |
+| MLP  | Multilayer Perception | 多层感知机 |
+| U    | User                  | 用户       |
 
 : 术语 {#tbl:terminology}
 
@@ -22,28 +23,37 @@ title: "推荐系统"
 
 ## 不同算法的优缺点
 
-| 算法     | 优点                                           | 缺点                     |
-|----------|------------------------------------------------|--------------------------|
-| UserCF   | 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） | 用户数远大于物品数       |
-|          | 社交特性更强，适于发现热点                     | 用户历史数据向量很稀疏   |
-| ItemCF   | 适于兴趣变化较为稳定的应用                     | 泛化能力弱，头部效应强   |
-|          | 直观，可解释性强                               | 无法有效引入场景信息     |
-| 矩阵分解 | 泛化能力强                                     | 不方便融合特征           |
-|          | 空间复杂度低                                   | 不好冷启动               |
-|          | 便于与神经网络集成                             |                          |
-| 逻辑回归 | 融合多种特征                                   | 无法特征交叉、筛选       |
-|          | 假设 $y$ 服从伯努利分布，有物理意义            |                          |
-|          | 是各特征的加权和，可解释性强                   |                          |
-|          | 易于并行化、模型简单、易于训练                 |                          |
-| POLY2    | 特征交叉                                       | 特征向量更稀疏，不好训练 |
-|          |                                                | 参数增多                 |
-| FM       | 参数从 POLY2 的 $n^2$ 下降到 $nk$              |                          |
-|          | 比 POLY2 更适于稀疏数据，泛化能力强            |                          |
-|          | 易于上线                                       |                          |
-| FFM      | 比 FM 表达能力强                               | 计算复杂度上升到 $kn^2$  |
-| GBDT+LR  | 特征工程模型化                                 |                          |
-| LS-PLM   | 能挖掘非线性模式                               |                          |
-|          | 引入 L1 惩罚，模型稀疏                         |                          |
+| 算法          | 优点                                           | 缺点                     |
+|---------------|------------------------------------------------|--------------------------|
+| UserCF        | 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） | 用户数远大于物品数       |
+|               | 社交特性更强，适于发现热点                     | 用户历史数据向量很稀疏   |
+| ItemCF        | 适于兴趣变化较为稳定的应用                     | 泛化能力弱，头部效应强   |
+|               | 直观，可解释性强                               | 无法有效引入场景信息     |
+| 矩阵分解      | 泛化能力强                                     | 不方便融合特征           |
+|               | 空间复杂度低                                   | 不好冷启动               |
+|               | 便于与神经网络集成                             |                          |
+| 逻辑回归      | 融合多种特征                                   | 无法特征交叉、筛选       |
+|               | 假设 $y$ 服从伯努利分布，有物理意义            |                          |
+|               | 是各特征的加权和，可解释性强                   |                          |
+|               | 易于并行化、模型简单、易于训练                 |                          |
+| POLY2         | 特征交叉                                       | 特征向量更稀疏，不好训练 |
+|               |                                                | 参数增多                 |
+| FM            | 参数从 POLY2 的 $n^2$ 下降到 $nk$              |                          |
+|               | 比 POLY2 更适于稀疏数据，泛化能力强            |                          |
+|               | 易于上线                                       |                          |
+| FFM           | 比 FM 表达能力强                               | 计算复杂度上升到 $kn^2$  |
+| GBDT+LR       | 特征工程模型化                                 |                          |
+| LS-PLM        | 能挖掘非线性模式                               |                          |
+|               | 引入 L1 惩罚，模型稀疏                         |                          |
+| AutoRec       | 第一次使用深度学习框架                         |                          |
+| Deep Crossing | 特征间深度交叉                                 |                          |
+| NeuralCF      | 用户向量和物品向量更充分地交叉                 | 没有引入更多特征         |
+|               | 表达能力比矩阵分解强                           |                          |
+|               | 可以灵活选择互操作层                           |                          |
+| PNN           | 强调不同特征之间的交互                         | 简化操作丢失信息         |
+| Wide & Deep   | 综合记忆能力和泛化能力                         |                          |
+|               | 开拓了融合不同网络结构的新思路                 |                          |
+| Deep & Cross  |                                                |                          |
 
 : 不同算法的优缺点 {#tbl:pros_cons}
 
@@ -179,5 +189,174 @@ $$\phi\mathrm{FFM}(\v{w},\v{x}) =
 ## GBDT + LR
 
 ![GBDT+LR 架构]({{< static_ref "fig/ai/recommend_system/GBDT+LR_architecture.jpg" >}}){#fig:GBDT_LR_architecture}
+
+## LS-PLM
+
+### 输出
+
+$$
+\begin{align}
+f(\v{x}) &= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
+&= \sum_{i=1}^m \frac{\e^{\v{\mu_i}\cdot\v{x}}}{\sum_{j=1}^m\e^{\v{\mu_j}\cdot\v{x}}}\cdot\frac{1}{1+\e^{-\v{w_i}\cdot\v{x}}}
+\end{align}
+$$ {#eq:ls_plm_y}
+
+其中，$m$ 为分片数，$\pi$ 为聚类函数（这里采用 softmax 对样本进行多分类）。
+
+## AutoRec
+
+![AutoRec 架构[@sedhain2015autorec]]({{< static_ref "fig/ai/recommend_system/auto_rec_architecture.png" >}}){#fig:auto_rec_architecture}
+
+### 损失函数
+
+$$\min_{\theta}\left[\sum_{\v{r}\in S}\lVert\v{r}-h(\v{r};\theta)\rVert_2^2
++ \frac{\lambda}{2}(\lVert\m{W}_F^2\rVert + \lVert\m{V}\rVert_F^2)\right]$$
+{#eq:auto_rec_loss}
+
+其中，$h(\v{r};\theta)$ 为重建函数；$\v{r}^{(i)}=\T{(R_{1i},\dots,R_{mi})}$ 为物
+品 $i$ 的评分向量。
+
+### 重建函数
+
+$$h(\v{r};\theta)=f(\m{W}\cdot g(\m{V}\v{r}+\mu)+b)$$ {#eq:auto_rec_reconstruction}
+
+### 输出
+
+$$\hat{R}_{ui} = h(\v{r}^{(i)};\theta)_u$$ {#eq:auto_rec_output}
+
+## Deep Crossing
+
+![Deep Crossing 架构[@shan2016deep]]({{< static_ref "fig/ai/recommend_system/deep_crossing_architecture.png" >}}){#fig:deep_crossing_architecture}
+
+### 残差神经网络
+
+好处：
+
+- 减少过拟合
+- 减弱梯度小时现象，加快收敛速度
+
+## NeuralCF
+
+用多层神经网络代替矩阵分解的内积操作。
+
+![NeuralCF 架构[@he2017neural]]({{< static_ref "fig/ai/recommend_system/neural_cf_architecture.png" >}}){#fig:neural_cf_architecture}
+
+## PNN
+
+乘积层代替 Deep Crossing 模型中的 Stacking 层。
+
+![PNN 架构[@qu2016product]]({{< static_ref "fig/ai/recommend_system/pnn_architecture.png" >}}){#fig:pnn_architecture}
+
+## Wide & Deep
+
+![Wide & Deep 架构[@cheng2016wide]]({{< static_ref "fig/ai/recommend_system/wide_deep_architecture.png" >}}){#fig:wide_deep_architecture}
+
+Cross Product Transformation 为：
+
+$$\phi_k(\v{x}) = \prod_{i=1}^d x_i^{c_{ki}}\quad c_{ki}\in\{0,1\}$$
+
+其中，$c_{ki}$ 当第 $i$ 个特征属于第 $k$ 个组合特征时为 $1$，否则为 $0$；$x_i$
+是第 $i$ 个特征的值。
+
+## Deep & Cross
+
+![Deep & Cross 架构[@wang2017deep]]({{< static_ref
+"fig/ai/recommend_system/deep_cross_architecture.png"
+>}}){#fig:deep_cross_architecture width=60%}
+
+Cross 网络的运算为：
+
+$$\v{x}_{l+1} = \v{x}_0\T{\v{x}_l}\v{w}_l + \v{b}_l + \v{x}_l$$ {#eq:deep_cross_cross}
+
+## FNN
+
+用 FM 的隐向量初始化 Embedding 层。
+
+为什么 Embedding 层收敛速度较慢？
+
+- Embedding 参数多
+- 输入向量稀疏
+
+![FNN 架构[@zhang2016deep]]({{< static_ref
+"fig/ai/recommend_system/fnn_architecture.png"
+>}}){#fig:fnn_architecture}
+
+其中，$\v{w}$ 和 $\v{v}$ 对应于 FM 中的参数：
+
+$$\hat{\v{y}} = \sigmoid\left(w_0 + \sum_{i=1}^N w_i x_i +
+\sum_{i=1}^N\sum_{j=i+1}^N\langle\v{v}_i,\v{v}_j\rangle x_i x_j\right)
+$$ {#eq:fm_output}
+
+## DeepFM
+
+![DeepFM 架构[@guo2017deepfm]]({{< static_ref
+"fig/ai/recommend_system/deep_fm_architecture.png"
+>}}){#fig:deep_fm_architecture}
+
+## NFM
+
+用神经网络代替 FM 的二阶特征交叉。
+
+![NFM 架构[@he2017nfm]]({{< static_ref
+"fig/ai/recommend_system/nfm_architecture.png"
+>}}){#fig:nfm_architecture}
+
+Bi-Interaction Pooling 具体操作为：
+
+$$f_{\mathrm{BI}}(\mathcal{V}_x) = \sum_{i=1}^n\sum_{j=i+1}^n x_i\v{v}_i\odot
+x_j\v{v}_j$$ {#eq:nfm_bi}
+
+其中，$\mathcal{V}_x$ 是 Embedding 集合。
+
+## AFM
+
+![AFM 架构[@xiao2017attentional]]({{< static_ref
+"fig/ai/recommend_system/afm_architecture.png"
+>}}){#fig:afm_architecture}
+
+特征交叉采用元素积：
+
+$$f_{\mathrm{PI}}(\mathcal{E}) = \{(\v{v}_i\odot\v{v}_j) x_i x_j\mid
+(i,j)\in\mathcal{R}_x\}$$ {#eq:afm_pi}
+
+其中，PI 表示 Pair-wise Interaction Layer；$\mathcal{E} = \{\v{v}_i x_i\mid
+i\in\mathcal{X}\}$；$\mathcal{X}$ 为非零特征的索引集合；$\mathcal{R}_x =
+\{(i,j)\mid i\in\mathcal{X}, j\in\mathcal{X}, j>i\}$。
+
+$$
+\begin{align}
+f_{\mathrm{Att}}(f_{\mathrm{PI}}(\mathcal{E})) &= \sum_{(i,j)\in\mathcal{R}_x}
+a_{ij}(\v{v}_i\odot\v{v}_j) x_i x_j \\
+a_{ij} &= \frac{\exp(a'_{ij})}{\sum_{(i,j)\in\mathcal{R}_x}\exp(a'_{ij})} \\
+a'_{ij} &= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
+\end{align}
+$$ {#eq:afm_att}
+
+## DIN
+
+![DIN 架构[@zhou2018deep]]({{< static_ref
+"fig/ai/recommend_system/din_architecture.png"
+>}}){#fig:din_architecture}
+
+### 注意力
+
+$$\v{v}_U(A) = f(\v{v}_A,\v{e}_1,\v{e}_2,\dots,\v{e}_H)
+= \sum_{j=1}^H a(\v{e}_j,\v{v}_A)\v{e}_j
+= \sum_{j=1}^H w_j\v{e}_j$$ {#eq:din_attention}
+
+其中，$\{\v{e}_1,\v{e}_2,\dots,\v{e}_H\}$ 是用户 U 的历史行为的 Embedding 向量；
+$\v{v}_A$ 是广告 A 的 Embedding 向量。
+
+## DIEN
+
+![DIEN 架构[@zhou2019deep]]({{< static_ref
+"fig/ai/recommend_system/dien_architecture.png"
+>}}){#fig:dien_architecture}
+
+### AUGRU
+
+AUGRU 改变了更新门：
+
+$$\tilde{\v{u}}'_t = a_t\v{u}'_t$$ {#eq:dien_update_gate}
 
 # 参考文献

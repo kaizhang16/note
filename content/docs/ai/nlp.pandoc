@@ -40,13 +40,23 @@ h_t &= o_t \odot \tanh(C_t)
 \end{align}
 $$ {#eq:lstm_output}
 
-## GRU
+## GRU[@cho2014learning]
+
+Reset Gate:
+
+$$r_t = \sigma(W_r \cdot [h_{t-1}, x_t])$$ {#eq:gru_reset_gate}
+
+Update Gate:
+
+$$z_t = \sigma(W_z \cdot [h_{t-1}, x_t])$$ {#eq:gru_update_gate}
+
+Output:
 
 $$
 \begin{align}
-z_t &= \sigma(W_z \cdot [h_{t-1}, x_t]) \\
-r_t &= \sigma(W_r \cdot [h_{t-1}, x_t]) \\
 \tilde{h}_t &= \tanh(W_h \cdot [r_t \odot h_{t-1}, x_t]) \\
 h_t &= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
 \end{align}
 $$ {#eq:gru}
+
+# 参考文献
