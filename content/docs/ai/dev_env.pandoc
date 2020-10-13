@@ -2,6 +2,25 @@
 title: "开发环境"
 ---
 
+# CUDA
+
+| CUDA 版本 | 驱动版本  |
+|-----------|-----------|
+| CUDA 10.2 | >= 440.33 |
+| CUDA 10.1 | >= 418.39 |
+
+: CUDA 与驱动的版本对应关系[@cuda_driver_version] {#tbl:cuda_driver_version}
+
+## 安装驱动
+
+### Ubuntu
+
+```sh
+sudo add-apt-repository ppa:graphics-drivers/ppa
+ubuntu-drivers devices  # 查看推荐的驱动
+sudo apt install nvidia-430  # 安装驱动
+```
+
 # Docker
 
 ## Docker >= 19.03
@@ -100,3 +119,5 @@ device = torch.device("cuda")
 ## Module
 
 `net.zero_grad()` 可以清空存在的梯度，不然梯度会累积。
+
+# 参考文献
