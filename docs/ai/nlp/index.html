@@ -27,12 +27,12 @@ Output:
 \[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/notes/docs/ai/nlp/" />
-<meta property="article:modified_time" content="2020-06-16T09:37:35+00:00" />
+<meta property="article:modified_time" content="2020-10-13T07:19:32+00:00" />
 <title>自然语言处理 | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/notes/cn.search.min.5acad2a8a4dd97e48f76c3dee867eafb6a48b23de3cd958631f186e8f8f88a69.js" integrity="sha256-WsrSqKTdl&#43;SPdsPe6Gfq&#43;2pIsj3jzZWGMfGG6Pj4imk="></script>
+<script defer src="/notes/cn.search.min.b9ff945956d2498560cb589418bd14d44bbaf4ebeebc5dac920779031e481f23.js" integrity="sha256-uf&#43;UWVbSSYVgy1iUGL0U1Eu69OvuvF2skgd5Ax5IHyM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -230,15 +230,24 @@ o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
 h_t &amp;= o_t \odot \tanh(C_t)
 \end{align}
 \qquad(4)\]</span></span></p>
-<h2 id="gru">GRU</h2>
+<h2 id="grucho2014learning">GRU<span class="citation" data-cites="cho2014learning"><sup>[<a href="#ref-cho2014learning" role="doc-biblioref">1</a>]</sup></span></h2>
+<p>Reset Gate:</p>
+<p><span id="eq:gru_reset_gate"><span class="math display">\[r_t = \sigma(W_r \cdot [h_{t-1}, x_t])\qquad(5)\]</span></span></p>
+<p>Update Gate:</p>
+<p><span id="eq:gru_update_gate"><span class="math display">\[z_t = \sigma(W_z \cdot [h_{t-1}, x_t])\qquad(6)\]</span></span></p>
+<p>Output:</p>
 <p><span id="eq:gru"><span class="math display">\[
 \begin{align}
-z_t &amp;= \sigma(W_z \cdot [h_{t-1}, x_t]) \\
-r_t &amp;= \sigma(W_r \cdot [h_{t-1}, x_t]) \\
 \tilde{h}_t &amp;= \tanh(W_h \cdot [r_t \odot h_{t-1}, x_t]) \\
 h_t &amp;= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
 \end{align}
-\qquad(5)\]</span></span></p>
+\qquad(7)\]</span></span></p>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-cho2014learning">
+<p>[1] CHO K, VAN MERRIËNBOER B, GULCEHRE C, 等. Learning phrase representations using RNN encoder-decoder for statistical machine translation[J]. arXiv preprint arXiv:1406.1078, 2014.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -246,8 +255,9 @@ h_t &amp;= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
   <li><a href="#lstm-与-gru">LSTM 与 GRU</a>
   <ul>
   <li><a href="#lstm">LSTM</a></li>
-  <li><a href="#gru">GRU</a></li>
+  <li><a href="#grucho2014learning">GRU<span class="citation" data-cites="cho2014learning"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -260,9 +270,9 @@ h_t &amp;= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
 
 
 
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/a6837941c5981400014e5ad3ff7bd71c5ae82a7a" title='最后修改者 Kai Zhang | 2020-06-16 17:37:35 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/2e19f2061f474fc7ed2867aa40cdb7c2d6e8607e" title='最后修改者 Kai Zhang | 2020-10-13 15:19:32 &#43;0800' target="_blank" rel="noopener">
       <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-06-16 17:37:35 &#43;0800</span>
+      <span>2020-10-13 15:19:32 &#43;0800</span>
     </a>
   </div>
 
@@ -331,17 +341,19 @@ h_t &amp;= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
         d: ["\\mathrm{d}"],
         data: ["\\mathrm{data}"],
         diag: ["\\mathrm{diag}"],
+        e: ["\\mathrm{e}"],
         FN: ["\\mathrm{FN}"],
         FP: ["\\mathrm{FP}"],
         FPR: ["\\mathrm{FPR}"],
         log: ["\\mathrm{log}\\,"],
         MAP: ["\\mathrm{MAP}"],
-        m: ["{\\bm{#1}}", 1],
+        m: ["{\\bm{\\mathrm{#1}}}", 1],
         mean: ["{\\bar{#1}}", 1],
         median: ["\\mathrm{median}"],
         model: ["\\mathrm{model}"],
         R: ["\\mathbb{R}"],
         rel: ["\\mathrm{rel}"],
+        ReLU: ["\\mathrm{ReLU}"],
         set: ["{\\mathbb{#1}}", 1],
         sigmoid: ["\\mathrm{sigmoid}"],
         sign: ["\\mathrm{sign}"],
@@ -354,7 +366,7 @@ h_t &amp;= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
         TPR: ["\\mathrm{TPR}"],
         transformation: ["{\\mathcal{#1}}", 1],
         T: ["{#1}^{\\mathsf{T}}", 1],
-        v: ["{\\bm{#1}}", 1],
+        v: ["{\\bm{\\mathrm{#1}}}", 1],
       },
     },
   };
