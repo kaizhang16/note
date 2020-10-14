@@ -7,7 +7,7 @@ theme = "book"
 enableGitInfo = true
 
 [params]
-  BookRepo = "https://github.com/kaizhang91/notes"
+  BookRepo = "https://github.com/kaizhang91/note"
   BookSection = "*"
   BookTheme = "dark"
   BookDateFormat = "2006-01-02 15:04:05 -0700"
