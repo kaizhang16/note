@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编程 on 凯的笔记</title>
-    <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/</link>
+    <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/</link>
     <description>Recent content in 编程 on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/bash/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/bash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/bash/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/bash/</guid>
       <description>快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     IO 重定向 将 stderr 和 stdout 追加到同一个文件：
 cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     例子 $ test_file_path=&amp;quot;/a/b.</description>
     </item>
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</guid>
       <description>代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
  https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 常用方法  代码 含义    std::vector&amp;lt;int&amp;gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     set 常用方法  表 2: set 常用方法  代码 含义    s.</description>
     </item>
     
     <item>
       <title>CSS</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/css/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/css/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/css/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/css/</guid>
       <description>selector  表 1: CSS selector  例子 含义    div &amp;gt; p 父元素为 &amp;lt;div&amp;gt; 的所有 &amp;lt;p&amp;gt; 元素     对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.
   目录  selector 对齐 width[1] 参考文献   </description>
     </item>
     
     <item>
       <title>Dhall</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/dhall/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/dhall/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/dhall/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/dhall/</guid>
       <description>安装  表 1: Dhall 安装命令  操作系统 命令    Arch Linux sudo pacman -S dhall     目录  安装   </description>
     </item>
     
     <item>
       <title>fish-shell</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/fish-shell/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/fish-shell/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/</guid>
       <description>语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
 赋值 set a b find find . -type f -exec echo &amp;#39;{}&amp;#39; \;  括号需要加引号[1]。
  [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
@@ -59,10 +59,10 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
     
     <item>
       <title>Flutter</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/flutter/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/flutter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/flutter/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/flutter/</guid>
       <description>Dart 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     合并数组 var newList = [...list1, ...list2, ...list3]; Flutter 联网权限[2] &amp;lt;uses-permissionandroid:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; 开发 Android 手机打开 USB 调试 请参考 https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html。
 编译 flutter build apk --split-per-abi --verbose 安装  把手机连到电脑上。
  flutter install 语法 switch var command = &amp;#39;OPEN&amp;#39;; switch (command) { case &amp;#39;CLOSED&amp;#39;: executeClosed(); break; case &amp;#39;PENDING&amp;#39;: executePending(); break; case &amp;#39;APPROVED&amp;#39;: executeApproved(); break; case &amp;#39;DENIED&amp;#39;: executeDenied(); break; case &amp;#39;OPEN&amp;#39;: executeOpen(); break; default: executeUnknown(); } 参考文献 [1] SURAGCH.</description>
@@ -70,29 +70,29 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
     
     <item>
       <title>Golang</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/golang/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/golang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/golang/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/golang/</guid>
       <description>time 时间格式  2006-01-02 15:04:05 -0700  目录  time  时间格式    </description>
     </item>
     
     <item>
       <title>HTML</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/html/</guid>
       <description>Language Code[1]  表 1: ISO 639-1 Language Codes  Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.
   目录  Language Code[1] 参考文献   </description>
     </item>
     
     <item>
       <title>JavaScript</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/js/</guid>
       <description>字符串拼接[1] 要使用 + 而不是 string.concat()。
 Array flatMap[2] 等价于先 map() 再 flat()。
 let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&amp;gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&amp;gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window.</description>
@@ -100,66 +100,66 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     
     <item>
       <title>Pandoc</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/pandoc/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/pandoc/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/</guid>
       <description>引用  在方括号里 分号分隔  [@smith04; @doe99] 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&amp;#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items. This paragraph won&amp;#39;t be part of the note, because it isn&amp;#39;t indented.</description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/python/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/python/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/python/</guid>
       <description>内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.items(): .</description>
     </item>
     
     <item>
       <title>Rust</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/rust/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/rust/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/rust/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/rust/</guid>
       <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
  语法 命名惯例[1]  表 1: Rust 命名惯例  项目 惯例    Crates snake_case, prefer single word  Modules snake_case  Types CamelCase  Traits CamelCase  Functions snake_case  Methods snake_case  一般的构造函数 new 或者 with_more_details  转换构造函数 from_some_other_type  Local variables snake_case  Static variables SCREAMING_SNAKE_CASE  Constant variables SCREAMING_SNAKE_CASE  Type parameters 简洁的 CamelCase，比如 T  Lifetimes 简短的小写字母，比如 &#39;a       首字母缩写词写成 Uuid，而不是 UUID   module[2]  如果模块 foo 没有子模块，则代码放在 foo.</description>
     </item>
     
     <item>
       <title>TeX</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/tex/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/tex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/tex/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/tex/</guid>
       <description>矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     函数  表 2: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     集合  表 3: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     统计  表 4: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     运算符  表 5: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 6: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align} \]</description>
     </item>
     
     <item>
       <title>Toml</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/toml/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/toml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/toml/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/toml/</guid>
       <description>Table[1] [table] 参考文献 [1] TOML. TOML[EB/OL]([日期不详]). https://github.com/toml-lang/toml.
   目录  Table[1] 参考文献   </description>
     </item>
     
     <item>
       <title>Zsh</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/zsh/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/zsh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/zsh/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/zsh/</guid>
       <description>插件管理 antibody 静态加载 antibody bundle &amp;lt; ~/.config/antibody/zsh_plugins.txt &amp;gt; ~/.config/antibody/zsh_plugins.sh 更新插件 antibody update 删除插件 antibody purge robbyrussell/oh-my-zsh 目录  插件管理  antibody  静态加载 更新插件 删除插件     </description>
     </item>
     
     <item>
       <title>模板</title>
-      <link>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/template/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/template/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/template/</guid>
       <description>Jinja for 循环 {% for item in navigation %} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ item.href }}&amp;quot;&amp;gt;{{ item.caption }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% endfor %} Tera raw {% raw %} Hello {{ name }} {% endraw %} 目录  Jinja  for 循环  Tera  raw    </description>
     </item>
     

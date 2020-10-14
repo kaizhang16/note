@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CS on 凯的笔记</title>
-    <link>https://kaizhang91.github.io/notes/cs/</link>
+    <link>https://kaizhang91.github.io/note/cs/</link>
     <description>Recent content in CS on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/notes/cs/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTTP</title>
-      <link>https://kaizhang91.github.io/notes/cs/http/</link>
+      <link>https://kaizhang91.github.io/note/cs/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/http/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/http/</guid>
       <description>URL vs URI[1] URL 用于定位，URI 用于标识。
 httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
  # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.</description>
@@ -19,28 +19,28 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
     
     <item>
       <title>Linux</title>
-      <link>https://kaizhang91.github.io/notes/cs/linux/</link>
+      <link>https://kaizhang91.github.io/note/cs/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/linux/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/linux/</guid>
       <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
     </item>
     
     <item>
       <title>OAuth 2</title>
-      <link>https://kaizhang91.github.io/notes/cs/oauth2/</link>
+      <link>https://kaizhang91.github.io/note/cs/oauth2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/oauth2/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/oauth2/</guid>
       <description>教程  https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2  目录  教程   </description>
     </item>
     
     <item>
       <title>传输</title>
-      <link>https://kaizhang91.github.io/notes/cs/transmission/</link>
+      <link>https://kaizhang91.github.io/note/cs/transmission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/transmission/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/transmission/</guid>
       <description>SSH Secure Shell。
 只让某些用户使用密码登录 PasswordAuthentication no Match User &amp;lt;username&amp;gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
  SFTP SSH File Transfer Protocol。
@@ -52,48 +52,48 @@ userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDA
     
     <item>
       <title>压缩</title>
-      <link>https://kaizhang91.github.io/notes/cs/compress/</link>
+      <link>https://kaizhang91.github.io/note/cs/compress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/compress/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/compress/</guid>
       <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 7z 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
   目录  tar  打包时排除某些目录[1] 查看压缩包内容  7z  安装  参考文献   </description>
     </item>
     
     <item>
       <title>安全</title>
-      <link>https://kaizhang91.github.io/notes/cs/security/</link>
+      <link>https://kaizhang91.github.io/note/cs/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/security/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/security/</guid>
       <description>SSH FAQ pam_access(sshd:account): access denied for user 请修改 /etc/security/access.conf 配置。
 GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  SSH  FAQ  pam_access(sshd:account): access denied for user   GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
     </item>
     
     <item>
       <title>持续集成</title>
-      <link>https://kaizhang91.github.io/notes/cs/ci/</link>
+      <link>https://kaizhang91.github.io/note/cs/ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/ci/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/ci/</guid>
       <description>Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
     </item>
     
     <item>
       <title>数据库</title>
-      <link>https://kaizhang91.github.io/notes/cs/database/</link>
+      <link>https://kaizhang91.github.io/note/cs/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/database/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/database/</guid>
       <description>Entity Relationship Diagram 安装 curl -LO &amp;#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&amp;#39; chmod u+x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.</description>
     </item>
     
     <item>
       <title>数据类型</title>
-      <link>https://kaizhang91.github.io/notes/cs/data-type/</link>
+      <link>https://kaizhang91.github.io/note/cs/data-type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/data-type/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/data-type/</guid>
       <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
 数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
   目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
@@ -101,20 +101,20 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
     
     <item>
       <title>算法</title>
-      <link>https://kaizhang91.github.io/notes/cs/algorithm/</link>
+      <link>https://kaizhang91.github.io/note/cs/algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/algorithm/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/algorithm/</guid>
       <description>数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。
 遍历数组 void traverse(int[] arr) {  for (int i = 0; i &amp;lt; arr.length; i++) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !</description>
     </item>
     
     <item>
       <title>编码</title>
-      <link>https://kaizhang91.github.io/notes/cs/encoding/</link>
+      <link>https://kaizhang91.github.io/note/cs/encoding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/encoding/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/encoding/</guid>
       <description>GB2312、GBK 和 GB18030 的关系[1] GBK 兼容 GB2312，GB18030 兼容 GBK 与 GB2312。
 参考文献 [1] 知乎. GB2312、GBK、GB18030 这几种字符集的主要区别是什么？[EB/OL](2016–11–08). https://www.zhihu.com/question/19677619/answer/12616362.
   目录  GB2312、GBK 和 GB18030 的关系[1] 参考文献   </description>
@@ -122,10 +122,10 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
     
     <item>
       <title>网络</title>
-      <link>https://kaizhang91.github.io/notes/cs/network/</link>
+      <link>https://kaizhang91.github.io/note/cs/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/notes/cs/network/</guid>
+      <guid>https://kaizhang91.github.io/note/cs/network/</guid>
       <description>iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &amp;lt;rule_number&amp;gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    </description>
     </item>
     
