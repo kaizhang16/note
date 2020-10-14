@@ -1,5 +1,5 @@
 ---
-title: "自然语言处理"
+title: "NLP"
 ---
 
 # LSTM 与 GRU
@@ -40,22 +40,22 @@ h_t &= o_t \odot \tanh(C_t)
 \end{align}
 $$ {#eq:lstm_output}
 
-## GRU[@cho2014learning]
+## GRU[@cho2014learning; @zhou2019deep]
 
 Reset Gate:
 
-$$r_t = \sigma(W_r \cdot [h_{t-1}, x_t])$$ {#eq:gru_reset_gate}
+$$\v{r}_t = \sigma(\m{W}^r\v{x}_t + \m{U}^r\v{h}_{t-1} + \v{b}^r)$$ {#eq:gru_reset_gate}
 
 Update Gate:
 
-$$z_t = \sigma(W_z \cdot [h_{t-1}, x_t])$$ {#eq:gru_update_gate}
+$$\v{u}_t = \sigma(\m{W}^u\v{x}_t + \m{U}^u\v{h}_{t-1} + \v{b}^u)$$ {#eq:gru_update_gate}
 
 Output:
 
 $$
 \begin{align}
-\tilde{h}_t &= \tanh(W_h \cdot [r_t \odot h_{t-1}, x_t]) \\
-h_t &= (1-z_t) \odot h_{t_1} + z_t \odot \tilde{h}_t
+\tilde{\v{h}}_t &= \tanh(\m{W}^h\v{x}_t + \v{r}_t \odot \m{U}^h_{t-1}\v{h}_{t-1} + \v{b}^h) \\
+\v{h}_t &= \v{u}_t \odot \tilde{h}_t + (1-\v{u}_t) \odot \v{h}_{t-1}
 \end{align}
 $$ {#eq:gru}
 
