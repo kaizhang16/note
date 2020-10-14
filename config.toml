@@ -1,4 +1,4 @@
-baseURL = "https://kaizhang91.github.io/notes/"
+baseURL = "https://kaizhang91.github.io/note/"
 DefaultContentLanguage = "cn"
 languageCode = "zh-Hans"
 title = "凯的笔记"
