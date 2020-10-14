@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="字符串拼接[1] 要使用 &#43; 而不是 string.concat()。
+Array flatMap[2] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="JavaScript" />
+<meta property="og:description" content="字符串拼接[1] 要使用 &#43; 而不是 string.concat()。
+Array flatMap[2] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义    \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/" />
 
-<title>Categories | 凯的笔记</title>
+<title>JavaScript | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -555,7 +558,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -676,7 +679,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/" class="">JavaScript</a>
+    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/" class=" active">JavaScript</a>
   
 
         </li>
@@ -874,7 +877,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>JavaScript</strong>
 
   <label for="toc-control">
     
@@ -887,29 +890,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +900,104 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="字符串拼接jsconcat">字符串拼接<span class="citation" data-cites="jsConcat"><sup>[<a href="#ref-jsConcat" role="doc-biblioref">1</a>]</sup></span></h1>
+<p>要使用 <code>+</code> 而不是 <code>string.concat()</code>。</p>
+<h1 id="array">Array</h1>
+<h2 id="flatmapjsarrayflatmap">flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<a href="#ref-jsArrayFlatMap" role="doc-biblioref">2</a>]</sup></span></h2>
+<p>等价于先 <code>map()</code> 再 <code>flat()</code>。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">let</span> arr1 <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>arr1<span class="op">.</span><span class="fu">map</span>(x <span class="kw">=&gt;</span> [x <span class="op">*</span> <span class="dv">2</span>])<span class="op">;</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="co">// [[2], [4], [6], [8]]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>arr1<span class="op">.</span><span class="fu">flatMap</span>(x <span class="kw">=&gt;</span> [x <span class="op">*</span> <span class="dv">2</span>])<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co">// [2, 4, 6, 8]</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="co">// only one level is flattened</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>arr1<span class="op">.</span><span class="fu">flatMap</span>(x <span class="kw">=&gt;</span> [[x <span class="op">*</span> <span class="dv">2</span>]])<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a><span class="co">// [[2], [4], [6], [8]]</span></span></code></pre></div>
+<h1 id="正则表达式">正则表达式</h1>
+<div id="tbl:jsCommonRegex">
+<table>
+<caption>表 1: JavaScript 常用正则表达式</caption>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 95%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">代码</th>
+<th style="text-align: left;">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>\s</code></td>
+<td style="text-align: left;">单个空白字符，等价于 <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>\W</code></td>
+<td style="text-align: left;">非基本拉丁字母，等价于 <code>[^A-Za-z0-9_]</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<a href="#ref-jsNavigateURL" role="doc-biblioref">3</a>]</sup></span></h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span> <span class="op">=</span> <span class="st">&#39;...&#39;</span><span class="op">;</span></span></code></pre></div>
+<h1 id="得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<a href="#ref-jsAHref" role="doc-biblioref">4</a>]</sup></span></h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;aaa&quot;</span>)<span class="op">.</span><span class="at">href</span><span class="op">;</span></span></code></pre></div>
+<h1 id="寻找元素">寻找元素</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">var</span> matches <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&quot;p&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<h1 id="移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<a href="#ref-jsMoveElement" role="doc-biblioref">5</a>]</sup></span></h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>newParent<span class="op">.</span><span class="fu">appendChild</span>(element)<span class="op">;</span></span></code></pre></div>
+<h1 id="改变元素的类jschangeelementclass">改变元素的类<span class="citation" data-cites="jsChangeElementClass"><sup>[<a href="#ref-jsChangeElementClass" role="doc-biblioref">6</a>]</sup></span></h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;MyElement&quot;</span>)<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">&#39;MyClass&#39;</span>)<span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;MyElement&quot;</span>)<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">&#39;MyClass&#39;</span>)<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a><span class="cf">if</span> ( <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;MyElement&quot;</span>)<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">contains</span>(<span class="st">&#39;MyClass&#39;</span>) )</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;MyElement&quot;</span>)<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">toggle</span>(<span class="st">&#39;MyClass&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-jsConcat">
+<p>[1] LAKTAK. JS strings 《+》 vs concat method [duplicate][EB/OL](2013–04–20). <a href="https://stackoverflow.com/a/16124072">https://stackoverflow.com/a/16124072</a>.</p>
+</div>
+<div id="ref-jsArrayFlatMap">
+<p>[2] MDN. Array.prototype.flatMap()[EB/OL]([日期不详]). <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap</a>.</p>
+</div>
+<div id="ref-jsNavigateURL">
+<p>[3] STACKOVERFLOW. How to get the browser to navigate to URL in JavaScript [duplicate][EB/OL](2009–08–04). <a href="https://stackoverflow.com/a/1226718">https://stackoverflow.com/a/1226718</a>.</p>
+</div>
+<div id="ref-jsAHref">
+<p>[4] STACKOVERFLOW. Get local href value from anchor (a) tag[EB/OL](2013–03–15). <a href="https://stackoverflow.com/a/15439946">https://stackoverflow.com/a/15439946</a>.</p>
+</div>
+<div id="ref-jsMoveElement">
+<p>[5] STACKOVERFLOW. How to move all HTML element children to another parent using JavaScript?[EB/OL](2014–01–03). <a href="https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript">https://stackoverflow.com/questions/20910147/how-to-move-all-html-element-children-to-another-parent-using-javascript</a>.</p>
+</div>
+<div id="ref-jsChangeElementClass">
+<p>[6] BOUGHTON P. How can I change an element’s class with JavaScript?[EB/OL](2008–10–12). <a href="https://stackoverflow.com/a/196038">https://stackoverflow.com/a/196038</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#字符串拼接jsconcat">字符串拼接<span class="citation" data-cites="jsConcat"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#array">Array</a>
+  <ul>
+  <li><a href="#flatmapjsarrayflatmap">flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<span>2</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#正则表达式">正则表达式</a></li>
+  <li><a href="#导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#寻找元素">寻找元素</a></li>
+  <li><a href="#移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#改变元素的类jschangeelementclass">改变元素的类<span class="citation" data-cites="jsChangeElementClass"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1017,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1029,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

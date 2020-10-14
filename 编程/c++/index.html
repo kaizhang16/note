@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
+ https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 常用方法  代码 含义    std::vector&lt;int&gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     set 常用方法  表 2: set 常用方法  代码 含义    s.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="C&#43;&#43;" />
+<meta property="og:description" content="代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
+ https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.org/get-started  vector 常用方法  表 1: vector 常用方法  代码 含义    std::vector&lt;int&gt; vector1(length, 0); 初始化为 0  size() 返回元素个数  push_back(val) 在末尾添加元素 val  pop_back() 删除最后一个元素  std::find(v.begin(), v.end(), val) != v.end() v 包含 val     set 常用方法  表 2: set 常用方法  代码 含义    s." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" />
 
-<title>Categories | 凯的笔记</title>
+<title>C&#43;&#43; | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -555,7 +556,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -585,7 +586,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class="">C&#43;&#43;</a>
+    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class=" active">C&#43;&#43;</a>
   
 
         </li>
@@ -874,7 +875,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>C&#43;&#43;</strong>
 
   <label for="toc-control">
     
@@ -887,29 +888,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +898,110 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="代码风格">代码风格</h1>
+<h2 id="文件后缀">文件后缀</h2>
+<ul>
+<li>源代码：<code>cpp</code></li>
+</ul>
+<h2 id="命名规范">命名规范</h2>
+<ul>
+<li>Type names
+<ul>
+<li>名词</li>
+<li><code>TextFileReader</code></li>
+</ul></li>
+<li>Function names
+<ul>
+<li>动词</li>
+<li><code>openFile</code></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>请参考：</p>
+<ul>
+<li><a href="https://llvm.org/docs/CodingStandards.html#llvm-coding-standards" class="uri">https://llvm.org/docs/CodingStandards.html#llvm-coding-standards</a></li>
+<li><a href="https://google.github.io/styleguide/cppguide.html" class="uri">https://google.github.io/styleguide/cppguide.html</a></li>
+</ul>
+</blockquote>
+<h1 id="教程">教程</h1>
+<ul>
+<li><a href="https://isocpp.org/get-started" class="uri">https://isocpp.org/get-started</a></li>
+</ul>
+<h1 id="vector">vector</h1>
+<h2 id="常用方法">常用方法</h2>
+<div id="tbl:vector_methods">
+<table>
+<caption>表 1: vector 常用方法</caption>
+<thead>
+<tr class="header">
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>std::vector&lt;int&gt; vector1(length, 0);</code></td>
+<td>初始化为 0</td>
+</tr>
+<tr class="even">
+<td><code>size()</code></td>
+<td>返回元素个数</td>
+</tr>
+<tr class="odd">
+<td><code>push_back(val)</code></td>
+<td>在末尾添加元素 val</td>
+</tr>
+<tr class="even">
+<td><code>pop_back()</code></td>
+<td>删除最后一个元素</td>
+</tr>
+<tr class="odd">
+<td><code>std::find(v.begin(), v.end(), val) != v.end()</code></td>
+<td>v 包含 val</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="set">set</h1>
+<h2 id="常用方法-1">常用方法</h2>
+<div id="tbl:set_methods">
+<table>
+<caption>表 2: set 常用方法</caption>
+<thead>
+<tr class="header">
+<th>代码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>s.find(val) != s.end()</code></td>
+<td>s 包含 val</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#代码风格">代码风格</a>
+  <ul>
+  <li><a href="#文件后缀">文件后缀</a></li>
+  <li><a href="#命名规范">命名规范</a></li>
+  </ul></li>
+  <li><a href="#教程">教程</a></li>
+  <li><a href="#vector">vector</a>
+  <ul>
+  <li><a href="#常用方法">常用方法</a></li>
+  </ul></li>
+  <li><a href="#set">set</a>
+  <ul>
+  <li><a href="#常用方法-1">常用方法</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1021,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1033,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

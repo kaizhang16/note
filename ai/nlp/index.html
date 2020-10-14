@@ -4,18 +4,35 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
-
-<title>Categories | 凯的笔记</title>
+<meta name="description" content="LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+Forget gate:
+\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
+Input gate:
+\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] &#43; b_i) \qquad(2)\]
+Cell state:
+\[ \begin{align} \tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] &#43; b_C) \\ C_t &amp;= f_t \odot C_{t-1} &#43; i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
+Output:
+\[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="NLP" />
+<meta property="og:description" content="LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+Forget gate:
+\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
+Input gate:
+\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] &#43; b_i) \qquad(2)\]
+Cell state:
+\[ \begin{align} \tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] &#43; b_C) \\ C_t &amp;= f_t \odot C_{t-1} &#43; i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
+Output:
+\[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/ai/nlp/" />
+<meta property="article:modified_time" content="2020-10-14T07:16:48+00:00" />
+<title>NLP | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -77,7 +94,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="toggle"  />
+    <input type="checkbox" id="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="toggle" checked />
     <label for="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="flex justify-between">
       <a  class="">AI</a>
       <span>▾</span>
@@ -94,7 +111,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/ai/nlp/" class="">NLP</a>
+    <a href="https://kaizhang91.github.io/notes/ai/nlp/" class=" active">NLP</a>
   
 
         </li>
@@ -874,7 +891,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>NLP</strong>
 
   <label for="toc-control">
     
@@ -887,29 +904,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +914,66 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="lstm-与-gru">LSTM 与 GRU</h1>
+<p>请参考 <a href="https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21" class="uri">https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21</a>。</p>
+<h2 id="lstm">LSTM</h2>
+<p>请参考 <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">https://colah.github.io/posts/2015-08-Understanding-LSTMs/</a>。</p>
+<p>Forget gate:</p>
+<p><span id="eq:lstm_forget_gate"><span class="math display">\[
+f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
+\qquad(1)\]</span></span></p>
+<p>Input gate:</p>
+<p><span id="eq:lstm_input_gate"><span class="math display">\[
+i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
+\qquad(2)\]</span></span></p>
+<p>Cell state:</p>
+<p><span id="eq:lstm_C"><span class="math display">\[
+\begin{align}
+\tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\
+C_t &amp;= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
+\end{align}
+\qquad(3)\]</span></span></p>
+<p>Output:</p>
+<p><span id="eq:lstm_output"><span class="math display">\[
+\begin{align}
+o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+h_t &amp;= o_t \odot \tanh(C_t)
+\end{align}
+\qquad(4)\]</span></span></p>
+<h2 id="grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<a href="#ref-cho2014learning" role="doc-biblioref">1</a>,<a href="#ref-zhou2019deep" role="doc-biblioref">2</a>]</sup></span></h2>
+<p>Reset Gate:</p>
+<p><span id="eq:gru_reset_gate"><span class="math display">\[\v{r}_t = \sigma(\m{W}^r\v{x}_t + \m{U}^r\v{h}_{t-1} + \v{b}^r)\qquad(5)\]</span></span></p>
+<p>Update Gate:</p>
+<p><span id="eq:gru_update_gate"><span class="math display">\[\v{u}_t = \sigma(\m{W}^u\v{x}_t + \m{U}^u\v{h}_{t-1} + \v{b}^u)\qquad(6)\]</span></span></p>
+<p>Output:</p>
+<p><span id="eq:gru"><span class="math display">\[
+\begin{align}
+\tilde{\v{h}}_t &amp;= \tanh(\m{W}^h\v{x}_t + \v{r}_t \odot \m{U}^h_{t-1}\v{h}_{t-1} + \v{b}^h) \\
+\v{h}_t &amp;= \v{u}_t \odot \tilde{h}_t + (1-\v{u}_t) \odot \v{h}_{t-1}
+\end{align}
+\qquad(7)\]</span></span></p>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-cho2014learning">
+<p>[1] CHO K, VAN MERRIËNBOER B, GULCEHRE C, 等. Learning phrase representations using RNN encoder-decoder for statistical machine translation[J]. arXiv preprint arXiv:1406.1078, 2014.</p>
+</div>
+<div id="ref-zhou2019deep">
+<p>[2] ZHOU G, MOU N, FAN Y, 等. Deep interest evolution network for click-through rate prediction[C]//Proceedings of the AAAI conference on artificial intelligence..</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#lstm-与-gru">LSTM 与 GRU</a>
+  <ul>
+  <li><a href="#lstm">LSTM</a></li>
+  <li><a href="#grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<span>1</span>,<span>2</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -932,6 +982,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/notes/commit/9c2e45e38837f0f51a3959bf498a2cc35818f0d3" title='最后修改者 Kai Zhang | 2020-10-14 15:16:48 &#43;0800' target="_blank" rel="noopener">
+      <img src="/notes/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-10-14 15:16:48 &#43;0800</span>
+    </a>
+  </div>
 
 
 
@@ -943,6 +999,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1011,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

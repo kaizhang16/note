@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    esbenp.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="编辑器" />
+<meta property="og:description" content="Vim 包管理器 安装 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 使用 :PlugInstall &quot; 安装插件 :PlugUpdate &quot; 升级插件 :PlugUpgrade &quot; 升级 plug 安装依赖的二进制 rust rustup component add rls rust-analysis rust-src cmake pip install --user cmake_format coc :CocInstall coc-clangd :CocInstall coc-flutter :CocInstall coc-python :CocInstall coc-rls :CocInstall coc-yaml  表 1: lsp-server  编程语言 lsp-server    dhall dhall-lsp-server     打开文件 nvim $(fzf) 快捷键  表 2: Vim 快捷键  功能 快捷键    搜索：搜索文件并水平分割窗口打开 &lt;Leader&gt;f &#43; Ctrl-x  Buffer：关闭 buffer &lt;Leader&gt;q  文件树：:NERDTreeFind &lt;Leader&gt;tf  文件树：:NERDTreeClose &lt;Leader&gt;tq  表格：:TableModeToggle &lt;Leader&gt;=  跳转：上一个位置 Ctrl-o  跳转：下一个位置 Ctrl-i  跳转：Go to definition gd  拼写检查：标记为 good word zg  拼写检查：更新二进制 zr       noremap 指 non-recursive map[1] map 指 recursive map[1] nmap 指 normal 模式下的 recursive map[1]   寄存器  表 3: Vim 寄存器  变量 含义    % 当前文件的路径  # 上一个文件的路径     Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    esbenp." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/editor/" />
 
-<title>Categories | 凯的笔记</title>
+<title>编辑器 | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -329,7 +328,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle"  />
+    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle" checked />
     <label for="section-70bdf8d87af46a79686d31378c1d7d85" class="flex justify-between">
       <a  class="">工具</a>
       <span>▾</span>
@@ -476,7 +475,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/editor/" class="">编辑器</a>
+    <a href="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/editor/" class=" active">编辑器</a>
   
 
         </li>
@@ -874,7 +873,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>编辑器</strong>
 
   <label for="toc-control">
     
@@ -887,29 +886,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +896,240 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="vim">Vim</h1>
+<h2 id="包管理器">包管理器</h2>
+<h3 id="安装">安装</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">curl</span> -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs <span class="kw">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="ex">https</span>://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
+<h3 id="使用">使用</h3>
+<pre class="vim"><code>:PlugInstall  &quot; 安装插件
+:PlugUpdate   &quot; 升级插件
+:PlugUpgrade  &quot; 升级 plug</code></pre>
+<h3 id="安装依赖的二进制">安装依赖的二进制</h3>
+<h4 id="rust">rust</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
+<h4 id="cmake">cmake</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
+<h3 id="coc">coc</h3>
+<pre class="vim"><code>:CocInstall coc-clangd
+:CocInstall coc-flutter
+:CocInstall coc-python
+:CocInstall coc-rls
+:CocInstall coc-yaml</code></pre>
+<div id="tbl:lsp_server">
+<table>
+<caption>表 1: lsp-server</caption>
+<thead>
+<tr class="header">
+<th>编程语言</th>
+<th>lsp-server</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>dhall</code></td>
+<td><code>dhall-lsp-server</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="打开文件">打开文件</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<h2 id="快捷键">快捷键</h2>
+<div id="tbl:vim_shotcuts">
+<table>
+<caption>表 2: Vim 快捷键</caption>
+<thead>
+<tr class="header">
+<th>功能</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>搜索：搜索文件并水平分割窗口打开</td>
+<td><code>&lt;Leader&gt;f</code> + <code>Ctrl-x</code></td>
+</tr>
+<tr class="even">
+<td>Buffer：关闭 buffer</td>
+<td><code>&lt;Leader&gt;q</code></td>
+</tr>
+<tr class="odd">
+<td>文件树：<code>:NERDTreeFind</code></td>
+<td><code>&lt;Leader&gt;tf</code></td>
+</tr>
+<tr class="even">
+<td>文件树：<code>:NERDTreeClose</code></td>
+<td><code>&lt;Leader&gt;tq</code></td>
+</tr>
+<tr class="odd">
+<td>表格：<code>:TableModeToggle</code></td>
+<td><code>&lt;Leader&gt;=</code></td>
+</tr>
+<tr class="even">
+<td>跳转：上一个位置</td>
+<td><code>Ctrl-o</code></td>
+</tr>
+<tr class="odd">
+<td>跳转：下一个位置</td>
+<td><code>Ctrl-i</code></td>
+</tr>
+<tr class="even">
+<td>跳转：Go to definition</td>
+<td><code>gd</code></td>
+</tr>
+<tr class="odd">
+<td>拼写检查：标记为 good word</td>
+<td><code>zg</code></td>
+</tr>
+<tr class="even">
+<td>拼写检查：更新二进制</td>
+<td><code>zr</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<ul>
+<li><code>noremap</code> 指 non-recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
+<li><code>map</code> 指 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
+<li><code>nmap</code> 指 normal 模式下的 recursive map<span class="citation" data-cites="vimNoremap"><sup>[<a href="#ref-vimNoremap" role="doc-biblioref">1</a>]</sup></span></li>
+</ul>
+</blockquote>
+<h2 id="寄存器">寄存器</h2>
+<div id="tbl:vim_registers">
+<table>
+<caption>表 3: Vim 寄存器</caption>
+<thead>
+<tr class="header">
+<th>变量</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>%</code></td>
+<td>当前文件的路径</td>
+</tr>
+<tr class="even">
+<td><code>#</code></td>
+<td>上一个文件的路径</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="visual-studio-code">Visual Studio Code</h1>
+<h2 id="快捷键-1">快捷键</h2>
+<table>
+<caption>Visual Studio Code 快捷键</caption>
+<thead>
+<tr class="header">
+<th>快捷键</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl</code> + <code>P</code></td>
+<td>Go to File…</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl</code> + <code>Shift</code> + <code>P</code></td>
+<td>Show All Commands</td>
+</tr>
+<tr class="odd">
+<td><code>Alt</code> + <code>Q</code></td>
+<td>断行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="插件">插件</h2>
+<table>
+<caption>Visual Studio Code 插件</caption>
+<thead>
+<tr class="header">
+<th>插件 ID</th>
+<th>用途</th>
+<th>依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>esbenp.prettier-vscode</td>
+<td>格式化</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>fcrespo82.markdown-table-formatter</td>
+<td>表格格式化</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>cheshirekow.cmake-format</td>
+<td>cmake 格式化</td>
+<td>pip install cmake_format</td>
+</tr>
+<tr class="even">
+<td>streetsidesoftware.code-spell-checker</td>
+<td>拼写检查</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>stkb.rewrap</td>
+<td>断行</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>llvm-vs-code-extensions.vscode-clangd</td>
+<td>C、C++</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="android-studio">Android Studio</h1>
+<h2 id="字体">字体</h2>
+<h3 id="编辑器字体">编辑器字体</h3>
+<p><code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>Font</code>。</p>
+<h3 id="菜单字体">菜单字体</h3>
+<p><code>File</code> -&gt; <code>Settings</code> -&gt; <code>Appearance &amp; Behavior</code> -&gt; <code>Appearance</code>。</p>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-vimNoremap">
+<p>[1] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). <a href="https://stackoverflow.com/a/3776182">https://stackoverflow.com/a/3776182</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#vim">Vim</a>
+  <ul>
+  <li><a href="#包管理器">包管理器</a>
+  <ul>
+  <li><a href="#安装">安装</a></li>
+  <li><a href="#使用">使用</a></li>
+  <li><a href="#安装依赖的二进制">安装依赖的二进制</a></li>
+  <li><a href="#coc">coc</a></li>
+  </ul></li>
+  <li><a href="#打开文件">打开文件</a></li>
+  <li><a href="#快捷键">快捷键</a></li>
+  <li><a href="#寄存器">寄存器</a></li>
+  </ul></li>
+  <li><a href="#visual-studio-code">Visual Studio Code</a>
+  <ul>
+  <li><a href="#快捷键-1">快捷键</a></li>
+  <li><a href="#插件">插件</a></li>
+  </ul></li>
+  <li><a href="#android-studio">Android Studio</a>
+  <ul>
+  <li><a href="#字体">字体</a>
+  <ul>
+  <li><a href="#编辑器字体">编辑器字体</a></li>
+  <li><a href="#菜单字体">菜单字体</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1149,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1161,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

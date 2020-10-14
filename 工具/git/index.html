@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="常见操作 恢复文件[1] # this restores the file status in the index git reset -- &lt;file&gt; # then check out a copy from the index git checkout -- &lt;file&gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Git" />
+<meta property="og:description" content="常见操作 恢复文件[1] # this restores the file status in the index git reset -- &lt;file&gt; # then check out a copy from the index git checkout -- &lt;file&gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/git/" />
 
-<title>Categories | 凯的笔记</title>
+<title>Git | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -329,7 +328,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle"  />
+    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle" checked />
     <label for="section-70bdf8d87af46a79686d31378c1d7d85" class="flex justify-between">
       <a  class="">工具</a>
       <span>▾</span>
@@ -346,7 +345,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/git/" class="">Git</a>
+    <a href="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/git/" class=" active">Git</a>
   
 
         </li>
@@ -874,7 +873,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>Git</strong>
 
   <label for="toc-control">
     
@@ -887,29 +886,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +896,73 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="常见操作">常见操作</h1>
+<h2 id="恢复文件git_undo">恢复文件<span class="citation" data-cites="git_undo"><sup>[<a href="#ref-git_undo" role="doc-biblioref">1</a>]</sup></span></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co"># this restores the file status in the index</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="fu">git</span> reset -- <span class="op">&lt;</span>file<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co"># then check out a copy from the index</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="fu">git</span> checkout -- <span class="op">&lt;</span>file<span class="op">&gt;</span></span></code></pre></div>
+<h1 id="diff">diff</h1>
+<h2 id="安装-delta">安装 delta</h2>
+<div id="tbl:install_delta">
+<table>
+<caption>表 1: delta 安装命令</caption>
+<thead>
+<tr class="header">
+<th>操作系统</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arch Linux</td>
+<td><code>yay -S git-delta</code></td>
+</tr>
+<tr class="even">
+<td>Nix</td>
+<td><code>nix-env -iA nixpkgs.gitAndTools.delta</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="git-submodule">Git Submodule</h1>
+<h2 id="下载-submodule">下载 submodule</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span></code></pre></div>
+<h2 id="更新-url">更新 url</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
+<h2 id="删除-submodulegitsubmodulerm">删除 submodule<span class="citation" data-cites="gitSubmoduleRm"><sup>[<a href="#ref-gitSubmoduleRm" role="doc-biblioref">2</a>]</sup></span></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="fu">git</span> rm <span class="op">&lt;</span>submodule path<span class="op">&gt;</span></span></code></pre></div>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-git_undo">
+<p>[1] TWALBERG. Unstage a deleted file in git[EB/OL](2012–03–06). <a href="https://stackoverflow.com/a/9591612/13200985">https://stackoverflow.com/a/9591612/13200985</a>.</p>
+</div>
+<div id="ref-gitSubmoduleRm">
+<p>[2] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). <a href="https://git-scm.com/docs/gitsubmodules">https://git-scm.com/docs/gitsubmodules</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#常见操作">常见操作</a>
+  <ul>
+  <li><a href="#恢复文件git_undo">恢复文件<span class="citation" data-cites="git_undo"><sup>[<span>1</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#diff">diff</a>
+  <ul>
+  <li><a href="#安装-delta">安装 delta</a></li>
+  </ul></li>
+  <li><a href="#git-submodule">Git Submodule</a>
+  <ul>
+  <li><a href="#下载-submodule">下载 submodule</a></li>
+  <li><a href="#更新-url">更新 url</a></li>
+  <li><a href="#删除-submodulegitsubmodulerm">删除 submodule<span class="citation" data-cites="gitSubmoduleRm"><sup>[<span>2</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +982,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +994,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

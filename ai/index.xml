@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on 凯的笔记</title>
+    <link>https://kaizhang91.github.io/notes/ai/</link>
+    <description>Recent content in AI on 凯的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/notes/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NLP</title>
+      <link>https://kaizhang91.github.io/notes/ai/nlp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/ai/nlp/</guid>
+      <description>LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+Forget gate:
+\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \qquad(1)\]
+Input gate:
+\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \qquad(2)\]
+Cell state:
+\[ \begin{align} \tilde{C}_t &amp;amp;= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\ C_t &amp;amp;= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
+Output:
+\[ \begin{align} o_t &amp;amp;= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\ h_t &amp;amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]</description>
+    </item>
+    
+    <item>
+      <title>开发环境</title>
+      <link>https://kaizhang91.github.io/notes/ai/dev_env/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/ai/dev_env/</guid>
+      <description>CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 10.2 &amp;gt;= 440.33  CUDA 10.1 &amp;gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。</description>
+    </item>
+    
+    <item>
+      <title>推荐系统</title>
+      <link>https://kaizhang91.github.io/notes/ai/recommend_system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/ai/recommend_system/</guid>
+      <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT+LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp;amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp;amp; Cross       协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
+    </item>
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://kaizhang91.github.io/notes/ai/machine_learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/ai/machine_learning/</guid>
+      <description>中位数 评估指标  表 1: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[1]：
+\[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
+在信息检索领域这样定义[2]：
+\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]
+P@n 只考虑 top n 个查询结果。[2]
+AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="Dart 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     合并数组 var newList = [...list1, ...list2, ...list3]; Flutter 联网权限[2] &lt;uses-permissionandroid:name=&quot;android.permission.INTERNET&quot; /&gt; 开发 Android 手机打开 USB 调试 请参考 https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html。
+编译 flutter build apk --split-per-abi --verbose 安装  把手机连到电脑上。
+ flutter install 语法 switch var command = &#39;OPEN&#39;; switch (command) { case &#39;CLOSED&#39;: executeClosed(); break; case &#39;PENDING&#39;: executePending(); break; case &#39;APPROVED&#39;: executeApproved(); break; case &#39;DENIED&#39;: executeDenied(); break; case &#39;OPEN&#39;: executeOpen(); break; default: executeUnknown(); } 参考文献 [1] SURAGCH.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Flutter" />
+<meta property="og:description" content="Dart 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     合并数组 var newList = [...list1, ...list2, ...list3]; Flutter 联网权限[2] &lt;uses-permissionandroid:name=&quot;android.permission.INTERNET&quot; /&gt; 开发 Android 手机打开 USB 调试 请参考 https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html。
+编译 flutter build apk --split-per-abi --verbose 安装  把手机连到电脑上。
+ flutter install 语法 switch var command = &#39;OPEN&#39;; switch (command) { case &#39;CLOSED&#39;: executeClosed(); break; case &#39;PENDING&#39;: executePending(); break; case &#39;APPROVED&#39;: executeApproved(); break; case &#39;DENIED&#39;: executeDenied(); break; case &#39;OPEN&#39;: executeOpen(); break; default: executeUnknown(); } 参考文献 [1] SURAGCH." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/flutter/" />
 
-<title>Categories | 凯的笔记</title>
+<title>Flutter | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -555,7 +558,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -637,7 +640,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/flutter/" class="">Flutter</a>
+    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/flutter/" class=" active">Flutter</a>
   
 
         </li>
@@ -874,7 +877,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>Flutter</strong>
 
   <label for="toc-control">
     
@@ -887,29 +890,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +900,98 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="dart">Dart</h1>
+<h2 id="运算符">运算符</h2>
+<div id="tbl:dart_operator">
+<table>
+<caption>表 1: Dart 运算符</caption>
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>??</code></td>
+<td>if null<span class="citation" data-cites="dart_double_question_mark"><sup>[<a href="#ref-dart_double_question_mark" role="doc-biblioref">1</a>]</sup></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="合并数组">合并数组</h2>
+<pre class="dart"><code>var newList = [...list1, ...list2, ...list3];</code></pre>
+<h1 id="flutter">Flutter</h1>
+<h2 id="联网权限flutter_internet">联网权限<span class="citation" data-cites="flutter_internet"><sup>[<a href="#ref-flutter_internet" role="doc-biblioref">2</a>]</sup></span></h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">&lt;uses-permission</span><span class="ot"> android:name=</span><span class="st">&quot;android.permission.INTERNET&quot;</span> <span class="kw">/&gt;</span></span></code></pre></div>
+<h2 id="开发">开发</h2>
+<h3 id="android-手机打开-usb-调试">Android 手机打开 USB 调试</h3>
+<p>请参考 <a href="https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html" class="uri">https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html</a>。</p>
+<h3 id="编译">编译</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="ex">flutter</span> build apk --split-per-abi --verbose</span></code></pre></div>
+<h3 id="安装">安装</h3>
+<blockquote>
+<p>把手机连到电脑上。</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">flutter</span> install</span></code></pre></div>
+<h2 id="语法">语法</h2>
+<h3 id="switch">switch</h3>
+<pre class="dart"><code>var command = &#39;OPEN&#39;;
+switch (command) {
+  case &#39;CLOSED&#39;:
+    executeClosed();
+    break;
+  case &#39;PENDING&#39;:
+    executePending();
+    break;
+  case &#39;APPROVED&#39;:
+    executeApproved();
+    break;
+  case &#39;DENIED&#39;:
+    executeDenied();
+    break;
+  case &#39;OPEN&#39;:
+    executeOpen();
+    break;
+  default:
+    executeUnknown();
+}</code></pre>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-dart_double_question_mark">
+<p>[1] SURAGCH. What are the ?? double question marks in Dart?[EB/OL](2019–01–04). <a href="https://stackoverflow.com/a/54031805/13200985">https://stackoverflow.com/a/54031805/13200985</a>.</p>
+</div>
+<div id="ref-flutter_internet">
+<p>[2] MHSMITH. What permission do I need to access Internet from an Android application?[EB/OL](2020–04–16). <a href="https://stackoverflow.com/a/2378619/13200985">https://stackoverflow.com/a/2378619/13200985</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#dart">Dart</a>
+  <ul>
+  <li><a href="#运算符">运算符</a></li>
+  <li><a href="#合并数组">合并数组</a></li>
+  </ul></li>
+  <li><a href="#flutter">Flutter</a>
+  <ul>
+  <li><a href="#联网权限flutter_internet">联网权限<span class="citation" data-cites="flutter_internet"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#开发">开发</a>
+  <ul>
+  <li><a href="#android-手机打开-usb-调试">Android 手机打开 USB 调试</a></li>
+  <li><a href="#编译">编译</a></li>
+  <li><a href="#安装">安装</a></li>
+  </ul></li>
+  <li><a href="#语法">语法</a>
+  <ul>
+  <li><a href="#switch">switch</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1011,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1023,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

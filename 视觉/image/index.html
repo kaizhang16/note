@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake .">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="图像" />
+<meta property="og:description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/image/" />
 
-<title>Categories | 凯的笔记</title>
+<title>图像 | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -785,7 +784,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1e20c44ce142ce73dcb99537728dc9a3" class="toggle"  />
+    <input type="checkbox" id="section-1e20c44ce142ce73dcb99537728dc9a3" class="toggle" checked />
     <label for="section-1e20c44ce142ce73dcb99537728dc9a3" class="flex justify-between">
       <a  class="">视觉</a>
       <span>▾</span>
@@ -815,7 +814,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/image/" class="">图像</a>
+    <a href="https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/image/" class=" active">图像</a>
   
 
         </li>
@@ -874,7 +873,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>图像</strong>
 
   <label for="toc-control">
     
@@ -887,29 +886,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +896,97 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="文件格式">文件格式</h1>
+<div id="tbl:imageFileFormats">
+<table>
+<caption>表 1: 图像文件格式</caption>
+<thead>
+<tr class="header">
+<th>图像格式</th>
+<th>无损？</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PNG</td>
+<td><span class="emoji" data-emoji="white_check_mark">✅</span></td>
+</tr>
+<tr class="even">
+<td>JPG</td>
+<td><span class="emoji" data-emoji="x">❌</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="imagemagick">ImageMagick</h1>
+<h2 id="裁剪中间部分">裁剪中间部分</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">convert</span> a.png -gravity center -crop 16384x16384+0+0 b.png</span></code></pre></div>
+<h1 id="压缩">压缩</h1>
+<h2 id="jpg">JPG</h2>
+<h3 id="jpegoptim">jpegoptim</h3>
+<h4 id="安装">安装</h4>
+<div id="tbl:jpegoptimInstall">
+<table>
+<caption>表 2: jpegoptim 安装命令</caption>
+<thead>
+<tr class="header">
+<th>操作系统</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arch Linux</td>
+<td><code>sudo pacman -S jpegoptim</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="colmap">colmap</h1>
+<h2 id="安装colmap_installation">安装<span class="citation" data-cites="colmap_installation"><sup>[<a href="#ref-colmap_installation" role="doc-biblioref">1</a>]</sup></span></h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">git</span> clone https://github.com/colmap/colmap.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="bu">cd</span> colmap</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="fu">git</span> checkout dev</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="fu">mkdir</span> build</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="bu">cd</span> build</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">cmake</span> ..</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">make</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<h1 id="adobe-photoshop-2020">Adobe Photoshop 2020</h1>
+<h2 id="安装-1">安装</h2>
+<p>请参考 <a href="https://www.isharepc.com/20181.html" class="uri">https://www.isharepc.com/20181.html</a>。</p>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-colmap_installation">
+<p>[1] COLMAP. Installation[EB/OL]([日期不详]). <a href="https://colmap.github.io/install.html#linux">https://colmap.github.io/install.html#linux</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#文件格式">文件格式</a></li>
+  <li><a href="#imagemagick">ImageMagick</a>
+  <ul>
+  <li><a href="#裁剪中间部分">裁剪中间部分</a></li>
+  </ul></li>
+  <li><a href="#压缩">压缩</a>
+  <ul>
+  <li><a href="#jpg">JPG</a>
+  <ul>
+  <li><a href="#jpegoptim">jpegoptim</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#colmap">colmap</a>
+  <ul>
+  <li><a href="#安装colmap_installation">安装<span class="citation" data-cites="colmap_installation"><sup>[<span>1</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#adobe-photoshop-2020">Adobe Photoshop 2020</a>
+  <ul>
+  <li><a href="#安装-1">安装</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1006,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1018,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

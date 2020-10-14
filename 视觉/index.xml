@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>视觉 on 凯的笔记</title>
+    <link>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/</link>
+    <description>Recent content in 视觉 on 凯的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity</title>
+      <link>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/unity/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/unity/</guid>
+      <description>导入 .obj 文件时 x 轴会取反[1] 参考文献 [1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). https://stackoverflow.com/a/52044185.
+  目录  导入 .obj 文件时 x 轴会取反[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>图像</title>
+      <link>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/image/</guid>
+      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384+0+0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .</description>
+    </item>
+    
+    <item>
+      <title>视频</title>
+      <link>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/video/</guid>
+      <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
+    </item>
+    
+  </channel>
+</rss>

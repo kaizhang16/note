@@ -4,18 +4,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     IO 重定向 将 stderr 和 stdout 追加到同一个文件：
+cmd &gt;&gt;file.txt 2&gt;&amp;1 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     例子 $ test_file_path=&quot;/a/b.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Bash" />
+<meta property="og:description" content="快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     IO 重定向 将 stderr 和 stdout 追加到同一个文件：
+cmd &gt;&gt;file.txt 2&gt;&amp;1 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     例子 $ test_file_path=&quot;/a/b." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/bash/" />
 
-<title>Categories | 凯的笔记</title>
+<title>Bash | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -555,7 +556,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -572,7 +573,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/bash/" class="">Bash</a>
+    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/bash/" class=" active">Bash</a>
   
 
         </li>
@@ -874,7 +875,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>Bash</strong>
 
   <label for="toc-control">
     
@@ -887,29 +888,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +898,174 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="快捷键">快捷键</h1>
+<div id="tbl:bash_shortcuts">
+<table>
+<caption>表 1: Bash 快捷键</caption>
+<thead>
+<tr class="header">
+<th>功能</th>
+<th>快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>将光标移动到行首</td>
+<td><code>Ctrl-a</code></td>
+</tr>
+<tr class="even">
+<td>将光标移动到行尾</td>
+<td><code>Ctrl-e</code></td>
+</tr>
+<tr class="odd">
+<td>将光标向前移动一个单词</td>
+<td><code>Alt-f</code></td>
+</tr>
+<tr class="even">
+<td>将光标向后移动一个单词</td>
+<td><code>Alt-b</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="io-重定向">IO 重定向</h1>
+<p>将 <code>stderr</code> 和 <code>stdout</code> 追加到同一个文件：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">cmd</span> <span class="op">&gt;&gt;</span>file.txt <span class="op">2&gt;&amp;1</span></span></code></pre></div>
+<h1 id="变量替换parameter-substitution">变量替换（Parameter Substitution）</h1>
+<div id="tbl:bash_parameter_substitution">
+<table>
+<caption>表 2: Bash 变量替换</caption>
+<thead>
+<tr class="header">
+<th>语法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>${#var}</code></td>
+<td>String length</td>
+</tr>
+<tr class="even">
+<td><code>${var#Pattern}</code></td>
+<td>从 <code>$var</code> 前面移除最短匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+<tr class="odd">
+<td><code>${var##Pattern}</code></td>
+<td>从 <code>$var</code> 前面移除最长匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+<tr class="even">
+<td><code>${var%Pattern}</code></td>
+<td>从 <code>$var</code> 后面移除最短匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+<tr class="odd">
+<td><code>${var%%Pattern}</code></td>
+<td>从 <code>$var</code> 后面移除最长匹配 <code>$Pattern</code> 的部分</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="例子">例子</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>$ <span class="va">test_file_path=</span><span class="st">&quot;/a/b.c&quot;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>$ <span class="bu">echo</span> <span class="va">${test_file_path##</span>*/<span class="va">}</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="ex">b.c</span></span></code></pre></div>
+<h1 id="heredoc">Heredoc</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">cat</span> <span class="op">&lt;&lt;END</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>hello world</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="op">END</span></span></code></pre></div>
+<h1 id="备忘单">备忘单</h1>
+<p><a href="https://devhints.io/bash" class="uri">https://devhints.io/bash</a>。</p>
+<h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
+<div id="tbl:ansiEscapeCode">
+<table>
+<caption>表 3: 终端颜色转义码列表</caption>
+<thead>
+<tr class="header">
+<th>颜色</th>
+<th>转义码</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>正常</td>
+<td><code>\e[0m</code></td>
+</tr>
+<tr class="even">
+<td>红色</td>
+<td><code>\e[31m</code></td>
+</tr>
+<tr class="odd">
+<td>绿色</td>
+<td><code>\e[32m</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<a href="#ref-bashExitCode" role="doc-biblioref">2</a>]</sup></span></h1>
+<div id="tbl:bashExitCode">
+<table>
+<caption>表 4: 状态码</caption>
+<thead>
+<tr class="header">
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>1</code></td>
+<td>其他错误</td>
+</tr>
+<tr class="even">
+<td><code>2</code></td>
+<td>使用 shell 内建命令出错</td>
+</tr>
+<tr class="odd">
+<td><code>126</code></td>
+<td>命令无法执行</td>
+</tr>
+<tr class="even">
+<td><code>127</code></td>
+<td>命令未找到</td>
+</tr>
+<tr class="odd">
+<td><code>128</code></td>
+<td>无效的参数</td>
+</tr>
+<tr class="even">
+<td><code>130</code></td>
+<td>取消</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-ansiEscapeCode">
+<p>[1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]). <a href="https://misc.flogisoft.com/bash/tip_colors_and_formatting">https://misc.flogisoft.com/bash/tip_colors_and_formatting</a>.</p>
+</div>
+<div id="ref-bashExitCode">
+<p>[2] ORNBO G. Linux and Unix exit code tutorial with examples[EB/OL](2019–11–16). <a href="https://shapeshed.com/unix-exit-codes/">https://shapeshed.com/unix-exit-codes/</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#快捷键">快捷键</a></li>
+  <li><a href="#io-重定向">IO 重定向</a></li>
+  <li><a href="#变量替换parameter-substitution">变量替换（Parameter Substitution）</a>
+  <ul>
+  <li><a href="#例子">例子</a></li>
+  </ul></li>
+  <li><a href="#heredoc">Heredoc</a></li>
+  <li><a href="#备忘单">备忘单</a></li>
+  <li><a href="#颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#状态码bashexitcode">状态码<span class="citation" data-cites="bashExitCode"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1085,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1097,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

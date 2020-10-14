@@ -4,18 +4,33 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
+相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
+旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
+外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="线性代数" />
+<meta property="og:description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
+相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
+旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
+外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/linear_algebra/" />
 
-<title>Categories | 凯的笔记</title>
+<title>线性代数 | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -507,7 +522,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle"  />
+    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle" checked />
     <label for="section-1f9a426141100f8f7ab323c20cac8352" class="flex justify-between">
       <a  class="">数学</a>
       <span>▾</span>
@@ -524,7 +539,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/linear_algebra/" class="">线性代数</a>
+    <a href="https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/linear_algebra/" class=" active">线性代数</a>
   
 
         </li>
@@ -874,7 +889,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>线性代数</strong>
 
   <label for="toc-control">
     
@@ -887,29 +902,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +912,87 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="术语">术语</h1>
+<h2 id="共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<a href="#ref-conjugate_transpose" role="doc-biblioref">1</a>]</sup></span></h2>
+<p><span id="eq:conjugate_matrix"><span class="math display">\[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]</span></span></p>
+<p>其中，若记 <span class="math inline">\(\m{A}_{ji} = a + bi\)</span>，则 <span class="math inline">\((\m{A}_{ji})^* = a - bi\)</span>。</p>
+<h2 id="相似矩阵">相似矩阵</h2>
+<ul>
+<li>同一个线性变换在不同基下的矩阵称为相似矩阵</li>
+</ul>
+<h2 id="正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">2</a>]</sup></span></h2>
+<p><span id="eq:orthogonalMatrix"><span class="math display">\[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]</span></span></p>
+<h2 id="酉矩阵linearalgebraorthogonalmatrix">酉矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">2</a>]</sup></span></h2>
+<p><span id="eq:unitary_matrix"><span class="math display">\[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]</span></span></p>
+<h2 id="正规矩阵">正规矩阵</h2>
+<p><span id="eq:norm_matrix"><span class="math display">\[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]</span></span></p>
+<p>当且仅当 <span class="math inline">\(\m{A} = \m{U}\m{\Lambda}\m{U}^*\)</span> 时，方阵 <span class="math inline">\(\m{A}\)</span> 是正规矩阵。其中， <span class="math inline">\(\m{U}\)</span> 是酉矩阵；<span class="math inline">\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\)</span> 是对角阵； <span class="math inline">\(\m{U}\)</span> 的列向量是对应于特征值 <span class="math inline">\(\lambda_1,\dots,\lambda_n\)</span> 的特征向量。</p>
+<h2 id="旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<a href="#ref-高翔2017视觉" role="doc-biblioref">3</a>]</sup></span></h2>
+<p>旋转矩阵的集合：</p>
+<p><span id="eq:SOn"><span class="math display">\[
+\SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\}
+\qquad(5)\]</span></span></p>
+<h2 id="外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<a href="#ref-linearAlgebraOuterProduct" role="doc-biblioref">4</a>]</sup></span></h2>
+<p><span id="eq:outerProduct"><span class="math display">\[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]</span></span></p>
+<h1 id="svd奇异值分解">SVD（奇异值分解）</h1>
+<p>对任意一个 <span class="math inline">\(m\times n\)</span> 的复矩阵 <span class="math inline">\(M\)</span>，有 <span class="math inline">\(\m{M} = \m{U}\m{\Sigma}\m{V}^*\)</span>。其中，</p>
+<p><span id="eq:svd_u_eigen"><span class="math display">\[\m{M}\m{M}^* = \m{U}(\m{\Sigma}\m{\Sigma}^*)\m{U}^*\qquad(7)\]</span></span> <span id="eq:svd_v_eigen"><span class="math display">\[\m{M}^*\m{M} = \m{V}(\m{\Sigma}^*\m{\Sigma})\m{V}^*\qquad(8)\]</span></span></p>
+<p><span class="math inline">\(\m{\Sigma}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维的对角阵，且元素按大小排列。</p>
+<h1 id="pca主成分分析">PCA（主成分分析）</h1>
+<h2 id="snr信噪比">SNR（信噪比）</h2>
+<p><span id="eq:snr"><span class="math display">\[\SNR = \frac{\sigma^2_{\mathrm{signal}}}{\sigma^2_{\mathrm{noise}}}\qquad(9)\]</span></span></p>
+<h2 id="协方差矩阵">协方差矩阵</h2>
+<p>设 <span class="math inline">\(\m{X}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维矩阵，其中，<span class="math inline">\(m\)</span> 为特征数，<span class="math inline">\(n\)</span> 为样本数，则协方差矩阵为：</p>
+<p><span id="eq:covariance_matrix"><span class="math display">\[\m{C}_{\m{X}} = \frac{1}{n}\m{X}\T{\m{X}}\qquad(10)\]</span></span></p>
+<h2 id="问题定义">问题定义</h2>
+<p>寻找矩阵 <span class="math inline">\(\m{P}\)</span>，使得 <span class="math inline">\(\m{C}_{\m{Y}}\)</span> 为对角阵，且元素按大小排列。其中，<span class="math inline">\(\m{Y} = \m{P}\m{X}\)</span>。</p>
+<p>解：记 <span class="math inline">\(\m{X}\)</span> 的奇异值分解为 <span class="math inline">\(\m{X} = \m{U}\m{\Sigma}\T{\m{V}}\)</span>，那么 <span class="math inline">\(\m{P} = \T{\m{U}}\)</span>。</p>
+<blockquote>
+<ul>
+<li>主成分的方向是 <span class="math inline">\(\m{P}\)</span> 的行向量，即 <span class="math inline">\(\m{U}\)</span> 的列向量，即 <span class="math inline">\(\m{X}\m{X}^*\)</span> 的特征向量</li>
+<li><span class="math inline">\(\m{Y} = \m{\Sigma}\T{\m{V}}\)</span></li>
+</ul>
+</blockquote>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-conjugate_transpose">
+<p>[1] WIKIPEDIA. Conjugate transpose[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Conjugate_transpose">https://en.wikipedia.org/wiki/Conjugate_transpose</a>.</p>
+</div>
+<div id="ref-linearAlgebraOrthogonalMatrix">
+<p>[2] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Orthogonal_matrix">https://en.wikipedia.org/wiki/Orthogonal_matrix</a>.</p>
+</div>
+<div id="ref-高翔2017视觉">
+<p>[3] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.</p>
+</div>
+<div id="ref-linearAlgebraOuterProduct">
+<p>[4] WIKIPEDIA. Outer product[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#术语">术语</a>
+  <ul>
+  <li><a href="#共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#相似矩阵">相似矩阵</a></li>
+  <li><a href="#正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#酉矩阵linearalgebraorthogonalmatrix">酉矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#正规矩阵">正规矩阵</a></li>
+  <li><a href="#旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<span>4</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#svd奇异值分解">SVD（奇异值分解）</a></li>
+  <li><a href="#pca主成分分析">PCA（主成分分析）</a>
+  <ul>
+  <li><a href="#snr信噪比">SNR（信噪比）</a></li>
+  <li><a href="#协方差矩阵">协方差矩阵</a></li>
+  <li><a href="#问题定义">问题定义</a></li>
+  </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1012,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1024,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

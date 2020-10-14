@@ -3,13 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/bash/</loc>
-    <lastmod>2020-04-27T13:15:40+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/ai/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/c&#43;&#43;/</loc>
-    <lastmod>2020-07-07T14:54:43+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/bash/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</loc>
   </url>
   
   <url>
@@ -17,83 +20,80 @@
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/css/</loc>
-    <lastmod>2020-05-13T14:40:58+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/dhall/</loc>
-    <lastmod>2020-04-02T05:29:43+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/css/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/</loc>
-    <lastmod>2020-10-13T07:19:32+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/dhall/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/fish-shell/</loc>
-    <lastmod>2020-07-31T07:20:49+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/fish-shell/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/flutter/</loc>
-    <lastmod>2020-07-03T07:07:38+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/flutter/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/git/</loc>
-    <lastmod>2020-07-31T09:40:03+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/git/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/golang/</loc>
-    <lastmod>2020-02-20T16:11:32+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/golang/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/html/</loc>
-    <lastmod>2020-04-02T05:29:43+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/html/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/http/</loc>
-    <lastmod>2020-07-03T07:07:38+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/http/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/js/</loc>
-    <lastmod>2020-03-07T14:21:37+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/ipad/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/linux/</loc>
-    <lastmod>2020-07-31T08:39:25+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/js/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/linux/</loc>
-    <lastmod>2020-04-09T08:21:41+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/linux/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/oauth2/</loc>
-    <lastmod>2020-04-07T06:20:34+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/linux/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/pandoc/</loc>
-    <lastmod>2020-09-22T11:59:04+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/ai/nlp/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/python/</loc>
-    <lastmod>2020-09-29T03:59:24+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/oauth2/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/rust/</loc>
-    <lastmod>2020-05-24T08:30:16+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/pandoc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/rust/</loc>
   </url>
   
   <url>
@@ -101,163 +101,156 @@
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/tex/</loc>
-    <lastmod>2020-10-06T10:01:22+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/tex/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/toml/</loc>
-    <lastmod>2020-02-22T01:55:17+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/toml/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/visual/unity/</loc>
-    <lastmod>2020-02-20T16:11:32+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/unity/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/windows/</loc>
-    <lastmod>2020-10-07T14:48:21+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/windows/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/zsh/</loc>
-    <lastmod>2020-04-01T14:31:18+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/zsh/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/transmission/</loc>
-    <lastmod>2020-05-05T15:32:52+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/transmission/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/writing/</loc>
-    <lastmod>2020-04-15T08:05:50+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/writing/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/compress/</loc>
-    <lastmod>2020-04-19T05:10:32+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/compress/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/visual/image/</loc>
-    <lastmod>2020-07-31T09:40:03+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/image/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/security/</loc>
-    <lastmod>2020-04-09T14:23:50+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/security/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/ai/dev_env/</loc>
-    <lastmod>2020-10-13T07:19:32+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/ci/</loc>
-    <lastmod>2020-06-23T14:16:43+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/ai/dev_env/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/ai/recommend_system/</loc>
-    <lastmod>2020-10-13T07:19:32+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/ci/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/search/</loc>
-    <lastmod>2020-04-06T00:54:09+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/ai/recommend_system/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/database/</loc>
-    <lastmod>2020-05-21T09:06:30+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/search/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/data-type/</loc>
-    <lastmod>2020-05-05T15:32:52+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/reference-management/</loc>
-    <lastmod>2020-08-31T05:50:38+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/database/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/ai/machine_learning/</loc>
-    <lastmod>2020-10-07T14:48:21+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/data-type/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/build/</loc>
-    <lastmod>2020-03-19T06:10:42+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/reference-management/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/format/</loc>
-    <lastmod>2020-03-30T01:34:18+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/ai/machine_learning/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/program/template/</loc>
-    <lastmod>2020-05-05T14:31:12+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/build/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/browser/</loc>
-    <lastmod>2020-04-19T00:07:42+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/format/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/algorithm/</loc>
-    <lastmod>2020-08-11T13:23:43+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/template/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/math/linear_algebra/</loc>
-    <lastmod>2020-09-29T03:59:24+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/browser/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/math/statistics/</loc>
-    <lastmod>2020-05-24T08:30:16+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/algorithm/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/encoding/</loc>
-    <lastmod>2020-05-13T14:40:58+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/linear_algebra/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/editor/</loc>
-    <lastmod>2020-10-09T10:06:44+08:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/statistics/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/cs/network/</loc>
-    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/encoding/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/ai/nlp/</loc>
-    <lastmod>2020-10-13T07:19:32+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/visual/video/</loc>
-    <lastmod>2020-04-09T08:12:44+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/editor/</loc>
   </url>
   
   <url>
-    <loc>https://kaizhang91.github.io/notes/docs/tools/project-management/</loc>
-    <lastmod>2020-04-27T12:58:34+00:00</lastmod>
+    <loc>https://kaizhang91.github.io/notes/cs/network/</loc>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/%E8%A7%86%E8%A7%89/video/</loc>
+  </url>
+  
+  <url>
+    <loc>https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/project-management/</loc>
   </url>
   
   <url>
     <loc>https://kaizhang91.github.io/notes/</loc>
-    <lastmod>2020-02-20T16:11:32+08:00</lastmod>
+    <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
   
 </urlset>

@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="引用  在方括号里 分号分隔  [@smith04; @doe99] 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items. This paragraph won&#39;t be part of the note, because it isn&#39;t indented.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Pandoc" />
+<meta property="og:description" content="引用  在方括号里 分号分隔  [@smith04; @doe99] 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items. This paragraph won&#39;t be part of the note, because it isn&#39;t indented." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/pandoc/" />
 
-<title>Categories | 凯的笔记</title>
+<title>Pandoc | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -555,7 +554,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -689,7 +688,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/pandoc/" class="">Pandoc</a>
+    <a href="https://kaizhang91.github.io/notes/%E7%BC%96%E7%A8%8B/pandoc/" class=" active">Pandoc</a>
   
 
         </li>
@@ -874,7 +873,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>Pandoc</strong>
 
   <label for="toc-control">
     
@@ -887,29 +886,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +896,73 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="引用">引用</h1>
+<ul>
+<li>在方括号里</li>
+<li>分号分隔</li>
+</ul>
+<pre class="pandoc"><code>[@smith04; @doe99]</code></pre>
+<h1 id="脚注">脚注</h1>
+<pre class="pandoc"><code>Here is a footnote reference,[^1] and another.[^longnote]
 
-  
+[^1]: Here is the footnote.
 
+[^longnote]: Here&#39;s one with multiple blocks.
 
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+        { some.code }
+
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+This paragraph won&#39;t be part of the note, because it
+isn&#39;t indented.</code></pre>
+<h1 id="数学">数学</h1>
+<div id="tbl:math_syntax">
+<table>
+<caption>表 1: 数学语法</caption>
+<thead>
+<tr class="header">
+<th>类别</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>行内公式</td>
+<td><code>$\alpha$</code></td>
+</tr>
+<tr class="even">
+<td>行间公式</td>
+<td><code>$$\alpha = 1$$</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="extension">Extension</h1>
+<ul>
+<li><code>+EXTENSION</code> 启用</li>
+<li><code>-EXTENSION</code> 禁用</li>
+</ul>
+<h2 id="emoji">emoji</h2>
+<p>emoji 列表请参考 <a href="https://github.com/ikatyang/emoji-cheat-sheet" class="uri">https://github.com/ikatyang/emoji-cheat-sheet</a>。</p>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#引用">引用</a></li>
+  <li><a href="#脚注">脚注</a></li>
+  <li><a href="#数学">数学</a></li>
+  <li><a href="#extension">Extension</a>
+  <ul>
+  <li><a href="#emoji">emoji</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +982,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +994,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

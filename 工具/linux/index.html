@@ -4,18 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du[2] du -sh /a/* | sort -rh | head -5 jq 过滤[3] select(.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Linux" />
+<meta property="og:description" content="手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du[2] du -sh /a/* | sort -rh | head -5 jq 过滤[3] select(." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/linux/" />
 
-<title>Categories | 凯的笔记</title>
+<title>Linux | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -329,7 +328,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle"  />
+    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle" checked />
     <label for="section-70bdf8d87af46a79686d31378c1d7d85" class="flex justify-between">
       <a  class="">工具</a>
       <span>▾</span>
@@ -372,7 +371,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/linux/" class="">Linux</a>
+    <a href="https://kaizhang91.github.io/notes/%E5%B7%A5%E5%85%B7/linux/" class=" active">Linux</a>
   
 
         </li>
@@ -874,7 +873,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>Linux</strong>
 
   <label for="toc-control">
     
@@ -887,29 +886,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +896,103 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="手册">手册</h1>
+<h2 id="tldr">tldr</h2>
+<div id="tbl:tldrInstall">
+<table>
+<caption>表 1: tldr 安装命令</caption>
+<thead>
+<tr class="header">
+<th>操作系统</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arch Linux</td>
+<td><code>sudo pacman -S tldr</code></td>
+</tr>
+<tr class="even">
+<td>其他</td>
+<td><code>yarn global add tldr</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="rsync">rsync</h1>
+<h2 id="带进度条的复制">带进度条的复制</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">rsync</span> --info=progress2 -rh <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
+<h2 id="指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<a href="#ref-rsyncPrivateKey" role="doc-biblioref">1</a>]</sup></span></h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">rsync</span> -Pav -e <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
+<h1 id="终端">终端</h1>
+<h2 id="tmux">tmux</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># 列出会话</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="ex">tmux</span> ls</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co"># 创建新会话</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="ex">tmux</span> new -s myname</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co"># 连接会话</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
+<h1 id="硬盘">硬盘</h1>
+<ul>
+<li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
+</ul>
+<h2 id="dudu">du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">2</a>]</sup></span></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
+<h1 id="jq">jq</h1>
+<h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">3</a>]</sup></span></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
+<h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">4</a>]</sup></span></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
+<h1 id="cpu">CPU</h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-rsyncPrivateKey">
+<p>[1] GARTHWAITE D. Specify identity file with rsync[EB/OL](2014–05–01). <a href="https://unix.stackexchange.com/a/127355">https://unix.stackexchange.com/a/127355</a>.</p>
+</div>
+<div id="ref-du">
+<p>[2] KUMAR S. How to Find Out Top Directories and Files (Disk Space) in Linux[EB/OL](2016–01–16). <a href="https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/">https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/</a>.</p>
+</div>
+<div id="ref-jqCookbook">
+<p>[3] STEDOLAN. Cookbook[EB/OL](2019–10–05). <a href="https://github.com/stedolan/jq/wiki/Cookbook">https://github.com/stedolan/jq/wiki/Cookbook</a>.</p>
+</div>
+<div id="ref-jqNoQuotes">
+<p>[4] GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</p>
+</div>
+</div>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#手册">手册</a>
+  <ul>
+  <li><a href="#tldr">tldr</a></li>
+  </ul></li>
+  <li><a href="#rsync">rsync</a>
+  <ul>
+  <li><a href="#带进度条的复制">带进度条的复制</a></li>
+  <li><a href="#指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<span>1</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#终端">终端</a>
+  <ul>
+  <li><a href="#tmux">tmux</a></li>
+  </ul></li>
+  <li><a href="#硬盘">硬盘</a>
+  <ul>
+  <li><a href="#dudu">du<span class="citation" data-cites="du"><sup>[<span>2</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#jq">jq</a>
+  <ul>
+  <li><a href="#过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>4</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#cpu">CPU</a></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +1012,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +1024,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>

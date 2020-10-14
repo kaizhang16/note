@@ -4,18 +4,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/notes/categories/" />
+<meta name="description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
+则中位数为：
+\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \]
+目录  中位数   ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="统计" />
+<meta property="og:description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
+则中位数为：
+\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \]
+目录  中位数   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/statistics/" />
 
-<title>Categories | 凯的笔记</title>
+<title>统计 | 凯的笔记</title>
 <link rel="manifest" href="/notes/manifest.json">
 <link rel="icon" href="/notes/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/notes/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/notes/cn.search.min.d1e9c23c75394fbffe738774cb3318780e96c20ab21ede1033da59a2726e3837.js" integrity="sha256-0enCPHU5T7/&#43;c4d0yzMYeA6WwgqyHt4QM9pZonJuODc="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/notes/categories/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -507,7 +514,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle"  />
+    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle" checked />
     <label for="section-1f9a426141100f8f7ab323c20cac8352" class="flex justify-between">
       <a  class="">数学</a>
       <span>▾</span>
@@ -537,7 +544,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/statistics/" class="">统计</a>
+    <a href="https://kaizhang91.github.io/notes/%E6%95%B0%E5%AD%A6/statistics/" class=" active">统计</a>
   
 
         </li>
@@ -874,7 +881,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/notes/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Categories</strong>
+  <strong>统计</strong>
 
   <label for="toc-control">
     
@@ -887,29 +894,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
 
   </aside>
@@ -919,11 +904,25 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
+  <article class="markdown"><h1 id="中位数">中位数</h1>
+<p>先把 <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> 从小到大排序，得到</p>
+<p><span class="math display">\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]</span></p>
+<p>则中位数为：</p>
+<p><span class="math display">\[
+\median(x) = 
+\begin{cases}
+x_{((n+1)/2)}, &amp; n \text{为奇数} \\
+\frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp; n \text{为偶数}
+\end{cases}
+\]</span></p>
 
-  
-
-
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#中位数">中位数</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -943,6 +942,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -951,29 +954,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
   
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
 
  
     </aside>
