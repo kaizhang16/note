@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross       协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。">
+<meta name="description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="推荐系统" />
-<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross       协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
+<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/ai/recommend_system/" />
-<meta property="article:modified_time" content="2020-10-14T07:16:48+00:00" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/ai/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" />
+
 <title>推荐系统 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.40d5de6c4340e19280327e134273b8992839b6d32bc23ec653b1e93d70713251.js" integrity="sha256-QNXebENA4ZKAMn4TQnO4mSg5ttMrwj7GU7HpPXBxMlE="></script>
+<script defer src="/note/cn.search.min.09a8a8db5a7206b5b027db38160bdb070a300ab7602803af5b5e39ab95597813.js" integrity="sha256-Caio21pyBrWwJ9s4FgvbBwowCrdgKAOvW145q5VZeBM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -119,7 +119,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/ai/recommend_system/" class=" active">推荐系统</a>
+    <a href="https://kaizhang91.github.io/note/ai/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" class=" active">推荐系统</a>
   
 
         </li>
@@ -943,11 +943,11 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="架构">架构</h1>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/architecture.webp" id="fig:architecture" alt="图 1: 推荐系统架构" /><figcaption aria-hidden="true">图 1: 推荐系统架构</figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/architecture.webp" id="fig:architecture" alt="图 1: 推荐系统架构" /><figcaption aria-hidden="true">图 1: 推荐系统架构</figcaption>
 </figure>
 <h1 id="算法">算法</h1>
 <h2 id="不同算法的优缺点">不同算法的优缺点</h2>
-<div id="tbl:pros_cons">
+<div id="tbl:algorithm_pros_cons">
 <table>
 <caption>表 2: 不同算法的优缺点</caption>
 <thead>
@@ -1100,7 +1100,22 @@ https://github.com/alex-shpak/hugo-book
 </tr>
 <tr class="odd">
 <td>Deep &amp; Cross</td>
+<td>Wide 部分的特征自动交叉</td>
 <td></td>
+</tr>
+<tr class="even">
+<td>DIEN</td>
+<td>预测下一次购买，更符合业务目标</td>
+<td>训练复杂度高</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>串行推断</td>
+</tr>
+<tr class="even">
+<td>DRN</td>
+<td>变静态为动态，在线训练</td>
 <td></td>
 </tr>
 </tbody>
@@ -1180,7 +1195,7 @@ J(\v{w}) &amp;= \frac{1}{m}\sum_{i=1}^m H(p(\v{y}), p(\hat{\v{y}})) \\
 \sum_{j_1=1}^{n-1}\sum_{j_2=j_1+1}^n (\v{w}_{j_1,f_2}\cdot\v{w}_{j_2,f_1})x_{j_1}x_{j_2}\qquad(14)\]</span></span></p>
 <h2 id="gbdt-lr">GBDT + LR</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/GBDT&#43;LR_architecture.jpg" id="fig:GBDT_LR_architecture" alt="图 2: GBDT+LR 架构" /><figcaption aria-hidden="true">图 2: GBDT+LR 架构</figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/GBDT&#43;LR_architecture.jpg" id="fig:GBDT_LR_architecture" alt="图 2: GBDT+LR 架构" /><figcaption aria-hidden="true">图 2: GBDT+LR 架构</figcaption>
 </figure>
 <h2 id="ls-plm">LS-PLM</h2>
 <h3 id="输出-1">输出</h3>
@@ -1193,7 +1208,7 @@ f(\v{x}) &amp;= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
 <p>其中，<span class="math inline">\(m\)</span> 为分片数，<span class="math inline">\(\pi\)</span> 为聚类函数（这里采用 softmax 对样本进行多分类）。</p>
 <h2 id="autorec">AutoRec</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/auto_rec_architecture.png" id="fig:auto_rec_architecture" alt="图 3: AutoRec 架构[1]" /><figcaption aria-hidden="true">图 3: AutoRec 架构<span class="citation" data-cites="sedhain2015autorec"><sup>[<a href="#ref-sedhain2015autorec" role="doc-biblioref">1</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/auto_rec_architecture.png" id="fig:auto_rec_architecture" alt="图 3: AutoRec 架构[1]" /><figcaption aria-hidden="true">图 3: AutoRec 架构<span class="citation" data-cites="sedhain2015autorec"><sup>[<a href="#ref-sedhain2015autorec" role="doc-biblioref">1</a>]</sup></span></figcaption>
 </figure>
 <h3 id="损失函数-1">损失函数</h3>
 <p><span id="eq:auto_rec_loss"><span class="math display">\[\min_{\theta}\left[\sum_{\v{r}\in S}\lVert\v{r}-h(\v{r};\theta)\rVert_2^2
@@ -1205,7 +1220,7 @@ f(\v{x}) &amp;= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
 <p><span id="eq:auto_rec_output"><span class="math display">\[\hat{R}_{ui} = h(\v{r}^{(i)};\theta)_u\qquad(18)\]</span></span></p>
 <h2 id="deep-crossing">Deep Crossing</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/deep_crossing_architecture.png" id="fig:deep_crossing_architecture" alt="图 4: Deep Crossing 架构[2]" /><figcaption aria-hidden="true">图 4: Deep Crossing 架构<span class="citation" data-cites="shan2016deep"><sup>[<a href="#ref-shan2016deep" role="doc-biblioref">2</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/deep_crossing_architecture.png" id="fig:deep_crossing_architecture" alt="图 4: Deep Crossing 架构[2]" /><figcaption aria-hidden="true">图 4: Deep Crossing 架构<span class="citation" data-cites="shan2016deep"><sup>[<a href="#ref-shan2016deep" role="doc-biblioref">2</a>]</sup></span></figcaption>
 </figure>
 <h3 id="残差神经网络">残差神经网络</h3>
 <p>好处：</p>
@@ -1216,23 +1231,23 @@ f(\v{x}) &amp;= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
 <h2 id="neuralcf">NeuralCF</h2>
 <p>用多层神经网络代替矩阵分解的内积操作。</p>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/neural_cf_architecture.png" id="fig:neural_cf_architecture" alt="图 5: NeuralCF 架构[3]" /><figcaption aria-hidden="true">图 5: NeuralCF 架构<span class="citation" data-cites="he2017neural"><sup>[<a href="#ref-he2017neural" role="doc-biblioref">3</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/neural_cf_architecture.png" id="fig:neural_cf_architecture" alt="图 5: NeuralCF 架构[3]" /><figcaption aria-hidden="true">图 5: NeuralCF 架构<span class="citation" data-cites="he2017neural"><sup>[<a href="#ref-he2017neural" role="doc-biblioref">3</a>]</sup></span></figcaption>
 </figure>
 <h2 id="pnn">PNN</h2>
 <p>乘积层代替 Deep Crossing 模型中的 Stacking 层。</p>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/pnn_architecture.png" id="fig:pnn_architecture" alt="图 6: PNN 架构[4]" /><figcaption aria-hidden="true">图 6: PNN 架构<span class="citation" data-cites="qu2016product"><sup>[<a href="#ref-qu2016product" role="doc-biblioref">4</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/pnn_architecture.png" id="fig:pnn_architecture" alt="图 6: PNN 架构[4]" /><figcaption aria-hidden="true">图 6: PNN 架构<span class="citation" data-cites="qu2016product"><sup>[<a href="#ref-qu2016product" role="doc-biblioref">4</a>]</sup></span></figcaption>
 </figure>
 <h2 id="wide-deep">Wide &amp; Deep</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/wide_deep_architecture.png" id="fig:wide_deep_architecture" alt="图 7: Wide &amp; Deep 架构[5]" /><figcaption aria-hidden="true">图 7: Wide &amp; Deep 架构<span class="citation" data-cites="cheng2016wide"><sup>[<a href="#ref-cheng2016wide" role="doc-biblioref">5</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/wide_deep_architecture.png" id="fig:wide_deep_architecture" alt="图 7: Wide &amp; Deep 架构[5]" /><figcaption aria-hidden="true">图 7: Wide &amp; Deep 架构<span class="citation" data-cites="cheng2016wide"><sup>[<a href="#ref-cheng2016wide" role="doc-biblioref">5</a>]</sup></span></figcaption>
 </figure>
 <p>Cross Product Transformation 为：</p>
 <p><span class="math display">\[\phi_k(\v{x}) = \prod_{i=1}^d x_i^{c_{ki}}\quad c_{ki}\in\{0,1\}\]</span></p>
 <p>其中，<span class="math inline">\(c_{ki}\)</span> 当第 <span class="math inline">\(i\)</span> 个特征属于第 <span class="math inline">\(k\)</span> 个组合特征时为 <span class="math inline">\(1\)</span>，否则为 <span class="math inline">\(0\)</span>；<span class="math inline">\(x_i\)</span> 是第 <span class="math inline">\(i\)</span> 个特征的值。</p>
 <h2 id="deep-cross">Deep &amp; Cross</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/deep_cross_architecture.png" id="fig:deep_cross_architecture" style="width:60.0%" alt="图 8: Deep &amp; Cross 架构[6]" /><figcaption aria-hidden="true">图 8: Deep &amp; Cross 架构<span class="citation" data-cites="wang2017deep"><sup>[<a href="#ref-wang2017deep" role="doc-biblioref">6</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/deep_cross_architecture.png" id="fig:deep_cross_architecture" style="width:60.0%" alt="图 8: Deep &amp; Cross 架构[6]" /><figcaption aria-hidden="true">图 8: Deep &amp; Cross 架构<span class="citation" data-cites="wang2017deep"><sup>[<a href="#ref-wang2017deep" role="doc-biblioref">6</a>]</sup></span></figcaption>
 </figure>
 <p>Cross 网络的运算为：</p>
 <p><span id="eq:deep_cross_cross"><span class="math display">\[\v{x}_{l+1} = \v{x}_0\T{\v{x}_l}\v{w}_l + \v{b}_l + \v{x}_l\qquad(19)\]</span></span></p>
@@ -1244,7 +1259,7 @@ f(\v{x}) &amp;= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
 <li>输入向量稀疏</li>
 </ul>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/fnn_architecture.png" id="fig:fnn_architecture" alt="图 9: FNN 架构[7]" /><figcaption aria-hidden="true">图 9: FNN 架构<span class="citation" data-cites="zhang2016deep"><sup>[<a href="#ref-zhang2016deep" role="doc-biblioref">7</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/fnn_architecture.png" id="fig:fnn_architecture" alt="图 9: FNN 架构[7]" /><figcaption aria-hidden="true">图 9: FNN 架构<span class="citation" data-cites="zhang2016deep"><sup>[<a href="#ref-zhang2016deep" role="doc-biblioref">7</a>]</sup></span></figcaption>
 </figure>
 <p>其中，<span class="math inline">\(\v{w}\)</span> 和 <span class="math inline">\(\v{v}\)</span> 对应于 FM 中的参数：</p>
 <p><span id="eq:fm_output"><span class="math display">\[\hat{\v{y}} = \sigmoid\left(w_0 + \sum_{i=1}^N w_i x_i +
@@ -1252,12 +1267,12 @@ f(\v{x}) &amp;= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
 \qquad(20)\]</span></span></p>
 <h2 id="deepfm">DeepFM</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/deep_fm_architecture.png" id="fig:deep_fm_architecture" alt="图 10: DeepFM 架构[8]" /><figcaption aria-hidden="true">图 10: DeepFM 架构<span class="citation" data-cites="guo2017deepfm"><sup>[<a href="#ref-guo2017deepfm" role="doc-biblioref">8</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/deep_fm_architecture.png" id="fig:deep_fm_architecture" alt="图 10: DeepFM 架构[8]" /><figcaption aria-hidden="true">图 10: DeepFM 架构<span class="citation" data-cites="guo2017deepfm"><sup>[<a href="#ref-guo2017deepfm" role="doc-biblioref">8</a>]</sup></span></figcaption>
 </figure>
 <h2 id="nfm">NFM</h2>
 <p>用神经网络代替 FM 的二阶特征交叉。</p>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/nfm_architecture.png" id="fig:nfm_architecture" alt="图 11: NFM 架构[9]" /><figcaption aria-hidden="true">图 11: NFM 架构<span class="citation" data-cites="he2017nfm"><sup>[<a href="#ref-he2017nfm" role="doc-biblioref">9</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/nfm_architecture.png" id="fig:nfm_architecture" alt="图 11: NFM 架构[9]" /><figcaption aria-hidden="true">图 11: NFM 架构<span class="citation" data-cites="he2017nfm"><sup>[<a href="#ref-he2017nfm" role="doc-biblioref">9</a>]</sup></span></figcaption>
 </figure>
 <p>Bi-Interaction Pooling 具体操作为：</p>
 <p><span id="eq:nfm_bi"><span class="math display">\[f_{\mathrm{BI}}(\mathcal{V}_x) = \sum_{i=1}^n\sum_{j=i+1}^n x_i\v{v}_i\odot
@@ -1265,7 +1280,7 @@ x_j\v{v}_j\qquad(21)\]</span></span></p>
 <p>其中，<span class="math inline">\(\mathcal{V}_x\)</span> 是 Embedding 集合。</p>
 <h2 id="afm">AFM</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/afm_architecture.png" id="fig:afm_architecture" alt="图 12: AFM 架构[10]" /><figcaption aria-hidden="true">图 12: AFM 架构<span class="citation" data-cites="xiao2017attentional"><sup>[<a href="#ref-xiao2017attentional" role="doc-biblioref">10</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/afm_architecture.png" id="fig:afm_architecture" alt="图 12: AFM 架构[10]" /><figcaption aria-hidden="true">图 12: AFM 架构<span class="citation" data-cites="xiao2017attentional"><sup>[<a href="#ref-xiao2017attentional" role="doc-biblioref">10</a>]</sup></span></figcaption>
 </figure>
 <p>特征交叉采用元素积：</p>
 <p><span id="eq:afm_pi"><span class="math display">\[f_{\mathrm{PI}}(\mathcal{E}) = \{(\v{v}_i\odot\v{v}_j) x_i x_j\mid
@@ -1281,7 +1296,7 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
 \qquad(23)\]</span></span></p>
 <h2 id="din">DIN</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/din_architecture.png" id="fig:din_architecture" alt="图 13: DIN 架构[11]" /><figcaption aria-hidden="true">图 13: DIN 架构<span class="citation" data-cites="zhou2018deep"><sup>[<a href="#ref-zhou2018deep" role="doc-biblioref">11</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/din_architecture.png" id="fig:din_architecture" alt="图 13: DIN 架构[11]" /><figcaption aria-hidden="true">图 13: DIN 架构<span class="citation" data-cites="zhou2018deep"><sup>[<a href="#ref-zhou2018deep" role="doc-biblioref">11</a>]</sup></span></figcaption>
 </figure>
 <h3 id="注意力">注意力</h3>
 <p><span id="eq:din_attention"><span class="math display">\[\v{v}_U(A) = f(\v{v}_A,\v{e}_1,\v{e}_2,\dots,\v{e}_H)
@@ -1290,11 +1305,140 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
 <p>其中，<span class="math inline">\(\{\v{e}_1,\v{e}_2,\dots,\v{e}_H\}\)</span> 是用户 U 的历史行为的 Embedding 向量； <span class="math inline">\(\v{v}_A\)</span> 是广告 A 的 Embedding 向量。</p>
 <h2 id="dien">DIEN</h2>
 <figure>
-<img src="https://kaizhang91.github.io/note/fig/ai/recommend_system/dien_architecture.png" id="fig:dien_architecture" alt="图 14: DIEN 架构[12]" /><figcaption aria-hidden="true">图 14: DIEN 架构<span class="citation" data-cites="zhou2019deep"><sup>[<a href="#ref-zhou2019deep" role="doc-biblioref">12</a>]</sup></span></figcaption>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/dien_architecture.png" id="fig:dien_architecture" alt="图 14: DIEN 架构[12]" /><figcaption aria-hidden="true">图 14: DIEN 架构<span class="citation" data-cites="zhou2019deep"><sup>[<a href="#ref-zhou2019deep" role="doc-biblioref">12</a>]</sup></span></figcaption>
 </figure>
 <h3 id="augru">AUGRU</h3>
 <p>AUGRU 改变了更新门：</p>
 <p><span id="eq:dien_update_gate"><span class="math display">\[\tilde{\v{u}}&#39;_t = a_t\v{u}&#39;_t\qquad(25)\]</span></span></p>
+<h2 id="drn">DRN</h2>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/drn_deep_reinforcement_recommendation_system.png" id="fig:drn_deep_reinforcement_recommendation_system" alt="图 15: 深度强化学习推荐系统[13]" /><figcaption aria-hidden="true">图 15: 深度强化学习推荐系统<span class="citation" data-cites="zheng2018drn"><sup>[<a href="#ref-zheng2018drn" role="doc-biblioref">13</a>]</sup></span></figcaption>
+</figure>
+<ul>
+<li>State representation 为用户特征，Action representation 为候选新闻特征</li>
+<li>用户向 Agent 请求新闻列表，Agent 根据 State representation 和 Action representation 选择最好的 Action 返回给用户，并获取用户反馈</li>
+<li>Action 和反馈日志会存入 Agent 的内存，Agent 每小时会利用内存中的日志更新推荐算法</li>
+</ul>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/drn_q.png" id="fig:drn_q" style="width:60.0%" alt="图 16: DRN Q 网络[13]" /><figcaption aria-hidden="true">图 16: DRN Q 网络<span class="citation" data-cites="zheng2018drn"><sup>[<a href="#ref-zheng2018drn" role="doc-biblioref">13</a>]</sup></span></figcaption>
+</figure>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/drn_model_framework.png" id="fig:drn_model_framework" alt="图 17: DRN 模型框架[13]" /><figcaption aria-hidden="true">图 17: DRN 模型框架<span class="citation" data-cites="zheng2018drn"><sup>[<a href="#ref-zheng2018drn" role="doc-biblioref">13</a>]</sup></span></figcaption>
+</figure>
+<h3 id="竞争梯度下降法">竞争梯度下降法</h3>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/drn_dueling_bandit_gradient_descent.png" id="fig:drn_dueling_bandit_gradient_descent" style="width:60.0%" alt="图 18: 竞争梯度下降法[13]" /><figcaption aria-hidden="true">图 18: 竞争梯度下降法<span class="citation" data-cites="zheng2018drn"><sup>[<a href="#ref-zheng2018drn" role="doc-biblioref">13</a>]</sup></span></figcaption>
+</figure>
+<p><span id="eq:drn_delta_w"><span class="math display">\[\Delta\m{W} = \alpha\cdot\rand(-1,1)\cdot\m{W}\qquad(26)\]</span></span></p>
+<p>其中，<span class="math inline">\(\alpha\)</span> 是探索因子。</p>
+<h1 id="embedding">Embedding</h1>
+<h2 id="不同-embedding-的优缺点">不同 Embedding 的优缺点</h2>
+<div id="tbl:embedding_pros_cons">
+<table>
+<caption>表 3: 不同 Embedding 的优缺点</caption>
+<thead>
+<tr class="header">
+<th>Embedding</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Word2vec</td>
+<td>奠基</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Item2vec</td>
+<td>没有时间窗口</td>
+<td>只有序列型结构</td>
+</tr>
+<tr class="odd">
+<td>EGES</td>
+<td>缓解冷启动</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="word2vec">Word2vec</h2>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/word2vec_architecture.png" id="fig:word2vec_architecture" style="width:80.0%" alt="图 19: CBOW 与 Skip-gram 架构[14]" /><figcaption aria-hidden="true">图 19: CBOW 与 Skip-gram 架构<span class="citation" data-cites="mikolov2013efficient"><sup>[<a href="#ref-mikolov2013efficient" role="doc-biblioref">14</a>]</sup></span></figcaption>
+</figure>
+<ul>
+<li>根据经验，Skip-gram 的效果更好</li>
+</ul>
+<h3 id="基本结构">基本结构</h3>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/word2vec_base_net.png" id="fig:word2vec_base_net" style="width:60.0%" alt="图 20: word2vec 基本网络结构[15]" /><figcaption aria-hidden="true">图 20: word2vec 基本网络结构<span class="citation" data-cites="rong2014word2vec"><sup>[<a href="#ref-rong2014word2vec" role="doc-biblioref">15</a>]</sup></span></figcaption>
+</figure>
+<h4 id="输出-3">输出</h4>
+<p><span id="eq:word2vec_base_output"><span class="math display">\[y_j = p(w_j\mid w_I)
+= \frac{\exp(\T{\v{v}&#39;_{w_j}}\v{v}_{w_I})}{\sum_{j&#39;=1}^V\exp(\T{\v{v}&#39;_{w_{j&#39;}}}\v{v}_{w_I})}
+\qquad(27)\]</span></span></p>
+<p>其中，<span class="math inline">\(\v{v}_{w_I}\in\R^{N\times 1}\)</span> 为 <span class="math inline">\(\m{W}\)</span> 的第 <span class="math inline">\(I\)</span> 行； <span class="math inline">\(\v{v}&#39;_{w_j}\in\R^{N\times 1}\)</span> 为 <span class="math inline">\(\m{W}&#39;\)</span> 的第 <span class="math inline">\(j\)</span> 列。</p>
+<h4 id="损失函数-2">损失函数</h4>
+<p><span id="eq:word2vec_base_loss"><span class="math display">\[L = -\log p(w_O\mid w_I)\qquad(28)\]</span></span></p>
+<p>其中，<span class="math inline">\(O\)</span> 为输出单词的索引；这个损失可以看做最大似然概率，也可以看做交叉熵。</p>
+<h4 id="负采样">负采样</h4>
+<p><span id="eq:word2vec_negative_sample"><span class="math display">\[L = -\log \sigma(\T{\v{v}&#39;_{w_O}}\v{h})
+- \sum_{w_j\in\mathcal{W}_{\mathrm{neg}}}\log\sigma(-\T{\v{v}&#39;_{w_j}}\v{h})
+\qquad(29)\]</span></span></p>
+<p>其中，<span class="math inline">\(w_O\)</span> 是输出单词；<span class="math inline">\(\mathcal{W}_{\mathrm{neg}} = \{w_j\mid j=1,\cdots,K\}\)</span> 是采样得到的负样本集合。</p>
+<h2 id="item2vec">Item2vec</h2>
+<h2 id="deepwalk">DeepWalk</h2>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/deep_walk_architecture.png" id="fig:deep_walk_architecture" alt="图 21: DeepWalk 架构[16]" /><figcaption aria-hidden="true">图 21: DeepWalk 架构<span class="citation" data-cites="wang2018billion"><sup>[<a href="#ref-wang2018billion" role="doc-biblioref">16</a>]</sup></span></figcaption>
+</figure>
+<h3 id="随机游走的转移概率wang2018billion">随机游走的转移概率<span class="citation" data-cites="wang2018billion"><sup>[<a href="#ref-wang2018billion" role="doc-biblioref">16</a>]</sup></span></h3>
+<p><span class="math display">\[
+P(v_j\mid v_i) =
+\begin{cases}
+\frac{M_{ij}}{\sum_{j&#39;\in N_+(v_i)}M_{ij&#39;}}, &amp;\mathrm{if}\;v_j\in N_+(v_i)\\
+0, &amp;\mathrm{if}\;e_{ij}\notin\mathcal{E}
+\end{cases}
+\]</span></p>
+<p>其中，<span class="math inline">\(N_+(v_i)\)</span> 表示 <span class="math inline">\(v_i\)</span> 的出边集合；<span class="math inline">\(M_{ij}\)</span> 表示节点 <span class="math inline">\(i\)</span> 到节点 <span class="math inline">\(j\)</span> 边的权重；<span class="math inline">\(\mathcal{E}\)</span> 表示所有边的集合。</p>
+<h2 id="node2vec">node2vec</h2>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/node2vec_bfs_dfs.png" id="fig:node2vec_bfs_dfs" style="width:60.0%" alt="图 22: node2vec 广度优先搜索与深度优先搜索[17]" /><figcaption aria-hidden="true">图 22: node2vec 广度优先搜索与深度优先搜索<span class="citation" data-cites="grover2016node2vec"><sup>[<a href="#ref-grover2016node2vec" role="doc-biblioref">17</a>]</sup></span></figcaption>
+</figure>
+<ul>
+<li>同质性：图. 22 中的 <span class="math inline">\(u\)</span> 与 <span class="math inline">\(s_1\)</span> 属于同一社区，Embedding 应该相似</li>
+<li>同构性：图. 22 中的 <span class="math inline">\(u\)</span> 与 <span class="math inline">\(s_6\)</span> 扮演相似的结构角色， Embedding 应该相似</li>
+<li>BFS 能发现同构性；DFS 能发现同质性</li>
+</ul>
+<h3 id="跳转概率">跳转概率</h3>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/node2vec_transition.png" id="fig:node2vec_transition" style="width:60.0%" alt="图 23: node2vec 跳转概率[17]" /><figcaption aria-hidden="true">图 23: node2vec 跳转概率<span class="citation" data-cites="grover2016node2vec"><sup>[<a href="#ref-grover2016node2vec" role="doc-biblioref">17</a>]</sup></span></figcaption>
+</figure>
+<p>未归一化的跳转概率为：</p>
+<p><span id="eq:node2vec_transition"><span class="math display">\[\pi_{vx} = \alpha_{pq}(t,x)\cdot w_{vx}\qquad(30)\]</span></span></p>
+<p>其中，</p>
+<p><span id="eq:node2vec_alpha"><span class="math display">\[
+\alpha_{pq}(t,x) =
+\begin{cases}
+\frac{1}{p}\quad &amp;\mathrm{if}\;d_{tx} = 0\\
+1 &amp;\mathrm{if}\;d_{tx} = 1\\
+\frac{1}{q}\quad &amp;\mathrm{if}\;d_{tx} = 2
+\end{cases}
+\qquad(31)\]</span></span></p>
+<p><span class="math inline">\(w_{vx}\)</span> 是边 <span class="math inline">\(vx\)</span> 的权重；<span class="math inline">\(d_tx\)</span> 表示节点 <span class="math inline">\(t\)</span> 与节点 <span class="math inline">\(x\)</span> 的最短距离；<span class="math inline">\(p\)</span> 为返回参数；<span class="math inline">\(q\)</span> 为进出参数。</p>
+<h2 id="eges">EGES</h2>
+<figure>
+<img src="https://kaizhang91.github.io/note/fig/AI/推荐系统/eges_architecture.png" id="fig:eges_architecture" style="width:60.0%" alt="图 24: EGES 架构[16]" /><figcaption aria-hidden="true">图 24: EGES 架构<span class="citation" data-cites="wang2018billion"><sup>[<a href="#ref-wang2018billion" role="doc-biblioref">16</a>]</sup></span></figcaption>
+</figure>
+<h3 id="隐层向量">隐层向量</h3>
+<p><span class="math display">\[\m{H}_v = \frac{\sum_{j=0}^n \e^{a_v^j}\m{W}_v^j}{\sum_{j=0}^n \e^{a_v^j}}\]</span></p>
+<p>使用 <span class="math inline">\(e^{a_v^j}\)</span> 作为权重是想让权重总是大于 <span class="math inline">\(0\)</span>。</p>
+<h2 id="局部敏感哈希">局部敏感哈希</h2>
+<p>欧式空间中，将高维空间的点映射到低维空间：</p>
+<ul>
+<li>原本相近的点在低维空间肯定依然相近</li>
+<li>原本远离的点则有一定概率变成相近的点</li>
+</ul>
+<p><span id="eq:lsh_hash"><span class="math display">\[h^{\v{x},b} = \left\lfloor\frac{\v{v}\cdot\v{x} + b}{w}\right\rfloor\qquad(32)\]</span></span></p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-sedhain2015autorec">
@@ -1332,6 +1476,21 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
 </div>
 <div id="ref-zhou2019deep">
 <p>[12] ZHOU G, MOU N, FAN Y, 等. Deep interest evolution network for click-through rate prediction[C]//Proceedings of the AAAI conference on artificial intelligence..</p>
+</div>
+<div id="ref-zheng2018drn">
+<p>[13] ZHENG G, ZHANG F, ZHENG Z, 等. DRN: A deep reinforcement learning framework for news recommendation[C]//Proceedings of the 2018 World Wide Web Conference..</p>
+</div>
+<div id="ref-mikolov2013efficient">
+<p>[14] MIKOLOV T, CHEN K, CORRADO G, 等. Efficient estimation of word representations in vector space[J]. arXiv preprint arXiv:1301.3781, 2013.</p>
+</div>
+<div id="ref-rong2014word2vec">
+<p>[15] RONG X. word2vec parameter learning explained[J]. arXiv preprint arXiv:1411.2738, 2014.</p>
+</div>
+<div id="ref-wang2018billion">
+<p>[16] WANG J, HUANG P, ZHAO H, 等. Billion-scale commodity embedding for e-commerce recommendation in alibaba[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining..</p>
+</div>
+<div id="ref-grover2016node2vec">
+<p>[17] GROVER A, LESKOVEC J. node2vec: Scalable feature learning for networks[C]//Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining..</p>
 </div>
 </div>
 
@@ -1398,6 +1557,32 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
   <ul>
   <li><a href="#augru">AUGRU</a></li>
   </ul></li>
+  <li><a href="#drn">DRN</a>
+  <ul>
+  <li><a href="#竞争梯度下降法">竞争梯度下降法</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#embedding">Embedding</a>
+  <ul>
+  <li><a href="#不同-embedding-的优缺点">不同 Embedding 的优缺点</a></li>
+  <li><a href="#word2vec">Word2vec</a>
+  <ul>
+  <li><a href="#基本结构">基本结构</a></li>
+  </ul></li>
+  <li><a href="#item2vec">Item2vec</a></li>
+  <li><a href="#deepwalk">DeepWalk</a>
+  <ul>
+  <li><a href="#随机游走的转移概率wang2018billion">随机游走的转移概率<span class="citation" data-cites="wang2018billion"><sup>[<span>16</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#node2vec">node2vec</a>
+  <ul>
+  <li><a href="#跳转概率">跳转概率</a></li>
+  </ul></li>
+  <li><a href="#eges">EGES</a>
+  <ul>
+  <li><a href="#隐层向量">隐层向量</a></li>
+  </ul></li>
+  <li><a href="#局部敏感哈希">局部敏感哈希</a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -1411,12 +1596,6 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/9c2e45e38837f0f51a3959bf498a2cc35818f0d3" title='最后修改者 Kai Zhang | 2020-10-14 15:16:48 &#43;0800' target="_blank" rel="noopener">
-      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-10-14 15:16:48 &#43;0800</span>
-    </a>
-  </div>
 
 
 
@@ -1494,6 +1673,7 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
         median: ["\\mathrm{median}"],
         model: ["\\mathrm{model}"],
         R: ["\\mathbb{R}"],
+        rand: ["\\mathrm{rand}"],
         rel: ["\\mathrm{rel}"],
         ReLU: ["\\mathrm{ReLU}"],
         set: ["{\\mathbb{#1}}", 1],
