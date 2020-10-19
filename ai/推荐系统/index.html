@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。">
+<meta name="description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="推荐系统" />
-<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
+<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/ai/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" />
 
@@ -14,7 +14,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.09a8a8db5a7206b5b027db38160bdb070a300ab7602803af5b5e39ab95597813.js" integrity="sha256-Caio21pyBrWwJ9s4FgvbBwowCrdgKAOvW145q5VZeBM="></script>
+<script defer src="/note/cn.search.min.5999768441b582126ac0559aa06ca806d1b981b35b92488f1a10f14f440f12a4.js" integrity="sha256-WZl2hEG1ghJqwFWaoGyoBtG5gbNbkkiPGhDxT0QPEqQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -132,7 +132,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/ai/machine_learning/" class="">机器学习</a>
+    <a href="https://kaizhang91.github.io/note/ai/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="">机器学习</a>
   
 
         </li>
@@ -924,16 +924,21 @@ https://github.com/alex-shpak/hugo-book
 <td>转化率</td>
 </tr>
 <tr class="even">
+<td>DMP</td>
+<td>Data Management Platform</td>
+<td>数据管理平台</td>
+</tr>
+<tr class="odd">
 <td>I</td>
 <td>Item</td>
 <td>物品</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>MLP</td>
 <td>Multilayer Perception</td>
 <td>多层感知机</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>U</td>
 <td>User</td>
 <td>用户</td>
@@ -1439,6 +1444,63 @@ P(v_j\mid v_i) =
 <li>原本远离的点则有一定概率变成相近的点</li>
 </ul>
 <p><span id="eq:lsh_hash"><span class="math display">\[h^{\v{x},b} = \left\lfloor\frac{\v{v}\cdot\v{x} + b}{w}\right\rfloor\qquad(32)\]</span></span></p>
+<h1 id="特征工程">特征工程</h1>
+<h2 id="原则">原则</h2>
+<ul>
+<li>尽可能暴露有用信息</li>
+<li>尽量摈弃冗余信息</li>
+</ul>
+<h1 id="召回策略">召回策略</h1>
+<div id="tbl:recall_sort">
+<table>
+<caption>表 4: 召回层与排序层</caption>
+<thead>
+<tr class="header">
+<th>层</th>
+<th>目标</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>召回层</td>
+<td>尽量让用户感兴趣的物品被快速召回</td>
+<td>候选集合大、速度快、模型简单、特征较少</td>
+</tr>
+<tr class="even">
+<td>排序层</td>
+<td>得到精准的排序结果</td>
+<td>候选集合小、模型复杂、特征较多</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="冷启动的解决办法">冷启动的解决办法</h1>
+<h2 id="基于规则的冷启动">基于规则的冷启动</h2>
+<h2 id="丰富冷启动过程中可获得的用户和物品特征">丰富冷启动过程中可获得的用户和物品特征</h2>
+<ul>
+<li>用户的注册信息</li>
+<li>第三方 DMP 提供的用户信息</li>
+<li>物品的内容特征</li>
+<li>引导用户输入的冷启动特征</li>
+</ul>
+<h2 id="利用主动学习迁移学习和探索与利用机制">利用主动学习、迁移学习和“探索与利用”机制</h2>
+<h3 id="探索与利用机制">“探索与利用”机制</h3>
+<p>UCB (Upper Confidence Bound，置信区间上界)：</p>
+<p><span id="eq:ucb"><span class="math display">\[\mathrm{UCB}(j) = \mean{x_j}+\sqrt{\frac{2\ln n}{n_j}}\qquad(33)\]</span></span></p>
+<p>其中，<span class="math inline">\(\mean{x_j}\)</span> 为第 <span class="math inline">\(j\)</span> 个物品的平均回报；<span class="math inline">\(n_j\)</span> 为第 <span class="math inline">\(j\)</span> 个物品的曝光次数； <span class="math inline">\(n\)</span> 为所有物品的曝光次数。可以看到，UCB 倾向于推荐冷启动的物品。</p>
+<h1 id="推荐模型离线训练">推荐模型离线训练</h1>
+<h2 id="spark-mlib">Spark MLib</h2>
+<h2 id="parameter-server">Parameter Server</h2>
+<ul>
+<li>分布式梯度下降策略：同步阻断 -&gt; 异步非阻断</li>
+<li>多 server</li>
+<li>使用一致性哈希、参数范围拉取、参数范围推送，减小带宽</li>
+</ul>
+<h1 id="推荐系统的评估">推荐系统的评估</h1>
+<h2 id="holdout-检验">Holdout 检验</h2>
+<h2 id="k-fold-交叉验证">K-fold 交叉验证</h2>
+<p>把 K 次评估指标的平均值作为最终的评估指标。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-sedhain2015autorec">
@@ -1584,6 +1646,30 @@ P(v_j\mid v_i) =
   </ul></li>
   <li><a href="#局部敏感哈希">局部敏感哈希</a></li>
   </ul></li>
+  <li><a href="#特征工程">特征工程</a>
+  <ul>
+  <li><a href="#原则">原则</a></li>
+  </ul></li>
+  <li><a href="#召回策略">召回策略</a></li>
+  <li><a href="#冷启动的解决办法">冷启动的解决办法</a>
+  <ul>
+  <li><a href="#基于规则的冷启动">基于规则的冷启动</a></li>
+  <li><a href="#丰富冷启动过程中可获得的用户和物品特征">丰富冷启动过程中可获得的用户和物品特征</a></li>
+  <li><a href="#利用主动学习迁移学习和探索与利用机制">利用主动学习、迁移学习和“探索与利用”机制</a>
+  <ul>
+  <li><a href="#探索与利用机制">“探索与利用”机制</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#推荐模型离线训练">推荐模型离线训练</a>
+  <ul>
+  <li><a href="#spark-mlib">Spark MLib</a></li>
+  <li><a href="#parameter-server">Parameter Server</a></li>
+  </ul></li>
+  <li><a href="#推荐系统的评估">推荐系统的评估</a>
+  <ul>
+  <li><a href="#holdout-检验">Holdout 检验</a></li>
+  <li><a href="#k-fold-交叉验证">K-fold 交叉验证</a></li>
+  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -1669,7 +1755,7 @@ P(v_j\mid v_i) =
         log: ["\\mathrm{log}\\,"],
         MAP: ["\\mathrm{MAP}"],
         m: ["{\\bm{\\mathrm{#1}}}", 1],
-        mean: ["{\\bar{#1}}", 1],
+        mean: ["{\\overline{#1}}", 1],
         median: ["\\mathrm{median}"],
         model: ["\\mathrm{model}"],
         R: ["\\mathbb{R}"],

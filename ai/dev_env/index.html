@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。">
+<meta name="description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="开发环境" />
-<meta property="og:description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。" />
+<meta property="og:description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/ai/dev_env/" />
-<meta property="article:modified_time" content="2020-10-14T07:16:48+00:00" />
+<meta property="article:modified_time" content="2020-10-19T11:27:54+00:00" />
 <title>开发环境 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.09a8a8db5a7206b5b027db38160bdb070a300ab7602803af5b5e39ab95597813.js" integrity="sha256-Caio21pyBrWwJ9s4FgvbBwowCrdgKAOvW145q5VZeBM="></script>
+<script defer src="/note/cn.search.min.5999768441b582126ac0559aa06ca806d1b981b35b92488f1a10f14f440f12a4.js" integrity="sha256-WZl2hEG1ghJqwFWaoGyoBtG5gbNbkkiPGhDxT0QPEqQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -132,7 +132,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/ai/machine_learning/" class="">机器学习</a>
+    <a href="https://kaizhang91.github.io/note/ai/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="">机器学习</a>
   
 
         </li>
@@ -908,6 +908,14 @@ https://github.com/alex-shpak/hugo-book
 </thead>
 <tbody>
 <tr class="odd">
+<td>CUDA 11.1</td>
+<td>&gt;= 455.23.04</td>
+</tr>
+<tr class="even">
+<td>CUDA 11.0</td>
+<td>&gt;= 450.36.06</td>
+</tr>
+<tr class="odd">
 <td>CUDA 10.2</td>
 <td>&gt;= 440.33</td>
 </tr>
@@ -1064,9 +1072,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/9c2e45e38837f0f51a3959bf498a2cc35818f0d3" title='最后修改者 Kai Zhang | 2020-10-14 15:16:48 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/e3cc513ceddcfc015942d02c0d074a77a97408ff" title='最后修改者 Kai Zhang | 2020-10-19 19:27:54 &#43;0800' target="_blank" rel="noopener">
       <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-10-14 15:16:48 &#43;0800</span>
+      <span>2020-10-19 19:27:54 &#43;0800</span>
     </a>
   </div>
 
@@ -1142,7 +1150,7 @@ https://github.com/alex-shpak/hugo-book
         log: ["\\mathrm{log}\\,"],
         MAP: ["\\mathrm{MAP}"],
         m: ["{\\bm{\\mathrm{#1}}}", 1],
-        mean: ["{\\bar{#1}}", 1],
+        mean: ["{\\overline{#1}}", 1],
         median: ["\\mathrm{median}"],
         model: ["\\mathrm{model}"],
         R: ["\\mathbb{R}"],
