@@ -80,13 +80,13 @@ $$ \FPR = \frac{\FP}{\FP + \TN}$$ {#eq:fpr}
 
 ## ROC 与 Precision-Recall 曲线[@ml_roc]
 
-![一个 ROC 与 Precision-Recall 曲线例子]({{< static_ref "fig/ai/machine_learning/roc_pr.png" >}}){#fig:roc_pr width=80%}
+![一个 ROC 与 Precision-Recall 曲线例子]({{< static_ref "fig/AI/机器学习/roc_pr.png" >}}){#fig:roc_pr width=80%}
 
-![ROC 与 Precision-Recall 曲线随阈值的动态变化]({{< static_ref "fig/ai/machine_learning/roc_pr.gif" >}}){#fig:roc_pr_dynamic width=80%}
+![ROC 与 Precision-Recall 曲线随阈值的动态变化]({{< static_ref "fig/AI/机器学习/roc_pr.gif" >}}){#fig:roc_pr_dynamic width=80%}
 
 ### ROC 与 P-R 曲线的比较[@ml_roc]
 
-![样本不平衡时，ROC 与 Precision-Recall 曲线的比较]({{< static_ref "fig/ai/machine_learning/roc_pr_imbalance.png" >}}){#fig:roc_pr_imbalance width=80%}
+![样本不平衡时，ROC 与 Precision-Recall 曲线的比较]({{< static_ref "fig/AI/机器学习/roc_pr_imbalance.png" >}}){#fig:roc_pr_imbalance width=80%}
 
 - 当正负样本不平衡时，P-R 曲线对误报更敏感
 
@@ -94,7 +94,7 @@ $$ \FPR = \frac{\FP}{\FP + \TN}$$ {#eq:fpr}
 
 #### ROC AUC
 
-![ROC AUC 示意图]({{< static_ref "fig/ai/machine_learning/roc_auc.svg" >}}){#fig:roc_auc width=80%}
+![ROC AUC 示意图]({{< static_ref "fig/AI/机器学习/roc_auc.svg" >}}){#fig:roc_auc width=80%}
 
 ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。[@ml_roc_auc]
 
