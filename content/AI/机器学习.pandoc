@@ -27,25 +27,6 @@ $$ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documen
 
 只考虑 top n 个查询结果。[@ml_evaluation_measures]
 
-### AveP(Average Precision)[@ml_evaluation_measures]
-
-$$\AveP = \int_0^1 p(r)\d r$$ {#eq:AveP}
-$$\AveP = \sum_{k=1}^n P(k)\Delta r(k)$$ {#eq:AveP_sum}
-$$\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}$$ {#eq:AveP_k}
-
-其中，
-
-- $k$ 表示在检索文档序列里的排名
-- $n$ 表示检索文档的总数，$P(k)$ 表示 top k 的精确率
-- $\Delta r(k)$ 表示从项 $k-1$ 到 $k$ 的召回率变化
-- $\rel(k)$ 是指示函数，项 $k$ 是相关文档时为 $1$，项 $k$ 不是相关文档时为 $0$
-
-### MAP(Mean Average Precision)
-
-$$\MAP = \frac{\sum_{q=1}^Q \AveP(q)}{Q}$$ {#eq:map}
-
-其中 $Q$ 表示查询总数。
-
 ## 召回率（Recall）
 
 正样本有多少被找出来了（召回了多少）[@ml_precision_recall]：
@@ -101,6 +82,27 @@ ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）
 #### PR AUC
 
 PR AUC 表示在不同召回率阈值下的平均精确率。[@ml_pr_auc]
+
+## AveP(Average Precision)[@ml_evaluation_measures]
+
+AveP 为 PR AUC，具体地：
+
+$$\AveP = \int_0^1 p(r)\d r$$ {#eq:AveP}
+$$\AveP = \sum_{k=1}^n P(k)\Delta r(k)$$ {#eq:AveP_sum}
+$$\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}$$ {#eq:AveP_k}
+
+其中，
+
+- $k$ 表示在检索文档序列里的排名
+- $n$ 表示检索文档的总数，$P(k)$ 表示 top k 的精确率
+- $\Delta r(k)$ 表示从项 $k-1$ 到 $k$ 的召回率变化
+- $\rel(k)$ 是指示函数，项 $k$ 是相关文档时为 $1$，项 $k$ 不是相关文档时为 $0$
+
+## MAP(Mean Average Precision)
+
+$$\MAP = \frac{\sum_{q=1}^Q \AveP(q)}{Q}$$ {#eq:map}
+
+其中 $Q$ 表示查询总数。
 
 # 信息论
 
