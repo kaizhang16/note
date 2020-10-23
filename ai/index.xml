@@ -53,7 +53,11 @@ Output:
 在信息检索领域这样定义[2]：
 \[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]
 P@n 只考虑 top n 个查询结果。[2]
-AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]</description>
+召回率（Recall） 正样本有多少被找出来了（召回了多少）[1]：
+\[R = \frac{\TP}{\TP + \FN}\qquad(3)\]
+准确率（Accuracy） 预测正确的结果占总样本的比例[3]：
+\[A = \frac{\TP+\TN}{\TP+\TN+\FP+\FN}\qquad(4)\]
+\(F_1\) Precision 与 Recall 的调和均值：</description>
     </item>
     
   </channel>

@@ -9,14 +9,22 @@
 在信息检索领域这样定义[2]：
 \[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]
 P@n 只考虑 top n 个查询结果。[2]
-AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]">
+召回率（Recall） 正样本有多少被找出来了（召回了多少）[1]：
+\[R = \frac{\TP}{\TP &#43; \FN}\qquad(3)\]
+准确率（Accuracy） 预测正确的结果占总样本的比例[3]：
+\[A = \frac{\TP&#43;\TN}{\TP&#43;\TN&#43;\FP&#43;\FN}\qquad(4)\]
+\(F_1\) Precision 与 Recall 的调和均值：">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="机器学习" />
 <meta property="og:description" content="中位数 评估指标  表 1: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[1]：
 \[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]
 在信息检索领域这样定义[2]：
 \[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]
 P@n 只考虑 top n 个查询结果。[2]
-AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\] \[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]" />
+召回率（Recall） 正样本有多少被找出来了（召回了多少）[1]：
+\[R = \frac{\TP}{\TP &#43; \FN}\qquad(3)\]
+准确率（Accuracy） 预测正确的结果占总样本的比例[3]：
+\[A = \frac{\TP&#43;\TN}{\TP&#43;\TN&#43;\FP&#43;\FN}\qquad(4)\]
+\(F_1\) Precision 与 Recall 的调和均值：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/ai/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
 
@@ -24,7 +32,7 @@ AveP(Average Precision)[2] \[\AveP = \int_0^1 p(r)\d r\qquad(3)\] \[\AveP = \sum
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.5999768441b582126ac0559aa06ca806d1b981b35b92488f1a10f14f440f12a4.js" integrity="sha256-WZl2hEG1ghJqwFWaoGyoBtG5gbNbkkiPGhDxT0QPEqQ="></script>
+<script defer src="/note/cn.search.min.0feff363f127d95b3879f1fe22029ca26cc71ca108753b17e8983f4fa73e1bae.js" integrity="sha256-D&#43;/zY/En2Vs4efH&#43;IgKcomzHHKEIdTsX6Jg/T6c&#43;G64="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -939,34 +947,22 @@ https://github.com/alex-shpak/hugo-book
 <p><span id="eq:precision_information_retrieval"><span class="math display">\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]</span></span></p>
 <h3 id="pn">P@n</h3>
 <p>只考虑 top n 个查询结果。<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">2</a>]</sup></span></p>
-<h3 id="avepaverage-precisionml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">2</a>]</sup></span></h3>
-<p><span id="eq:AveP"><span class="math display">\[\AveP = \int_0^1 p(r)\d r\qquad(3)\]</span></span> <span id="eq:AveP_sum"><span class="math display">\[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(4)\]</span></span> <span id="eq:AveP_k"><span class="math display">\[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(5)\]</span></span></p>
-<p>其中，</p>
-<ul>
-<li><span class="math inline">\(k\)</span> 表示在检索文档序列里的排名</li>
-<li><span class="math inline">\(n\)</span> 表示检索文档的总数，<span class="math inline">\(P(k)\)</span> 表示 top k 的精确率</li>
-<li><span class="math inline">\(\Delta r(k)\)</span> 表示从项 <span class="math inline">\(k-1\)</span> 到 <span class="math inline">\(k\)</span> 的召回率变化</li>
-<li><span class="math inline">\(\rel(k)\)</span> 是指示函数，项 <span class="math inline">\(k\)</span> 是相关文档时为 <span class="math inline">\(1\)</span>，项 <span class="math inline">\(k\)</span> 不是相关文档时为 <span class="math inline">\(0\)</span></li>
-</ul>
-<h3 id="mapmean-average-precision">MAP(Mean Average Precision)</h3>
-<p><span id="eq:map"><span class="math display">\[\MAP = \frac{\sum_{q=1}^Q \AveP(q)}{Q}\qquad(6)\]</span></span></p>
-<p>其中 <span class="math inline">\(Q\)</span> 表示查询总数。</p>
 <h2 id="召回率recall">召回率（Recall）</h2>
 <p>正样本有多少被找出来了（召回了多少）<span class="citation" data-cites="ml_precision_recall"><sup>[<a href="#ref-ml_precision_recall" role="doc-biblioref">1</a>]</sup></span>：</p>
-<p><span id="eq:recall"><span class="math display">\[R = \frac{\TP}{\TP + \FN}\qquad(7)\]</span></span></p>
+<p><span id="eq:recall"><span class="math display">\[R = \frac{\TP}{\TP + \FN}\qquad(3)\]</span></span></p>
 <h2 id="准确率accuracy">准确率（Accuracy）</h2>
 <p>预测正确的结果占总样本的比例<span class="citation" data-cites="ml_accuracy"><sup>[<a href="#ref-ml_accuracy" role="doc-biblioref">3</a>]</sup></span>：</p>
-<p><span id="eq:accuracy"><span class="math display">\[A = \frac{\TP+\TN}{\TP+\TN+\FP+\FN}\qquad(8)\]</span></span></p>
+<p><span id="eq:accuracy"><span class="math display">\[A = \frac{\TP+\TN}{\TP+\TN+\FP+\FN}\qquad(4)\]</span></span></p>
 <h2 id="f_1"><span class="math inline">\(F_1\)</span></h2>
 <p>Precision 与 Recall 的调和均值：</p>
-<p><span id="eq:f1"><span class="math display">\[\frac{2}{F_1} = \frac{1}{P} + \frac{1}{R}\qquad(9)\]</span></span></p>
+<p><span id="eq:f1"><span class="math display">\[\frac{2}{F_1} = \frac{1}{P} + \frac{1}{R}\qquad(5)\]</span></span></p>
 <h2 id="真阳性率tprml_tpr_fpr">真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">4</a>]</sup></span></h2>
 <p>在所有实际为阳性的样本中，被正确地判断为阳性之比率：</p>
-<p><span id="eq:tpr"><span class="math display">\[ \TPR = \frac{\TP}{\TP + \FN}\qquad(10)\]</span></span></p>
+<p><span id="eq:tpr"><span class="math display">\[ \TPR = \frac{\TP}{\TP + \FN}\qquad(6)\]</span></span></p>
 <p>与召回率定义相同。</p>
 <h2 id="伪阳性率fprml_tpr_fpr">伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">4</a>]</sup></span></h2>
 <p>在所有实际为阴性的样本中，被错误地判断为阳性之比率：</p>
-<p><span id="eq:fpr"><span class="math display">\[ \FPR = \frac{\FP}{\FP + \TN}\qquad(11)\]</span></span></p>
+<p><span id="eq:fpr"><span class="math display">\[ \FPR = \frac{\FP}{\FP + \TN}\qquad(7)\]</span></span></p>
 <h2 id="roc-与-precision-recall-曲线ml_roc">ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">5</a>]</sup></span></h2>
 <figure>
 <img src="https://kaizhang91.github.io/note/fig/AI/机器学习/roc_pr.png" id="fig:roc_pr" style="width:80.0%" alt="图 1: 一个 ROC 与 Precision-Recall 曲线例子" /><figcaption aria-hidden="true">图 1: 一个 ROC 与 Precision-Recall 曲线例子</figcaption>
@@ -989,6 +985,19 @@ https://github.com/alex-shpak/hugo-book
 <p>ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。<span class="citation" data-cites="ml_roc_auc"><sup>[<a href="#ref-ml_roc_auc" role="doc-biblioref">6</a>]</sup></span></p>
 <h4 id="pr-auc">PR AUC</h4>
 <p>PR AUC 表示在不同召回率阈值下的平均精确率。<span class="citation" data-cites="ml_pr_auc"><sup>[<a href="#ref-ml_pr_auc" role="doc-biblioref">7</a>]</sup></span></p>
+<h2 id="avepaverage-precisionml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">2</a>]</sup></span></h2>
+<p>AveP 为 PR AUC，具体地：</p>
+<p><span id="eq:AveP"><span class="math display">\[\AveP = \int_0^1 p(r)\d r\qquad(8)\]</span></span> <span id="eq:AveP_sum"><span class="math display">\[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(9)\]</span></span> <span id="eq:AveP_k"><span class="math display">\[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(10)\]</span></span></p>
+<p>其中，</p>
+<ul>
+<li><span class="math inline">\(k\)</span> 表示在检索文档序列里的排名</li>
+<li><span class="math inline">\(n\)</span> 表示检索文档的总数，<span class="math inline">\(P(k)\)</span> 表示 top k 的精确率</li>
+<li><span class="math inline">\(\Delta r(k)\)</span> 表示从项 <span class="math inline">\(k-1\)</span> 到 <span class="math inline">\(k\)</span> 的召回率变化</li>
+<li><span class="math inline">\(\rel(k)\)</span> 是指示函数，项 <span class="math inline">\(k\)</span> 是相关文档时为 <span class="math inline">\(1\)</span>，项 <span class="math inline">\(k\)</span> 不是相关文档时为 <span class="math inline">\(0\)</span></li>
+</ul>
+<h2 id="mapmean-average-precision">MAP(Mean Average Precision)</h2>
+<p><span id="eq:map"><span class="math display">\[\MAP = \frac{\sum_{q=1}^Q \AveP(q)}{Q}\qquad(11)\]</span></span></p>
+<p>其中 <span class="math inline">\(Q\)</span> 表示查询总数。</p>
 <h1 id="信息论">信息论</h1>
 <h2 id="条件熵conditional_entropy">条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<a href="#ref-conditional_entropy" role="doc-biblioref">8</a>]</sup></span></h2>
 <p><span id="eq:conditional_entropy"><span class="math display">\[
@@ -1189,8 +1198,6 @@ L(y, F) =
   <li><a href="#精确率precision">精确率（Precision）</a>
   <ul>
   <li><a href="#pn">P@n</a></li>
-  <li><a href="#avepaverage-precisionml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#mapmean-average-precision">MAP(Mean Average Precision)</a></li>
   </ul></li>
   <li><a href="#召回率recall">召回率（Recall）</a></li>
   <li><a href="#准确率accuracy">准确率（Accuracy）</a></li>
@@ -1202,6 +1209,8 @@ L(y, F) =
   <li><a href="#roc-与-p-r-曲线的比较ml_roc">ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<span>5</span>]</sup></span></a></li>
   <li><a href="#aucarea-under-the-curve">AUC(Area Under the Curve)</a></li>
   </ul></li>
+  <li><a href="#avepaverage-precisionml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#mapmean-average-precision">MAP(Mean Average Precision)</a></li>
   </ul></li>
   <li><a href="#信息论">信息论</a>
   <ul>
