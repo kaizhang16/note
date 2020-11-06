@@ -7,6 +7,7 @@ type: docs
 
 - [AI]({{< relref "/AI/dev_env" >}})
 - [CS]({{< relref "/CS/http" >}})
+- [NLP]({{< relref "/NLP/Transformer" >}})
 - [编程]({{< relref "/编程/bash" >}})
 - [工具]({{< relref "/工具/git" >}})
 - [视觉]({{< relref "/视觉/unity" >}})

@@ -1,0 +1,72 @@
+---
+title: "Transformer"
+---
+
+# 输入输出[@jay2018transformer]
+
+![输入输出](io.png){#fig:io}
+
+# Self-Attention 步骤[@jay2018transformer]
+
+## Embedding
+
+![Embedding](embedding.png){#fig:embedding}
+
+把符号变成向量。
+
+> $d_e = 512$
+
+## Query、Key 和 Value 向量
+
+![Q、K 和 V](q_k_v.png){#fig:q_k_v}
+
+通过乘 $\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}$，每个单词都可以得到自己的
+$\v{q}, \v{k}, \v{v}$ 向量。
+
+> - $d_q = d_k = 64$
+> - $d_v = 64$
+
+## Self-Attention
+
+![Self-Attention](self_attention.png){#fig:self_attention}
+
+## 矩阵形式
+
+![矩阵形式的 Self-Attention](self_attention_matrix.png){#fig:self_attention_matrix}
+
+## Multi-Head
+
+![Multi-Head](attention_multi_head.png){#fig:attention_multi_head}
+
+多头可以区分不同的表示子空间。
+
+![Multi-Head 输出](attention_multi_head_output.png){#fig:attention_multi_head_output}
+
+## 总结
+
+![Self-Attention 总结](attention_summary.png){#fig:attention_summary}
+
+# Positional Encoding[@jay2018transformer]
+
+![Positional Encoding](positional_encoding.png){#fig:positional_encoding}
+
+# Residual[@jay2018transformer]
+
+![残差与 LayerNorm](residual_layer_norm.png){#fig:residual_layer_norm}
+
+# Decoder[@jay2018transformer]
+
+![Decoder](decoder.gif){#fig:decoder}
+
+- Masked Multi-Head Attention 层只考虑上文，会屏蔽下文
+- Encoder-Decoder Attention 层的 Q 来自于下层，K、V 来自于 encoder
+
+# 模型输出
+
+![模型输出](decoder_output_softmax.png){#fig:decoder_output_softmax}
+
+# 模型结构
+
+![模型结构](model_architecture.png){#fig:model_architecture width=40%}
+
+# 参考文献

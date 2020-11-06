@@ -1,0 +1,62 @@
+---
+title: "LSTM 与 GRU"
+---
+
+# LSTM 与 GRU
+
+请参考 <https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21>。
+
+## LSTM
+
+请参考 <https://colah.github.io/posts/2015-08-Understanding-LSTMs/>。
+
+Forget gate:
+
+$$
+f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
+$$ {#eq:lstm_forget_gate}
+
+Input gate:
+
+$$
+i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
+$$ {#eq:lstm_input_gate}
+
+Cell state:
+
+$$
+\begin{align}
+\tilde{C}_t &= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\
+C_t &= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
+\end{align}
+$$ {#eq:lstm_C}
+
+Output:
+
+$$
+\begin{align}
+o_t &= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+h_t &= o_t \odot \tanh(C_t)
+\end{align}
+$$ {#eq:lstm_output}
+
+## GRU[@cho2014learning; @zhou2019deep]
+
+Reset Gate:
+
+$$\v{r}_t = \sigma(\m{W}^r\v{x}_t + \m{U}^r\v{h}_{t-1} + \v{b}^r)$$ {#eq:gru_reset_gate}
+
+Update Gate:
+
+$$\v{u}_t = \sigma(\m{W}^u\v{x}_t + \m{U}^u\v{h}_{t-1} + \v{b}^u)$$ {#eq:gru_update_gate}
+
+Output:
+
+$$
+\begin{align}
+\tilde{\v{h}}_t &= \tanh(\m{W}^h\v{x}_t + \v{r}_t \odot \m{U}^h_{t-1}\v{h}_{t-1} + \v{b}^h) \\
+\v{h}_t &= \v{u}_t \odot \tilde{h}_t + (1-\v{u}_t) \odot \v{h}_{t-1}
+\end{align}
+$$ {#eq:gru}
+
+# 参考文献

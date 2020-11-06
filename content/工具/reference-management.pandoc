@@ -21,7 +21,7 @@ title: "文献管理"
 
 ### Zotfile
 
-- 访问 <https://github.com/jlegewie/zotfile/releases>，下载最新版本的 xpi 文件
+- 插件在坚果云里的`小宝贝/zotfile-5.1.0.kai-fx.xpi`
 - 打开`工具 -> 插件 -> 齿轮图标 -> Install Add-on From File...`，安装到 Zotero
 - 重启 Zotero
 - 打开`编辑 -> 首选项 -> 高级 -> 文件和文件夹`，把`根目录`改为坚果云的某个目录，
@@ -35,8 +35,8 @@ title: "文献管理"
     - 选中 `Use subfolder defined by`，后面填入 `/%c`，表示会按`条目`左侧的分类创
       建文件夹存储文件
   - 打开 `Renaming Rules`：
-    - `Format for all Item Type except Patents` 写 `{%F_}{%y_}{%t}`
-    - `Format for Patents` 写 `{%F_}{%y_}{%t}`
+    - `Format for all Item Type except Patents` 写 `{%a_}{%y_}{%t}`
+    - `Format for Patents` 写 `{%a_}{%y_}{%t}`
   - 打开 `Advanced Settings`：
     - `Only work with the following filetypes` 写 `pdf,doc,docx,txt,rtf,djvu,caj,epub`
 

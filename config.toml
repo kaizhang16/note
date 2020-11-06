@@ -5,6 +5,7 @@ title = "凯的笔记"
 
 theme = "book"
 enableGitInfo = true
+disablePathToLower = true
 
 [params]
   BookRepo = "https://github.com/kaizhang91/note"
