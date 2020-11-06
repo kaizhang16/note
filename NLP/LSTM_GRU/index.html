@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="cn" dir=>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+Forget gate:
+\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
+Input gate:
+\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] &#43; b_i) \qquad(2)\]
+Cell state:
+\[ \begin{align} \tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] &#43; b_C) \\ C_t &amp;= f_t \odot C_{t-1} &#43; i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
+Output:
+\[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="LSTM 与 GRU" />
+<meta property="og:description" content="LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+Forget gate:
+\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
+Input gate:
+\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] &#43; b_i) \qquad(2)\]
+Cell state:
+\[ \begin{align} \tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] &#43; b_C) \\ C_t &amp;= f_t \odot C_{t-1} &#43; i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
+Output:
+\[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" />
+<meta property="article:modified_time" content="2020-11-06T14:29:45+00:00" />
+<title>LSTM 与 GRU | 凯的笔记</title>
+<link rel="manifest" href="/note/manifest.json">
+<link rel="icon" href="/note/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
+<script defer src="/note/cn.search.min.0a91f134c17383e7fab01ea108d6e54e8877083b1dbe320adc2049791f846a54.js" integrity="sha256-CpHxNMFzg&#43;f6sB6hCNblToh3CDsdvjIK3CBJeR&#43;EalQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+<link rel="icon" href="/note/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css">
+
+
+
+
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/note"><span>凯的笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="toggle"  />
+    <label for="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="flex justify-between">
+      <a  class="">AI</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/AI/dev_env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" class="">推荐系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="">机器学习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4af17239608ef6224ba6d5135a065aee" class="toggle"  />
+    <label for="section-4af17239608ef6224ba6d5135a065aee" class="flex justify-between">
+      <a  class="">CS</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/http/" class="">HTTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/oauth2/" class="">OAuth 2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/transmission/" class="">传输</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/compress/" class="">压缩</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/security/" class="">安全</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/ci/" class="">持续集成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/database/" class="">数据库</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/data-type/" class="">数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/algorithm/" class="">算法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/encoding/" class="">编码</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/network/" class="">网络</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9bfe21a0187b525fe1f8c33e218fae99" class="toggle" checked />
+    <label for="section-9bfe21a0187b525fe1f8c33e218fae99" class="flex justify-between">
+      <a  class="">NLP</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" class=" active">LSTM 与 GRU</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/NLP/Transformer/" class="">Transformer</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle"  />
+    <label for="section-70bdf8d87af46a79686d31378c1d7d85" class="flex justify-between">
+      <a  class="">工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/ipad/" class="">iPad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/windows/" class="">Windows</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/writing/" class="">写作</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/search/" class="">搜索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/reference-management/" class="">文献管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/build/" class="">构建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/format/" class="">格式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/editor/" class="">编辑器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/project-management/" class="">项目管理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle"  />
+    <label for="section-1f9a426141100f8f7ab323c20cac8352" class="flex justify-between">
+      <a  class="">数学</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/linear_algebra/" class="">线性代数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/statistics/" class="">统计</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
+      <a  class="">编程</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/bash/" class="">Bash</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class="">C&#43;&#43;</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/dhall/" class="">Dhall</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" class="">fish-shell</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/flutter/" class="">Flutter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/golang/" class="">Golang</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/rust/" class="">Rust</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/TeX/" class="">TeX</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/toml/" class="">Toml</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/zsh/" class="">Zsh</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/template/" class="">模板</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1e20c44ce142ce73dcb99537728dc9a3" class="toggle"  />
+    <label for="section-1e20c44ce142ce73dcb99537728dc9a3" class="flex justify-between">
+      <a  class="">视觉</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/unity/" class="">Unity</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/image/" class="">图像</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/video/" class="">视频</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>LSTM 与 GRU</strong>
+
+  <label for="toc-control">
+    
+    <img src="/note/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="lstm-与-gru">LSTM 与 GRU</h1>
+<p>请参考 <a href="https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21" class="uri">https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21</a>。</p>
+<h2 id="lstm">LSTM</h2>
+<p>请参考 <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">https://colah.github.io/posts/2015-08-Understanding-LSTMs/</a>。</p>
+<p>Forget gate:</p>
+<p><span id="eq:lstm_forget_gate"><span class="math display">\[
+f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
+\qquad(1)\]</span></span></p>
+<p>Input gate:</p>
+<p><span id="eq:lstm_input_gate"><span class="math display">\[
+i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
+\qquad(2)\]</span></span></p>
+<p>Cell state:</p>
+<p><span id="eq:lstm_C"><span class="math display">\[
+\begin{align}
+\tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\
+C_t &amp;= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
+\end{align}
+\qquad(3)\]</span></span></p>
+<p>Output:</p>
+<p><span id="eq:lstm_output"><span class="math display">\[
+\begin{align}
+o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+h_t &amp;= o_t \odot \tanh(C_t)
+\end{align}
+\qquad(4)\]</span></span></p>
+<h2 id="grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<a href="#ref-cho2014learning" role="doc-biblioref">1</a>,<a href="#ref-zhou2019deep" role="doc-biblioref">2</a>]</sup></span></h2>
+<p>Reset Gate:</p>
+<p><span id="eq:gru_reset_gate"><span class="math display">\[\v{r}_t = \sigma(\m{W}^r\v{x}_t + \m{U}^r\v{h}_{t-1} + \v{b}^r)\qquad(5)\]</span></span></p>
+<p>Update Gate:</p>
+<p><span id="eq:gru_update_gate"><span class="math display">\[\v{u}_t = \sigma(\m{W}^u\v{x}_t + \m{U}^u\v{h}_{t-1} + \v{b}^u)\qquad(6)\]</span></span></p>
+<p>Output:</p>
+<p><span id="eq:gru"><span class="math display">\[
+\begin{align}
+\tilde{\v{h}}_t &amp;= \tanh(\m{W}^h\v{x}_t + \v{r}_t \odot \m{U}^h_{t-1}\v{h}_{t-1} + \v{b}^h) \\
+\v{h}_t &amp;= \v{u}_t \odot \tilde{h}_t + (1-\v{u}_t) \odot \v{h}_{t-1}
+\end{align}
+\qquad(7)\]</span></span></p>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-cho2014learning">
+<p>[1] CHO K, VAN MERRIËNBOER B, GULCEHRE C, 等. Learning phrase representations using RNN encoder-decoder for statistical machine translation[J]. arXiv preprint arXiv:1406.1078, 2014.</p>
+</div>
+<div id="ref-zhou2019deep">
+<p>[2] ZHOU G, MOU N, FAN Y, 等. Deep interest evolution network for click-through rate prediction[C]//Proceedings of the AAAI conference on artificial intelligence..</p>
+</div>
+</div>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#lstm-与-gru">LSTM 与 GRU</a>
+  <ul>
+  <li><a href="#lstm">LSTM</a></li>
+  <li><a href="#grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<span>1</span>,<span>2</span>]</sup></span></a></li>
+  </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/0f65ab962826a7bc0472699e0d5c007e8a770fb4" title='最后修改者 Kai Zhang | 2020-11-06 22:29:45 &#43;0800' target="_blank" rel="noopener">
+      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-11-06 22:29:45 &#43;0800</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  
+
+ 
+    </aside>
+    
+  </main>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+<script>
+  
+  const tableOfContents = document.getElementById("TableOfContents");
+  const tableOfContents1 = tableOfContents.cloneNode(true);
+  document.querySelector(".book-toc").appendChild(tableOfContents);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
+
+  
+  const searchResults = document.getElementById("book-search-results");
+  document
+    .getElementById("book-search-input")
+    .addEventListener("keyup", (event) => {
+      
+      
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        if (searchResults.childNodes.length > 0) {
+          const searchResult = searchResults.childNodes[0].childNodes[0];
+          window.location.href = searchResult.href;
+        }
+      }
+    });
+
+  
+  MathJax = {
+    tex: {
+      macros: {
+        AveP: ["\\mathrm{AveP}"],
+        bm: ["{\\boldsymbol{#1}}", 1],
+        cos: ["\\mathrm{cos}"],
+        d: ["\\mathrm{d}"],
+        data: ["\\mathrm{data}"],
+        diag: ["\\mathrm{diag}"],
+        e: ["\\mathrm{e}"],
+        FN: ["\\mathrm{FN}"],
+        FP: ["\\mathrm{FP}"],
+        FPR: ["\\mathrm{FPR}"],
+        log: ["\\mathrm{log}\\,"],
+        MAP: ["\\mathrm{MAP}"],
+        m: ["{\\bm{\\mathrm{#1}}}", 1],
+        mean: ["{\\overline{#1}}", 1],
+        median: ["\\mathrm{median}"],
+        model: ["\\mathrm{model}"],
+        R: ["\\mathbb{R}"],
+        rand: ["\\mathrm{rand}"],
+        rel: ["\\mathrm{rel}"],
+        ReLU: ["\\mathrm{ReLU}"],
+        set: ["{\\mathbb{#1}}", 1],
+        sigmoid: ["\\mathrm{sigmoid}"],
+        sign: ["\\mathrm{sign}"],
+        sim: ["\\mathrm{sim}"],
+        SNR: ["\\mathrm{SNR}"],
+        SO: ["\\mathrm{SO}"],
+        tanh: ["\\mathrm{tanh}"],
+        TN: ["\\mathrm{TN}"],
+        TP: ["\\mathrm{TP}"],
+        TPR: ["\\mathrm{TPR}"],
+        transformation: ["{\\mathcal{#1}}", 1],
+        T: ["{#1}^{\\mathsf{T}}", 1],
+        v: ["{\\bm{\\mathrm{#1}}}", 1],
+      },
+    },
+  };
+
+  
+  hljs.initHighlightingOnLoad();
+  
+
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

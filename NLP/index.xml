@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on 凯的笔记</title>
+    <link>https://kaizhang91.github.io/note/NLP/</link>
+    <description>Recent content in NLP on 凯的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/NLP/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LSTM 与 GRU</title>
+      <link>https://kaizhang91.github.io/note/NLP/LSTM_GRU/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/NLP/LSTM_GRU/</guid>
+      <description>LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+Forget gate:
+\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \qquad(1)\]
+Input gate:
+\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \qquad(2)\]
+Cell state:
+\[ \begin{align} \tilde{C}_t &amp;amp;= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\ C_t &amp;amp;= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
+Output:
+\[ \begin{align} o_t &amp;amp;= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\ h_t &amp;amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]</description>
+    </item>
+    
+    <item>
+      <title>Transformer</title>
+      <link>https://kaizhang91.github.io/note/NLP/Transformer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/NLP/Transformer/</guid>
+      <description>输入输出[1]  图 1: 输入输出  Self-Attention 步骤[1] Embedding  图 2: Embedding  把符号变成向量。
+ \(d_e = 512\)
+ Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
+  \(d_q = d_k = 64\) \(d_v = 64\)   Self-Attention  图 4: Self-Attention  矩阵形式  图 5: 矩阵形式的 Self-Attention  Multi-Head  图 6: Multi-Head  多头可以区分不同的表示子空间。</description>
+    </item>
+    
+  </channel>
+</rss>

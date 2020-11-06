@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="cn" dir=>
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &lt;rule_number&gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="网络" />
+<meta property="og:description" content="iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &lt;rule_number&gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/CS/network/" />
+<meta property="article:modified_time" content="2020-10-14T07:16:48+00:00" />
+<title>网络 | 凯的笔记</title>
+<link rel="manifest" href="/note/manifest.json">
+<link rel="icon" href="/note/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
+<script defer src="/note/cn.search.min.0a91f134c17383e7fab01ea108d6e54e8877083b1dbe320adc2049791f846a54.js" integrity="sha256-CpHxNMFzg&#43;f6sB6hCNblToh3CDsdvjIK3CBJeR&#43;EalQ="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+<link rel="icon" href="/note/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css">
+
+
+
+
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/note"><span>凯的笔记</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="搜索" aria-label="搜索" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="toggle"  />
+    <label for="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="flex justify-between">
+      <a  class="">AI</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/AI/dev_env/" class="">开发环境</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" class="">推荐系统</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="">机器学习</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4af17239608ef6224ba6d5135a065aee" class="toggle" checked />
+    <label for="section-4af17239608ef6224ba6d5135a065aee" class="flex justify-between">
+      <a  class="">CS</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/http/" class="">HTTP</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/oauth2/" class="">OAuth 2</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/transmission/" class="">传输</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/compress/" class="">压缩</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/security/" class="">安全</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/ci/" class="">持续集成</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/database/" class="">数据库</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/data-type/" class="">数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/algorithm/" class="">算法</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/encoding/" class="">编码</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/CS/network/" class=" active">网络</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9bfe21a0187b525fe1f8c33e218fae99" class="toggle"  />
+    <label for="section-9bfe21a0187b525fe1f8c33e218fae99" class="flex justify-between">
+      <a  class="">NLP</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" class="">LSTM 与 GRU</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/NLP/Transformer/" class="">Transformer</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-70bdf8d87af46a79686d31378c1d7d85" class="toggle"  />
+    <label for="section-70bdf8d87af46a79686d31378c1d7d85" class="flex justify-between">
+      <a  class="">工具</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/git/" class="">Git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/ipad/" class="">iPad</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/linux/" class="">Linux</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/windows/" class="">Windows</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/writing/" class="">写作</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/search/" class="">搜索</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/reference-management/" class="">文献管理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/build/" class="">构建</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/format/" class="">格式</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/editor/" class="">编辑器</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/project-management/" class="">项目管理</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle"  />
+    <label for="section-1f9a426141100f8f7ab323c20cac8352" class="flex justify-between">
+      <a  class="">数学</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/linear_algebra/" class="">线性代数</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/statistics/" class="">统计</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
+    <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
+      <a  class="">编程</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/bash/" class="">Bash</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class="">C&#43;&#43;</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/css/" class="">CSS</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/dhall/" class="">Dhall</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" class="">fish-shell</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/flutter/" class="">Flutter</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/golang/" class="">Golang</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/html/" class="">HTML</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/js/" class="">JavaScript</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/" class="">Pandoc</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/rust/" class="">Rust</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/TeX/" class="">TeX</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/toml/" class="">Toml</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/zsh/" class="">Zsh</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/template/" class="">模板</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1e20c44ce142ce73dcb99537728dc9a3" class="toggle"  />
+    <label for="section-1e20c44ce142ce73dcb99537728dc9a3" class="flex justify-between">
+      <a  class="">视觉</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/unity/" class="">Unity</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/image/" class="">图像</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/video/" class="">视频</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>网络</strong>
+
+  <label for="toc-control">
+    
+    <img src="/note/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="iptables">iptables</h1>
+<h2 id="列出-nat-规则">列出 nat 规则</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">iptables</span> -t nat -L</span></code></pre></div>
+<h2 id="列出-prerouting-规则">列出 prerouting 规则</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">sudo</span> iptables -t nat -v -L PREROUTING -n --line-number</span></code></pre></div>
+<h2 id="删除-prerouting-规则">删除 prerouting 规则</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">sudo</span> iptables -t nat -D PREROUTING <span class="op">&lt;</span>rule_number<span class="op">&gt;</span></span></code></pre></div>
+<h2 id="端口转发">端口转发</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">iptables</span> -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080</span></code></pre></div>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#iptables">iptables</a>
+  <ul>
+  <li><a href="#列出-nat-规则">列出 nat 规则</a></li>
+  <li><a href="#列出-prerouting-规则">列出 prerouting 规则</a></li>
+  <li><a href="#删除-prerouting-规则">删除 prerouting 规则</a></li>
+  <li><a href="#端口转发">端口转发</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/9c2e45e38837f0f51a3959bf498a2cc35818f0d3" title='最后修改者 Kai Zhang | 2020-10-14 15:16:48 &#43;0800' target="_blank" rel="noopener">
+      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-10-14 15:16:48 &#43;0800</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  
+
+ 
+    </aside>
+    
+  </main>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+
+<script>
+  
+  const tableOfContents = document.getElementById("TableOfContents");
+  const tableOfContents1 = tableOfContents.cloneNode(true);
+  document.querySelector(".book-toc").appendChild(tableOfContents);
+  document.querySelector(".book-header > aside").appendChild(tableOfContents1);
+
+  
+  const searchResults = document.getElementById("book-search-results");
+  document
+    .getElementById("book-search-input")
+    .addEventListener("keyup", (event) => {
+      
+      
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        if (searchResults.childNodes.length > 0) {
+          const searchResult = searchResults.childNodes[0].childNodes[0];
+          window.location.href = searchResult.href;
+        }
+      }
+    });
+
+  
+  MathJax = {
+    tex: {
+      macros: {
+        AveP: ["\\mathrm{AveP}"],
+        bm: ["{\\boldsymbol{#1}}", 1],
+        cos: ["\\mathrm{cos}"],
+        d: ["\\mathrm{d}"],
+        data: ["\\mathrm{data}"],
+        diag: ["\\mathrm{diag}"],
+        e: ["\\mathrm{e}"],
+        FN: ["\\mathrm{FN}"],
+        FP: ["\\mathrm{FP}"],
+        FPR: ["\\mathrm{FPR}"],
+        log: ["\\mathrm{log}\\,"],
+        MAP: ["\\mathrm{MAP}"],
+        m: ["{\\bm{\\mathrm{#1}}}", 1],
+        mean: ["{\\overline{#1}}", 1],
+        median: ["\\mathrm{median}"],
+        model: ["\\mathrm{model}"],
+        R: ["\\mathbb{R}"],
+        rand: ["\\mathrm{rand}"],
+        rel: ["\\mathrm{rel}"],
+        ReLU: ["\\mathrm{ReLU}"],
+        set: ["{\\mathbb{#1}}", 1],
+        sigmoid: ["\\mathrm{sigmoid}"],
+        sign: ["\\mathrm{sign}"],
+        sim: ["\\mathrm{sim}"],
+        SNR: ["\\mathrm{SNR}"],
+        SO: ["\\mathrm{SO}"],
+        tanh: ["\\mathrm{tanh}"],
+        TN: ["\\mathrm{TN}"],
+        TP: ["\\mathrm{TP}"],
+        TPR: ["\\mathrm{TPR}"],
+        transformation: ["{\\mathcal{#1}}", 1],
+        T: ["{#1}^{\\mathsf{T}}", 1],
+        v: ["{\\bm{\\mathrm{#1}}}", 1],
+      },
+    },
+  };
+
+  
+  hljs.initHighlightingOnLoad();
+  
+
+</script>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

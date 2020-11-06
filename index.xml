@@ -98,10 +98,10 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
     
     <item>
       <title>HTTP</title>
-      <link>https://kaizhang91.github.io/note/cs/http/</link>
+      <link>https://kaizhang91.github.io/note/CS/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/http/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/http/</guid>
       <description>URL vs URI[1] URL 用于定位，URI 用于标识。
 httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
  # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.</description>
@@ -131,10 +131,10 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     
     <item>
       <title>Linux</title>
-      <link>https://kaizhang91.github.io/note/cs/linux/</link>
+      <link>https://kaizhang91.github.io/note/CS/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/linux/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/linux/</guid>
       <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
     </item>
     
@@ -148,11 +148,11 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
     </item>
     
     <item>
-      <title>NLP</title>
-      <link>https://kaizhang91.github.io/note/ai/nlp/</link>
+      <title>LSTM 与 GRU</title>
+      <link>https://kaizhang91.github.io/note/NLP/LSTM_GRU/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/ai/nlp/</guid>
+      <guid>https://kaizhang91.github.io/note/NLP/LSTM_GRU/</guid>
       <description>LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
 LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
 Forget gate:
@@ -167,10 +167,10 @@ Output:
     
     <item>
       <title>OAuth 2</title>
-      <link>https://kaizhang91.github.io/note/cs/oauth2/</link>
+      <link>https://kaizhang91.github.io/note/CS/oauth2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/oauth2/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/oauth2/</guid>
       <description>教程  https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2  目录  教程   </description>
     </item>
     
@@ -204,10 +204,10 @@ Output:
     
     <item>
       <title>TeX</title>
-      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/tex/</link>
+      <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/TeX/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/tex/</guid>
+      <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/TeX/</guid>
       <description>矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     函数  表 2: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     集合  表 3: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     统计  表 4: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     数论  表 5: 数论相关表示  数学表达式 含义 \(\TeX\) 表示    \(\lfloor x\rfloor\) 向下取整 \lfloor x\rfloor     运算符  表 6: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 7: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align} \]</description>
     </item>
     
@@ -219,6 +219,18 @@ Output:
       <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/toml/</guid>
       <description>Table[1] [table] 参考文献 [1] TOML. TOML[EB/OL]([日期不详]). https://github.com/toml-lang/toml.
   目录  Table[1] 参考文献   </description>
+    </item>
+    
+    <item>
+      <title>Transformer</title>
+      <link>https://kaizhang91.github.io/note/NLP/Transformer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/NLP/Transformer/</guid>
+      <description>输入输出[1]  图 1: 输入输出  Self-Attention 步骤[1] Embedding  图 2: Embedding  把符号变成向量。
+ \(d_e = 512\)
+ Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
+  \(d_q = d_k = 64\) \(d_v = 64\)   Self-Attention  图 4: Self-Attention  矩阵形式  图 5: 矩阵形式的 Self-Attention  Multi-Head  图 6: Multi-Head  多头可以区分不同的表示子空间。</description>
     </item>
     
     <item>
@@ -267,10 +279,10 @@ PPT 插入圆角矩阵 请参考 https://zhidao.baidu.com/question/520937235.htm
     
     <item>
       <title>传输</title>
-      <link>https://kaizhang91.github.io/note/cs/transmission/</link>
+      <link>https://kaizhang91.github.io/note/CS/transmission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/transmission/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/transmission/</guid>
       <description>SSH Secure Shell。
 只让某些用户使用密码登录 PasswordAuthentication no Match User &amp;lt;username&amp;gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
  SFTP SSH File Transfer Protocol。
@@ -293,10 +305,10 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>压缩</title>
-      <link>https://kaizhang91.github.io/note/cs/compress/</link>
+      <link>https://kaizhang91.github.io/note/CS/compress/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/compress/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/compress/</guid>
       <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 7z 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
   目录  tar  打包时排除某些目录[1] 查看压缩包内容  7z  安装  参考文献   </description>
     </item>
@@ -312,38 +324,38 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>安全</title>
-      <link>https://kaizhang91.github.io/note/cs/security/</link>
+      <link>https://kaizhang91.github.io/note/CS/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/security/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/security/</guid>
       <description>SSH FAQ pam_access(sshd:account): access denied for user 请修改 /etc/security/access.conf 配置。
 GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  SSH  FAQ  pam_access(sshd:account): access denied for user   GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
     </item>
     
     <item>
       <title>开发环境</title>
-      <link>https://kaizhang91.github.io/note/ai/dev_env/</link>
+      <link>https://kaizhang91.github.io/note/AI/dev_env/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/ai/dev_env/</guid>
+      <guid>https://kaizhang91.github.io/note/AI/dev_env/</guid>
       <description>CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &amp;gt;= 455.23.04  CUDA 11.0 &amp;gt;= 450.36.06  CUDA 10.2 &amp;gt;= 440.33  CUDA 10.1 &amp;gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。</description>
     </item>
     
     <item>
       <title>持续集成</title>
-      <link>https://kaizhang91.github.io/note/cs/ci/</link>
+      <link>https://kaizhang91.github.io/note/CS/ci/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/ci/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/ci/</guid>
       <description>Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
     </item>
     
     <item>
       <title>推荐系统</title>
-      <link>https://kaizhang91.github.io/note/ai/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
+      <link>https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/ai/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
       <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT+LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp;amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp;amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
     </item>
     
@@ -360,19 +372,19 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
     
     <item>
       <title>数据库</title>
-      <link>https://kaizhang91.github.io/note/cs/database/</link>
+      <link>https://kaizhang91.github.io/note/CS/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/database/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/database/</guid>
       <description>Entity Relationship Diagram 安装 curl -LO &amp;#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&amp;#39; chmod u+x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.</description>
     </item>
     
     <item>
       <title>数据类型</title>
-      <link>https://kaizhang91.github.io/note/cs/data-type/</link>
+      <link>https://kaizhang91.github.io/note/CS/data-type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/data-type/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/data-type/</guid>
       <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
 数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
   目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
@@ -385,15 +397,15 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       
       <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/reference-management/</guid>
       <description>Zotero 安装 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
-Zotfile  访问 https://github.com/jlegewie/zotfile/releases，下载最新版本的 xpi 文件 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%F_}{%y_}{%t} Format for Patents 写 {%F_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github.</description>
+Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github.</description>
     </item>
     
     <item>
       <title>机器学习</title>
-      <link>https://kaizhang91.github.io/note/ai/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/ai/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description>中位数 评估指标  表 1: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[1]：
 \[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
 在信息检索领域这样定义[2]：
@@ -444,10 +456,10 @@ P@n 只考虑 top n 个查询结果。[2]
     
     <item>
       <title>算法</title>
-      <link>https://kaizhang91.github.io/note/cs/algorithm/</link>
+      <link>https://kaizhang91.github.io/note/CS/algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/algorithm/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/algorithm/</guid>
       <description>数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。
 遍历数组 void traverse(int[] arr) {  for (int i = 0; i &amp;lt; arr.length; i++) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !</description>
     </item>
@@ -484,10 +496,10 @@ P@n 只考虑 top n 个查询结果。[2]
     
     <item>
       <title>编码</title>
-      <link>https://kaizhang91.github.io/note/cs/encoding/</link>
+      <link>https://kaizhang91.github.io/note/CS/encoding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/encoding/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/encoding/</guid>
       <description>GB2312、GBK 和 GB18030 的关系[1] GBK 兼容 GB2312，GB18030 兼容 GBK 与 GB2312。
 参考文献 [1] 知乎. GB2312、GBK、GB18030 这几种字符集的主要区别是什么？[EB/OL](2016–11–08). https://www.zhihu.com/question/19677619/answer/12616362.
   目录  GB2312、GBK 和 GB18030 的关系[1] 参考文献   </description>
@@ -504,10 +516,10 @@ P@n 只考虑 top n 个查询结果。[2]
     
     <item>
       <title>网络</title>
-      <link>https://kaizhang91.github.io/note/cs/network/</link>
+      <link>https://kaizhang91.github.io/note/CS/network/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/cs/network/</guid>
+      <guid>https://kaizhang91.github.io/note/CS/network/</guid>
       <description>iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &amp;lt;rule_number&amp;gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    </description>
     </item>
     
