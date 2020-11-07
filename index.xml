@@ -87,6 +87,17 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
     </item>
     
     <item>
+      <title>GPT-2</title>
+      <link>https://kaizhang91.github.io/note/NLP/GPT-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/NLP/GPT-2/</guid>
+      <description>Auto-Regression[1]  图 1: Auto-Regression  每个记号产生后加入输入序列。
+Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.
+  目录  Auto-Regression[1] Masked Self-Attention[1] Q、K 和 V 输出 参考文献   </description>
+    </item>
+    
+    <item>
       <title>HTML</title>
       <link>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -153,8 +164,8 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/NLP/LSTM_GRU/</guid>
-      <description>LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
-LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+      <description>请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+ LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
 Forget gate:
 \[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \qquad(1)\]
 Input gate:

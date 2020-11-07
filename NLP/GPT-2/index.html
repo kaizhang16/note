@@ -4,18 +4,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数学" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/" />
-
-<title>数学 | 凯的笔记</title>
+<meta name="description" content="Auto-Regression[1]  图 1: Auto-Regression  每个记号产生后加入输入序列。
+Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.
+  目录  Auto-Regression[1] Masked Self-Attention[1] Q、K 和 V 输出 参考文献   ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="GPT-2" />
+<meta property="og:description" content="Auto-Regression[1]  图 1: Auto-Regression  每个记号产生后加入输入序列。
+Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.
+  目录  Auto-Regression[1] Masked Self-Attention[1] Q、K 和 V 输出 参考文献   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/NLP/GPT-2/" />
+<meta property="article:modified_time" content="2020-11-07T15:13:44+00:00" />
+<title>GPT-2 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
 <script defer src="/note/cn.search.min.f64ade983afcccbb05c2464f7d7631fb0175eec07cedf1625cb706c202e05a89.js" integrity="sha256-9kremDr8zLsFwkZPfXYx&#43;wF17sB87fFiXLcGwgLgWok="></script>
-<link rel="alternate" type="application/rss+xml" href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/index.xml" title="凯的笔记" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -316,7 +319,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-9bfe21a0187b525fe1f8c33e218fae99" class="toggle"  />
+    <input type="checkbox" id="section-9bfe21a0187b525fe1f8c33e218fae99" class="toggle" checked />
     <label for="section-9bfe21a0187b525fe1f8c33e218fae99" class="flex justify-between">
       <a  class="">NLP</a>
       <span>▾</span>
@@ -333,7 +336,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/NLP/GPT-2/" class="">GPT-2</a>
+    <a href="https://kaizhang91.github.io/note/NLP/GPT-2/" class=" active">GPT-2</a>
   
 
         </li>
@@ -555,9 +558,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle" checked />
+    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle"  />
     <label for="section-1f9a426141100f8f7ab323c20cac8352" class="flex justify-between">
-      <a  class="active">数学</a>
+      <a  class="">数学</a>
       <span>▾</span>
     </label>
   
@@ -922,7 +925,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>数学</strong>
+  <strong>GPT-2</strong>
 
   <label for="toc-control">
     
@@ -935,7 +938,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  
 
 
   </aside>
@@ -945,7 +948,44 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><h1 id="auto-regressionjay2019gpt2">Auto-Regression<span class="citation" data-cites="jay2019gpt2"><sup>[<a href="#ref-jay2019gpt2" role="doc-biblioref">1</a>]</sup></span></h1>
+<figure>
+<img src="auto_regression.gif" id="fig:auto_regression" alt="图 1: Auto-Regression" /><figcaption aria-hidden="true">图 1: Auto-Regression</figcaption>
+</figure>
+<p>每个记号产生后加入输入序列。</p>
+<h1 id="masked-self-attentionjay2019gpt2">Masked Self-Attention<span class="citation" data-cites="jay2019gpt2"><sup>[<a href="#ref-jay2019gpt2" role="doc-biblioref">1</a>]</sup></span></h1>
+<figure>
+<img src="masked_self_attention.png" id="fig:masked_self_attention" alt="图 2: Masked Self-Attention" /><figcaption aria-hidden="true">图 2: Masked Self-Attention</figcaption>
+</figure>
+<figure>
+<img src="masked_self_attention_example.png" id="fig:masked_self_attention_example" alt="图 3: Masked Self-Attention 具体例子" /><figcaption aria-hidden="true">图 3: Masked Self-Attention 具体例子</figcaption>
+</figure>
+<h1 id="qk-和-v">Q、K 和 V</h1>
+<figure>
+<img src="self_attention_q_k_v.png" id="fig:self_attention_q_k_v" alt="图 4: Self-Attention 的 Q、K 与 V" /><figcaption aria-hidden="true">图 4: Self-Attention 的 Q、K 与 V</figcaption>
+</figure>
+<h1 id="输出">输出</h1>
+<figure>
+<img src="output.png" id="fig:output" alt="图 5: 输出" /><figcaption aria-hidden="true">图 5: 输出</figcaption>
+</figure>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-jay2019gpt2">
+<p>[1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). <a href="http://jalammar.github.io/illustrated-gpt2/">http://jalammar.github.io/illustrated-gpt2/</a>.</p>
+</div>
+</div>
+
+<nav id="TableOfContents" role="doc-toc">
+  <h2 id="toc-title">目录</h2>
+  <ul>
+  <li><a href="#auto-regressionjay2019gpt2">Auto-Regression<span class="citation" data-cites="jay2019gpt2"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#masked-self-attentionjay2019gpt2">Masked Self-Attention<span class="citation" data-cites="jay2019gpt2"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#qk-和-v">Q、K 和 V</a></li>
+  <li><a href="#输出">输出</a></li>
+  <li><a href="#参考文献">参考文献</a></li>
+  </ul>
+</nav>
+</article>
  
       
 
@@ -954,6 +994,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/926910d9cd7a6964bd75d942bafcaf06c78c7357" title='最后修改者 Kai Zhang | 2020-11-07 23:13:44 &#43;0800' target="_blank" rel="noopener">
+      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2020-11-07 23:13:44 &#43;0800</span>
+    </a>
+  </div>
 
 
 
@@ -965,6 +1011,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -973,7 +1023,7 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  
 
  
     </aside>

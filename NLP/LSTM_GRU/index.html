@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
-LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+<meta name="description" content="请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+ LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
 Forget gate:
 \[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
 Input gate:
@@ -15,8 +15,8 @@ Cell state:
 Output:
 \[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="LSTM 与 GRU" />
-<meta property="og:description" content="LSTM 与 GRU 请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
-LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+<meta property="og:description" content="请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
+ LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
 Forget gate:
 \[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
 Input gate:
@@ -27,12 +27,12 @@ Output:
 \[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" />
-<meta property="article:modified_time" content="2020-11-06T14:29:45+00:00" />
+<meta property="article:modified_time" content="2020-11-07T15:13:44+00:00" />
 <title>LSTM 与 GRU | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.0a91f134c17383e7fab01ea108d6e54e8877083b1dbe320adc2049791f846a54.js" integrity="sha256-CpHxNMFzg&#43;f6sB6hCNblToh3CDsdvjIK3CBJeR&#43;EalQ="></script>
+<script defer src="/note/cn.search.min.f64ade983afcccbb05c2464f7d7631fb0175eec07cedf1625cb706c202e05a89.js" integrity="sha256-9kremDr8zLsFwkZPfXYx&#43;wF17sB87fFiXLcGwgLgWok="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -342,6 +342,19 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://kaizhang91.github.io/note/NLP/GPT-2/" class="">GPT-2</a>
+  
+
+        </li>
+      
     
       
         <li>
@@ -949,8 +962,9 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="lstm-与-gru">LSTM 与 GRU</h1>
+  <article class="markdown"><blockquote>
 <p>请参考 <a href="https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21" class="uri">https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21</a>。</p>
+</blockquote>
 <h2 id="lstm">LSTM</h2>
 <p>请参考 <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">https://colah.github.io/posts/2015-08-Understanding-LSTMs/</a>。</p>
 <p>Forget gate:</p>
@@ -1000,11 +1014,8 @@ h_t &amp;= o_t \odot \tanh(C_t)
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#lstm-与-gru">LSTM 与 GRU</a>
-  <ul>
   <li><a href="#lstm">LSTM</a></li>
   <li><a href="#grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<span>1</span>,<span>2</span>]</sup></span></a></li>
-  </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
@@ -1018,9 +1029,9 @@ h_t &amp;= o_t \odot \tanh(C_t)
 
 
 
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/0f65ab962826a7bc0472699e0d5c007e8a770fb4" title='最后修改者 Kai Zhang | 2020-11-06 22:29:45 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/926910d9cd7a6964bd75d942bafcaf06c78c7357" title='最后修改者 Kai Zhang | 2020-11-07 23:13:44 &#43;0800' target="_blank" rel="noopener">
       <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-11-06 22:29:45 &#43;0800</span>
+      <span>2020-11-07 23:13:44 &#43;0800</span>
     </a>
   </div>
 
