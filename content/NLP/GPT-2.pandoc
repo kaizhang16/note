@@ -1,0 +1,25 @@
+---
+title: "GPT-2"
+---
+
+# Auto-Regression[@jay2019gpt2]
+
+![Auto-Regression](auto_regression.gif){#fig:auto_regression}
+
+每个记号产生后加入输入序列。
+
+# Masked Self-Attention[@jay2019gpt2]
+
+![Masked Self-Attention](masked_self_attention.png){#fig:masked_self_attention}
+
+![Masked Self-Attention 具体例子](masked_self_attention_example.png){#fig:masked_self_attention_example}
+
+# Q、K 和 V
+
+![Self-Attention 的 Q、K 与 V](self_attention_q_k_v.png){#fig:self_attention_q_k_v}
+
+# 输出
+
+![输出](output.png){#fig:output}
+
+# 参考文献

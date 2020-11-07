@@ -61,11 +61,11 @@ $\v{q}, \v{k}, \v{v}$ 向量。
 - Masked Multi-Head Attention 层只考虑上文，会屏蔽下文
 - Encoder-Decoder Attention 层的 Q 来自于下层，K、V 来自于 encoder
 
-# 模型输出
+# 模型输出[@jay2018transformer]
 
 ![模型输出](decoder_output_softmax.png){#fig:decoder_output_softmax}
 
-# 模型结构
+# 模型结构[@vaswani2017attention]
 
 ![模型结构](model_architecture.png){#fig:model_architecture width=40%}
 
