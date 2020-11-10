@@ -2,6 +2,15 @@
 title: "机器学习"
 ---
 
+# 采样[@wiki_sampling]
+
+| 放回？ | 英文                | 含义                   |
+|--------|---------------------|------------------------|
+| 不放回 | without replacement | 每个样本最多被采样一次 |
+| 放回   | with replacement    | 一个样本可能被采样多次 |
+
+: 是否放回的区别 {#tbl:sample_replacement}
+
 # 中位数
 
 # 评估指标
@@ -83,7 +92,7 @@ ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）
 
 PR AUC 表示在不同召回率阈值下的平均精确率。[@ml_pr_auc]
 
-## AveP(Average Precision)[@ml_evaluation_measures]
+## AveP(Average Precision) [@ml_evaluation_measures]
 
 AveP 为 PR AUC，具体地：
 
