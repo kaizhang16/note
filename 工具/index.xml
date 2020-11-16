@@ -84,10 +84,10 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>文献管理</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/reference-management/</link>
+      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/reference-management/</guid>
+      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</guid>
       <description>Zotero 安装 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
 Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github.</description>
     </item>
