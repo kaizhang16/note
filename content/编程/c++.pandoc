@@ -4,7 +4,7 @@ title: "C++"
 
 # 开发环境
 
-# 工程目录结构[@cmake_structure]
+## 工程目录结构[@cmake_structure]
 
 ```sh
 project
@@ -87,3 +87,5 @@ ln -s build/compile_commands.json compile_commands.json
 | `s.find(val) != s.end()` | s 包含 val |
 
 : set 常用方法 {#tbl:set_methods}
+
+# 参考文献
