@@ -110,6 +110,7 @@ nvim $(fzf)
 | streetsidesoftware.code-spell-checker | 拼写检查     |                          |
 | stkb.rewrap                           | 断行         |                          |
 | llvm-vs-code-extensions.vscode-clangd | C、C++       |                          |
+| ms-vscode.cmake-tools                 | cmake        |                          |
 
 : Visual Studio Code 插件
 
