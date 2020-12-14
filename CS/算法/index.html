@@ -16,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.3c2216134193bfd485b36b20e341f9e515763b4e4d93fb88097ab237ef6bc427.js" integrity="sha256-PCIWE0GTv9SFs2sg40H55RV2O05Nk/uICXqyN&#43;9rxCc="></script>
+<script defer src="/note/cn.search.min.28c89d941147c16644ea8b991ce5757576b27bfa7e715fe28cb3738b48ac0c93.js" integrity="sha256-KMidlBFHwWZE6ouZHOV1dXaye/p&#43;cV/ijLNzi0isDJM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1050,23 +1050,45 @@ https://github.com/alex-shpak/hugo-book
 <h3 id="遍历图">遍历图</h3>
 <p>用 <code>visited</code> 数组做标记。</p>
 <h1 id="动态规划">动态规划</h1>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co">// https://leetcode-cn.com/problems/unique-paths/</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="dt">int</span> unique_path(<span class="dt">int</span> m, <span class="dt">int</span> n) {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="co">// dp[i][j]: unique_path(i + 1, j + 1)</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">int</span>&gt;&gt; dp(m, vector&lt;<span class="dt">int</span>&gt;(n, <span class="dv">0</span>));</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> j = <span class="dv">0</span>; j &lt; n; ++j) {</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>        dp[<span class="dv">0</span>][j] = <span class="dv">1</span>;</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>    }</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> i = <span class="dv">0</span>; i &lt; m; ++i) {</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>        dp[i][<span class="dv">0</span>] = <span class="dv">1</span>;</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>    }</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> i = <span class="dv">1</span>; i &lt; m; ++i) {</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> j = <span class="dv">1</span>; j &lt; n; ++j) {</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>            dp[i][j] = dp[i - <span class="dv">1</span>][j] + dp[i][j - <span class="dv">1</span>];</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>        }</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>    }</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>    <span class="cf">return</span> dp[m - <span class="dv">1</span>][n - <span class="dv">1</span>];</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="不同路径"><a href="https://leetcode-cn.com/problems/unique-paths/">62. 不同路径</a></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="dt">int</span> unique_path(<span class="dt">int</span> m, <span class="dt">int</span> n) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="co">// dp[i][j]: unique_path(i + 1, j + 1)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">int</span>&gt;&gt; dp(m, vector&lt;<span class="dt">int</span>&gt;(n, <span class="dv">0</span>));</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> j = <span class="dv">0</span>; j &lt; n; ++j) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>        dp[<span class="dv">0</span>][j] = <span class="dv">1</span>;</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>    }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> i = <span class="dv">0</span>; i &lt; m; ++i) {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>        dp[i][<span class="dv">0</span>] = <span class="dv">1</span>;</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>    }</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> i = <span class="dv">1</span>; i &lt; m; ++i) {</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> j = <span class="dv">1</span>; j &lt; n; ++j) {</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>            dp[i][j] = dp[i - <span class="dv">1</span>][j] + dp[i][j - <span class="dv">1</span>];</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>        }</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>    }</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>    <span class="cf">return</span> dp[m - <span class="dv">1</span>][n - <span class="dv">1</span>];</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="最小路径和"><a href="https://leetcode-cn.com/problems/minimum-path-sum/">64. 最小路径和</a></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="dt">int</span> min_path_sum(vector&lt;vector&lt;<span class="dt">int</span>&gt;&gt; &amp;grid) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="cf">if</span> (grid.size() == <span class="dv">0</span> || grid[<span class="dv">0</span>].size() == <span class="dv">0</span>) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="dv">0</span>;</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>    }</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>    <span class="dt">size_t</span> m = grid.size(), n = grid[<span class="dv">0</span>].size();</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>    <span class="co">// dp[i][j]: min_path_sum(grid[0:i + 1][0:j + 1])</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">int</span>&gt;&gt; dp(m, vector&lt;<span class="dt">int</span>&gt;(n, <span class="dv">0</span>));</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>    dp[<span class="dv">0</span>][<span class="dv">0</span>] = grid[<span class="dv">0</span>][<span class="dv">0</span>];</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">size_t</span> j = <span class="dv">1</span>; j &lt; n; ++j) {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>        dp[<span class="dv">0</span>][j] = dp[<span class="dv">0</span>][j - <span class="dv">1</span>] + grid[<span class="dv">0</span>][j];</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>    }</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">size_t</span> i = <span class="dv">1</span>; i &lt; m; ++i) {</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>        dp[i][<span class="dv">0</span>] = dp[i - <span class="dv">1</span>][<span class="dv">0</span>] + grid[i][<span class="dv">0</span>];</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a>    }</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">size_t</span> i = <span class="dv">1</span>; i &lt; m; ++i) {</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">size_t</span> j = <span class="dv">1</span>; j &lt; n; ++j) {</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true"></a>            dp[i][j] = <span class="bu">std::</span>min(dp[i - <span class="dv">1</span>][j], dp[i][j - <span class="dv">1</span>]) + grid[i][j];</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true"></a>        }</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true"></a>    }</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true"></a>    <span class="cf">return</span> dp[m - <span class="dv">1</span>][n - <span class="dv">1</span>];</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true"></a>}</span></code></pre></div>
 <h2 id="字符串状态模板">字符串状态模板</h2>
 <ul>
 <li>在子数组 <code>array[0..i]</code> 中，以 <code>array[i]</code> 结尾的目标子序列的长度是 <code>dp[i]</code></li>
@@ -1074,84 +1096,84 @@ https://github.com/alex-shpak/hugo-book
 <li>在子数组 <code>array[i..j]</code> 中，目标子序列的长度为 <code>dp[i][j]</code></li>
 </ul>
 <h1 id="回溯法">回溯法</h1>
-<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>result <span class="op">=</span> []</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="kw">def</span> backtrack(路径, 选择列表):</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    <span class="cf">if</span> 满足结束条件:</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>        result.add(路径)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>        <span class="cf">return</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    <span class="cf">for</span> 选择 <span class="kw">in</span> 选择列表:</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>        做选择</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>        backtrack(路径, 选择列表)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>        撤销选择</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>result <span class="op">=</span> []</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="kw">def</span> backtrack(路径, 选择列表):</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>    <span class="cf">if</span> 满足结束条件:</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>        result.add(路径)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>        <span class="cf">return</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    <span class="cf">for</span> 选择 <span class="kw">in</span> 选择列表:</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>        做选择</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>        backtrack(路径, 选择列表)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>        撤销选择</span></code></pre></div>
 <h1 id="bfs">BFS</h1>
-<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co">// 计算从起点 start 到终点 target 的最近距离</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="dt">int</span> BFS(Node start, Node target) {</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>    queue&lt;Node&gt; q; <span class="co">// 核心数据结构</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    set&lt;Node&gt; visited; <span class="co">// 避免走回头路</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    q.push(start); <span class="co">// 将起点加入队列</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    visited.insert(start);</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    <span class="dt">int</span> step = <span class="dv">0</span>; <span class="co">// 记录扩散的步数</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>    <span class="cf">while</span>(q.size() &gt; <span class="dv">0</span>) {</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>        <span class="dt">int</span> size0 = q.size();</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; size0; i++) {</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>            Node cur = q.front();</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>            q.pop();</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>            <span class="cf">if</span> (cur == target) {</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>                <span class="cf">return</span> step;</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a>            }</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a>            <span class="cf">for</span> (Node x : cur.adj()) {</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a>                <span class="cf">if</span> (visited.find(x) == visited.end()) {</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true"></a>                    q.push(x);</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true"></a>                    visited.insert(x);</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true"></a>                }</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true"></a>            }</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true"></a>        }</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true"></a>        step++;</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true"></a>    }</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="co">// 计算从起点 start 到终点 target 的最近距离</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="dt">int</span> BFS(Node start, Node target) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    queue&lt;Node&gt; q; <span class="co">// 核心数据结构</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    set&lt;Node&gt; visited; <span class="co">// 避免走回头路</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    q.push(start); <span class="co">// 将起点加入队列</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    visited.insert(start);</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>    <span class="dt">int</span> step = <span class="dv">0</span>; <span class="co">// 记录扩散的步数</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>    <span class="cf">while</span>(q.size() &gt; <span class="dv">0</span>) {</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>        <span class="dt">int</span> size0 = q.size();</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; size0; i++) {</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>            Node cur = q.front();</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>            q.pop();</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>            <span class="cf">if</span> (cur == target) {</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a>                <span class="cf">return</span> step;</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a>            }</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true"></a>            <span class="cf">for</span> (Node x : cur.adj()) {</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true"></a>                <span class="cf">if</span> (visited.find(x) == visited.end()) {</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true"></a>                    q.push(x);</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true"></a>                    visited.insert(x);</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true"></a>                }</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true"></a>            }</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true"></a>        }</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true"></a>        step++;</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true"></a>    }</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="二分搜索">二分搜索</h1>
-<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="dt">int</span> binary_search(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> target) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="dt">int</span> left = <span class="dv">0</span>;</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    <span class="dt">int</span> right = nums.size();</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="cf">while</span> (left &lt; right) {</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>        <span class="dt">int</span> mid = left + (right - left) / <span class="dv">2</span>; <span class="co">// 防止溢出</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>        <span class="cf">if</span> (nums[mid] == target) {</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>            <span class="cf">return</span> mid;</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (nums[mid] &lt; target) {</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>            left = mid + <span class="dv">1</span>;</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>            right = mid;</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>        }</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    }</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="dt">int</span> binary_search(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> target) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="dt">int</span> left = <span class="dv">0</span>;</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="dt">int</span> right = nums.size();</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    <span class="cf">while</span> (left &lt; right) {</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>        <span class="dt">int</span> mid = left + (right - left) / <span class="dv">2</span>; <span class="co">// 防止溢出</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>        <span class="cf">if</span> (nums[mid] == target) {</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>            <span class="cf">return</span> mid;</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (nums[mid] &lt; target) {</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>            left = mid + <span class="dv">1</span>;</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>            right = mid;</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>        }</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true"></a>    }</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="滑动窗口">滑动窗口</h1>
-<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="dt">void</span> sliding_window(string s, string t) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    unordered_map&lt;<span class="dt">char</span>, <span class="dt">int</span>&gt; need, window;</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">char</span> c : t) need[c]++;</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    <span class="dt">int</span> left = <span class="dv">0</span>, right = <span class="dv">0</span>;</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    <span class="dt">int</span> valid = <span class="dv">0</span>;</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    <span class="cf">while</span> (right &lt; s.size()) {</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>        <span class="co">// c 是将要移入窗口的字符</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>        <span class="dt">char</span> c = s[right]</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>        <span class="co">// 右移窗口</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>        right++;</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>        <span class="co">// 进行窗口内数据的一系列更新</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>        <span class="co">// debug 信息</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true"></a>        printf(<span class="st">&quot;window: [</span><span class="sc">%d</span><span class="st">, </span><span class="sc">%d</span><span class="st">]</span><span class="sc">\n</span><span class="st">&quot;</span>, left, right);</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true"></a>        <span class="co">// 判断左侧窗口是否要收缩</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true"></a>        <span class="cf">while</span> (window needs shrink) {</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true"></a>            <span class="co">// d 是将要移出窗口的字符</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true"></a>            <span class="dt">char</span> d = s[left];</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true"></a>            <span class="co">// 右移窗口</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true"></a>            left++;</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true"></a>            <span class="co">// 进行窗口内数据的一系列更新</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true"></a>        }</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true"></a>    }</span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="dt">void</span> sliding_window(string s, string t) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    unordered_map&lt;<span class="dt">char</span>, <span class="dt">int</span>&gt; need, window;</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">char</span> c : t) need[c]++;</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>    <span class="dt">int</span> left = <span class="dv">0</span>, right = <span class="dv">0</span>;</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    <span class="dt">int</span> valid = <span class="dv">0</span>;</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>    <span class="cf">while</span> (right &lt; s.size()) {</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>        <span class="co">// c 是将要移入窗口的字符</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>        <span class="dt">char</span> c = s[right]</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>        <span class="co">// 右移窗口</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>        right++;</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>        <span class="co">// 进行窗口内数据的一系列更新</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>        <span class="co">// debug 信息</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>        printf(<span class="st">&quot;window: [</span><span class="sc">%d</span><span class="st">, </span><span class="sc">%d</span><span class="st">]</span><span class="sc">\n</span><span class="st">&quot;</span>, left, right);</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a>        <span class="co">// 判断左侧窗口是否要收缩</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a>        <span class="cf">while</span> (window needs shrink) {</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a>            <span class="co">// d 是将要移出窗口的字符</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true"></a>            <span class="dt">char</span> d = s[left];</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true"></a>            <span class="co">// 右移窗口</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true"></a>            left++;</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true"></a>            <span class="co">// 进行窗口内数据的一系列更新</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true"></a>        }</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true"></a>    }</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1169,6 +1191,8 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#动态规划">动态规划</a>
   <ul>
+  <li><a href="#不同路径"><span>62. 不同路径</span></a></li>
+  <li><a href="#最小路径和"><span>64. 最小路径和</span></a></li>
   <li><a href="#字符串状态模板">字符串状态模板</a></li>
   </ul></li>
   <li><a href="#回溯法">回溯法</a></li>
