@@ -70,11 +70,12 @@ ln -s build/compile_commands.json compile_commands.json
 
 # 最佳实践
 
-| 场景       | 最佳实践                                   | 不好的实践      |
-|------------|--------------------------------------------|-----------------|
-| 初始化     | `{}`                                       | `()`            |
-| 空指针     | `nullptr`                                  | `NULL` 或者 `0` |
-| 字符串拼接 | `string nametext = "Your name is" + name;` |                 |
+| 场景          | 最佳实践                                             | 不好的实践      |
+|---------------|------------------------------------------------------|-----------------|
+| 初始化        | `{}`                                                 | `()`            |
+| 空指针        | `nullptr`                                            | `NULL` 或者 `0` |
+| 字符串拼接    | `string nametext = "Your name is" + name;`           |                 |
+| int -> string | `string s = std::to_string(42);`[@cpp_int_to_string] |                 |
 
 : 最佳实践 {#tbl:best_practice}
 

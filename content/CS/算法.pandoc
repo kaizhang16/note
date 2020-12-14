@@ -87,13 +87,23 @@ void traverse(TreeNode root) {
 # 动态规划
 
 ```c++
-# 初始化 base case
-dp[0][0][...] = base
-# 进行状态转移
-for 状态1 in 状态1的所有取值:
-    for 状态2 in 状态2的所有取值:
-        for ...
-            dp[状态1][状态2][...] = 求最值(选择1, 选择2...)
+// https://leetcode-cn.com/problems/unique-paths/
+int unique_path(int m, int n) {
+    // dp[i][j]: unique_path(i + 1, j + 1)
+    vector<vector<int>> dp(m, vector<int>(n, 0));
+    for (auto j = 0; j < n; ++j) {
+        dp[0][j] = 1;
+    }
+    for (auto i = 0; i < m; ++i) {
+        dp[i][0] = 1;
+    }
+    for (auto i = 1; i < m; ++i) {
+        for (auto j = 1; j < n; ++j) {
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+        }
+    }
+    return dp[m - 1][n - 1];
+}
 ```
 
 ## 字符串状态模板
