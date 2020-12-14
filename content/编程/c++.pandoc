@@ -4,6 +4,20 @@ title: "C++"
 
 # 开发环境
 
+## cmake
+
+### 安装
+
+```sh
+CMAKE_VERSION=3.19.1
+curl -LO "https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh"
+sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local
+```
+
+### 教程
+
+- <https://cliutils.gitlab.io/modern-cmake/>
+
 ## 工程目录结构[@cmake_structure]
 
 ```sh
