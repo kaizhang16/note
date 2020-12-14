@@ -103,15 +103,6 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
     </item>
     
     <item>
-      <title>构建</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/build/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/build/</guid>
-      <description>cmake 安装 CMAKE_VERSION=3.17.0-rc2 curl -LO &amp;#39;https://github.com/Kitware/CMake/releases/download/v3.17.0-rc2/cmake-$CMAKE_VERSION-Linux-x86_64.sh&amp;#39; chmod u+x cmake-$CMAKE_VERSION-Linux-x86_64.sh sudo ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  目录  cmake  安装 教程    </description>
-    </item>
-    
-    <item>
       <title>格式</title>
       <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/format/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

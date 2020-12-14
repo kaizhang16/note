@@ -22,8 +22,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</guid>
-      <description>开发环境 工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&amp;gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：
- https://llvm.org/docs/CodingStandards.html#llvm-coding-standards https://google.github.io/styleguide/cppguide.html   教程  https://isocpp.</description>
+      <description>开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &amp;quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&amp;quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&amp;gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：</description>
     </item>
     
     <item>
