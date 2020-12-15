@@ -16,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.cdaffb14975f0eeb321651d0f7a3270698aba2383078340ab474e161ab23857a.js" integrity="sha256-za/7FJdfDusyFlHQ96MnBpirojgweDQKtHThYasjhXo="></script>
+<script defer src="/note/cn.search.min.7829866c3ed81c6e4893c782826bcf8b4bc1883aff035b5ed49b3a620c229d58.js" integrity="sha256-eCmGbD7YHG5Ik8eCgmvPi0vBiDr/A1te1Js6YgwinVg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1117,16 +1117,48 @@ https://github.com/alex-shpak/hugo-book
 <li>在子数组 <code>array[i..j]</code> 中，目标子序列的长度为 <code>dp[i][j]</code></li>
 </ul>
 <h1 id="回溯法">回溯法</h1>
-<div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>result <span class="op">=</span> []</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="kw">def</span> backtrack(路径, 选择列表):</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="cf">if</span> 满足结束条件:</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>        result.add(路径)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>        <span class="cf">return</span></span>
+<h2 id="单词搜索"><a href="https://leetcode-cn.com/problems/word-search/">单词搜索</a></h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="dt">bool</span> dfs(<span class="dt">int</span> i, <span class="dt">int</span> j, <span class="dt">int</span> k, vector&lt;vector&lt;<span class="dt">char</span>&gt;&gt; &amp;board, string &amp;word,</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>         vector&lt;vector&lt;<span class="dt">bool</span>&gt;&gt; &amp;visited) {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="cf">if</span> (board[i][j] != word[k]) {</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    }</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>    <span class="cf">for</span> 选择 <span class="kw">in</span> 选择列表:</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>        做选择</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>        backtrack(路径, 选择列表)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>        撤销选择</span></code></pre></div>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>    <span class="cf">if</span> (k == word.size() - <span class="dv">1</span>) {</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>    }</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>    visited[i][j] = <span class="kw">true</span>;</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>    <span class="dt">bool</span> result = <span class="kw">false</span>;</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true"></a>    vector&lt;pair&lt;<span class="dt">int</span>, <span class="dt">int</span>&gt;&gt; directions{{<span class="dv">0</span>, <span class="dv">1</span>}, {<span class="dv">0</span>, -<span class="dv">1</span>}, {<span class="dv">1</span>, <span class="dv">0</span>}, {-<span class="dv">1</span>, <span class="dv">0</span>}};</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> direction : directions) {</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true"></a>        <span class="dt">int</span> i1 = i + direction.first, j1 = j + direction.second;</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true"></a>        <span class="cf">if</span> (i1 &gt;= <span class="dv">0</span> &amp;&amp; i1 &lt; board.size() &amp;&amp; j1 &gt;= <span class="dv">0</span> &amp;&amp; j1 &lt; board[<span class="dv">0</span>].size()) {</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true"></a>            <span class="cf">if</span> (!visited[i1][j1]) {</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true"></a>                <span class="kw">auto</span> flag = dfs(i1, j1, k + <span class="dv">1</span>, board, word, visited);</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true"></a>                <span class="cf">if</span> (flag) {</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true"></a>                    result = <span class="kw">true</span>;</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true"></a>                    <span class="cf">break</span>;</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true"></a>                }</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true"></a>            }</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true"></a>        }</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true"></a>    }</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true"></a>    visited[i][j] = <span class="kw">false</span>;</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true"></a>}</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true"></a><span class="dt">bool</span> exist(vector&lt;vector&lt;<span class="dt">char</span>&gt;&gt; &amp;board, string word) {</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">bool</span>&gt;&gt; visited(board.size(),</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true"></a>                                 vector&lt;<span class="dt">bool</span>&gt;(board[<span class="dv">0</span>].size(), <span class="kw">false</span>));</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; board.size(); ++i) {</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">0</span>; j &lt; board[<span class="dv">0</span>].size(); ++j) {</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true"></a>            <span class="cf">if</span> (dfs(i, j, <span class="dv">0</span>, board, word, visited)) {</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true"></a>            }</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true"></a>        }</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true"></a>    }</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="bfs">BFS</h1>
 <div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="co">// 计算从起点 start 到终点 target 的最近距离</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="dt">int</span> BFS(Node start, Node target) {</span>
@@ -1217,7 +1249,10 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#状态压缩">状态压缩</a></li>
   <li><a href="#字符串状态模板">字符串状态模板</a></li>
   </ul></li>
-  <li><a href="#回溯法">回溯法</a></li>
+  <li><a href="#回溯法">回溯法</a>
+  <ul>
+  <li><a href="#单词搜索"><span>单词搜索</span></a></li>
+  </ul></li>
   <li><a href="#bfs">BFS</a></li>
   <li><a href="#二分搜索">二分搜索</a></li>
   <li><a href="#滑动窗口">滑动窗口</a></li>
