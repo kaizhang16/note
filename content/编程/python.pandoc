@@ -2,6 +2,18 @@
 title: "Python"
 ---
 
+# 开发环境
+
+## miniconda
+
+从 <https://docs.conda.io/en/latest/miniconda.html> 下载最新版本。
+
+## 格式化
+
+```sh
+pip install black
+```
+
 # 内建函数[@pythonBuiltIn]
 
 ## 数据类型
