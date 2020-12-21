@@ -89,6 +89,12 @@ nvim $(fzf)
 
 # Visual Studio Code
 
+## 依赖
+
+```sh
+pip install black  # 格式化 python 代码
+```
+
 ## 快捷键
 
 | 快捷键                 | 含义              |
