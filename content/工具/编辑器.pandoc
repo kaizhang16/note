@@ -2,6 +2,39 @@
 title: "编辑器"
 ---
 
+# Visual Studio Code
+
+## 依赖
+
+```sh
+pip install black  # 格式化 python 代码
+```
+
+## 快捷键
+
+| 快捷键                 | 含义              |
+|------------------------|-------------------|
+| `Ctrl` + `P`           | Go to File...     |
+| `Ctrl` + `Shift` + `P` | Show All Commands |
+| `Alt` + `Q`            | 断行              |
+
+: Visual Studio Code 快捷键
+
+## 插件
+
+| 插件 ID                               | 用途         | 依赖                     |
+|---------------------------------------|--------------|--------------------------|
+| xaver.clang-format                    | 格式化       |                          |
+| esbenp.prettier-vscode                | 格式化       |                          |
+| fcrespo82.markdown-table-formatter    | 表格格式化   |                          |
+| cheshirekow.cmake-format              | cmake 格式化 | pip install cmake_format |
+| streetsidesoftware.code-spell-checker | 拼写检查     |                          |
+| stkb.rewrap                           | 断行         |                          |
+| llvm-vs-code-extensions.vscode-clangd | C、C++       |                          |
+| ms-vscode.cmake-tools                 | cmake        |                          |
+
+: Visual Studio Code 插件
+
 # Vim
 
 ## 包管理器
@@ -86,39 +119,6 @@ nvim $(fzf)
 | `#`  | 上一个文件的路径 |
 
 : Vim 寄存器 {#tbl:vim_registers}
-
-# Visual Studio Code
-
-## 依赖
-
-```sh
-pip install black  # 格式化 python 代码
-```
-
-## 快捷键
-
-| 快捷键                 | 含义              |
-|------------------------|-------------------|
-| `Ctrl` + `P`           | Go to File...     |
-| `Ctrl` + `Shift` + `P` | Show All Commands |
-| `Alt` + `Q`            | 断行              |
-
-: Visual Studio Code 快捷键
-
-## 插件
-
-| 插件 ID                               | 用途         | 依赖                     |
-|---------------------------------------|--------------|--------------------------|
-| xaver.clang-format                    | 格式化       |                          |
-| esbenp.prettier-vscode                | 格式化       |                          |
-| fcrespo82.markdown-table-formatter    | 表格格式化   |                          |
-| cheshirekow.cmake-format              | cmake 格式化 | pip install cmake_format |
-| streetsidesoftware.code-spell-checker | 拼写检查     |                          |
-| stkb.rewrap                           | 断行         |                          |
-| llvm-vs-code-extensions.vscode-clangd | C、C++       |                          |
-| ms-vscode.cmake-tools                 | cmake        |                          |
-
-: Visual Studio Code 插件
 
 # Android Studio
 
