@@ -4,16 +4,6 @@ title: "编辑器"
 
 # Visual Studio Code
 
-## 快捷键
-
-| 快捷键                 | 含义              |
-|------------------------|-------------------|
-| `Ctrl` + `P`           | Go to File...     |
-| `Ctrl` + `Shift` + `P` | Show All Commands |
-| `Alt` + `Q`            | 断行              |
-
-: Visual Studio Code 快捷键
-
 ## 插件
 
 | 插件 ID                               | 用途         | 依赖                     |
@@ -28,6 +18,16 @@ title: "编辑器"
 | ms-vscode.cmake-tools                 | cmake        |                          |
 
 : Visual Studio Code 插件
+
+## 快捷键
+
+| 快捷键                 | 含义              |
+|------------------------|-------------------|
+| `Ctrl` + `P`           | Go to File...     |
+| `Ctrl` + `Shift` + `P` | Show All Commands |
+| `Alt` + `Q`            | 断行              |
+
+: Visual Studio Code 快捷键
 
 # Vim
 
