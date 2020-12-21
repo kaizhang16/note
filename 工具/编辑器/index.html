@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Visual Studio Code 依赖 pip install black # 格式化 python 代码 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.">
+<meta name="description" content="Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="编辑器" />
-<meta property="og:description" content="Visual Studio Code 依赖 pip install black # 格式化 python 代码 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow." />
+<meta property="og:description" content="Visual Studio Code 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/" />
 
@@ -14,7 +14,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.9d5d89800356f9608139581d2d11c17797bb04cbfb7ba128fcb4d6e1d980dafd.js" integrity="sha256-nV2JgANW&#43;WCBOVgdLRHBd5e7BMv7e6Eo/LTW4dmA2v0="></script>
+<script defer src="/note/cn.search.min.51ddbc81bbbbaef9b02df507959b02e2e2fe032e390d3f27cedbfa09986b9c4b.js" integrity="sha256-Ud28gbu7rvmwLfUHlZsC4uL&#43;Ay45DT8nztv6CZhrnEs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -958,8 +958,6 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="visual-studio-code">Visual Studio Code</h1>
-<h2 id="依赖">依赖</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">pip</span> install black  # 格式化 python 代码</span></code></pre></div>
 <h2 id="快捷键">快捷键</h2>
 <table>
 <caption>Visual Studio Code 快捷键</caption>
@@ -1040,17 +1038,17 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="vim">Vim</h1>
 <h2 id="包管理器">包管理器</h2>
 <h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">curl</span> -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs <span class="kw">\</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="ex">https</span>://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">curl</span> -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs <span class="kw">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="ex">https</span>://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
 <h3 id="使用">使用</h3>
 <pre class="vim"><code>:PlugInstall  &quot; 安装插件
 :PlugUpdate   &quot; 升级插件
 :PlugUpgrade  &quot; 升级 plug</code></pre>
 <h3 id="安装依赖的二进制">安装依赖的二进制</h3>
 <h4 id="rust">rust</h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
 <h4 id="cmake">cmake</h4>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
 <h3 id="coc">coc</h3>
 <pre class="vim"><code>:CocInstall coc-clangd
 :CocInstall coc-flutter
@@ -1075,7 +1073,7 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="打开文件">打开文件</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h2 id="快捷键-1">快捷键</h2>
 <div id="tbl:vim_shotcuts">
 <table>
@@ -1176,7 +1174,6 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#visual-studio-code">Visual Studio Code</a>
   <ul>
-  <li><a href="#依赖">依赖</a></li>
   <li><a href="#快捷键">快捷键</a></li>
   <li><a href="#插件">插件</a></li>
   </ul></li>

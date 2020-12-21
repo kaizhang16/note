@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): .">
+<meta name="description" content="开发环境 miniconda 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
+格式化 pip install black 内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Python" />
-<meta property="og:description" content="内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights.items(): ." />
+<meta property="og:description" content="开发环境 miniconda 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
+格式化 pip install black 内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &gt;&gt;&gt; knights = {&#39;gallahad&#39;: &#39;the pure&#39;, &#39;robin&#39;: &#39;the brave&#39;} &gt;&gt;&gt; for k, v in knights." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/python/" />
 
@@ -14,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.9d5d89800356f9608139581d2d11c17797bb04cbfb7ba128fcb4d6e1d980dafd.js" integrity="sha256-nV2JgANW&#43;WCBOVgdLRHBd5e7BMv7e6Eo/LTW4dmA2v0="></script>
+<script defer src="/note/cn.search.min.51ddbc81bbbbaef9b02df507959b02e2e2fe032e390d3f27cedbfa09986b9c4b.js" integrity="sha256-Ud28gbu7rvmwLfUHlZsC4uL&#43;Ay45DT8nztv6CZhrnEs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -957,7 +959,12 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="内建函数pythonbuiltin">内建函数<span class="citation" data-cites="pythonBuiltIn"><sup>[<a href="#ref-pythonBuiltIn" role="doc-biblioref">1</a>]</sup></span></h1>
+  <article class="markdown"><h1 id="开发环境">开发环境</h1>
+<h2 id="miniconda">miniconda</h2>
+<p>从 <a href="https://docs.conda.io/en/latest/miniconda.html" class="uri">https://docs.conda.io/en/latest/miniconda.html</a> 下载最新版本。</p>
+<h2 id="格式化">格式化</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">pip</span> install black</span></code></pre></div>
+<h1 id="内建函数pythonbuiltin">内建函数<span class="citation" data-cites="pythonBuiltIn"><sup>[<a href="#ref-pythonBuiltIn" role="doc-biblioref">1</a>]</sup></span></h1>
 <h2 id="数据类型">数据类型</h2>
 <div id="tbl:types">
 <table>
@@ -998,27 +1005,27 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h2 id="字典pythonloop">字典<span class="citation" data-cites="pythonLoop"><sup>[<a href="#ref-pythonLoop" role="doc-biblioref">2</a>]</sup></span></h2>
 <h3 id="遍历-list-并获取-indexpythonenumerate">遍历 list 并获取 index<span class="citation" data-cites="pythonEnumerate"><sup>[<a href="#ref-pythonEnumerate" role="doc-biblioref">3</a>]</sup></span></h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="cf">for</span> idx, val <span class="kw">in</span> <span class="bu">enumerate</span>(ints):</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="bu">print</span>(idx, val)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="cf">for</span> idx, val <span class="kw">in</span> <span class="bu">enumerate</span>(ints):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="bu">print</span>(idx, val)</span></code></pre></div>
 <h3 id="遍历字典">遍历字典</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> knights <span class="op">=</span> {<span class="st">&#39;gallahad&#39;</span>: <span class="st">&#39;the pure&#39;</span>, <span class="st">&#39;robin&#39;</span>: <span class="st">&#39;the brave&#39;</span>}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k, v <span class="kw">in</span> knights.items():</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>...     <span class="bu">print</span>(k, v)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>...</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>gallahad the pure</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>robin the brave</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> knights <span class="op">=</span> {<span class="st">&#39;gallahad&#39;</span>: <span class="st">&#39;the pure&#39;</span>, <span class="st">&#39;robin&#39;</span>: <span class="st">&#39;the brave&#39;</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> k, v <span class="kw">in</span> knights.items():</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>...     <span class="bu">print</span>(k, v)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>...</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>gallahad the pure</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>robin the brave</span></code></pre></div>
 <h3 id="键是否存在pythonkeyexists">键是否存在<span class="citation" data-cites="pythonKeyExists"><sup>[<a href="#ref-pythonKeyExists" role="doc-biblioref">4</a>]</sup></span></h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>d <span class="op">=</span> {<span class="st">&quot;key1&quot;</span>: <span class="dv">10</span>, <span class="st">&quot;key2&quot;</span>: <span class="dv">23</span>}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="cf">if</span> <span class="st">&quot;key1&quot;</span> <span class="kw">in</span> d:</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="st">&quot;this will execute&quot;</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="cf">if</span> <span class="st">&quot;nonexistent key&quot;</span> <span class="kw">in</span> d:</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="st">&quot;this will not&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>d <span class="op">=</span> {<span class="st">&quot;key1&quot;</span>: <span class="dv">10</span>, <span class="st">&quot;key2&quot;</span>: <span class="dv">23</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="cf">if</span> <span class="st">&quot;key1&quot;</span> <span class="kw">in</span> d:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="st">&quot;this will execute&quot;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a><span class="cf">if</span> <span class="st">&quot;nonexistent key&quot;</span> <span class="kw">in</span> d:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="st">&quot;this will not&quot;</span>)</span></code></pre></div>
 <h3 id="合并字典pythonmergedict">合并字典<span class="citation" data-cites="pythonMergeDict"><sup>[<a href="#ref-pythonMergeDict" role="doc-biblioref">5</a>]</sup></span></h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>z <span class="op">=</span> {<span class="op">**</span>x, <span class="op">**</span>y}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>z <span class="op">=</span> {<span class="op">**</span>x, <span class="op">**</span>y}</span></code></pre></div>
 <h2 id="section">+=</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>x <span class="op">+=</span> y  <span class="co"># x = x + y</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>x <span class="op">+=</span> y  <span class="co"># x = x + y</span></span></code></pre></div>
 <h2 id="open">open</h2>
 <div id="tbl:openFileMode">
 <table>
@@ -1073,57 +1080,57 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h2 id="str">str</h2>
 <h3 id="字符串复制">字符串复制</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="co">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="co">&#39;-&#39;</span> <span class="op">*</span> <span class="dv">3</span></span></code></pre></div>
 <h3 id="分割python_str_split">分割<span class="citation" data-cites="python_str_split"><sup>[<a href="#ref-python_str_split" role="doc-biblioref">7</a>]</sup></span></h3>
-<div class="sourceCode" id="cb7"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1,2,3&#39;</span>.split(<span class="st">&#39;,&#39;</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;2&#39;</span>, <span class="st">&#39;3&#39;</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1,2,3&#39;</span>.split(<span class="st">&#39;,&#39;</span>, maxsplit<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;2,3&#39;</span>]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1,2,,3,&#39;</span>.split(<span class="st">&#39;,&#39;</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;2&#39;</span>, <span class="st">&#39;&#39;</span>, <span class="st">&#39;3&#39;</span>, <span class="st">&#39;&#39;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1,2,3&#39;</span>.split(<span class="st">&#39;,&#39;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;2&#39;</span>, <span class="st">&#39;3&#39;</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1,2,3&#39;</span>.split(<span class="st">&#39;,&#39;</span>, maxsplit<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;2,3&#39;</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;1,2,,3,&#39;</span>.split(<span class="st">&#39;,&#39;</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>[<span class="st">&#39;1&#39;</span>, <span class="st">&#39;2&#39;</span>, <span class="st">&#39;&#39;</span>, <span class="st">&#39;3&#39;</span>, <span class="st">&#39;&#39;</span>]</span></code></pre></div>
 <h2 id="函数式编程">函数式编程</h2>
 <h3 id="partial">partial</h3>
 <p>大致等价于：</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="kw">def</span> partial(func, <span class="op">/</span>, <span class="op">*</span>args, <span class="op">**</span>keywords):</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="kw">def</span> newfunc(<span class="op">*</span>fargs, <span class="op">**</span>fkeywords):</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>        newkeywords <span class="op">=</span> {<span class="op">**</span>keywords, <span class="op">**</span>fkeywords}</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>        <span class="cf">return</span> func(<span class="op">*</span>args, <span class="op">*</span>fargs, <span class="op">**</span>newkeywords)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>    newfunc.func <span class="op">=</span> func</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    newfunc.args <span class="op">=</span> args</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    newfunc.keywords <span class="op">=</span> keywords</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>    <span class="cf">return</span> newfunc</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="kw">def</span> partial(func, <span class="op">/</span>, <span class="op">*</span>args, <span class="op">**</span>keywords):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="kw">def</span> newfunc(<span class="op">*</span>fargs, <span class="op">**</span>fkeywords):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>        newkeywords <span class="op">=</span> {<span class="op">**</span>keywords, <span class="op">**</span>fkeywords}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>        <span class="cf">return</span> func(<span class="op">*</span>args, <span class="op">*</span>fargs, <span class="op">**</span>newkeywords)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    newfunc.func <span class="op">=</span> func</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    newfunc.args <span class="op">=</span> args</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>    newfunc.keywords <span class="op">=</span> keywords</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>    <span class="cf">return</span> newfunc</span></code></pre></div>
 <h2 id="property">property</h2>
 <p>定义属性，默认只读。</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="kw">class</span> Parrot:</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>        <span class="va">self</span>._voltage <span class="op">=</span> <span class="dv">100000</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    <span class="at">@property</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    <span class="kw">def</span> voltage(<span class="va">self</span>):</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>        <span class="co">&quot;&quot;&quot;Get the current voltage.&quot;&quot;&quot;</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>        <span class="cf">return</span> <span class="va">self</span>._voltage</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">class</span> Parrot:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>        <span class="va">self</span>._voltage <span class="op">=</span> <span class="dv">100000</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    <span class="at">@property</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>    <span class="kw">def</span> voltage(<span class="va">self</span>):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>        <span class="co">&quot;&quot;&quot;Get the current voltage.&quot;&quot;&quot;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>        <span class="cf">return</span> <span class="va">self</span>._voltage</span></code></pre></div>
 <h2 id="super">super</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">class</span> C(B):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="kw">def</span> method(<span class="va">self</span>, arg):</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>        <span class="bu">super</span>().method(arg)    <span class="co"># This does the same thing as:</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>                               <span class="co"># super(C, self).method(arg)</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="kw">class</span> C(B):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>    <span class="kw">def</span> method(<span class="va">self</span>, arg):</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>        <span class="bu">super</span>().method(arg)    <span class="co"># This does the same thing as:</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>                               <span class="co"># super(C, self).method(arg)</span></span></code></pre></div>
 <h2 id="classmethod">classmethod</h2>
 <p>带 <code>cls</code> 的类方法。</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a><span class="kw">class</span> C:</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>    <span class="at">@classmethod</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>    <span class="kw">def</span> f(cls, arg1, arg2, ...): ...</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">class</span> C:</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>    <span class="at">@classmethod</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>    <span class="kw">def</span> f(cls, arg1, arg2, ...): ...</span></code></pre></div>
 <h2 id="三元操作符python_ternary">三元操作符<span class="citation" data-cites="python_ternary"><sup>[<a href="#ref-python_ternary" role="doc-biblioref">8</a>]</sup></span></h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>a <span class="cf">if</span> condition <span class="cf">else</span> b</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a>a <span class="cf">if</span> condition <span class="cf">else</span> b</span></code></pre></div>
 <h2 id="迭代器">迭代器</h2>
 <h3 id="找到第一个符合条件的元素python_iter_find_first">找到第一个符合条件的元素<span class="citation" data-cites="python_iter_find_first"><sup>[<a href="#ref-python_iter_find_first" role="doc-biblioref">9</a>]</sup></span></h3>
-<div class="sourceCode" id="cb13"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a><span class="bu">next</span>(obj <span class="cf">for</span> obj <span class="kw">in</span> objs <span class="cf">if</span> obj.val<span class="op">==</span><span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a><span class="bu">next</span>(obj <span class="cf">for</span> obj <span class="kw">in</span> objs <span class="cf">if</span> obj.val<span class="op">==</span><span class="dv">5</span>)</span></code></pre></div>
 <h3 id="计算文件的行数python_iter_row_count">计算文件的行数<span class="citation" data-cites="python_iter_row_count"><sup>[<a href="#ref-python_iter_row_count" role="doc-biblioref">10</a>]</sup></span></h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>row_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> row <span class="kw">in</span> file_object)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a>row_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> row <span class="kw">in</span> file_object)</span></code></pre></div>
 <h2 id="faq">FAQ</h2>
 <h3 id="python3-unicodeencodeerror-ascii-codec-cant-encode-characterpython_faq_unicode">Python3: UnicodeEncodeError: ‘ascii’ codec can’t encode character<span class="citation" data-cites="python_faq_unicode"><sup>[<a href="#ref-python_faq_unicode" role="doc-biblioref">11</a>]</sup></span></h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="va">PYTHONIOENCODING=</span>utf-8 <span class="ex">python3</span> script.py</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="va">PYTHONIOENCODING=</span>utf-8 <span class="ex">python3</span> script.py</span></code></pre></div>
 <h1 id="numpy">numpy</h1>
-<div class="sourceCode" id="cb16"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 <h2 id="数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<a href="#ref-numpyTypes" role="doc-biblioref">12</a>]</sup></span></h2>
 <div id="tbl:numpyTypes">
 <table>
@@ -1145,63 +1152,63 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="算术平均">算术平均</h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a><span class="fl">2.5</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true"></a>array([<span class="fl">2.</span>, <span class="fl">3.</span>])</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true"></a>array([<span class="fl">1.5</span>, <span class="fl">3.5</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true"></a><span class="fl">2.5</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true"></a>array([<span class="fl">2.</span>, <span class="fl">3.</span>])</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.mean(a, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true"></a>array([<span class="fl">1.5</span>, <span class="fl">3.5</span>])</span></code></pre></div>
 <h2 id="右乘列向量">右乘列向量</h2>
 <p><span id="eq:rigthMultiplyColumnVector"><span class="math display">\[\m{A}\v{x}\qquad(1)\]</span></span></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a>np.dot(A, x)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a>np.dot(A, x)</span></code></pre></div>
 <h2 id="竖向堆积">竖向堆积</h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.vstack((a,b))</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true"></a>       [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> b <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.vstack((a,b))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>       [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]])</span></code></pre></div>
 <h2 id="范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<a href="#ref-pythonNorm" role="doc-biblioref">13</a>]</sup></span></h2>
 <p><span id="eq:L2Norm"><span class="math display">\[\lVert\v{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}\qquad(2)\]</span></span></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.linalg.norm([<span class="dv">3</span>, <span class="dv">4</span>])</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true"></a><span class="fl">5.0</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.linalg.norm([<span class="dv">3</span>, <span class="dv">4</span>])</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a><span class="fl">5.0</span></span></code></pre></div>
 <h2 id="奇异值分解">奇异值分解</h2>
 <p><span id="eq:SVD"><span class="math display">\[\m{A} = \m{U}\m{D}\T{\m{V}}\qquad(3)\]</span></span></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a>U, d, Vt <span class="op">=</span> np.linalg.svd(A)  <span class="co"># U @ np.diag(d) @ Vt == A</span></span></code></pre></div>
 <h2 id="numpy.any">numpy.any</h2>
 <p>测试某个轴上是否有一个元素为真。</p>
 <h2 id="numpy.arccos">numpy.arccos</h2>
 <p>cos 的逆运算。</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.arccos([<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a>array([ <span class="fl">0.</span>        ,  <span class="fl">3.14159265</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.arccos([<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a>array([ <span class="fl">0.</span>        ,  <span class="fl">3.14159265</span>])</span></code></pre></div>
 <h2 id="numpy.arctan2">numpy.arctan2</h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>])</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.arctan2(y, x) <span class="op">*</span> <span class="dv">180</span> <span class="op">/</span> np.pi</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true"></a>array([<span class="op">-</span><span class="fl">135.</span>,  <span class="op">-</span><span class="fl">45.</span>,   <span class="fl">45.</span>,  <span class="fl">135.</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>, <span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.arctan2(y, x) <span class="op">*</span> <span class="dv">180</span> <span class="op">/</span> np.pi</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a>array([<span class="op">-</span><span class="fl">135.</span>,  <span class="op">-</span><span class="fl">45.</span>,   <span class="fl">45.</span>,  <span class="fl">135.</span>])</span></code></pre></div>
 <h2 id="numpy.clip">numpy.clip</h2>
 <p>等价于 <code>np.minimum(a_max, np.maximum(a, a_min))</code>。</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.clip(a, <span class="dv">1</span>, <span class="dv">8</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a>array([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">8</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> a <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.clip(a, <span class="dv">1</span>, <span class="dv">8</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true"></a>array([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">8</span>])</span></code></pre></div>
 <h2 id="numpy.deg2rad">numpy.deg2rad</h2>
 <p>角度 -&gt; 弧度：</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.deg2rad(<span class="dv">180</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="fl">3.1415926535897931</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.deg2rad(<span class="dv">180</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a><span class="fl">3.1415926535897931</span></span></code></pre></div>
 <h2 id="numpy.degrees">numpy.degrees</h2>
 <p>弧度 -&gt; 角度：</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> rad <span class="op">=</span> np.arange(<span class="fl">12.</span>)<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">6</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.degrees(rad)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a>array([   <span class="fl">0.</span>,   <span class="fl">30.</span>,   <span class="fl">60.</span>,   <span class="fl">90.</span>,  <span class="fl">120.</span>,  <span class="fl">150.</span>,  <span class="fl">180.</span>,  <span class="fl">210.</span>,  <span class="fl">240.</span>,</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true"></a>        <span class="fl">270.</span>,  <span class="fl">300.</span>,  <span class="fl">330.</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> rad <span class="op">=</span> np.arange(<span class="fl">12.</span>)<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">6</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.degrees(rad)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a>array([   <span class="fl">0.</span>,   <span class="fl">30.</span>,   <span class="fl">60.</span>,   <span class="fl">90.</span>,  <span class="fl">120.</span>,  <span class="fl">150.</span>,  <span class="fl">180.</span>,  <span class="fl">210.</span>,  <span class="fl">240.</span>,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a>        <span class="fl">270.</span>,  <span class="fl">300.</span>,  <span class="fl">330.</span>])</span></code></pre></div>
 <h2 id="numpy.zeros">numpy.zeros</h2>
 <p>初始化数组。</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.zeros(<span class="dv">5</span>)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a>array([ <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>])</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.zeros((<span class="dv">2</span>, <span class="dv">1</span>))</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true"></a>array([[ <span class="fl">0.</span>],</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true"></a>       [ <span class="fl">0.</span>]])</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.zeros(<span class="dv">5</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true"></a>array([ <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>,  <span class="fl">0.</span>])</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.zeros((<span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true"></a>array([[ <span class="fl">0.</span>],</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true"></a>       [ <span class="fl">0.</span>]])</span></code></pre></div>
 <h1 id="pandas">pandas</h1>
 <h2 id="join">join</h2>
 <table>
@@ -1244,24 +1251,24 @@ https://github.com/alex-shpak/hugo-book
 </table>
 <h1 id="tqdm">tqdm</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a><span class="ex">pip</span> install tqdm</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true"></a><span class="ex">pip</span> install tqdm</span></code></pre></div>
 <h2 id="基于迭代器">基于迭代器</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true"></a><span class="im">from</span> time <span class="im">import</span> sleep</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true"></a>text <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true"></a><span class="cf">for</span> char <span class="kw">in</span> tqdm([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>], desc<span class="op">=</span><span class="st">&#39;demo&#39;</span>, total<span class="op">=</span><span class="dv">4</span>):</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true"></a>    sleep(<span class="fl">0.25</span>)</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true"></a>    text <span class="op">=</span> text <span class="op">+</span> char</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true"></a><span class="im">from</span> tqdm <span class="im">import</span> tqdm</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true"></a><span class="im">from</span> time <span class="im">import</span> sleep</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true"></a>text <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true"></a><span class="cf">for</span> char <span class="kw">in</span> tqdm([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>], desc<span class="op">=</span><span class="st">&#39;demo&#39;</span>, total<span class="op">=</span><span class="dv">4</span>):</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true"></a>    sleep(<span class="fl">0.25</span>)</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true"></a>    text <span class="op">=</span> text <span class="op">+</span> char</span></code></pre></div>
 <h1 id="pillow">Pillow</h1>
 <h2 id="图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<a href="#ref-pillowMaxImagePixels" role="doc-biblioref">14</a>]</sup></span></h2>
-<div class="sourceCode" id="cb30"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true"></a>PIL.Image.MAX_IMAGE_PIXELS <span class="op">=</span> <span class="dv">933120000</span></span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a>PIL.Image.MAX_IMAGE_PIXELS <span class="op">=</span> <span class="dv">933120000</span></span></code></pre></div>
 <h1 id="常用函数">常用函数</h1>
-<div class="sourceCode" id="cb31"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
 <h1 id="anaconda">anaconda</h1>
 <h2 id="卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<a href="#ref-anaconda_uninstall" role="doc-biblioref">15</a>]</sup></span></h2>
-<div class="sourceCode" id="cb32"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-pythonBuiltIn">
@@ -1314,6 +1321,11 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#开发环境">开发环境</a>
+  <ul>
+  <li><a href="#miniconda">miniconda</a></li>
+  <li><a href="#格式化">格式化</a></li>
+  </ul></li>
   <li><a href="#内建函数pythonbuiltin">内建函数<span class="citation" data-cites="pythonBuiltIn"><sup>[<span>1</span>]</sup></span></a>
   <ul>
   <li><a href="#数据类型">数据类型</a></li>
