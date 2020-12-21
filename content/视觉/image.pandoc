@@ -47,9 +47,3 @@ CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake ..
 CC=/usr/bin/gcc CXX=/usr/bin/g++ make
 sudo make install
 ```
-
-# Adobe Photoshop 2020
-
-## 安装
-
-请参考 <https://www.isharepc.com/20181.html>。
