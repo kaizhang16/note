@@ -199,7 +199,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/</guid>
-      <description>语法 别名 Set-Alias -Name br -Value broot 目录  语法  别名    </description>
+      <description>语法 别名 Set-Alias -Name br -Value broot 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 目录  语法  别名 代理    </description>
     </item>
     
     <item>

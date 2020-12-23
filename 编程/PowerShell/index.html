@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="语法 别名 Set-Alias -Name br -Value broot 目录  语法  别名    ">
+<meta name="description" content="语法 别名 Set-Alias -Name br -Value broot 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &quot;127.0.0.1:3128&quot; # 设置代理 netsh winhttp reset proxy # 重置代理 目录  语法  别名 代理    ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="PowerShell" />
-<meta property="og:description" content="语法 别名 Set-Alias -Name br -Value broot 目录  语法  别名    " />
+<meta property="og:description" content="语法 别名 Set-Alias -Name br -Value broot 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &quot;127.0.0.1:3128&quot; # 设置代理 netsh winhttp reset proxy # 重置代理 目录  语法  别名 代理    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/" />
 
@@ -14,7 +14,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.c8bd8f360b2d7f56e4aada7c1cbae199114bc72b904b35e47bf929cab43d180a.js" integrity="sha256-yL2PNgstf1bkqtp8HLrhmRFLxyuQSzXke/kpyrQ9GAo="></script>
+<script defer src="/note/cn.search.min.f4372aeb256fc707ee3ff2634d8c59d8c1225b9523454b8e5d8d5a3735a24dbf.js" integrity="sha256-9Dcq6yVvxwfuP/JjTYxZ2MEiW5UjRUuOXY1aNzWiTb8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -24,7 +24,7 @@ https://github.com/alex-shpak/hugo-book
 <link rel="icon" href="/note/favicon.ico" type="image/x-icon">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/dark.min.css">
 
 
 
@@ -973,6 +973,10 @@ https://github.com/alex-shpak/hugo-book
   <article class="markdown"><h1 id="语法">语法</h1>
 <h2 id="别名">别名</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">Set-Alias</span> -Name br -Value broot</span></code></pre></div>
+<h2 id="代理">代理</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>netsh winhttp show proxy  <span class="co"># 显示当前代理</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>netsh winhttp <span class="fu">set</span> proxy <span class="st">&quot;127.0.0.1:3128&quot;</span>  <span class="co"># 设置代理</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>netsh winhttp reset proxy  <span class="co"># 重置代理</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -980,6 +984,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#语法">语法</a>
   <ul>
   <li><a href="#别名">别名</a></li>
+  <li><a href="#代理">代理</a></li>
   </ul></li>
   </ul>
 </nav>
