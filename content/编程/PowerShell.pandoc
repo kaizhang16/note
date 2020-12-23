@@ -9,3 +9,11 @@ title: "PowerShell"
 ```ps1
 Set-Alias -Name br -Value broot
 ```
+
+## 代理
+
+```ps1
+netsh winhttp show proxy  # 显示当前代理
+netsh winhttp set proxy "127.0.0.1:3128"  # 设置代理
+netsh winhttp reset proxy  # 重置代理
+```
