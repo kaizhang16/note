@@ -1,0 +1,11 @@
+---
+title: "PowerShell"
+---
+
+# 语法
+
+## 别名
+
+```ps1
+Set-Alias -Name br -Value broot
+```
