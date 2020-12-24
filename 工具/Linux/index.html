@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du[2] du -sh /a/* | sort -rh | head -5 jq 过滤[3] select(.">
+<meta name="description" content="窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="手册 tldr  表 1: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.com/bootandy/dust  du[2] du -sh /a/* | sort -rh | head -5 jq 过滤[3] select(." />
+<meta property="og:description" content="窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/linux/" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" />
 
 <title>Linux | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f4372aeb256fc707ee3ff2634d8c59d8c1225b9523454b8e5d8d5a3735a24dbf.js" integrity="sha256-9Dcq6yVvxwfuP/JjTYxZ2MEiW5UjRUuOXY1aNzWiTb8="></script>
+<script defer src="/note/cn.search.min.59072c4a068ab387fdddb2fc1b03cc8f7824082fc1bbbd520e08f9c34adb81bb.js" integrity="sha256-WQcsSgaKs4f93bL8GwPMj3gkCC/Bu71SDgj5w0rbgbs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -432,7 +432,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/linux/" class=" active">Linux</a>
+    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" class=" active">Linux</a>
   
 
         </li>
@@ -970,11 +970,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="手册">手册</h1>
+  <article class="markdown"><h1 id="窗口管理器">窗口管理器</h1>
+<h2 id="i3">i3</h2>
+<div id="tbl:i3_common_command">
+<table>
+<caption>表 1: i3 常见命令</caption>
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>i3-msg exit</code></td>
+<td>登出</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="手册">手册</h1>
 <h2 id="tldr">tldr</h2>
 <div id="tbl:tldrInstall">
 <table>
-<caption>表 1: tldr 安装命令</caption>
+<caption>表 2: tldr 安装命令</caption>
 <thead>
 <tr class="header">
 <th>操作系统</th>
@@ -1040,6 +1059,10 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#窗口管理器">窗口管理器</a>
+  <ul>
+  <li><a href="#i3">i3</a></li>
+  </ul></li>
   <li><a href="#手册">手册</a>
   <ul>
   <li><a href="#tldr">tldr</a></li>
