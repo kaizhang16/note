@@ -7,9 +7,18 @@ title: "Windows"
 | 软件名          | 功能     |
 |-----------------|----------|
 | 7-zip           | 压缩     |
+| Scoop           | 软件管理 |
 | Total Commander | 文件管理 |
 
 : Windows 常用软件 {#tbl:windows_common_software}
+
+## Scoop
+
+### 设置代理
+
+```ps1
+scoop config proxy 127.0.0.1:3128
+```
 
 ## Total Commander
 
