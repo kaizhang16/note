@@ -2,6 +2,16 @@
 title: Linux
 ---
 
+# 窗口管理器
+
+## i3
+
+| 命令          | 功能 |
+|---------------|------|
+| `i3-msg exit` | 登出 |
+
+: i3 常见命令 {#tbl:i3_common_command}
+
 # 手册
 
 ## tldr
