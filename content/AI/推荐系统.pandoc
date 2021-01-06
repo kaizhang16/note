@@ -4,15 +4,17 @@ title: "推荐系统"
 
 # 术语
 
-| 缩写 | 全称                     | 含义         |
-|------|--------------------------|--------------|
-| C    | Context                  | 场景         |
-| CTR  | Click Through Rate       | 点击率       |
-| CVR  | Conversion Rate          | 转化率       |
-| DMP  | Data Management Platform | 数据管理平台 |
-| I    | Item                     | 物品         |
-| MLP  | Multilayer Perception    | 多层感知机   |
-| U    | User                     | 用户         |
+| 缩写 | 全称                              | 含义             |
+|------|-----------------------------------|------------------|
+| C    | Context                           | 场景             |
+| CTR  | Click Through Rate                | 点击率           |
+| CVR  | Conversion Rate                   | 转化率           |
+| DMP  | Data Management Platform          | 数据管理平台     |
+| FFM  | Field-aware Factorization Machine | 域感知因子分解机 |
+| FM   | Factorization Machine             | 因子分解机       |
+| I    | Item                              | 物品             |
+| MLP  | Multilayer Perception             | 多层感知机       |
+| U    | User                              | 用户             |
 
 : 术语 {#tbl:terminology}
 
@@ -106,8 +108,8 @@ $$R_{u,p} = \frac{\sum_{s\in S}w_{u,s}R_{s,p}}{\sum_{s\in S}w_{u,s}}$$
 其中，$R_{s,p}$ 表示用户 $s$ 对物品 $p$ 的评分；$w_{u,s}$ 表示用户 $u$
 与用户 $s$ 的相似度。
 
-- 基于用户的观看历史，找到跟目标用户看过同样视频的相似用户
-- 找到这些相似用户喜欢看的其他视频
+- 根据用户向量找到 top n 相似用户
+- 将相似用户对物品的评分加权平均，即可得到目标用户对物品的评分
 
 ### ItemCF
 
@@ -118,6 +120,9 @@ $$R_{u,p} = \sum_{h\in H}w_{p,h}R_{u,h}$$
 
 其中，$R_{u,h}$ 表示用户 $u$ 对物品 $h$ 的评分；$w_{p,h}$ 表示物品 $p$
 与物品 $h$ 的相似度；$H$ 表示用户 $u$ 的正反馈物品集合。
+
+- 根据物品向量找到 top k 相似物品
+- 将用户对相似物品的评分加权平均，即得用户对目标物品的评分
 
 ## 矩阵分解
 
@@ -237,7 +242,7 @@ $$\hat{R}_{ui} = h(\v{r}^{(i)};\theta)_u$$ {#eq:auto_rec_output}
 好处：
 
 - 减少过拟合
-- 减弱梯度小时现象，加快收敛速度
+- 减弱梯度消失现象，加快收敛速度
 
 ## NeuralCF
 
@@ -426,7 +431,7 @@ $$y_j = p(w_j\mid w_I)
 $$ {#eq:word2vec_base_output}
 
 其中，$\v{v}_{w_I}\in\R^{N\times 1}$ 为 $\m{W}$ 的第 $I$ 行；
-$\v{v}'_{w_j}\in\R^{N\times 1}$ 为 $\m{W}'$ 的第 $j$ 列。
+$\v{v}'_{w_j}\in\R^{N\times 1}$ 为 $\m{W}'$ 的第 $j$ 列。$\m{W}$ 为词向量矩阵。
 
 #### 损失函数
 
