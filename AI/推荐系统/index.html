@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。">
+<meta name="description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  FFM Field-aware Factorization Machine 域感知因子分解机  FM Factorization Machine 因子分解机  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="推荐系统" />
-<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
+<meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  FFM Field-aware Factorization Machine 域感知因子分解机  FM Factorization Machine 因子分解机  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" />
 
@@ -14,7 +14,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.4fa60693d1f0ffe8f130c1f971303e8136599263eb4f1304ee091c31d211d895.js" integrity="sha256-T6YGk9Hw/&#43;jxMMH5cTA&#43;gTZZkmPrTxME7gkcMdIR2JU="></script>
+<script defer src="/note/cn.search.min.ea5e2a5fc6293a831b5debf581eec2279dcc10284bfc52b2449b4f5c53278f24.js" integrity="sha256-6l4qX8YpOoMbXev1ge7CJ53MEChL/FKyRJtPXFMnjyQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1003,6 +1003,16 @@ https://github.com/alex-shpak/hugo-book
 <td>数据管理平台</td>
 </tr>
 <tr class="odd">
+<td>FFM</td>
+<td>Field-aware Factorization Machine</td>
+<td>域感知因子分解机</td>
+</tr>
+<tr class="even">
+<td>FM</td>
+<td>Factorization Machine</td>
+<td>因子分解机</td>
+</tr>
+<tr class="odd">
 <td>I</td>
 <td>Item</td>
 <td>物品</td>
@@ -1224,13 +1234,17 @@ https://github.com/alex-shpak/hugo-book
 <p><span id="eq:user_cf"><span class="math display">\[R_{u,p} = \frac{\sum_{s\in S}w_{u,s}R_{s,p}}{\sum_{s\in S}w_{u,s}}\qquad(4)\]</span></span></p>
 <p>其中，<span class="math inline">\(R_{s,p}\)</span> 表示用户 <span class="math inline">\(s\)</span> 对物品 <span class="math inline">\(p\)</span> 的评分；<span class="math inline">\(w_{u,s}\)</span> 表示用户 <span class="math inline">\(u\)</span> 与用户 <span class="math inline">\(s\)</span> 的相似度。</p>
 <ul>
-<li>基于用户的观看历史，找到跟目标用户看过同样视频的相似用户</li>
-<li>找到这些相似用户喜欢看的其他视频</li>
+<li>根据用户向量找到 top n 相似用户</li>
+<li>将相似用户对物品的评分加权平均，即可得到目标用户对物品的评分</li>
 </ul>
 <h3 id="itemcf">ItemCF</h3>
 <p>基于物品相似度的协同过滤。</p>
 <p><span id="eq:item_cf"><span class="math display">\[R_{u,p} = \sum_{h\in H}w_{p,h}R_{u,h}\qquad(5)\]</span></span></p>
 <p>其中，<span class="math inline">\(R_{u,h}\)</span> 表示用户 <span class="math inline">\(u\)</span> 对物品 <span class="math inline">\(h\)</span> 的评分；<span class="math inline">\(w_{p,h}\)</span> 表示物品 <span class="math inline">\(p\)</span> 与物品 <span class="math inline">\(h\)</span> 的相似度；<span class="math inline">\(H\)</span> 表示用户 <span class="math inline">\(u\)</span> 的正反馈物品集合。</p>
+<ul>
+<li>根据物品向量找到 top k 相似物品</li>
+<li>将用户对相似物品的评分加权平均，即得用户对目标物品的评分</li>
+</ul>
 <h2 id="矩阵分解">矩阵分解</h2>
 <p>分解共现矩阵得到用户和物品的隐向量：</p>
 <p><span id="eq:matrix_factorization"><span class="math display">\[\m{R} = \m{U}\m{V}\qquad(6)\]</span></span></p>
@@ -1305,7 +1319,7 @@ f(\v{x}) &amp;= \sum_{i=1}^m \pi_i(\v{x})\cdot\eta_i(\v{x}) \\
 <p>好处：</p>
 <ul>
 <li>减少过拟合</li>
-<li>减弱梯度小时现象，加快收敛速度</li>
+<li>减弱梯度消失现象，加快收敛速度</li>
 </ul>
 <h2 id="neuralcf">NeuralCF</h2>
 <p>用多层神经网络代替矩阵分解的内积操作。</p>
@@ -1456,7 +1470,7 @@ a&#39;_{ij} &amp;= \T{\v{h}}\ReLU(\m{W}(\v{v}_i\odot\v{v}_j)x_i x_j +\v{b})
 <p><span id="eq:word2vec_base_output"><span class="math display">\[y_j = p(w_j\mid w_I)
 = \frac{\exp(\T{\v{v}&#39;_{w_j}}\v{v}_{w_I})}{\sum_{j&#39;=1}^V\exp(\T{\v{v}&#39;_{w_{j&#39;}}}\v{v}_{w_I})}
 \qquad(27)\]</span></span></p>
-<p>其中，<span class="math inline">\(\v{v}_{w_I}\in\R^{N\times 1}\)</span> 为 <span class="math inline">\(\m{W}\)</span> 的第 <span class="math inline">\(I\)</span> 行； <span class="math inline">\(\v{v}&#39;_{w_j}\in\R^{N\times 1}\)</span> 为 <span class="math inline">\(\m{W}&#39;\)</span> 的第 <span class="math inline">\(j\)</span> 列。</p>
+<p>其中，<span class="math inline">\(\v{v}_{w_I}\in\R^{N\times 1}\)</span> 为 <span class="math inline">\(\m{W}\)</span> 的第 <span class="math inline">\(I\)</span> 行； <span class="math inline">\(\v{v}&#39;_{w_j}\in\R^{N\times 1}\)</span> 为 <span class="math inline">\(\m{W}&#39;\)</span> 的第 <span class="math inline">\(j\)</span> 列。<span class="math inline">\(\m{W}\)</span> 为词向量矩阵。</p>
 <h4 id="损失函数-2">损失函数</h4>
 <p><span id="eq:word2vec_base_loss"><span class="math display">\[L = -\log p(w_O\mid w_I)\qquad(28)\]</span></span></p>
 <p>其中，<span class="math inline">\(O\)</span> 为输出单词的索引；这个损失可以看做最大似然概率，也可以看做交叉熵。</p>
