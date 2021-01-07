@@ -71,6 +71,10 @@
   </url>
   
   <url>
+    <loc>https://kaizhang91.github.io/note/leetcode/</loc>
+  </url>
+  
+  <url>
     <loc>https://kaizhang91.github.io/note/CS/linux/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
   </url>
@@ -203,6 +207,10 @@
   </url>
   
   <url>
+    <loc>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</loc>
+  </url>
+  
+  <url>
     <loc>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</loc>
   </url>
   
@@ -270,7 +278,7 @@
   
   <url>
     <loc>https://kaizhang91.github.io/note/</loc>
-    <lastmod>2020-11-06T14:29:45+00:00</lastmod>
+    <lastmod>2021-01-07T09:45:46+00:00</lastmod>
   </url>
   
 </urlset>

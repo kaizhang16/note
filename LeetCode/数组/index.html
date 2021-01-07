@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="C&#43;&#43;" />
-<meta property="og:description" content="开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：" />
+<meta name="description" content="未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&lt;int&gt; &amp;nums) {  std::unordered_map&lt;int, int&gt; m;  int n = nums.size();  for (auto num : nums) {  if (&#43;&#43;m[num] &gt; (n / 2)) {  return num;  }  }  return -1; } 快排分割法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  找第 \(\lfloor\frac{n}{2}\rfloor\) 个元素。
+Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&lt;int&gt; &amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &lt; nums.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数组" />
+<meta property="og:description" content="未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&lt;int&gt; &amp;nums) {  std::unordered_map&lt;int, int&gt; m;  int n = nums.size();  for (auto num : nums) {  if (&#43;&#43;m[num] &gt; (n / 2)) {  return num;  }  }  return -1; } 快排分割法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  找第 \(\lfloor\frac{n}{2}\rfloor\) 个元素。
+Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&lt;int&gt; &amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &lt; nums." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/" />
 
-<title>C&#43;&#43; | 凯的笔记</title>
+<title>数组 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
@@ -341,7 +343,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/" class="">数组</a>
+    <a href="https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/" class=" active">数组</a>
   
 
         </li>
@@ -646,7 +648,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -676,7 +678,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class=" active">C&#43;&#43;</a>
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class="">C&#43;&#43;</a>
   
 
         </li>
@@ -978,7 +980,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>C&#43;&#43;</strong>
+  <strong>数组</strong>
 
   <label for="toc-control">
     
@@ -1001,194 +1003,64 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="开发环境">开发环境</h1>
-<h2 id="cmake">cmake</h2>
-<h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="va">CMAKE_VERSION=</span>3.19.1</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ex">curl</span> -LO <span class="st">&quot;https://github.com/Kitware/CMake/releases/download/v</span><span class="va">$CMAKE_VERSION</span><span class="st">/cmake-</span><span class="va">$CMAKE_VERSION</span><span class="st">-Linux-x86_64.sh&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="fu">sudo</span> sh ./cmake-<span class="va">$CMAKE_VERSION</span>-Linux-x86_64.sh --skip-license --prefix=/usr/local</span></code></pre></div>
-<h3 id="教程">教程</h3>
+  <article class="markdown"><h1 id="未排序的数组">未排序的数组</h1>
+<h2 id="众数">169 众数</h2>
+<h3 id="哈希表">哈希表</h3>
 <ul>
-<li><a href="https://cliutils.gitlab.io/modern-cmake/" class="uri">https://cliutils.gitlab.io/modern-cmake/</a></li>
+<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(n)\)</span></li>
 </ul>
-<h2 id="工程目录结构cmake_structure">工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<a href="#ref-cmake_structure" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">project</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>├── <span class="ex">CMakeLists.txt</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>├── <span class="ex">compile_commands.json</span> -<span class="op">&gt;</span> build/compile_commands.json</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>├── <span class="ex">include</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>│  └── <span class="ex">CLI</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>│     ├── <span class="ex">App.hpp</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>│     ├── <span class="ex">Config.hpp</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>│     └── <span class="ex">Formatter.hpp</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>├── <span class="ex">README.md</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>└── <span class="ex">src</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>   ├── <span class="ex">CMakeLists.txt</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>   └── <span class="ex">main.cpp</span></span></code></pre></div>
-<h2 id="clangdclangd_install">clangd<span class="citation" data-cites="clangd_install"><sup>[<a href="#ref-clangd_install" role="doc-biblioref">2</a>]</sup></span></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="bu">cd</span> build</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="fu">cmake</span> .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="bu">cd</span> ..</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="fu">ln</span> -s build/compile_commands.json compile_commands.json</span></code></pre></div>
-<h1 id="代码风格">代码风格</h1>
-<h2 id="文件后缀">文件后缀</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">int</span> major_element_v1(vector&lt;<span class="dt">int</span>&gt; &amp;nums) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="bu">std::</span>unordered_map&lt;<span class="dt">int</span>, <span class="dt">int</span>&gt; m;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="dt">int</span> n = nums.size();</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> num : nums) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        <span class="cf">if</span> (++m[num] &gt; (n / <span class="dv">2</span>)) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>            <span class="cf">return</span> num;</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>    }</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="快排分割法">快排分割法</h3>
 <ul>
-<li>源代码：<code>cpp</code></li>
+<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<h2 id="命名规范">命名规范</h2>
+<p>找第 <span class="math inline">\(\lfloor\frac{n}{2}\rfloor\)</span> 个元素。</p>
+<h3 id="boyer-moore-投票法">Boyer-Moore 投票法</h3>
 <ul>
-<li>Type names
-<ul>
-<li>名词</li>
-<li><code>TextFileReader</code></li>
-</ul></li>
-<li>Function names
-<ul>
-<li>动词</li>
-<li><code>openFile</code></li>
-</ul></li>
+<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<blockquote>
-<p>请参考：</p>
-<ul>
-<li><a href="https://llvm.org/docs/CodingStandards.html#llvm-coding-standards" class="uri">https://llvm.org/docs/CodingStandards.html#llvm-coding-standards</a></li>
-<li><a href="https://google.github.io/styleguide/cppguide.html" class="uri">https://google.github.io/styleguide/cppguide.html</a></li>
-</ul>
-</blockquote>
-<h1 id="教程-1">教程</h1>
-<ul>
-<li><a href="https://isocpp.org/get-started" class="uri">https://isocpp.org/get-started</a></li>
-</ul>
-<h1 id="最佳实践">最佳实践</h1>
-<div id="tbl:best_practice">
-<table>
-<caption>表 1: 最佳实践</caption>
-<thead>
-<tr class="header">
-<th>场景</th>
-<th>最佳实践</th>
-<th>不好的实践</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>初始化</td>
-<td><code>{}</code></td>
-<td><code>()</code></td>
-</tr>
-<tr class="even">
-<td>空指针</td>
-<td><code>nullptr</code></td>
-<td><code>NULL</code> 或者 <code>0</code></td>
-</tr>
-<tr class="odd">
-<td>字符串拼接</td>
-<td><code>string nametext = "Your name is" + name;</code></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>int -&gt; string</td>
-<td><code>string s = std::to_string(42);</code><span class="citation" data-cites="cpp_int_to_string"><sup>[<a href="#ref-cpp_int_to_string" role="doc-biblioref">3</a>]</sup></span></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="vector">vector</h1>
-<h2 id="常用方法">常用方法</h2>
-<div id="tbl:vector_methods">
-<table>
-<caption>表 2: vector 常用方法</caption>
-<thead>
-<tr class="header">
-<th>代码</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>std::vector&lt;int&gt; vector1(length, 0);</code></td>
-<td>初始化为 0</td>
-</tr>
-<tr class="even">
-<td><code>size()</code></td>
-<td>返回元素个数</td>
-</tr>
-<tr class="odd">
-<td><code>push_back(val)</code></td>
-<td>在末尾添加元素 val</td>
-</tr>
-<tr class="even">
-<td><code>pop_back()</code></td>
-<td>删除最后一个元素</td>
-</tr>
-<tr class="odd">
-<td><code>std::find(v.begin(), v.end(), val) != v.end()</code></td>
-<td>v 包含 val</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="set">set</h1>
-<h2 id="常用方法-1">常用方法</h2>
-<div id="tbl:set_methods">
-<table>
-<caption>表 3: set 常用方法</caption>
-<thead>
-<tr class="header">
-<th>代码</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>s.find(val) != s.end()</code></td>
-<td>s 包含 val</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-cmake_structure">
-<p>[1] SCHREINER H. How to structure your project[J/OL]. [日期不详].. <a href="https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html">https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html</a>.</p>
-</div>
-<div id="ref-clangd_install">
-<p>[2] LLVM. Getting started[J/OL]. [日期不详].. <a href="https://clangd.llvm.org/installation.html">https://clangd.llvm.org/installation.html</a>.</p>
-</div>
-<div id="ref-cpp_int_to_string">
-<p>[3] M M. Easiest way to convert int to string in C++[EB/OL](2011–04–08). <a href="https://stackoverflow.com/a/5591169/13200985">https://stackoverflow.com/a/5591169/13200985</a>.</p>
-</div>
-</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">int</span> major_element(vector&lt;<span class="dt">int</span>&gt; &amp;nums) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="dt">int</span> result = nums[<span class="dv">0</span>];</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="dt">int</span> count = <span class="dv">1</span>;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt; nums.size(); ++i) {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>        <span class="cf">if</span> (nums[i] == result) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>            count++;</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>            <span class="cf">if</span> (count &gt; <span class="dv">0</span>) {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>                count--;</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>            } <span class="cf">else</span> {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>                result = nums[i];</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>                count = <span class="dv">1</span>;</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>            }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>        }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>    }</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#开发环境">开发环境</a>
+  <li><a href="#未排序的数组">未排序的数组</a>
   <ul>
-  <li><a href="#cmake">cmake</a>
+  <li><a href="#众数">169 众数</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
-  <li><a href="#教程">教程</a></li>
+  <li><a href="#哈希表">哈希表</a></li>
+  <li><a href="#快排分割法">快排分割法</a></li>
+  <li><a href="#boyer-moore-投票法">Boyer-Moore 投票法</a></li>
   </ul></li>
-  <li><a href="#工程目录结构cmake_structure">工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#clangdclangd_install">clangd<span class="citation" data-cites="clangd_install"><sup>[<span>2</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#代码风格">代码风格</a>
-  <ul>
-  <li><a href="#文件后缀">文件后缀</a></li>
-  <li><a href="#命名规范">命名规范</a></li>
-  </ul></li>
-  <li><a href="#教程-1">教程</a></li>
-  <li><a href="#最佳实践">最佳实践</a></li>
-  <li><a href="#vector">vector</a>
-  <ul>
-  <li><a href="#常用方法">常用方法</a></li>
-  </ul></li>
-  <li><a href="#set">set</a>
-  <ul>
-  <li><a href="#常用方法-1">常用方法</a></li>
-  </ul></li>
-  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
