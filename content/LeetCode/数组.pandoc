@@ -24,13 +24,6 @@ int major_element_v1(vector<int> &nums) {
 }
 ```
 
-### 快排分割法
-
-- 时间复杂度：$O(n)$
-- 空间复杂度：$O(1)$
-
-找第 $\lfloor\frac{n}{2}\rfloor$ 个元素。
-
 ### Boyer-Moore 投票法
 
 - 时间复杂度：$O(n)$
