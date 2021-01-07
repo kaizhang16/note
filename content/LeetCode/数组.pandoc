@@ -1,0 +1,57 @@
+---
+title: "数组"
+---
+
+# 未排序的数组
+
+## 169 众数
+
+### 哈希表
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+int major_element_v1(vector<int> &nums) {
+    std::unordered_map<int, int> m;
+    int n = nums.size();
+    for (auto num : nums) {
+        if (++m[num] > (n / 2)) {
+            return num;
+        }
+    }
+    return -1;
+}
+```
+
+### 快排分割法
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+找第 $\lfloor\frac{n}{2}\rfloor$ 个元素。
+
+### Boyer-Moore 投票法
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+int major_element(vector<int> &nums) {
+    int result = nums[0];
+    int count = 1;
+    for (int i = 1; i < nums.size(); ++i) {
+        if (nums[i] == result) {
+            count++;
+        } else {
+            if (count > 0) {
+                count--;
+            } else {
+                result = nums[i];
+                count = 1;
+            }
+        }
+    }
+    return result;
+}
+```
