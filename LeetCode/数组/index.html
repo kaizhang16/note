@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&lt;int&gt; &amp;nums) {  std::unordered_map&lt;int, int&gt; m;  int n = nums.size();  for (auto num : nums) {  if (&#43;&#43;m[num] &gt; (n / 2)) {  return num;  }  }  return -1; } 快排分割法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  找第 \(\lfloor\frac{n}{2}\rfloor\) 个元素。
-Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&lt;int&gt; &amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &lt; nums.">
+<meta name="description" content="未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&lt;int&gt; &amp;nums) {  std::unordered_map&lt;int, int&gt; m;  int n = nums.size();  for (auto num : nums) {  if (&#43;&#43;m[num] &gt; (n / 2)) {  return num;  }  }  return -1; } Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&lt;int&gt; &amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &lt; nums.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数组" />
-<meta property="og:description" content="未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&lt;int&gt; &amp;nums) {  std::unordered_map&lt;int, int&gt; m;  int n = nums.size();  for (auto num : nums) {  if (&#43;&#43;m[num] &gt; (n / 2)) {  return num;  }  }  return -1; } 快排分割法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  找第 \(\lfloor\frac{n}{2}\rfloor\) 个元素。
-Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&lt;int&gt; &amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &lt; nums." />
+<meta property="og:description" content="未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&lt;int&gt; &amp;nums) {  std::unordered_map&lt;int, int&gt; m;  int n = nums.size();  for (auto num : nums) {  if (&#43;&#43;m[num] &gt; (n / 2)) {  return num;  }  }  return -1; } Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&lt;int&gt; &amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &lt; nums." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/" />
 
@@ -16,7 +14,7 @@ Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  in
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.75b98161ff1fede286fcfb4843a7ccbe79ab3af271f7b036e96d055b307d4a15.js" integrity="sha256-dbmBYf8f7eKG/PtIQ6fMvnmrOvJx97A26W0FWzB9ShU="></script>
+<script defer src="/note/cn.search.min.fa2cfedbee6e43d4727efde6e79201487d399a5045f3aa7b5cf31405ac9e2a19.js" integrity="sha256-&#43;iz&#43;2&#43;5uQ9Ryfv3m55IBSH05mlBF86p7XPMUBayeKhk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -330,7 +328,11 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <span>LeetCodes</span>
+    <input type="checkbox" id="section-817f67a0d4c538392ea74ac855517ffe" class="toggle" checked />
+    <label for="section-817f67a0d4c538392ea74ac855517ffe" class="flex justify-between">
+      <a  class="">LeetCode</a>
+      <span>▾</span>
+    </label>
   
 
           
@@ -1020,12 +1022,6 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>    }</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    <span class="cf">return</span> -<span class="dv">1</span>;</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>}</span></code></pre></div>
-<h3 id="快排分割法">快排分割法</h3>
-<ul>
-<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
-<li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
-</ul>
-<p>找第 <span class="math inline">\(\lfloor\frac{n}{2}\rfloor\)</span> 个元素。</p>
 <h3 id="boyer-moore-投票法">Boyer-Moore 投票法</h3>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
@@ -1057,7 +1053,6 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#众数">169 众数</a>
   <ul>
   <li><a href="#哈希表">哈希表</a></li>
-  <li><a href="#快排分割法">快排分割法</a></li>
   <li><a href="#boyer-moore-投票法">Boyer-Moore 投票法</a></li>
   </ul></li>
   </ul></li>

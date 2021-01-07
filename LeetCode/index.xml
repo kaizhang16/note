@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode on 凯的笔记</title>
+    <link>https://kaizhang91.github.io/note/LeetCode/</link>
+    <description>Recent content in LeetCode on 凯的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/LeetCode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数组</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</guid>
+      <description>未排序的数组 169 众数 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&amp;lt;int&amp;gt; &amp;amp;nums) {  std::unordered_map&amp;lt;int, int&amp;gt; m;  int n = nums.size();  for (auto num : nums) {  if (++m[num] &amp;gt; (n / 2)) {  return num;  }  }  return -1; } Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&amp;lt;int&amp;gt; &amp;amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &amp;lt; nums.</description>
+    </item>
+    
+  </channel>
+</rss>
