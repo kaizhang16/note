@@ -115,6 +115,42 @@ void rotate(vector<int> &nums, int k) {
 
 # 二维数组
 
+## 数独
+
+### 36 数独是否有效
+
+- 时间复杂度：$O(1)
+- 空间复杂度：$O(1)
+
+```c++
+bool is_valid_sudoku(vector<vector<char>> &board) {
+    int n = board.size();
+    std::unordered_map<char, int> row;
+    vector<std::unordered_map<char, int>> column(n);
+    vector<std::unordered_map<char, int>> box(n);
+    for (int i = 0; i < n; i++) {
+        row.clear();
+        for (int j = 0; j < n; j++) {
+            if (board[i][j] != '.') {
+                row[board[i][j]]++;
+                if (row[board[i][j]] > 1) {
+                    return false;
+                }
+                column[j][board[i][j]]++;
+                if (column[j][board[i][j]] > 1) {
+                    return false;
+                }
+                box[(i / 3) * 3 + j / 3][board[i][j]]++;
+                if (box[(i / 3) * 3 + j / 3][board[i][j]] > 1) {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+```
+
 # 图
 
 ## 连通性
