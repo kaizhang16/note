@@ -51,6 +51,68 @@ int major_element(vector<int> &nums) {
 }
 ```
 
+### 189 旋转数组
+
+#### 使用额外数组
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+void rotate_v1(vector<int> &nums, int k) {
+    int n = nums.size();
+    vector<int> tmp(n);
+    for (int i = 0; i < n; i++) {
+        tmp[(i + k) % n] = nums[i];
+    }
+    nums.assign(tmp.begin(), tmp.end());
+}
+```
+
+#### 翻转
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+void reverse(vector<int> &nums, int i0, int i1) {
+    while (i0 < i1) {
+        std::swap(nums[i0], nums[i1 - 1]);
+        i0++;
+        i1--;
+    }
+}
+
+void rotate_v2(vector<int> &nums, int k) {
+    int n = nums.size();
+    k = k % n;
+    reverse(nums, 0, n);
+    reverse(nums, 0, k);
+    reverse(nums, k, n);
+}
+```
+
+#### 环状替换
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+void rotate(vector<int> &nums, int k) {
+    int n = nums.size();
+    int count = std::__gcd(n, k);
+    for (int start = 0; start < count; start++) {
+        int i = start;
+        int pre = nums[i];
+        do {
+            int i_next = (i + k) % n;
+            std::swap(nums[i_next], pre);
+            i = i_next;
+        } while (i != start);
+    }
+}
+```
+
 # 二维数组
 
 # 图
