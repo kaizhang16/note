@@ -2,11 +2,13 @@
 title: "数组"
 ---
 
-# 未排序的数组
+# 一维数组
 
-## 169 众数
+## 未排序的数组
 
-### 哈希表
+### 169 众数
+
+#### 哈希表
 
 - 时间复杂度：$O(n)$
 - 空间复杂度：$O(n)$
@@ -24,7 +26,7 @@ int major_element_v1(vector<int> &nums) {
 }
 ```
 
-### Boyer-Moore 投票法
+#### Boyer-Moore 投票法
 
 - 时间复杂度：$O(n)$
 - 空间复杂度：$O(1)$
@@ -43,6 +45,122 @@ int major_element(vector<int> &nums) {
                 result = nums[i];
                 count = 1;
             }
+        }
+    }
+    return result;
+}
+```
+
+# 二维数组
+
+# 图
+
+## 连通性
+
+### 547 find_circle_num
+
+#### DFS
+
+- 时间复杂度：$O(n^2)$
+- 空间复杂度：$O(n)$
+
+```c++
+void dfs(vector<vector<int>> &isConnected, vector<bool> &visited, int i) {
+    for (int j = 0; j < isConnected.size(); j++) {
+        if (!visited[j] && isConnected[i][j] == 1) {
+            visited[j] = true;
+            dfs(isConnected, visited, j);
+        }
+    }
+}
+
+int find_circle_num(vector<vector<int>> &isConnected) {
+    int n = isConnected.size();
+    if (n == 0) {
+        return 0;
+    }
+
+    vector<bool> visited(n, false);
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        if (!visited[i]) {
+            result++;
+            dfs(isConnected, visited, i);
+        }
+    }
+    return result;
+}
+```
+
+#### BFS
+
+- 时间复杂度：$O(n^2)$
+- 空间复杂度：$O(n)$
+
+```c++
+int find_circle_num_v2(vector<vector<int>> &isConnected) {
+    int n = isConnected.size();
+    if (n == 0) {
+        return 0;
+    }
+
+    vector<bool> visited(n, false);
+    std::queue<int> q;
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        if (!visited[i]) {
+            result++;
+            q.push(i);
+            while (!q.empty()) {
+                auto front = q.front();
+                q.pop();
+                visited[front] = true;
+                for (int j = 0; j < n; j++) {
+                    if (!visited[j] && isConnected[front][j] == 1) {
+                        q.push(j);
+                    }
+                }
+            }
+        }
+    }
+    return result;
+}
+```
+
+#### 并查集
+
+- 时间复杂度：$O(n^2\log n)$
+- 空间复杂度：$O(n)$
+
+```c++
+int find_root(vector<int> &root, int i) {
+    if (root[i] != i) {
+        root[i] = find_root(root, root[i]);
+    }
+    return root[i];
+}
+
+void union_tree(vector<int> &root, int i, int j) {
+    root[find_root(root, i)] = find_root(root, j);
+}
+
+int find_circle_num_v3(vector<vector<int>> &isConnected) {
+    int n = isConnected.size();
+    vector<int> root(n);
+    for (int i = 0; i < n; i++) {
+        root[i] = i;
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (isConnected[i][j] == 1) {
+                union_tree(root, i, j);
+            }
+        }
+    }
+    int result = 0;
+    for (int i = 0; i < n; i++) {
+        if (root[i] == i) {
+            result++;
         }
     }
     return result;
