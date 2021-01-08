@@ -113,6 +113,58 @@ void rotate(vector<int> &nums, int k) {
 }
 ```
 
+### 41 缺失的第一个正数
+
+#### 哈希表
+
+- 时间复杂度：$O(n)$
+- 时间复杂度：$O(1)$
+
+```c++
+int first_missing_positive(vector<int> &nums) {
+    int n = nums.size();
+    for (auto &num : nums) {
+        if (num <= 0) {
+            num = n + 1;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        int index = abs(nums[i]) - 1;
+        if (index < n && nums[index] > 0) {
+            nums[index] *= -1;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        if (nums[i] > 0) {
+            return i + 1;
+        }
+    }
+    return n + 1;
+}
+```
+
+#### 置换
+
+- 时间复杂度：$O(n)$
+- 时间复杂度：$O(1)$
+
+```c++
+int first_missing_positive_v2(vector<int> &nums) {
+    int n = nums.size();
+    for (int i = 0; i < n; i++) {
+        while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
+            std::swap(nums[i], nums[nums[i] - 1]);
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        if (nums[i] != i + 1) {
+            return i + 1;
+        }
+    }
+    return n + 1;
+}
+```
+
 # 二维数组
 
 ## 数独
