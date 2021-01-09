@@ -4,6 +4,31 @@ title: "动态规划"
 
 # 一维
 
+## 123 买卖股票的最佳时机 III
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(K)$
+
+```c++
+int max_profit(vector<int> &prices) {
+    int K = 2;
+    // dp[j][0]: 卖出 j 次的最大利润
+    // dp[j][1]: 买入 j 次的最大利润
+    int dp[K + 1][2];
+    for (int j = 0; j <= K; j++) {
+        dp[j][0] = 0;
+        dp[j][1] = INT_MIN;
+    }
+    for (auto price : prices) {
+        for (int j = 1; j <= K; j++) {
+            dp[j][0] = std::max(dp[j][0], dp[j][1] + price);
+            dp[j][1] = std::max(dp[j][1], dp[j - 1][0] - price);
+        }
+    }
+    return dp[K][0];
+}
+```
+
 # 二维
 
 ## 44 通配符匹配
