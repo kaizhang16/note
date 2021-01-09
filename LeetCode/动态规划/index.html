@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="一维 二维 44 通配符匹配 动态规划  时间复杂度：\(O(mn)\) 空间复杂度：\(O(mn)\)  bool is_match(string s, string p) {  int m = s.size();  int n = p.size();  // dp[i][j]: is_match(s[0:i], p[0:j])  vector&lt;vector&lt;bool&gt;&gt; dp(m &#43; 1, vector&lt;bool&gt;(n &#43; 1, false));  dp[0][0] = true;  for (int j = 1; j &lt;= n; j&#43;&#43;) {  if (p[j - 1] == &#39;*&#39;) {  dp[0][j] = true;  } else {  break;  }  }  for (int i = 1; i &lt;= m; i&#43;&#43;) {  for (int j = 1; j &lt;= n; j&#43;&#43;) {  if (p[j - 1] == &#39;*&#39;) {  dp[i][j] = dp[i][j - 1] || dp[i - 1][j];  } else if (p[j - 1] == &#39;?">
+<meta name="description" content="一维 123 买卖股票的最佳时机 III  时间复杂度：\(O(n)\) 空间复杂度：\(O(K)\)  int max_profit(vector&lt;int&gt; &amp;prices) {  int K = 2;  // dp[j][0]: 卖出 j 次的最大利润  // dp[j][1]: 买入 j 次的最大利润  int dp[K &#43; 1][2];  for (int j = 0; j &lt;= K; j&#43;&#43;) {  dp[j][0] = 0;  dp[j][1] = INT_MIN;  }  for (auto price : prices) {  for (int j = 1; j &lt;= K; j&#43;&#43;) {  dp[j][0] = std::max(dp[j][0], dp[j][1] &#43; price);  dp[j][1] = std::max(dp[j][1], dp[j - 1][0] - price);  }  }  return dp[K][0]; } 二维 44 通配符匹配 动态规划  时间复杂度：\(O(mn)\) 空间复杂度：\(O(mn)\)  bool is_match(string s, string p) {  int m = s.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="动态规划" />
-<meta property="og:description" content="一维 二维 44 通配符匹配 动态规划  时间复杂度：\(O(mn)\) 空间复杂度：\(O(mn)\)  bool is_match(string s, string p) {  int m = s.size();  int n = p.size();  // dp[i][j]: is_match(s[0:i], p[0:j])  vector&lt;vector&lt;bool&gt;&gt; dp(m &#43; 1, vector&lt;bool&gt;(n &#43; 1, false));  dp[0][0] = true;  for (int j = 1; j &lt;= n; j&#43;&#43;) {  if (p[j - 1] == &#39;*&#39;) {  dp[0][j] = true;  } else {  break;  }  }  for (int i = 1; i &lt;= m; i&#43;&#43;) {  for (int j = 1; j &lt;= n; j&#43;&#43;) {  if (p[j - 1] == &#39;*&#39;) {  dp[i][j] = dp[i][j - 1] || dp[i - 1][j];  } else if (p[j - 1] == &#39;?" />
+<meta property="og:description" content="一维 123 买卖股票的最佳时机 III  时间复杂度：\(O(n)\) 空间复杂度：\(O(K)\)  int max_profit(vector&lt;int&gt; &amp;prices) {  int K = 2;  // dp[j][0]: 卖出 j 次的最大利润  // dp[j][1]: 买入 j 次的最大利润  int dp[K &#43; 1][2];  for (int j = 0; j &lt;= K; j&#43;&#43;) {  dp[j][0] = 0;  dp[j][1] = INT_MIN;  }  for (auto price : prices) {  for (int j = 1; j &lt;= K; j&#43;&#43;) {  dp[j][0] = std::max(dp[j][0], dp[j][1] &#43; price);  dp[j][1] = std::max(dp[j][1], dp[j - 1][0] - price);  }  }  return dp[K][0]; } 二维 44 通配符匹配 动态规划  时间复杂度：\(O(mn)\) 空间复杂度：\(O(mn)\)  bool is_match(string s, string p) {  int m = s." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
 
@@ -14,7 +14,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.faadd6f17e16136c6a671f61da0989f9f6b6cc94a5d857048e99967a929b34d6.js" integrity="sha256-&#43;q3W8X4WE2xqZx9h2gmJ&#43;fa2zJSl2FcEjpmWepKbNNY="></script>
+<script defer src="/note/cn.search.min.3157807b3fad077c7ad7a390ba2ee3d586f89a45a512970f36eda9692a6f84f7.js" integrity="sha256-MVeAez&#43;tB3x616OQui7j1Yb4mkWlEpcPNu2paSpvhPc="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1019,6 +1019,28 @@ https://github.com/alex-shpak/hugo-book
       
       
   <article class="markdown"><h1 id="一维">一维</h1>
+<h2 id="买卖股票的最佳时机-iii">123 买卖股票的最佳时机 III</h2>
+<ul>
+<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(K)\)</span></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">int</span> max_profit(vector&lt;<span class="dt">int</span>&gt; &amp;prices) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="dt">int</span> K = <span class="dv">2</span>;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="co">// dp[j][0]: 卖出 j 次的最大利润</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="co">// dp[j][1]: 买入 j 次的最大利润</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>    <span class="dt">int</span> dp[K + <span class="dv">1</span>][<span class="dv">2</span>];</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">0</span>; j &lt;= K; j++) {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        dp[j][<span class="dv">0</span>] = <span class="dv">0</span>;</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>        dp[j][<span class="dv">1</span>] = INT_MIN;</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    }</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> price : prices) {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= K; j++) {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>            dp[j][<span class="dv">0</span>] = <span class="bu">std::</span>max(dp[j][<span class="dv">0</span>], dp[j][<span class="dv">1</span>] + price);</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>            dp[j][<span class="dv">1</span>] = <span class="bu">std::</span>max(dp[j][<span class="dv">1</span>], dp[j - <span class="dv">1</span>][<span class="dv">0</span>] - price);</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>        }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    <span class="cf">return</span> dp[K][<span class="dv">0</span>];</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="二维">二维</h1>
 <h2 id="通配符匹配">44 通配符匹配</h2>
 <h3 id="动态规划">动态规划</h3>
@@ -1026,32 +1048,32 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(mn)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(mn)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">bool</span> is_match(string s, string p) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="dt">int</span> m = s.size();</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="dt">int</span> n = p.size();</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="co">// dp[i][j]: is_match(s[0:i], p[0:j])</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">bool</span>&gt;&gt; dp(m + <span class="dv">1</span>, vector&lt;<span class="dt">bool</span>&gt;(n + <span class="dv">1</span>, <span class="kw">false</span>));</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    dp[<span class="dv">0</span>][<span class="dv">0</span>] = <span class="kw">true</span>;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= n; j++) {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>        <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>            dp[<span class="dv">0</span>][j] = <span class="kw">true</span>;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>            <span class="cf">break</span>;</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>        }</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    }</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= m; i++) {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= n; j++) {</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>            <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>                dp[i][j] = dp[i][j - <span class="dv">1</span>] || dp[i - <span class="dv">1</span>][j];</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>            } <span class="cf">else</span> <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;?&#39;</span> || s[i - <span class="dv">1</span>] == p[j - <span class="dv">1</span>]) {</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>                dp[i][j] = dp[i - <span class="dv">1</span>][j - <span class="dv">1</span>];</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>            }</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>            <span class="co">// fmt::print(&quot;s: {}, p: {}, dp[{}][{}]: {}\n&quot;, s, p, i, j,</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>            <span class="co">// dp[i][j]);</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>        }</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>    }</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>    <span class="cf">return</span> dp[m][n];</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">bool</span> is_match(string s, string p) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="dt">int</span> m = s.size();</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="dt">int</span> n = p.size();</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="co">// dp[i][j]: is_match(s[0:i], p[0:j])</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">bool</span>&gt;&gt; dp(m + <span class="dv">1</span>, vector&lt;<span class="dt">bool</span>&gt;(n + <span class="dv">1</span>, <span class="kw">false</span>));</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    dp[<span class="dv">0</span>][<span class="dv">0</span>] = <span class="kw">true</span>;</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= n; j++) {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>        <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;*&#39;</span>) {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>            dp[<span class="dv">0</span>][j] = <span class="kw">true</span>;</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>            <span class="cf">break</span>;</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>        }</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>    }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= m; i++) {</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= n; j++) {</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>            <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;*&#39;</span>) {</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>                dp[i][j] = dp[i][j - <span class="dv">1</span>] || dp[i - <span class="dv">1</span>][j];</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>            } <span class="cf">else</span> <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;?&#39;</span> || s[i - <span class="dv">1</span>] == p[j - <span class="dv">1</span>]) {</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>                dp[i][j] = dp[i - <span class="dv">1</span>][j - <span class="dv">1</span>];</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>            }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>            <span class="co">// fmt::print(&quot;s: {}, p: {}, dp[{}][{}]: {}\n&quot;, s, p, i, j,</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>            <span class="co">// dp[i][j]);</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>        }</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>    }</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>    <span class="cf">return</span> dp[m][n];</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>}</span></code></pre></div>
 <h3 id="贪心算法">贪心算法</h3>
 <ul>
 <li>时间复杂度
@@ -1061,52 +1083,55 @@ https://github.com/alex-shpak/hugo-book
 </ul></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">bool</span> is_match_v2(string s, string p) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="kw">auto</span> is_char_match = [](<span class="at">const</span> <span class="dt">char</span> &amp;c_s, <span class="at">const</span> <span class="dt">char</span> &amp;c_p) {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>        <span class="cf">return</span> c_p == <span class="ch">&#39;?&#39;</span> || c_s == c_p;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    };</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    <span class="cf">while</span> (!s.empty() &amp;&amp; !p.empty() &amp;&amp; p.back() != <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>        <span class="cf">if</span> (is_char_match(s.back(), p.back())) {</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>            s.pop_back();</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>            p.pop_back();</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>        }</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>    }</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>    <span class="cf">if</span> (p.empty()) {</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>        <span class="cf">return</span> s.empty();</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>    }</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="dt">int</span> i_s = <span class="dv">0</span>, i_p = <span class="dv">0</span>;</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>    <span class="dt">int</span> i_sub_start_s = -<span class="dv">1</span>, i_sub_start_p = -<span class="dv">1</span>;</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>    <span class="cf">while</span> (i_s &lt; s.size() &amp;&amp; i_p &lt; p.size()) {</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>        <span class="cf">if</span> (p[i_p] == <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>            i_p++;</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>            i_sub_start_p = i_p;</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a>            i_sub_start_s = i_s;</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (is_char_match(s[i_s], p[i_p])) {</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>            i_p++;</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a>            i_s++;</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (i_sub_start_s != -<span class="dv">1</span>) {</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>            i_p = i_sub_start_p;</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true"></a>            i_s = i_sub_start_s + <span class="dv">1</span>;</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true"></a>            i_sub_start_s = i_s;</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true"></a>        }</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true"></a>    }</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true"></a>    <span class="cf">while</span> (i_p &lt; p.size()) {</span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true"></a>        <span class="cf">if</span> (p[i_p] != <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true"></a>        }</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true"></a>        i_p++;</span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true"></a>    }</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="dt">bool</span> is_match_v2(string s, string p) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="kw">auto</span> is_char_match = [](<span class="at">const</span> <span class="dt">char</span> &amp;c_s, <span class="at">const</span> <span class="dt">char</span> &amp;c_p) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>        <span class="cf">return</span> c_p == <span class="ch">&#39;?&#39;</span> || c_s == c_p;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    };</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    <span class="cf">while</span> (!s.empty() &amp;&amp; !p.empty() &amp;&amp; p.back() != <span class="ch">&#39;*&#39;</span>) {</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>        <span class="cf">if</span> (is_char_match(s.back(), p.back())) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>            s.pop_back();</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>            p.pop_back();</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>        }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>    }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    <span class="cf">if</span> (p.empty()) {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>        <span class="cf">return</span> s.empty();</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>    }</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>    <span class="dt">int</span> i_s = <span class="dv">0</span>, i_p = <span class="dv">0</span>;</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a>    <span class="dt">int</span> i_sub_start_s = -<span class="dv">1</span>, i_sub_start_p = -<span class="dv">1</span>;</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a>    <span class="cf">while</span> (i_s &lt; s.size() &amp;&amp; i_p &lt; p.size()) {</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a>        <span class="cf">if</span> (p[i_p] == <span class="ch">&#39;*&#39;</span>) {</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>            i_p++;</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>            i_sub_start_p = i_p;</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>            i_sub_start_s = i_s;</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (is_char_match(s[i_s], p[i_p])) {</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a>            i_p++;</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a>            i_s++;</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (i_sub_start_s != -<span class="dv">1</span>) {</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a>            i_p = i_sub_start_p;</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a>            i_s = i_sub_start_s + <span class="dv">1</span>;</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a>            i_sub_start_s = i_s;</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a>        }</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true"></a>    }</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true"></a>    <span class="cf">while</span> (i_p &lt; p.size()) {</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true"></a>        <span class="cf">if</span> (p[i_p] != <span class="ch">&#39;*&#39;</span>) {</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true"></a>        }</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true"></a>        i_p++;</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true"></a>    }</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#一维">一维</a></li>
+  <li><a href="#一维">一维</a>
+  <ul>
+  <li><a href="#买卖股票的最佳时机-iii">123 买卖股票的最佳时机 III</a></li>
+  </ul></li>
   <li><a href="#二维">二维</a>
   <ul>
   <li><a href="#通配符匹配">44 通配符匹配</a>
