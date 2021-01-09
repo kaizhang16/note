@@ -3,3 +3,92 @@ title: "动态规划"
 ---
 
 # 一维
+
+# 二维
+
+## 44 通配符匹配
+
+### 动态规划
+
+- 时间复杂度：$O(mn)$
+- 空间复杂度：$O(mn)$
+
+```c++
+bool is_match(string s, string p) {
+    int m = s.size();
+    int n = p.size();
+    // dp[i][j]: is_match(s[0:i], p[0:j])
+    vector<vector<bool>> dp(m + 1, vector<bool>(n + 1, false));
+    dp[0][0] = true;
+    for (int j = 1; j <= n; j++) {
+        if (p[j - 1] == '*') {
+            dp[0][j] = true;
+        } else {
+            break;
+        }
+    }
+    for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (p[j - 1] == '*') {
+                dp[i][j] = dp[i][j - 1] || dp[i - 1][j];
+            } else if (p[j - 1] == '?' || s[i - 1] == p[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1];
+            }
+            // fmt::print("s: {}, p: {}, dp[{}][{}]: {}\n", s, p, i, j,
+            // dp[i][j]);
+        }
+    }
+    return dp[m][n];
+}
+```
+
+### 贪心算法
+
+- 时间复杂度
+    - 渐进复杂度：$O(mn)$
+    - 平均复杂度：$O(m\log n)$
+- 空间复杂度：$O(1)$
+
+```c++
+bool is_match_v2(string s, string p) {
+    auto is_char_match = [](const char &c_s, const char &c_p) {
+        return c_p == '?' || c_s == c_p;
+    };
+    while (!s.empty() && !p.empty() && p.back() != '*') {
+        if (is_char_match(s.back(), p.back())) {
+            s.pop_back();
+            p.pop_back();
+        } else {
+            return false;
+        }
+    }
+    if (p.empty()) {
+        return s.empty();
+    }
+    int i_s = 0, i_p = 0;
+    int i_sub_start_s = -1, i_sub_start_p = -1;
+    while (i_s < s.size() && i_p < p.size()) {
+        if (p[i_p] == '*') {
+            i_p++;
+            i_sub_start_p = i_p;
+            i_sub_start_s = i_s;
+        } else if (is_char_match(s[i_s], p[i_p])) {
+            i_p++;
+            i_s++;
+        } else if (i_sub_start_s != -1) {
+            i_p = i_sub_start_p;
+            i_s = i_sub_start_s + 1;
+            i_sub_start_s = i_s;
+        } else {
+            return false;
+        }
+    }
+    while (i_p < p.size()) {
+        if (p[i_p] != '*') {
+            return false;
+        }
+        i_p++;
+    }
+    return true;
+}
+```
