@@ -1,0 +1,114 @@
+---
+title: "数字"
+---
+
+# 50 Pow(x, n)
+
+## 快速幂 + 递归
+
+- 时间复杂度：$O(\log n)$
+- 空间复杂度：$O(\log n)$
+
+```c++
+double quick_pow(double x, long long N) {
+    if (N == 0) {
+        return 1.0;
+    } else {
+        double y = quick_pow(x, N / 2);
+        return N % 2 == 0 ? y * y : y * y * x;
+    }
+}
+
+double my_pow(double x, int n) {
+    long long N = n;
+    return n >= 0 ? quick_pow(x, N) : 1.0 / quick_pow(x, -N);
+}
+```
+
+## 快速幂 + 迭代
+
+- 时间复杂度：$O(\log n)$
+- 空间复杂度：$O(1)$
+
+```c++
+double quick_pow_v2(double x, long long N) {
+    double result = 1.0;
+    double x_contribute = x;
+    while (N > 0) {
+        if (N % 2 == 1) {
+            result *= x_contribute;
+        }
+        x_contribute *= x_contribute;
+        N /= 2;
+    }
+    return result;
+}
+
+double my_pow_v2(double x, int n) {
+    long long N = n;
+    return n >= 0 ? quick_pow_v2(x, N) : 1.0 / quick_pow_v2(x, -N);
+}
+```
+
+# 69 x 的平方根
+
+## 二分查找
+
+- 时间复杂度：$O(\log x)$
+- 空间复杂度：$O(1)$
+
+```c++
+int my_sqrt(int x) {
+    int l = 0;
+    int h = x;
+    int result = -1;
+    while (l <= h) {
+        int mid = l + (h - l) / 2;
+        if ((long long)mid * mid <= x) {
+            result = mid;
+            l = mid + 1;
+        } else {
+            h = mid - 1;
+        }
+    }
+    return result;
+}
+```
+
+## 牛顿迭代法
+
+- 时间复杂度：$O(\log x)$
+- 空间复杂度：$O(1)$
+
+```c++
+int my_sqrt_v2(int x) {
+    if (x == 0) {
+        return 0;
+    }
+    double C = x;
+    double x0 = C;
+    while (true) {
+        double x1 = x0 / 2 + C / (2 * x0);
+        if (fabs(x0 - x1) < 1e-7) {
+            break;
+        }
+        x0 = x1;
+    }
+    return (int)x0;
+}
+```
+
+## 数学函数法
+
+- 时间复杂度：$O(1)$
+- 空间复杂度：$O(1)$
+
+```c++
+int my_sqrt_v3(int x) {
+    if (x == 0) {
+        return 0;
+    }
+    int result = exp(0.5 * log(x));
+    return (long long)(result + 1) * (result + 1) <= x ? result + 1 : result;
+}
+```
