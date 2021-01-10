@@ -1,0 +1,51 @@
+---
+title: "分治"
+---
+
+# 50 Pow(x, n)
+
+## 快速幂 + 递归
+
+- 时间复杂度：$O(\log n)$
+- 空间复杂度：$O(\log n)$
+
+```c++
+double quick_pow(double x, long long N) {
+    if (N == 0) {
+        return 1.0;
+    } else {
+        double y = quick_pow(x, N / 2);
+        return N % 2 == 0 ? y * y : y * y * x;
+    }
+}
+
+double my_pow(double x, int n) {
+    long long N = n;
+    return n >= 0 ? quick_pow(x, N) : 1.0 / quick_pow(x, -N);
+}
+```
+
+## 快速幂 + 迭代
+
+- 时间复杂度：$O(\log n)$
+- 空间复杂度：$O(1)$
+
+```c++
+double quick_pow_v2(double x, long long N) {
+    double result = 1.0;
+    double x_contribute = x;
+    while (N > 0) {
+        if (N % 2 == 1) {
+            result *= x_contribute;
+        }
+        x_contribute *= x_contribute;
+        N /= 2;
+    }
+    return result;
+}
+
+double my_pow_v2(double x, int n) {
+    long long N = n;
+    return n >= 0 ? quick_pow_v2(x, N) : 1.0 / quick_pow_v2(x, -N);
+}
+```
