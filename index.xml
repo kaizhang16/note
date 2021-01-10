@@ -332,6 +332,15 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>分治</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E5%88%86%E6%B2%BB/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E5%88%86%E6%B2%BB/</guid>
+      <description>50 Pow(x, n) 快速幂 + 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &amp;gt;= 0 ?</description>
+    </item>
+    
+    <item>
       <title>动态规划</title>
       <link>https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
