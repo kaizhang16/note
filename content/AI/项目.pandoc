@@ -1,0 +1,153 @@
+---
+title: "项目"
+---
+
+# 移动推荐比赛
+
+## 题目
+
+提供 2 万用户 30 天的移动端行为数据，具体行为包括“浏览”、“收藏”、“加购物车”和“购
+买”，预测用户第 31 天购买的商品。评价标准是 F1 Score。
+
+> - F1 Score 是精确率和召回率的调和平均数
+> - 精确率指：你认为的正样本，有多少猜对了
+> - 召回率指：正样本有多少被找回来了
+
+## 特征
+
+- 时间型：
+    - ui && uc：
+        - 最近一次加购物车到现在多少小时
+        - 最近一次购买到现在多少小时
+        - 最近一次浏览到现在多少小时
+        - 最近一次收藏到现在多少小时
+        - 用户从浏览到购买经历多少小时
+- 统计型：
+    - ui && uc：
+        - 用户对商品浏览多少次
+        - 用户对商品购买多少次
+        - 用户对商品加购物车多少次
+    - i:
+        - 商品被购买了多少次
+
+## 模型
+
+### GBDT
+
+#### 优点
+
+- 防止过拟合（基分类器简单，通过拟合残差来减小偏差）
+- 表达能力强
+- 可解释性强，是发现特征组合的有效工具
+
+#### 类别型特征
+
+- Xgboost：One-Hot 编码，one vs rest
+- LightGBM：直接支持，many vs many
+
+### word2vec
+
+- 架构：三层神经网络，softmax
+- 损失函数：条件概率，nll -> 简化成负采样
+
+# 腾讯广告算法
+
+## Bert
+
+- 无监督的预训练 + fine-tuning
+- Masked Language Model
+    - 随机选择 15% 的 token
+    - 80% 的概率 mask
+    - 10% 的概率替换单词
+    - 10% 的概率不变
+- 是否是下一句
+
+### Transformer
+
+- 输入：word embedding + positional encoding
+- 输出：softmax
+- Encoder-Decoder
+- Encoder
+    - multi-head attention + layer norm, residual
+    - feed forward + layer norm, residual
+- Decoder
+    - Self-Attention: masked multi-head attention + layer norm, residual
+    - Encoder-Decoder Attention: multi-head attention + layer norm, residual
+    - feed forward + layer norm, residual
+
+# 遮盖人脸
+
+## 背景
+
+基于离线采集的视频，重建高精度三维地图，用于 AR 导航。
+
+## 问题
+
+定位技术比较稳定，在某商场的定位效果突然不好。经过仔细比较，发现人流的影响比较
+大。因此决定遮盖人脸。
+
+## 挑战
+
+- 一开始效果不好，每帧图片只能找到一两张人脸
+- 先做畸变校正，再检测
+- 调整阈值
+- 加入人体检测
+
+# 最小二乘法对齐
+
+## 背景
+
+算法坐标系需要与导航坐标系、GT 坐标系对齐。
+
+## 问题
+
+- 只用 2 个点对齐 -> 无法定量衡量误差
+- 只能二维对齐
+
+## 思路
+
+- 综合考虑多个点 -> 最小二乘
+- 统一三维与二维的对齐公式
+
+## 挑战
+
+在刚体变换约束下的最小二乘，找公式。
+
+# 基于 GPS 的点位筛选方案
+
+## 背景
+
+室外场景下定位容易飘，返回结果明显不正常。
+
+## 问题
+
+- 基于 GPS 筛选，但 GPS 只有经纬度数据，而经纬度是球面坐标系
+
+## 挑战
+
+经纬度 -> 大地坐标系 -> 最小二乘对齐
+
+# LAIN
+
+## 背景
+
+- 将不同技术栈的项目测试、打包、部署
+- 应用的 cpu、内存资源管理，实例的水平扩容
+- 应用的灰度发布和升级等
+
+## 问题
+
+- 用户友好的打包语言 -> travis ci/github workflows/gitlab pipeline
+- 服务发现
+- 网络通信（dns、calico）
+
+# Yi Push
+
+## 背景
+
+向手机 app 批量发送通知。
+
+## 问题
+
+- ios 基于回调的升级
+- nsq 消息队列，支持批量处理
