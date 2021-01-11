@@ -45,5 +45,15 @@
   目录  Fine-tuning vs Feature Extraction[1] 参考文献   </description>
     </item>
     
+    <item>
+      <title>项目</title>
+      <link>https://kaizhang91.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</guid>
+      <description>移动推荐比赛 题目 提供 2 万用户 30 天的移动端行为数据，具体行为包括“浏览”、“收藏”、“加购物车”和“购买”，预测用户第 31 天购买的商品。评价标准是 F1 Score。
+  F1 Score 是精确率和召回率的调和平均数 精确率指：你认为的正样本，有多少猜对了 召回率指：正样本有多少被找回来了   特征  时间型：  ui &amp;amp;&amp;amp; uc：  最近一次加购物车到现在多少小时 最近一次购买到现在多少小时 最近一次浏览到现在多少小时 最近一次收藏到现在多少小时 用户从浏览到购买经历多少小时   统计型：  ui &amp;amp;&amp;amp; uc：  用户对商品浏览多少次 用户对商品购买多少次 用户对商品加购物车多少次  i:  商品被购买了多少次    模型 GBDT 优点  防止过拟合（基分类器简单，通过拟合残差来减小偏差） 表达能力强 可解释性强，是发现特征组合的有效工具  类别型特征  Xgboost：One-Hot 编码，one vs rest LightGBM：直接支持，many vs many  word2vec  架构：三层神经网络，softmax 损失函数：条件概率，nll -&amp;gt; 简化成负采样  腾讯广告算法 Bert  无监督的预训练 + fine-tuning Masked Language Model  随机选择 15% 的 token 80% 的概率 mask 10% 的概率替换单词 10% 的概率不变  是否是下一句  Transformer  输入：word embedding + positional encoding 输出：softmax Encoder-Decoder Encoder  multi-head attention + layer norm, residual feed forward + layer norm, residual  Decoder  Self-Attention: masked multi-head attention + layer norm, residual Encoder-Decoder Attention: multi-head attention + layer norm, residual feed forward + layer norm, residual   遮盖人脸 背景 基于离线采集的视频，重建高精度三维地图，用于 AR 导航。</description>
+    </item>
+    
   </channel>
 </rss>
