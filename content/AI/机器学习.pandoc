@@ -310,4 +310,27 @@ $$\mathrm{Gain} = \frac{1}{2}\left[\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\l
 - XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代
   价小，能并行计算
 
+## K means
+
+### 背景
+
+给定样本 $\{\v{x}_1, \v{x}_2, \dots, \v{x}_n\}$，K means 希望把样本分成 $k$ 类
+$\set{S} = \{\set{S}_1, \set{S}_2, \dots, \set{S}_k\}$，并且满足[@eq:k_means_object]：
+
+$$
+\argmin_{\set{S}}\sum_{i=1}^k\sum_{\v{x}\in\set{S}_i}\lVert\v{x}-\v{\mu}_i\rVert^2
+$$ {#eq:k_means_object}
+
+### 迭代步骤
+
+给定 k 个质心的初始值，然后重复以下步骤
+
+- 赋值：把每个样本赋成距离最近的质心所在的类
+- 更新：重新计算每个类的质心
+
+### 初始化方法
+
+- Forgy：随机选择 k 个样本作为质心
+- Random Partition：每个样本随机赋一个类，计算每个类的质心
+
 # 参考文献
