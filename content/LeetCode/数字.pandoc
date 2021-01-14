@@ -112,3 +112,21 @@ int my_sqrt_v3(int x) {
     return (long long)(result + 1) * (result + 1) <= x ? result + 1 : result;
 }
 ```
+
+# 1018 可被 5 整除的二进制前缀
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+vector<bool> prefix_div_by_5(vector<int> &A) {
+    int n = A.size();
+    vector<bool> result(n);
+    int pre = 0;
+    for (int i = 0; i < n; i++) {
+        pre = ((pre << 1) + A[i]) % 5;
+        result[i] = (pre == 0);
+    }
+    return result;
+}
+```
