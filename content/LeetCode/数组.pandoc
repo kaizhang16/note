@@ -337,3 +337,42 @@ int find_circle_num_v3(vector<vector<int>> &isConnected) {
     return result;
 }
 ```
+
+### 684 冗余连接
+
+并查集。
+
+- 时间复杂度
+    - 最坏情况：$O(N\log N)$
+    - 平均情况：$O(N\alpha (N))$
+- 空间复杂度：$O(N)$
+
+```c++
+int find_root(vector<int> &root, int node) {
+    if (root[node] != node) {
+        root[node] = find_root(root, root[node]);
+    }
+    return root[node];
+}
+
+void union_tree(vector<int> &root, int i, int j) {
+    root[find_root(root, j)] = find_root(root, i);
+}
+
+vector<int> find_redundant_connection(vector<vector<int>> &edges) {
+    int n = edges.size();
+    vector<int> root(n);
+    for (int i = 0; i < n; i++) {
+        root[i] = i;
+    }
+    vector<int> result;
+    for (auto edge : edges) {
+        if (find_root(root, edge[0] - 1) != find_root(root, edge[1] - 1)) {
+            union_tree(root, edge[0] - 1, edge[1] - 1);
+        } else {
+            result = edge;
+        }
+    }
+    return result;
+}
+```
