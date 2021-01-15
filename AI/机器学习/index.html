@@ -18,7 +18,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.4e8072b746b8ff7c5eb0e53bfa8872cfec96cf4d28c09a8e861e21fd32d2ef96.js" integrity="sha256-ToByt0a4/3xesOU7&#43;ohyz&#43;yWz00owJqOhh4h/TLS75Y="></script>
+<script defer src="/note/cn.search.min.8842151365b0a6780500079824d6bbd60f1b3dbd16d732a46f9c52f2829af1bd.js" integrity="sha256-iEIVE2WwpngFAAeYJNa71g8bPb0W1zKkb5xS8oKa8b0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1289,6 +1289,15 @@ L(y, F) =
 <li>更新 F，<span class="math inline">\(F := F + \rho h\)</span></li>
 <li>终止或者跳到步骤 2</li>
 </ol>
+<h3 id="特征重要性">特征重要性</h3>
+<ul>
+<li>split：使用该特征的次数</li>
+<li>gain：该特征的总增益</li>
+</ul>
+<h3 id="局部特征的贡献">局部特征的贡献</h3>
+<figure>
+<img src="gbdt_local_feature_contribution.png" id="fig:gbdt_local_feature_contribution" style="width:80.0%" alt="图 5: GBDT 局部特征的贡献" /><figcaption aria-hidden="true">图 5: GBDT 局部特征的贡献</figcaption>
+</figure>
 <h2 id="xgboost">XGBoost</h2>
 <h3 id="树的输出">树的输出</h3>
 <p><span class="math display">\[f^{(t)}(\v{x}) = w_{q(\v{x})}, \v{w}\in \R^T, q: \R^d\to \{1,2,\cdots,T\}\]</span></p>
@@ -1422,6 +1431,8 @@ L(y, F) =
   <ul>
   <li><a href="#损失函数-1">损失函数</a></li>
   <li><a href="#回归的学习步骤">回归的学习步骤</a></li>
+  <li><a href="#特征重要性">特征重要性</a></li>
+  <li><a href="#局部特征的贡献">局部特征的贡献</a></li>
   </ul></li>
   <li><a href="#xgboost">XGBoost</a>
   <ul>
