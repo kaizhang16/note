@@ -267,6 +267,15 @@ $$
 4. 更新 F，$F := F + \rho h$
 5. 终止或者跳到步骤 2
 
+### 特征重要性
+
+- split：使用该特征的次数
+- gain：该特征的总增益
+
+### 局部特征的贡献
+
+![GBDT 局部特征的贡献](gbdt_local_feature_contribution.png){#fig:gbdt_local_feature_contribution width=80%}
+
 ## XGBoost
 
 ### 树的输出
