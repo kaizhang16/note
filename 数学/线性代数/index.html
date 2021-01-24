@@ -24,13 +24,13 @@
 \[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
 外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/linear_algebra/" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
 
 <title>线性代数 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.4eebe50e42a9bf16a20877d75b4dec89b011dcb32874b56a59397ab1b98045a4.js" integrity="sha256-TuvlDkKpvxaiCHfXW03sibAR3LModLVqWTl6sbmARaQ="></script>
+<script defer src="/note/cn.search.min.eb78f231f052084748b7c82405f8b9d38f74c024470a72b86ce5c403997bd828.js" integrity="sha256-63jyMfBSCEdIt8gkBfi50490wCRHCnK4bOXEA5l72Cg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -674,7 +674,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/linear_algebra/" class=" active">线性代数</a>
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class=" active">线性代数</a>
   
 
         </li>
@@ -1092,6 +1092,9 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="协方差矩阵">协方差矩阵</h2>
 <p>设 <span class="math inline">\(\m{X}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维矩阵，其中，<span class="math inline">\(m\)</span> 为特征数，<span class="math inline">\(n\)</span> 为样本数，则协方差矩阵为：</p>
 <p><span id="eq:covariance_matrix"><span class="math display">\[\m{C}_{\m{X}} = \frac{1}{n}\m{X}\T{\m{X}}\qquad(10)\]</span></span></p>
+<blockquote>
+<p>假设 <span class="math inline">\(\m{X}\)</span> 的所有行向量均值为 <span class="math inline">\(0\)</span>。</p>
+</blockquote>
 <h2 id="问题定义">问题定义</h2>
 <p>寻找矩阵 <span class="math inline">\(\m{P}\)</span>，使得 <span class="math inline">\(\m{C}_{\m{Y}}\)</span> 为对角阵，且元素按大小排列。其中，<span class="math inline">\(\m{Y} = \m{P}\m{X}\)</span>。</p>
 <p>解：记 <span class="math inline">\(\m{X}\)</span> 的奇异值分解为 <span class="math inline">\(\m{X} = \m{U}\m{\Sigma}\T{\m{V}}\)</span>，那么 <span class="math inline">\(\m{P} = \T{\m{U}}\)</span>。</p>

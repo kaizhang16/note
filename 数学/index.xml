@@ -8,10 +8,10 @@
     <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>线性代数</title>
-      <link>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/linear_algebra/</link>
+      <link>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/linear_algebra/</guid>
+      <guid>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
       <description>术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
 其中，若记 \(\m{A}_{ji} = a + bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
 相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
