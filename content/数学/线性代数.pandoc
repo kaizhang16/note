@@ -64,6 +64,8 @@ $$\SNR = \frac{\sigma^2_{\mathrm{signal}}}{\sigma^2_{\mathrm{noise}}}$$ {#eq:snr
 
 $$\m{C}_{\m{X}} = \frac{1}{n}\m{X}\T{\m{X}}$$ {#eq:covariance_matrix}
 
+> 假设 $\m{X}$ 的所有行向量均值为 $0$。
+
 ## 问题定义
 
 寻找矩阵 $\m{P}$，使得 $\m{C}_{\m{Y}}$ 为对角阵，且元素按大小排列。其中，$\m{Y}
