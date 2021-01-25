@@ -28,7 +28,7 @@ $$ {#eq:median}
 
 ### 步骤
 
-记 $u$ 为 $x$ 的累计分布函数：
+记 $u$ 为 $x$ 的累积分布函数：
 
 $$u = \Phi(x) = \int_{-\infty}^x p(t)\d t$$ {#eq:inverse_transform_sample_u}
 
