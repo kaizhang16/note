@@ -9,7 +9,7 @@
 则中位数为：
 \[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \qquad(1)\]
 通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
-步骤 记 \(u\) 为 \(x\) 的累计分布函数：
+步骤 记 \(u\) 为 \(x\) 的累积分布函数：
 \[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
 那么按照以下步骤即可从 \(p(x)\) 采样：
  从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？">
@@ -19,7 +19,7 @@
 则中位数为：
 \[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \qquad(1)\]
 通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
-步骤 记 \(u\) 为 \(x\) 的累计分布函数：
+步骤 记 \(u\) 为 \(x\) 的累积分布函数：
 \[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
 那么按照以下步骤即可从 \(p(x)\) 采样：
  从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？" />
@@ -30,7 +30,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.3c856cb20798f1949995266dd0fa987a91cf6af5f681ff709014dfd684528d85.js" integrity="sha256-PIVssgeY8ZSZlSZt0PqYepHPavX2gf9wkBTf1oRSjYU="></script>
+<script defer src="/note/cn.search.min.e607c8179ed39e8e6487f38fbd205f74c19c207e55ba611792a2201516c297a6.js" integrity="sha256-5gfIF57Tno5kh/OPvSBfdMGcIH5VumEXkqIgFRbCl6Y="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1076,7 +1076,7 @@ x_{((n+1)/2)}, &amp; n \text{为奇数} \\
 <h3 id="问题">问题</h3>
 <p>已实现从均匀分布采样，如何从 <span class="math inline">\(p(x)\)</span> 采样？</p>
 <h3 id="步骤">步骤</h3>
-<p>记 <span class="math inline">\(u\)</span> 为 <span class="math inline">\(x\)</span> 的累计分布函数：</p>
+<p>记 <span class="math inline">\(u\)</span> 为 <span class="math inline">\(x\)</span> 的累积分布函数：</p>
 <p><span id="eq:inverse_transform_sample_u"><span class="math display">\[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]</span></span></p>
 <p>那么按照以下步骤即可从 <span class="math inline">\(p(x)\)</span> 采样：</p>
 <ul>
