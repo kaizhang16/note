@@ -7,22 +7,30 @@
 <meta name="description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
-\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \]
-目录  中位数   ">
+\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \qquad(1)\]
+通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+步骤 记 \(u\) 为 \(x\) 的累计分布函数：
+\[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
+那么按照以下步骤即可从 \(p(x)\) 采样：
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="统计" />
 <meta property="og:description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
-\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \]
-目录  中位数   " />
+\[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \qquad(1)\]
+通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+步骤 记 \(u\) 为 \(x\) 的累计分布函数：
+\[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
+那么按照以下步骤即可从 \(p(x)\) 采样：
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/statistics/" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/" />
 
 <title>统计 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.eb78f231f052084748b7c82405f8b9d38f74c024470a72b86ce5c403997bd828.js" integrity="sha256-63jyMfBSCEdIt8gkBfi50490wCRHCnK4bOXEA5l72Cg="></script>
+<script defer src="/note/cn.search.min.3c856cb20798f1949995266dd0fa987a91cf6af5f681ff709014dfd684528d85.js" integrity="sha256-PIVssgeY8ZSZlSZt0PqYepHPavX2gf9wkBTf1oRSjYU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -679,7 +687,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/statistics/" class=" active">统计</a>
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/" class=" active">统计</a>
   
 
         </li>
@@ -1056,18 +1064,79 @@ https://github.com/alex-shpak/hugo-book
 <p>先把 <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> 从小到大排序，得到</p>
 <p><span class="math display">\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]</span></p>
 <p>则中位数为：</p>
-<p><span class="math display">\[
-\median(x) = 
+<p><span id="eq:median"><span class="math display">\[
+\median(x) =
 \begin{cases}
 x_{((n+1)/2)}, &amp; n \text{为奇数} \\
 \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp; n \text{为偶数}
 \end{cases}
-\]</span></p>
+\qquad(1)\]</span></span></p>
+<h1 id="通用采样方法">通用采样方法</h1>
+<h2 id="逆变换采样">逆变换采样</h2>
+<h3 id="问题">问题</h3>
+<p>已实现从均匀分布采样，如何从 <span class="math inline">\(p(x)\)</span> 采样？</p>
+<h3 id="步骤">步骤</h3>
+<p>记 <span class="math inline">\(u\)</span> 为 <span class="math inline">\(x\)</span> 的累计分布函数：</p>
+<p><span id="eq:inverse_transform_sample_u"><span class="math display">\[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]</span></span></p>
+<p>那么按照以下步骤即可从 <span class="math inline">\(p(x)\)</span> 采样：</p>
+<ul>
+<li>从均匀分布 <span class="math inline">\(U(0, 1)\)</span> 产生一个随机数 <span class="math inline">\(u_i\)</span></li>
+<li>计算 <span class="math inline">\(x_i = \Phi^{-1}(u_i)\)</span>，得到的 <span class="math inline">\(x_i\)</span> 服从 <span class="math inline">\(p(x)\)</span> 分布</li>
+</ul>
+<h2 id="拒绝采样">拒绝采样</h2>
+<h3 id="问题-1">问题</h3>
+<p>已实现从均匀分布、<span class="math inline">\(q(x)\)</span> 采样，如何从 <span class="math inline">\(\pi(x)\)</span> 采样？</p>
+<h3 id="步骤-1">步骤</h3>
+<ol type="1">
+<li>选择 <span class="math inline">\(M\)</span>，使得对于 <span class="math inline">\(\forall x, \pi(x)\le M q(x)\)</span></li>
+<li>从参考分布 <span class="math inline">\(q(x)\)</span> 采样得 <span class="math inline">\(x_i\)</span></li>
+<li>从均匀分布 <span class="math inline">\(U(0, 1)\)</span> 产生一个随机数 <span class="math inline">\(u_i\)</span></li>
+<li>如果 <span class="math inline">\(u_i &lt; \frac{\pi(x_i)}{M q(x_i)}\)</span>，则接受样本 <span class="math inline">\(x_i\)</span>；否则拒绝，返回 2</li>
+</ol>
+<h3 id="证明">证明</h3>
+<p>即证明 <span class="math inline">\(p(x\mid\mathrm{accept}) = \pi(x)\)</span>。</p>
+<p><span id="eq:reject_sample_p_x_accept"><span class="math display">\[
+\begin{align}
+p(x, \mathrm{accept}) &amp;= q(x)p(\mathrm{accept}\mid x) \\
+&amp;= q(x)\int_{U}p(u)p(\mathrm{accept}\mid x,u)\d u \\
+&amp;= q(x)\int_0^{\frac{\pi(x)}{M q(x)}}p(u)\d u \\
+&amp;= \frac{\pi(x)}{M}
+\end{align}
+\qquad(3)\]</span></span></p>
+<p><span id="eq:reject_sample_p_accept"><span class="math display">\[
+\begin{align}
+p(\mathrm{accept}) &amp;= \int_{X}p(x,\mathrm{accept})\d x \\
+&amp;= \int_{X}\frac{\pi(x)}{M}\d x \\
+&amp;= \frac{1}{M}
+\end{align}
+\qquad(4)\]</span></span></p>
+<p>由式. 3 和式. 4 可得，</p>
+<p><span id="eq:reject_sample_p"><span class="math display">\[
+p(x\mid\mathrm{accept}) = \frac{p(x,\mathrm{accept})}{p(\mathrm{accept})} = \pi(x)
+\qquad(5)\]</span></span></p>
+<h2 id="重要性采样">重要性采样</h2>
+<h2 id="mcmc-采样">MCMC 采样</h2>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#中位数">中位数</a></li>
+  <li><a href="#通用采样方法">通用采样方法</a>
+  <ul>
+  <li><a href="#逆变换采样">逆变换采样</a>
+  <ul>
+  <li><a href="#问题">问题</a></li>
+  <li><a href="#步骤">步骤</a></li>
+  </ul></li>
+  <li><a href="#拒绝采样">拒绝采样</a>
+  <ul>
+  <li><a href="#问题-1">问题</a></li>
+  <li><a href="#步骤-1">步骤</a></li>
+  <li><a href="#证明">证明</a></li>
+  </ul></li>
+  <li><a href="#重要性采样">重要性采样</a></li>
+  <li><a href="#mcmc-采样">MCMC 采样</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>

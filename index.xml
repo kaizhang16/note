@@ -229,7 +229,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/TeX/</guid>
-      <description>矩阵  表 1: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     函数  表 2: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     集合  表 3: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     统计  表 4: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     数论  表 5: 数论相关表示  数学表达式 含义 \(\TeX\) 表示    \(\lfloor x\rfloor\) 向下取整 \lfloor x\rfloor     运算符  表 6: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 7: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align} \]</description>
+      <description>符号  表 1: 符号  数学表达式 含义 \(\TeX\) 表示    \(\infty\) 无穷 \infty  \(\forall\) 任意 \forall     矩阵  表 2: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     函数  表 3: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     集合  表 4: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     统计  表 5: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     数论  表 6: 数论相关表示  数学表达式 含义 \(\TeX\) 表示    \(\lfloor x\rfloor\) 向下取整 \lfloor x\rfloor     运算符  表 7: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 8: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align} \]</description>
     </item>
     
     <item>
@@ -533,15 +533,19 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
     
     <item>
       <title>统计</title>
-      <link>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/statistics/</link>
+      <link>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/statistics/</guid>
+      <guid>https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/</guid>
       <description>中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
-\[ \median(x) = \begin{cases} x_{((n+1)/2)}, &amp;amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp;amp; n \text{为偶数} \end{cases} \]
-目录  中位数   </description>
+\[ \median(x) = \begin{cases} x_{((n+1)/2)}, &amp;amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp;amp; n \text{为偶数} \end{cases} \qquad(1)\]
+通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+步骤 记 \(u\) 为 \(x\) 的累计分布函数：
+\[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
+那么按照以下步骤即可从 \(p(x)\) 采样：
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？</description>
     </item>
     
     <item>
