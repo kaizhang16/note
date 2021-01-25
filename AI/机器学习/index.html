@@ -18,7 +18,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.e607c8179ed39e8e6487f38fbd205f74c19c207e55ba611792a2201516c297a6.js" integrity="sha256-5gfIF57Tno5kh/OPvSBfdMGcIH5VumEXkqIgFRbCl6Y="></script>
+<script defer src="/note/cn.search.min.49abd327f5b9ddb21d282da40ff5bc03c48ceb9a6b0314948b6b7388e848d19b.js" integrity="sha256-SavTJ/W53bIdKC2kD/W8A8SM65prAxSUi2tziOhI0Zs="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1234,12 +1234,14 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <p>全称为 Gradient Boosting Decision Tree。</p>
 <p>优点：</p>
 <ul>
-<li>在分布稠密的数据集上，泛化能力和表达能力都很好</li>
-<li>具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系</li>
+<li>预测阶段的计算速度快，树与树之间可并行计算</li>
+<li>在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好</li>
+<li>具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理</li>
 </ul>
 <p>缺点：</p>
 <ul>
 <li>在高维稀疏的数据集上，表现不如支持向量机或者神经网络</li>
+<li>在处理分类特征时的优势不如处理数值特征时明显</li>
 <li>需要迭代训练，即串行计算</li>
 </ul>
 <h3 id="损失函数-1">损失函数</h3>
