@@ -1,0 +1,82 @@
+---
+title: "统计"
+---
+
+# 中位数
+
+先把 $x_1, x_2, \dots, x_n$ 从小到大排序，得到
+
+$$x_{(1)}, x_{(2)}, \dots, x_{(n)}$$
+
+则中位数为：
+
+$$
+\median(x) =
+\begin{cases}
+x_{((n+1)/2)}, & n \text{为奇数} \\
+\frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), & n \text{为偶数}
+\end{cases}
+$$ {#eq:median}
+
+# 通用采样方法
+
+## 逆变换采样
+
+### 问题
+
+已实现从均匀分布采样，如何从 $p(x)$ 采样？
+
+### 步骤
+
+记 $u$ 为 $x$ 的累计分布函数：
+
+$$u = \Phi(x) = \int_{-\infty}^x p(t)\d t$$ {#eq:inverse_transform_sample_u}
+
+那么按照以下步骤即可从 $p(x)$ 采样：
+
+- 从均匀分布 $U(0, 1)$ 产生一个随机数 $u_i$
+- 计算 $x_i = \Phi^{-1}(u_i)$，得到的 $x_i$ 服从 $p(x)$ 分布
+
+## 拒绝采样
+
+### 问题
+
+已实现从均匀分布、$q(x)$ 采样，如何从 $\pi(x)$ 采样？
+
+### 步骤
+
+1. 选择 $M$，使得对于 $\forall x, \pi(x)\le M q(x)$
+2. 从参考分布 $q(x)$ 采样得 $x_i$
+3. 从均匀分布 $U(0, 1)$ 产生一个随机数 $u_i$
+4. 如果 $u_i < \frac{\pi(x_i)}{M q(x_i)}$，则接受样本 $x_i$；否则拒绝，返回 2
+
+### 证明
+
+即证明 $p(x\mid\mathrm{accept}) = \pi(x)$。
+
+$$
+\begin{align}
+p(x, \mathrm{accept}) &= q(x)p(\mathrm{accept}\mid x) \\
+&= q(x)\int_{U}p(u)p(\mathrm{accept}\mid x,u)\d u \\
+&= q(x)\int_0^{\frac{\pi(x)}{M q(x)}}p(u)\d u \\
+&= \frac{\pi(x)}{M}
+\end{align}
+$$ {#eq:reject_sample_p_x_accept}
+
+$$
+\begin{align}
+p(\mathrm{accept}) &= \int_{X}p(x,\mathrm{accept})\d x \\
+&= \int_{X}\frac{\pi(x)}{M}\d x \\
+&= \frac{1}{M}
+\end{align}
+$$ {#eq:reject_sample_p_accept}
+
+由[@eq:reject_sample_p_x_accept] 和[@eq:reject_sample_p_accept] 可得，
+
+$$
+p(x\mid\mathrm{accept}) = \frac{p(x,\mathrm{accept})}{p(\mathrm{accept})} = \pi(x)
+$$ {#eq:reject_sample_p}
+
+## 重要性采样
+
+## MCMC 采样
