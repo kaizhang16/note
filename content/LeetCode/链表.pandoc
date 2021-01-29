@@ -1,0 +1,76 @@
+---
+title: "链表"
+---
+
+# 148 链表排序
+
+给你链表的头结点 head，请将其按升序排列并返回排序后的链表。
+
+## 自底向上归并排序
+
+- 时间复杂度：$O(n\log n)$
+- 空间复杂度：$O(1)$
+
+```c++
+ListNode *merge(ListNode *h1, ListNode *h2) {
+    ListNode *dummy_head = new ListNode(0);
+    ListNode *p = dummy_head;
+    while (h1 && h2) {
+        if (h1->val <= h2->val) {
+            p->next = h1;
+            h1 = h1->next;
+        } else {
+            p->next = h2;
+            h2 = h2->next;
+        }
+        p = p->next;
+    }
+    if (h1) {
+        p->next = h1;
+    } else if (h2) {
+        p->next = h2;
+    }
+    auto h = dummy_head->next;
+    delete dummy_head;
+    return h;
+}
+
+ListNode *sort_list(ListNode *head) {
+    int n = 0;
+    ListNode *p = head;
+    while (p) {
+        n++;
+        p = p->next;
+    }
+    ListNode *dummy_head = new ListNode(0, head);
+    for (int sub_size = 1; sub_size < n; sub_size <<= 1) {
+        ListNode *p0 = dummy_head;
+        p = dummy_head->next;
+        while (p) {
+            ListNode *h1 = p;
+            for (int i = 1; i < sub_size && p->next; i++) {
+                p = p->next;
+            }
+            ListNode *h2 = p->next;
+            p->next = nullptr;
+            p = h2;
+            for (int i = 1; i < sub_size && p->next; i++) {
+                p = p->next;
+            }
+            ListNode *p2 = nullptr;
+            if (p) {
+                p2 = p->next;
+                p->next = nullptr;
+            }
+            p0->next = merge(h1, h2);
+            while (p0->next) {
+                p0 = p0->next;
+            }
+            p = p2;
+        }
+    }
+    head = dummy_head->next;
+    delete dummy_head;
+    return head;
+}
+```
