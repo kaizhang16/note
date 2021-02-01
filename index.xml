@@ -307,16 +307,6 @@ Adobe Photoshop 2021 请参考 https://www.</description>
     </item>
     
     <item>
-      <title>二叉树</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
-      <description>958 二叉树的完全性检验 若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边，这就是完全二叉树。（注：第 h 层可能包含 \(1 \sim 2^h\) 个节点。）
-广度优先遍历  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  bool is_complete_tree_v2(TreeNode *root) {  std::queue&amp;lt;TreeNode *&amp;gt; q;  if (root) {  q.push(root);  }  bool is_pre_end = false;  while (!q.empty()) {  auto front = q.front();  q.pop();  if ((front-&amp;gt;right &amp;amp;&amp;amp; !front-&amp;gt;left) ||  (is_pre_end &amp;amp;&amp;amp; (front-&amp;gt;left || front-&amp;gt;right))) {  return false;  }  if (!</description>
-    </item>
-    
-    <item>
       <title>传输</title>
       <link>https://kaizhang91.github.io/note/CS/transmission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -478,6 +468,16 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <description>采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     中位数 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
 \[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
 在信息检索领域这样定义[3]：</description>
+    </item>
+    
+    <item>
+      <title>树</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/</guid>
+      <description>二叉树 958 二叉树的完全性检验 若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边，这就是完全二叉树。（注：第 h 层可能包含 \(1 \sim 2^h\) 个节点。）
+广度优先遍历  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  bool is_complete_tree_v2(TreeNode *root) {  std::queue&amp;lt;TreeNode *&amp;gt; q;  if (root) {  q.push(root);  }  bool is_pre_end = false;  while (!q.empty()) {  auto front = q.front();  q.pop();  if ((front-&amp;gt;right &amp;amp;&amp;amp; !front-&amp;gt;left) ||  (is_pre_end &amp;amp;&amp;amp; (front-&amp;gt;left || front-&amp;gt;right))) {  return false;  }  if (!</description>
     </item>
     
     <item>

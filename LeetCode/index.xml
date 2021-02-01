@@ -7,16 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/LeetCode/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>二叉树</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
-      <description>958 二叉树的完全性检验 若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边，这就是完全二叉树。（注：第 h 层可能包含 \(1 \sim 2^h\) 个节点。）
-广度优先遍历  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  bool is_complete_tree_v2(TreeNode *root) {  std::queue&amp;lt;TreeNode *&amp;gt; q;  if (root) {  q.push(root);  }  bool is_pre_end = false;  while (!q.empty()) {  auto front = q.front();  q.pop();  if ((front-&amp;gt;right &amp;amp;&amp;amp; !front-&amp;gt;left) ||  (is_pre_end &amp;amp;&amp;amp; (front-&amp;gt;left || front-&amp;gt;right))) {  return false;  }  if (!</description>
-    </item>
-    
-    <item>
       <title>动态规划</title>
       <link>https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -44,6 +34,16 @@
       <guid>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</guid>
       <description>一维数组 未排序的数组 169 众数 给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素。你可以假设数组是非空的，并且给定的数组总是存在多数元素。
 哈希表  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  int major_element_v1(vector&amp;lt;int&amp;gt; &amp;amp;nums) {  std::unordered_map&amp;lt;int, int&amp;gt; m;  int n = nums.size();  for (auto num : nums) {  if (++m[num] &amp;gt; (n / 2)) {  return num;  }  }  return -1; } Boyer-Moore 投票法  时间复杂度：\(O(n)\) 空间复杂度：\(O(1)\)  int major_element(vector&amp;lt;int&amp;gt; &amp;amp;nums) {  int result = nums[0];  int count = 1;  for (int i = 1; i &amp;lt; nums.</description>
+    </item>
+    
+    <item>
+      <title>树</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/</guid>
+      <description>二叉树 958 二叉树的完全性检验 若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边，这就是完全二叉树。（注：第 h 层可能包含 \(1 \sim 2^h\) 个节点。）
+广度优先遍历  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  bool is_complete_tree_v2(TreeNode *root) {  std::queue&amp;lt;TreeNode *&amp;gt; q;  if (root) {  q.push(root);  }  bool is_pre_end = false;  while (!q.empty()) {  auto front = q.front();  q.pop();  if ((front-&amp;gt;right &amp;amp;&amp;amp; !front-&amp;gt;left) ||  (is_pre_end &amp;amp;&amp;amp; (front-&amp;gt;left || front-&amp;gt;right))) {  return false;  }  if (!</description>
     </item>
     
     <item>
