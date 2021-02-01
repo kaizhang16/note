@@ -1,0 +1,120 @@
+---
+title: "树"
+---
+
+# 二叉树
+
+## 958 二叉树的完全性检验
+
+若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第
+h 层所有的结点都连续集中在最左边，这就是完全二叉树。（注：第 h 层可能包含 $1 \sim 2^h$
+个节点。）
+
+### 广度优先遍历
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+bool is_complete_tree_v2(TreeNode *root) {
+    std::queue<TreeNode *> q;
+    if (root) {
+        q.push(root);
+    }
+    bool is_pre_end = false;
+    while (!q.empty()) {
+        auto front = q.front();
+        q.pop();
+        if ((front->right && !front->left) ||
+            (is_pre_end && (front->left || front->right))) {
+            return false;
+        }
+        if (!front->left || !front->right) {
+            is_pre_end = true;
+        }
+        if (front->left) {
+            q.push(front->left);
+        }
+        if (front->right) {
+            q.push(front->right);
+        }
+    }
+    return true;
+}
+```
+
+# 前缀树
+
+## 208 实现 Trie（前缀树）
+
+实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。
+
+示例:
+
+```java
+Trie trie = new Trie();
+
+trie.insert("apple");
+trie.search("apple");   // 返回 true
+trie.search("app");     // 返回 false
+trie.startsWith("app"); // 返回 true
+trie.insert("app");   
+trie.search("app");     // 返回 true
+```
+
+说明:
+
+- 你可以假设所有的输入都是由小写字母 a-z 构成的。
+- 保证所有输入均为非空字符串。
+
+```c++
+class TrieNode {
+  public:
+    vector<Trie *> next;
+    bool is_end;
+    TrieNode() : next(26, nullptr), is_end{false} {}
+};
+
+class Trie {
+  private:
+    TrieNode *root;
+
+  public:
+    Trie() {
+        root = new TrieNode();
+    }
+
+    void insert(string word) {
+        TrieNode *node = root;
+        for (auto c : word) {
+            if (!node->next[c - 'a']) {
+                node->next[c - 'a'] = new TrieNode();
+            }
+            node = node->next[c - 'a'];
+        }
+        node->is_end = true;
+    }
+
+    bool search(string word) {
+        TrieNode *node = root;
+        for (auto c : word) {
+            if (!node->next[c - 'a']) {
+                return false;
+            }
+            node = node->next[c - 'a'];
+        }
+        return node->is_end;
+    }
+
+    bool start_with(string prefix) {
+        TrieNode *node = root;
+        for (auto c : prefix) {
+            if (!node->next[c - 'a']) {
+                return false;
+            }
+            node = node->next[c - 'a'];
+        }
+        return true;
+    }
+}
+```
