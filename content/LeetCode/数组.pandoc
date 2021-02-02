@@ -172,6 +172,45 @@ int first_missing_positive_v2(vector<int> &nums) {
 }
 ```
 
+### 15 三数之和
+
+给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得
+a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+
+> 注意：答案中不可以包含重复的三元组。
+
+- 时间复杂度：$O(n^2)$
+- 空间复杂度：$O(\log n)$
+
+```c++
+vector<vector<int>> three_sum(vector<int> &nums) {
+    std::sort(nums.begin(), nums.end());
+    vector<vector<int>> result;
+    int n = nums.size();
+    for (int i = 0; i < n; i++) {
+        if (i > 0 && nums[i] == nums[i - 1]) {
+            continue;
+        }
+        int k = n - 1;
+        for (int j = i + 1; j < k; j++) {
+            if (j > i + 1 && nums[j] == nums[j - 1]) {
+                continue;
+            }
+            while (k > j && nums[k] + nums[j] > -nums[i]) {
+                k--;
+            }
+            if (k == j) {
+                break;
+            }
+            if (nums[j] + nums[k] == -nums[i]) {
+                result.push_back(vector<int>{nums[i], nums[j], nums[k]});
+            }
+        }
+    }
+    return result;
+}
+```
+
 ## 排序的数组
 
 ### 88 合并两个有序数组
