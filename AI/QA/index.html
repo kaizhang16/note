@@ -4,29 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
-其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
-相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
-酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
-正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
-当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
-旋转矩阵[3] 旋转矩阵的集合：
-\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
-外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="线性代数" />
-<meta property="og:description" content="术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
-其中，若记 \(\m{A}_{ji} = a &#43; bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
-相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
-酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
-正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
-当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
-旋转矩阵[3] 旋转矩阵的集合：
-\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
-外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]" />
+<meta name="description" content="怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
+ 预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  目录  怎么降低过拟合？ 如何缓解梯度消失？ 如何缓解梯度爆炸 样本不平衡，如何处理？ GBDT 的优缺点 XGBoost 与 GBDT 的区别 LightGBM 与 GBDT 的区别   ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="QA" />
+<meta property="og:description" content="怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
+ 预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  目录  怎么降低过拟合？ 如何缓解梯度消失？ 如何缓解梯度爆炸 样本不平衡，如何处理？ GBDT 的优缺点 XGBoost 与 GBDT 的区别 LightGBM 与 GBDT 的区别   " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
-
-<title>线性代数 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/note/AI/QA/" />
+<meta property="article:modified_time" content="2021-02-05T07:46:18+00:00" />
+<title>QA | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
@@ -92,7 +80,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="toggle"  />
+    <input type="checkbox" id="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="toggle" checked />
     <label for="section-cfbd43d7dbc20d8fbe7979a2801e3144" class="flex justify-between">
       <a  class="">AI</a>
       <span>▾</span>
@@ -109,7 +97,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/QA/" class="">QA</a>
+    <a href="https://kaizhang91.github.io/note/AI/QA/" class=" active">QA</a>
   
 
         </li>
@@ -696,7 +684,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle" checked />
+    <input type="checkbox" id="section-1f9a426141100f8f7ab323c20cac8352" class="toggle"  />
     <label for="section-1f9a426141100f8f7ab323c20cac8352" class="flex justify-between">
       <a  class="">数学</a>
       <span>▾</span>
@@ -713,7 +701,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class=" active">线性代数</a>
+    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="">线性代数</a>
   
 
         </li>
@@ -1076,7 +1064,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>线性代数</strong>
+  <strong>QA</strong>
 
   <label for="toc-control">
     
@@ -1099,87 +1087,81 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="术语">术语</h1>
-<h2 id="共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<a href="#ref-conjugate_transpose" role="doc-biblioref">1</a>]</sup></span></h2>
-<p><span id="eq:conjugate_matrix"><span class="math display">\[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]</span></span></p>
-<p>其中，若记 <span class="math inline">\(\m{A}_{ji} = a + bi\)</span>，则 <span class="math inline">\((\m{A}_{ji})^* = a - bi\)</span>。</p>
-<h2 id="相似矩阵">相似矩阵</h2>
+  <article class="markdown"><h1 id="怎么降低过拟合">怎么降低过拟合？</h1>
 <ul>
-<li>同一个线性变换在不同基下的矩阵称为相似矩阵</li>
-</ul>
-<h2 id="正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">2</a>]</sup></span></h2>
-<p><span id="eq:orthogonalMatrix"><span class="math display">\[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]</span></span></p>
-<h2 id="酉矩阵linearalgebraorthogonalmatrix">酉矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<a href="#ref-linearAlgebraOrthogonalMatrix" role="doc-biblioref">2</a>]</sup></span></h2>
-<p><span id="eq:unitary_matrix"><span class="math display">\[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]</span></span></p>
-<h2 id="正规矩阵">正规矩阵</h2>
-<p><span id="eq:norm_matrix"><span class="math display">\[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]</span></span></p>
-<p>当且仅当 <span class="math inline">\(\m{A} = \m{U}\m{\Lambda}\m{U}^*\)</span> 时，方阵 <span class="math inline">\(\m{A}\)</span> 是正规矩阵。其中， <span class="math inline">\(\m{U}\)</span> 是酉矩阵；<span class="math inline">\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\)</span> 是对角阵； <span class="math inline">\(\m{U}\)</span> 的列向量是对应于特征值 <span class="math inline">\(\lambda_1,\dots,\lambda_n\)</span> 的特征向量。</p>
-<h2 id="旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<a href="#ref-高翔2017视觉" role="doc-biblioref">3</a>]</sup></span></h2>
-<p>旋转矩阵的集合：</p>
-<p><span id="eq:SOn"><span class="math display">\[
-\SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\}
-\qquad(5)\]</span></span></p>
-<h2 id="外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<a href="#ref-linearAlgebraOuterProduct" role="doc-biblioref">4</a>]</sup></span></h2>
-<p><span id="eq:outerProduct"><span class="math display">\[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]</span></span></p>
-<h1 id="svd奇异值分解">SVD（奇异值分解）</h1>
-<p>对任意一个 <span class="math inline">\(m\times n\)</span> 的复矩阵 <span class="math inline">\(M\)</span>，有 <span class="math inline">\(\m{M} = \m{U}\m{\Sigma}\m{V}^*\)</span>。其中，</p>
-<p><span id="eq:svd_u_eigen"><span class="math display">\[\m{M}\m{M}^* = \m{U}(\m{\Sigma}\m{\Sigma}^*)\m{U}^*\qquad(7)\]</span></span> <span id="eq:svd_v_eigen"><span class="math display">\[\m{M}^*\m{M} = \m{V}(\m{\Sigma}^*\m{\Sigma})\m{V}^*\qquad(8)\]</span></span></p>
-<p><span class="math inline">\(\m{\Sigma}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维的对角阵，且元素按大小排列。</p>
-<h1 id="pca主成分分析">PCA（主成分分析）</h1>
-<h2 id="snr信噪比">SNR（信噪比）</h2>
-<p><span id="eq:snr"><span class="math display">\[\SNR = \frac{\sigma^2_{\mathrm{signal}}}{\sigma^2_{\mathrm{noise}}}\qquad(9)\]</span></span></p>
-<h2 id="协方差矩阵">协方差矩阵</h2>
-<p>设 <span class="math inline">\(\m{X}\)</span> 为 <span class="math inline">\(m\times n\)</span> 维矩阵，其中，<span class="math inline">\(m\)</span> 为特征数，<span class="math inline">\(n\)</span> 为样本数，则协方差矩阵为：</p>
-<p><span id="eq:covariance_matrix"><span class="math display">\[\m{C}_{\m{X}} = \frac{1}{n}\m{X}\T{\m{X}}\qquad(10)\]</span></span></p>
-<blockquote>
-<p>假设 <span class="math inline">\(\m{X}\)</span> 的所有行向量均值为 <span class="math inline">\(0\)</span>。</p>
-</blockquote>
-<h2 id="问题定义">问题定义</h2>
-<p>寻找矩阵 <span class="math inline">\(\m{P}\)</span>，使得 <span class="math inline">\(\m{C}_{\m{Y}}\)</span> 为对角阵，且元素按大小排列。其中，<span class="math inline">\(\m{Y} = \m{P}\m{X}\)</span>。</p>
-<p>解：记 <span class="math inline">\(\m{X}\)</span> 的奇异值分解为 <span class="math inline">\(\m{X} = \m{U}\m{\Sigma}\T{\m{V}}\)</span>，那么 <span class="math inline">\(\m{P} = \T{\m{U}}\)</span>。</p>
-<blockquote>
+<li>获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据</li>
+<li>降低模型复杂度
 <ul>
-<li>主成分的方向是 <span class="math inline">\(\m{P}\)</span> 的行向量，即 <span class="math inline">\(\m{U}\)</span> 的列向量，即 <span class="math inline">\(\m{X}\m{X}^*\)</span> 的特征向量</li>
-<li><span class="math inline">\(\m{Y} = \m{\Sigma}\T{\m{V}}\)</span></li>
+<li>神经网络减少网络层数、神经元个数</li>
+<li>决策树降低树的深度、剪枝</li>
+</ul></li>
+<li>正则化方法</li>
+<li>集成学习，比如 bagging 和 boosting</li>
 </ul>
-</blockquote>
-<h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-conjugate_transpose">
-<p>[1] WIKIPEDIA. Conjugate transpose[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Conjugate_transpose">https://en.wikipedia.org/wiki/Conjugate_transpose</a>.</p>
-</div>
-<div id="ref-linearAlgebraOrthogonalMatrix">
-<p>[2] WIKIPEDIA. Orthogonal matrix[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Orthogonal_matrix">https://en.wikipedia.org/wiki/Orthogonal_matrix</a>.</p>
-</div>
-<div id="ref-高翔2017视觉">
-<p>[3] 高翔. 视觉 SLAM 十四讲: 从理论到实践[M]. 电子工业出版社, 2017.</p>
-</div>
-<div id="ref-linearAlgebraOuterProduct">
-<p>[4] WIKIPEDIA. Outer product[EB/OL]([日期不详]). <a href="https://en.wikipedia.org/wiki/Outer_product">https://en.wikipedia.org/wiki/Outer_product</a>.</p>
-</div>
-</div>
+<h1 id="如何缓解梯度消失">如何缓解梯度消失？</h1>
+<ul>
+<li>使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh</li>
+<li>Batch Normalization</li>
+<li>残差网络</li>
+<li>LSTM、GRU</li>
+</ul>
+<h1 id="如何缓解梯度爆炸">如何缓解梯度爆炸</h1>
+<ul>
+<li>梯度裁剪</li>
+<li>权重正则化</li>
+</ul>
+<h1 id="样本不平衡如何处理">样本不平衡，如何处理？</h1>
+<ul>
+<li>基于数据：
+<ul>
+<li>SMOTE 算法，构造新样本</li>
+</ul></li>
+<li>基于算法：
+<ul>
+<li>改损失函数，不同类别不同权重</li>
+<li>转化为单类学习或者异常检测</li>
+</ul></li>
+</ul>
+<h1 id="gbdt-的优缺点">GBDT 的优缺点</h1>
+<p>优点：</p>
+<ul>
+<li>预测阶段的计算速度快，树与树之间可并行计算</li>
+<li>在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好</li>
+<li>具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>在高维稀疏的数据集上，表现不如支持向量机或者神经网络</li>
+<li>在处理分类特征时的优势不如处理数值特征时明显</li>
+<li>需要迭代训练，即串行计算</li>
+</ul>
+<h1 id="xgboost-与-gbdt-的区别">XGBoost 与 GBDT 的区别</h1>
+<ul>
+<li>GBDT 是机器学习算法，XGBoost 是该算法的工程实现</li>
+<li>在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力</li>
+<li>用了二阶导数</li>
+<li>除了支持 CART 树，还支持线性分类器</li>
+<li>支持列抽样</li>
+<li>可以自动学习缺失值的分裂方向</li>
+<li>预先排序，并行计算不同特征的增益</li>
+</ul>
+<h1 id="lightgbm-与-gbdt-的区别">LightGBM 与 GBDT 的区别</h1>
+<ul>
+<li>XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低</li>
+<li>XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise</li>
+<li>XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算</li>
+</ul>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#术语">术语</a>
-  <ul>
-  <li><a href="#共轭转置conjugate_transpose">共轭转置<span class="citation" data-cites="conjugate_transpose"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#相似矩阵">相似矩阵</a></li>
-  <li><a href="#正交矩阵linearalgebraorthogonalmatrix">正交矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#酉矩阵linearalgebraorthogonalmatrix">酉矩阵<span class="citation" data-cites="linearAlgebraOrthogonalMatrix"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#正规矩阵">正规矩阵</a></li>
-  <li><a href="#旋转矩阵高翔2017视觉">旋转矩阵<span class="citation" data-cites="高翔2017视觉"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#外积linearalgebraouterproduct">外积<span class="citation" data-cites="linearAlgebraOuterProduct"><sup>[<span>4</span>]</sup></span></a></li>
-  </ul></li>
-  <li><a href="#svd奇异值分解">SVD（奇异值分解）</a></li>
-  <li><a href="#pca主成分分析">PCA（主成分分析）</a>
-  <ul>
-  <li><a href="#snr信噪比">SNR（信噪比）</a></li>
-  <li><a href="#协方差矩阵">协方差矩阵</a></li>
-  <li><a href="#问题定义">问题定义</a></li>
-  </ul></li>
-  <li><a href="#参考文献">参考文献</a></li>
+  <li><a href="#怎么降低过拟合">怎么降低过拟合？</a></li>
+  <li><a href="#如何缓解梯度消失">如何缓解梯度消失？</a></li>
+  <li><a href="#如何缓解梯度爆炸">如何缓解梯度爆炸</a></li>
+  <li><a href="#样本不平衡如何处理">样本不平衡，如何处理？</a></li>
+  <li><a href="#gbdt-的优缺点">GBDT 的优缺点</a></li>
+  <li><a href="#xgboost-与-gbdt-的区别">XGBoost 与 GBDT 的区别</a></li>
+  <li><a href="#lightgbm-与-gbdt-的区别">LightGBM 与 GBDT 的区别</a></li>
   </ul>
 </nav>
 </article>
@@ -1191,6 +1173,12 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
+
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/ba01d1fb93986d1694f2a9579bec2a558a5dfdf1" title='最后修改者 Kai Zhang | 2021-02-05 15:46:18 &#43;0800' target="_blank" rel="noopener">
+      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>2021-02-05 15:46:18 &#43;0800</span>
+    </a>
+  </div>
 
 
 
