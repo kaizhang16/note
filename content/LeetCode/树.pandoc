@@ -43,6 +43,22 @@ bool is_complete_tree_v2(TreeNode *root) {
 }
 ```
 
+## 226. 翻转二叉树
+
+翻转一棵二叉树。
+
+```c++
+TreeNode *invert_tree(TreeNode *root) {
+    if (!root) {
+        return root;
+    }
+    TreeNode *left0 = root->left;
+    root->left = invert_tree(root->right);
+    root->right = invert_tree(left0);
+    return root;
+}
+```
+
 # 前缀树
 
 ## 208 实现 Trie（前缀树）
