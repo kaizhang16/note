@@ -16,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.9da68dacf8648965da7f27b95b461e3bb977be3e8a9d682de350e0e9f1c6ade9.js" integrity="sha256-naaNrPhkiWXafye5W0YeO7l3vj6KnWgt41Dg6fHGrek="></script>
+<script defer src="/note/cn.search.min.6aa2515cff4160de365bbca6227bf64b2337228d76fb3549310ccc4538581151.js" integrity="sha256-aqJRXP9BYN42W7ymInv2SyM3Io12&#43;zVJMQzMRThYEVE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1118,72 +1118,83 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>    }</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="翻转二叉树">226. 翻转二叉树</h2>
+<p>翻转一棵二叉树。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>TreeNode *invert_tree(TreeNode *root) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="cf">if</span> (!root) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>        <span class="cf">return</span> root;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    }</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    TreeNode *left0 = root-&gt;left;</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    root-&gt;left = invert_tree(root-&gt;right);</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    root-&gt;right = invert_tree(left0);</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>    <span class="cf">return</span> root;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="前缀树">前缀树</h1>
 <h2 id="实现-trie前缀树">208 实现 Trie（前缀树）</h2>
 <p>实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。</p>
 <p>示例:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>Trie trie = <span class="kw">new</span> <span class="fu">Trie</span>();</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;apple&quot;</span>);</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;apple&quot;</span>);   <span class="co">// 返回 true</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 false</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>trie.<span class="fu">startsWith</span>(<span class="st">&quot;app&quot;</span>); <span class="co">// 返回 true</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;app&quot;</span>);   </span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 true</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>Trie trie = <span class="kw">new</span> <span class="fu">Trie</span>();</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;apple&quot;</span>);</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;apple&quot;</span>);   <span class="co">// 返回 true</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 false</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>trie.<span class="fu">startsWith</span>(<span class="st">&quot;app&quot;</span>); <span class="co">// 返回 true</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;app&quot;</span>);   </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 true</span></span></code></pre></div>
 <p>说明:</p>
 <ul>
 <li>你可以假设所有的输入都是由小写字母 a-z 构成的。</li>
 <li>保证所有输入均为非空字符串。</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">class</span> TrieNode {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    vector&lt;Trie *&gt; next;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="dt">bool</span> is_end;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    TrieNode() : next(<span class="dv">26</span>, <span class="kw">nullptr</span>), is_end{<span class="kw">false</span>} {}</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>};</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="kw">class</span> Trie {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>  <span class="kw">private</span>:</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>    TrieNode *root;</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    Trie() {</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>        root = <span class="kw">new</span> TrieNode();</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>    }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a>    <span class="dt">void</span> insert(string word) {</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a>        TrieNode *node = root;</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>                node-&gt;next[c - <span class="ch">&#39;a&#39;</span>] = <span class="kw">new</span> TrieNode();</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>            }</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a>        }</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a>        node-&gt;is_end = <span class="kw">true</span>;</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a>    }</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a>    <span class="dt">bool</span> search(string word) {</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a>        TrieNode *node = root;</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true"></a>            }</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true"></a>        }</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true"></a>        <span class="cf">return</span> node-&gt;is_end;</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true"></a>    }</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true"></a>    <span class="dt">bool</span> start_with(string prefix) {</span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true"></a>        TrieNode *node = root;</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : prefix) {</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true"></a>            }</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true"></a>        }</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">true</span>;</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true"></a>    }</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">class</span> TrieNode {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    vector&lt;Trie *&gt; next;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="dt">bool</span> is_end;</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    TrieNode() : next(<span class="dv">26</span>, <span class="kw">nullptr</span>), is_end{<span class="kw">false</span>} {}</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>};</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a><span class="kw">class</span> Trie {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>  <span class="kw">private</span>:</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    TrieNode *root;</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>    Trie() {</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>        root = <span class="kw">new</span> TrieNode();</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>    }</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"></a>    <span class="dt">void</span> insert(string word) {</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"></a>        TrieNode *node = root;</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true"></a>                node-&gt;next[c - <span class="ch">&#39;a&#39;</span>] = <span class="kw">new</span> TrieNode();</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true"></a>            }</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true"></a>        }</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true"></a>        node-&gt;is_end = <span class="kw">true</span>;</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true"></a>    }</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true"></a>    <span class="dt">bool</span> search(string word) {</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true"></a>        TrieNode *node = root;</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true"></a>            }</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true"></a>        }</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true"></a>        <span class="cf">return</span> node-&gt;is_end;</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true"></a>    }</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true"></a></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true"></a>    <span class="dt">bool</span> start_with(string prefix) {</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true"></a>        TrieNode *node = root;</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : prefix) {</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true"></a>            }</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true"></a>        }</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true"></a>    }</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1194,6 +1205,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#广度优先遍历">广度优先遍历</a></li>
   </ul></li>
+  <li><a href="#翻转二叉树">226. 翻转二叉树</a></li>
   </ul></li>
   <li><a href="#前缀树">前缀树</a>
   <ul>
