@@ -64,3 +64,7 @@ title: "QA"
 - XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise
 - XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代
   价小，能并行计算
+
+# word2vec
+
+## 负采样怎么操作？
