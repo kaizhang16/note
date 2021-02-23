@@ -236,6 +236,38 @@ void merge(vector<int> &nums1, int m, vector<int> &nums2, int n) {
 }
 ```
 
+### 852 山脉数组的峰顶索引
+
+符合下列属性的数组 arr 称为 山脉数组 ：
+
+- arr.length >= 3
+- 存在 i（0 < i < arr.length - 1）使得：
+    - arr[0] < arr[1] < ... arr[i-1] < arr[i]
+    - arr[i] > arr[i+1] > ... > arr[arr.length - 1]
+
+给你由整数组成的山脉数组 arr ，返回任何满足 arr[0] < arr[1] < ... arr[i - 1] <
+arr[i] > arr[i + 1] > ... > arr[arr.length - 1] 的下标 i 。
+
+#### 二分查找
+
+- 时间复杂度：$O(\log n)$
+- 空间复杂度：$O(1)$
+
+```c++
+int peak(vector<int> &arr) {
+    int l = 0, r = arr.size();
+    while (r - l > 1) {
+        int m = l + (r - l - 1) / 2;
+        if (arr[m] < arr[m + 1]) {
+            l = m + 1;
+        } else {
+            r = m + 1;
+        }
+    }
+    return l;
+}
+```
+
 # 二维数组
 
 ## 数独
