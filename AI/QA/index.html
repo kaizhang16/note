@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
- 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  目录  怎么降低过拟合？ 如何缓解梯度消失？ 如何缓解梯度爆炸 样本不平衡，如何处理？ GBDT 的优缺点 XGBoost 与 GBDT 的区别 LightGBM 与 GBDT 的区别   ">
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  word2vec 负采样怎么操作？ 目录  怎么降低过拟合？ 如何缓解梯度消失？ 如何缓解梯度爆炸 样本不平衡，如何处理？ GBDT 的优缺点 XGBoost 与 GBDT 的区别 LightGBM 与 GBDT 的区别 word2vec  负采样怎么操作？    ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="QA" />
 <meta property="og:description" content="怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
- 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  目录  怎么降低过拟合？ 如何缓解梯度消失？ 如何缓解梯度爆炸 样本不平衡，如何处理？ GBDT 的优缺点 XGBoost 与 GBDT 的区别 LightGBM 与 GBDT 的区别   " />
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  word2vec 负采样怎么操作？ 目录  怎么降低过拟合？ 如何缓解梯度消失？ 如何缓解梯度爆炸 样本不平衡，如何处理？ GBDT 的优缺点 XGBoost 与 GBDT 的区别 LightGBM 与 GBDT 的区别 word2vec  负采样怎么操作？    " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/AI/QA/" />
-<meta property="article:modified_time" content="2021-02-05T07:46:18+00:00" />
+<meta property="article:modified_time" content="2021-02-23T05:07:41+00:00" />
 <title>QA | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.6aa2515cff4160de365bbca6227bf64b2337228d76fb3549310ccc4538581151.js" integrity="sha256-aqJRXP9BYN42W7ymInv2SyM3Io12&#43;zVJMQzMRThYEVE="></script>
+<script defer src="/note/cn.search.min.2d5c5fadc088295741466aa3be2a4cf764cadd0b52614903f7b4e69febeff293.js" integrity="sha256-LVxfrcCIKVdBRmqjvipM92TK3QtSYUkD97Tmn&#43;vv8pM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1151,6 +1151,8 @@ https://github.com/alex-shpak/hugo-book
 <li>XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise</li>
 <li>XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算</li>
 </ul>
+<h1 id="word2vec">word2vec</h1>
+<h2 id="负采样怎么操作">负采样怎么操作？</h2>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1162,6 +1164,10 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#gbdt-的优缺点">GBDT 的优缺点</a></li>
   <li><a href="#xgboost-与-gbdt-的区别">XGBoost 与 GBDT 的区别</a></li>
   <li><a href="#lightgbm-与-gbdt-的区别">LightGBM 与 GBDT 的区别</a></li>
+  <li><a href="#word2vec">word2vec</a>
+  <ul>
+  <li><a href="#负采样怎么操作">负采样怎么操作？</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -1174,9 +1180,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/ba01d1fb93986d1694f2a9579bec2a558a5dfdf1" title='最后修改者 Kai Zhang | 2021-02-05 15:46:18 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/db31c295dbfa482bb3db38be3006f89164027425" title='最后修改者 Kai Zhang | 2021-02-23 13:07:41 &#43;0800' target="_blank" rel="noopener">
       <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2021-02-05 15:46:18 &#43;0800</span>
+      <span>2021-02-23 13:07:41 &#43;0800</span>
     </a>
   </div>
 
