@@ -2,6 +2,14 @@
 title: "PowerShell"
 ---
 
+# 安装
+
+从 <https://github.com/PowerShell/PowerShell/releases> 下载 x64.msi 安装。
+
+# 配置
+
+路径为 C:\Users\<user>\Documents\PowerShell\profile.ps1。
+
 # 语法
 
 ## 别名

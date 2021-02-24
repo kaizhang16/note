@@ -187,6 +187,12 @@ row_count = sum(1 for row in file_object)
 PYTHONIOENCODING=utf-8 python3 script.py
 ```
 
+# class
+
+## 序列化
+
+实现 `__repr__` 方法[@python_repr]。
+
 # numpy
 
 ```py
@@ -349,6 +355,17 @@ text = ""
 for char in tqdm(["a", "b", "c", "d"], desc='demo', total=4):
     sleep(0.25)
     text = text + char
+```
+
+# opencv-python
+
+## 中文路径[@python_opencv_unicode]
+
+```py
+import numpy as np
+
+# img is in BGR format if the underlying image is a color image
+img = cv2.imdecode(np.fromfile("测试目录/test.jpg", dtype=np.uint8), cv2.IMREAD_UNCHANGED)
 ```
 
 # Pillow
