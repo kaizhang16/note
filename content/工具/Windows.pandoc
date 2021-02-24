@@ -14,10 +14,17 @@ title: "Windows"
 
 ## Scoop
 
+### 安装
+
+```ps1
+iwr -useb get.scoop.sh | iex
+```
+
 ### 设置代理
 
 ```ps1
 scoop config proxy 127.0.0.1:3128
+scoop config proxy none  # 绕过系统代理
 ```
 
 ## Total Commander
