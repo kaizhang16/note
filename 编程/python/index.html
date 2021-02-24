@@ -16,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f713f453f0251f2621aaf956ebfbd2c02dc382c43d2b40bcc2cf3e0a13d326fe.js" integrity="sha256-9xP0U/AlHyYhqvlW6/vSwC3DgsQ9K0C8ws8&#43;ChPTJv4="></script>
+<script defer src="/note/cn.search.min.461c6ee1d1427ce30e5bcf4fae3ac0b07bdbdd333cfe9febd3fd779cf0aa7825.js" integrity="sha256-Rhxu4dFCfOMOW89PrjrAsHvb3TM8/p/r0/13nPCqeCU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1255,9 +1255,12 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="faq">FAQ</h2>
 <h3 id="python3-unicodeencodeerror-ascii-codec-cant-encode-characterpython_faq_unicode">Python3: UnicodeEncodeError: ‘ascii’ codec can’t encode character<span class="citation" data-cites="python_faq_unicode"><sup>[<a href="#ref-python_faq_unicode" role="doc-biblioref">11</a>]</sup></span></h3>
 <div class="sourceCode" id="cb16"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a><span class="va">PYTHONIOENCODING=</span>utf-8 <span class="ex">python3</span> script.py</span></code></pre></div>
+<h1 id="class">class</h1>
+<h2 id="序列化">序列化</h2>
+<p>实现 <code>__repr__</code> 方法<span class="citation" data-cites="python_repr"><sup>[<a href="#ref-python_repr" role="doc-biblioref">12</a>]</sup></span>。</p>
 <h1 id="numpy">numpy</h1>
 <div class="sourceCode" id="cb17"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
-<h2 id="数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<a href="#ref-numpyTypes" role="doc-biblioref">12</a>]</sup></span></h2>
+<h2 id="数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<a href="#ref-numpyTypes" role="doc-biblioref">13</a>]</sup></span></h2>
 <div id="tbl:numpyTypes">
 <table>
 <caption>表 4: NumPy 数据类型</caption>
@@ -1294,7 +1297,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.vstack((a,b))</span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true"></a>array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true"></a>       [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]])</span></code></pre></div>
-<h2 id="范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<a href="#ref-pythonNorm" role="doc-biblioref">13</a>]</sup></span></h2>
+<h2 id="范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<a href="#ref-pythonNorm" role="doc-biblioref">14</a>]</sup></span></h2>
 <p><span id="eq:L2Norm"><span class="math display">\[\lVert\v{x}\rVert_2 = \left(\sum_i \lvert x_i\rvert^2\right)^{\frac{1}{2}}\qquad(2)\]</span></span></p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a><span class="op">&gt;&gt;&gt;</span> np.linalg.norm([<span class="dv">3</span>, <span class="dv">4</span>])</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a><span class="fl">5.0</span></span></code></pre></div>
@@ -1386,15 +1389,21 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true"></a><span class="cf">for</span> char <span class="kw">in</span> tqdm([<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>], desc<span class="op">=</span><span class="st">&#39;demo&#39;</span>, total<span class="op">=</span><span class="dv">4</span>):</span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true"></a>    sleep(<span class="fl">0.25</span>)</span>
 <span id="cb30-7"><a href="#cb30-7" aria-hidden="true"></a>    text <span class="op">=</span> text <span class="op">+</span> char</span></code></pre></div>
+<h1 id="opencv-python">opencv-python</h1>
+<h2 id="中文路径python_opencv_unicode">中文路径<span class="citation" data-cites="python_opencv_unicode"><sup>[<a href="#ref-python_opencv_unicode" role="doc-biblioref">15</a>]</sup></span></h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true"></a><span class="co"># img is in BGR format if the underlying image is a color image</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true"></a>img <span class="op">=</span> cv2.imdecode(np.fromfile(<span class="st">&quot;测试目录/test.jpg&quot;</span>, dtype<span class="op">=</span>np.uint8), cv2.IMREAD_UNCHANGED)</span></code></pre></div>
 <h1 id="pillow">Pillow</h1>
-<h2 id="图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<a href="#ref-pillowMaxImagePixels" role="doc-biblioref">14</a>]</sup></span></h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a>PIL.Image.MAX_IMAGE_PIXELS <span class="op">=</span> <span class="dv">933120000</span></span></code></pre></div>
+<h2 id="图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<a href="#ref-pillowMaxImagePixels" role="doc-biblioref">16</a>]</sup></span></h2>
+<div class="sourceCode" id="cb32"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a>PIL.Image.MAX_IMAGE_PIXELS <span class="op">=</span> <span class="dv">933120000</span></span></code></pre></div>
 <h1 id="常用函数">常用函数</h1>
-<div class="sourceCode" id="cb32"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true"></a><span class="kw">def</span> upper_first_char(<span class="bu">str</span>):</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true"></a>    <span class="cf">return</span> <span class="st">&#39;</span><span class="sc">{}{}</span><span class="st">&#39;</span>.<span class="bu">format</span>(<span class="bu">str</span>[<span class="dv">0</span>].upper(), <span class="bu">str</span>[<span class="dv">1</span>:])</span></code></pre></div>
 <h1 id="anaconda">anaconda</h1>
-<h2 id="卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<a href="#ref-anaconda_uninstall" role="doc-biblioref">15</a>]</sup></span></h2>
-<div class="sourceCode" id="cb33"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
+<h2 id="卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<a href="#ref-anaconda_uninstall" role="doc-biblioref">17</a>]</sup></span></h2>
+<div class="sourceCode" id="cb34"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true"></a><span class="fu">rm</span> -rf ~/anaconda3</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
 <div id="ref-pythonBuiltIn">
@@ -1430,17 +1439,23 @@ https://github.com/alex-shpak/hugo-book
 <div id="ref-python_faq_unicode">
 <p>[11] MARKHOR. Python3: UnicodeEncodeError: ’ascii’ codec can’t encode character ’’[EB/OL](2016–12–19). <a href="https://stackoverflow.com/a/41223807/13200985">https://stackoverflow.com/a/41223807/13200985</a>.</p>
 </div>
+<div id="ref-python_repr">
+<p>[12] MOSHEZ. [EB/OL](2010–04–13). <a href="https://stackoverflow.com/a/2626364">https://stackoverflow.com/a/2626364</a>.</p>
+</div>
 <div id="ref-numpyTypes">
-<p>[12] SCIPY. Data types[EB/OL]([日期不详]). <a href="https://docs.scipy.org/doc/numpy/user/basics.types.html">https://docs.scipy.org/doc/numpy/user/basics.types.html</a>.</p>
+<p>[13] SCIPY. Data types[EB/OL]([日期不详]). <a href="https://docs.scipy.org/doc/numpy/user/basics.types.html">https://docs.scipy.org/doc/numpy/user/basics.types.html</a>.</p>
 </div>
 <div id="ref-pythonNorm">
-<p>[13] SCIPY.ORG. numpy.linalg.norm[EB/OL]([日期不详]). <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html</a>.</p>
+<p>[14] SCIPY.ORG. numpy.linalg.norm[EB/OL]([日期不详]). <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html">https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html</a>.</p>
+</div>
+<div id="ref-python_opencv_unicode">
+<p>[15] JDHAO. How do I read an image from a path with Unicode characters?[EB/OL](2019–09–10). <a href="https://stackoverflow.com/a/57872297">https://stackoverflow.com/a/57872297</a>.</p>
 </div>
 <div id="ref-pillowMaxImagePixels">
-<p>[14] ALFE. Pillow in Python won’t let me open image (《exceeds limit》)[EB/OL](2018–07–03). <a href="https://stackoverflow.com/a/51152514">https://stackoverflow.com/a/51152514</a>.</p>
+<p>[16] ALFE. Pillow in Python won’t let me open image (《exceeds limit》)[EB/OL](2018–07–03). <a href="https://stackoverflow.com/a/51152514">https://stackoverflow.com/a/51152514</a>.</p>
 </div>
 <div id="ref-anaconda_uninstall">
-<p>[15] ANACONDA. Uninstalling Anaconda[EB/OL]([日期不详]). <a href="https://docs.anaconda.com/anaconda/install/uninstall/#uninstalling-anaconda">https://docs.anaconda.com/anaconda/install/uninstall/#uninstalling-anaconda</a>.</p>
+<p>[17] ANACONDA. Uninstalling Anaconda[EB/OL]([日期不详]). <a href="https://docs.anaconda.com/anaconda/install/uninstall/#uninstalling-anaconda">https://docs.anaconda.com/anaconda/install/uninstall/#uninstalling-anaconda</a>.</p>
 </div>
 </div>
 
@@ -1488,13 +1503,17 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#python3-unicodeencodeerror-ascii-codec-cant-encode-characterpython_faq_unicode">Python3: UnicodeEncodeError: ‘ascii’ codec can’t encode character<span class="citation" data-cites="python_faq_unicode"><sup>[<span>11</span>]</sup></span></a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#class">class</a>
+  <ul>
+  <li><a href="#序列化">序列化</a></li>
+  </ul></li>
   <li><a href="#numpy">numpy</a>
   <ul>
-  <li><a href="#数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<span>12</span>]</sup></span></a></li>
+  <li><a href="#数据类型numpytypes">数据类型<span class="citation" data-cites="numpyTypes"><sup>[<span>13</span>]</sup></span></a></li>
   <li><a href="#算术平均">算术平均</a></li>
   <li><a href="#右乘列向量">右乘列向量</a></li>
   <li><a href="#竖向堆积">竖向堆积</a></li>
-  <li><a href="#范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<span>13</span>]</sup></span></a></li>
+  <li><a href="#范数pythonnorm">范数<span class="citation" data-cites="pythonNorm"><sup>[<span>14</span>]</sup></span></a></li>
   <li><a href="#奇异值分解">奇异值分解</a></li>
   <li><a href="#numpy.any">numpy.any</a></li>
   <li><a href="#numpy.arccos">numpy.arccos</a></li>
@@ -1517,14 +1536,18 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#安装">安装</a></li>
   <li><a href="#基于迭代器">基于迭代器</a></li>
   </ul></li>
+  <li><a href="#opencv-python">opencv-python</a>
+  <ul>
+  <li><a href="#中文路径python_opencv_unicode">中文路径<span class="citation" data-cites="python_opencv_unicode"><sup>[<span>15</span>]</sup></span></a></li>
+  </ul></li>
   <li><a href="#pillow">Pillow</a>
   <ul>
-  <li><a href="#图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<span>14</span>]</sup></span></a></li>
+  <li><a href="#图像大小限制pillowmaximagepixels">图像大小限制<span class="citation" data-cites="pillowMaxImagePixels"><sup>[<span>16</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#常用函数">常用函数</a></li>
   <li><a href="#anaconda">anaconda</a>
   <ul>
-  <li><a href="#卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<span>15</span>]</sup></span></a></li>
+  <li><a href="#卸载anaconda_uninstall">卸载<span class="citation" data-cites="anaconda_uninstall"><sup>[<span>17</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
