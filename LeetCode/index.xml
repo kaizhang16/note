@@ -48,6 +48,17 @@
     </item>
     
     <item>
+      <title>概率论</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
+      <description>在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1]  图 1: x + y + z &amp;lt; 1 所占空间  如图. 1 所示，四面体所占体积为 \(\frac{1}{3}\times\frac{1}{2}\times 1\times 1\times 1 = \frac{1}{6}\)。
+参考文献 [1] JIAN0929. 在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[EB/OL](2018–08–25). https://www.nowcoder.com/questionTerminal/a68163ca4e824539b38c14ab357293b1.
+  目录  在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1] 参考文献   </description>
+    </item>
+    
+    <item>
       <title>链表</title>
       <link>https://kaizhang91.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
