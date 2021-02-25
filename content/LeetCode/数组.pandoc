@@ -6,6 +6,127 @@ title: "数组"
 
 ## 未排序的数组
 
+### 15 三数之和
+
+给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得
+a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+
+> 注意：答案中不可以包含重复的三元组。
+
+- 时间复杂度：$O(n^2)$
+- 空间复杂度：$O(\log n)$
+
+```c++
+vector<vector<int>> three_sum(vector<int> &nums) {
+    std::sort(nums.begin(), nums.end());
+    vector<vector<int>> result;
+    int n = nums.size();
+    for (int i = 0; i < n; i++) {
+        if (i > 0 && nums[i] == nums[i - 1]) {
+            continue;
+        }
+        int k = n - 1;
+        for (int j = i + 1; j < k; j++) {
+            if (j > i + 1 && nums[j] == nums[j - 1]) {
+                continue;
+            }
+            while (k > j && nums[k] + nums[j] > -nums[i]) {
+                k--;
+            }
+            if (k == j) {
+                break;
+            }
+            if (nums[j] + nums[k] == -nums[i]) {
+                result.push_back(vector<int>{nums[i], nums[j], nums[k]});
+            }
+        }
+    }
+    return result;
+}
+```
+
+### 41 缺失的第一个正数
+
+给你一个未排序的整数数组 nums，请你找出其中没有出现的最小的正整数。
+
+#### 哈希表
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+int first_missing_positive(vector<int> &nums) {
+    int n = nums.size();
+    for (auto &num : nums) {
+        if (num <= 0) {
+            num = n + 1;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        int index = abs(nums[i]) - 1;
+        if (index < n && nums[index] > 0) {
+            nums[index] *= -1;
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        if (nums[i] > 0) {
+            return i + 1;
+        }
+    }
+    return n + 1;
+}
+```
+
+#### 置换
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+int first_missing_positive_v2(vector<int> &nums) {
+    int n = nums.size();
+    for (int i = 0; i < n; i++) {
+        while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
+            std::swap(nums[i], nums[nums[i] - 1]);
+        }
+    }
+    for (int i = 0; i < n; i++) {
+        if (nums[i] != i + 1) {
+            return i + 1;
+        }
+    }
+    return n + 1;
+}
+```
+
+### 162 寻找峰值
+
+峰值元素是指其值大于左右相邻值的元素。
+
+给你一个输入数组 nums，找到峰值元素并返回其索引。数组可能包含多个峰值，在这种情况下，返回 任何一个峰值 所在位置即可。
+
+你可以假设 nums[-1] = nums[n] = -∞ 。
+
+#### 二分查找
+
+- 时间复杂度：$O(\log n)$
+- 空间复杂度：$O(1)$
+
+```c++
+int find_peak(vector<int> &nums) {
+    int l = 0, r = nums.size();
+    while (r - l > 1) {
+        int m = l + (r - l - 1) / 2;
+        if (nums[m] < nums[m + 1]) {
+            l = m + 1;
+        } else {
+            r = m + 1;
+        }
+    }
+    return l;
+}
+```
+
 ### 169 众数
 
 给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于
@@ -115,99 +236,6 @@ void rotate(vector<int> &nums, int k) {
             i = i_next;
         } while (i != start);
     }
-}
-```
-
-### 41 缺失的第一个正数
-
-给你一个未排序的整数数组 nums，请你找出其中没有出现的最小的正整数。
-
-#### 哈希表
-
-- 时间复杂度：$O(n)$
-- 空间复杂度：$O(1)$
-
-```c++
-int first_missing_positive(vector<int> &nums) {
-    int n = nums.size();
-    for (auto &num : nums) {
-        if (num <= 0) {
-            num = n + 1;
-        }
-    }
-    for (int i = 0; i < n; i++) {
-        int index = abs(nums[i]) - 1;
-        if (index < n && nums[index] > 0) {
-            nums[index] *= -1;
-        }
-    }
-    for (int i = 0; i < n; i++) {
-        if (nums[i] > 0) {
-            return i + 1;
-        }
-    }
-    return n + 1;
-}
-```
-
-#### 置换
-
-- 时间复杂度：$O(n)$
-- 空间复杂度：$O(1)$
-
-```c++
-int first_missing_positive_v2(vector<int> &nums) {
-    int n = nums.size();
-    for (int i = 0; i < n; i++) {
-        while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) {
-            std::swap(nums[i], nums[nums[i] - 1]);
-        }
-    }
-    for (int i = 0; i < n; i++) {
-        if (nums[i] != i + 1) {
-            return i + 1;
-        }
-    }
-    return n + 1;
-}
-```
-
-### 15 三数之和
-
-给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得
-a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
-
-> 注意：答案中不可以包含重复的三元组。
-
-- 时间复杂度：$O(n^2)$
-- 空间复杂度：$O(\log n)$
-
-```c++
-vector<vector<int>> three_sum(vector<int> &nums) {
-    std::sort(nums.begin(), nums.end());
-    vector<vector<int>> result;
-    int n = nums.size();
-    for (int i = 0; i < n; i++) {
-        if (i > 0 && nums[i] == nums[i - 1]) {
-            continue;
-        }
-        int k = n - 1;
-        for (int j = i + 1; j < k; j++) {
-            if (j > i + 1 && nums[j] == nums[j - 1]) {
-                continue;
-            }
-            while (k > j && nums[k] + nums[j] > -nums[i]) {
-                k--;
-            }
-            if (k == j) {
-                break;
-            }
-            if (nums[j] + nums[k] == -nums[i]) {
-                result.push_back(vector<int>{nums[i], nums[j], nums[k]});
-            }
-        }
-    }
-    return result;
 }
 ```
 
