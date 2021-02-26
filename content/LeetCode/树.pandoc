@@ -4,6 +4,81 @@ title: "树"
 
 # 二叉树
 
+## 98 验证二叉搜索树
+
+给定一个二叉树，判断其是否是一个有效的二叉搜索树。
+
+假设一个二叉搜索树具有如下特征：
+
+- 节点的左子树只包含小于当前节点的数。
+- 节点的右子树只包含大于当前节点的数。
+- 所有左子树和右子树自身必须也是二叉搜索树。
+
+### 递归
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+bool helper(TreeNode *root, long long low, long long high) {
+    if (!root) {
+        return true;
+    }
+
+    if (root->val <= low || root->val >= high) {
+        return false;
+    }
+    return helper(root->left, low, root->val) &&
+           helper(root->right, root->val, high);
+}
+
+bool is_bst(TreeNode *root) {
+    return helper(root, LONG_MIN, LONG_MAX);
+}
+```
+
+### 中序遍历
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+bool is_bst(TreeNode *root) {
+    std::stack<TreeNode *> s;
+    long long pre = LONG_MIN;
+    while (!s.empty() || root) {
+        while (root) {
+            s.push(root);
+            root = root->left;
+        }
+        root = s.top();
+        s.pop();
+        if (root->val <= pre) {
+            return false;
+        }
+        pre = root->val;
+        root = root->right;
+    }
+    return true;
+}
+```
+
+## 226. 翻转二叉树
+
+翻转一棵二叉树。
+
+```c++
+TreeNode *invert_tree(TreeNode *root) {
+    if (!root) {
+        return root;
+    }
+    TreeNode *left0 = root->left;
+    root->left = invert_tree(root->right);
+    root->right = invert_tree(left0);
+    return root;
+}
+```
+
 ## 958 二叉树的完全性检验
 
 若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第
@@ -40,22 +115,6 @@ bool is_complete_tree_v2(TreeNode *root) {
         }
     }
     return true;
-}
-```
-
-## 226. 翻转二叉树
-
-翻转一棵二叉树。
-
-```c++
-TreeNode *invert_tree(TreeNode *root) {
-    if (!root) {
-        return root;
-    }
-    TreeNode *left0 = root->left;
-    root->left = invert_tree(root->right);
-    root->right = invert_tree(left0);
-    return root;
 }
 ```
 
