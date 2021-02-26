@@ -4,6 +4,87 @@ title: "树"
 
 # 二叉树
 
+## 94 二叉树的中序遍历
+
+给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+
+### 递归
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+void helper(TreeNode *root, vector<int> &result) {
+    if (!root) {
+        return;
+    }
+    helper(root->left, result);
+    result.push_back(root->val);
+    helper(root->right, result);
+}
+
+vector<int> in_order(TreeNode *root) {
+    vector<int> result;
+    helper(root, result);
+    return result;
+}
+```
+
+### 迭代
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+vector<int> in_order(TreeNode *root) {
+    std::stack<TreeNode *> s;
+    vector<int> result;
+    while (root || !s.empty()) {
+        while (root) {
+            s.push(root);
+            root = root->left;
+        }
+        root = s.top();
+        s.pop();
+        result.push_back(root->val);
+        root = root->right;
+    }
+    return result;
+}
+```
+
+### Morris 中序遍历
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+```c++
+vector<int> in_order(TreeNode *root) {
+    vector<int> result;
+    TreeNode *pre = nullptr;
+    while (root) {
+        if (root->left) {
+            pre = root->left;
+            while (pre->right && pre->right != root) {
+                pre = pre ->right;
+            }
+            if (!pre->right) {
+                pre->right = root;
+                root = root->left;
+            } else {
+                result.push_back(root->val);
+                pre->right = nullptr;
+                root = root->right;
+            }
+        } else {
+            result.push_back(root->val);
+            root = root->right;
+        }
+    }
+    return result;
+}
+```
+
 ## 98 验证二叉搜索树
 
 给定一个二叉树，判断其是否是一个有效的二叉搜索树。
