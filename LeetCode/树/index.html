@@ -16,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.0b91496dc62d50aa7401a6877852f3d471cf486bf41bd3375e656322c3cedc75.js" integrity="sha256-C5FJbcYtUKp0AaaHeFLz1HHPSGv0G9M3XmVjIsPO3HU="></script>
+<script defer src="/note/cn.search.min.e2fb436439417e317b1469e37599e16b6c88f41583f18c63d3a686586313aa32.js" integrity="sha256-4vtDZDlBfjF7FGnjdZnha2yI9BWD8Yxj06aGWGMTqjI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1220,6 +1220,60 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>    }</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>}</span></code></pre></div>
+<h2 id="对称二叉树">101 对称二叉树</h2>
+<p>给定一个二叉树，检查它是否是镜像对称的。</p>
+<h3 id="迭代法">迭代法</h3>
+<ul>
+<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(n)\)</span></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="dt">bool</span> is_symmetric(TreeNode *root) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="bu">std::</span>queue&lt;TreeNode *&gt; q;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    <span class="cf">if</span> (root) {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>        q.push(root-&gt;left);</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>        q.push(root-&gt;right);</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>    }</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    <span class="cf">while</span> (!q.empty()) {</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>        TreeNode *l = q.front();</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>        q.pop();</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>        TreeNode *r = q.front();</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>        q.pop();</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>        <span class="cf">if</span> (!l &amp;&amp; !r) {</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>            <span class="cf">continue</span>;</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (!l || !r) {</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true"></a>        }</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true"></a>        <span class="cf">if</span> (l-&gt;val != r-&gt;val) {</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true"></a>        }</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true"></a>        q.push(l-&gt;left);</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true"></a>        q.push(r-&gt;right);</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true"></a>        q.push(l-&gt;right);</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true"></a>        q.push(r-&gt;left);</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true"></a>    }</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true"></a>}</span></code></pre></div>
+<h3 id="递归法">递归法</h3>
+<ul>
+<li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(n)\)</span></li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="dt">bool</span> helper(TreeNode *l, TreeNode *r) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="cf">if</span> (!l &amp;&amp; !r) {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    } <span class="cf">else</span> <span class="cf">if</span> (!l || !r) {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    }</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    <span class="cf">if</span> (l-&gt;val != r-&gt;val) {</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>    } <span class="cf">else</span> {</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>        <span class="cf">return</span> helper(l-&gt;left, r-&gt;right) &amp;&amp; helper(l-&gt;right, r-&gt;left);</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>    }</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>}</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a><span class="dt">bool</span> is_symmetric(TreeNode *root) {</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>    <span class="cf">return</span> root ? helper(root-&gt;left, root-&gt;right) : <span class="kw">true</span>;</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>}</span></code></pre></div>
 <h2 id="将有序数组转换为二叉搜索树">108 将有序数组转换为二叉搜索树</h2>
 <p>给你一个整数数组 nums ，其中元素已经按 升序 排列，请你将其转换为一棵 高度平衡 二叉搜索树。</p>
 <p>高度平衡 二叉树是一棵满足「每个节点的左右两个子树的高度差的绝对值不超过 1 」的二叉树。</p>
@@ -1228,31 +1282,31 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>TreeNode *helper(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> l, <span class="dt">int</span> r) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="cf">if</span> (r - l == <span class="dv">0</span>) {</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">nullptr</span>;</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>    }</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>    <span class="dt">int</span> m = l + (r - l - <span class="dv">1</span>) / <span class="dv">2</span>;</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>    TreeNode *root = <span class="kw">new</span> TreeNode(nums[m]);</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>    root-&gt;left = helper(nums, l, m);</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>    root-&gt;right = helper(nums, m + <span class="dv">1</span>, r);</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    <span class="cf">return</span> root;</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>}</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>TreeNode *sorted_array_to_bst(vector&lt;<span class="dt">int</span>&gt; &amp;nums) {</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>    <span class="cf">return</span> helper(nums, <span class="dv">0</span>, nums.size());</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>TreeNode *helper(vector&lt;<span class="dt">int</span>&gt; &amp;nums, <span class="dt">int</span> l, <span class="dt">int</span> r) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="cf">if</span> (r - l == <span class="dv">0</span>) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">nullptr</span>;</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    }</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>    <span class="dt">int</span> m = l + (r - l - <span class="dv">1</span>) / <span class="dv">2</span>;</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    TreeNode *root = <span class="kw">new</span> TreeNode(nums[m]);</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    root-&gt;left = helper(nums, l, m);</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>    root-&gt;right = helper(nums, m + <span class="dv">1</span>, r);</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>    <span class="cf">return</span> root;</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>}</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>TreeNode *sorted_array_to_bst(vector&lt;<span class="dt">int</span>&gt; &amp;nums) {</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>    <span class="cf">return</span> helper(nums, <span class="dv">0</span>, nums.size());</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>}</span></code></pre></div>
 <h2 id="翻转二叉树">226. 翻转二叉树</h2>
 <p>翻转一棵二叉树。</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>TreeNode *invert_tree(TreeNode *root) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="cf">if</span> (!root) {</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>        <span class="cf">return</span> root;</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    }</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>    TreeNode *left0 = root-&gt;left;</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>    root-&gt;left = invert_tree(root-&gt;right);</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>    root-&gt;right = invert_tree(left0);</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    <span class="cf">return</span> root;</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>TreeNode *invert_tree(TreeNode *root) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="cf">if</span> (!root) {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>        <span class="cf">return</span> root;</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    }</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>    TreeNode *left0 = root-&gt;left;</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>    root-&gt;left = invert_tree(root-&gt;right);</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>    root-&gt;right = invert_tree(left0);</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>    <span class="cf">return</span> root;</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>}</span></code></pre></div>
 <h2 id="二叉树的完全性检验">958 二叉树的完全性检验</h2>
 <p>若设二叉树的深度为 h，除第 h 层外，其它各层 (1～h-1) 的结点数都达到最大个数，第 h 层所有的结点都连续集中在最左边，这就是完全二叉树。（注：第 h 层可能包含 <span class="math inline">\(1 \sim 2^h\)</span> 个节点。）</p>
 <h3 id="广度优先遍历">广度优先遍历</h3>
@@ -1260,97 +1314,97 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(n)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="dt">bool</span> is_complete_tree_v2(TreeNode *root) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="bu">std::</span>queue&lt;TreeNode *&gt; q;</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    <span class="cf">if</span> (root) {</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>        q.push(root);</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>    }</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>    <span class="dt">bool</span> is_pre_end = <span class="kw">false</span>;</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>    <span class="cf">while</span> (!q.empty()) {</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>        <span class="kw">auto</span> front = q.front();</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>        q.pop();</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>        <span class="cf">if</span> ((front-&gt;right &amp;&amp; !front-&gt;left) ||</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>            (is_pre_end &amp;&amp; (front-&gt;left || front-&gt;right))) {</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>        }</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>        <span class="cf">if</span> (!front-&gt;left || !front-&gt;right) {</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>            is_pre_end = <span class="kw">true</span>;</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a>        }</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a>        <span class="cf">if</span> (front-&gt;left) {</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true"></a>            q.push(front-&gt;left);</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true"></a>        }</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true"></a>        <span class="cf">if</span> (front-&gt;right) {</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true"></a>            q.push(front-&gt;right);</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true"></a>        }</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true"></a>    }</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="dt">bool</span> is_complete_tree_v2(TreeNode *root) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="bu">std::</span>queue&lt;TreeNode *&gt; q;</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    <span class="cf">if</span> (root) {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>        q.push(root);</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    }</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>    <span class="dt">bool</span> is_pre_end = <span class="kw">false</span>;</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>    <span class="cf">while</span> (!q.empty()) {</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>        <span class="kw">auto</span> front = q.front();</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>        q.pop();</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>        <span class="cf">if</span> ((front-&gt;right &amp;&amp; !front-&gt;left) ||</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>            (is_pre_end &amp;&amp; (front-&gt;left || front-&gt;right))) {</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>        }</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a>        <span class="cf">if</span> (!front-&gt;left || !front-&gt;right) {</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a>            is_pre_end = <span class="kw">true</span>;</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a>        }</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true"></a>        <span class="cf">if</span> (front-&gt;left) {</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true"></a>            q.push(front-&gt;left);</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true"></a>        }</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true"></a>        <span class="cf">if</span> (front-&gt;right) {</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true"></a>            q.push(front-&gt;right);</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true"></a>        }</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true"></a>    }</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true"></a>}</span></code></pre></div>
 <h1 id="前缀树">前缀树</h1>
 <h2 id="实现-trie前缀树">208 实现 Trie（前缀树）</h2>
 <p>实现一个 Trie (前缀树)，包含 insert, search, 和 startsWith 这三个操作。</p>
 <p>示例:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>Trie trie = <span class="kw">new</span> <span class="fu">Trie</span>();</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;apple&quot;</span>);</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;apple&quot;</span>);   <span class="co">// 返回 true</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 false</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>trie.<span class="fu">startsWith</span>(<span class="st">&quot;app&quot;</span>); <span class="co">// 返回 true</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;app&quot;</span>);   </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 true</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>Trie trie = <span class="kw">new</span> <span class="fu">Trie</span>();</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;apple&quot;</span>);</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;apple&quot;</span>);   <span class="co">// 返回 true</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 false</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>trie.<span class="fu">startsWith</span>(<span class="st">&quot;app&quot;</span>); <span class="co">// 返回 true</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>trie.<span class="fu">insert</span>(<span class="st">&quot;app&quot;</span>);   </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a>trie.<span class="fu">search</span>(<span class="st">&quot;app&quot;</span>);     <span class="co">// 返回 true</span></span></code></pre></div>
 <p>说明:</p>
 <ul>
 <li>你可以假设所有的输入都是由小写字母 a-z 构成的。</li>
 <li>保证所有输入均为非空字符串。</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a><span class="kw">class</span> TrieNode {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    vector&lt;Trie *&gt; next;</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>    <span class="dt">bool</span> is_end;</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    TrieNode() : next(<span class="dv">26</span>, <span class="kw">nullptr</span>), is_end{<span class="kw">false</span>} {}</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>};</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a><span class="kw">class</span> Trie {</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>  <span class="kw">private</span>:</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>    TrieNode *root;</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>    Trie() {</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a>        root = <span class="kw">new</span> TrieNode();</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a>    }</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true"></a>    <span class="dt">void</span> insert(string word) {</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true"></a>        TrieNode *node = root;</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true"></a>                node-&gt;next[c - <span class="ch">&#39;a&#39;</span>] = <span class="kw">new</span> TrieNode();</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true"></a>            }</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true"></a>        }</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true"></a>        node-&gt;is_end = <span class="kw">true</span>;</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true"></a>    }</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true"></a></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true"></a>    <span class="dt">bool</span> search(string word) {</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true"></a>        TrieNode *node = root;</span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true"></a>            }</span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true"></a>        }</span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true"></a>        <span class="cf">return</span> node-&gt;is_end;</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true"></a>    }</span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true"></a></span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true"></a>    <span class="dt">bool</span> start_with(string prefix) {</span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true"></a>        TrieNode *node = root;</span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : prefix) {</span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true"></a>            }</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true"></a>        }</span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">true</span>;</span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true"></a>    }</span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a><span class="kw">class</span> TrieNode {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>    vector&lt;Trie *&gt; next;</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>    <span class="dt">bool</span> is_end;</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>    TrieNode() : next(<span class="dv">26</span>, <span class="kw">nullptr</span>), is_end{<span class="kw">false</span>} {}</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a>};</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a><span class="kw">class</span> Trie {</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a>  <span class="kw">private</span>:</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true"></a>    TrieNode *root;</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true"></a>    Trie() {</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true"></a>        root = <span class="kw">new</span> TrieNode();</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true"></a>    }</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true"></a></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true"></a>    <span class="dt">void</span> insert(string word) {</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true"></a>        TrieNode *node = root;</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true"></a>                node-&gt;next[c - <span class="ch">&#39;a&#39;</span>] = <span class="kw">new</span> TrieNode();</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true"></a>            }</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true"></a>        }</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true"></a>        node-&gt;is_end = <span class="kw">true</span>;</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true"></a>    }</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true"></a></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true"></a>    <span class="dt">bool</span> search(string word) {</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true"></a>        TrieNode *node = root;</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : word) {</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true"></a>            }</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true"></a>        }</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true"></a>        <span class="cf">return</span> node-&gt;is_end;</span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true"></a>    }</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true"></a></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true"></a>    <span class="dt">bool</span> start_with(string prefix) {</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true"></a>        TrieNode *node = root;</span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : prefix) {</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true"></a>            <span class="cf">if</span> (!node-&gt;next[c - <span class="ch">&#39;a&#39;</span>]) {</span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true"></a>                <span class="cf">return</span> <span class="kw">false</span>;</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true"></a>            }</span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true"></a>            node = node-&gt;next[c - <span class="ch">&#39;a&#39;</span>];</span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true"></a>        }</span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">true</span>;</span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true"></a>    }</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1367,6 +1421,11 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#递归-1">递归</a></li>
   <li><a href="#中序遍历">中序遍历</a></li>
+  </ul></li>
+  <li><a href="#对称二叉树">101 对称二叉树</a>
+  <ul>
+  <li><a href="#迭代法">迭代法</a></li>
+  <li><a href="#递归法">递归法</a></li>
   </ul></li>
   <li><a href="#将有序数组转换为二叉搜索树">108 将有序数组转换为二叉搜索树</a>
   <ul>
