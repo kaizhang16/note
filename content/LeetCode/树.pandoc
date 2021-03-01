@@ -258,6 +258,36 @@ int max_depth(TreeNode *root) {
 }
 ```
 
+## 105 从前序与中序遍历序列构造二叉树
+
+根据一棵树的前序遍历与中序遍历构造二叉树。
+
+注意:
+你可以假设树中没有重复的元素。
+
+```c++
+TreeNode *helper(vector<int> &preorder, int p0, int p1, vector<int> &inorder,
+                 int i0, int i1) {
+    if (p1 - p0 == 0) {
+        return nullptr;
+    }
+    TreeNode *root = new TreeNode(preorder[p0]);
+    int i = i0;
+    while (i < i1 && inorder[i] != preorder[p0]) {
+        i++;
+    }
+    int n_l = i - i0;
+    root->left = helper(preorder, p0 + 1, p0 + 1 + n_l, inorder, i0, i);
+    root->right = helper(preorder, p0 + 1 + n_l, p1, inorder, i + 1, i1);
+    return root;
+}
+
+TreeNode *build_tree(vector<int> &preorder, vector<int> &inorder) {
+    int n = preorder.size();
+    return helper(preorder, 0, n, inorder, 0, n);
+}
+```
+
 ## 108 将有序数组转换为二叉搜索树
 
 给你一个整数数组 nums ，其中元素已经按 升序 排列，请你将其转换为一棵 高度平衡 二叉搜索树。
