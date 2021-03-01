@@ -16,7 +16,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.8b41d6d5e2a598c5f2ba4f56d5901d14830b479c83cefb3c265e122b763b7916.js" integrity="sha256-i0HW1eKlmMXyuk9W1ZAdFIMLR5yDzvs8Jl4SK3Y7eRY="></script>
+<script defer src="/note/cn.search.min.4527f75024861fd9494c32c66669746b9aba1157a183bef3a4c5bac907b85f80.js" integrity="sha256-RSf3UCSGH9lJTDLGZml0a5q6EVehg77zpMW6yQe4X4A="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1317,19 +1317,19 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="从前序与中序遍历序列构造二叉树">105 从前序与中序遍历序列构造二叉树</h2>
 <p>根据一棵树的前序遍历与中序遍历构造二叉树。</p>
 <p>注意: 你可以假设树中没有重复的元素。</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>TreeNode *helper(vector&lt;<span class="dt">int</span>&gt; &amp;preorder, <span class="dt">int</span> i0, <span class="dt">int</span> i1, vector&lt;<span class="dt">int</span>&gt; &amp;inorder,</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>                 <span class="dt">int</span> j0, <span class="dt">int</span> j1) {</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    <span class="cf">if</span> (i1 - i0 == <span class="dv">0</span>) {</span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>TreeNode *helper(vector&lt;<span class="dt">int</span>&gt; &amp;preorder, <span class="dt">int</span> p0, <span class="dt">int</span> p1, vector&lt;<span class="dt">int</span>&gt; &amp;inorder,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>                 <span class="dt">int</span> i0, <span class="dt">int</span> i1) {</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    <span class="cf">if</span> (p1 - p0 == <span class="dv">0</span>) {</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">nullptr</span>;</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    }</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>    TreeNode *root = <span class="kw">new</span> TreeNode(preorder[i0]);</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>    <span class="dt">int</span> j = j0;</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>    <span class="cf">while</span> (j &lt; j1 &amp;&amp; inorder[j] != preorder[i0]) {</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>        j++;</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>    TreeNode *root = <span class="kw">new</span> TreeNode(preorder[p0]);</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>    <span class="dt">int</span> i = i0;</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>    <span class="cf">while</span> (i &lt; i1 &amp;&amp; inorder[i] != preorder[p0]) {</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>        i++;</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>    }</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>    <span class="dt">int</span> n_l = j - j0;</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>    root-&gt;left = helper(preorder, i0 + <span class="dv">1</span>, i0 + <span class="dv">1</span> + n_l, inorder, j0, j);</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>    root-&gt;right = helper(preorder, i0 + <span class="dv">1</span> + n_l, i1, inorder, j + <span class="dv">1</span>, j1);</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>    <span class="dt">int</span> n_l = i - i0;</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>    root-&gt;left = helper(preorder, p0 + <span class="dv">1</span>, p0 + <span class="dv">1</span> + n_l, inorder, i0, i);</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>    root-&gt;right = helper(preorder, p0 + <span class="dv">1</span> + n_l, p1, inorder, i + <span class="dv">1</span>, i1);</span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a>    <span class="cf">return</span> root;</span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a>}</span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a></span>
