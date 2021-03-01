@@ -287,6 +287,41 @@ vector<vector<int>> level_order(TreeNode *root) {
 }
 ```
 
+## 103 二叉树的锯齿形层序遍历
+
+```c++
+vector<vector<int>> zigzag_lever_order(TreeNode *root) {
+    vector<vector<int>> result;
+    std::queue<TreeNode *> q;
+    if (root) {
+        q.push(root);
+    }
+    bool is_left = true;
+    while (!q.empty()) {
+        std::deque<int> level;
+        int s = q.size();
+        for (int i = 0; i < s; i++) {
+            auto p = q.front();
+            q.pop();
+            if (is_left) {
+                level.push_back(p->val);
+            } else {
+                level.push_front(p->val);
+            }
+            if (p->left) {
+                q.push(p->left);
+            }
+            if (p->right) {
+                q.push(p->right);
+            }
+        }
+        result.emplace_back(vector<int>{level.begin(), level.end()});
+        is_left = !is_left;
+    }
+    return result;
+}
+```
+
 ## 104 二叉树的最大深度
 
 给定一个二叉树，找出其最大深度。
