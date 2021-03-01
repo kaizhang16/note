@@ -85,6 +85,52 @@ vector<int> in_order(TreeNode *root) {
 }
 ```
 
+## 96 不同的二叉搜索树
+
+给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
+
+### 动态规划
+
+- 时间复杂度：$O(n^2)$
+- 空间复杂度：$O(n)$
+
+以每个数字 $i$ 为根构造二叉搜索树，可得：
+
+$$G(n) = \sum_{i=1}^n G(i-1)G(n-i)$$
+
+```c++
+int num_tree(int n) {
+    vector<int> G(n + 1, 0);
+    G[0] = 1, G[1] = 1;
+    for (int i = 2; i <= n; i++) {
+        for (int j = 0; j < i; j++) {
+            G[i] += G[j] * G[i - j - 1];
+        }
+    }
+    return G[n];
+}
+```
+
+### 数学法
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(1)$
+
+解为卡塔兰数，递推公式为：
+
+$$C_{n+1} = \frac{2(2n+1)}{n+2}C_n$$
+
+```c++
+int num_tree(int n) {
+    long long result = 1;
+    for (int i = 1; i < n; i++) {
+        result *= 2 * (2 * i + 1);
+        result = result / (i + 2);
+    }
+    return (int)result;
+}
+```
+
 ## 98 验证二叉搜索树
 
 给定一个二叉树，判断其是否是一个有效的二叉搜索树。
