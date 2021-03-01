@@ -144,6 +144,68 @@ bool is_bst(TreeNode *root) {
 }
 ```
 
+## 101 对称二叉树
+
+给定一个二叉树，检查它是否是镜像对称的。
+
+### 迭代法
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+bool is_symmetric(TreeNode *root) {
+    std::queue<TreeNode *> q;
+    if (root) {
+        q.push(root->left);
+        q.push(root->right);
+    }
+    while (!q.empty()) {
+        TreeNode *l = q.front();
+        q.pop();
+        TreeNode *r = q.front();
+        q.pop();
+        if (!l && !r) {
+            continue;
+        } else if (!l || !r) {
+            return false;
+        }
+        if (l->val != r->val) {
+            return false;
+        }
+        q.push(l->left);
+        q.push(r->right);
+        q.push(l->right);
+        q.push(r->left);
+    }
+    return true;
+}
+```
+
+### 递归法
+
+- 时间复杂度：$O(n)$
+- 空间复杂度：$O(n)$
+
+```c++
+bool helper(TreeNode *l, TreeNode *r) {
+    if (!l && !r) {
+        return true;
+    } else if (!l || !r) {
+        return false;
+    }
+    if (l->val != r->val) {
+        return false;
+    } else {
+        return helper(l->left, r->right) && helper(l->right, r->left);
+    }
+}
+
+bool is_symmetric(TreeNode *root) {
+    return root ? helper(root->left, root->right) : true;
+}
+```
+
 ## 108 将有序数组转换为二叉搜索树
 
 给你一个整数数组 nums ，其中元素已经按 升序 排列，请你将其转换为一棵 高度平衡 二叉搜索树。
