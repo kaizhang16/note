@@ -631,7 +631,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <guid>https://kaizhang91.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</guid>
       <description>19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 进阶：你能尝试使用一趟扫描实现吗？
-ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &amp;lt; n; i++) {  p1 = p1-&amp;gt;next;  }  while (p1) {  p0 = p0-&amp;gt;next;  p1 = p1-&amp;gt;next;  }  auto next = p0-&amp;gt;next;  p0-&amp;gt;next = next-&amp;gt;next;  delete next;  head = dummy-&amp;gt;next;  delete dummy;  return head; } 148 链表排序 给你链表的头结点 head，请将其按升序排列并返回排序后的链表。</description>
+ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &amp;lt; n; i++) {  p1 = p1-&amp;gt;next;  }  while (p1) {  p0 = p0-&amp;gt;next;  p1 = p1-&amp;gt;next;  }  auto next = p0-&amp;gt;next;  p0-&amp;gt;next = next-&amp;gt;next;  delete next;  head = dummy-&amp;gt;next;  delete dummy;  return head; } 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</description>
     </item>
     
     <item>
