@@ -629,8 +629,9 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</guid>
-      <description>148 链表排序 给你链表的头结点 head，请将其按升序排列并返回排序后的链表。
-自底向上归并排序  时间复杂度：\(O(n\log n)\) 空间复杂度：\(O(1)\)  ListNode *merge(ListNode *h1, ListNode *h2) {  ListNode *dummy_head = new ListNode(0);  ListNode *p = dummy_head;  while (h1 &amp;amp;&amp;amp; h2) {  if (h1-&amp;gt;val &amp;lt;= h2-&amp;gt;val) {  p-&amp;gt;next = h1;  h1 = h1-&amp;gt;next;  } else {  p-&amp;gt;next = h2;  h2 = h2-&amp;gt;next;  }  p = p-&amp;gt;next;  }  if (h1) {  p-&amp;gt;next = h1;  } else if (h2) {  p-&amp;gt;next = h2;  }  auto h = dummy_head-&amp;gt;next;  delete dummy_head;  return h; }  ListNode *sort_list(ListNode *head) {  int n = 0;  ListNode *p = head;  while (p) {  n++;  p = p-&amp;gt;next;  }  ListNode *dummy_head = new ListNode(0, head);  for (int sub_size = 1; sub_size &amp;lt; n; sub_size &amp;lt;&amp;lt;= 1) {  ListNode *p0 = dummy_head;  p = dummy_head-&amp;gt;next;  while (p) {  ListNode *h1 = p;  for (int i = 1; i &amp;lt; sub_size &amp;amp;&amp;amp; p-&amp;gt;next; i++) {  p = p-&amp;gt;next;  }  ListNode *h2 = p-&amp;gt;next;  p-&amp;gt;next = nullptr;  p = h2;  for (int i = 1; i &amp;lt; sub_size &amp;amp;&amp;amp; p-&amp;gt;next; i++) {  p = p-&amp;gt;next;  }  ListNode *p2 = nullptr;  if (p) {  p2 = p-&amp;gt;next;  p-&amp;gt;next = nullptr;  }  p0-&amp;gt;next = merge(h1, h2);  while (p0-&amp;gt;next) {  p0 = p0-&amp;gt;next;  }  p = p2;  }  }  head = dummy_head-&amp;gt;next;  delete dummy_head;  return head; } 206 反转链表 反转一个单链表。</description>
+      <description>19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+进阶：你能尝试使用一趟扫描实现吗？
+ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &amp;lt; n; i++) {  p1 = p1-&amp;gt;next;  }  while (p1) {  p0 = p0-&amp;gt;next;  p1 = p1-&amp;gt;next;  }  auto next = p0-&amp;gt;next;  p0-&amp;gt;next = next-&amp;gt;next;  delete next;  head = dummy-&amp;gt;next;  delete dummy;  return head; } 148 链表排序 给你链表的头结点 head，请将其按升序排列并返回排序后的链表。</description>
     </item>
     
     <item>
