@@ -222,9 +222,9 @@ ListNode *sort_list(ListNode *head) {
 ```c++
 ListNode *reverse_list(ListNode *head) {
     ListNode *p0 = nullptr;
-    ListNode *p1 = head;
+    auto p1 = head;
     while (p1) {
-        ListNode *p2 = p1->next;
+        auto p2 = p1->next;
         p1->next = p0;
         p0 = p1;
         p1 = p2;
