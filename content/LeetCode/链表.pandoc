@@ -144,8 +144,8 @@ ListNode *reverse_k_group(ListNode *head, int k) {
 
 ```c++
 ListNode *merge(ListNode *h1, ListNode *h2) {
-    ListNode *dummy_head = new ListNode(0);
-    ListNode *p = dummy_head;
+    auto dummy = new ListNode(0);
+    auto p = dummy;
     while (h1 && h2) {
         if (h1->val <= h2->val) {
             p->next = h1;
@@ -156,52 +156,48 @@ ListNode *merge(ListNode *h1, ListNode *h2) {
         }
         p = p->next;
     }
-    if (h1) {
-        p->next = h1;
-    } else if (h2) {
-        p->next = h2;
-    }
-    auto h = dummy_head->next;
-    delete dummy_head;
+    p->next = h1 ? h1 : h2;
+    auto h = dummy->next;
+    delete dummy;
     return h;
 }
 
 ListNode *sort_list(ListNode *head) {
     int n = 0;
-    ListNode *p = head;
+    auto p = head;
     while (p) {
         n++;
         p = p->next;
     }
-    ListNode *dummy_head = new ListNode(0, head);
+    auto dummy= new ListNode(0, head);
     for (int sub_size = 1; sub_size < n; sub_size <<= 1) {
-        ListNode *p0 = dummy_head;
-        p = dummy_head->next;
+        auto p0 = dummy;
+        p = dummy->next;
         while (p) {
-            ListNode *h1 = p;
+            auto h1 = p;
             for (int i = 1; i < sub_size && p->next; i++) {
                 p = p->next;
             }
-            ListNode *h2 = p->next;
+            auto h2 = p->next;
             p->next = nullptr;
             p = h2;
-            for (int i = 1; i < sub_size && p->next; i++) {
+            for (int i = 1; i < sub_size && p && p->next; i++) {
                 p = p->next;
             }
-            ListNode *p2 = nullptr;
+            ListNode *p_new = nullptr;
             if (p) {
-                p2 = p->next;
+                p_new = p->next;
                 p->next = nullptr;
             }
             p0->next = merge(h1, h2);
             while (p0->next) {
                 p0 = p0->next;
             }
-            p = p2;
+            p = p_new;
         }
     }
-    head = dummy_head->next;
-    delete dummy_head;
+    head = dummy->next;
+    delete dummy;
     return head;
 }
 ```
