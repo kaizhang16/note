@@ -179,6 +179,26 @@ ListNode *reverse_k_group(ListNode *head, int k) {
 }
 ```
 
+# 83 删除排序链表中的重复元素
+
+给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+
+```c++
+ListNode *rm_duplicate(ListNode *head) {
+    auto p = head;
+    while (p && p->next) {
+        if (p->next->val == p->val) {
+            auto p1 = p->next;
+            p->next = p1->next;
+            delete p1;
+        } else {
+            p = p->next;
+        }
+    }
+    return head;
+}
+```
+
 # 148 链表排序
 
 给你链表的头结点 head，请将其按升序排列并返回排序后的链表。
