@@ -68,3 +68,17 @@ title: "QA"
 # word2vec
 
 ## 负采样怎么操作？
+
+负采样概率：
+
+$$
+\mathrm{len}(w) =
+\frac{\mathrm{count}(w)^{\frac{3}{4}}}{\sum_{u\in\mathrm{vocab}}\mathrm{count}(u)^{\frac{3}{4}}}
+$$ {#eq:word2vec_neg_prob}
+
+# node2vec
+
+## p 和 q 指什么？
+
+- p 指返回参数
+- q 指进出参数
