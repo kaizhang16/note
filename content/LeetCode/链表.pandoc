@@ -199,6 +199,39 @@ ListNode *rm_duplicate(ListNode *head) {
 }
 ```
 
+# 92 反转链表 II
+
+反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
+
+说明:
+1 ≤ m ≤ n ≤ 链表长度。
+
+```c++
+ListNode *reverse_between(ListNode *head, int m, int n) {
+    auto dummy = new ListNode(0);
+    auto p0 = dummy;
+    int i = 1;
+    while (i < m) {
+        i++;
+        p0 = p0->next;
+    }
+    auto pre = p0;
+    auto p1 = p0->next;
+    while (i <= n) {
+        i++;
+        auto p2 = p1->next;
+        p1->next = pre;
+        pre = p1;
+        p1 = p2;
+    }
+    p0->next->next = p1;
+    p0->next = pre;
+    head = dummy->next;
+    delete dummy;
+    return head;
+}
+```
+
 # 148 链表排序
 
 给你链表的头结点 head，请将其按升序排列并返回排序后的链表。
