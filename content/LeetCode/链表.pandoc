@@ -449,3 +449,48 @@ ListNode *reverse_list(ListNode *head) {
     return p0;
 }
 ```
+
+# 234 回文链表
+
+请判断一个链表是否为回文链表。
+
+```c++
+ListNode *reverse(ListNode *head) {
+    ListNode *p0 = nullptr;
+    auto p1 = head;
+    while (p1) {
+        auto p2 = p1->next;
+        p1->next = p0;
+        p0 = p1;
+        p1 = p2;
+    }
+    return p0;
+}
+
+bool is_palindrome(ListNode *head) {
+    auto s = head;
+    auto f = head;
+    while (f && f->next) {
+        f = f->next->next;
+        s = s->next;
+    }
+    if (f) {
+        s = s->next;
+    }
+    auto tail = reverse(s);
+    auto l = head;
+    auto r = tail;
+    bool result = true;
+    while (r) {
+        if (r->val != l->val) {
+            result = false;
+            break;
+        } else {
+            r = r->next;
+            l = l->next;
+        }
+    }
+    reverse(tail);
+    return result;
+}
+```
