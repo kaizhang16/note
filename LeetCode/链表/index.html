@@ -18,7 +18,7 @@ ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0,
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.1bbb8337d2c90c9cae5987c6dd0c41f607b8bc88d0471b134d062b816a443875.js" integrity="sha256-G7uDN9LJDJyuWYfG3QxB9ge4vIjQRxsTTQYrgWpEOHU="></script>
+<script defer src="/note/cn.search.min.45e7bc7cd04a86423949d9c31c757e1d55792059f91128ca63d3bee5e4eb9810.js" integrity="sha256-Ree8fNBKhkI5SdnDHHV&#43;HVV5IFn5ESjKY9O&#43;5eTrmBA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1456,6 +1456,46 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true"></a>    }</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true"></a>    <span class="cf">return</span> p0;</span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true"></a>}</span></code></pre></div>
+<h1 id="回文链表">234 回文链表</h1>
+<p>请判断一个链表是否为回文链表。</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>ListNode *reverse(ListNode *head) {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>    ListNode *p0 = <span class="kw">nullptr</span>;</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head;</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a>    <span class="cf">while</span> (p1) {</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>        <span class="kw">auto</span> p2 = p1-&gt;next;</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a>        p1-&gt;next = p0;</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true"></a>        p0 = p1;</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true"></a>        p1 = p2;</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true"></a>    }</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true"></a>    <span class="cf">return</span> p0;</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true"></a>}</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true"></a><span class="dt">bool</span> is_palindrome(ListNode *head) {</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true"></a>    <span class="kw">auto</span> s = head;</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true"></a>    <span class="kw">auto</span> f = head;</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true"></a>    <span class="cf">while</span> (f &amp;&amp; f-&gt;next) {</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true"></a>        f = f-&gt;next-&gt;next;</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true"></a>        s = s-&gt;next;</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true"></a>    }</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true"></a>    <span class="cf">if</span> (f) {</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true"></a>        s = s-&gt;next;</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true"></a>    }</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true"></a>    <span class="kw">auto</span> tail = reverse(s);</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true"></a>    <span class="kw">auto</span> l = head;</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true"></a>    <span class="kw">auto</span> r = tail;</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true"></a>    <span class="dt">bool</span> result = <span class="kw">true</span>;</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true"></a>    <span class="cf">while</span> (r) {</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true"></a>        <span class="cf">if</span> (r-&gt;val != l-&gt;val) {</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true"></a>            result = <span class="kw">false</span>;</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true"></a>            <span class="cf">break</span>;</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true"></a>            r = r-&gt;next;</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true"></a>            l = l-&gt;next;</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true"></a>        }</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true"></a>    }</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true"></a>    reverse(tail);</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1479,6 +1519,7 @@ https://github.com/alex-shpak/hugo-book
   </ul></li>
   <li><a href="#相交链表">160 相交链表</a></li>
   <li><a href="#反转链表">206 反转链表</a></li>
+  <li><a href="#回文链表">234 回文链表</a></li>
   </ul>
 </nav>
 </article>
