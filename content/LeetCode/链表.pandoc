@@ -494,3 +494,56 @@ bool is_palindrome(ListNode *head) {
     return result;
 }
 ```
+
+# 382 链表随机节点
+
+给定一个单链表，随机选择链表的一个节点，并返回相应的节点值。保证每个节点被选的概
+率一样。
+
+进阶：如果链表十分大且长度未知，如何解决这个问题？你能否使用常数级空间复杂度实
+现？
+
+## 蓄水池抽样算法
+
+如何从未知大小的数据流中随机选取 k 个样本（保证每个样本被抽取到的概率相等）？
+
+- $i <= k$ 时，直接保留，形成临时结果 $[x_1, x_2, \cdots, x_k]$
+- $i > k$ 时，以 $\frac{k}{i}$ 的概率保留样本，并随机替换临时结果里的样本
+
+那么，第 $i$ 个样本被抽取的概率为：
+
+$$
+\begin{align}
+P(i) &= \frac{k}{i}\times (1 -
+\frac{k}{i+1}\times\frac{1}{k})\times(1-\frac{k}{i+2}\times\frac{1}{k})\times\cdots\times(1 -
+\frac{k}{n}\times\frac{1}{k}) \\
+&= \frac{k}{i}\times\frac{i}{i+1}\times\frac{i+1}{i+2}\times\cdots\times\frac{n-1}{n} \\
+&= \frac{k}{n}
+\end{align}
+$$ {#eq:reservoir_sample_prob}
+
+```c++
+class Solution {
+  private:
+    ListNode *head;
+
+  public:
+    Solution(ListNode *head) : head{head} {}
+    int get_random();
+}
+
+int Solution::get_random() {
+    auto p = head;
+    int i = 1;
+    int result = 0;
+    while (p) {
+        int j = rand() % i;
+        if (j == 0) {
+            result = p->val;
+        }
+        i++;
+        p = p->next;
+    }
+    return result;
+}
+```
