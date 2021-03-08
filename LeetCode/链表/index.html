@@ -18,7 +18,7 @@ ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0,
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.45e7bc7cd04a86423949d9c31c757e1d55792059f91128ca63d3bee5e4eb9810.js" integrity="sha256-Ree8fNBKhkI5SdnDHHV&#43;HVV5IFn5ESjKY9O&#43;5eTrmBA="></script>
+<script defer src="/note/cn.search.min.3709a63759874071207785d667c46e4234383076159086d08b5a3e156eb0e25e.js" integrity="sha256-NwmmN1mHQHEgd4XWZ8RuQjQ4MHYVkIbQi1o&#43;FW6w4l4="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1496,6 +1496,48 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb14-36"><a href="#cb14-36" aria-hidden="true"></a>    reverse(tail);</span>
 <span id="cb14-37"><a href="#cb14-37" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
 <span id="cb14-38"><a href="#cb14-38" aria-hidden="true"></a>}</span></code></pre></div>
+<h1 id="链表随机节点">382 链表随机节点</h1>
+<p>给定一个单链表，随机选择链表的一个节点，并返回相应的节点值。保证每个节点被选的概率一样。</p>
+<p>进阶：如果链表十分大且长度未知，如何解决这个问题？你能否使用常数级空间复杂度实现？</p>
+<h2 id="蓄水池抽样算法">蓄水池抽样算法</h2>
+<p>如何从未知大小的数据流中随机选取 k 个样本（保证每个样本被抽取到的概率相等）？</p>
+<ul>
+<li><span class="math inline">\(i &lt;= k\)</span> 时，直接保留，形成临时结果 <span class="math inline">\([x_1, x_2, \cdots, x_k]\)</span></li>
+<li><span class="math inline">\(i &gt; k\)</span> 时，以 <span class="math inline">\(\frac{k}{i}\)</span> 的概率保留样本，并随机替换临时结果里的样本</li>
+</ul>
+<p>那么，第 <span class="math inline">\(i\)</span> 个样本被抽取的概率为：</p>
+<p><span id="eq:reservoir_sample_prob"><span class="math display">\[
+\begin{align}
+P(i) &amp;= \frac{k}{i}\times (1 -
+\frac{k}{i+1}\times\frac{1}{k})\times(1-\frac{k}{i+2}\times\frac{1}{k})\times\cdots\times(1 -
+\frac{k}{n}\times\frac{1}{k}) \\
+&amp;= \frac{k}{i}\times\frac{i}{i+1}\times\frac{i+1}{i+2}\times\cdots\times\frac{n-1}{n} \\
+&amp;= \frac{k}{n}
+\end{align}
+\qquad(1)\]</span></span></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="kw">class</span> Solution {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a>  <span class="kw">private</span>:</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>    ListNode *head;</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a>    Solution(ListNode *head) : head{head} {}</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a>    <span class="dt">int</span> get_random();</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a>}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a><span class="dt">int</span> Solution::get_random() {</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a>    <span class="kw">auto</span> p = head;</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a>    <span class="dt">int</span> i = <span class="dv">1</span>;</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a>    <span class="dt">int</span> result = <span class="dv">0</span>;</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a>    <span class="cf">while</span> (p) {</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a>        <span class="dt">int</span> j = rand() % i;</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a>        <span class="cf">if</span> (j == <span class="dv">0</span>) {</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a>            result = p-&gt;val;</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a>        }</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a>        i++;</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true"></a>        p = p-&gt;next;</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true"></a>    }</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1520,6 +1562,10 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#相交链表">160 相交链表</a></li>
   <li><a href="#反转链表">206 反转链表</a></li>
   <li><a href="#回文链表">234 回文链表</a></li>
+  <li><a href="#链表随机节点">382 链表随机节点</a>
+  <ul>
+  <li><a href="#蓄水池抽样算法">蓄水池抽样算法</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
