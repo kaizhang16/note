@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     中位数 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
+<meta name="description" content="采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
 \[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]
-在信息检索领域这样定义[3]：">
+在信息检索领域这样定义[3]：
+\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="机器学习" />
-<meta property="og:description" content="采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     中位数 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
+<meta property="og:description" content="采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
 \[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]
-在信息检索领域这样定义[3]：" />
+在信息检索领域这样定义[3]：
+\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
 
@@ -18,7 +20,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.4bb37eb6f42961ed25bbeda2999b64043529244345a4fb0c3b66c93f1c526187.js" integrity="sha256-S7N&#43;tvQpYe0lu&#43;2imZtkBDUpJENFpPsMO2bJPxxSYYc="></script>
+<script defer src="/note/cn.search.min.56c2ce1684193115cfd35b05136301457c672fb5afcc70c44a4884c0dde3b353.js" integrity="sha256-VsLOFoQZMRXP01sFE2MBRXxnL7WvzHDESkiEwN3js1M="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1125,7 +1127,6 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="中位数">中位数</h1>
 <h1 id="评估指标">评估指标</h1>
 <div id="tbl:confusion_matrix">
 <table>
@@ -1443,7 +1444,6 @@ L(y, F) =
   <h2 id="toc-title">目录</h2>
   <ul>
   <li><a href="#采样wiki_sampling">采样<span class="citation" data-cites="wiki_sampling"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#中位数">中位数</a></li>
   <li><a href="#评估指标">评估指标</a>
   <ul>
   <li><a href="#精确率precision">精确率（Precision）</a>

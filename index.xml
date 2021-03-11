@@ -479,9 +479,10 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
-      <description>采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     中位数 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
+      <description>采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
 \[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
-在信息检索领域这样定义[3]：</description>
+在信息检索领域这样定义[3]：
+\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]</description>
     </item>
     
     <item>
