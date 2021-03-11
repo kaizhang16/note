@@ -11,8 +11,6 @@ title: "机器学习"
 
 : 是否放回的区别 {#tbl:sample_replacement}
 
-# 中位数
-
 # 评估指标
 
 |               | 实际 Positive                         | 实际 Negative                        |
