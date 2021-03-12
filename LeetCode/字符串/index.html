@@ -4,19 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
-赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
- [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
-  目录  语法  变量  表示 赋值   find   ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="fish-shell" />
-<meta property="og:description" content="语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
-赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
- [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
-  目录  语法  变量  表示 赋值   find   " />
+<meta name="description" content="647 回文子串 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
+具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
+中心扩展  时间复杂度：\(O(n^2)\) 空间复杂度：\(O(1)\)  void helper(string s, int l, int r, int &amp;result) {  while (l &gt;= 0 &amp;&amp; r &lt; s.size() &amp;&amp; s[l] == s[r]) {  result&#43;&#43;;  l--;  r&#43;&#43;;  } }  int count_substring(string s) {  int result = 0;  for (int i = 0; i &lt; s.size(); i&#43;&#43;) {  helper(s, i, i, result);  helper(s, i, i &#43; 1, result);  }  return result; } 目录  647 回文子串  中心扩展    ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="字符串" />
+<meta property="og:description" content="647 回文子串 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
+具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
+中心扩展  时间复杂度：\(O(n^2)\) 空间复杂度：\(O(1)\)  void helper(string s, int l, int r, int &amp;result) {  while (l &gt;= 0 &amp;&amp; r &lt; s.size() &amp;&amp; s[l] == s[r]) {  result&#43;&#43;;  l--;  r&#43;&#43;;  } }  int count_substring(string s) {  int result = 0;  for (int i = 0; i &lt; s.size(); i&#43;&#43;) {  helper(s, i, i, result);  helper(s, i, i &#43; 1, result);  }  return result; } 目录  647 回文子串  中心扩展    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" />
+<meta property="og:url" content="https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/" />
 
-<title>fish-shell | 凯的笔记</title>
+<title>字符串 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
@@ -360,7 +358,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-817f67a0d4c538392ea74ac855517ffe" class="toggle"  />
+    <input type="checkbox" id="section-817f67a0d4c538392ea74ac855517ffe" class="toggle" checked />
     <label for="section-817f67a0d4c538392ea74ac855517ffe" class="flex justify-between">
       <a  class="">LeetCode</a>
       <span>▾</span>
@@ -390,7 +388,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="">字符串</a>
+    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class=" active">字符串</a>
   
 
         </li>
@@ -760,7 +758,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle" checked />
+    <input type="checkbox" id="section-49cd3dd12728d4fd4ae01f7800801d13" class="toggle"  />
     <label for="section-49cd3dd12728d4fd4ae01f7800801d13" class="flex justify-between">
       <a  class="">编程</a>
       <span>▾</span>
@@ -829,7 +827,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" class=" active">fish-shell</a>
+    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" class="">fish-shell</a>
   
 
         </li>
@@ -1092,7 +1090,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>fish-shell</strong>
+  <strong>字符串</strong>
 
   <label for="toc-control">
     
@@ -1115,35 +1113,38 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="语法">语法</h1>
-<h2 id="变量">变量</h2>
-<h3 id="表示">表示</h3>
-<p>用 <code>{$WORD}s</code> 将变量与文本区分开。</p>
-<h3 id="赋值">赋值</h3>
-<pre class="fish"><code>set a b</code></pre>
-<h1 id="find">find</h1>
-<pre class="fish"><code>find . -type f -exec echo &#39;{}&#39; \;</code></pre>
-<blockquote>
-<p>括号需要加引号<span class="citation" data-cites="fish_find_exec"><sup>[<a href="#ref-fish_find_exec" role="doc-biblioref">1</a>]</sup></span>。</p>
-</blockquote>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-fish_find_exec">
-<p>[1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). <a href="https://unix.stackexchange.com/a/301232">https://unix.stackexchange.com/a/301232</a>.</p>
-</div>
-</div>
+  <article class="markdown"><h1 id="回文子串">647 回文子串</h1>
+<p>给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。</p>
+<p>具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。</p>
+<h2 id="中心扩展">中心扩展</h2>
+<ul>
+<li>时间复杂度：<span class="math inline">\(O(n^2)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">void</span> helper(string s, <span class="dt">int</span> l, <span class="dt">int</span> r, <span class="dt">int</span> &amp;result) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="cf">while</span> (l &gt;= <span class="dv">0</span> &amp;&amp; r &lt; s.size() &amp;&amp; s[l] == s[r]) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>        result++;</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>        l--;</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        r++;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>}</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a><span class="dt">int</span> count_substring(string s) {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>    <span class="dt">int</span> result = <span class="dv">0</span>;</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; s.size(); i++) {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>        helper(s, i, i, result);</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>        helper(s, i, i + <span class="dv">1</span>, result);</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#语法">语法</a>
+  <li><a href="#回文子串">647 回文子串</a>
   <ul>
-  <li><a href="#变量">变量</a>
-  <ul>
-  <li><a href="#表示">表示</a></li>
-  <li><a href="#赋值">赋值</a></li>
+  <li><a href="#中心扩展">中心扩展</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#find">find</a></li>
   </ul>
 </nav>
 </article>

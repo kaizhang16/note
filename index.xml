@@ -375,6 +375,17 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     </item>
     
     <item>
+      <title>字符串</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>647 回文子串 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
+具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
+中心扩展  时间复杂度：\(O(n^2)\) 空间复杂度：\(O(1)\)  void helper(string s, int l, int r, int &amp;amp;result) {  while (l &amp;gt;= 0 &amp;amp;&amp;amp; r &amp;lt; s.size() &amp;amp;&amp;amp; s[l] == s[r]) {  result++;  l--;  r++;  } }  int count_substring(string s) {  int result = 0;  for (int i = 0; i &amp;lt; s.size(); i++) {  helper(s, i, i, result);  helper(s, i, i + 1, result);  }  return result; } 目录  647 回文子串  中心扩展    </description>
+    </item>
+    
+    <item>
       <title>安全</title>
       <link>https://kaizhang91.github.io/note/CS/security/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
