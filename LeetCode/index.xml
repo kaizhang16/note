@@ -65,8 +65,11 @@
       
       <guid>https://kaizhang91.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
       <description>在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1]  图 1: x + y + z &amp;lt; 1 所占空间  如图. 1 所示，四面体所占体积为 \(\frac{1}{3}\times\frac{1}{2}\times 1\times 1\times 1 = \frac{1}{6}\)。
-参考文献 [1] JIAN0929. 在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[EB/OL](2018–08–25). https://www.nowcoder.com/questionTerminal/a68163ca4e824539b38c14ab357293b1.
-  目录  在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1] 参考文献   </description>
+不同样本个数的期望[2] 有 10000 个电影，用户刷新页面时随机返回 1 个电影；用户刷新 1000 次，看到不同的电影个数的期望是多少？
+记随机变量 \(I_i\)，表示电影 \(i\) 是否出现，即：
+\[ I_i = \begin{cases} 1, &amp;amp;\text{如果电影 } i \text{ 出现} \\ 0, &amp;amp;\text{如果电影 } i \text{ 没有出现} \end{cases} \qquad(1)\]
+则不同电影个数的期望为：
+\[ \begin{align} E\left(\sum_{i=1}^{10000}I_i\right) &amp;amp;= \sum_{i=1}^{10000} E(I_i) \\ &amp;amp;= \sum_{i=1}^{10000}P(I_i=1) \\ &amp;amp;= 10000\times\left(1 - \left(\frac{9999}{10000}\right)^{1000}\right) \\ &amp;amp;\approx 951.</description>
     </item>
     
     <item>
