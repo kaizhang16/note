@@ -71,6 +71,10 @@ title: "QA"
 - XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代
   价小，能并行计算
 
+# GBDT + LR 比 GBDT 好在哪里？
+
+LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。
+
 # Embedding 效果怎么评估？
 
 - 相似关系：看看空间距离近的词，跟人的直觉是否一致
