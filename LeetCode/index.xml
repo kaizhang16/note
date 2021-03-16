@@ -17,6 +17,17 @@
     </item>
     
     <item>
+      <title>回溯</title>
+      <link>https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</guid>
+      <description>17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m + n)\)  void backtrack(string &amp;amp;digits, int i,  std::unordered_map&amp;lt;char, string&amp;gt; &amp;amp;digit2str, string &amp;amp;combination,  vector&amp;lt;string&amp;gt; &amp;amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i + 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&amp;lt;string&amp;gt; letter_combination(string digits) {  vector&amp;lt;string&amp;gt; result;  if (digits.</description>
+    </item>
+    
+    <item>
       <title>字符串</title>
       <link>https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

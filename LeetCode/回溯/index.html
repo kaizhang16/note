@@ -4,31 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
- LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
-Forget gate:
-\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
-Input gate:
-\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] &#43; b_i) \qquad(2)\]
-Cell state:
-\[ \begin{align} \tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] &#43; b_C) \\ C_t &amp;= f_t \odot C_{t-1} &#43; i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
-Output:
-\[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="LSTM 与 GRU" />
-<meta property="og:description" content="请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
- LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
-Forget gate:
-\[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] &#43; b_f) \qquad(1)\]
-Input gate:
-\[ i_t = \sigma(W_i \cdot [h_{t-1}, x_t] &#43; b_i) \qquad(2)\]
-Cell state:
-\[ \begin{align} \tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] &#43; b_C) \\ C_t &amp;= f_t \odot C_{t-1} &#43; i_t \odot \tilde{C}_t \end{align} \qquad(3)\]
-Output:
-\[ \begin{align} o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] &#43; b_o) \\ h_t &amp;= o_t \odot \tanh(C_t) \end{align} \qquad(4)\]" />
+<meta name="description" content="17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="回溯" />
+<meta property="og:description" content="17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" />
-<meta property="article:modified_time" content="2020-11-07T15:13:44+00:00" />
-<title>LSTM 与 GRU | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" />
+
+<title>回溯 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
@@ -372,7 +358,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-817f67a0d4c538392ea74ac855517ffe" class="toggle"  />
+    <input type="checkbox" id="section-817f67a0d4c538392ea74ac855517ffe" class="toggle" checked />
     <label for="section-817f67a0d4c538392ea74ac855517ffe" class="flex justify-between">
       <a  class="">LeetCode</a>
       <span>▾</span>
@@ -402,7 +388,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" class="">回溯</a>
+    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" class=" active">回溯</a>
   
 
         </li>
@@ -498,7 +484,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-9bfe21a0187b525fe1f8c33e218fae99" class="toggle" checked />
+    <input type="checkbox" id="section-9bfe21a0187b525fe1f8c33e218fae99" class="toggle"  />
     <label for="section-9bfe21a0187b525fe1f8c33e218fae99" class="flex justify-between">
       <a  class="">NLP</a>
       <span>▾</span>
@@ -528,7 +514,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" class=" active">LSTM 与 GRU</a>
+    <a href="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" class="">LSTM 与 GRU</a>
   
 
         </li>
@@ -1117,7 +1103,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>LSTM 与 GRU</strong>
+  <strong>回溯</strong>
 
   <label for="toc-control">
     
@@ -1140,61 +1126,49 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><blockquote>
-<p>请参考 <a href="https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21" class="uri">https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21</a>。</p>
-</blockquote>
-<h2 id="lstm">LSTM</h2>
-<p>请参考 <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/" class="uri">https://colah.github.io/posts/2015-08-Understanding-LSTMs/</a>。</p>
-<p>Forget gate:</p>
-<p><span id="eq:lstm_forget_gate"><span class="math display">\[
-f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)
-\qquad(1)\]</span></span></p>
-<p>Input gate:</p>
-<p><span id="eq:lstm_input_gate"><span class="math display">\[
-i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i)
-\qquad(2)\]</span></span></p>
-<p>Cell state:</p>
-<p><span id="eq:lstm_C"><span class="math display">\[
-\begin{align}
-\tilde{C}_t &amp;= \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \\
-C_t &amp;= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
-\end{align}
-\qquad(3)\]</span></span></p>
-<p>Output:</p>
-<p><span id="eq:lstm_output"><span class="math display">\[
-\begin{align}
-o_t &amp;= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
-h_t &amp;= o_t \odot \tanh(C_t)
-\end{align}
-\qquad(4)\]</span></span></p>
-<h2 id="grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<a href="#ref-cho2014learning" role="doc-biblioref">1</a>,<a href="#ref-zhou2019deep" role="doc-biblioref">2</a>]</sup></span></h2>
-<p>Reset Gate:</p>
-<p><span id="eq:gru_reset_gate"><span class="math display">\[\v{r}_t = \sigma(\m{W}^r\v{x}_t + \m{U}^r\v{h}_{t-1} + \v{b}^r)\qquad(5)\]</span></span></p>
-<p>Update Gate:</p>
-<p><span id="eq:gru_update_gate"><span class="math display">\[\v{u}_t = \sigma(\m{W}^u\v{x}_t + \m{U}^u\v{h}_{t-1} + \v{b}^u)\qquad(6)\]</span></span></p>
-<p>Output:</p>
-<p><span id="eq:gru"><span class="math display">\[
-\begin{align}
-\tilde{\v{h}}_t &amp;= \tanh(\m{W}^h\v{x}_t + \v{r}_t \odot \m{U}^h_{t-1}\v{h}_{t-1} + \v{b}^h) \\
-\v{h}_t &amp;= \v{u}_t \odot \tilde{h}_t + (1-\v{u}_t) \odot \v{h}_{t-1}
-\end{align}
-\qquad(7)\]</span></span></p>
-<h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-cho2014learning">
-<p>[1] CHO K, VAN MERRIËNBOER B, GULCEHRE C, 等. Learning phrase representations using RNN encoder-decoder for statistical machine translation[J]. arXiv preprint arXiv:1406.1078, 2014.</p>
-</div>
-<div id="ref-zhou2019deep">
-<p>[2] ZHOU G, MOU N, FAN Y, 等. Deep interest evolution network for click-through rate prediction[C]//Proceedings of the AAAI conference on artificial intelligence..</p>
-</div>
-</div>
+  <article class="markdown"><h1 id="电话号码的字母组合">17 电话号码的字母组合</h1>
+<p>给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。</p>
+<p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。</p>
+<h2 id="回溯">回溯</h2>
+<ul>
+<li>时间复杂度：<span class="math inline">\(O(3^m\times 4^n)\)</span></li>
+<li>空间复杂度：<span class="math inline">\(O(m + n)\)</span></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">void</span> backtrack(string &amp;digits, <span class="dt">int</span> i,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>               <span class="bu">std::</span>unordered_map&lt;<span class="dt">char</span>, string&gt; &amp;digit2str, string &amp;combination,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>               vector&lt;string&gt; &amp;result) {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="cf">if</span> (i == digits.size()) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        result.push_back(combination);</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : digit2str[digits[i]]) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>            combination.push_back(c);</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>            backtrack(digits, i + <span class="dv">1</span>, digit2str, combination, result);</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>            combination.pop_back();</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>        }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    }</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>vector&lt;string&gt; letter_combination(string digits) {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    vector&lt;string&gt; result;</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>    <span class="cf">if</span> (digits.empty()) {</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>        <span class="cf">return</span> result;</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>    }</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>    <span class="bu">std::</span>unordered_map&lt;<span class="dt">char</span>, string&gt; digit2str{</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>        {<span class="ch">&#39;2&#39;</span>, <span class="st">&quot;abc&quot;</span>}, {<span class="ch">&#39;3&#39;</span>, <span class="st">&quot;def&quot;</span>},  {<span class="ch">&#39;4&#39;</span>, <span class="st">&quot;ghi&quot;</span>}, {<span class="ch">&#39;5&#39;</span>, <span class="st">&quot;jkl&quot;</span>},</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>        {<span class="ch">&#39;6&#39;</span>, <span class="st">&quot;mno&quot;</span>}, {<span class="ch">&#39;7&#39;</span>, <span class="st">&quot;pqrs&quot;</span>}, {<span class="ch">&#39;8&#39;</span>, <span class="st">&quot;tuv&quot;</span>}, {<span class="ch">&#39;9&#39;</span>, <span class="st">&quot;wxyz&quot;</span>}</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>    };</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>    string combination;</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>    backtrack(digits, <span class="dv">0</span>, digit2str, combination, result);</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a>}</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#lstm">LSTM</a></li>
-  <li><a href="#grucho2014learning-zhou2019deep">GRU<span class="citation" data-cites="cho2014learning zhou2019deep"><sup>[<span>1</span>,<span>2</span>]</sup></span></a></li>
-  <li><a href="#参考文献">参考文献</a></li>
+  <li><a href="#电话号码的字母组合">17 电话号码的字母组合</a>
+  <ul>
+  <li><a href="#回溯">回溯</a></li>
+  </ul></li>
   </ul>
 </nav>
 </article>
@@ -1206,12 +1180,6 @@ h_t &amp;= o_t \odot \tanh(C_t)
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/926910d9cd7a6964bd75d942bafcaf06c78c7357" title='最后修改者 Kai Zhang | 2020-11-07 23:13:44 &#43;0800' target="_blank" rel="noopener">
-      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-11-07 23:13:44 &#43;0800</span>
-    </a>
-  </div>
 
 
 
