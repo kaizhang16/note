@@ -1,0 +1,44 @@
+---
+title: "回溯"
+---
+
+# 17 电话号码的字母组合
+
+给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+
+给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
+
+## 回溯
+
+- 时间复杂度：$O(3^m\times 4^n)$
+- 空间复杂度：$O(m + n)$
+
+```c++
+void backtrack(string &digits, int i,
+               std::unordered_map<char, string> &digit2str, string &combination,
+               vector<string> &result) {
+    if (i == digits.size()) {
+        result.push_back(combination);
+    } else {
+        for (auto c : digit2str[digits[i]]) {
+            combination.push_back(c);
+            backtrack(digits, i + 1, digit2str, combination, result);
+            combination.pop_back();
+        }
+    }
+}
+
+vector<string> letter_combination(string digits) {
+    vector<string> result;
+    if (digits.empty()) {
+        return result;
+    }
+    std::unordered_map<char, string> digit2str{
+        {'2', "abc"}, {'3', "def"},  {'4', "ghi"}, {'5', "jkl"},
+        {'6', "mno"}, {'7', "pqrs"}, {'8', "tuv"}, {'9', "wxyz"}
+    };
+    string combination;
+    backtrack(digits, 0, digit2str, combination, result);
+    return result;
+}
+```
