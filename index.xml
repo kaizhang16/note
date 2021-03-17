@@ -351,8 +351,11 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-      <description>一维 123 买卖股票的最佳时机 III 给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。设计一个算法来计算你所能获取的最大利润。你最多可以完成两笔交易。注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
- 时间复杂度：\(O(n)\) 空间复杂度：\(O(K)\)  int max_profit(vector&amp;lt;int&amp;gt; &amp;amp;prices) {  int K = 2;  // dp[j][0]: 卖出 j 次的最大利润  // dp[j][1]: 买入 j 次的最大利润  int dp[K + 1][2];  for (int j = 0; j &amp;lt;= K; j++) {  dp[j][0] = 0;  dp[j][1] = INT_MIN;  }  for (auto price : prices) {  for (int j = 1; j &amp;lt;= K; j++) {  dp[j][0] = std::max(dp[j][0], dp[j][1] + price);  dp[j][1] = std::max(dp[j][1], dp[j - 1][0] - price);  }  }  return dp[K][0]; } 二维 44 通配符匹配 给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 ?</description>
+      <description>一维 91 解码方法 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ：
+&amp;#39;A&amp;#39; -&amp;gt; 1 &amp;#39;B&amp;#39; -&amp;gt; 2 ... &amp;#39;Z&amp;#39; -&amp;gt; 26 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。例如，“111” 可以将 “1” 中的每个 “1” 映射为 “A” ，从而得到 “AAA” ，或者可以将 “11” 和 “1”（分别为 “K” 和 “A” ）映射为 “KA” 。注意，“06” 不能映射为 “F” ，因为 “6” 和 “06” 不同。
+给你一个只含数字的 非空 字符串 num ，请计算并返回 解码 方法的 总数 。
+题目数据保证答案肯定是一个 32 位 的整数。
+动态规划 int num_decode(string s) {  int n = s.size();  if (n == 0) {  return 0;  }  // dp[i]: num_decode(s[:i])  vector&amp;lt;int&amp;gt; dp(n + 1, 0);  dp[0] = 1;  dp[1] = (s[0] - &amp;#39;0&amp;#39; == 0 ?</description>
     </item>
     
     <item>
