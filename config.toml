@@ -1,4 +1,4 @@
-baseURL = "https://kaizhang91.github.io/note/"
+baseURL = "https://kaizhang16.github.io/note/"
 DefaultContentLanguage = "cn"
 languageCode = "zh-Hans"
 title = "凯的笔记"
@@ -8,7 +8,7 @@ enableGitInfo = true
 disablePathToLower = true
 
 [params]
-  BookRepo = "https://github.com/kaizhang91/note"
+  BookRepo = "https://github.com/kaizhang16/note"
   BookSection = "*"
   BookTheme = "dark"
   BookDateFormat = "2006-01-02 15:04:05 -0700"
