@@ -113,8 +113,6 @@ bool is_match(string s, string p) {
             } else if (p[j - 1] == '?' || s[i - 1] == p[j - 1]) {
                 dp[i][j] = dp[i - 1][j - 1];
             }
-            // fmt::print("s: {}, p: {}, dp[{}][{}]: {}\n", s, p, i, j,
-            // dp[i][j]);
         }
     }
     return dp[m][n];
