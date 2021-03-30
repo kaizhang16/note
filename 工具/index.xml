@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on 凯的笔记</title>
-    <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-Hans</language><atom:link href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/git/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/git/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/</guid>
       <description>常见操作 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.</description>
     </item>
     
     <item>
       <title>iPad</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</guid>
       <description>多任务 分屏 如何调整分屏浏览[1]：
  要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.
   目录  多任务  分屏  参考文献   </description>
@@ -28,29 +28,29 @@
     
     <item>
       <title>Linux</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</guid>
       <description>窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     i3lockr https://github.com/owenthewizard/i3lockr
 手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
       <description>常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     Scoop 安装 iwr -useb get.scoop.sh | iex 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  Adobe Acrobat Pro DC 2019 请参考 https://www.</description>
     </item>
     
     <item>
       <title>Word</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Word/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Word/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Word/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Word/</guid>
       <description>参考文献相关操作 合并连续引用 请参考 https://hzfans.github.io/2018/06/10/2018-6-10%20Word%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%A4%9A%E9%A1%B9%E5%BC%95%E7%94%A8/。
 对齐列表 在任一编号上右键单击 -&amp;gt; 调整列表缩进：
  文本缩进位置可以调大一点，比如 0.9 厘米 点击更多：  编号之后，选制表符 选中制表符添加位置，写与文本缩进位置相同的值，本例中为 0.9 厘米   插入引用 请参考 https://jingyan.baidu.com/article/cd4c2979113a05756f6e6047.html。
@@ -70,10 +70,10 @@
     
     <item>
       <title>写作</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/writing/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/writing/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/</guid>
       <description>Pandoc 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 打印默认模板 pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
 MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.</description>
@@ -81,10 +81,10 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>搜索</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/search/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/search/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/</guid>
       <description>搜索命令 navi 安装 NAVI_VERSION=2.4.1 curl -LO &amp;quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&amp;quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 使用 Ctrl-g。
 搜索目录 zoxide 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.
   目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   </description>
@@ -92,47 +92,47 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
     
     <item>
       <title>文献管理</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</guid>
       <description>Zotero 安装 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
 Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github.</description>
     </item>
     
     <item>
       <title>格式</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/format/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/format/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/format/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/format/</guid>
       <description>json2toml pip3 install --user remarshal 目录  json2toml   </description>
     </item>
     
     <item>
       <title>浏览器</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/browser/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/browser/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</guid>
       <description>Firefox Tridactyl 设置 主题 : set theme dark 搜索 : unbind &amp;lt;C-f&amp;gt; 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  Firefox  Tridactyl  设置 快捷键     </description>
     </item>
     
     <item>
       <title>编辑器</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
       <description>Visual Studio Code 插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.code-spell-checker 拼写检查   stkb.rewrap 断行   llvm-vs-code-extensions.vscode-clangd C、C++   ms-vscode.cmake-tools cmake     快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    Vim 包管理器 安装 curl -fLo ~/.</description>
     </item>
     
     <item>
       <title>项目管理</title>
-      <link>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</guid>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</guid>
       <description>confluence 新建子页面 创建页面 -&amp;gt; 创建页面。
 目录  confluence  新建子页面    </description>
     </item>

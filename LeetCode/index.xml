@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LeetCode on 凯的笔记</title>
-    <link>https://kaizhang91.github.io/note/LeetCode/</link>
+    <link>https://kaizhang16.github.io/note/LeetCode/</link>
     <description>Recent content in LeetCode on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/LeetCode/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-Hans</language><atom:link href="https://kaizhang16.github.io/note/LeetCode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>动态规划</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
       <description>一维 91 解码方法 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ：
 &amp;#39;A&amp;#39; -&amp;gt; 1 &amp;#39;B&amp;#39; -&amp;gt; 2 ... &amp;#39;Z&amp;#39; -&amp;gt; 26 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。例如，“111” 可以将 “1” 中的每个 “1” 映射为 “A” ，从而得到 “AAA” ，或者可以将 “11” 和 “1”（分别为 “K” 和 “A” ）映射为 “KA” 。注意，“06” 不能映射为 “F” ，因为 “6” 和 “06” 不同。
 给你一个只含数字的 非空 字符串 num ，请计算并返回 解码 方法的 总数 。
@@ -21,10 +21,10 @@
     
     <item>
       <title>回溯</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</guid>
       <description>17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m + n)\)  void backtrack(string &amp;amp;digits, int i,  std::unordered_map&amp;lt;char, string&amp;gt; &amp;amp;digit2str, string &amp;amp;combination,  vector&amp;lt;string&amp;gt; &amp;amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i + 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&amp;lt;string&amp;gt; letter_combination(string digits) {  vector&amp;lt;string&amp;gt; result;  if (digits.</description>
@@ -32,10 +32,10 @@
     
     <item>
       <title>字符串</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>647 回文子串 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
 具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
 中心扩展  时间复杂度：\(O(n^2)\) 空间复杂度：\(O(1)\)  void helper(string s, int l, int r, int &amp;amp;result) {  while (l &amp;gt;= 0 &amp;amp;&amp;amp; r &amp;lt; s.size() &amp;amp;&amp;amp; s[l] == s[r]) {  result++;  l--;  r++;  } }  int count_substring(string s) {  int result = 0;  for (int i = 0; i &amp;lt; s.size(); i++) {  helper(s, i, i, result);  helper(s, i, i + 1, result);  }  return result; } 目录  647 回文子串  中心扩展    </description>
@@ -43,20 +43,20 @@
     
     <item>
       <title>数字</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/</guid>
       <description>50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
 快速幂 + 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &amp;gt;= 0 ?</description>
     </item>
     
     <item>
       <title>数组</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</guid>
       <description>一维数组 未排序的数组 15 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
  注意：答案中不可以包含重复的三元组。
   时间复杂度：\(O(n^2)\) 空间复杂度：\(O(\log n)\)  vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; three_sum(vector&amp;lt;int&amp;gt; &amp;amp;nums) {  std::sort(nums.begin(), nums.end());  vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; result;  int n = nums.size();  for (int i = 0; i &amp;lt; n; i++) {  if (i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i - 1]) {  continue;  }  int k = n - 1;  for (int j = i + 1; j &amp;lt; k; j++) {  if (j &amp;gt; i + 1 &amp;amp;&amp;amp; nums[j] == nums[j - 1]) {  continue;  }  while (k &amp;gt; j &amp;amp;&amp;amp; nums[k] + nums[j] &amp;gt; -nums[i]) {  k--;  }  if (k == j) {  break;  }  if (nums[j] + nums[k] == -nums[i]) {  result.</description>
@@ -64,20 +64,20 @@
     
     <item>
       <title>树</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E6%A0%91/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E6%A0%91/</guid>
       <description>二叉树 94 二叉树的中序遍历 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
 递归  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  void helper(TreeNode *root, vector&amp;lt;int&amp;gt; &amp;amp;result) {  if (!root) {  return;  }  helper(root-&amp;gt;left, result);  result.push_back(root-&amp;gt;val);  helper(root-&amp;gt;right, result); }  vector&amp;lt;int&amp;gt; in_order(TreeNode *root) {  vector&amp;lt;int&amp;gt; result;  helper(root, result);  return result; } 迭代  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  vector&amp;lt;int&amp;gt; in_order(TreeNode *root) {  std::stack&amp;lt;TreeNode *&amp;gt; s;  vector&amp;lt;int&amp;gt; result;  while (root || !</description>
     </item>
     
     <item>
       <title>概率论</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
       <description>在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1]  图 1: x + y + z &amp;lt; 1 所占空间  如图. 1 所示，四面体所占体积为 \(\frac{1}{3}\times\frac{1}{2}\times 1\times 1\times 1 = \frac{1}{6}\)。
 不同样本个数的期望[2] 有 10000 个电影，用户刷新页面时随机返回 1 个电影；用户刷新 1000 次，看到不同的电影个数的期望是多少？
 记随机变量 \(I_i\)，表示电影 \(i\) 是否出现，即：
@@ -88,10 +88,10 @@
     
     <item>
       <title>链表</title>
-      <link>https://kaizhang91.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</link>
+      <link>https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</guid>
+      <guid>https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</guid>
       <description>19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 进阶：你能尝试使用一趟扫描实现吗？
 ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &amp;lt; n; i++) {  p1 = p1-&amp;gt;next;  }  while (p1) {  p0 = p0-&amp;gt;next;  p1 = p1-&amp;gt;next;  }  auto next = p0-&amp;gt;next;  p0-&amp;gt;next = next-&amp;gt;next;  delete next;  head = dummy-&amp;gt;next;  delete dummy;  return head; } 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</description>

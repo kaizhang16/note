@@ -14,13 +14,13 @@
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
  在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  GBDT &#43; LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang91.github.io/note/AI/QA/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/AI/QA/" />
 <meta property="article:modified_time" content="2021-03-14T13:46:20+00:00" />
 <title>QA | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.d7d841ec01937e9bb107c615f45b960f1a5ae7ad7a64493e52d71bfb8e8801db.js" integrity="sha256-19hB7AGTfpuxB8YV9FuWDxpa5616ZEk&#43;Utcb&#43;46IAds="></script>
+<script defer src="/note/cn.search.min.58b142baf1d9c1e150bec3440ee51a876b29f5d7c7b5bc934ee7d8c2f42a0a19.js" integrity="sha256-WLFCuvHZweFQvsNEDuUah2sp9dfHtbyTTufYwvQqChk="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -99,7 +99,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/QA/" class=" active">QA</a>
+    <a href="https://kaizhang16.github.io/note/AI/QA/" class=" active">QA</a>
   
 
         </li>
@@ -112,7 +112,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/dev_env/" class="">开发环境</a>
+    <a href="https://kaizhang16.github.io/note/AI/dev_env/" class="">开发环境</a>
   
 
         </li>
@@ -125,7 +125,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" class="">推荐系统</a>
+    <a href="https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" class="">推荐系统</a>
   
 
         </li>
@@ -138,7 +138,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="">机器学习</a>
+    <a href="https://kaizhang16.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="">机器学习</a>
   
 
         </li>
@@ -151,7 +151,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="">深度学习</a>
+    <a href="https://kaizhang16.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="">深度学习</a>
   
 
         </li>
@@ -164,7 +164,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/AI/%E9%A1%B9%E7%9B%AE/" class="">项目</a>
+    <a href="https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/" class="">项目</a>
   
 
         </li>
@@ -199,7 +199,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/http/" class="">HTTP</a>
+    <a href="https://kaizhang16.github.io/note/CS/http/" class="">HTTP</a>
   
 
         </li>
@@ -212,7 +212,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/linux/" class="">Linux</a>
+    <a href="https://kaizhang16.github.io/note/CS/linux/" class="">Linux</a>
   
 
         </li>
@@ -225,7 +225,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/oauth2/" class="">OAuth 2</a>
+    <a href="https://kaizhang16.github.io/note/CS/oauth2/" class="">OAuth 2</a>
   
 
         </li>
@@ -238,7 +238,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/transmission/" class="">传输</a>
+    <a href="https://kaizhang16.github.io/note/CS/transmission/" class="">传输</a>
   
 
         </li>
@@ -251,7 +251,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/compress/" class="">压缩</a>
+    <a href="https://kaizhang16.github.io/note/CS/compress/" class="">压缩</a>
   
 
         </li>
@@ -264,7 +264,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/security/" class="">安全</a>
+    <a href="https://kaizhang16.github.io/note/CS/security/" class="">安全</a>
   
 
         </li>
@@ -277,7 +277,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/ci/" class="">持续集成</a>
+    <a href="https://kaizhang16.github.io/note/CS/ci/" class="">持续集成</a>
   
 
         </li>
@@ -290,7 +290,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/database/" class="">数据库</a>
+    <a href="https://kaizhang16.github.io/note/CS/database/" class="">数据库</a>
   
 
         </li>
@@ -303,7 +303,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/data-type/" class="">数据类型</a>
+    <a href="https://kaizhang16.github.io/note/CS/data-type/" class="">数据类型</a>
   
 
         </li>
@@ -316,7 +316,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/%E7%AE%97%E6%B3%95/" class="">算法</a>
+    <a href="https://kaizhang16.github.io/note/CS/%E7%AE%97%E6%B3%95/" class="">算法</a>
   
 
         </li>
@@ -329,7 +329,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/encoding/" class="">编码</a>
+    <a href="https://kaizhang16.github.io/note/CS/encoding/" class="">编码</a>
   
 
         </li>
@@ -342,7 +342,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/CS/network/" class="">网络</a>
+    <a href="https://kaizhang16.github.io/note/CS/network/" class="">网络</a>
   
 
         </li>
@@ -377,7 +377,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="">动态规划</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="">动态规划</a>
   
 
         </li>
@@ -390,7 +390,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" class="">回溯</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" class="">回溯</a>
   
 
         </li>
@@ -403,7 +403,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="">字符串</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="">字符串</a>
   
 
         </li>
@@ -416,7 +416,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/" class="">数字</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/" class="">数字</a>
   
 
         </li>
@@ -429,7 +429,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/" class="">数组</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/" class="">数组</a>
   
 
         </li>
@@ -442,7 +442,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E6%A0%91/" class="">树</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E6%A0%91/" class="">树</a>
   
 
         </li>
@@ -455,7 +455,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="">概率论</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="">概率论</a>
   
 
         </li>
@@ -468,7 +468,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/" class="">链表</a>
+    <a href="https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/" class="">链表</a>
   
 
         </li>
@@ -503,7 +503,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/NLP/GPT-2/" class="">GPT-2</a>
+    <a href="https://kaizhang16.github.io/note/NLP/GPT-2/" class="">GPT-2</a>
   
 
         </li>
@@ -516,7 +516,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/NLP/LSTM_GRU/" class="">LSTM 与 GRU</a>
+    <a href="https://kaizhang16.github.io/note/NLP/LSTM_GRU/" class="">LSTM 与 GRU</a>
   
 
         </li>
@@ -529,7 +529,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/NLP/Transformer/" class="">Transformer</a>
+    <a href="https://kaizhang16.github.io/note/NLP/Transformer/" class="">Transformer</a>
   
 
         </li>
@@ -564,7 +564,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/git/" class="">Git</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/" class="">Git</a>
   
 
         </li>
@@ -577,7 +577,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/ipad/" class="">iPad</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/" class="">iPad</a>
   
 
         </li>
@@ -590,7 +590,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" class="">Linux</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" class="">Linux</a>
   
 
         </li>
@@ -603,7 +603,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Windows/" class="">Windows</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/" class="">Windows</a>
   
 
         </li>
@@ -616,7 +616,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/Word/" class="">Word</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Word/" class="">Word</a>
   
 
         </li>
@@ -629,7 +629,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/writing/" class="">写作</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/" class="">写作</a>
   
 
         </li>
@@ -642,7 +642,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/search/" class="">搜索</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/" class="">搜索</a>
   
 
         </li>
@@ -655,7 +655,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/" class="">文献管理</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/" class="">文献管理</a>
   
 
         </li>
@@ -668,7 +668,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/format/" class="">格式</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/format/" class="">格式</a>
   
 
         </li>
@@ -681,7 +681,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
   
 
         </li>
@@ -694,7 +694,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/" class="">编辑器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/" class="">编辑器</a>
   
 
         </li>
@@ -707,7 +707,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E5%B7%A5%E5%85%B7/project-management/" class="">项目管理</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/project-management/" class="">项目管理</a>
   
 
         </li>
@@ -742,7 +742,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="">线性代数</a>
+    <a href="https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="">线性代数</a>
   
 
         </li>
@@ -755,7 +755,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/" class="">统计</a>
+    <a href="https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/" class="">统计</a>
   
 
         </li>
@@ -790,7 +790,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/bash/" class="">Bash</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/bash/" class="">Bash</a>
   
 
         </li>
@@ -803,7 +803,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class="">C&#43;&#43;</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" class="">C&#43;&#43;</a>
   
 
         </li>
@@ -816,7 +816,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/css/" class="">CSS</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/css/" class="">CSS</a>
   
 
         </li>
@@ -829,7 +829,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/dhall/" class="">Dhall</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/dhall/" class="">Dhall</a>
   
 
         </li>
@@ -842,7 +842,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" class="">fish-shell</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" class="">fish-shell</a>
   
 
         </li>
@@ -855,7 +855,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/flutter/" class="">Flutter</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/flutter/" class="">Flutter</a>
   
 
         </li>
@@ -868,7 +868,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/golang/" class="">Golang</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/golang/" class="">Golang</a>
   
 
         </li>
@@ -881,7 +881,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/html/" class="">HTML</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/html/" class="">HTML</a>
   
 
         </li>
@@ -894,7 +894,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/js/" class="">JavaScript</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/js/" class="">JavaScript</a>
   
 
         </li>
@@ -907,7 +907,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/" class="">Pandoc</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/" class="">Pandoc</a>
   
 
         </li>
@@ -920,7 +920,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/" class="">PowerShell</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/" class="">PowerShell</a>
   
 
         </li>
@@ -933,7 +933,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
   
 
         </li>
@@ -946,7 +946,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/rust/" class="">Rust</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/rust/" class="">Rust</a>
   
 
         </li>
@@ -959,7 +959,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/TeX/" class="">TeX</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/TeX/" class="">TeX</a>
   
 
         </li>
@@ -972,7 +972,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/toml/" class="">Toml</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/toml/" class="">Toml</a>
   
 
         </li>
@@ -985,7 +985,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/zsh/" class="">Zsh</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/zsh/" class="">Zsh</a>
   
 
         </li>
@@ -998,7 +998,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E7%BC%96%E7%A8%8B/template/" class="">模板</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/template/" class="">模板</a>
   
 
         </li>
@@ -1033,7 +1033,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/unity/" class="">Unity</a>
+    <a href="https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/unity/" class="">Unity</a>
   
 
         </li>
@@ -1046,7 +1046,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/image/" class="">图像</a>
+    <a href="https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/" class="">图像</a>
   
 
         </li>
@@ -1059,7 +1059,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang91.github.io/note/%E8%A7%86%E8%A7%89/video/" class="">视频</a>
+    <a href="https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/video/" class="">视频</a>
   
 
         </li>
@@ -1249,7 +1249,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/kaizhang91/note/commit/6d9e98d6217baab46be3338fa9373f5c004f95be" title='最后修改者 Kai Zhang | 2021-03-14 21:46:20 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang16/note/commit/6d9e98d6217baab46be3338fa9373f5c004f95be" title='最后修改者 Kai Zhang | 2021-03-14 21:46:20 &#43;0800' target="_blank" rel="noopener">
       <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>2021-03-14 21:46:20 &#43;0800</span>
     </a>

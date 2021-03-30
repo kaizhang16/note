@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on 凯的笔记</title>
-    <link>https://kaizhang91.github.io/note/AI/</link>
+    <link>https://kaizhang16.github.io/note/AI/</link>
     <description>Recent content in AI on 凯的笔记</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language><atom:link href="https://kaizhang91.github.io/note/AI/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-Hans</language><atom:link href="https://kaizhang16.github.io/note/AI/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QA</title>
-      <link>https://kaizhang91.github.io/note/AI/QA/</link>
+      <link>https://kaizhang16.github.io/note/AI/QA/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/AI/QA/</guid>
+      <guid>https://kaizhang16.github.io/note/AI/QA/</guid>
       <description>怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
 样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
@@ -20,28 +20,28 @@
     
     <item>
       <title>开发环境</title>
-      <link>https://kaizhang91.github.io/note/AI/dev_env/</link>
+      <link>https://kaizhang16.github.io/note/AI/dev_env/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/AI/dev_env/</guid>
+      <guid>https://kaizhang16.github.io/note/AI/dev_env/</guid>
       <description>CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &amp;gt;= 455.23.04  CUDA 11.0 &amp;gt;= 450.36.06  CUDA 10.2 &amp;gt;= 440.33  CUDA 10.1 &amp;gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。</description>
     </item>
     
     <item>
       <title>推荐系统</title>
-      <link>https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
+      <link>https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
       <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  FFM Field-aware Factorization Machine 域感知因子分解机  FM Factorization Machine 因子分解机  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT+LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp;amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp;amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
     </item>
     
     <item>
       <title>机器学习</title>
-      <link>https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://kaizhang16.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://kaizhang16.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description>采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
 \[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
 在信息检索领域这样定义[3]：
@@ -50,20 +50,20 @@
     
     <item>
       <title>深度学习</title>
-      <link>https://kaizhang91.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://kaizhang16.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://kaizhang16.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
       <description>Fine-tuning vs Feature Extraction[1]  图 1: Fine-tuning 与 Feature Extraction  参考文献 [1] LI Z, HOIEM D. Learning without forgetting[J]. IEEE transactions on pattern analysis and machine intelligence, 2017, 40(12): 2935–2947.
   目录  Fine-tuning vs Feature Extraction[1] 参考文献   </description>
     </item>
     
     <item>
       <title>项目</title>
-      <link>https://kaizhang91.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang91.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</guid>
       <description>移动推荐比赛 题目 提供 2 万用户 30 天的移动端行为数据，具体行为包括“浏览”、“收藏”、“加购物车”和“购买”，预测用户第 31 天购买的商品。评价标准是 F1 Score。
   F1 Score 是精确率和召回率的调和平均数 精确率指：你认为的正样本，有多少猜对了 召回率指：正样本有多少被找回来了   特征  时间型：  ui &amp;amp;&amp;amp; uc：  最近一次加购物车到现在多少小时 最近一次购买到现在多少小时 最近一次浏览到现在多少小时 最近一次收藏到现在多少小时 用户从浏览到购买经历多少小时   统计型：  ui &amp;amp;&amp;amp; uc：  用户对商品浏览多少次 用户对商品购买多少次 用户对商品加购物车多少次  i:  商品被购买了多少次    模型 GBDT 优点  防止过拟合（基分类器简单，通过拟合残差来减小偏差） 表达能力强 可解释性强，是发现特征组合的有效工具  类别型特征  Xgboost：One-Hot 编码，one vs rest LightGBM：直接支持，many vs many  word2vec  架构：三层神经网络，softmax 损失函数：条件概率，nll -&amp;gt; 简化成负采样  腾讯广告算法 题目 提供 91 天的广告点击历史记录，包含日期、用户信息（年龄、性别）、广告信息（广告 id、产品 id、产品类目 id、广告主 id、广告主行业 id）以及该用户当天点击该广告的次数，预测测试集中用户的年龄和性别。评分标准为年龄预测和性别预测的 accuracy 之和。</description>
     </item>
