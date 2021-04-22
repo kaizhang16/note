@@ -1,5 +1,6 @@
 ---
 title: "Linux"
+markup: pandoc
 ---
 
 # 发行版
@@ -28,9 +29,19 @@ sudo apt install software-properties-common
 sudo pacman -S xf86-video-vmware
 ```
 
-# 挂载
+# 硬盘
 
-## samba
+## 判断是否为 SSD
+
+```sh
+cat /sys/block/sda/queue/rotational
+# - 0 为 SSD
+# - 1 为机械硬盘
+```
+
+## 挂载
+
+### samba
 
 | 操作系统 | 命令                          |
 |----------|-------------------------------|
