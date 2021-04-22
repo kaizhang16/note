@@ -4,7 +4,7 @@
   --from=markdown+emoji+east_asian_line_breaks \
   --to=html \
   --mathjax \
-  --bibliography=references.bib \
+  --bibliography=参考文献.bib \
   --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --metadata=link-citations:true \
   --table-of-contents \
