@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数据库" />
-<meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.service $ sudo systemctl enable postgresql." />
+<meta name="description" content="Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="持续集成" />
+<meta property="og:description" content="Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/CS/database/" />
-<meta property="article:modified_time" content="2020-10-14T07:16:48+00:00" />
-<title>数据库 | 凯的笔记</title>
+<meta property="og:url" content="https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" />
+
+<title>持续集成 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.ddd65c1b1a279f244c935c1e7ed99d880e610f2c35f2b8f184d1698a3f428033.js" integrity="sha256-3dZcGxonnyRMk1weftmdiA5hDyw18rjxhNFpij9CgDM="></script>
+<script defer src="/note/cn.search.min.03a93df87a1c2739493092e8d58a6514e1e2aa07f5a0474a939a1f7305649a00.js" integrity="sha256-A6k9&#43;HocJzlJMJLo1YplFOHiqgf1oEdKk5ofcwVkmgA="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -271,7 +271,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/CS/ci/" class="">持续集成</a>
+    <a href="https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" class=" active">持续集成</a>
   
 
         </li>
@@ -284,7 +284,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/CS/database/" class=" active">数据库</a>
+    <a href="https://kaizhang16.github.io/note/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="">数据库</a>
   
 
         </li>
@@ -1112,7 +1112,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/note/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>数据库</strong>
+  <strong>持续集成</strong>
 
   <label for="toc-control">
     
@@ -1135,172 +1135,136 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="entity-relationship-diagram">Entity Relationship Diagram</h1>
+  <article class="markdown"><h1 id="ansible">Ansible</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">curl</span> -LO <span class="st">&#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="fu">chmod</span> u+x erd_static-x86-64</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="fu">cp</span> -i erd_static-x86-64 ~/.local/bin/erd</span></code></pre></div>
-<h1 id="sql-命名规范">SQL 命名规范</h1>
-<div id="tbl:sqlNameConvention">
+<div id="tbl:ansible_install">
 <table>
-<caption>表 1: SQL 命名规范</caption>
+<caption>表 1: 安装 ansible</caption>
 <thead>
 <tr class="header">
-<th>类别</th>
-<th>规范</th>
-<th>例子</th>
+<th>操作系统</th>
+<th>命令</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>表名</td>
-<td>单数<span class="citation" data-cites="sqlTableNameSingular"><sup>[<a href="#ref-sqlTableNameSingular" role="doc-biblioref">1</a>]</sup></span></td>
-<td><code>user</code></td>
-</tr>
-<tr class="even">
-<td>identifiers</td>
-<td>snake case<span class="citation" data-cites="sqlNameConvention"><sup>[<a href="#ref-sqlNameConvention" role="doc-biblioref">2</a>]</sup></span></td>
-<td><code>lower_case_with_underscores</code></td>
-</tr>
-<tr class="odd">
-<td>user</td>
-<td>使用非保留关键词</td>
-<td><code>user_</code></td>
+<td>nix</td>
+<td><code>nix-env -iA nixpkgs.ansible</code></td>
 </tr>
 </tbody>
 </table>
 </div>
-<h1 id="postgresql">PostgreSQL</h1>
-<h2 id="安装-1">安装</h2>
-<h3 id="arch-linux">Arch Linux</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>$ <span class="fu">sudo</span> pacman -S postgres</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>$ <span class="fu">sudo</span> -iu postgres</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>[<span class="ex">postgres</span>]$ initdb -D /var/lib/postgres/data</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>[<span class="ex">postgres</span>]$ exit</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>$ <span class="fu">sudo</span> systemctl start postgresql.service</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>$ <span class="fu">sudo</span> systemctl enable postgresql.service</span></code></pre></div>
-<h3 id="ubuntu">Ubuntu</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="va">UBUNTU_VERSION=</span>xenial</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="bu">echo</span> <span class="st">&quot;deb http://apt.postgresql.org/pub/repos/apt/ </span><span class="va">$UBUNTU_VERSION</span><span class="st">-pgdg main&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/pgdg.list</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="fu">wget</span> --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add -</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="fu">sudo</span> apt update</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="fu">sudo</span> apt install postgresql</span></code></pre></div>
-<h2 id="创建用户">创建用户</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>$ <span class="fu">sudo</span> -iu postgres</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>[<span class="ex">postgres</span>]$ createuser --interactive # --pwprompt 要求输入密码</span></code></pre></div>
-<h2 id="创建数据库">创建数据库</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">createdb</span> <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code></pre></div>
-<h2 id="注释">注释</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="co">-- 注释</span></span></code></pre></div>
-<h2 id="数据类型postgres_data_types">数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<a href="#ref-postgres_data_types" role="doc-biblioref">3</a>]</sup></span></h2>
-<div id="tbl:postgresDataTypes">
-<table>
-<caption>表 2: PostgreSQL 数据类型</caption>
-<thead>
-<tr class="header">
-<th>数据类型</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>bool</code></td>
-<td>布尔值</td>
-</tr>
-<tr class="even">
-<td><code>varchar(n)</code></td>
-<td>变长字符串</td>
-</tr>
-<tr class="odd">
-<td><code>real</code></td>
-<td>float</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="psql-指令">psql 指令</h2>
-<div id="tbl:psqlCommands">
-<table>
-<caption>表 3: psql 指令</caption>
-<thead>
-<tr class="header">
-<th>指令</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>\du</code></td>
-<td>列出用户</td>
-</tr>
-<tr class="even">
-<td><code>\l</code></td>
-<td>list all databases</td>
-</tr>
-<tr class="odd">
-<td><code>\dt</code></td>
-<td>列出表</td>
-</tr>
-<tr class="even">
-<td><code>\d &lt;table_name&gt;</code></td>
-<td>显示表定义</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="参数替换postgres_parameter_substitution">参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<a href="#ref-postgres_parameter_substitution" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="kw">PREPARE</span> fooplan (<span class="dt">int</span>, text, bool, <span class="dt">numeric</span>) <span class="kw">AS</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="kw">INSERT</span> <span class="kw">INTO</span> foo <span class="kw">VALUES</span>($<span class="dv">1</span>, $<span class="dv">2</span>, $<span class="dv">3</span>, $<span class="dv">4</span>);</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a><span class="kw">EXECUTE</span> fooplan(<span class="dv">1</span>, <span class="st">&#39;Hunter Valley&#39;</span>, <span class="st">&#39;t&#39;</span>, <span class="fl">200.00</span>);</span></code></pre></div>
-<h2 id="模糊查找postgres_pattern_match">模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<a href="#ref-postgres_pattern_match" role="doc-biblioref">5</a>]</sup></span></h2>
-<p><code>LIKE</code> 时间和空间复杂度上限更容易控制。</p>
-<h2 id="按拼音排序postgres_collate">按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<a href="#ref-postgres_collate" role="doc-biblioref">6</a>]</sup></span></h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> a <span class="kw">ORDER</span> <span class="kw">BY</span> c1 COLLATE <span class="ot">&quot;zh_CN&quot;</span>;</span></code></pre></div>
+<h2 id="目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<a href="#ref-ansibleDirectoryLayout" role="doc-biblioref">1</a>]</sup></span></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">inventories/</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="ex">production/</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>        <span class="ex">hosts</span>               # inventory file for production servers</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>        <span class="ex">group_vars/</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>            <span class="ex">group1.yml</span>      # here we assign variables to particular groups</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>            <span class="ex">group2.yml</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        <span class="ex">host_vars/</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>            <span class="ex">hostname1.yml</span>   # here we assign variables to particular systems</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>            <span class="ex">hostname2.yml</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    <span class="ex">staging/</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>        <span class="ex">hosts</span>               # inventory file for staging environment</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>        <span class="ex">group_vars/</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>            <span class="ex">group1.yml</span>      # here we assign variables to particular groups</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>            <span class="ex">group2.yml</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>        <span class="ex">host_vars/</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>            <span class="ex">stagehost1.yml</span>  # here we assign variables to particular systems</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>            <span class="ex">stagehost2.yml</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a><span class="ex">library/</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a><span class="ex">module_utils/</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a><span class="ex">filter_plugins/</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a><span class="ex">site.yml</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a><span class="ex">webservers.yml</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a><span class="ex">dbservers.yml</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a><span class="ex">roles/</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>    <span class="ex">common/</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>    <span class="ex">webtier/</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a>    <span class="ex">monitoring/</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a>    <span class="ex">fooapp/</span></span></code></pre></div>
+<h2 id="依赖">依赖</h2>
+<p><code>meta/main.yml</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre></div>
+<h2 id="嵌套循环">嵌套循环</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># main.yml</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="kw">-</span><span class="at"> </span><span class="fu">include_tasks</span><span class="kw">:</span><span class="at"> inner.yml</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="at">  </span><span class="fu">loop_control</span><span class="kw">:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="at">    </span><span class="fu">loop_var</span><span class="kw">:</span><span class="at"> outer_item</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co"># inner.yml</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="kw">-</span><span class="at"> </span><span class="fu">debug</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="at">    </span><span class="fu">msg</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;outer item={{ outer_item }} inner item={{ item }}&quot;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> a</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> b</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> c</span></span></code></pre></div>
+<h2 id="自定义-ssh-端口">自定义 ssh 端口</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">[webservers]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="dt">web01.somedomain.com ansible_port</span><span class="ot">=</span><span class="dv">1234</span></span></code></pre></div>
+<h2 id="ansible-vault">Ansible Vault</h2>
+<h1 id="systemd">systemd</h1>
+<h2 id="文件目录">文件目录</h2>
+<p>请放在 <code>/etc/systemd/system/</code> 下面。<span class="citation" data-cites="systemd_dir"><sup>[<a href="#ref-systemd_dir" role="doc-biblioref">2</a>]</sup></span></p>
+<h2 id="查看-mount-的转义路径">查看 mount 的转义路径</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">systemd-escape</span> -p --suffix=mount <span class="st">&quot;/tmp//waldi/foobar/&quot;</span></span></code></pre></div>
+<h1 id="github">GitHub</h1>
+<h2 id="actions">Actions</h2>
+<h3 id="加密信息">加密信息</h3>
+<p>请参考 <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets" class="uri">https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets</a>。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references" role="doc-bibliography">
-<div id="ref-sqlTableNameSingular">
-<p>[1] GBN. Plural vs Singular Table Name[EB/OL](2012–02–23). <a href="https://dba.stackexchange.com/a/13737">https://dba.stackexchange.com/a/13737</a>.</p>
+<div id="ref-ansibleDirectoryLayout">
+<p>[1] ANSIBLE. Alternative Directory Layout[EB/OL]([日期不详]). <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout">https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout</a>.</p>
 </div>
-<div id="ref-sqlNameConvention">
-<p>[2] LEONBLOY. PostgreSQL naming conventions[EB/OL](2010–05–20). <a href="https://stackoverflow.com/a/2878408/13200985">https://stackoverflow.com/a/2878408/13200985</a>.</p>
-</div>
-<div id="ref-postgres_data_types">
-<p>[3] POSTGRESQL. Chapter 8. Data Types[EB/OL]([日期不详]). <a href="https://www.postgresql.org/docs/current/datatype.html">https://www.postgresql.org/docs/current/datatype.html</a>.</p>
-</div>
-<div id="ref-postgres_parameter_substitution">
-<p>[4] POSTGRESQL. PREPARE[EB/OL]([日期不详]). <a href="https://www.postgresql.org/docs/current/sql-prepare.html">https://www.postgresql.org/docs/current/sql-prepare.html</a>.</p>
-</div>
-<div id="ref-postgres_pattern_match">
-<p>[5] POSTGRESQL. Pattern Matching[EB/OL]([日期不详]). <a href="https://www.postgresql.org/docs/current/functions-matching.html">https://www.postgresql.org/docs/current/functions-matching.html</a>.</p>
-</div>
-<div id="ref-postgres_collate">
-<p>[6] 阿里云. 设置数据库的本土化信息及字符串排序规则[EB/OL]([日期不详]). <a href="https://www.alibabacloud.com/help/zh/doc-detail/52950.htm#h2-u8BBEu7F6Eu8F93u51FAu7ED3u679Cu6309u62FCu97F3u6392u5E8F3">https://www.alibabacloud.com/help/zh/doc-detail/52950.htm#h2-u8BBEu7F6Eu8F93u51FAu7ED3u679Cu6309u62FCu97F3u6392u5E8F3</a>.</p>
+<div id="ref-systemd_dir">
+<p>[2] KOMAR J. Where do I put my systemd unit file?[EB/OL](2017–05–25). <a href="https://unix.stackexchange.com/a/367237">https://unix.stackexchange.com/a/367237</a>.</p>
 </div>
 </div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#entity-relationship-diagram">Entity Relationship Diagram</a>
+  <li><a href="#ansible">Ansible</a>
   <ul>
   <li><a href="#安装">安装</a></li>
+  <li><a href="#目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#依赖">依赖</a></li>
+  <li><a href="#嵌套循环">嵌套循环</a></li>
+  <li><a href="#自定义-ssh-端口">自定义 ssh 端口</a></li>
+  <li><a href="#ansible-vault">Ansible Vault</a></li>
   </ul></li>
-  <li><a href="#sql-命名规范">SQL 命名规范</a></li>
-  <li><a href="#postgresql">PostgreSQL</a>
+  <li><a href="#systemd">systemd</a>
   <ul>
-  <li><a href="#安装-1">安装</a>
-  <ul>
-  <li><a href="#arch-linux">Arch Linux</a></li>
-  <li><a href="#ubuntu">Ubuntu</a></li>
+  <li><a href="#文件目录">文件目录</a></li>
+  <li><a href="#查看-mount-的转义路径">查看 mount 的转义路径</a></li>
   </ul></li>
-  <li><a href="#创建用户">创建用户</a></li>
-  <li><a href="#创建数据库">创建数据库</a></li>
-  <li><a href="#注释">注释</a></li>
-  <li><a href="#数据类型postgres_data_types">数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#psql-指令">psql 指令</a></li>
-  <li><a href="#参数替换postgres_parameter_substitution">参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<span>4</span>]</sup></span></a></li>
-  <li><a href="#模糊查找postgres_pattern_match">模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<span>5</span>]</sup></span></a></li>
-  <li><a href="#按拼音排序postgres_collate">按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#github">GitHub</a>
+  <ul>
+  <li><a href="#actions">Actions</a>
+  <ul>
+  <li><a href="#加密信息">加密信息</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
@@ -1314,12 +1278,6 @@ https://github.com/alex-shpak/hugo-book
   <div class="flex flex-wrap justify-between">
 
 
-
-  <div><a class="flex align-center" href="https://github.com/kaizhang16/note/commit/9c2e45e38837f0f51a3959bf498a2cc35818f0d3" title='最后修改者 Kai Zhang | 2020-10-14 15:16:48 &#43;0800' target="_blank" rel="noopener">
-      <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2020-10-14 15:16:48 &#43;0800</span>
-    </a>
-  </div>
 
 
 
