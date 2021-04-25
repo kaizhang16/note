@@ -31,10 +31,10 @@ sudo pacman -S xf86-video-vmware
 
 # 硬盘
 
-## 判断是否为 SSD
+## 判断是否为 SSD[@linux_ssd]
 
 ```sh
-cat /sys/block/sda/queue/rotational
+cat /sys/block/sda/queue/rotational  # 假设在判断 sda
 # - 0 为 SSD
 # - 1 为机械硬盘
 ```
@@ -94,3 +94,5 @@ cat * > merged-file
 ```sh
 dos2unix myfile.txt
 ```
+
+# 参考文献
