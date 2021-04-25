@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
+<meta name="description" content="添加 PATH fish_add_path /usr/local/bin 语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
 赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
  [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
-  目录  语法  变量  表示 赋值   find   ">
+  目录  添加 PATH 语法  变量  表示 赋值   find   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="fish-shell" />
-<meta property="og:description" content="语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
+<meta property="og:description" content="添加 PATH fish_add_path /usr/local/bin 语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
 赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
  [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
-  目录  语法  变量  表示 赋值   find   " />
+  目录  添加 PATH 语法  变量  表示 赋值   find   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" />
 
@@ -20,7 +20,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.03a93df87a1c2739493092e8d58a6514e1e2aa07f5a0474a939a1f7305649a00.js" integrity="sha256-A6k9&#43;HocJzlJMJLo1YplFOHiqgf1oEdKk5ofcwVkmgA="></script>
+<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1141,7 +1141,9 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="语法">语法</h1>
+  <article class="markdown"><h1 id="添加-path">添加 PATH</h1>
+<pre class="fish"><code>fish_add_path /usr/local/bin</code></pre>
+<h1 id="语法">语法</h1>
 <h2 id="变量">变量</h2>
 <h3 id="表示">表示</h3>
 <p>用 <code>{$WORD}s</code> 将变量与文本区分开。</p>
@@ -1161,6 +1163,7 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
+  <li><a href="#添加-path">添加 PATH</a></li>
   <li><a href="#语法">语法</a>
   <ul>
   <li><a href="#变量">变量</a>

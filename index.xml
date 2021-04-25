@@ -50,10 +50,10 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/</guid>
-      <description>语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
+      <description>添加 PATH fish_add_path /usr/local/bin 语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
 赋值 set a b find find . -type f -exec echo &amp;#39;{}&amp;#39; \;  括号需要加引号[1]。
  [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.
-  目录  语法  变量  表示 赋值   find   </description>
+  目录  添加 PATH 语法  变量  表示 赋值   find   </description>
     </item>
     
     <item>
@@ -145,7 +145,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/linux/</guid>
-      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD cat /sys/block/sda/queue/rotational # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
+      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD[1] cat /sys/block/sda/queue/rotational # 假设在判断 sda # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
     </item>
     
     <item>
@@ -211,8 +211,8 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/</guid>
-      <description>开发环境 miniconda 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
-格式化 pip install black 内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.</description>
+      <description>开发环境 miniconda 安装 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
+初始化 conda init fish 格式化 pip install black 内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.</description>
     </item>
     
     <item>

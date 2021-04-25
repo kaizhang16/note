@@ -23,7 +23,7 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/linux/</guid>
-      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD cat /sys/block/sda/queue/rotational # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
+      <description>发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD[1] cat /sys/block/sda/queue/rotational # 假设在判断 sda # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
     </item>
     
     <item>

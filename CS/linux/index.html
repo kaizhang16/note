@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD cat /sys/block/sda/queue/rotational # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.">
+<meta name="description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD[1] cat /sys/block/sda/queue/rotational # 假设在判断 sda # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD cat /sys/block/sda/queue/rotational # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel." />
+<meta property="og:description" content="发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD[1] cat /sys/block/sda/queue/rotational # 假设在判断 sda # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/CS/linux/" />
-<meta property="article:modified_time" content="2021-04-22T08:52:14+00:00" />
+<meta property="article:modified_time" content="2021-04-25T10:38:48+00:00" />
 <title>Linux | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.03a93df87a1c2739493092e8d58a6514e1e2aa07f5a0474a939a1f7305649a00.js" integrity="sha256-A6k9&#43;HocJzlJMJLo1YplFOHiqgf1oEdKk5ofcwVkmgA="></script>
+<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1146,8 +1146,8 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="virtual-box">Virtual Box</h1>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">sudo</span> pacman -S xf86-video-vmware</span></code></pre></div>
 <h1 id="硬盘">硬盘</h1>
-<h2 id="判断是否为-ssd">判断是否为 SSD</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="fu">cat</span> /sys/block/sda/queue/rotational</span>
+<h2 id="判断是否为-ssdlinux_ssd">判断是否为 SSD<span class="citation" data-cites="linux_ssd"><sup>[<a href="#ref-linux_ssd" role="doc-biblioref">1</a>]</sup></span></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="fu">cat</span> /sys/block/sda/queue/rotational  # 假设在判断 sda</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="co"># - 0 为 SSD</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="co"># - 1 为机械硬盘</span></span></code></pre></div>
 <h2 id="挂载">挂载</h2>
@@ -1202,6 +1202,12 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="fu">cat</span> * <span class="op">&gt;</span> merged-file</span></code></pre></div>
 <h2 id="把-windows-的-crlf-变为-linux-的-lf">把 windows 的 CR+LF 变为 Linux 的 LF</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="ex">dos2unix</span> myfile.txt</span></code></pre></div>
+<h1 class="unnumbered" id="参考文献">参考文献</h1>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-linux_ssd">
+<p>[1] TOTOR. How to know if a disk is an SSD or an HDD[EB/OL](2013–02–21). <a href="https://unix.stackexchange.com/a/65602">https://unix.stackexchange.com/a/65602</a>.</p>
+</div>
+</div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1221,7 +1227,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#virtual-box">Virtual Box</a></li>
   <li><a href="#硬盘">硬盘</a>
   <ul>
-  <li><a href="#判断是否为-ssd">判断是否为 SSD</a></li>
+  <li><a href="#判断是否为-ssdlinux_ssd">判断是否为 SSD<span class="citation" data-cites="linux_ssd"><sup>[<span>1</span>]</sup></span></a></li>
   <li><a href="#挂载">挂载</a>
   <ul>
   <li><a href="#samba">samba</a></li>
@@ -1242,6 +1248,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#合并文件">合并文件</a></li>
   <li><a href="#把-windows-的-crlf-变为-linux-的-lf">把 windows 的 CR+LF 变为 Linux 的 LF</a></li>
   </ul></li>
+  <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
 </article>
@@ -1254,9 +1261,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/kaizhang16/note/commit/8e8ccd39dbf450aa4069989726216815a96f7991" title='最后修改者 Kai Zhang | 2021-04-22 16:52:14 &#43;0800' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/kaizhang16/note/commit/1169d29a5c01f1074f8603826578fd3542aa8934" title='最后修改者 Kai Zhang | 2021-04-25 18:38:48 &#43;0800' target="_blank" rel="noopener">
       <img src="/note/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>2021-04-22 16:52:14 &#43;0800</span>
+      <span>2021-04-25 18:38:48 &#43;0800</span>
     </a>
   </div>
 
