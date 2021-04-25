@@ -2,6 +2,12 @@
 title: "fish-shell"
 ---
 
+# 添加 PATH
+
+```fish
+fish_add_path /usr/local/bin
+```
+
 # 语法
 
 ## 变量

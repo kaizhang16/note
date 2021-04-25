@@ -6,7 +6,15 @@ title: "Python"
 
 ## miniconda
 
+### 安装
+
 从 <https://docs.conda.io/en/latest/miniconda.html> 下载最新版本。
+
+### 初始化
+
+```fish
+conda init fish
+```
 
 ## 格式化
 
