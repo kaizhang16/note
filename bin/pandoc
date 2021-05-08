@@ -1,9 +1,11 @@
 #! /usr/bin/env bash
 
-/usr/bin/pandoc \
+/usr/local/bin/pandoc \
   --from=markdown+emoji+east_asian_line_breaks \
   --to=html \
   --mathjax \
+  --filter=pandoc-crossref \
+  --citeproc \
   --bibliography=参考文献.bib \
   --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --metadata=link-citations:true \
@@ -11,7 +13,6 @@
   --template=layouts/partials/pandoc.html.template \
   --quiet \
   --metadata=toc-title:目录 \
-  --filter=pandoc-crossref \
   --metadata=tableTitle:表 \
   --metadata=figureTitle:图 \
   --metadata=figPrefix:图. \

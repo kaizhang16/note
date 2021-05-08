@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-      PANDOC_VERSION: 2.10.1
-      PANDOC_CROSSREF_VERSION: 0.3.8.1
-      HUGO_VERSION: 0.76.1
+      PANDOC_VERSION: 2.13
+      PANDOC_CROSSREF_VERSION: 0.3.10.0a
+      HUGO_VERSION: 0.83.1
     steps:
       - uses: actions/checkout@v2
         with:
@@ -18,8 +18,7 @@ jobs:
         run: |
           curl -LO https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
           tar -xzvf pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz
-          sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc /usr/bin/
-          sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc-citeproc /usr/local/bin/
+          sudo mv -f pandoc-${PANDOC_VERSION}/bin/pandoc /usr/local/bin/
       - name: Install pandoc-crossref
         run: |
           curl -LO https://github.com/lierdakil/pandoc-crossref/releases/download/v${PANDOC_CROSSREF_VERSION}/pandoc-crossref-Linux.tar.xz
@@ -28,8 +27,8 @@ jobs:
       - name: Install csl
         run: |
           curl -LO https://raw.githubusercontent.com/citation-style-language/styles/master/china-national-standard-gb-t-7714-2015-numeric.csl
-          mkdir -p $HOME/.csl/
-          mv -f china-national-standard-gb-t-7714-2015-numeric.csl $HOME/.csl/
+          mkdir -p $HOME/.local/share/pandoc/csl/
+          mv -f china-national-standard-gb-t-7714-2015-numeric.csl $HOME/.local/share/pandoc/csl/
       - name: Install hugo
         run: |
           curl -LO https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
