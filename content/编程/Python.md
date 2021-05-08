@@ -1,5 +1,6 @@
 ---
 title: "Python"
+markup: pandoc
 ---
 
 # 开发环境
@@ -19,7 +20,22 @@ conda init fish
 ## 格式化
 
 ```sh
-pip install black
+pip install black isort
+```
+
+## JupyterLab
+
+### 安装
+
+```sh
+pip install jupyterlab
+pip install jupyterlab_code_formatter
+```
+
+### 使用
+
+```sh
+jupyter-lab --no-browser
 ```
 
 # 内建函数[@pythonBuiltIn]
@@ -328,6 +344,16 @@ array([[ 0.],
 ```
 
 # pandas
+
+## Boolean indexing[@pd_bool_index]
+
+| 符号 | 含义 |
+|------|------|
+| `|`  | or   |
+| `&`  | and  |
+| `~`  | not  |
+
+: pandas boolean indexing {#tbl:pd_bool_index}
 
 ## join
 

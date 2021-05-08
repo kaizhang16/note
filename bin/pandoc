@@ -10,6 +10,7 @@
   --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --metadata=link-citations:true \
   --table-of-contents \
+  --number-sections \
   --template=layouts/partials/pandoc.html.template \
   --quiet \
   --metadata=toc-title:目录 \
