@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="推荐系统" />
 <meta property="og:description" content="术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  FFM Field-aware Factorization Machine 域感知因子分解机  FM Factorization Machine 因子分解机  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT&#43;LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/" /><meta property="article:section" content="AI" />
+
+
 
 <title>推荐系统 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1755,57 +1757,57 @@ P(v_j\mid v_i) =
 <h2 id="k-fold-交叉验证">K-fold 交叉验证</h2>
 <p>把 K 次评估指标的平均值作为最终的评估指标。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-sedhain2015autorec">
-<p>[1] SEDHAIN S, MENON A K, SANNER S, 等. Autorec: Autoencoders meet collaborative filtering[C]//Proceedings of the 24th international conference on World Wide Web..</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-sedhain2015autorec" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">SEDHAIN S, MENON A K, SANNER S, 等. Autorec: Autoencoders meet collaborative filtering[C]//Proceedings of the 24th international conference on World Wide Web.</div>
 </div>
-<div id="ref-shan2016deep">
-<p>[2] SHAN Y, HOENS T R, JIAO J, 等. Deep crossing: Web-scale modeling without manually crafted combinatorial features[C]//Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining..</p>
+<div id="ref-shan2016deep" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">SHAN Y, HOENS T R, JIAO J, 等. Deep crossing: Web-scale modeling without manually crafted combinatorial features[C]//Proceedings of the 22nd ACM SIGKDD international conference on knowledge discovery and data mining.</div>
 </div>
-<div id="ref-he2017neural">
-<p>[3] HE X, LIAO L, ZHANG H, 等. Neural collaborative filtering[C]//Proceedings of the 26th international conference on world wide web..</p>
+<div id="ref-he2017neural" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">HE X, LIAO L, ZHANG H, 等. Neural collaborative filtering[C]//Proceedings of the 26th international conference on world wide web.</div>
 </div>
-<div id="ref-qu2016product">
-<p>[4] QU Y, CAI H, REN K, 等. Product-based neural networks for user response prediction[C]//2016 IEEE 16th International Conference on Data Mining (ICDM). IEEE, 2016: 1149–1154.</p>
+<div id="ref-qu2016product" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">QU Y, CAI H, REN K, 等. Product-based neural networks for user response prediction[C]//2016 IEEE 16th International Conference on Data Mining (ICDM). IEEE, 2016: 1149–1154.</div>
 </div>
-<div id="ref-cheng2016wide">
-<p>[5] CHENG H-T, KOC L, HARMSEN J, 等. Wide &amp; deep learning for recommender systems[C]//Proceedings of the 1st workshop on deep learning for recommender systems..</p>
+<div id="ref-cheng2016wide" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">CHENG H-T, KOC L, HARMSEN J, 等. Wide &amp; deep learning for recommender systems[C]//Proceedings of the 1st workshop on deep learning for recommender systems.</div>
 </div>
-<div id="ref-wang2017deep">
-<p>[6] WANG R, FU B, FU G, 等. Deep &amp; cross network for ad click predictions[M]//Proceedings of the ADKDD’17..</p>
+<div id="ref-wang2017deep" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">WANG R, FU B, FU G, 等. Deep &amp; cross network for ad click predictions[M]//Proceedings of the ADKDD’17.</div>
 </div>
-<div id="ref-zhang2016deep">
-<p>[7] ZHANG W, DU T, WANG J. Deep learning over multi-field categorical data[C]//European conference on information retrieval. Springer, 2016: 45–57.</p>
+<div id="ref-zhang2016deep" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">ZHANG W, DU T, WANG J. Deep learning over multi-field categorical data[C]//European conference on information retrieval. Springer, 2016: 45–57.</div>
 </div>
-<div id="ref-guo2017deepfm">
-<p>[8] GUO H, TANG R, YE Y, 等. DeepFM: a factorization-machine based neural network for CTR prediction[J]. arXiv preprint arXiv:1703.04247, 2017.</p>
+<div id="ref-guo2017deepfm" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">GUO H, TANG R, YE Y, 等. DeepFM: a factorization-machine based neural network for CTR prediction[J]. arXiv preprint arXiv:1703.04247, 2017.</div>
 </div>
-<div id="ref-he2017nfm">
-<p>[9] HE X, CHUA T-S. Neural factorization machines for sparse predictive analytics[C]//Proceedings of the 40th International ACM SIGIR conference on Research and Development in Information Retrieval..</p>
+<div id="ref-he2017nfm" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">HE X, CHUA T-S. Neural factorization machines for sparse predictive analytics[C]//Proceedings of the 40th International ACM SIGIR conference on Research and Development in Information Retrieval.</div>
 </div>
-<div id="ref-xiao2017attentional">
-<p>[10] XIAO J, YE H, HE X, 等. Attentional factorization machines: Learning the weight of feature interactions via attention networks[J]. arXiv preprint arXiv:1708.04617, 2017.</p>
+<div id="ref-xiao2017attentional" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">XIAO J, YE H, HE X, 等. Attentional factorization machines: Learning the weight of feature interactions via attention networks[J]. arXiv preprint arXiv:1708.04617, 2017.</div>
 </div>
-<div id="ref-zhou2018deep">
-<p>[11] ZHOU G, ZHU X, SONG C, 等. Deep interest network for click-through rate prediction[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining..</p>
+<div id="ref-zhou2018deep" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">ZHOU G, ZHU X, SONG C, 等. Deep interest network for click-through rate prediction[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining.</div>
 </div>
-<div id="ref-zhou2019deep">
-<p>[12] ZHOU G, MOU N, FAN Y, 等. Deep interest evolution network for click-through rate prediction[C]//Proceedings of the AAAI conference on artificial intelligence..</p>
+<div id="ref-zhou2019deep" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">ZHOU G, MOU N, FAN Y, 等. Deep interest evolution network for click-through rate prediction[C]//Proceedings of the AAAI conference on artificial intelligence.</div>
 </div>
-<div id="ref-zheng2018drn">
-<p>[13] ZHENG G, ZHANG F, ZHENG Z, 等. DRN: A deep reinforcement learning framework for news recommendation[C]//Proceedings of the 2018 World Wide Web Conference..</p>
+<div id="ref-zheng2018drn" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">ZHENG G, ZHANG F, ZHENG Z, 等. DRN: A deep reinforcement learning framework for news recommendation[C]//Proceedings of the 2018 World Wide Web Conference.</div>
 </div>
-<div id="ref-mikolov2013efficient">
-<p>[14] MIKOLOV T, CHEN K, CORRADO G, 等. Efficient estimation of word representations in vector space[J]. arXiv preprint arXiv:1301.3781, 2013.</p>
+<div id="ref-mikolov2013efficient" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">MIKOLOV T, CHEN K, CORRADO G, 等. Efficient estimation of word representations in vector space[J]. arXiv preprint arXiv:1301.3781, 2013.</div>
 </div>
-<div id="ref-rong2014word2vec">
-<p>[15] RONG X. word2vec parameter learning explained[J]. arXiv preprint arXiv:1411.2738, 2014.</p>
+<div id="ref-rong2014word2vec" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">RONG X. word2vec parameter learning explained[J]. arXiv preprint arXiv:1411.2738, 2014.</div>
 </div>
-<div id="ref-wang2018billion">
-<p>[16] WANG J, HUANG P, ZHAO H, 等. Billion-scale commodity embedding for e-commerce recommendation in alibaba[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining..</p>
+<div id="ref-wang2018billion" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">WANG J, HUANG P, ZHAO H, 等. Billion-scale commodity embedding for e-commerce recommendation in alibaba[C]//Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining.</div>
 </div>
-<div id="ref-grover2016node2vec">
-<p>[17] GROVER A, LESKOVEC J. node2vec: Scalable feature learning for networks[C]//Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining..</p>
+<div id="ref-grover2016node2vec" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">GROVER A, LESKOVEC J. node2vec: Scalable feature learning for networks[C]//Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining.</div>
 </div>
 </div>
 

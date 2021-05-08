@@ -56,8 +56,7 @@ userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDA
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/compress/</guid>
-      <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 7z 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.
-  目录  tar  打包时排除某些目录[1] 查看压缩包内容  7z  安装  参考文献   </description>
+      <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 7z 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.   目录  tar  打包时排除某些目录[1] 查看压缩包内容  7z  安装  参考文献   </description>
     </item>
     
     <item>
@@ -95,8 +94,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       
       <guid>https://kaizhang16.github.io/note/CS/data-type/</guid>
       <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
-数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.
-  目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
+数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.   目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
     </item>
     
     <item>
@@ -116,8 +114,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       
       <guid>https://kaizhang16.github.io/note/CS/encoding/</guid>
       <description>GB2312、GBK 和 GB18030 的关系[1] GBK 兼容 GB2312，GB18030 兼容 GBK 与 GB2312。
-参考文献 [1] 知乎. GB2312、GBK、GB18030 这几种字符集的主要区别是什么？[EB/OL](2016–11–08). https://www.zhihu.com/question/19677619/answer/12616362.
-  目录  GB2312、GBK 和 GB18030 的关系[1] 参考文献   </description>
+参考文献 [1] 知乎. GB2312、GBK、GB18030 这几种字符集的主要区别是什么？[EB/OL](2016–11–08). https://www.zhihu.com/question/19677619/answer/12616362.   目录  GB2312、GBK 和 GB18030 的关系[1] 参考文献   </description>
     </item>
     
     <item>

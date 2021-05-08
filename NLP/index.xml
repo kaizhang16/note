@@ -13,8 +13,7 @@
       
       <guid>https://kaizhang16.github.io/note/NLP/GPT-2/</guid>
       <description>Auto-Regression[1]  图 1: Auto-Regression  每个记号产生后加入输入序列。
-Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.
-  目录  Auto-Regression[1] Masked Self-Attention[1] Q、K 和 V 输出 参考文献   </description>
+Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.   目录  Auto-Regression[1] Masked Self-Attention[1] Q、K 和 V 输出 参考文献   </description>
     </item>
     
     <item>

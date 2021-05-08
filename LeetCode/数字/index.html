@@ -10,13 +10,15 @@
 <meta property="og:description" content="50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
 快速幂 &#43; 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &gt;= 0 ?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/" /><meta property="article:section" content="LeetCode" />
+
+
 
 <title>数字 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1100,7 +1102,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1144,41 +1146,41 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">double</span> quick_pow(<span class="dt">double</span> x, <span class="dt">long</span> <span class="dt">long</span> N) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="cf">if</span> (N == <span class="dv">0</span>) {</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="fl">1.0</span>;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    } <span class="cf">else</span> {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        <span class="dt">double</span> y = quick_pow(x, N / <span class="dv">2</span>);</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>        <span class="cf">return</span> N % <span class="dv">2</span> == <span class="dv">0</span> ? y * y : y * y * x;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>    }</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="dt">double</span> my_pow(<span class="dt">double</span> x, <span class="dt">int</span> n) {</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    <span class="dt">long</span> <span class="dt">long</span> N = n;</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    <span class="cf">return</span> n &gt;= <span class="dv">0</span> ? quick_pow(x, N) : <span class="fl">1.0</span> / quick_pow(x, -N);</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> quick_pow<span class="op">(</span><span class="dt">double</span> x<span class="op">,</span> <span class="dt">long</span> <span class="dt">long</span> N<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>N <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="fl">1.0</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> y <span class="op">=</span> quick_pow<span class="op">(</span>x<span class="op">,</span> N <span class="op">/</span> <span class="dv">2</span><span class="op">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> N <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span> y <span class="op">*</span> y <span class="op">:</span> y <span class="op">*</span> y <span class="op">*</span> x<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> my_pow<span class="op">(</span><span class="dt">double</span> x<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> <span class="dt">long</span> N <span class="op">=</span> n<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n <span class="op">&gt;=</span> <span class="dv">0</span> <span class="op">?</span> quick_pow<span class="op">(</span>x<span class="op">,</span> N<span class="op">)</span> <span class="op">:</span> <span class="fl">1.0</span> <span class="op">/</span> quick_pow<span class="op">(</span>x<span class="op">,</span> <span class="op">-</span>N<span class="op">);</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="快速幂-迭代">快速幂 + 迭代</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">double</span> quick_pow_v2(<span class="dt">double</span> x, <span class="dt">long</span> <span class="dt">long</span> N) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="dt">double</span> result = <span class="fl">1.0</span>;</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="dt">double</span> x_contribute = x;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="cf">while</span> (N &gt; <span class="dv">0</span>) {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>        <span class="cf">if</span> (N % <span class="dv">2</span> == <span class="dv">1</span>) {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>            result *= x_contribute;</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>        }</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>        x_contribute *= x_contribute;</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>        N /= <span class="dv">2</span>;</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>    }</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>}</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a><span class="dt">double</span> my_pow_v2(<span class="dt">double</span> x, <span class="dt">int</span> n) {</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>    <span class="dt">long</span> <span class="dt">long</span> N = n;</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="cf">return</span> n &gt;= <span class="dv">0</span> ? quick_pow_v2(x, N) : <span class="fl">1.0</span> / quick_pow_v2(x, -N);</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> quick_pow_v2<span class="op">(</span><span class="dt">double</span> x<span class="op">,</span> <span class="dt">long</span> <span class="dt">long</span> N<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> result <span class="op">=</span> <span class="fl">1.0</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> x_contribute <span class="op">=</span> x<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>N <span class="op">&gt;</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>N <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            result <span class="op">*=</span> x_contribute<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        x_contribute <span class="op">*=</span> x_contribute<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        N <span class="op">/=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="dt">double</span> my_pow_v2<span class="op">(</span><span class="dt">double</span> x<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> <span class="dt">long</span> N <span class="op">=</span> n<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n <span class="op">&gt;=</span> <span class="dv">0</span> <span class="op">?</span> quick_pow_v2<span class="op">(</span>x<span class="op">,</span> N<span class="op">)</span> <span class="op">:</span> <span class="fl">1.0</span> <span class="op">/</span> quick_pow_v2<span class="op">(</span>x<span class="op">,</span> <span class="op">-</span>N<span class="op">);</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="x-的平方根">69 x 的平方根</h1>
 <p>实现 <code>int sqrt(int x)</code> 函数。计算并返回 x 的平方根，其中 x 是非负整数。由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
 <h2 id="二分查找">二分查找</h2>
@@ -1186,69 +1188,69 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(\log x)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="dt">int</span> my_sqrt(<span class="dt">int</span> x) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="dt">int</span> l = <span class="dv">0</span>;</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    <span class="dt">int</span> h = x;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="dt">int</span> result = -<span class="dv">1</span>;</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    <span class="cf">while</span> (l &lt;= h) {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>        <span class="dt">int</span> mid = l + (h - l) / <span class="dv">2</span>;</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>        <span class="cf">if</span> ((<span class="dt">long</span> <span class="dt">long</span>)mid * mid &lt;= x) {</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>            result = mid;</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>            l = mid + <span class="dv">1</span>;</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>            h = mid - <span class="dv">1</span>;</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>        }</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    }</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> my_sqrt<span class="op">(</span><span class="dt">int</span> x<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> l <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> h <span class="op">=</span> x<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> result <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>l <span class="op">&lt;=</span> h<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> mid <span class="op">=</span> l <span class="op">+</span> <span class="op">(</span>h <span class="op">-</span> l<span class="op">)</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">((</span><span class="dt">long</span> <span class="dt">long</span><span class="op">)</span>mid <span class="op">*</span> mid <span class="op">&lt;=</span> x<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> mid<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            l <span class="op">=</span> mid <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            h <span class="op">=</span> mid <span class="op">-</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="牛顿迭代法">牛顿迭代法</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(\log x)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="dt">int</span> my_sqrt_v2(<span class="dt">int</span> x) {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="cf">if</span> (x == <span class="dv">0</span>) {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="dv">0</span>;</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    }</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    <span class="dt">double</span> C = x;</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    <span class="dt">double</span> x0 = C;</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="cf">while</span> (<span class="kw">true</span>) {</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>        <span class="dt">double</span> x1 = x0 / <span class="dv">2</span> + C / (<span class="dv">2</span> * x0);</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>        <span class="cf">if</span> (fabs(x0 - x1) &lt; <span class="fl">1e-7</span>) {</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>            <span class="cf">break</span>;</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>        }</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>        x0 = x1;</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>    }</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>    <span class="cf">return</span> (<span class="dt">int</span>)x0;</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> my_sqrt_v2<span class="op">(</span><span class="dt">int</span> x<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>x <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> C <span class="op">=</span> x<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">double</span> x0 <span class="op">=</span> C<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span><span class="kw">true</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">double</span> x1 <span class="op">=</span> x0 <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> C <span class="op">/</span> <span class="op">(</span><span class="dv">2</span> <span class="op">*</span> x0<span class="op">);</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>fabs<span class="op">(</span>x0 <span class="op">-</span> x1<span class="op">)</span> <span class="op">&lt;</span> <span class="fl">1e-7</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        x0 <span class="op">=</span> x1<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span>x0<span class="op">;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="数学函数法">数学函数法</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(1)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="dt">int</span> my_sqrt_v3(<span class="dt">int</span> x) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="cf">if</span> (x == <span class="dv">0</span>) {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>        <span class="cf">return</span> <span class="dv">0</span>;</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    }</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="dt">int</span> result = exp(<span class="fl">0.5</span> * log(x));</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>    <span class="cf">return</span> (<span class="dt">long</span> <span class="dt">long</span>)(result + <span class="dv">1</span>) * (result + <span class="dv">1</span>) &lt;= x ? result + <span class="dv">1</span> : result;</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> my_sqrt_v3<span class="op">(</span><span class="dt">int</span> x<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>x <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> result <span class="op">=</span> exp<span class="op">(</span><span class="fl">0.5</span> <span class="op">*</span> log<span class="op">(</span>x<span class="op">));</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span><span class="dt">long</span> <span class="dt">long</span><span class="op">)(</span>result <span class="op">+</span> <span class="dv">1</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span>result <span class="op">+</span> <span class="dv">1</span><span class="op">)</span> <span class="op">&lt;=</span> x <span class="op">?</span> result <span class="op">+</span> <span class="dv">1</span> <span class="op">:</span> result<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="可被-5-整除的二进制前缀">1018 可被 5 整除的二进制前缀</h1>
 <p>给定由若干 0 和 1 组成的数组 A。我们定义 N_i：从 A[0] 到 A[i] 的第 i 个子数组被解释为一个二进制数（从最高有效位到最低有效位）。返回布尔值列表 answer，只有当 N_i 可以被 5 整除时，答案 answer[i] 为 true，否则为 false。</p>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>vector&lt;<span class="dt">bool</span>&gt; prefix_div_by_5(vector&lt;<span class="dt">int</span>&gt; &amp;A) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="dt">int</span> n = A.size();</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    vector&lt;<span class="dt">bool</span>&gt; result(n);</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>    <span class="dt">int</span> pre = <span class="dv">0</span>;</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; n; i++) {</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>        pre = ((pre &lt;&lt; <span class="dv">1</span>) + A[i]) % <span class="dv">5</span>;</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>        result[i] = (pre == <span class="dv">0</span>);</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>    }</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>vector<span class="op">&lt;</span><span class="dt">bool</span><span class="op">&gt;</span> prefix_div_by_5<span class="op">(</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> <span class="op">&amp;</span>A<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> A<span class="op">.</span>size<span class="op">();</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    vector<span class="op">&lt;</span><span class="dt">bool</span><span class="op">&gt;</span> result<span class="op">(</span>n<span class="op">);</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> pre <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        pre <span class="op">=</span> <span class="op">((</span>pre <span class="op">&lt;&lt;</span> <span class="dv">1</span><span class="op">)</span> <span class="op">+</span> A<span class="op">[</span>i<span class="op">])</span> <span class="op">%</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>        result<span class="op">[</span>i<span class="op">]</span> <span class="op">=</span> <span class="op">(</span>pre <span class="op">==</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>

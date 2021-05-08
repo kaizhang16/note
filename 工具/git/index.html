@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Git" />
 <meta property="og:description" content="常见操作 恢复文件[1] # this restores the file status in the index git reset -- &lt;file&gt; # then check out a copy from the index git checkout -- &lt;file&gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/" /><meta property="article:section" content="工具" />
+
+
 
 <title>Git | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1137,10 +1139,10 @@ https://github.com/alex-shpak/hugo-book
       
   <article class="markdown"><h1 id="常见操作">常见操作</h1>
 <h2 id="恢复文件git_undo">恢复文件<span class="citation" data-cites="git_undo"><sup>[<a href="#ref-git_undo" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co"># this restores the file status in the index</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="fu">git</span> reset -- <span class="op">&lt;</span>file<span class="op">&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co"># then check out a copy from the index</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="fu">git</span> checkout -- <span class="op">&lt;</span>file<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># this restores the file status in the index</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--</span> <span class="op">&lt;</span>file<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># then check out a copy from the index</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">--</span> <span class="op">&lt;</span>file<span class="op">&gt;</span></span></code></pre></div>
 <h1 id="diff">diff</h1>
 <h2 id="安装-delta">安装 delta</h2>
 <div id="tbl:install_delta">
@@ -1166,18 +1168,18 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="git-submodule">Git Submodule</h1>
 <h2 id="下载-submodule">下载 submodule</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">git</span> submodule update --init --force --recursive --depth=1</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule update <span class="at">--init</span> <span class="at">--force</span> <span class="at">--recursive</span> <span class="at">--depth</span><span class="op">=</span>1</span></code></pre></div>
 <h2 id="更新-url">更新 url</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule set-url themes/book https://github.com/alex-shpak/hugo-book.git</span></code></pre></div>
 <h2 id="删除-submodulegitsubmodulerm">删除 submodule<span class="citation" data-cites="gitSubmoduleRm"><sup>[<a href="#ref-gitSubmoduleRm" role="doc-biblioref">2</a>]</sup></span></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="fu">git</span> rm <span class="op">&lt;</span>submodule path<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="op">&lt;</span>submodule path<span class="op">&gt;</span></span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-git_undo">
-<p>[1] TWALBERG. Unstage a deleted file in git[EB/OL](2012–03–06). <a href="https://stackoverflow.com/a/9591612/13200985">https://stackoverflow.com/a/9591612/13200985</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-git_undo" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">TWALBERG. Unstage a deleted file in git[EB/OL](2012–03–06). <a href="https://stackoverflow.com/a/9591612/13200985">https://stackoverflow.com/a/9591612/13200985</a>.</div>
 </div>
-<div id="ref-gitSubmoduleRm">
-<p>[2] GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). <a href="https://git-scm.com/docs/gitsubmodules">https://git-scm.com/docs/gitsubmodules</a>.</p>
+<div id="ref-gitSubmoduleRm" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">GIT. Git - gitsubmodules Documentation[EB/OL]([日期不详]). <a href="https://git-scm.com/docs/gitsubmodules">https://git-scm.com/docs/gitsubmodules</a>.</div>
 </div>
 </div>
 

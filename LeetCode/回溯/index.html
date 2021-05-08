@@ -12,13 +12,15 @@
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" /><meta property="article:section" content="LeetCode" />
+
+
 
 <title>回溯 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1102,7 +1104,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1147,33 +1149,33 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(3^m\times 4^n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(m + n)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="dt">void</span> backtrack(string &amp;digits, <span class="dt">int</span> i,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>               <span class="bu">std::</span>unordered_map&lt;<span class="dt">char</span>, string&gt; &amp;digit2str, string &amp;combination,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>               vector&lt;string&gt; &amp;result) {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="cf">if</span> (i == digits.size()) {</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>        result.push_back(combination);</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>    } <span class="cf">else</span> {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="kw">auto</span> c : digit2str[digits[i]]) {</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>            combination.push_back(c);</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>            backtrack(digits, i + <span class="dv">1</span>, digit2str, combination, result);</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>            combination.pop_back();</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>        }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    }</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>}</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>vector&lt;string&gt; letter_combination(string digits) {</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    vector&lt;string&gt; result;</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>    <span class="cf">if</span> (digits.empty()) {</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>        <span class="cf">return</span> result;</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>    }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>    <span class="bu">std::</span>unordered_map&lt;<span class="dt">char</span>, string&gt; digit2str{</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a>        {<span class="ch">&#39;2&#39;</span>, <span class="st">&quot;abc&quot;</span>}, {<span class="ch">&#39;3&#39;</span>, <span class="st">&quot;def&quot;</span>},  {<span class="ch">&#39;4&#39;</span>, <span class="st">&quot;ghi&quot;</span>}, {<span class="ch">&#39;5&#39;</span>, <span class="st">&quot;jkl&quot;</span>},</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a>        {<span class="ch">&#39;6&#39;</span>, <span class="st">&quot;mno&quot;</span>}, {<span class="ch">&#39;7&#39;</span>, <span class="st">&quot;pqrs&quot;</span>}, {<span class="ch">&#39;8&#39;</span>, <span class="st">&quot;tuv&quot;</span>}, {<span class="ch">&#39;9&#39;</span>, <span class="st">&quot;wxyz&quot;</span>}</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>    };</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>    string combination;</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>    backtrack(digits, <span class="dv">0</span>, digit2str, combination, result);</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> backtrack<span class="op">(</span>string <span class="op">&amp;</span>digits<span class="op">,</span> <span class="dt">int</span> i<span class="op">,</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>               <span class="bu">std::</span>unordered_map<span class="op">&lt;</span><span class="dt">char</span><span class="op">,</span> string<span class="op">&gt;</span> <span class="op">&amp;</span>digit2str<span class="op">,</span> string <span class="op">&amp;</span>combination<span class="op">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>               vector<span class="op">&lt;</span>string<span class="op">&gt;</span> <span class="op">&amp;</span>result<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>i <span class="op">==</span> digits<span class="op">.</span>size<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        result<span class="op">.</span>push_back<span class="op">(</span>combination<span class="op">);</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="kw">auto</span> c <span class="op">:</span> digit2str<span class="op">[</span>digits<span class="op">[</span>i<span class="op">]])</span> <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            combination<span class="op">.</span>push_back<span class="op">(</span>c<span class="op">);</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            backtrack<span class="op">(</span>digits<span class="op">,</span> i <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> digit2str<span class="op">,</span> combination<span class="op">,</span> result<span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            combination<span class="op">.</span>pop_back<span class="op">();</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>vector<span class="op">&lt;</span>string<span class="op">&gt;</span> letter_combination<span class="op">(</span>string digits<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    vector<span class="op">&lt;</span>string<span class="op">&gt;</span> result<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>digits<span class="op">.</span>empty<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">std::</span>unordered_map<span class="op">&lt;</span><span class="dt">char</span><span class="op">,</span> string<span class="op">&gt;</span> digit2str<span class="op">{</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span><span class="ch">&#39;2&#39;</span><span class="op">,</span> <span class="st">&quot;abc&quot;</span><span class="op">},</span> <span class="op">{</span><span class="ch">&#39;3&#39;</span><span class="op">,</span> <span class="st">&quot;def&quot;</span><span class="op">},</span>  <span class="op">{</span><span class="ch">&#39;4&#39;</span><span class="op">,</span> <span class="st">&quot;ghi&quot;</span><span class="op">},</span> <span class="op">{</span><span class="ch">&#39;5&#39;</span><span class="op">,</span> <span class="st">&quot;jkl&quot;</span><span class="op">},</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span><span class="ch">&#39;6&#39;</span><span class="op">,</span> <span class="st">&quot;mno&quot;</span><span class="op">},</span> <span class="op">{</span><span class="ch">&#39;7&#39;</span><span class="op">,</span> <span class="st">&quot;pqrs&quot;</span><span class="op">},</span> <span class="op">{</span><span class="ch">&#39;8&#39;</span><span class="op">,</span> <span class="st">&quot;tuv&quot;</span><span class="op">},</span> <span class="op">{</span><span class="ch">&#39;9&#39;</span><span class="op">,</span> <span class="st">&quot;wxyz&quot;</span><span class="op">}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">};</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    string combination<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    backtrack<span class="op">(</span>digits<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> digit2str<span class="op">,</span> combination<span class="op">,</span> result<span class="op">);</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>

@@ -22,8 +22,7 @@
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</guid>
       <description>多任务 分屏 如何调整分屏浏览[1]：
- 要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.
-  目录  多任务  分屏  参考文献   </description>
+ 要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.   目录  多任务  分屏  参考文献   </description>
     </item>
     
     <item>
@@ -64,8 +63,7 @@
 调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
 修改脚注上方的横线 请参考 https://zhidao.baidu.com/question/1895317289698826500.html。
-参考文献 [1] MICROSOFT. 更新文档中的所有域[EB/OL]([日期不详]). https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%96%B0%E5%9F%9F-7339a049-cb0d-4d5a-8679-97c20c643d4e#_updateallfields.
-  目录  参考文献相关操作  合并连续引用 对齐列表 插入引用 更新文档中的所有域[1]  显示或隐藏文档中所有表格的网格线 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线 修改脚注上方的横线 参考文献   </description>
+参考文献 [1] MICROSOFT. 更新文档中的所有域[EB/OL]([日期不详]). https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%96%B0%E5%9F%9F-7339a049-cb0d-4d5a-8679-97c20c643d4e#_updateallfields.   目录  参考文献相关操作  合并连续引用 对齐列表 插入引用 更新文档中的所有域[1]  显示或隐藏文档中所有表格的网格线 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线 修改脚注上方的横线 参考文献   </description>
     </item>
     
     <item>
@@ -76,7 +74,7 @@
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/</guid>
       <description>Pandoc 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 打印默认模板 pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot;id=&amp;quot;MathJax-script&amp;quot;async src=&amp;quot;https://cdn.</description>
+MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot; id=&amp;quot;MathJax-script&amp;quot; async src=&amp;quot;https://cdn.</description>
     </item>
     
     <item>
@@ -86,8 +84,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/</guid>
       <description>搜索命令 navi 安装 NAVI_VERSION=2.4.1 curl -LO &amp;quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&amp;quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 使用 Ctrl-g。
-搜索目录 zoxide 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.
-  目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   </description>
+搜索目录 zoxide 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.   目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   </description>
     </item>
     
     <item>

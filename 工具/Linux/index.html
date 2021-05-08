@@ -10,13 +10,15 @@
 <meta property="og:description" content="窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     i3lockr https://github.com/owenthewizard/i3lockr
 手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" /><meta property="article:section" content="工具" />
+
+
 
 <title>Linux | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1100,7 +1102,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1183,45 +1185,45 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="rsync">rsync</h1>
 <h2 id="带进度条的复制">带进度条的复制</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">rsync</span> --info=progress2 -rh <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">--info</span><span class="op">=</span>progress2 <span class="at">-rh</span> <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
 <h2 id="指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<a href="#ref-rsyncPrivateKey" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">rsync</span> -Pav -e <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-Pav</span> <span class="at">-e</span> <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
 <h1 id="终端">终端</h1>
 <h2 id="tmux">tmux</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># 列出会话</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="ex">tmux</span> ls</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co"># 创建新会话</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="ex">tmux</span> new -s myname</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co"># 连接会话</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="ex">tmux</span> a -t myname</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 列出会话</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">tmux</span> ls</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建新会话</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">tmux</span> new <span class="at">-s</span> myname</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 连接会话</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">tmux</span> a <span class="at">-t</span> myname</span></code></pre></div>
 <h1 id="硬盘">硬盘</h1>
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
 </ul>
 <h2 id="dudu">du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">2</a>]</sup></span></h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="fu">du</span> -sh /a/* <span class="kw">|</span> <span class="fu">sort</span> -rh <span class="kw">|</span> <span class="fu">head</span> -5</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> /a/<span class="pp">*</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-rh</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-5</span></span></code></pre></div>
 <h1 id="jq">jq</h1>
 <h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">3</a>]</sup></span></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="kw">select(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">select</span><span class="kw">(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
 <h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">4</a>]</sup></span></h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">jq</span> --raw-output</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="at">--raw-output</span></span></code></pre></div>
 <h1 id="cpu">CPU</h1>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-rsyncPrivateKey">
-<p>[1] GARTHWAITE D. Specify identity file with rsync[EB/OL](2014–05–01). <a href="https://unix.stackexchange.com/a/127355">https://unix.stackexchange.com/a/127355</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-rsyncPrivateKey" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">GARTHWAITE D. Specify identity file with rsync[EB/OL](2014–05–01). <a href="https://unix.stackexchange.com/a/127355">https://unix.stackexchange.com/a/127355</a>.</div>
 </div>
-<div id="ref-du">
-<p>[2] KUMAR S. How to Find Out Top Directories and Files (Disk Space) in Linux[EB/OL](2016–01–16). <a href="https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/">https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/</a>.</p>
+<div id="ref-du" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">KUMAR S. How to Find Out Top Directories and Files (Disk Space) in Linux[EB/OL](2016–01–16). <a href="https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/">https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/</a>.</div>
 </div>
-<div id="ref-jqCookbook">
-<p>[3] STEDOLAN. Cookbook[EB/OL](2019–10–05). <a href="https://github.com/stedolan/jq/wiki/Cookbook">https://github.com/stedolan/jq/wiki/Cookbook</a>.</p>
+<div id="ref-jqCookbook" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">STEDOLAN. Cookbook[EB/OL](2019–10–05). <a href="https://github.com/stedolan/jq/wiki/Cookbook">https://github.com/stedolan/jq/wiki/Cookbook</a>.</div>
 </div>
-<div id="ref-jqNoQuotes">
-<p>[4] GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</p>
+<div id="ref-jqNoQuotes" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">GITHUB. Print strings without quotes[EB/OL](2013–12–20). <a href="https://github.com/stedolan/jq/issues/250">https://github.com/stedolan/jq/issues/250</a>.</div>
 </div>
 </div>
 

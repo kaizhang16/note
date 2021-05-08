@@ -12,13 +12,15 @@ ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0,
 进阶：你能尝试使用一趟扫描实现吗？
 ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &lt; n; i&#43;&#43;) {  p1 = p1-&gt;next;  }  while (p1) {  p0 = p0-&gt;next;  p1 = p1-&gt;next;  }  auto next = p0-&gt;next;  p0-&gt;next = next-&gt;next;  delete next;  head = dummy-&gt;next;  delete dummy;  return head; } 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/" /><meta property="article:section" content="LeetCode" />
+
+
 
 <title>链表 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1102,7 +1104,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1142,44 +1144,44 @@ https://github.com/alex-shpak/hugo-book
   <article class="markdown"><h1 id="删除链表的倒数第-n-个结点">19 删除链表的倒数第 N 个结点</h1>
 <p>给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。</p>
 <p>进阶：你能尝试使用一趟扫描实现吗？</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>ListNode *rm_nth_from_end(ListNode *head, <span class="dt">int</span> n) {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>, head);</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>    <span class="kw">auto</span> p0 = dummy;</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head;</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; n; i++) {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>        p1 = p1-&gt;next;</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>    }</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>    <span class="cf">while</span> (p1) {</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>        p0 = p0-&gt;next;</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>        p1 = p1-&gt;next;</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    }</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    <span class="kw">auto</span> next = p0-&gt;next;</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>    p0-&gt;next = next-&gt;next;</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>    <span class="kw">delete</span> next;</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>    head = dummy-&gt;next;</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>rm_nth_from_end<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">,</span> head<span class="op">);</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p0 <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p1<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        p0 <span class="op">=</span> p0<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> next <span class="op">=</span> p0<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    p0<span class="op">-&gt;</span>next <span class="op">=</span> next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> next<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    head <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="合并两个有序链表">21 合并两个有序链表</h1>
 <p>将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>ListNode *merge_list(ListNode *l1, ListNode *l2) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>);</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="kw">auto</span> p = dummy;</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>    <span class="cf">while</span> (l1 &amp;&amp; l2) {</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>        <span class="cf">if</span> (l1-&gt;val &lt;= l2-&gt;val) {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>            p-&gt;next = l1;</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>            l1 = l1-&gt;next;</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>            p-&gt;next = l2;</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>            l2 = l2-&gt;next;</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>        }</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>        p = p-&gt;next;</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>    }</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>    p-&gt;next = l1 ? l1 : l2;</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>    <span class="kw">auto</span> head = dummy-&gt;next;</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>merge_list<span class="op">(</span>ListNode <span class="op">*</span>l1<span class="op">,</span> ListNode <span class="op">*</span>l2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>l1 <span class="op">&amp;&amp;</span> l2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>l1<span class="op">-&gt;</span>val <span class="op">&lt;=</span> l2<span class="op">-&gt;</span>val<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            p<span class="op">-&gt;</span>next <span class="op">=</span> l1<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>            l1 <span class="op">=</span> l1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            p<span class="op">-&gt;</span>next <span class="op">=</span> l2<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            l2 <span class="op">=</span> l2<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    p<span class="op">-&gt;</span>next <span class="op">=</span> l1 <span class="op">?</span> l1 <span class="op">:</span> l2<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> head <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="合并-k-个升序链表">23 合并 K 个升序链表</h1>
 <p>给你一个链表数组，每个链表都已经按升序排列。</p>
 <p>请你将所有链表合并到一个升序链表中，返回合并后的链表。</p>
@@ -1188,55 +1190,55 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(kn\times \log k)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(\log k)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>ListNode *merge2list(ListNode *l1, ListNode *l2) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>);</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    <span class="kw">auto</span> l = dummy;</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="cf">while</span> (l1 &amp;&amp; l2) {</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>        <span class="cf">if</span> (l1-&gt;val &lt;= l2-&gt;val) {</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>            l-&gt;next = l1;</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>            l1 = l1-&gt;next;</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>            l-&gt;next = l2;</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>            l2 = l2-&gt;next;</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>        }</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>        l = l-&gt;next;</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    }</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>    l-&gt;next = l1 ? l1 : l2;</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>    l = dummy-&gt;next;</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a>    <span class="cf">return</span> l;</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a>}</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>ListNode *helper(vector&lt;ListNode *&gt; &amp;lists, <span class="dt">int</span> l, <span class="dt">int</span> r) {</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a>    <span class="cf">if</span> (r - l == <span class="dv">0</span>) {</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a>        <span class="cf">return</span> <span class="kw">nullptr</span>;</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>    } <span class="cf">else</span> <span class="cf">if</span> (r - l == <span class="dv">1</span>) {</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a>        <span class="cf">return</span> lists[l];</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a>    }</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a>    <span class="dt">int</span> m = l + (r - l - <span class="dv">1</span>) / <span class="dv">2</span>;</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a>    <span class="cf">return</span> merge2list(helper(lists, l, m + <span class="dv">1</span>), helper(lists, m + <span class="dv">1</span>, r));</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a>}</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a>ListNode *merge_k_list(vector&lt;ListNode *&gt; &amp;lists) {</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a>    <span class="cf">return</span> helper(lists, <span class="dv">0</span>, lists.size());</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>merge2list<span class="op">(</span>ListNode <span class="op">*</span>l1<span class="op">,</span> ListNode <span class="op">*</span>l2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> l <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>l1 <span class="op">&amp;&amp;</span> l2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>l1<span class="op">-&gt;</span>val <span class="op">&lt;=</span> l2<span class="op">-&gt;</span>val<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            l<span class="op">-&gt;</span>next <span class="op">=</span> l1<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            l1 <span class="op">=</span> l1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            l<span class="op">-&gt;</span>next <span class="op">=</span> l2<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            l2 <span class="op">=</span> l2<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        l <span class="op">=</span> l<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    l<span class="op">-&gt;</span>next <span class="op">=</span> l1 <span class="op">?</span> l1 <span class="op">:</span> l2<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    l <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l<span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>helper<span class="op">(</span>vector<span class="op">&lt;</span>ListNode <span class="op">*&gt;</span> <span class="op">&amp;</span>lists<span class="op">,</span> <span class="dt">int</span> l<span class="op">,</span> <span class="dt">int</span> r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>r <span class="op">-</span> l <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>r <span class="op">-</span> l <span class="op">==</span> <span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> lists<span class="op">[</span>l<span class="op">];</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> m <span class="op">=</span> l <span class="op">+</span> <span class="op">(</span>r <span class="op">-</span> l <span class="op">-</span> <span class="dv">1</span><span class="op">)</span> <span class="op">/</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> merge2list<span class="op">(</span>helper<span class="op">(</span>lists<span class="op">,</span> l<span class="op">,</span> m <span class="op">+</span> <span class="dv">1</span><span class="op">),</span> helper<span class="op">(</span>lists<span class="op">,</span> m <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> r<span class="op">));</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>merge_k_list<span class="op">(</span>vector<span class="op">&lt;</span>ListNode <span class="op">*&gt;</span> <span class="op">&amp;</span>lists<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> helper<span class="op">(</span>lists<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> lists<span class="op">.</span>size<span class="op">());</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="两两交换链表中的节点">24 两两交换链表中的节点</h1>
 <p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
 <p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>ListNode *swap_pair(ListNode *head) {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>, head);</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    <span class="kw">auto</span> p = dummy;</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="cf">while</span> (p-&gt;next &amp;&amp; p-&gt;next-&gt;next) {</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>        <span class="kw">auto</span> p1 = p-&gt;next;</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>        p-&gt;next = p1-&gt;next;</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>        p1-&gt;next = p-&gt;next-&gt;next;</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>        p-&gt;next-&gt;next = p1;</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>        p = p1;</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>    }</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>    head = dummy-&gt;next;</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>swap_pair<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">,</span> head<span class="op">);</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p<span class="op">-&gt;</span>next <span class="op">&amp;&amp;</span> p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p1 <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        p<span class="op">-&gt;</span>next <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    head <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="k-个一组翻转链表">25 K 个一组翻转链表</h1>
 <p>给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。</p>
 <p>k 是一个正整数，它的值小于或等于链表的长度。</p>
@@ -1246,133 +1248,133 @@ https://github.com/alex-shpak/hugo-book
 <li>你可以设计一个只使用常数额外空间的算法来解决此问题吗？</li>
 <li>你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>ListNode *reverse(ListNode *head) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    ListNode *p0 = <span class="kw">nullptr</span>;</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head;</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    <span class="cf">while</span> (p1) {</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>        <span class="kw">auto</span> p2 = p1-&gt;next;</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>        p1-&gt;next = p0;</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>        p0 = p1;</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>        p1 = p2;</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>    }</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>    <span class="cf">return</span> p0;</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>}</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>ListNode *reverse_k_group(ListNode *head, <span class="dt">int</span> k) {</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>, head);</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>    <span class="kw">auto</span> p0 = dummy;</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head;</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>    <span class="cf">while</span> (p1) {</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>        <span class="kw">auto</span> p2 = p0;</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; k; i++) {</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true"></a>            p2 = p2-&gt;next;</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true"></a>            <span class="cf">if</span> (!p2) {</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true"></a>                <span class="cf">break</span>;</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true"></a>            }</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true"></a>        }</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true"></a>        <span class="cf">if</span> (p2) {</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true"></a>            <span class="kw">auto</span> p1_new = p2-&gt;next;</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true"></a>            p2-&gt;next = <span class="kw">nullptr</span>;</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true"></a>            p0-&gt;next = reverse(p0-&gt;next);</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true"></a>            p1-&gt;next = p1_new;</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true"></a>            p0 = p1;</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true"></a>            p1 = p1_new;</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true"></a>            p1 = <span class="kw">nullptr</span>;</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true"></a>        }</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true"></a>    }</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true"></a>    head = dummy-&gt;next;</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    ListNode <span class="op">*</span>p0 <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p1<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p2 <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> p0<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        p0 <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p2<span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p0<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse_k_group<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">,</span> <span class="dt">int</span> k<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">,</span> head<span class="op">);</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p0 <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p1<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p2 <span class="op">=</span> p0<span class="op">;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> k<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            p2 <span class="op">=</span> p2<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(!</span>p2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>p2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            <span class="kw">auto</span> p1_new <span class="op">=</span> p2<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            p2<span class="op">-&gt;</span>next <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            p0<span class="op">-&gt;</span>next <span class="op">=</span> reverse<span class="op">(</span>p0<span class="op">-&gt;</span>next<span class="op">);</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            p1<span class="op">-&gt;</span>next <span class="op">=</span> p1_new<span class="op">;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            p0 <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            p1 <span class="op">=</span> p1_new<span class="op">;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>            p1 <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    head <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="删除排序链表中的重复元素">83 删除排序链表中的重复元素</h1>
 <p>给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>ListNode *rm_duplicate(ListNode *head) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>    <span class="kw">auto</span> p = head;</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a>    <span class="cf">while</span> (p &amp;&amp; p-&gt;next) {</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a>        <span class="cf">if</span> (p-&gt;next-&gt;val == p-&gt;val) {</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a>            <span class="kw">auto</span> p1 = p-&gt;next;</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>            p-&gt;next = p1-&gt;next;</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>            <span class="kw">delete</span> p1;</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true"></a>            p = p-&gt;next;</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true"></a>        }</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true"></a>    }</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>rm_duplicate<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p <span class="op">&amp;&amp;</span> p<span class="op">-&gt;</span>next<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>val <span class="op">==</span> p<span class="op">-&gt;</span>val<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">auto</span> p1 <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            p<span class="op">-&gt;</span>next <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            <span class="kw">delete</span> p1<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="反转链表-ii">92 反转链表 II</h1>
 <p>反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。</p>
 <p>说明: 1 ≤ m ≤ n ≤ 链表长度。</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>ListNode *reverse_between(ListNode *head, <span class="dt">int</span> m, <span class="dt">int</span> n) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>);</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true"></a>    <span class="kw">auto</span> p0 = dummy;</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true"></a>    <span class="dt">int</span> i = <span class="dv">1</span>;</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true"></a>    <span class="cf">while</span> (i &lt; m) {</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true"></a>        i++;</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true"></a>        p0 = p0-&gt;next;</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true"></a>    }</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true"></a>    <span class="kw">auto</span> pre = p0;</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = p0-&gt;next;</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true"></a>    <span class="cf">while</span> (i &lt;= n) {</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true"></a>        i++;</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true"></a>        <span class="kw">auto</span> p2 = p1-&gt;next;</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true"></a>        p1-&gt;next = pre;</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true"></a>        pre = p1;</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true"></a>        p1 = p2;</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true"></a>    }</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true"></a>    p0-&gt;next-&gt;next = p1;</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true"></a>    p0-&gt;next = pre;</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true"></a>    head = dummy-&gt;next;</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse_between<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">,</span> <span class="dt">int</span> m<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p0 <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;</span> m<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        p0 <span class="op">=</span> p0<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> pre <span class="op">=</span> p0<span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> p0<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i <span class="op">&lt;=</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p2 <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> pre<span class="op">;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        pre <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p2<span class="op">;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    p0<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    p0<span class="op">-&gt;</span>next <span class="op">=</span> pre<span class="op">;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    head <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="复制带随机指针的链表">138 复制带随机指针的链表</h1>
 <p>给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random ，该指针可以指向链表中的任何节点或空节点。</p>
 <p>构造这个链表的 深拷贝。 深拷贝应该正好由 n 个 全新 节点组成，其中每个新节点的值都设为其对应的原节点的值。新节点的 next 指针和 random 指针也都应指向复制链表中的新节点，并使原链表和复制链表中的这些指针能够表示相同的链表状态。复制链表中的指针都不应指向原链表中的节点 。</p>
 <p>例如，如果原链表中有 X 和 Y 两个节点，其中 X.random –&gt; Y 。那么在复制链表中对应的两个节点 x 和 y ，同样有 x.random –&gt; y 。</p>
 <p>返回复制链表的头节点。</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>Node *copy_random_list(Node *head) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>    <span class="co">// 交错放置新节点与老节点</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>    <span class="kw">auto</span> p = head;</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="cf">while</span> (p) {</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>        <span class="kw">auto</span> p1 = <span class="kw">new</span> Node(p-&gt;val);</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>        p1-&gt;next = p-&gt;next;</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>        p-&gt;next = p1;</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>        p = p1-&gt;next;</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>    }</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a>    <span class="co">// 更正 random 指针</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a>    p = head;</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>    <span class="cf">while</span> (p) {</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true"></a>        p-&gt;next-&gt;random = p-&gt;random ? p-&gt;random-&gt;next : <span class="kw">nullptr</span>;</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true"></a>        p = p-&gt;next-&gt;next;</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true"></a>    }</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true"></a>    <span class="co">// 更正 next 指针</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true"></a>    <span class="kw">auto</span> head1 = head ? head-&gt;next : <span class="kw">nullptr</span>;</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true"></a>    p = head;</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true"></a>    <span class="cf">while</span> (p) {</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true"></a>        <span class="kw">auto</span> p1 = p-&gt;next;</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true"></a>        p-&gt;next = p1-&gt;next;</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true"></a>        p1-&gt;next = p-&gt;next ? p-&gt;next-&gt;next : <span class="kw">nullptr</span>;</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true"></a>        p = p-&gt;next;</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true"></a>    }</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true"></a>    <span class="cf">return</span> head1;</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Node <span class="op">*</span>copy_random_list<span class="op">(</span>Node <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 交错放置新节点与老节点</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p1 <span class="op">=</span> <span class="kw">new</span> Node<span class="op">(</span>p<span class="op">-&gt;</span>val<span class="op">);</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        p<span class="op">-&gt;</span>next <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 更正 random 指针</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>random <span class="op">=</span> p<span class="op">-&gt;</span>random <span class="op">?</span> p<span class="op">-&gt;</span>random<span class="op">-&gt;</span>next <span class="op">:</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 更正 next 指针</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> head1 <span class="op">=</span> head <span class="op">?</span> head<span class="op">-&gt;</span>next <span class="op">:</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p1 <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        p<span class="op">-&gt;</span>next <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> p<span class="op">-&gt;</span>next <span class="op">?</span> p<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next <span class="op">:</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head1<span class="op">;</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="环形链表">141 环形链表</h1>
 <p>给定一个链表，判断链表中是否有环。</p>
 <p>如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。</p>
 <p>如果链表中存在环，则返回 true 。 否则，返回 false 。</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a><span class="dt">bool</span> has_cycle(ListNode *head) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a>    <span class="kw">auto</span> s = head;</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true"></a>    <span class="kw">auto</span> f = head;</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true"></a>    <span class="cf">while</span> (f &amp;&amp; f-&gt;next) {</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true"></a>        f = f-&gt;next-&gt;next;</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true"></a>        s = s-&gt;next;</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true"></a>        <span class="cf">if</span> (f == s) {</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">true</span>;</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true"></a>        }</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true"></a>    }</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> has_cycle<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> s <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> f <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>f <span class="op">&amp;&amp;</span> f<span class="op">-&gt;</span>next<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        f <span class="op">=</span> f<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> s<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>f <span class="op">==</span> s<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="环形链表-ii">142 环形链表 II</h1>
 <p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
 <p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。</p>
@@ -1381,25 +1383,25 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li>你是否可以使用 O(1) 空间解决此题？</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>ListNode *detect_cycle(ListNode *head) {</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a>    <span class="kw">auto</span> s = head;</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a>    <span class="kw">auto</span> f = head;</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true"></a>    <span class="co">// 找快慢指针的相遇点</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true"></a>    <span class="cf">while</span> (f &amp;&amp; f-&gt;next) {</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true"></a>        f = f-&gt;next-&gt;next;</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true"></a>        s = s-&gt;next;</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true"></a>        <span class="cf">if</span> (f == s) {</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true"></a>            <span class="co">// 找环的起点</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true"></a>            f = head;</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true"></a>            <span class="cf">while</span> (f != s) {</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true"></a>                f = f-&gt;next;</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true"></a>                s = s-&gt;next;</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true"></a>            }</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true"></a>            <span class="cf">return</span> f;</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true"></a>        }</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true"></a>    }</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">nullptr</span>;</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>detect_cycle<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> s <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> f <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 找快慢指针的相遇点</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>f <span class="op">&amp;&amp;</span> f<span class="op">-&gt;</span>next<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        f <span class="op">=</span> f<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> s<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>f <span class="op">==</span> s<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 找环的起点</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>            f <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="op">(</span>f <span class="op">!=</span> s<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                f <span class="op">=</span> f<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>                s <span class="op">=</span> s<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> f<span class="op">;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="链表排序">148 链表排序</h1>
 <p>给你链表的头结点 head，请将其按升序排列并返回排序后的链表。</p>
 <h2 id="自底向上归并排序">自底向上归并排序</h2>
@@ -1407,74 +1409,74 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(n\log n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>ListNode *merge(ListNode *h1, ListNode *h2) {</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a>    <span class="kw">auto</span> dummy = <span class="kw">new</span> ListNode(<span class="dv">0</span>);</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true"></a>    <span class="kw">auto</span> p = dummy;</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true"></a>    <span class="cf">while</span> (h1 &amp;&amp; h2) {</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true"></a>        <span class="cf">if</span> (h1-&gt;val &lt;= h2-&gt;val) {</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true"></a>            p-&gt;next = h1;</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true"></a>            h1 = h1-&gt;next;</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true"></a>            p-&gt;next = h2;</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true"></a>            h2 = h2-&gt;next;</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true"></a>        }</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true"></a>        p = p-&gt;next;</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true"></a>    }</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true"></a>    p-&gt;next = h1 ? h1 : h2;</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true"></a>    <span class="kw">auto</span> h = dummy-&gt;next;</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true"></a>    <span class="cf">return</span> h;</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true"></a>}</span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true"></a></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true"></a>ListNode *sort_list(ListNode *head) {</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true"></a>    <span class="dt">int</span> n = <span class="dv">0</span>;</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true"></a>    <span class="kw">auto</span> p = head;</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true"></a>    <span class="cf">while</span> (p) {</span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true"></a>        n++;</span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true"></a>        p = p-&gt;next;</span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true"></a>    }</span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true"></a>    <span class="kw">auto</span> dummy= <span class="kw">new</span> ListNode(<span class="dv">0</span>, head);</span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> sub_size = <span class="dv">1</span>; sub_size &lt; n; sub_size &lt;&lt;= <span class="dv">1</span>) {</span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true"></a>        <span class="kw">auto</span> p0 = dummy;</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true"></a>        p = dummy-&gt;next;</span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true"></a>        <span class="cf">while</span> (p) {</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true"></a>            <span class="kw">auto</span> h1 = p;</span>
-<span id="cb11-33"><a href="#cb11-33" aria-hidden="true"></a>            <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt; sub_size &amp;&amp; p-&gt;next; i++) {</span>
-<span id="cb11-34"><a href="#cb11-34" aria-hidden="true"></a>                p = p-&gt;next;</span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true"></a>            }</span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true"></a>            <span class="kw">auto</span> h2 = p-&gt;next;</span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true"></a>            p-&gt;next = <span class="kw">nullptr</span>;</span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true"></a>            p = h2;</span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true"></a>            <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt; sub_size &amp;&amp; p &amp;&amp; p-&gt;next; i++) {</span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true"></a>                p = p-&gt;next;</span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true"></a>            }</span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true"></a>            ListNode *p_new = <span class="kw">nullptr</span>;</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true"></a>            <span class="cf">if</span> (p) {</span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true"></a>                p_new = p-&gt;next;</span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true"></a>                p-&gt;next = <span class="kw">nullptr</span>;</span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true"></a>            }</span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true"></a>            p0-&gt;next = merge(h1, h2);</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true"></a>            <span class="cf">while</span> (p0-&gt;next) {</span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true"></a>                p0 = p0-&gt;next;</span>
-<span id="cb11-50"><a href="#cb11-50" aria-hidden="true"></a>            }</span>
-<span id="cb11-51"><a href="#cb11-51" aria-hidden="true"></a>            p = p_new;</span>
-<span id="cb11-52"><a href="#cb11-52" aria-hidden="true"></a>        }</span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true"></a>    }</span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true"></a>    head = dummy-&gt;next;</span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true"></a>    <span class="kw">delete</span> dummy;</span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true"></a>    <span class="cf">return</span> head;</span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>merge<span class="op">(</span>ListNode <span class="op">*</span>h1<span class="op">,</span> ListNode <span class="op">*</span>h2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>h1 <span class="op">&amp;&amp;</span> h2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>h1<span class="op">-&gt;</span>val <span class="op">&lt;=</span> h2<span class="op">-&gt;</span>val<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>            p<span class="op">-&gt;</span>next <span class="op">=</span> h1<span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>            h1 <span class="op">=</span> h1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>            p<span class="op">-&gt;</span>next <span class="op">=</span> h2<span class="op">;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            h2 <span class="op">=</span> h2<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    p<span class="op">-&gt;</span>next <span class="op">=</span> h1 <span class="op">?</span> h1 <span class="op">:</span> h2<span class="op">;</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> h <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> h<span class="op">;</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>sort_list<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>        n<span class="op">++;</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy<span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">,</span> head<span class="op">);</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> sub_size <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> sub_size <span class="op">&lt;</span> n<span class="op">;</span> sub_size <span class="op">&lt;&lt;=</span> <span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p0 <span class="op">=</span> dummy<span class="op">;</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>            <span class="kw">auto</span> h1 <span class="op">=</span> p<span class="op">;</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> sub_size <span class="op">&amp;&amp;</span> p<span class="op">-&gt;</span>next<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>                p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>            <span class="kw">auto</span> h2 <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>            p<span class="op">-&gt;</span>next <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>            p <span class="op">=</span> h2<span class="op">;</span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> sub_size <span class="op">&amp;&amp;</span> p <span class="op">&amp;&amp;</span> p<span class="op">-&gt;</span>next<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>                p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>            ListNode <span class="op">*</span>p_new <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>                p_new <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>                p<span class="op">-&gt;</span>next <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>            p0<span class="op">-&gt;</span>next <span class="op">=</span> merge<span class="op">(</span>h1<span class="op">,</span> h2<span class="op">);</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> <span class="op">(</span>p0<span class="op">-&gt;</span>next<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>                p0 <span class="op">=</span> p0<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>            p <span class="op">=</span> p_new<span class="op">;</span></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>    head <span class="op">=</span> dummy<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="相交链表">160 相交链表</h1>
 <p>编写一个程序，找到两个单链表相交的起始节点。</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>ListNode *get_intersection_node(ListNode *head1, ListNode *head2) {</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head1;</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a>    <span class="kw">auto</span> p2 = head2;</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true"></a>    <span class="cf">while</span> (p1 != p2) {</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true"></a>        p1 = p1 ? p1-&gt;next : head2;</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true"></a>        p2 = p2 ? p2-&gt;next : head1;</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true"></a>    }</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true"></a>    <span class="cf">return</span> p1;</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>get_intersection_node<span class="op">(</span>ListNode <span class="op">*</span>head1<span class="op">,</span> ListNode <span class="op">*</span>head2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head1<span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p2 <span class="op">=</span> head2<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p1 <span class="op">!=</span> p2<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p1 <span class="op">?</span> p1<span class="op">-&gt;</span>next <span class="op">:</span> head2<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        p2 <span class="op">=</span> p2 <span class="op">?</span> p2<span class="op">-&gt;</span>next <span class="op">:</span> head1<span class="op">;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p1<span class="op">;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="反转链表">206 反转链表</h1>
 <p>反转一个单链表。</p>
 <p>示例:</p>
@@ -1484,57 +1486,57 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a>ListNode *reverse_list(ListNode *head) {</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a>    ListNode *p0 = <span class="kw">nullptr</span>;</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head;</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true"></a>    <span class="cf">while</span> (p1) {</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true"></a>        <span class="kw">auto</span> p2 = p1-&gt;next;</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true"></a>        p1-&gt;next = p0;</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true"></a>        p0 = p1;</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true"></a>        p1 = p2;</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true"></a>    }</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true"></a>    <span class="cf">return</span> p0;</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse_list<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    ListNode <span class="op">*</span>p0 <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p1<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p2 <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> p0<span class="op">;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        p0 <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p2<span class="op">;</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p0<span class="op">;</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="回文链表">234 回文链表</h1>
 <p>请判断一个链表是否为回文链表。</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>ListNode *reverse(ListNode *head) {</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a>    ListNode *p0 = <span class="kw">nullptr</span>;</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true"></a>    <span class="kw">auto</span> p1 = head;</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true"></a>    <span class="cf">while</span> (p1) {</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true"></a>        <span class="kw">auto</span> p2 = p1-&gt;next;</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true"></a>        p1-&gt;next = p0;</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true"></a>        p0 = p1;</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true"></a>        p1 = p2;</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true"></a>    }</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true"></a>    <span class="cf">return</span> p0;</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true"></a>}</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true"></a></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true"></a><span class="dt">bool</span> is_palindrome(ListNode *head) {</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true"></a>    <span class="kw">auto</span> s = head;</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true"></a>    <span class="kw">auto</span> f = head;</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true"></a>    <span class="cf">while</span> (f &amp;&amp; f-&gt;next) {</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true"></a>        f = f-&gt;next-&gt;next;</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true"></a>        s = s-&gt;next;</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true"></a>    }</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true"></a>    <span class="cf">if</span> (f) {</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true"></a>        s = s-&gt;next;</span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true"></a>    }</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true"></a>    <span class="kw">auto</span> tail = reverse(s);</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true"></a>    <span class="kw">auto</span> l = head;</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true"></a>    <span class="kw">auto</span> r = tail;</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true"></a>    <span class="dt">bool</span> result = <span class="kw">true</span>;</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true"></a>    <span class="cf">while</span> (r) {</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true"></a>        <span class="cf">if</span> (r-&gt;val != l-&gt;val) {</span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true"></a>            result = <span class="kw">false</span>;</span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true"></a>            <span class="cf">break</span>;</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true"></a>            r = r-&gt;next;</span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true"></a>            l = l-&gt;next;</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true"></a>        }</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true"></a>    }</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true"></a>    reverse(tail);</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    ListNode <span class="op">*</span>p0 <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p1<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">auto</span> p2 <span class="op">=</span> p1<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        p1<span class="op">-&gt;</span>next <span class="op">=</span> p0<span class="op">;</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        p0 <span class="op">=</span> p1<span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> p2<span class="op">;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p0<span class="op">;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> is_palindrome<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> s <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> f <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>f <span class="op">&amp;&amp;</span> f<span class="op">-&gt;</span>next<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        f <span class="op">=</span> f<span class="op">-&gt;</span>next<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> s<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>f<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> s<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> tail <span class="op">=</span> reverse<span class="op">(</span>s<span class="op">);</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> l <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> r <span class="op">=</span> tail<span class="op">;</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">bool</span> result <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>r<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>r<span class="op">-&gt;</span>val <span class="op">!=</span> l<span class="op">-&gt;</span>val<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>            r <span class="op">=</span> r<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>            l <span class="op">=</span> l<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>    reverse<span class="op">(</span>tail<span class="op">);</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="链表随机节点">382 链表随机节点</h1>
 <p>给定一个单链表，随机选择链表的一个节点，并返回相应的节点值。保证每个节点被选的概率一样。</p>
 <p>进阶：如果链表十分大且长度未知，如何解决这个问题？你能否使用常数级空间复杂度实现？</p>
@@ -1554,29 +1556,29 @@ P(i) &amp;= \frac{k}{i}\times (1 -
 &amp;= \frac{k}{n}
 \end{align}
 \qquad(1)\]</span></span></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a><span class="kw">class</span> Solution {</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a>  <span class="kw">private</span>:</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true"></a>    ListNode *head;</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true"></a>  <span class="kw">public</span>:</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true"></a>    Solution(ListNode *head) : head{head} {}</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true"></a>    <span class="dt">int</span> get_random();</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true"></a>}</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true"></a><span class="dt">int</span> Solution::get_random() {</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true"></a>    <span class="kw">auto</span> p = head;</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true"></a>    <span class="dt">int</span> i = <span class="dv">1</span>;</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true"></a>    <span class="dt">int</span> result = <span class="dv">0</span>;</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true"></a>    <span class="cf">while</span> (p) {</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true"></a>        <span class="dt">int</span> j = rand() % i;</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true"></a>        <span class="cf">if</span> (j == <span class="dv">0</span>) {</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true"></a>            result = p-&gt;val;</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true"></a>        }</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true"></a>        i++;</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true"></a>        p = p-&gt;next;</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true"></a>    }</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true"></a>    <span class="cf">return</span> result;</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution <span class="op">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span><span class="op">:</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    ListNode <span class="op">*</span>head<span class="op">;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span><span class="op">:</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    Solution<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">:</span> head<span class="op">{</span>head<span class="op">}</span> <span class="op">{}</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> get_random<span class="op">();</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> Solution<span class="op">::</span>get_random<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> head<span class="op">;</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> result <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> j <span class="op">=</span> rand<span class="op">()</span> <span class="op">%</span> i<span class="op">;</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>j <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>            result <span class="op">=</span> p<span class="op">-&gt;</span>val<span class="op">;</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        i<span class="op">++;</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> p<span class="op">-&gt;</span>next<span class="op">;</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>

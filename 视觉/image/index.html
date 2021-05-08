@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="图像" />
 <meta property="og:description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake ." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/" /><meta property="article:section" content="视觉" />
+
+
 
 <title>图像 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1159,7 +1161,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="imagemagick">ImageMagick</h1>
 <h2 id="裁剪中间部分">裁剪中间部分</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">convert</span> a.png -gravity center -crop 16384x16384+0+0 b.png</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">convert</span> a.png <span class="at">-gravity</span> center <span class="at">-crop</span> 16384x16384+0+0 b.png</span></code></pre></div>
 <h1 id="压缩">压缩</h1>
 <h2 id="jpg">JPG</h2>
 <h3 id="jpegoptim">jpegoptim</h3>
@@ -1183,17 +1185,17 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="colmap">colmap</h1>
 <h2 id="安装colmap_installation">安装<span class="citation" data-cites="colmap_installation"><sup>[<a href="#ref-colmap_installation" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">git</span> clone https://github.com/colmap/colmap.git</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="bu">cd</span> colmap</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="fu">git</span> checkout dev</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="fu">mkdir</span> build</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="bu">cd</span> build</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">cmake</span> ..</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="va">CC=</span>/usr/bin/gcc <span class="va">CXX=</span>/usr/bin/g++ <span class="fu">make</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="fu">sudo</span> make install</span></code></pre></div>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-colmap_installation">
-<p>[1] COLMAP. Installation[EB/OL]([日期不详]). <a href="https://colmap.github.io/install.html#linux">https://colmap.github.io/install.html#linux</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/colmap/colmap.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> colmap</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout dev</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> build</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="va">CC</span><span class="op">=</span>/usr/bin/gcc <span class="va">CXX</span><span class="op">=</span>/usr/bin/g++ <span class="fu">cmake</span> ..</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="va">CC</span><span class="op">=</span>/usr/bin/gcc <span class="va">CXX</span><span class="op">=</span>/usr/bin/g++ <span class="fu">make</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> make install</span></code></pre></div>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-colmap_installation" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">COLMAP. Installation[EB/OL]([日期不详]). <a href="https://colmap.github.io/install.html#linux">https://colmap.github.io/install.html#linux</a>.</div>
 </div>
 </div>
 

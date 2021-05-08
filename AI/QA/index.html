@@ -14,13 +14,15 @@
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
  在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  GBDT &#43; LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/AI/QA/" />
-<meta property="article:modified_time" content="2021-03-14T13:46:20+00:00" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/AI/QA/" /><meta property="article:section" content="AI" />
+
+<meta property="article:modified_time" content="2021-03-14T13:46:20&#43;00:00" />
+
 <title>QA | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1104,7 +1106,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  

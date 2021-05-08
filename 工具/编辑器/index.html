@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="编辑器" />
 <meta property="og:description" content="Visual Studio Code 插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.code-spell-checker 拼写检查   stkb.rewrap 断行   llvm-vs-code-extensions.vscode-clangd C、C&#43;&#43;   ms-vscode.cmake-tools cmake     快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl &#43; P Go to File…  Ctrl &#43; Shift &#43; P Show All Commands  Alt &#43; Q 断行    Vim 包管理器 安装 curl -fLo ~/." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/" /><meta property="article:section" content="工具" />
+
+
 
 <title>编辑器 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1216,17 +1218,17 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="vim">Vim</h1>
 <h2 id="包管理器">包管理器</h2>
 <h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">curl</span> -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs <span class="kw">\</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="ex">https</span>://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fLo</span> ~/.local/share/nvim/site/autoload/plug.vim <span class="at">--create-dirs</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span></code></pre></div>
 <h3 id="使用">使用</h3>
 <pre class="vim"><code>:PlugInstall  &quot; 安装插件
 :PlugUpdate   &quot; 升级插件
 :PlugUpgrade  &quot; 升级 plug</code></pre>
 <h3 id="安装依赖的二进制">安装依赖的二进制</h3>
 <h4 id="rust">rust</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rustup</span> component add rls rust-analysis rust-src</span></code></pre></div>
 <h4 id="cmake">cmake</h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">pip</span> install --user cmake_format</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--user</span> cmake_format</span></code></pre></div>
 <h3 id="coc">coc</h3>
 <pre class="vim"><code>:CocInstall coc-clangd
 :CocInstall coc-flutter
@@ -1251,7 +1253,7 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="打开文件">打开文件</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nvim</span> <span class="va">$(</span><span class="ex">fzf</span><span class="va">)</span></span></code></pre></div>
 <h2 id="快捷键-1">快捷键</h2>
 <div id="tbl:vim_shotcuts">
 <table>
@@ -1341,9 +1343,9 @@ https://github.com/alex-shpak/hugo-book
 <p><code>File</code> -&gt; <code>Settings</code> -&gt; <code>Editor</code> -&gt; <code>Font</code>。</p>
 <h3 id="菜单字体">菜单字体</h3>
 <p><code>File</code> -&gt; <code>Settings</code> -&gt; <code>Appearance &amp; Behavior</code> -&gt; <code>Appearance</code>。</p>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-vimNoremap">
-<p>[1] DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). <a href="https://stackoverflow.com/a/3776182">https://stackoverflow.com/a/3776182</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-vimNoremap" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">DRAI. What is the difference between the remap, noremap, nnoremap and vnoremap mapping commands in Vim?[EB/OL](2010–09–23). <a href="https://stackoverflow.com/a/3776182">https://stackoverflow.com/a/3776182</a>.</div>
 </div>
 </div>
 

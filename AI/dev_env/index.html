@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="开发环境" />
 <meta property="og:description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/AI/dev_env/" />
-<meta property="article:modified_time" content="2020-10-19T11:27:54+00:00" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/AI/dev_env/" /><meta property="article:section" content="AI" />
+
+<meta property="article:modified_time" content="2020-10-19T11:27:54&#43;00:00" />
+
 <title>开发环境 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1167,42 +1169,42 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h2 id="安装驱动">安装驱动</h2>
 <h3 id="ubuntu">Ubuntu</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="fu">sudo</span> add-apt-repository ppa:graphics-drivers/ppa</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ex">ubuntu-drivers</span> devices  # 查看推荐的驱动</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="fu">sudo</span> apt install nvidia-430  # 安装驱动</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository ppa:graphics-drivers/ppa</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ubuntu-drivers</span> devices  <span class="co"># 查看推荐的驱动</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install nvidia-430  <span class="co"># 安装驱动</span></span></code></pre></div>
 <h1 id="docker">Docker</h1>
 <h2 id="docker-19.03">Docker &gt;= 19.03</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">docker</span> run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--gpus</span><span class="op">=</span>all <span class="at">--shm-size</span><span class="op">=</span>64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
 <h2 id="docker-19.03-1">Docker &lt; 19.03</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="ex">nvidia-docker</span> run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nvidia-docker</span> run <span class="at">--shm-size</span><span class="op">=</span>64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
 <h1 id="jupyter-lab">Jupyter Lab</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">pip</span> install jupyterlab</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jupyterlab</span></code></pre></div>
 <h2 id="使用">使用</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">jupyter</span> lab</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab</span></code></pre></div>
 <h1 id="jupyter">Jupyter</h1>
 <h2 id="jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</h2>
 <h3 id="安装-1">安装</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="ex">pip</span> install jupyter_contrib_nbextensions</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="ex">jupyter</span> contrib nbextension install --user</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jupyter_contrib_nbextensions</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> contrib nbextension install <span class="at">--user</span></span></code></pre></div>
 <h3 id="使用-1">使用</h3>
 <p>打开 <code>http://&lt;host&gt;:&lt;port&gt;/nbextensions</code> 管理。</p>
 <h1 id="pytorch">PyTorch</h1>
 <h2 id="安装-2">安装</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="ex">pip</span> install torch torchvision</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install torch torchvision</span></code></pre></div>
 <h2 id="计算精度">计算精度</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>correct <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a><span class="cf">with</span> torch.no_grad():</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a>    <span class="cf">for</span> data <span class="kw">in</span> testloader:</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a>        images, labels <span class="op">=</span> data</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>        outputs <span class="op">=</span> net(images)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a>        _, predicted <span class="op">=</span> torch.<span class="bu">max</span>(outputs.data, <span class="dv">1</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a>        total <span class="op">+=</span> labels.size(<span class="dv">0</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>        correct <span class="op">+=</span> (predicted <span class="op">==</span> labels).<span class="bu">sum</span>().item()</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&#39;Accuracy of the network on the 10000 test images: </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%%</span><span class="st">&#39;</span> <span class="op">%</span> (</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true"></a>    <span class="dv">100</span> <span class="op">*</span> correct <span class="op">/</span> total))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>correct <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> data <span class="kw">in</span> testloader:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        images, labels <span class="op">=</span> data</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        outputs <span class="op">=</span> net(images)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        _, predicted <span class="op">=</span> torch.<span class="bu">max</span>(outputs.data, <span class="dv">1</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> labels.size(<span class="dv">0</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        correct <span class="op">+=</span> (predicted <span class="op">==</span> labels).<span class="bu">sum</span>().item()</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Accuracy of the network on the 10000 test images: </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%%</span><span class="st">&#39;</span> <span class="op">%</span> (</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="dv">100</span> <span class="op">*</span> correct <span class="op">/</span> total))</span></code></pre></div>
 <h2 id="模型">模型</h2>
 <ul>
 <li>evaluate 模型时，代码需要包含在 <code>with torch.no_grad():</code> 里，避免计算梯度</li>
@@ -1251,13 +1253,13 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="device">device</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span>)</span></code></pre></div>
 <h2 id="module">Module</h2>
 <p><code>net.zero_grad()</code> 可以清空存在的梯度，不然梯度会累积。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-cuda_driver_version">
-<p>[1] NVIDIA. CUDA Compatibility[EB/OL]([日期不详]). <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html">https://docs.nvidia.com/deploy/cuda-compatibility/index.html</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-cuda_driver_version" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">NVIDIA. CUDA Compatibility[EB/OL]([日期不详]). <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html">https://docs.nvidia.com/deploy/cuda-compatibility/index.html</a>.</div>
 </div>
 </div>
 

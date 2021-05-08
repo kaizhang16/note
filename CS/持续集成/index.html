@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="持续集成" />
 <meta property="og:description" content="Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" /><meta property="article:section" content="CS" />
+
+
 
 <title>持续集成 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1155,90 +1157,90 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<a href="#ref-ansibleDirectoryLayout" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">inventories/</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>    <span class="ex">production/</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>        <span class="ex">hosts</span>               # inventory file for production servers</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>        <span class="ex">group_vars/</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>            <span class="ex">group1.yml</span>      # here we assign variables to particular groups</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>            <span class="ex">group2.yml</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>        <span class="ex">host_vars/</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>            <span class="ex">hostname1.yml</span>   # here we assign variables to particular systems</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>            <span class="ex">hostname2.yml</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>    <span class="ex">staging/</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>        <span class="ex">hosts</span>               # inventory file for staging environment</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>        <span class="ex">group_vars/</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>            <span class="ex">group1.yml</span>      # here we assign variables to particular groups</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>            <span class="ex">group2.yml</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a>        <span class="ex">host_vars/</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>            <span class="ex">stagehost1.yml</span>  # here we assign variables to particular systems</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>            <span class="ex">stagehost2.yml</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a><span class="ex">library/</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a><span class="ex">module_utils/</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a><span class="ex">filter_plugins/</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a><span class="ex">site.yml</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a><span class="ex">webservers.yml</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a><span class="ex">dbservers.yml</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a><span class="ex">roles/</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>    <span class="ex">common/</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>    <span class="ex">webtier/</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true"></a>    <span class="ex">monitoring/</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true"></a>    <span class="ex">fooapp/</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">inventories/</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">production/</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="ex">hosts</span>               <span class="co"># inventory file for production servers</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="ex">group_vars/</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="ex">group1.yml</span>      <span class="co"># here we assign variables to particular groups</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="ex">group2.yml</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="ex">host_vars/</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="ex">hostname1.yml</span>   <span class="co"># here we assign variables to particular systems</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="ex">hostname2.yml</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">staging/</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="ex">hosts</span>               <span class="co"># inventory file for staging environment</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="ex">group_vars/</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="ex">group1.yml</span>      <span class="co"># here we assign variables to particular groups</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="ex">group2.yml</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="ex">host_vars/</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="ex">stagehost1.yml</span>  <span class="co"># here we assign variables to particular systems</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            <span class="ex">stagehost2.yml</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ex">library/</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ex">module_utils/</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ex">filter_plugins/</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ex">site.yml</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ex">webservers.yml</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ex">dbservers.yml</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ex">roles/</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="ex">common/</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="ex">webtier/</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="ex">monitoring/</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="ex">fooapp/</span></span></code></pre></div>
 <h2 id="依赖">依赖</h2>
 <p><code>meta/main.yml</code>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre></div>
 <h2 id="嵌套循环">嵌套循环</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># main.yml</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="kw">-</span><span class="at"> </span><span class="fu">include_tasks</span><span class="kw">:</span><span class="at"> inner.yml</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">1</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">2</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">3</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="at">  </span><span class="fu">loop_control</span><span class="kw">:</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="at">    </span><span class="fu">loop_var</span><span class="kw">:</span><span class="at"> outer_item</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co"># inner.yml</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="kw">-</span><span class="at"> </span><span class="fu">debug</span><span class="kw">:</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a><span class="at">    </span><span class="fu">msg</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;outer item={{ outer_item }} inner item={{ item }}&quot;</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> a</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> b</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a><span class="at">    </span><span class="kw">-</span><span class="at"> c</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.yml</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">include_tasks</span><span class="kw">:</span><span class="at"> inner.yml</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">loop_control</span><span class="kw">:</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">loop_var</span><span class="kw">:</span><span class="at"> outer_item</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># inner.yml</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">debug</span><span class="kw">:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">msg</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;outer item={{ outer_item }} inner item={{ item }}&quot;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> a</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> b</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> c</span></span></code></pre></div>
 <h2 id="自定义-ssh-端口">自定义 ssh 端口</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">[webservers]</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="dt">web01.somedomain.com ansible_port</span><span class="ot">=</span><span class="dv">1234</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[webservers]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">web01.somedomain.com ansible_port</span><span class="ot">=</span><span class="dv">1234</span></span></code></pre></div>
 <h2 id="ansible-vault">Ansible Vault</h2>
 <h1 id="systemd">systemd</h1>
 <h2 id="文件目录">文件目录</h2>
 <p>请放在 <code>/etc/systemd/system/</code> 下面。<span class="citation" data-cites="systemd_dir"><sup>[<a href="#ref-systemd_dir" role="doc-biblioref">2</a>]</sup></span></p>
 <h2 id="查看-mount-的转义路径">查看 mount 的转义路径</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="ex">systemd-escape</span> -p --suffix=mount <span class="st">&quot;/tmp//waldi/foobar/&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">systemd-escape</span> <span class="at">-p</span> <span class="at">--suffix</span><span class="op">=</span>mount <span class="st">&quot;/tmp//waldi/foobar/&quot;</span></span></code></pre></div>
 <h1 id="github">GitHub</h1>
 <h2 id="actions">Actions</h2>
 <h3 id="加密信息">加密信息</h3>
 <p>请参考 <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets" class="uri">https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets</a>。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-ansibleDirectoryLayout">
-<p>[1] ANSIBLE. Alternative Directory Layout[EB/OL]([日期不详]). <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout">https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-ansibleDirectoryLayout" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">ANSIBLE. Alternative Directory Layout[EB/OL]([日期不详]). <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout">https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#alternative-directory-layout</a>.</div>
 </div>
-<div id="ref-systemd_dir">
-<p>[2] KOMAR J. Where do I put my systemd unit file?[EB/OL](2017–05–25). <a href="https://unix.stackexchange.com/a/367237">https://unix.stackexchange.com/a/367237</a>.</p>
+<div id="ref-systemd_dir" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">KOMAR J. Where do I put my systemd unit file?[EB/OL](2017–05–25). <a href="https://unix.stackexchange.com/a/367237">https://unix.stackexchange.com/a/367237</a>.</div>
 </div>
 </div>
 

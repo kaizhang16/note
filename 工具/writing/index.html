@@ -6,19 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Pandoc 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 打印默认模板 pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]]  },  svg: {  fontCache: &#39;global&#39;  } }; &lt;/script&gt; &lt;scripttype=&quot;text/javascript&quot;id=&quot;MathJax-script&quot;async src=&quot;https://cdn.">
+MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]]  },  svg: {  fontCache: &#39;global&#39;  } }; &lt;/script&gt; &lt;scripttype=&quot;text/javascript&quot; id=&quot;MathJax-script&quot; async src=&quot;https://cdn.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="写作" />
 <meta property="og:description" content="Pandoc 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 打印默认模板 pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
 Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]]  },  svg: {  fontCache: &#39;global&#39;  } }; &lt;/script&gt; &lt;scripttype=&quot;text/javascript&quot;id=&quot;MathJax-script&quot;async src=&quot;https://cdn." />
+MathJax &lt;script&gt; MathJax = {  tex: {  inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]]  },  svg: {  fontCache: &#39;global&#39;  } }; &lt;/script&gt; &lt;scripttype=&quot;text/javascript&quot; id=&quot;MathJax-script&quot; async src=&quot;https://cdn." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/" /><meta property="article:section" content="工具" />
+
+
 
 <title>写作 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1102,7 +1104,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1141,25 +1143,25 @@ https://github.com/alex-shpak/hugo-book
       
   <article class="markdown"><h1 id="pandoc">Pandoc</h1>
 <h2 id="安装">安装</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">nix-env</span> -iA nixpkgs.haskellPackages.pandoc-citeproc</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ex">nix-env</span> -iA nixpkgs.haskellPackages.pandoc-crossref</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nix-env</span> <span class="at">-iA</span> nixpkgs.haskellPackages.pandoc-citeproc</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nix-env</span> <span class="at">-iA</span> nixpkgs.haskellPackages.pandoc-crossref</span></code></pre></div>
 <h2 id="打印默认模板">打印默认模板</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">pandoc</span> --print-default-template=html</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--print-default-template</span><span class="op">=</span>html</span></code></pre></div>
 <h1 id="静态网站生成器">静态网站生成器</h1>
 <p>静态网站生成器列表：<a href="https://www.staticgen.com/" class="uri">https://www.staticgen.com/</a>。</p>
 <h2 id="hugo">Hugo</h2>
 <h3 id="常用命令">常用命令</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="co"># 查看程序版本</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="ex">hugo</span> version</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="co"># 创建网站</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a><span class="ex">hugo</span> new site quickstart</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a><span class="co"># 添加主题</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a><span class="fu">git</span> submodule add https://github.com/ribice/kiss.git themes/kiss</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a><span class="co"># 添加内容</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a><span class="ex">hugo</span> new posts/my-first-post.md</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 查看程序版本</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> version</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建网站</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> new site quickstart</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加主题</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> submodule add https://github.com/ribice/kiss.git themes/kiss</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加内容</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ex">hugo</span> new posts/my-first-post.md</span></code></pre></div>
 <h3 id="主题">主题</h3>
 <ul>
 <li>文档：<a href="https://github.com/alex-shpak/hugo-book" class="uri">https://github.com/alex-shpak/hugo-book</a></li>
@@ -1168,19 +1170,19 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="部署到-github-pages">部署到 GitHub Pages</h2>
 <p>请参考 <a href="https://github.com/peaceiris/actions-gh-pages#getting-started" class="uri">https://github.com/peaceiris/actions-gh-pages#getting-started</a>。</p>
 <h2 id="mathjax">MathJax</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="kw">&lt;script&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>MathJax <span class="op">=</span> {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>  <span class="dt">tex</span><span class="op">:</span> {</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="dt">inlineMath</span><span class="op">:</span> [[<span class="st">&#39;$&#39;</span><span class="op">,</span> <span class="st">&#39;$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">(&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">)&#39;</span>]]</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>  }<span class="op">,</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>  <span class="dt">svg</span><span class="op">:</span> {</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="dt">fontCache</span><span class="op">:</span> <span class="st">&#39;global&#39;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>  }</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>}<span class="op">;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a><span class="kw">&lt;/script&gt;</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> id=</span><span class="st">&quot;MathJax-script&quot;</span><span class="ot"> async</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a><span class="ot">  src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>MathJax <span class="op">=</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">tex</span><span class="op">:</span> {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">inlineMath</span><span class="op">:</span> [[<span class="st">&#39;$&#39;</span><span class="op">,</span> <span class="st">&#39;$&#39;</span>]<span class="op">,</span> [<span class="st">&#39;</span><span class="sc">\\</span><span class="st">(&#39;</span><span class="op">,</span> <span class="st">&#39;</span><span class="sc">\\</span><span class="st">)&#39;</span>]]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">svg</span><span class="op">:</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontCache</span><span class="op">:</span> <span class="st">&#39;global&#39;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;MathJax-script&quot;</span> <span class="er">async</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ot">  src=</span><span class="st">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
 <blockquote>
 <p><code>MathJax</code> 对象需要在加载 MathJax 脚本前初始化。</p>
 </blockquote>

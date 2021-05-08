@@ -16,13 +16,15 @@
 题目数据保证答案肯定是一个 32 位 的整数。
 动态规划 int num_decode(string s) {  int n = s.size();  if (n == 0) {  return 0;  }  // dp[i]: num_decode(s[:i])  vector&lt;int&gt; dp(n &#43; 1, 0);  dp[0] = 1;  dp[1] = (s[0] - &#39;0&#39; == 0 ?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" /><meta property="article:section" content="LeetCode" />
+
+
 
 <title>动态规划 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1106,7 +1108,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1146,57 +1148,57 @@ https://github.com/alex-shpak/hugo-book
   <article class="markdown"><h1 id="一维">一维</h1>
 <h2 id="解码方法">91 解码方法</h2>
 <p>一条包含字母 A-Z 的消息通过以下映射进行了 编码 ：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ch">&#39;A&#39;</span> -&gt; <span class="dv">1</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ch">&#39;B&#39;</span> -&gt; <span class="dv">2</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>...</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="ch">&#39;Z&#39;</span> -&gt; <span class="dv">26</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ch">&#39;A&#39;</span> <span class="op">-&gt;</span> <span class="dv">1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ch">&#39;B&#39;</span> <span class="op">-&gt;</span> <span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ch">&#39;Z&#39;</span> <span class="op">-&gt;</span> <span class="dv">26</span></span></code></pre></div>
 <p>要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。例如，“111” 可以将 “1” 中的每个 “1” 映射为 “A” ，从而得到 “AAA” ，或者可以将 “11” 和 “1”（分别为 “K” 和 “A” ）映射为 “KA” 。注意，“06” 不能映射为 “F” ，因为 “6” 和 “06” 不同。</p>
 <p>给你一个只含数字的 非空 字符串 num ，请计算并返回 解码 方法的 总数 。</p>
 <p>题目数据保证答案肯定是一个 32 位 的整数。</p>
 <h3 id="动态规划">动态规划</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="dt">int</span> num_decode(string s) {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>    <span class="dt">int</span> n = s.size();</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="cf">if</span> (n == <span class="dv">0</span>) {</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>        <span class="cf">return</span> <span class="dv">0</span>;</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    }</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    <span class="co">// dp[i]: num_decode(s[:i])</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    vector&lt;<span class="dt">int</span>&gt; dp(n + <span class="dv">1</span>, <span class="dv">0</span>);</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>    dp[<span class="dv">0</span>] = <span class="dv">1</span>;</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>    dp[<span class="dv">1</span>] = (s[<span class="dv">0</span>] - <span class="ch">&#39;0&#39;</span> == <span class="dv">0</span> ? <span class="dv">0</span> : <span class="dv">1</span>);</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">2</span>; i &lt;= n; i++) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>        <span class="cf">if</span> (s[i - <span class="dv">1</span>] - <span class="ch">&#39;0&#39;</span> != <span class="dv">0</span>) {</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>            dp[i] += dp[i - <span class="dv">1</span>];</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>        }</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>        <span class="cf">if</span> (s[i - <span class="dv">2</span>] - <span class="ch">&#39;0&#39;</span> == <span class="dv">1</span> ||</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>            (s[i - <span class="dv">2</span>] - <span class="ch">&#39;0&#39;</span> == <span class="dv">2</span> &amp;&amp; s[i - <span class="dv">1</span>] - <span class="ch">&#39;0&#39;</span> &lt;= <span class="dv">6</span>)) {</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>            dp[i] += dp[i - <span class="dv">2</span>];</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>        }</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>    }</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a>    <span class="cf">return</span> dp[n];</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> num_decode<span class="op">(</span>string s<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> s<span class="op">.</span>size<span class="op">();</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>n <span class="op">==</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// dp[i]: num_decode(s[:i])</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> dp<span class="op">(</span>n <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">);</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    dp<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    dp<span class="op">[</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="op">(</span>s<span class="op">[</span><span class="dv">0</span><span class="op">]</span> <span class="op">-</span> <span class="ch">&#39;0&#39;</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span> <span class="dv">0</span> <span class="op">:</span> <span class="dv">1</span><span class="op">);</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">2</span><span class="op">;</span> i <span class="op">&lt;=</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>s<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">-</span> <span class="ch">&#39;0&#39;</span> <span class="op">!=</span> <span class="dv">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            dp<span class="op">[</span>i<span class="op">]</span> <span class="op">+=</span> dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>s<span class="op">[</span>i <span class="op">-</span> <span class="dv">2</span><span class="op">]</span> <span class="op">-</span> <span class="ch">&#39;0&#39;</span> <span class="op">==</span> <span class="dv">1</span> <span class="op">||</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            <span class="op">(</span>s<span class="op">[</span>i <span class="op">-</span> <span class="dv">2</span><span class="op">]</span> <span class="op">-</span> <span class="ch">&#39;0&#39;</span> <span class="op">==</span> <span class="dv">2</span> <span class="op">&amp;&amp;</span> s<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">-</span> <span class="ch">&#39;0&#39;</span> <span class="op">&lt;=</span> <span class="dv">6</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>            dp<span class="op">[</span>i<span class="op">]</span> <span class="op">+=</span> dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">2</span><span class="op">];</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp<span class="op">[</span>n<span class="op">];</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h2 id="买卖股票的最佳时机-iii">123 买卖股票的最佳时机 III</h2>
 <p>给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。设计一个算法来计算你所能获取的最大利润。你最多可以完成两笔交易。注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(K)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="dt">int</span> max_profit(vector&lt;<span class="dt">int</span>&gt; &amp;prices) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>    <span class="dt">int</span> K = <span class="dv">2</span>;</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    <span class="co">// dp[j][0]: 卖出 j 次的最大利润</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>    <span class="co">// dp[j][1]: 买入 j 次的最大利润</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>    <span class="dt">int</span> dp[K + <span class="dv">1</span>][<span class="dv">2</span>];</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">0</span>; j &lt;= K; j++) {</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>        dp[j][<span class="dv">0</span>] = <span class="dv">0</span>;</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>        dp[j][<span class="dv">1</span>] = INT_MIN;</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>    }</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="kw">auto</span> price : prices) {</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= K; j++) {</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>            dp[j][<span class="dv">0</span>] = <span class="bu">std::</span>max(dp[j][<span class="dv">0</span>], dp[j][<span class="dv">1</span>] + price);</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>            dp[j][<span class="dv">1</span>] = <span class="bu">std::</span>max(dp[j][<span class="dv">1</span>], dp[j - <span class="dv">1</span>][<span class="dv">0</span>] - price);</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>        }</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>    }</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>    <span class="cf">return</span> dp[K][<span class="dv">0</span>];</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> max_profit<span class="op">(</span>vector<span class="op">&lt;</span><span class="dt">int</span><span class="op">&gt;</span> <span class="op">&amp;</span>prices<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> K <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// dp[j][0]: 卖出 j 次的最大利润</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// dp[j][1]: 买入 j 次的最大利润</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> dp<span class="op">[</span>K <span class="op">+</span> <span class="dv">1</span><span class="op">][</span><span class="dv">2</span><span class="op">];</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;=</span> K<span class="op">;</span> j<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        dp<span class="op">[</span>j<span class="op">][</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        dp<span class="op">[</span>j<span class="op">][</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> INT_MIN<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="kw">auto</span> price <span class="op">:</span> prices<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;=</span> K<span class="op">;</span> j<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            dp<span class="op">[</span>j<span class="op">][</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="bu">std::</span>max<span class="op">(</span>dp<span class="op">[</span>j<span class="op">][</span><span class="dv">0</span><span class="op">],</span> dp<span class="op">[</span>j<span class="op">][</span><span class="dv">1</span><span class="op">]</span> <span class="op">+</span> price<span class="op">);</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            dp<span class="op">[</span>j<span class="op">][</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> <span class="bu">std::</span>max<span class="op">(</span>dp<span class="op">[</span>j<span class="op">][</span><span class="dv">1</span><span class="op">],</span> dp<span class="op">[</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">][</span><span class="dv">0</span><span class="op">]</span> <span class="op">-</span> price<span class="op">);</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp<span class="op">[</span>K<span class="op">][</span><span class="dv">0</span><span class="op">];</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h1 id="二维">二维</h1>
 <h2 id="通配符匹配">44 通配符匹配</h2>
 <p>给定一个字符串 (s) 和一个字符模式 (p) ，实现一个支持 <code>?</code> 和 <code>*</code> 的通配符匹配。</p>
@@ -1209,30 +1211,30 @@ https://github.com/alex-shpak/hugo-book
 <li>时间复杂度：<span class="math inline">\(O(mn)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(mn)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="dt">bool</span> is_match(string s, string p) {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>    <span class="dt">int</span> m = s.size();</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>    <span class="dt">int</span> n = p.size();</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>    <span class="co">// dp[i][j]: is_match(s[0:i], p[0:j])</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>    vector&lt;vector&lt;<span class="dt">bool</span>&gt;&gt; dp(m + <span class="dv">1</span>, vector&lt;<span class="dt">bool</span>&gt;(n + <span class="dv">1</span>, <span class="kw">false</span>));</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>    dp[<span class="dv">0</span>][<span class="dv">0</span>] = <span class="kw">true</span>;</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= n; j++) {</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true"></a>        <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true"></a>            dp[<span class="dv">0</span>][j] = <span class="kw">true</span>;</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true"></a>            <span class="cf">break</span>;</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true"></a>        }</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true"></a>    }</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true"></a>    <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">1</span>; i &lt;= m; i++) {</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true"></a>        <span class="cf">for</span> (<span class="dt">int</span> j = <span class="dv">1</span>; j &lt;= n; j++) {</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true"></a>            <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true"></a>                dp[i][j] = dp[i][j - <span class="dv">1</span>] || dp[i - <span class="dv">1</span>][j];</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true"></a>            } <span class="cf">else</span> <span class="cf">if</span> (p[j - <span class="dv">1</span>] == <span class="ch">&#39;?&#39;</span> || s[i - <span class="dv">1</span>] == p[j - <span class="dv">1</span>]) {</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true"></a>                dp[i][j] = dp[i - <span class="dv">1</span>][j - <span class="dv">1</span>];</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true"></a>            }</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true"></a>        }</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true"></a>    }</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true"></a>    <span class="cf">return</span> dp[m][n];</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> is_match<span class="op">(</span>string s<span class="op">,</span> string p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> m <span class="op">=</span> s<span class="op">.</span>size<span class="op">();</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> n <span class="op">=</span> p<span class="op">.</span>size<span class="op">();</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// dp[i][j]: is_match(s[0:i], p[0:j])</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    vector<span class="op">&lt;</span>vector<span class="op">&lt;</span><span class="dt">bool</span><span class="op">&gt;&gt;</span> dp<span class="op">(</span>m <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> vector<span class="op">&lt;</span><span class="dt">bool</span><span class="op">&gt;(</span>n <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> <span class="kw">false</span><span class="op">));</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    dp<span class="op">[</span><span class="dv">0</span><span class="op">][</span><span class="dv">0</span><span class="op">]</span> <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;=</span> n<span class="op">;</span> j<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>p<span class="op">[</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">==</span> <span class="ch">&#39;*&#39;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            dp<span class="op">[</span><span class="dv">0</span><span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> m<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;=</span> n<span class="op">;</span> j<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>p<span class="op">[</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">==</span> <span class="ch">&#39;*&#39;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>                dp<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> dp<span class="op">[</span>i<span class="op">][</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">||</span> dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">][</span>j<span class="op">];</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>p<span class="op">[</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">==</span> <span class="ch">&#39;?&#39;</span> <span class="op">||</span> s<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">]</span> <span class="op">==</span> p<span class="op">[</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">])</span> <span class="op">{</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>                dp<span class="op">[</span>i<span class="op">][</span>j<span class="op">]</span> <span class="op">=</span> dp<span class="op">[</span>i <span class="op">-</span> <span class="dv">1</span><span class="op">][</span>j <span class="op">-</span> <span class="dv">1</span><span class="op">];</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dp<span class="op">[</span>m<span class="op">][</span>n<span class="op">];</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <h3 id="贪心算法">贪心算法</h3>
 <ul>
 <li>时间复杂度
@@ -1242,47 +1244,47 @@ https://github.com/alex-shpak/hugo-book
 </ul></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="dt">bool</span> is_match_v2(string s, string p) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>    <span class="kw">auto</span> is_char_match = [](<span class="at">const</span> <span class="dt">char</span> &amp;c_s, <span class="at">const</span> <span class="dt">char</span> &amp;c_p) {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>        <span class="cf">return</span> c_p == <span class="ch">&#39;?&#39;</span> || c_s == c_p;</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>    };</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>    <span class="cf">while</span> (!s.empty() &amp;&amp; !p.empty() &amp;&amp; p.back() != <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>        <span class="cf">if</span> (is_char_match(s.back(), p.back())) {</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>            s.pop_back();</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a>            p.pop_back();</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a>        }</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a>    }</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>    <span class="cf">if</span> (p.empty()) {</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a>        <span class="cf">return</span> s.empty();</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a>    }</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>    <span class="dt">int</span> i_s = <span class="dv">0</span>, i_p = <span class="dv">0</span>;</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true"></a>    <span class="dt">int</span> i_sub_start_s = -<span class="dv">1</span>, i_sub_start_p = -<span class="dv">1</span>;</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true"></a>    <span class="cf">while</span> (i_s &lt; s.size() &amp;&amp; i_p &lt; p.size()) {</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true"></a>        <span class="cf">if</span> (p[i_p] == <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true"></a>            i_p++;</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true"></a>            i_sub_start_p = i_p;</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true"></a>            i_sub_start_s = i_s;</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (is_char_match(s[i_s], p[i_p])) {</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true"></a>            i_p++;</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true"></a>            i_s++;</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true"></a>        } <span class="cf">else</span> <span class="cf">if</span> (i_sub_start_s != -<span class="dv">1</span>) {</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true"></a>            i_p = i_sub_start_p;</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true"></a>            i_s = i_sub_start_s + <span class="dv">1</span>;</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true"></a>            i_sub_start_s = i_s;</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true"></a>        } <span class="cf">else</span> {</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true"></a>        }</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true"></a>    }</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true"></a>    <span class="cf">while</span> (i_p &lt; p.size()) {</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true"></a>        <span class="cf">if</span> (p[i_p] != <span class="ch">&#39;*&#39;</span>) {</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true"></a>            <span class="cf">return</span> <span class="kw">false</span>;</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true"></a>        }</span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true"></a>        i_p++;</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true"></a>    }</span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true"></a>    <span class="cf">return</span> <span class="kw">true</span>;</span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">bool</span> is_match_v2<span class="op">(</span>string s<span class="op">,</span> string p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> is_char_match <span class="op">=</span> <span class="op">[](</span><span class="at">const</span> <span class="dt">char</span> <span class="op">&amp;</span>c_s<span class="op">,</span> <span class="at">const</span> <span class="dt">char</span> <span class="op">&amp;</span>c_p<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> c_p <span class="op">==</span> <span class="ch">&#39;?&#39;</span> <span class="op">||</span> c_s <span class="op">==</span> c_p<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">};</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(!</span>s<span class="op">.</span>empty<span class="op">()</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>p<span class="op">.</span>empty<span class="op">()</span> <span class="op">&amp;&amp;</span> p<span class="op">.</span>back<span class="op">()</span> <span class="op">!=</span> <span class="ch">&#39;*&#39;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>is_char_match<span class="op">(</span>s<span class="op">.</span>back<span class="op">(),</span> p<span class="op">.</span>back<span class="op">()))</span> <span class="op">{</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>            s<span class="op">.</span>pop_back<span class="op">();</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>            p<span class="op">.</span>pop_back<span class="op">();</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>p<span class="op">.</span>empty<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> s<span class="op">.</span>empty<span class="op">();</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i_s <span class="op">=</span> <span class="dv">0</span><span class="op">,</span> i_p <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i_sub_start_s <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">,</span> i_sub_start_p <span class="op">=</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i_s <span class="op">&lt;</span> s<span class="op">.</span>size<span class="op">()</span> <span class="op">&amp;&amp;</span> i_p <span class="op">&lt;</span> p<span class="op">.</span>size<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>p<span class="op">[</span>i_p<span class="op">]</span> <span class="op">==</span> <span class="ch">&#39;*&#39;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>            i_p<span class="op">++;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            i_sub_start_p <span class="op">=</span> i_p<span class="op">;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            i_sub_start_s <span class="op">=</span> i_s<span class="op">;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>is_char_match<span class="op">(</span>s<span class="op">[</span>i_s<span class="op">],</span> p<span class="op">[</span>i_p<span class="op">]))</span> <span class="op">{</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            i_p<span class="op">++;</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            i_s<span class="op">++;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> <span class="op">(</span>i_sub_start_s <span class="op">!=</span> <span class="op">-</span><span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            i_p <span class="op">=</span> i_sub_start_p<span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            i_s <span class="op">=</span> i_sub_start_s <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            i_sub_start_s <span class="op">=</span> i_s<span class="op">;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(</span>i_p <span class="op">&lt;</span> p<span class="op">.</span>size<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>p<span class="op">[</span>i_p<span class="op">]</span> <span class="op">!=</span> <span class="ch">&#39;*&#39;</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        i_p<span class="op">++;</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>

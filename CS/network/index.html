@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="网络" />
 <meta property="og:description" content="iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &lt;rule_number&gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/CS/network/" />
-<meta property="article:modified_time" content="2020-10-14T07:16:48+00:00" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/CS/network/" /><meta property="article:section" content="CS" />
+
+<meta property="article:modified_time" content="2020-10-14T07:16:48&#43;00:00" />
+
 <title>网络 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1137,13 +1139,13 @@ https://github.com/alex-shpak/hugo-book
       
   <article class="markdown"><h1 id="iptables">iptables</h1>
 <h2 id="列出-nat-规则">列出 nat 规则</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">iptables</span> -t nat -L</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">iptables</span> <span class="at">-t</span> nat <span class="at">-L</span></span></code></pre></div>
 <h2 id="列出-prerouting-规则">列出 prerouting 规则</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="fu">sudo</span> iptables -t nat -v -L PREROUTING -n --line-number</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> iptables <span class="at">-t</span> nat <span class="at">-v</span> <span class="at">-L</span> PREROUTING <span class="at">-n</span> <span class="at">--line-number</span></span></code></pre></div>
 <h2 id="删除-prerouting-规则">删除 prerouting 规则</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">sudo</span> iptables -t nat -D PREROUTING <span class="op">&lt;</span>rule_number<span class="op">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> iptables <span class="at">-t</span> nat <span class="at">-D</span> PREROUTING <span class="op">&lt;</span>rule_number<span class="op">&gt;</span></span></code></pre></div>
 <h2 id="端口转发">端口转发</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="ex">iptables</span> -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">iptables</span> <span class="at">-A</span> PREROUTING <span class="at">-t</span> nat <span class="at">-i</span> eth0 <span class="at">-p</span> tcp <span class="at">--dport</span> 80 <span class="at">-j</span> REDIRECT <span class="at">--to-port</span> 8080</span></code></pre></div>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>

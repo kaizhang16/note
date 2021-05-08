@@ -10,13 +10,15 @@
 <meta property="og:description" content="移动推荐比赛 题目 提供 2 万用户 30 天的移动端行为数据，具体行为包括“浏览”、“收藏”、“加购物车”和“购买”，预测用户第 31 天购买的商品。评价标准是 F1 Score。
   F1 Score 是精确率和召回率的调和平均数 精确率指：你认为的正样本，有多少猜对了 召回率指：正样本有多少被找回来了   特征  时间型：  ui &amp;&amp; uc：  最近一次加购物车到现在多少小时 最近一次购买到现在多少小时 最近一次浏览到现在多少小时 最近一次收藏到现在多少小时 用户从浏览到购买经历多少小时   统计型：  ui &amp;&amp; uc：  用户对商品浏览多少次 用户对商品购买多少次 用户对商品加购物车多少次  i:  商品被购买了多少次    模型 GBDT 优点  防止过拟合（基分类器简单，通过拟合残差来减小偏差） 表达能力强 可解释性强，是发现特征组合的有效工具  类别型特征  Xgboost：One-Hot 编码，one vs rest LightGBM：直接支持，many vs many  word2vec  架构：三层神经网络，softmax 损失函数：条件概率，nll -&gt; 简化成负采样  腾讯广告算法 题目 提供 91 天的广告点击历史记录，包含日期、用户信息（年龄、性别）、广告信息（广告 id、产品 id、产品类目 id、广告主 id、广告主行业 id）以及该用户当天点击该广告的次数，预测测试集中用户的年龄和性别。评分标准为年龄预测和性别预测的 accuracy 之和。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/" /><meta property="article:section" content="AI" />
+
+
 
 <title>项目 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1100,7 +1102,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  

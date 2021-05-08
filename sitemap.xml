@@ -1,324 +1,174 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://kaizhang16.github.io/note/AI/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/bash/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/css/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/dhall/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/flutter/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/golang/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/NLP/GPT-2/</loc>
     <lastmod>2020-11-07T15:13:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/html/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/http/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/js/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/</loc>
     <lastmod>2021-01-07T10:11:51+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/linux/</loc>
     <lastmod>2021-04-25T10:38:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/NLP/LSTM_GRU/</loc>
     <lastmod>2020-11-07T15:13:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/NLP/</loc>
     <lastmod>2020-11-06T14:29:45+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/oauth2/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/AI/QA/</loc>
     <lastmod>2021-03-14T13:46:20+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/rust/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/tags/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/TeX/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/toml/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/NLP/Transformer/</loc>
     <lastmod>2020-11-07T15:13:44+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/unity/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Word/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/zsh/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/transmission/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/compress/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/security/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/AI/dev_env/</loc>
     <lastmod>2020-10-19T11:27:54+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/data-type/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E6%A0%91/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/format/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/template/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/%E7%AE%97%E6%B3%95/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/encoding/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/CS/network/</loc>
     <lastmod>2020-10-14T07:16:48+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/video/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://kaizhang16.github.io/note/</loc>
     <lastmod>2021-01-24T14:03:58+00:00</lastmod>
   </url>
-  
 </urlset>

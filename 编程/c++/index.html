@@ -8,13 +8,15 @@
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="C&#43;&#43;" />
 <meta property="og:description" content="开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" /><meta property="article:section" content="编程" />
+
+
 
 <title>C&#43;&#43; | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1098,7 +1100,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1138,31 +1140,31 @@ https://github.com/alex-shpak/hugo-book
   <article class="markdown"><h1 id="开发环境">开发环境</h1>
 <h2 id="cmake">cmake</h2>
 <h3 id="安装">安装</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="va">CMAKE_VERSION=</span>3.19.1</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ex">curl</span> -LO <span class="st">&quot;https://github.com/Kitware/CMake/releases/download/v</span><span class="va">$CMAKE_VERSION</span><span class="st">/cmake-</span><span class="va">$CMAKE_VERSION</span><span class="st">-Linux-x86_64.sh&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="fu">sudo</span> sh ./cmake-<span class="va">$CMAKE_VERSION</span>-Linux-x86_64.sh --skip-license --prefix=/usr/local</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">CMAKE_VERSION</span><span class="op">=</span>3.19.1</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LO</span> <span class="st">&quot;https://github.com/Kitware/CMake/releases/download/v</span><span class="va">$CMAKE_VERSION</span><span class="st">/cmake-</span><span class="va">$CMAKE_VERSION</span><span class="st">-Linux-x86_64.sh&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sh ./cmake-<span class="va">$CMAKE_VERSION</span>-Linux-x86_64.sh <span class="at">--skip-license</span> <span class="at">--prefix</span><span class="op">=</span>/usr/local</span></code></pre></div>
 <h3 id="教程">教程</h3>
 <ul>
 <li><a href="https://cliutils.gitlab.io/modern-cmake/" class="uri">https://cliutils.gitlab.io/modern-cmake/</a></li>
 </ul>
 <h2 id="工程目录结构cmake_structure">工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<a href="#ref-cmake_structure" role="doc-biblioref">1</a>]</sup></span></h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="ex">project</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>├── <span class="ex">CMakeLists.txt</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>├── <span class="ex">compile_commands.json</span> -<span class="op">&gt;</span> build/compile_commands.json</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>├── <span class="ex">include</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>│  └── <span class="ex">CLI</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>│     ├── <span class="ex">App.hpp</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>│     ├── <span class="ex">Config.hpp</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>│     └── <span class="ex">Formatter.hpp</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>├── <span class="ex">README.md</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>└── <span class="ex">src</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>   ├── <span class="ex">CMakeLists.txt</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>   └── <span class="ex">main.cpp</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> CMakeLists.txt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> compile_commands.json <span class="at">-</span><span class="op">&gt;</span> build/compile_commands.json</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> include</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>  └── CLI</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>     ├── App.hpp</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>     ├── Config.hpp</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">│</span>     └── Formatter.hpp</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> README.md</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">└──</span> src</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>   <span class="ex">├──</span> CMakeLists.txt</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">└──</span> main.cpp</span></code></pre></div>
 <h2 id="clangdclangd_install">clangd<span class="citation" data-cites="clangd_install"><sup>[<a href="#ref-clangd_install" role="doc-biblioref">2</a>]</sup></span></h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="bu">cd</span> build</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="fu">cmake</span> .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="bu">cd</span> ..</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="fu">ln</span> -s build/compile_commands.json compile_commands.json</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> .. <span class="at">-DCMAKE_EXPORT_COMPILE_COMMANDS</span><span class="op">=</span>1</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> build/compile_commands.json compile_commands.json</span></code></pre></div>
 <h1 id="代码风格">代码风格</h1>
 <h2 id="文件后缀">文件后缀</h2>
 <ul>
@@ -1282,15 +1284,15 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-cmake_structure">
-<p>[1] SCHREINER H. How to structure your project[J/OL]. [日期不详].. <a href="https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html">https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-cmake_structure" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">SCHREINER H. How to structure your project[J/OL]. [日期不详]. <a href="https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html">https://cliutils.gitlab.io/modern-cmake/chapters/basics/structure.html</a>.</div>
 </div>
-<div id="ref-clangd_install">
-<p>[2] LLVM. Getting started[J/OL]. [日期不详].. <a href="https://clangd.llvm.org/installation.html">https://clangd.llvm.org/installation.html</a>.</p>
+<div id="ref-clangd_install" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">LLVM. Getting started[J/OL]. [日期不详]. <a href="https://clangd.llvm.org/installation.html">https://clangd.llvm.org/installation.html</a>.</div>
 </div>
-<div id="ref-cpp_int_to_string">
-<p>[3] M M. Easiest way to convert int to string in C++[EB/OL](2011–04–08). <a href="https://stackoverflow.com/a/5591169/13200985">https://stackoverflow.com/a/5591169/13200985</a>.</p>
+<div id="ref-cpp_int_to_string" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">M M. Easiest way to convert int to string in C++[EB/OL](2011–04–08). <a href="https://stackoverflow.com/a/5591169/13200985">https://stackoverflow.com/a/5591169/13200985</a>.</div>
 </div>
 </div>
 

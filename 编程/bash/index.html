@@ -10,13 +10,15 @@ cmd &gt;&gt;file.txt 2&gt;&amp;1 变量替换（Parameter Substitution）  表 2
 <meta property="og:description" content="快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     IO 重定向 将 stderr 和 stdout 追加到同一个文件：
 cmd &gt;&gt;file.txt 2&gt;&amp;1 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     例子 $ test_file_path=&quot;/a/b." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/bash/" />
+<meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/bash/" /><meta property="article:section" content="编程" />
+
+
 
 <title>Bash | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.3a7020b7bdb6727663c3b39ea050038a416a055141fadfe7e448887f123d96be.css" integrity="sha256-OnAgt722cnZjw7OeoFADikFqBVFB&#43;t/n5EiIfxI9lr4=">
-<script defer src="/note/cn.search.min.f0fd177e45357ce579ccd55bc3f9880536bcb93994c5c088be38e37913925458.js" integrity="sha256-8P0XfkU1fOV5zNVbw/mIBTa8uTmUxcCIvjjjeROSVFg="></script>
+<link rel="stylesheet" href="/note/book.min.b3dff80c667986d77b950b852d6359c2f2bef428d0413d305be119f967d0a51a.css" integrity="sha256-s9/4DGZ5htd7lQuFLWNZwvK&#43;9CjQQT0wW&#43;EZ&#43;WfQpRo=">
+<script defer src="/note/cn.search.min.58046afd59b23ec79ec844c8ff82616fc81f7f26692a3a0765f2152c3c2e7bec.js" integrity="sha256-WARq/VmyPseeyETI/4Jhb8gffyZpKjoHZfIVLDwue&#43;w="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1100,7 +1102,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <script>!function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")}()</script>
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
 
 
  
@@ -1169,7 +1171,7 @@ https://github.com/alex-shpak/hugo-book
 </div>
 <h1 id="io-重定向">IO 重定向</h1>
 <p>将 <code>stderr</code> 和 <code>stdout</code> 追加到同一个文件：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">cmd</span> <span class="op">&gt;&gt;</span>file.txt <span class="op">2&gt;&amp;1</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cmd</span> <span class="op">&gt;&gt;</span>file.txt <span class="dv">2</span><span class="op">&gt;&amp;</span><span class="dv">1</span></span></code></pre></div>
 <h1 id="变量替换parameter-substitution">变量替换（Parameter Substitution）</h1>
 <div id="tbl:bash_parameter_substitution">
 <table>
@@ -1205,13 +1207,13 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h2 id="例子">例子</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>$ <span class="va">test_file_path=</span><span class="st">&quot;/a/b.c&quot;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>$ <span class="bu">echo</span> <span class="va">${test_file_path##</span>*/<span class="va">}</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="ex">b.c</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> test_file_path=<span class="st">&quot;/a/b.c&quot;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="va">${test_file_path</span><span class="op">##</span><span class="pp">*</span>/<span class="va">}</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">b.c</span></span></code></pre></div>
 <h1 id="heredoc">Heredoc</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="fu">cat</span> <span class="op">&lt;&lt;END</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>hello world</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a><span class="op">END</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="op">&lt;&lt;END</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="st">hello world</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">END</span></span></code></pre></div>
 <h1 id="备忘单">备忘单</h1>
 <p><a href="https://devhints.io/bash" class="uri">https://devhints.io/bash</a>。</p>
 <h1 id="颜色ansiescapecode">颜色<span class="citation" data-cites="ansiEscapeCode"><sup>[<a href="#ref-ansiEscapeCode" role="doc-biblioref">1</a>]</sup></span></h1>
@@ -1279,12 +1281,12 @@ https://github.com/alex-shpak/hugo-book
 </table>
 </div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
-<div id="refs" class="references" role="doc-bibliography">
-<div id="ref-ansiEscapeCode">
-<p>[1] FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]). <a href="https://misc.flogisoft.com/bash/tip_colors_and_formatting">https://misc.flogisoft.com/bash/tip_colors_and_formatting</a>.</p>
+<div id="refs" class="references csl-bib-body" role="doc-bibliography">
+<div id="ref-ansiEscapeCode" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">FLOZZ. Bash tips: Colors and formatting (ANSI/VT100 Control sequences)[EB/OL]([日期不详]). <a href="https://misc.flogisoft.com/bash/tip_colors_and_formatting">https://misc.flogisoft.com/bash/tip_colors_and_formatting</a>.</div>
 </div>
-<div id="ref-bashExitCode">
-<p>[2] ORNBO G. Linux and Unix exit code tutorial with examples[EB/OL](2019–11–16). <a href="https://shapeshed.com/unix-exit-codes/">https://shapeshed.com/unix-exit-codes/</a>.</p>
+<div id="ref-bashExitCode" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">ORNBO G. Linux and Unix exit code tutorial with examples[EB/OL](2019–11–16). <a href="https://shapeshed.com/unix-exit-codes/">https://shapeshed.com/unix-exit-codes/</a>.</div>
 </div>
 </div>
 
