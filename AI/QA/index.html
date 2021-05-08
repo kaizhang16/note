@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
-样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
+<meta name="description" content="1 怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  2 如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  3 如何缓解梯度爆炸  梯度裁剪 权重正则化  4 为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
+5 样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   6 GBDT 的优缺点 优点：
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
- 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  GBDT &#43; LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。">
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  7 XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  8 LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  9 GBDT &#43; LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="QA" />
-<meta property="og:description" content="怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
-样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
+<meta property="og:description" content="1 怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  2 如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  3 如何缓解梯度爆炸  梯度裁剪 权重正则化  4 为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
+5 样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   6 GBDT 的优缺点 优点：
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
- 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  GBDT &#43; LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。" />
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  7 XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  8 LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  9 GBDT &#43; LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/AI/QA/" /><meta property="article:section" content="AI" />
 
@@ -20,8 +20,8 @@
 <title>QA | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -677,7 +677,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -940,7 +940,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1137,7 +1137,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="怎么降低过拟合">怎么降低过拟合？</h1>
+  <article class="markdown"><h1 data-number="1" id="怎么降低过拟合"><span class="header-section-number">1</span> 怎么降低过拟合？</h1>
 <ul>
 <li>获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据</li>
 <li>降低模型复杂度
@@ -1148,21 +1148,21 @@ https://github.com/alex-shpak/hugo-book
 <li>正则化方法</li>
 <li>集成学习，比如 bagging 和 boosting</li>
 </ul>
-<h1 id="如何缓解梯度消失">如何缓解梯度消失？</h1>
+<h1 data-number="2" id="如何缓解梯度消失"><span class="header-section-number">2</span> 如何缓解梯度消失？</h1>
 <ul>
 <li>使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh</li>
 <li>Batch Normalization</li>
 <li>残差网络</li>
 <li>LSTM、GRU</li>
 </ul>
-<h1 id="如何缓解梯度爆炸">如何缓解梯度爆炸</h1>
+<h1 data-number="3" id="如何缓解梯度爆炸"><span class="header-section-number">3</span> 如何缓解梯度爆炸</h1>
 <ul>
 <li>梯度裁剪</li>
 <li>权重正则化</li>
 </ul>
-<h1 id="为什么训练模型时样本不平衡会有问题">为什么训练模型时样本不平衡会有问题？</h1>
+<h1 data-number="4" id="为什么训练模型时样本不平衡会有问题"><span class="header-section-number">4</span> 为什么训练模型时样本不平衡会有问题？</h1>
 <p>本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。</p>
-<h1 id="样本不平衡如何处理">样本不平衡，如何处理？</h1>
+<h1 data-number="5" id="样本不平衡如何处理"><span class="header-section-number">5</span> 样本不平衡，如何处理？</h1>
 <ul>
 <li>基于数据：
 <ul>
@@ -1174,7 +1174,7 @@ https://github.com/alex-shpak/hugo-book
 <li>转化为单类学习或者异常检测</li>
 </ul></li>
 </ul>
-<h1 id="gbdt-的优缺点">GBDT 的优缺点</h1>
+<h1 data-number="6" id="gbdt-的优缺点"><span class="header-section-number">6</span> GBDT 的优缺点</h1>
 <p>优点：</p>
 <ul>
 <li>预测阶段的计算速度快，树与树之间可并行计算</li>
@@ -1187,7 +1187,7 @@ https://github.com/alex-shpak/hugo-book
 <li>在处理分类特征时的优势不如处理数值特征时明显</li>
 <li>需要迭代训练，即串行计算</li>
 </ul>
-<h1 id="xgboost-与-gbdt-的区别">XGBoost 与 GBDT 的区别</h1>
+<h1 data-number="7" id="xgboost-与-gbdt-的区别"><span class="header-section-number">7</span> XGBoost 与 GBDT 的区别</h1>
 <ul>
 <li>GBDT 是机器学习算法，XGBoost 是该算法的工程实现</li>
 <li>在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力</li>
@@ -1197,29 +1197,29 @@ https://github.com/alex-shpak/hugo-book
 <li>可以自动学习缺失值的分裂方向</li>
 <li>预先排序，并行计算不同特征的增益</li>
 </ul>
-<h1 id="lightgbm-与-gbdt-的区别">LightGBM 与 GBDT 的区别</h1>
+<h1 data-number="8" id="lightgbm-与-gbdt-的区别"><span class="header-section-number">8</span> LightGBM 与 GBDT 的区别</h1>
 <ul>
 <li>XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低</li>
 <li>XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise</li>
 <li>XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算</li>
 </ul>
-<h1 id="gbdt-lr-比-gbdt-好在哪里">GBDT + LR 比 GBDT 好在哪里？</h1>
+<h1 data-number="9" id="gbdt-lr-比-gbdt-好在哪里"><span class="header-section-number">9</span> GBDT + LR 比 GBDT 好在哪里？</h1>
 <p>LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。</p>
-<h1 id="embedding-效果怎么评估">Embedding 效果怎么评估？</h1>
+<h1 data-number="10" id="embedding-效果怎么评估"><span class="header-section-number">10</span> Embedding 效果怎么评估？</h1>
 <ul>
 <li>相似关系：看看空间距离近的词，跟人的直觉是否一致</li>
 <li>类比关系：king - queen = man - woman</li>
 <li>聚类可视化：使用 PCA 或者 t-SNE 降维可视化</li>
 </ul>
-<h1 id="word2vec">word2vec</h1>
-<h2 id="负采样怎么操作">负采样怎么操作？</h2>
+<h1 data-number="11" id="word2vec"><span class="header-section-number">11</span> word2vec</h1>
+<h2 data-number="11.1" id="负采样怎么操作"><span class="header-section-number">11.1</span> 负采样怎么操作？</h2>
 <p>负采样概率：</p>
 <p><span id="eq:word2vec_neg_prob"><span class="math display">\[
 \mathrm{len}(w) =
 \frac{\mathrm{count}(w)^{\frac{3}{4}}}{\sum_{u\in\mathrm{vocab}}\mathrm{count}(u)^{\frac{3}{4}}}
 \qquad(1)\]</span></span></p>
-<h1 id="node2vec">node2vec</h1>
-<h2 id="p-和-q-指什么">p 和 q 指什么？</h2>
+<h1 data-number="12" id="node2vec"><span class="header-section-number">12</span> node2vec</h1>
+<h2 data-number="12.1" id="p-和-q-指什么"><span class="header-section-number">12.1</span> p 和 q 指什么？</h2>
 <ul>
 <li>p 指返回参数</li>
 <li>q 指进出参数</li>
@@ -1228,23 +1228,23 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#怎么降低过拟合">怎么降低过拟合？</a></li>
-  <li><a href="#如何缓解梯度消失">如何缓解梯度消失？</a></li>
-  <li><a href="#如何缓解梯度爆炸">如何缓解梯度爆炸</a></li>
-  <li><a href="#为什么训练模型时样本不平衡会有问题">为什么训练模型时样本不平衡会有问题？</a></li>
-  <li><a href="#样本不平衡如何处理">样本不平衡，如何处理？</a></li>
-  <li><a href="#gbdt-的优缺点">GBDT 的优缺点</a></li>
-  <li><a href="#xgboost-与-gbdt-的区别">XGBoost 与 GBDT 的区别</a></li>
-  <li><a href="#lightgbm-与-gbdt-的区别">LightGBM 与 GBDT 的区别</a></li>
-  <li><a href="#gbdt-lr-比-gbdt-好在哪里">GBDT + LR 比 GBDT 好在哪里？</a></li>
-  <li><a href="#embedding-效果怎么评估">Embedding 效果怎么评估？</a></li>
-  <li><a href="#word2vec">word2vec</a>
+  <li><a href="#怎么降低过拟合"><span class="toc-section-number">1</span> 怎么降低过拟合？</a></li>
+  <li><a href="#如何缓解梯度消失"><span class="toc-section-number">2</span> 如何缓解梯度消失？</a></li>
+  <li><a href="#如何缓解梯度爆炸"><span class="toc-section-number">3</span> 如何缓解梯度爆炸</a></li>
+  <li><a href="#为什么训练模型时样本不平衡会有问题"><span class="toc-section-number">4</span> 为什么训练模型时样本不平衡会有问题？</a></li>
+  <li><a href="#样本不平衡如何处理"><span class="toc-section-number">5</span> 样本不平衡，如何处理？</a></li>
+  <li><a href="#gbdt-的优缺点"><span class="toc-section-number">6</span> GBDT 的优缺点</a></li>
+  <li><a href="#xgboost-与-gbdt-的区别"><span class="toc-section-number">7</span> XGBoost 与 GBDT 的区别</a></li>
+  <li><a href="#lightgbm-与-gbdt-的区别"><span class="toc-section-number">8</span> LightGBM 与 GBDT 的区别</a></li>
+  <li><a href="#gbdt-lr-比-gbdt-好在哪里"><span class="toc-section-number">9</span> GBDT + LR 比 GBDT 好在哪里？</a></li>
+  <li><a href="#embedding-效果怎么评估"><span class="toc-section-number">10</span> Embedding 效果怎么评估？</a></li>
+  <li><a href="#word2vec"><span class="toc-section-number">11</span> word2vec</a>
   <ul>
-  <li><a href="#负采样怎么操作">负采样怎么操作？</a></li>
+  <li><a href="#负采样怎么操作"><span class="toc-section-number">11.1</span> 负采样怎么操作？</a></li>
   </ul></li>
-  <li><a href="#node2vec">node2vec</a>
+  <li><a href="#node2vec"><span class="toc-section-number">12</span> node2vec</a>
   <ul>
-  <li><a href="#p-和-q-指什么">p 和 q 指什么？</a></li>
+  <li><a href="#p-和-q-指什么"><span class="toc-section-number">12.1</span> p 和 q 指什么？</a></li>
   </ul></li>
   </ul>
 </nav>

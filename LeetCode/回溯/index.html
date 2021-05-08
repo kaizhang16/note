@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+<meta name="description" content="1 17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
-回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits.">
+1.1 回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="回溯" />
-<meta property="og:description" content="17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+<meta property="og:description" content="1 17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
-回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits." />
+1.1 回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m &#43; n)\)  void backtrack(string &amp;digits, int i,  std::unordered_map&lt;char, string&gt; &amp;digit2str, string &amp;combination,  vector&lt;string&gt; &amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i &#43; 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&lt;string&gt; letter_combination(string digits) {  vector&lt;string&gt; result;  if (digits." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/" /><meta property="article:section" content="LeetCode" />
 
@@ -18,8 +18,8 @@
 <title>回溯 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -675,7 +675,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -938,7 +938,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1135,10 +1135,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="电话号码的字母组合">17 电话号码的字母组合</h1>
+  <article class="markdown"><h1 data-number="1" id="电话号码的字母组合"><span class="header-section-number">1</span> 17 电话号码的字母组合</h1>
 <p>给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。</p>
 <p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。</p>
-<h2 id="回溯">回溯</h2>
+<h2 data-number="1.1" id="回溯"><span class="header-section-number">1.1</span> 回溯</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(3^m\times 4^n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(m + n)\)</span></li>
@@ -1174,9 +1174,9 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#电话号码的字母组合">17 电话号码的字母组合</a>
+  <li><a href="#电话号码的字母组合"><span class="toc-section-number">1</span> 17 电话号码的字母组合</a>
   <ul>
-  <li><a href="#回溯">回溯</a></li>
+  <li><a href="#回溯"><span class="toc-section-number">1.1</span> 回溯</a></li>
   </ul></li>
   </ul>
 </nav>

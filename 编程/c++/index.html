@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：">
+<meta name="description" content="1 开发环境 1.1 cmake 1.1.1 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 1.1.2 教程  https://cliutils.gitlab.io/modern-cmake/  1.2 工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp 1.3 clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 2 代码风格 2.1 文件后缀  源代码：cpp  2.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="C&#43;&#43;" />
-<meta property="og:description" content="开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：" />
+<meta property="og:description" content="1 开发环境 1.1 cmake 1.1.1 安装 CMAKE_VERSION=3.19.1 curl -LO &quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 1.1.2 教程  https://cliutils.gitlab.io/modern-cmake/  1.2 工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp 1.3 clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 2 代码风格 2.1 文件后缀  源代码：cpp  2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/" /><meta property="article:section" content="编程" />
 
@@ -14,8 +14,8 @@
 <title>C&#43;&#43; | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -671,7 +671,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -934,7 +934,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1131,17 +1131,17 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="开发环境">开发环境</h1>
-<h2 id="cmake">cmake</h2>
-<h3 id="安装">安装</h3>
+  <article class="markdown"><h1 data-number="1" id="开发环境"><span class="header-section-number">1</span> 开发环境</h1>
+<h2 data-number="1.1" id="cmake"><span class="header-section-number">1.1</span> cmake</h2>
+<h3 data-number="1.1.1" id="安装"><span class="header-section-number">1.1.1</span> 安装</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">CMAKE_VERSION</span><span class="op">=</span>3.19.1</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LO</span> <span class="st">&quot;https://github.com/Kitware/CMake/releases/download/v</span><span class="va">$CMAKE_VERSION</span><span class="st">/cmake-</span><span class="va">$CMAKE_VERSION</span><span class="st">-Linux-x86_64.sh&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sh ./cmake-<span class="va">$CMAKE_VERSION</span>-Linux-x86_64.sh <span class="at">--skip-license</span> <span class="at">--prefix</span><span class="op">=</span>/usr/local</span></code></pre></div>
-<h3 id="教程">教程</h3>
+<h3 data-number="1.1.2" id="教程"><span class="header-section-number">1.1.2</span> 教程</h3>
 <ul>
 <li><a href="https://cliutils.gitlab.io/modern-cmake/" class="uri">https://cliutils.gitlab.io/modern-cmake/</a></li>
 </ul>
-<h2 id="工程目录结构cmake_structure">工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<a href="#ref-cmake_structure" role="doc-biblioref">1</a>]</sup></span></h2>
+<h2 data-number="1.2" id="工程目录结构cmake_structure"><span class="header-section-number">1.2</span> 工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<a href="#ref-cmake_structure" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">project</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> CMakeLists.txt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├──</span> compile_commands.json <span class="at">-</span><span class="op">&gt;</span> build/compile_commands.json</span>
@@ -1154,17 +1154,17 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="ex">└──</span> src</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>   <span class="ex">├──</span> CMakeLists.txt</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">└──</span> main.cpp</span></code></pre></div>
-<h2 id="clangdclangd_install">clangd<span class="citation" data-cites="clangd_install"><sup>[<a href="#ref-clangd_install" role="doc-biblioref">2</a>]</sup></span></h2>
+<h2 data-number="1.3" id="clangdclangd_install"><span class="header-section-number">1.3</span> clangd<span class="citation" data-cites="clangd_install"><sup>[<a href="#ref-clangd_install" role="doc-biblioref">2</a>]</sup></span></h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> build</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cmake</span> .. <span class="at">-DCMAKE_EXPORT_COMPILE_COMMANDS</span><span class="op">=</span>1</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> build/compile_commands.json compile_commands.json</span></code></pre></div>
-<h1 id="代码风格">代码风格</h1>
-<h2 id="文件后缀">文件后缀</h2>
+<h1 data-number="2" id="代码风格"><span class="header-section-number">2</span> 代码风格</h1>
+<h2 data-number="2.1" id="文件后缀"><span class="header-section-number">2.1</span> 文件后缀</h2>
 <ul>
 <li>源代码：<code>cpp</code></li>
 </ul>
-<h2 id="命名规范">命名规范</h2>
+<h2 data-number="2.2" id="命名规范"><span class="header-section-number">2.2</span> 命名规范</h2>
 <ul>
 <li>Type names
 <ul>
@@ -1184,11 +1184,11 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="https://google.github.io/styleguide/cppguide.html" class="uri">https://google.github.io/styleguide/cppguide.html</a></li>
 </ul>
 </blockquote>
-<h1 id="教程-1">教程</h1>
+<h1 data-number="3" id="教程-1"><span class="header-section-number">3</span> 教程</h1>
 <ul>
 <li><a href="https://isocpp.org/get-started" class="uri">https://isocpp.org/get-started</a></li>
 </ul>
-<h1 id="最佳实践">最佳实践</h1>
+<h1 data-number="4" id="最佳实践"><span class="header-section-number">4</span> 最佳实践</h1>
 <div id="tbl:best_practice">
 <table>
 <caption>表 1: 最佳实践</caption>
@@ -1223,8 +1223,8 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="vector">vector</h1>
-<h2 id="常用方法">常用方法</h2>
+<h1 data-number="5" id="vector"><span class="header-section-number">5</span> vector</h1>
+<h2 data-number="5.1" id="常用方法"><span class="header-section-number">5.1</span> 常用方法</h2>
 <div id="tbl:vector_methods">
 <table>
 <caption>表 2: vector 常用方法</caption>
@@ -1258,8 +1258,8 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="set">set</h1>
-<h2 id="常用方法-1">常用方法</h2>
+<h1 data-number="6" id="set"><span class="header-section-number">6</span> set</h1>
+<h2 data-number="6.1" id="常用方法-1"><span class="header-section-number">6.1</span> 常用方法</h2>
 <div id="tbl:set_methods">
 <table>
 <caption>表 3: set 常用方法</caption>
@@ -1293,30 +1293,30 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#开发环境">开发环境</a>
+  <li><a href="#开发环境"><span class="toc-section-number">1</span> 开发环境</a>
   <ul>
-  <li><a href="#cmake">cmake</a>
+  <li><a href="#cmake"><span class="toc-section-number">1.1</span> cmake</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
-  <li><a href="#教程">教程</a></li>
+  <li><a href="#安装"><span class="toc-section-number">1.1.1</span> 安装</a></li>
+  <li><a href="#教程"><span class="toc-section-number">1.1.2</span> 教程</a></li>
   </ul></li>
-  <li><a href="#工程目录结构cmake_structure">工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#clangdclangd_install">clangd<span class="citation" data-cites="clangd_install"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#工程目录结构cmake_structure"><span class="toc-section-number">1.2</span> 工程目录结构<span class="citation" data-cites="cmake_structure"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#clangdclangd_install"><span class="toc-section-number">1.3</span> clangd<span class="citation" data-cites="clangd_install"><sup>[<span>2</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#代码风格">代码风格</a>
+  <li><a href="#代码风格"><span class="toc-section-number">2</span> 代码风格</a>
   <ul>
-  <li><a href="#文件后缀">文件后缀</a></li>
-  <li><a href="#命名规范">命名规范</a></li>
+  <li><a href="#文件后缀"><span class="toc-section-number">2.1</span> 文件后缀</a></li>
+  <li><a href="#命名规范"><span class="toc-section-number">2.2</span> 命名规范</a></li>
   </ul></li>
-  <li><a href="#教程-1">教程</a></li>
-  <li><a href="#最佳实践">最佳实践</a></li>
-  <li><a href="#vector">vector</a>
+  <li><a href="#教程-1"><span class="toc-section-number">3</span> 教程</a></li>
+  <li><a href="#最佳实践"><span class="toc-section-number">4</span> 最佳实践</a></li>
+  <li><a href="#vector"><span class="toc-section-number">5</span> vector</a>
   <ul>
-  <li><a href="#常用方法">常用方法</a></li>
+  <li><a href="#常用方法"><span class="toc-section-number">5.1</span> 常用方法</a></li>
   </ul></li>
-  <li><a href="#set">set</a>
+  <li><a href="#set"><span class="toc-section-number">6</span> set</a>
   <ul>
-  <li><a href="#常用方法-1">常用方法</a></li>
+  <li><a href="#常用方法-1"><span class="toc-section-number">6.1</span> 常用方法</a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.">
+<meta name="description" content="1 Ansible 1.1 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     1.2 目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="持续集成" />
-<meta property="og:description" content="Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1." />
+<meta property="og:description" content="1 Ansible 1.1 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     1.2 目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/" /><meta property="article:section" content="CS" />
 
@@ -14,8 +14,8 @@
 <title>持续集成 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -671,7 +671,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -934,7 +934,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1131,8 +1131,8 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ansible">Ansible</h1>
-<h2 id="安装">安装</h2>
+  <article class="markdown"><h1 data-number="1" id="ansible"><span class="header-section-number">1</span> Ansible</h1>
+<h2 data-number="1.1" id="安装"><span class="header-section-number">1.1</span> 安装</h2>
 <div id="tbl:ansible_install">
 <table>
 <caption>表 1: 安装 ansible</caption>
@@ -1150,7 +1150,7 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<a href="#ref-ansibleDirectoryLayout" role="doc-biblioref">1</a>]</sup></span></h2>
+<h2 data-number="1.2" id="目录结构ansibledirectorylayout"><span class="header-section-number">1.2</span> 目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<a href="#ref-ansibleDirectoryLayout" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">inventories/</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">production/</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="ex">hosts</span>               <span class="co"># inventory file for production servers</span></span>
@@ -1183,7 +1183,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="ex">webtier/</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="ex">monitoring/</span></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="ex">fooapp/</span></span></code></pre></div>
-<h2 id="依赖">依赖</h2>
+<h2 data-number="1.3" id="依赖"><span class="header-section-number">1.3</span> 依赖</h2>
 <p><code>meta/main.yml</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
@@ -1198,7 +1198,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">role</span><span class="kw">:</span><span class="at"> wheel</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">vars</span><span class="kw">:</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">n</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span></span></code></pre></div>
-<h2 id="嵌套循环">嵌套循环</h2>
+<h2 data-number="1.4" id="嵌套循环"><span class="header-section-number">1.4</span> 嵌套循环</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># main.yml</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">include_tasks</span><span class="kw">:</span><span class="at"> inner.yml</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">loop</span><span class="kw">:</span></span>
@@ -1215,18 +1215,18 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> a</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> b</span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> c</span></span></code></pre></div>
-<h2 id="自定义-ssh-端口">自定义 ssh 端口</h2>
+<h2 data-number="1.5" id="自定义-ssh-端口"><span class="header-section-number">1.5</span> 自定义 ssh 端口</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[webservers]</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="dt">web01.somedomain.com ansible_port</span><span class="ot">=</span><span class="dv">1234</span></span></code></pre></div>
-<h2 id="ansible-vault">Ansible Vault</h2>
-<h1 id="systemd">systemd</h1>
-<h2 id="文件目录">文件目录</h2>
+<h2 data-number="1.6" id="ansible-vault"><span class="header-section-number">1.6</span> Ansible Vault</h2>
+<h1 data-number="2" id="systemd"><span class="header-section-number">2</span> systemd</h1>
+<h2 data-number="2.1" id="文件目录"><span class="header-section-number">2.1</span> 文件目录</h2>
 <p>请放在 <code>/etc/systemd/system/</code> 下面。<span class="citation" data-cites="systemd_dir"><sup>[<a href="#ref-systemd_dir" role="doc-biblioref">2</a>]</sup></span></p>
-<h2 id="查看-mount-的转义路径">查看 mount 的转义路径</h2>
+<h2 data-number="2.2" id="查看-mount-的转义路径"><span class="header-section-number">2.2</span> 查看 mount 的转义路径</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">systemd-escape</span> <span class="at">-p</span> <span class="at">--suffix</span><span class="op">=</span>mount <span class="st">&quot;/tmp//waldi/foobar/&quot;</span></span></code></pre></div>
-<h1 id="github">GitHub</h1>
-<h2 id="actions">Actions</h2>
-<h3 id="加密信息">加密信息</h3>
+<h1 data-number="3" id="github"><span class="header-section-number">3</span> GitHub</h1>
+<h2 data-number="3.1" id="actions"><span class="header-section-number">3.1</span> Actions</h2>
+<h3 data-number="3.1.1" id="加密信息"><span class="header-section-number">3.1.1</span> 加密信息</h3>
 <p>请参考 <a href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets" class="uri">https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets</a>。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1241,25 +1241,25 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#ansible">Ansible</a>
+  <li><a href="#ansible"><span class="toc-section-number">1</span> Ansible</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
-  <li><a href="#目录结构ansibledirectorylayout">目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#依赖">依赖</a></li>
-  <li><a href="#嵌套循环">嵌套循环</a></li>
-  <li><a href="#自定义-ssh-端口">自定义 ssh 端口</a></li>
-  <li><a href="#ansible-vault">Ansible Vault</a></li>
+  <li><a href="#安装"><span class="toc-section-number">1.1</span> 安装</a></li>
+  <li><a href="#目录结构ansibledirectorylayout"><span class="toc-section-number">1.2</span> 目录结构<span class="citation" data-cites="ansibleDirectoryLayout"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#依赖"><span class="toc-section-number">1.3</span> 依赖</a></li>
+  <li><a href="#嵌套循环"><span class="toc-section-number">1.4</span> 嵌套循环</a></li>
+  <li><a href="#自定义-ssh-端口"><span class="toc-section-number">1.5</span> 自定义 ssh 端口</a></li>
+  <li><a href="#ansible-vault"><span class="toc-section-number">1.6</span> Ansible Vault</a></li>
   </ul></li>
-  <li><a href="#systemd">systemd</a>
+  <li><a href="#systemd"><span class="toc-section-number">2</span> systemd</a>
   <ul>
-  <li><a href="#文件目录">文件目录</a></li>
-  <li><a href="#查看-mount-的转义路径">查看 mount 的转义路径</a></li>
+  <li><a href="#文件目录"><span class="toc-section-number">2.1</span> 文件目录</a></li>
+  <li><a href="#查看-mount-的转义路径"><span class="toc-section-number">2.2</span> 查看 mount 的转义路径</a></li>
   </ul></li>
-  <li><a href="#github">GitHub</a>
+  <li><a href="#github"><span class="toc-section-number">3</span> GitHub</a>
   <ul>
-  <li><a href="#actions">Actions</a>
+  <li><a href="#actions"><span class="toc-section-number">3.1</span> Actions</a>
   <ul>
-  <li><a href="#加密信息">加密信息</a></li>
+  <li><a href="#加密信息"><span class="toc-section-number">3.1.1</span> 加密信息</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>

@@ -12,15 +12,14 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
-      <description>术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+      <description>1 术语 1.1 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
 其中，若记 \(\m{A}_{ji} = a + bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
-相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
-酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
-正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+1.2 相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  1.3 正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+1.4 酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+1.5 正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
 当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
-旋转矩阵[3] 旋转矩阵的集合：
-\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
-外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]</description>
+1.6 旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]</description>
     </item>
     
     <item>
@@ -29,15 +28,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/</guid>
-      <description>中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+      <description>1 中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
 \[ \median(x) = \begin{cases} x_{((n+1)/2)}, &amp;amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp;amp; n \text{为偶数} \end{cases} \qquad(1)\]
-通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
-步骤 记 \(u\) 为 \(x\) 的累积分布函数：
+2 通用采样方法 2.1 逆变换采样 2.1.1 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+2.1.2 步骤 记 \(u\) 为 \(x\) 的累积分布函数：
 \[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
 那么按照以下步骤即可从 \(p(x)\) 采样：
- 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？</description>
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  2.</description>
     </item>
     
   </channel>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="URL vs URI[1] URL 用于定位，URI 用于标识。
-httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
- # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.">
+<meta name="description" content="1 URL vs URI[1] URL 用于定位，URI 用于标识。
+2 httpie 2.1 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     2.2 用法 2.2.1 Query Parameters param==value 3 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     4 NGINX 4.1 编译安装  推荐安装 mainline 版本[3]。
+ # Environment variables NGINX_VERSION=1.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="HTTP" />
-<meta property="og:description" content="URL vs URI[1] URL 用于定位，URI 用于标识。
-httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
- # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx." />
+<meta property="og:description" content="1 URL vs URI[1] URL 用于定位，URI 用于标识。
+2 httpie 2.1 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     2.2 用法 2.2.1 Query Parameters param==value 3 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     4 NGINX 4.1 编译安装  推荐安装 mainline 版本[3]。
+ # Environment variables NGINX_VERSION=1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/CS/http/" /><meta property="article:section" content="CS" />
 
@@ -18,8 +18,8 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
 <title>HTTP | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -675,7 +675,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -938,7 +938,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1135,10 +1135,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<a href="#ref-urlVsURI" role="doc-biblioref">1</a>]</sup></span></h1>
+  <article class="markdown"><h1 data-number="1" id="url-vs-uriurlvsuri"><span class="header-section-number">1</span> URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<a href="#ref-urlVsURI" role="doc-biblioref">1</a>]</sup></span></h1>
 <p>URL 用于定位，URI 用于标识。</p>
-<h1 id="httpie">httpie</h1>
-<h2 id="安装-httpie">安装 httpie</h2>
+<h1 data-number="2" id="httpie"><span class="header-section-number">2</span> httpie</h1>
+<h2 data-number="2.1" id="安装-httpie"><span class="header-section-number">2.1</span> 安装 httpie</h2>
 <div id="tbl:install_httpie">
 <table>
 <caption>表 1: httpie 安装命令</caption>
@@ -1156,10 +1156,10 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="用法">用法</h2>
-<h3 id="query-parameters">Query Parameters</h3>
+<h2 data-number="2.2" id="用法"><span class="header-section-number">2.2</span> 用法</h2>
+<h3 data-number="2.2.1" id="query-parameters"><span class="header-section-number">2.2.1</span> Query Parameters</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">param</span><span class="op">=</span>=value</span></code></pre></div>
-<h1 id="状态码">状态码</h1>
+<h1 data-number="3" id="状态码"><span class="header-section-number">3</span> 状态码</h1>
 <div id="tbl:http_status_code">
 <table>
 <caption>表 2: HTTP 状态码<span class="citation" data-cites="http_401"><sup>[<a href="#ref-http_401" role="doc-biblioref">2</a>]</sup></span></caption>
@@ -1181,8 +1181,8 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="nginx">NGINX</h1>
-<h2 id="编译安装">编译安装</h2>
+<h1 data-number="4" id="nginx"><span class="header-section-number">4</span> NGINX</h1>
+<h2 data-number="4.1" id="编译安装"><span class="header-section-number">4.1</span> 编译安装</h2>
 <blockquote>
 <p>推荐安装 <code>mainline</code> 版本<span class="citation" data-cites="nginxVersion"><sup>[<a href="#ref-nginxVersion" role="doc-biblioref">3</a>]</sup></span>。</p>
 </blockquote>
@@ -1216,7 +1216,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">--add-module</span><span class="op">=</span>../nginx-upload-module-<span class="va">$NGINX_UPLOAD_MODULE_VERSION</span></span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> install</span></code></pre></div>
-<h2 id="websocket">websocket</h2>
+<h2 data-number="4.2" id="websocket"><span class="header-section-number">4.2</span> websocket</h2>
 <pre class="nginx"><code>http {
     map $http_upgrade $connection_upgrade {
         default upgrade;
@@ -1234,8 +1234,8 @@ https://github.com/alex-shpak/hugo-book
         }
     }
 }</code></pre>
-<h2 id="nginx-upload-module">nginx-upload-module</h2>
-<h3 id="配置例子">配置例子</h3>
+<h2 data-number="4.3" id="nginx-upload-module"><span class="header-section-number">4.3</span> nginx-upload-module</h2>
+<h3 data-number="4.3.1" id="配置例子"><span class="header-section-number">4.3.1</span> 配置例子</h3>
 <pre class="nginx"><code>server {
         location /api/upload/v1 {
                 auth_basic &quot;Administrator&#39;s Area&quot;;
@@ -1272,20 +1272,20 @@ https://github.com/alex-shpak/hugo-book
                 autoindex_localtime on;
         }
 }</code></pre>
-<h1 id="curl">curl</h1>
-<h2 id="上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">4</a>]</sup></span></h2>
+<h1 data-number="5" id="curl"><span class="header-section-number">5</span> curl</h1>
+<h2 data-number="5.1" id="上传时显示进度条curluploadprogress"><span class="header-section-number">5.1</span> 上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<a href="#ref-curlUploadProgress" role="doc-biblioref">4</a>]</sup></span></h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> ... <span class="kw">|</span> <span class="fu">tee</span> /dev/null</span></code></pre></div>
-<h2 id="urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">5</a>]</sup></span></h2>
+<h2 data-number="5.2" id="urlencode-参数curlurlencode"><span class="header-section-number">5.2</span> urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<a href="#ref-curlUrlEncode" role="doc-biblioref">5</a>]</sup></span></h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> ... <span class="at">--data-urlencode</span> <span class="st">&quot;paramName=value&quot;</span></span></code></pre></div>
-<h2 id="得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<a href="#ref-curlLocation" role="doc-biblioref">6</a>]</sup></span></h2>
+<h2 data-number="5.3" id="得到响应中的-location-headercurllocation"><span class="header-section-number">5.3</span> 得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<a href="#ref-curlLocation" role="doc-biblioref">6</a>]</sup></span></h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="st">&#39;http://httpbin.org/redirect-to?url=http:/\example.com&#39;</span> <span class="at">-si</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="at">-oP</span> <span class="st">&#39;Location: \K.*&#39;</span></span></code></pre></div>
-<h1 id="open-api">Open API</h1>
-<h2 id="redoc">redoc</h2>
-<h3 id="安装">安装</h3>
+<h1 data-number="6" id="open-api"><span class="header-section-number">6</span> Open API</h1>
+<h2 data-number="6.1" id="redoc"><span class="header-section-number">6.1</span> redoc</h2>
+<h3 data-number="6.1.1" id="安装"><span class="header-section-number">6.1.1</span> 安装</h3>
 <div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yarn</span> global add redoc-cli</span></code></pre></div>
-<h3 id="生成-api-文档">生成 API 文档</h3>
+<h3 data-number="6.1.2" id="生成-api-文档"><span class="header-section-number">6.1.2</span> 生成 API 文档</h3>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">redoc-cli</span> bundle <span class="op">&lt;</span>openapi_file_path<span class="op">&gt;</span></span></code></pre></div>
-<h2 id="语法">语法</h2>
+<h2 data-number="6.2" id="语法"><span class="header-section-number">6.2</span> 语法</h2>
 <div id="tbl:openapi_data_type">
 <table>
 <caption>表 3: Open API 数据类型</caption>
@@ -1310,8 +1310,8 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="api">API</h1>
-<h2 id="seafile">seafile</h2>
+<h1 data-number="7" id="api"><span class="header-section-number">7</span> API</h1>
+<h2 data-number="7.1" id="seafile"><span class="header-section-number">7.1</span> seafile</h2>
 <ul>
 <li>上传文件：<a href="https://download.seafile.com/published/web-api/v2.1/file-upload.md" class="uri">https://download.seafile.com/published/web-api/v2.1/file-upload.md</a></li>
 <li>Web API: <a href="https://seafile.gitbook.io/seafile-server-manual/developing/web-api" class="uri">https://seafile.gitbook.io/seafile-server-manual/developing/web-api</a></li>
@@ -1341,43 +1341,43 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#url-vs-uriurlvsuri">URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#httpie">httpie</a>
+  <li><a href="#url-vs-uriurlvsuri"><span class="toc-section-number">1</span> URL vs URI<span class="citation" data-cites="urlVsURI"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#httpie"><span class="toc-section-number">2</span> httpie</a>
   <ul>
-  <li><a href="#安装-httpie">安装 httpie</a></li>
-  <li><a href="#用法">用法</a>
+  <li><a href="#安装-httpie"><span class="toc-section-number">2.1</span> 安装 httpie</a></li>
+  <li><a href="#用法"><span class="toc-section-number">2.2</span> 用法</a>
   <ul>
-  <li><a href="#query-parameters">Query Parameters</a></li>
+  <li><a href="#query-parameters"><span class="toc-section-number">2.2.1</span> Query Parameters</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#状态码">状态码</a></li>
-  <li><a href="#nginx">NGINX</a>
+  <li><a href="#状态码"><span class="toc-section-number">3</span> 状态码</a></li>
+  <li><a href="#nginx"><span class="toc-section-number">4</span> NGINX</a>
   <ul>
-  <li><a href="#编译安装">编译安装</a></li>
-  <li><a href="#websocket">websocket</a></li>
-  <li><a href="#nginx-upload-module">nginx-upload-module</a>
+  <li><a href="#编译安装"><span class="toc-section-number">4.1</span> 编译安装</a></li>
+  <li><a href="#websocket"><span class="toc-section-number">4.2</span> websocket</a></li>
+  <li><a href="#nginx-upload-module"><span class="toc-section-number">4.3</span> nginx-upload-module</a>
   <ul>
-  <li><a href="#配置例子">配置例子</a></li>
+  <li><a href="#配置例子"><span class="toc-section-number">4.3.1</span> 配置例子</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#curl">curl</a>
+  <li><a href="#curl"><span class="toc-section-number">5</span> curl</a>
   <ul>
-  <li><a href="#上传时显示进度条curluploadprogress">上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<span>4</span>]</sup></span></a></li>
-  <li><a href="#urlencode-参数curlurlencode">urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<span>5</span>]</sup></span></a></li>
-  <li><a href="#得到响应中的-location-headercurllocation">得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#上传时显示进度条curluploadprogress"><span class="toc-section-number">5.1</span> 上传时显示进度条<span class="citation" data-cites="curlUploadProgress"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#urlencode-参数curlurlencode"><span class="toc-section-number">5.2</span> urlencode 参数<span class="citation" data-cites="curlUrlEncode"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#得到响应中的-location-headercurllocation"><span class="toc-section-number">5.3</span> 得到响应中的 Location header<span class="citation" data-cites="curlLocation"><sup>[<span>6</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#open-api">Open API</a>
+  <li><a href="#open-api"><span class="toc-section-number">6</span> Open API</a>
   <ul>
-  <li><a href="#redoc">redoc</a>
+  <li><a href="#redoc"><span class="toc-section-number">6.1</span> redoc</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
-  <li><a href="#生成-api-文档">生成 API 文档</a></li>
+  <li><a href="#安装"><span class="toc-section-number">6.1.1</span> 安装</a></li>
+  <li><a href="#生成-api-文档"><span class="toc-section-number">6.1.2</span> 生成 API 文档</a></li>
   </ul></li>
-  <li><a href="#语法">语法</a></li>
+  <li><a href="#语法"><span class="toc-section-number">6.2</span> 语法</a></li>
   </ul></li>
-  <li><a href="#api">API</a>
+  <li><a href="#api"><span class="toc-section-number">7</span> API</a>
   <ul>
-  <li><a href="#seafile">seafile</a></li>
+  <li><a href="#seafile"><span class="toc-section-number">7.1</span> seafile</a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>

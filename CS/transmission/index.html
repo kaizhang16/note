@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SSH Secure Shell。
-只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
- SFTP SSH File Transfer Protocol。
-常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/ -r，递归  下载 put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/ -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
-vsftpd Very Secure FTP Daemon。
-只允许某些用户访问[2] /etc/vsftpd.conf:
-userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd.">
+<meta name="description" content="1 SSH Secure Shell。
+1.1 只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
+ 2 SFTP SSH File Transfer Protocol。
+2.1 常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/ -r，递归  下载 put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/ -r，递归  移动文件 rename      2.2 internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+3 vsftpd Very Secure FTP Daemon。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="传输" />
-<meta property="og:description" content="SSH Secure Shell。
-只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
- SFTP SSH File Transfer Protocol。
-常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/ -r，递归  下载 put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/ -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
-vsftpd Very Secure FTP Daemon。
-只允许某些用户访问[2] /etc/vsftpd.conf:
-userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd." />
+<meta property="og:description" content="1 SSH Secure Shell。
+1.1 只让某些用户使用密码登录 PasswordAuthentication no Match User &lt;username&gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
+ 2 SFTP SSH File Transfer Protocol。
+2.1 常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &lt;local_dir&gt;/*.mp4 &lt;remote_dir&gt;/ -r，递归  下载 put &lt;remote_dir&gt;/*.mp4 &lt;local_dir&gt;/ -r，递归  移动文件 rename      2.2 internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+3 vsftpd Very Secure FTP Daemon。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/CS/transmission/" /><meta property="article:section" content="CS" />
 
@@ -26,8 +22,8 @@ userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDA
 <title>传输 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -683,7 +679,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -946,7 +942,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1143,9 +1139,9 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="ssh">SSH</h1>
+  <article class="markdown"><h1 data-number="1" id="ssh"><span class="header-section-number">1</span> SSH</h1>
 <p>Secure Shell。</p>
-<h2 id="只让某些用户使用密码登录">只让某些用户使用密码登录</h2>
+<h2 data-number="1.1" id="只让某些用户使用密码登录"><span class="header-section-number">1.1</span> 只让某些用户使用密码登录</h2>
 <pre class="ssh"><code>PasswordAuthentication no
 
 Match User &lt;username&gt;
@@ -1153,9 +1149,9 @@ Match User &lt;username&gt;
 <blockquote>
 <p><code>Match</code> 在遇到下一个 <code>Match</code> 前一直有效，与缩进无关。</p>
 </blockquote>
-<h1 id="sftp">SFTP</h1>
+<h1 data-number="2" id="sftp"><span class="header-section-number">2</span> SFTP</h1>
 <p>SSH File Transfer Protocol。</p>
-<h2 id="常见命令">常见命令</h2>
+<h2 data-number="2.1" id="常见命令"><span class="header-section-number">2.1</span> 常见命令</h2>
 <div id="tbl:SFTP_commands">
 <table>
 <caption>表 1: SFTP 常见命令</caption>
@@ -1185,19 +1181,19 @@ Match User &lt;username&gt;
 </tbody>
 </table>
 </div>
-<h2 id="internal-sftp-vs-sftp-server">internal-sftp vs sftp-server</h2>
+<h2 data-number="2.2" id="internal-sftp-vs-sftp-server"><span class="header-section-number">2.2</span> internal-sftp vs sftp-server</h2>
 <p>推荐使用 internal-sftp。<span class="citation" data-cites="sftp_internal_vs_server"><sup>[<a href="#ref-sftp_internal_vs_server" role="doc-biblioref">1</a>]</sup></span></p>
-<h1 id="vsftpd">vsftpd</h1>
+<h1 data-number="3" id="vsftpd"><span class="header-section-number">3</span> vsftpd</h1>
 <p>Very Secure FTP Daemon。</p>
-<h2 id="只允许某些用户访问vsftpd_allow_centain_users">只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<a href="#ref-vsftpd_allow_centain_users" role="doc-biblioref">2</a>]</sup></span></h2>
+<h2 data-number="3.1" id="只允许某些用户访问vsftpd_allow_centain_users"><span class="header-section-number">3.1</span> 只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<a href="#ref-vsftpd_allow_centain_users" role="doc-biblioref">2</a>]</sup></span></h2>
 <p><code>/etc/vsftpd.conf</code>:</p>
 <pre class="conf"><code>userlist_enable=YES
 userlist_file=/etc/vsftpd.userlist
 userlist_deny=NO</code></pre>
-<h2 id="invalidargumentvsftpd_invalid_argument">INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<a href="#ref-vsftpd_invalid_argument" role="doc-biblioref">3</a>]</sup></span></h2>
+<h2 data-number="3.2" id="invalidargumentvsftpd_invalid_argument"><span class="header-section-number">3.2</span> INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<a href="#ref-vsftpd_invalid_argument" role="doc-biblioref">3</a>]</sup></span></h2>
 <p><code>/etc/vsftpd.conf</code>:</p>
 <pre class="conf"><code>listen=YES</code></pre>
-<h2 id="login-incorrectvsftpd_530">530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<a href="#ref-vsftpd_530" role="doc-biblioref">4</a>]</sup></span></h2>
+<h2 data-number="3.3" id="login-incorrectvsftpd_530"><span class="header-section-number">3.3</span> 530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<a href="#ref-vsftpd_530" role="doc-biblioref">4</a>]</sup></span></h2>
 <p><code>/etc/vsftpd.conf</code>:</p>
 <pre class="conf"><code>pam_service_name=ftp</code></pre>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1218,20 +1214,20 @@ userlist_deny=NO</code></pre>
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#ssh">SSH</a>
+  <li><a href="#ssh"><span class="toc-section-number">1</span> SSH</a>
   <ul>
-  <li><a href="#只让某些用户使用密码登录">只让某些用户使用密码登录</a></li>
+  <li><a href="#只让某些用户使用密码登录"><span class="toc-section-number">1.1</span> 只让某些用户使用密码登录</a></li>
   </ul></li>
-  <li><a href="#sftp">SFTP</a>
+  <li><a href="#sftp"><span class="toc-section-number">2</span> SFTP</a>
   <ul>
-  <li><a href="#常见命令">常见命令</a></li>
-  <li><a href="#internal-sftp-vs-sftp-server">internal-sftp vs sftp-server</a></li>
+  <li><a href="#常见命令"><span class="toc-section-number">2.1</span> 常见命令</a></li>
+  <li><a href="#internal-sftp-vs-sftp-server"><span class="toc-section-number">2.2</span> internal-sftp vs sftp-server</a></li>
   </ul></li>
-  <li><a href="#vsftpd">vsftpd</a>
+  <li><a href="#vsftpd"><span class="toc-section-number">3</span> vsftpd</a>
   <ul>
-  <li><a href="#只允许某些用户访问vsftpd_allow_centain_users">只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<span>2</span>]</sup></span></a></li>
-  <li><a href="#invalidargumentvsftpd_invalid_argument">INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#login-incorrectvsftpd_530">530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#只允许某些用户访问vsftpd_allow_centain_users"><span class="toc-section-number">3.1</span> 只允许某些用户访问<span class="citation" data-cites="vsftpd_allow_centain_users"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#invalidargumentvsftpd_invalid_argument"><span class="toc-section-number">3.2</span> INVALIDARGUMENT<span class="citation" data-cites="vsftpd_invalid_argument"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#login-incorrectvsftpd_530"><span class="toc-section-number">3.3</span> 530 Login incorrect<span class="citation" data-cites="vsftpd_530"><sup>[<span>4</span>]</sup></span></a></li>
   </ul></li>
   </ul>
 </nav>

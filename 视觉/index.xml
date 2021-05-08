@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/unity/</guid>
-      <description>导入 .obj 文件时 x 轴会取反[1] 参考文献 [1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). https://stackoverflow.com/a/52044185.   目录  导入 .obj 文件时 x 轴会取反[1] 参考文献   </description>
+      <description>1 导入 .obj 文件时 x 轴会取反[1] 参考文献 [1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). https://stackoverflow.com/a/52044185.   目录  1 导入 .obj 文件时 x 轴会取反[1] 参考文献   </description>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/</guid>
-      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384+0+0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .</description>
+      <description>1 文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     2 ImageMagick 2.1 裁剪中间部分 convert a.png -gravity center -crop 16384x16384+0+0 b.png 3 压缩 3.1 JPG 3.1.1 jpegoptim 3.1.1.1 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     4 colmap 4.1 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .</description>
     </item>
     
     <item>
@@ -30,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/video/</guid>
-      <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
+      <description>1 ffmpeg 1.1 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  1 ffmpeg  1.1 查看视频时长    </description>
     </item>
     
   </channel>

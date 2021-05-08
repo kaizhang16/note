@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 最佳实践  表 2: Create table 最佳实践  类别 最佳实践    主键 integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY[3]  字符串 text[4]  时间 timestamptz[5]     安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.">
+<meta name="description" content="1 Entity Relationship Diagram 1.1 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd 2 SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     3 PostgreSQL 3.1 最佳实践  表 2: Create table 最佳实践  类别 最佳实践    主键 integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY[3]  字符串 text[4]  时间 timestamptz[5]     3.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数据库" />
-<meta property="og:description" content="Entity Relationship Diagram 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 最佳实践  表 2: Create table 最佳实践  类别 最佳实践    主键 integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY[3]  字符串 text[4]  时间 timestamptz[5]     安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql." />
+<meta property="og:description" content="1 Entity Relationship Diagram 1.1 安装 curl -LO &#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39; chmod u&#43;x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd 2 SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     3 PostgreSQL 3.1 最佳实践  表 2: Create table 最佳实践  类别 最佳实践    主键 integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY[3]  字符串 text[4]  时间 timestamptz[5]     3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/" /><meta property="article:section" content="CS" />
 
@@ -14,8 +14,8 @@
 <title>数据库 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -671,7 +671,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -934,7 +934,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1131,12 +1131,12 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="entity-relationship-diagram">Entity Relationship Diagram</h1>
-<h2 id="安装">安装</h2>
+  <article class="markdown"><h1 data-number="1" id="entity-relationship-diagram"><span class="header-section-number">1</span> Entity Relationship Diagram</h1>
+<h2 data-number="1.1" id="安装"><span class="header-section-number">1.1</span> 安装</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LO</span> <span class="st">&#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&#39;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> u+x erd_static-x86-64</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-i</span> erd_static-x86-64 ~/.local/bin/erd</span></code></pre></div>
-<h1 id="sql-命名规范">SQL 命名规范</h1>
+<h1 data-number="2" id="sql-命名规范"><span class="header-section-number">2</span> SQL 命名规范</h1>
 <div id="tbl:sqlNameConvention">
 <table>
 <caption>表 1: SQL 命名规范</caption>
@@ -1166,8 +1166,8 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="postgresql">PostgreSQL</h1>
-<h2 id="最佳实践">最佳实践</h2>
+<h1 data-number="3" id="postgresql"><span class="header-section-number">3</span> PostgreSQL</h1>
+<h2 data-number="3.1" id="最佳实践"><span class="header-section-number">3.1</span> 最佳实践</h2>
 <div id="tbl:postgres_create_table">
 <table>
 <caption>表 2: Create table 最佳实践</caption>
@@ -1193,30 +1193,30 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="安装-1">安装</h2>
-<h3 id="arch-linux">Arch Linux</h3>
+<h2 data-number="3.2" id="安装-1"><span class="header-section-number">3.2</span> 安装</h2>
+<h3 data-number="3.2.1" id="arch-linux"><span class="header-section-number">3.2.1</span> Arch Linux</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo pacman <span class="at">-S</span> postgres</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo <span class="at">-iu</span> postgres</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[postgres]$</span> initdb <span class="at">-D</span> /var/lib/postgres/data</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">[postgres]$</span> exit</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo systemctl start postgresql.service</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo systemctl enable postgresql.service</span></code></pre></div>
-<h3 id="ubuntu">Ubuntu</h3>
+<h3 data-number="3.2.2" id="ubuntu"><span class="header-section-number">3.2.2</span> Ubuntu</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">UBUNTU_VERSION</span><span class="op">=</span>xenial</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;deb http://apt.postgresql.org/pub/repos/apt/ </span><span class="va">$UBUNTU_VERSION</span><span class="st">-pgdg main&quot;</span> <span class="kw">|</span> <span class="fu">sudo</span> tee /etc/apt/sources.list.d/pgdg.list</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">--quiet</span> <span class="at">-O</span> <span class="at">-</span> https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="kw">|</span> <span class="fu">sudo</span> apt-key add <span class="at">-</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install postgresql</span></code></pre></div>
-<h2 id="创建用户">创建用户</h2>
+<h2 data-number="3.3" id="创建用户"><span class="header-section-number">3.3</span> 创建用户</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo <span class="at">-iu</span> postgres</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[postgres]$</span> createuser <span class="op">&lt;</span>username<span class="op">&gt;</span> -P  <span class="co"># 要求输入密码</span></span></code></pre></div>
-<h2 id="修改密码">修改密码</h2>
+<h2 data-number="3.4" id="修改密码"><span class="header-section-number">3.4</span> 修改密码</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="fu">USER</span> user_name <span class="kw">WITH</span> <span class="kw">PASSWORD</span> <span class="st">&#39;new_password&#39;</span>;</span></code></pre></div>
-<h2 id="创建数据库">创建数据库</h2>
+<h2 data-number="3.5" id="创建数据库"><span class="header-section-number">3.5</span> 创建数据库</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">createdb</span> <span class="op">&lt;</span>db_name<span class="op">&gt;</span> -O <span class="op">&lt;</span>username<span class="op">&gt;</span></span></code></pre></div>
-<h2 id="注释">注释</h2>
+<h2 data-number="3.6" id="注释"><span class="header-section-number">3.6</span> 注释</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- 注释</span></span></code></pre></div>
-<h2 id="数据类型postgres_data_types">数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<a href="#ref-postgres_data_types" role="doc-biblioref">6</a>]</sup></span></h2>
+<h2 data-number="3.7" id="数据类型postgres_data_types"><span class="header-section-number">3.7</span> 数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<a href="#ref-postgres_data_types" role="doc-biblioref">6</a>]</sup></span></h2>
 <div id="tbl:postgresDataTypes">
 <table>
 <caption>表 3: PostgreSQL 数据类型</caption>
@@ -1242,7 +1242,7 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="psql-指令">psql 指令</h2>
+<h2 data-number="3.8" id="psql-指令"><span class="header-section-number">3.8</span> psql 指令</h2>
 <div id="tbl:psqlCommands">
 <table>
 <caption>表 4: psql 指令</caption>
@@ -1272,13 +1272,13 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="参数替换postgres_parameter_substitution">参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<a href="#ref-postgres_parameter_substitution" role="doc-biblioref">7</a>]</sup></span></h2>
+<h2 data-number="3.9" id="参数替换postgres_parameter_substitution"><span class="header-section-number">3.9</span> 参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<a href="#ref-postgres_parameter_substitution" role="doc-biblioref">7</a>]</sup></span></h2>
 <div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">PREPARE</span> fooplan (<span class="dt">int</span>, text, bool, <span class="dt">numeric</span>) <span class="kw">AS</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">INSERT</span> <span class="kw">INTO</span> foo <span class="kw">VALUES</span>($<span class="dv">1</span>, $<span class="dv">2</span>, $<span class="dv">3</span>, $<span class="dv">4</span>);</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">EXECUTE</span> fooplan(<span class="dv">1</span>, <span class="st">&#39;Hunter Valley&#39;</span>, <span class="st">&#39;t&#39;</span>, <span class="fl">200.00</span>);</span></code></pre></div>
-<h2 id="模糊查找postgres_pattern_match">模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<a href="#ref-postgres_pattern_match" role="doc-biblioref">8</a>]</sup></span></h2>
+<h2 data-number="3.10" id="模糊查找postgres_pattern_match"><span class="header-section-number">3.10</span> 模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<a href="#ref-postgres_pattern_match" role="doc-biblioref">8</a>]</sup></span></h2>
 <p><code>LIKE</code> 时间和空间复杂度上限更容易控制。</p>
-<h2 id="按拼音排序postgres_collate">按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<a href="#ref-postgres_collate" role="doc-biblioref">9</a>]</sup></span></h2>
+<h2 data-number="3.11" id="按拼音排序postgres_collate"><span class="header-section-number">3.11</span> 按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<a href="#ref-postgres_collate" role="doc-biblioref">9</a>]</sup></span></h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> a <span class="kw">ORDER</span> <span class="kw">BY</span> c1 COLLATE <span class="ot">&quot;zh_CN&quot;</span>;</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1314,28 +1314,28 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#entity-relationship-diagram">Entity Relationship Diagram</a>
+  <li><a href="#entity-relationship-diagram"><span class="toc-section-number">1</span> Entity Relationship Diagram</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
+  <li><a href="#安装"><span class="toc-section-number">1.1</span> 安装</a></li>
   </ul></li>
-  <li><a href="#sql-命名规范">SQL 命名规范</a></li>
-  <li><a href="#postgresql">PostgreSQL</a>
+  <li><a href="#sql-命名规范"><span class="toc-section-number">2</span> SQL 命名规范</a></li>
+  <li><a href="#postgresql"><span class="toc-section-number">3</span> PostgreSQL</a>
   <ul>
-  <li><a href="#最佳实践">最佳实践</a></li>
-  <li><a href="#安装-1">安装</a>
+  <li><a href="#最佳实践"><span class="toc-section-number">3.1</span> 最佳实践</a></li>
+  <li><a href="#安装-1"><span class="toc-section-number">3.2</span> 安装</a>
   <ul>
-  <li><a href="#arch-linux">Arch Linux</a></li>
-  <li><a href="#ubuntu">Ubuntu</a></li>
+  <li><a href="#arch-linux"><span class="toc-section-number">3.2.1</span> Arch Linux</a></li>
+  <li><a href="#ubuntu"><span class="toc-section-number">3.2.2</span> Ubuntu</a></li>
   </ul></li>
-  <li><a href="#创建用户">创建用户</a></li>
-  <li><a href="#修改密码">修改密码</a></li>
-  <li><a href="#创建数据库">创建数据库</a></li>
-  <li><a href="#注释">注释</a></li>
-  <li><a href="#数据类型postgres_data_types">数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<span>6</span>]</sup></span></a></li>
-  <li><a href="#psql-指令">psql 指令</a></li>
-  <li><a href="#参数替换postgres_parameter_substitution">参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<span>7</span>]</sup></span></a></li>
-  <li><a href="#模糊查找postgres_pattern_match">模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<span>8</span>]</sup></span></a></li>
-  <li><a href="#按拼音排序postgres_collate">按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<span>9</span>]</sup></span></a></li>
+  <li><a href="#创建用户"><span class="toc-section-number">3.3</span> 创建用户</a></li>
+  <li><a href="#修改密码"><span class="toc-section-number">3.4</span> 修改密码</a></li>
+  <li><a href="#创建数据库"><span class="toc-section-number">3.5</span> 创建数据库</a></li>
+  <li><a href="#注释"><span class="toc-section-number">3.6</span> 注释</a></li>
+  <li><a href="#数据类型postgres_data_types"><span class="toc-section-number">3.7</span> 数据类型<span class="citation" data-cites="postgres_data_types"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#psql-指令"><span class="toc-section-number">3.8</span> psql 指令</a></li>
+  <li><a href="#参数替换postgres_parameter_substitution"><span class="toc-section-number">3.9</span> 参数替换<span class="citation" data-cites="postgres_parameter_substitution"><sup>[<span>7</span>]</sup></span></a></li>
+  <li><a href="#模糊查找postgres_pattern_match"><span class="toc-section-number">3.10</span> 模糊查找<span class="citation" data-cites="postgres_pattern_match"><sup>[<span>8</span>]</sup></span></a></li>
+  <li><a href="#按拼音排序postgres_collate"><span class="toc-section-number">3.11</span> 按拼音排序<span class="citation" data-cites="postgres_collate"><sup>[<span>9</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>

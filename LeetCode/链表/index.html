@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+<meta name="description" content="1 19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 进阶：你能尝试使用一趟扫描实现吗？
-ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &lt; n; i&#43;&#43;) {  p1 = p1-&gt;next;  }  while (p1) {  p0 = p0-&gt;next;  p1 = p1-&gt;next;  }  auto next = p0-&gt;next;  p0-&gt;next = next-&gt;next;  delete next;  head = dummy-&gt;next;  delete dummy;  return head; } 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。">
+ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &lt; n; i&#43;&#43;) {  p1 = p1-&gt;next;  }  while (p1) {  p0 = p0-&gt;next;  p1 = p1-&gt;next;  }  auto next = p0-&gt;next;  p0-&gt;next = next-&gt;next;  delete next;  head = dummy-&gt;next;  delete dummy;  return head; } 2 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="链表" />
-<meta property="og:description" content="19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+<meta property="og:description" content="1 19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 进阶：你能尝试使用一趟扫描实现吗？
-ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &lt; n; i&#43;&#43;) {  p1 = p1-&gt;next;  }  while (p1) {  p0 = p0-&gt;next;  p1 = p1-&gt;next;  }  auto next = p0-&gt;next;  p0-&gt;next = next-&gt;next;  delete next;  head = dummy-&gt;next;  delete dummy;  return head; } 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。" />
+ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &lt; n; i&#43;&#43;) {  p1 = p1-&gt;next;  }  while (p1) {  p0 = p0-&gt;next;  p1 = p1-&gt;next;  }  auto next = p0-&gt;next;  p0-&gt;next = next-&gt;next;  delete next;  head = dummy-&gt;next;  delete dummy;  return head; } 2 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/" /><meta property="article:section" content="LeetCode" />
 
@@ -18,8 +18,8 @@ ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0,
 <title>链表 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -675,7 +675,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -938,7 +938,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1135,7 +1135,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="删除链表的倒数第-n-个结点">19 删除链表的倒数第 N 个结点</h1>
+  <article class="markdown"><h1 data-number="1" id="删除链表的倒数第-n-个结点"><span class="header-section-number">1</span> 19 删除链表的倒数第 N 个结点</h1>
 <p>给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。</p>
 <p>进阶：你能尝试使用一趟扫描实现吗？</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>rm_nth_from_end<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
@@ -1156,7 +1156,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="合并两个有序链表">21 合并两个有序链表</h1>
+<h1 data-number="2" id="合并两个有序链表"><span class="header-section-number">2</span> 21 合并两个有序链表</h1>
 <p>将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>merge_list<span class="op">(</span>ListNode <span class="op">*</span>l1<span class="op">,</span> ListNode <span class="op">*</span>l2<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> dummy <span class="op">=</span> <span class="kw">new</span> ListNode<span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
@@ -1176,10 +1176,10 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="合并-k-个升序链表">23 合并 K 个升序链表</h1>
+<h1 data-number="3" id="合并-k-个升序链表"><span class="header-section-number">3</span> 23 合并 K 个升序链表</h1>
 <p>给你一个链表数组，每个链表都已经按升序排列。</p>
 <p>请你将所有链表合并到一个升序链表中，返回合并后的链表。</p>
-<h2 id="分治合并">分治合并</h2>
+<h2 data-number="3.1" id="分治合并"><span class="header-section-number">3.1</span> 分治合并</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(kn\times \log k)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(\log k)\)</span></li>
@@ -1216,7 +1216,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>merge_k_list<span class="op">(</span>vector<span class="op">&lt;</span>ListNode <span class="op">*&gt;</span> <span class="op">&amp;</span>lists<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> helper<span class="op">(</span>lists<span class="op">,</span> <span class="dv">0</span><span class="op">,</span> lists<span class="op">.</span>size<span class="op">());</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="两两交换链表中的节点">24 两两交换链表中的节点</h1>
+<h1 data-number="4" id="两两交换链表中的节点"><span class="header-section-number">4</span> 24 两两交换链表中的节点</h1>
 <p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
 <p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>swap_pair<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
@@ -1233,7 +1233,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="k-个一组翻转链表">25 K 个一组翻转链表</h1>
+<h1 data-number="5" id="k-个一组翻转链表"><span class="header-section-number">5</span> 25 K 个一组翻转链表</h1>
 <p>给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。</p>
 <p>k 是一个正整数，它的值小于或等于链表的长度。</p>
 <p>如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。</p>
@@ -1281,7 +1281,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
 <span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="删除排序链表中的重复元素">83 删除排序链表中的重复元素</h1>
+<h1 data-number="6" id="删除排序链表中的重复元素"><span class="header-section-number">6</span> 83 删除排序链表中的重复元素</h1>
 <p>给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>rm_duplicate<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p <span class="op">=</span> head<span class="op">;</span></span>
@@ -1296,7 +1296,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="反转链表-ii">92 反转链表 II</h1>
+<h1 data-number="7" id="反转链表-ii"><span class="header-section-number">7</span> 92 反转链表 II</h1>
 <p>反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。</p>
 <p>说明: 1 ≤ m ≤ n ≤ 链表长度。</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse_between<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">,</span> <span class="dt">int</span> m<span class="op">,</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
@@ -1322,7 +1322,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="复制带随机指针的链表">138 复制带随机指针的链表</h1>
+<h1 data-number="8" id="复制带随机指针的链表"><span class="header-section-number">8</span> 138 复制带随机指针的链表</h1>
 <p>给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random ，该指针可以指向链表中的任何节点或空节点。</p>
 <p>构造这个链表的 深拷贝。 深拷贝应该正好由 n 个 全新 节点组成，其中每个新节点的值都设为其对应的原节点的值。新节点的 next 指针和 random 指针也都应指向复制链表中的新节点，并使原链表和复制链表中的这些指针能够表示相同的链表状态。复制链表中的指针都不应指向原链表中的节点 。</p>
 <p>例如，如果原链表中有 X 和 Y 两个节点，其中 X.random –&gt; Y 。那么在复制链表中对应的两个节点 x 和 y ，同样有 x.random –&gt; y 。</p>
@@ -1353,7 +1353,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head1<span class="op">;</span></span>
 <span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="环形链表">141 环形链表</h1>
+<h1 data-number="9" id="环形链表"><span class="header-section-number">9</span> 141 环形链表</h1>
 <p>给定一个链表，判断链表中是否有环。</p>
 <p>如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。</p>
 <p>如果链表中存在环，则返回 true 。 否则，返回 false 。</p>
@@ -1369,7 +1369,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="环形链表-ii">142 环形链表 II</h1>
+<h1 data-number="10" id="环形链表-ii"><span class="header-section-number">10</span> 142 环形链表 II</h1>
 <p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
 <p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。</p>
 <p>说明：不允许修改给定的链表。</p>
@@ -1396,9 +1396,9 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">nullptr</span><span class="op">;</span></span>
 <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="链表排序">148 链表排序</h1>
+<h1 data-number="11" id="链表排序"><span class="header-section-number">11</span> 148 链表排序</h1>
 <p>给你链表的头结点 head，请将其按升序排列并返回排序后的链表。</p>
-<h2 id="自底向上归并排序">自底向上归并排序</h2>
+<h2 data-number="11.1" id="自底向上归并排序"><span class="header-section-number">11.1</span> 自底向上归并排序</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(n\log n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
@@ -1460,7 +1460,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">delete</span> dummy<span class="op">;</span></span>
 <span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> head<span class="op">;</span></span>
 <span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="相交链表">160 相交链表</h1>
+<h1 data-number="12" id="相交链表"><span class="header-section-number">12</span> 160 相交链表</h1>
 <p>编写一个程序，找到两个单链表相交的起始节点。</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>get_intersection_node<span class="op">(</span>ListNode <span class="op">*</span>head1<span class="op">,</span> ListNode <span class="op">*</span>head2<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">auto</span> p1 <span class="op">=</span> head1<span class="op">;</span></span>
@@ -1471,7 +1471,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p1<span class="op">;</span></span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="反转链表">206 反转链表</h1>
+<h1 data-number="13" id="反转链表"><span class="header-section-number">13</span> 206 反转链表</h1>
 <p>反转一个单链表。</p>
 <p>示例:</p>
 <p>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</p>
@@ -1491,7 +1491,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p0<span class="op">;</span></span>
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="回文链表">234 回文链表</h1>
+<h1 data-number="14" id="回文链表"><span class="header-section-number">14</span> 234 回文链表</h1>
 <p>请判断一个链表是否为回文链表。</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ListNode <span class="op">*</span>reverse<span class="op">(</span>ListNode <span class="op">*</span>head<span class="op">)</span> <span class="op">{</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    ListNode <span class="op">*</span>p0 <span class="op">=</span> <span class="kw">nullptr</span><span class="op">;</span></span>
@@ -1531,10 +1531,10 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>    reverse<span class="op">(</span>tail<span class="op">);</span></span>
 <span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
 <span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="链表随机节点">382 链表随机节点</h1>
+<h1 data-number="15" id="链表随机节点"><span class="header-section-number">15</span> 382 链表随机节点</h1>
 <p>给定一个单链表，随机选择链表的一个节点，并返回相应的节点值。保证每个节点被选的概率一样。</p>
 <p>进阶：如果链表十分大且长度未知，如何解决这个问题？你能否使用常数级空间复杂度实现？</p>
-<h2 id="蓄水池抽样算法">蓄水池抽样算法</h2>
+<h2 data-number="15.1" id="蓄水池抽样算法"><span class="header-section-number">15.1</span> 蓄水池抽样算法</h2>
 <p>如何从未知大小的数据流中随机选取 k 个样本（保证每个样本被抽取到的概率相等）？</p>
 <ul>
 <li><span class="math inline">\(i &lt;= k\)</span> 时，直接保留，形成临时结果 <span class="math inline">\([x_1, x_2, \cdots, x_k]\)</span></li>
@@ -1577,29 +1577,29 @@ P(i) &amp;= \frac{k}{i}\times (1 -
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#删除链表的倒数第-n-个结点">19 删除链表的倒数第 N 个结点</a></li>
-  <li><a href="#合并两个有序链表">21 合并两个有序链表</a></li>
-  <li><a href="#合并-k-个升序链表">23 合并 K 个升序链表</a>
+  <li><a href="#删除链表的倒数第-n-个结点"><span class="toc-section-number">1</span> 19 删除链表的倒数第 N 个结点</a></li>
+  <li><a href="#合并两个有序链表"><span class="toc-section-number">2</span> 21 合并两个有序链表</a></li>
+  <li><a href="#合并-k-个升序链表"><span class="toc-section-number">3</span> 23 合并 K 个升序链表</a>
   <ul>
-  <li><a href="#分治合并">分治合并</a></li>
+  <li><a href="#分治合并"><span class="toc-section-number">3.1</span> 分治合并</a></li>
   </ul></li>
-  <li><a href="#两两交换链表中的节点">24 两两交换链表中的节点</a></li>
-  <li><a href="#k-个一组翻转链表">25 K 个一组翻转链表</a></li>
-  <li><a href="#删除排序链表中的重复元素">83 删除排序链表中的重复元素</a></li>
-  <li><a href="#反转链表-ii">92 反转链表 II</a></li>
-  <li><a href="#复制带随机指针的链表">138 复制带随机指针的链表</a></li>
-  <li><a href="#环形链表">141 环形链表</a></li>
-  <li><a href="#环形链表-ii">142 环形链表 II</a></li>
-  <li><a href="#链表排序">148 链表排序</a>
+  <li><a href="#两两交换链表中的节点"><span class="toc-section-number">4</span> 24 两两交换链表中的节点</a></li>
+  <li><a href="#k-个一组翻转链表"><span class="toc-section-number">5</span> 25 K 个一组翻转链表</a></li>
+  <li><a href="#删除排序链表中的重复元素"><span class="toc-section-number">6</span> 83 删除排序链表中的重复元素</a></li>
+  <li><a href="#反转链表-ii"><span class="toc-section-number">7</span> 92 反转链表 II</a></li>
+  <li><a href="#复制带随机指针的链表"><span class="toc-section-number">8</span> 138 复制带随机指针的链表</a></li>
+  <li><a href="#环形链表"><span class="toc-section-number">9</span> 141 环形链表</a></li>
+  <li><a href="#环形链表-ii"><span class="toc-section-number">10</span> 142 环形链表 II</a></li>
+  <li><a href="#链表排序"><span class="toc-section-number">11</span> 148 链表排序</a>
   <ul>
-  <li><a href="#自底向上归并排序">自底向上归并排序</a></li>
+  <li><a href="#自底向上归并排序"><span class="toc-section-number">11.1</span> 自底向上归并排序</a></li>
   </ul></li>
-  <li><a href="#相交链表">160 相交链表</a></li>
-  <li><a href="#反转链表">206 反转链表</a></li>
-  <li><a href="#回文链表">234 回文链表</a></li>
-  <li><a href="#链表随机节点">382 链表随机节点</a>
+  <li><a href="#相交链表"><span class="toc-section-number">12</span> 160 相交链表</a></li>
+  <li><a href="#反转链表"><span class="toc-section-number">13</span> 206 反转链表</a></li>
+  <li><a href="#回文链表"><span class="toc-section-number">14</span> 234 回文链表</a></li>
+  <li><a href="#链表随机节点"><span class="toc-section-number">15</span> 382 链表随机节点</a>
   <ul>
-  <li><a href="#蓄水池抽样算法">蓄水池抽样算法</a></li>
+  <li><a href="#蓄水池抽样算法"><span class="toc-section-number">15.1</span> 蓄水池抽样算法</a></li>
   </ul></li>
   </ul>
 </nav>

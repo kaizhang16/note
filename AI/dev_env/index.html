@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。">
+<meta name="description" content="1 CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     1.1 安装驱动 1.1.1 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 2 Docker 2.1 Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi 2.2 Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="开发环境" />
-<meta property="og:description" content="CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&lt;host&gt;:&lt;port&gt;/nbextensions 管理。" />
+<meta property="og:description" content="1 CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &gt;= 455.23.04  CUDA 11.0 &gt;= 450.36.06  CUDA 10.2 &gt;= 440.33  CUDA 10.1 &gt;= 418.39     1.1 安装驱动 1.1.1 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 2 Docker 2.1 Docker &gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi 2.2 Docker &lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/AI/dev_env/" /><meta property="article:section" content="AI" />
 
@@ -14,8 +14,8 @@
 <title>开发环境 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -671,7 +671,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -934,7 +934,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1131,7 +1131,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="cuda">CUDA</h1>
+  <article class="markdown"><h1 data-number="1" id="cuda"><span class="header-section-number">1</span> CUDA</h1>
 <div id="tbl:cuda_driver_version">
 <table>
 <caption>表 1: CUDA 与驱动的版本对应关系<span class="citation" data-cites="cuda_driver_version"><sup>[<a href="#ref-cuda_driver_version" role="doc-biblioref">1</a>]</sup></span></caption>
@@ -1161,32 +1161,32 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="安装驱动">安装驱动</h2>
-<h3 id="ubuntu">Ubuntu</h3>
+<h2 data-number="1.1" id="安装驱动"><span class="header-section-number">1.1</span> 安装驱动</h2>
+<h3 data-number="1.1.1" id="ubuntu"><span class="header-section-number">1.1.1</span> Ubuntu</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository ppa:graphics-drivers/ppa</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ubuntu-drivers</span> devices  <span class="co"># 查看推荐的驱动</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install nvidia-430  <span class="co"># 安装驱动</span></span></code></pre></div>
-<h1 id="docker">Docker</h1>
-<h2 id="docker-19.03">Docker &gt;= 19.03</h2>
+<h1 data-number="2" id="docker"><span class="header-section-number">2</span> Docker</h1>
+<h2 data-number="2.1" id="docker-19.03"><span class="header-section-number">2.1</span> Docker &gt;= 19.03</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> run <span class="at">--gpus</span><span class="op">=</span>all <span class="at">--shm-size</span><span class="op">=</span>64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
-<h2 id="docker-19.03-1">Docker &lt; 19.03</h2>
+<h2 data-number="2.2" id="docker-19.03-1"><span class="header-section-number">2.2</span> Docker &lt; 19.03</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nvidia-docker</span> run <span class="at">--shm-size</span><span class="op">=</span>64G kaizhang91/cuda:10.2 nvidia-smi</span></code></pre></div>
-<h1 id="jupyter-lab">Jupyter Lab</h1>
-<h2 id="安装">安装</h2>
+<h1 data-number="3" id="jupyter-lab"><span class="header-section-number">3</span> Jupyter Lab</h1>
+<h2 data-number="3.1" id="安装"><span class="header-section-number">3.1</span> 安装</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jupyterlab</span></code></pre></div>
-<h2 id="使用">使用</h2>
+<h2 data-number="3.2" id="使用"><span class="header-section-number">3.2</span> 使用</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab</span></code></pre></div>
-<h1 id="jupyter">Jupyter</h1>
-<h2 id="jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</h2>
-<h3 id="安装-1">安装</h3>
+<h1 data-number="4" id="jupyter"><span class="header-section-number">4</span> Jupyter</h1>
+<h2 data-number="4.1" id="jupyter_contrib_nbextensions"><span class="header-section-number">4.1</span> jupyter_contrib_nbextensions</h2>
+<h3 data-number="4.1.1" id="安装-1"><span class="header-section-number">4.1.1</span> 安装</h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jupyter_contrib_nbextensions</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> contrib nbextension install <span class="at">--user</span></span></code></pre></div>
-<h3 id="使用-1">使用</h3>
+<h3 data-number="4.1.2" id="使用-1"><span class="header-section-number">4.1.2</span> 使用</h3>
 <p>打开 <code>http://&lt;host&gt;:&lt;port&gt;/nbextensions</code> 管理。</p>
-<h1 id="pytorch">PyTorch</h1>
-<h2 id="安装-2">安装</h2>
+<h1 data-number="5" id="pytorch"><span class="header-section-number">5</span> PyTorch</h1>
+<h2 data-number="5.1" id="安装-2"><span class="header-section-number">5.1</span> 安装</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install torch torchvision</span></code></pre></div>
-<h2 id="计算精度">计算精度</h2>
+<h2 data-number="5.2" id="计算精度"><span class="header-section-number">5.2</span> 计算精度</h2>
 <div class="sourceCode" id="cb8"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>correct <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
@@ -1199,11 +1199,11 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Accuracy of the network on the 10000 test images: </span><span class="sc">%d</span><span class="st"> </span><span class="sc">%%</span><span class="st">&#39;</span> <span class="op">%</span> (</span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="dv">100</span> <span class="op">*</span> correct <span class="op">/</span> total))</span></code></pre></div>
-<h2 id="模型">模型</h2>
+<h2 data-number="5.3" id="模型"><span class="header-section-number">5.3</span> 模型</h2>
 <ul>
 <li>evaluate 模型时，代码需要包含在 <code>with torch.no_grad():</code> 里，避免计算梯度</li>
 </ul>
-<h2 id="tensor">Tensor</h2>
+<h2 data-number="5.4" id="tensor"><span class="header-section-number">5.4</span> Tensor</h2>
 <ul>
 <li>Tensor 可以用 GPU 加速计算</li>
 <li>带 <code>_</code> 后缀的方法改变张量</li>
@@ -1246,9 +1246,9 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="device">device</h2>
+<h2 data-number="5.5" id="device"><span class="header-section-number">5.5</span> device</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode py"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>device <span class="op">=</span> torch.device(<span class="st">&quot;cuda&quot;</span>)</span></code></pre></div>
-<h2 id="module">Module</h2>
+<h2 data-number="5.6" id="module"><span class="header-section-number">5.6</span> Module</h2>
 <p><code>net.zero_grad()</code> 可以清空存在的梯度，不然梯度会累积。</p>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1260,39 +1260,39 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#cuda">CUDA</a>
+  <li><a href="#cuda"><span class="toc-section-number">1</span> CUDA</a>
   <ul>
-  <li><a href="#安装驱动">安装驱动</a>
+  <li><a href="#安装驱动"><span class="toc-section-number">1.1</span> 安装驱动</a>
   <ul>
-  <li><a href="#ubuntu">Ubuntu</a></li>
+  <li><a href="#ubuntu"><span class="toc-section-number">1.1.1</span> Ubuntu</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#docker">Docker</a>
+  <li><a href="#docker"><span class="toc-section-number">2</span> Docker</a>
   <ul>
-  <li><a href="#docker-19.03">Docker &gt;= 19.03</a></li>
-  <li><a href="#docker-19.03-1">Docker &lt; 19.03</a></li>
+  <li><a href="#docker-19.03"><span class="toc-section-number">2.1</span> Docker &gt;= 19.03</a></li>
+  <li><a href="#docker-19.03-1"><span class="toc-section-number">2.2</span> Docker &lt; 19.03</a></li>
   </ul></li>
-  <li><a href="#jupyter-lab">Jupyter Lab</a>
+  <li><a href="#jupyter-lab"><span class="toc-section-number">3</span> Jupyter Lab</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
-  <li><a href="#使用">使用</a></li>
+  <li><a href="#安装"><span class="toc-section-number">3.1</span> 安装</a></li>
+  <li><a href="#使用"><span class="toc-section-number">3.2</span> 使用</a></li>
   </ul></li>
-  <li><a href="#jupyter">Jupyter</a>
+  <li><a href="#jupyter"><span class="toc-section-number">4</span> Jupyter</a>
   <ul>
-  <li><a href="#jupyter_contrib_nbextensions">jupyter_contrib_nbextensions</a>
+  <li><a href="#jupyter_contrib_nbextensions"><span class="toc-section-number">4.1</span> jupyter_contrib_nbextensions</a>
   <ul>
-  <li><a href="#安装-1">安装</a></li>
-  <li><a href="#使用-1">使用</a></li>
+  <li><a href="#安装-1"><span class="toc-section-number">4.1.1</span> 安装</a></li>
+  <li><a href="#使用-1"><span class="toc-section-number">4.1.2</span> 使用</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#pytorch">PyTorch</a>
+  <li><a href="#pytorch"><span class="toc-section-number">5</span> PyTorch</a>
   <ul>
-  <li><a href="#安装-2">安装</a></li>
-  <li><a href="#计算精度">计算精度</a></li>
-  <li><a href="#模型">模型</a></li>
-  <li><a href="#tensor">Tensor</a></li>
-  <li><a href="#device">device</a></li>
-  <li><a href="#module">Module</a></li>
+  <li><a href="#安装-2"><span class="toc-section-number">5.1</span> 安装</a></li>
+  <li><a href="#计算精度"><span class="toc-section-number">5.2</span> 计算精度</a></li>
+  <li><a href="#模型"><span class="toc-section-number">5.3</span> 模型</a></li>
+  <li><a href="#tensor"><span class="toc-section-number">5.4</span> Tensor</a></li>
+  <li><a href="#device"><span class="toc-section-number">5.5</span> device</a></li>
+  <li><a href="#module"><span class="toc-section-number">5.6</span> Module</a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>

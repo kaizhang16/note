@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+<meta name="description" content="1 中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
 \[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \qquad(1)\]
-通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
-步骤 记 \(u\) 为 \(x\) 的累积分布函数：
+2 通用采样方法 2.1 逆变换采样 2.1.1 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+2.1.2 步骤 记 \(u\) 为 \(x\) 的累积分布函数：
 \[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
 那么按照以下步骤即可从 \(p(x)\) 采样：
- 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？">
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  2.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="统计" />
-<meta property="og:description" content="中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+<meta property="og:description" content="1 中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
 \[ \median(x) = \begin{cases} x_{((n&#43;1)/2)}, &amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} &#43; x_{(n/2&#43;1)}), &amp; n \text{为偶数} \end{cases} \qquad(1)\]
-通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
-步骤 记 \(u\) 为 \(x\) 的累积分布函数：
+2 通用采样方法 2.1 逆变换采样 2.1.1 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+2.1.2 步骤 记 \(u\) 为 \(x\) 的累积分布函数：
 \[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
 那么按照以下步骤即可从 \(p(x)\) 采样：
- 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？" />
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/" /><meta property="article:section" content="数学" />
 
@@ -30,8 +30,8 @@
 <title>统计 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -687,7 +687,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -950,7 +950,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1147,7 +1147,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="中位数">中位数</h1>
+  <article class="markdown"><h1 data-number="1" id="中位数"><span class="header-section-number">1</span> 中位数</h1>
 <p>先把 <span class="math inline">\(x_1, x_2, \dots, x_n\)</span> 从小到大排序，得到</p>
 <p><span class="math display">\[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]</span></p>
 <p>则中位数为：</p>
@@ -1158,11 +1158,11 @@ x_{((n+1)/2)}, &amp; n \text{为奇数} \\
 \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp; n \text{为偶数}
 \end{cases}
 \qquad(1)\]</span></span></p>
-<h1 id="通用采样方法">通用采样方法</h1>
-<h2 id="逆变换采样">逆变换采样</h2>
-<h3 id="问题">问题</h3>
+<h1 data-number="2" id="通用采样方法"><span class="header-section-number">2</span> 通用采样方法</h1>
+<h2 data-number="2.1" id="逆变换采样"><span class="header-section-number">2.1</span> 逆变换采样</h2>
+<h3 data-number="2.1.1" id="问题"><span class="header-section-number">2.1.1</span> 问题</h3>
 <p>已实现从均匀分布采样，如何从 <span class="math inline">\(p(x)\)</span> 采样？</p>
-<h3 id="步骤">步骤</h3>
+<h3 data-number="2.1.2" id="步骤"><span class="header-section-number">2.1.2</span> 步骤</h3>
 <p>记 <span class="math inline">\(u\)</span> 为 <span class="math inline">\(x\)</span> 的累积分布函数：</p>
 <p><span id="eq:inverse_transform_sample_u"><span class="math display">\[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]</span></span></p>
 <p>那么按照以下步骤即可从 <span class="math inline">\(p(x)\)</span> 采样：</p>
@@ -1170,17 +1170,17 @@ x_{((n+1)/2)}, &amp; n \text{为奇数} \\
 <li>从均匀分布 <span class="math inline">\(U(0, 1)\)</span> 产生一个随机数 <span class="math inline">\(u_i\)</span></li>
 <li>计算 <span class="math inline">\(x_i = \Phi^{-1}(u_i)\)</span>，得到的 <span class="math inline">\(x_i\)</span> 服从 <span class="math inline">\(p(x)\)</span> 分布</li>
 </ul>
-<h2 id="拒绝采样">拒绝采样</h2>
-<h3 id="问题-1">问题</h3>
+<h2 data-number="2.2" id="拒绝采样"><span class="header-section-number">2.2</span> 拒绝采样</h2>
+<h3 data-number="2.2.1" id="问题-1"><span class="header-section-number">2.2.1</span> 问题</h3>
 <p>已实现从均匀分布、<span class="math inline">\(q(x)\)</span> 采样，如何从 <span class="math inline">\(\pi(x)\)</span> 采样？</p>
-<h3 id="步骤-1">步骤</h3>
+<h3 data-number="2.2.2" id="步骤-1"><span class="header-section-number">2.2.2</span> 步骤</h3>
 <ol type="1">
 <li>选择 <span class="math inline">\(M\)</span>，使得对于 <span class="math inline">\(\forall x, \pi(x)\le M q(x)\)</span></li>
 <li>从参考分布 <span class="math inline">\(q(x)\)</span> 采样得 <span class="math inline">\(x_i\)</span></li>
 <li>从均匀分布 <span class="math inline">\(U(0, 1)\)</span> 产生一个随机数 <span class="math inline">\(u_i\)</span></li>
 <li>如果 <span class="math inline">\(u_i &lt; \frac{\pi(x_i)}{M q(x_i)}\)</span>，则接受样本 <span class="math inline">\(x_i\)</span>；否则拒绝，返回 2</li>
 </ol>
-<h3 id="证明">证明</h3>
+<h3 data-number="2.2.3" id="证明"><span class="header-section-number">2.2.3</span> 证明</h3>
 <p>即证明 <span class="math inline">\(p(x\mid\mathrm{accept}) = \pi(x)\)</span>。</p>
 <p><span id="eq:reject_sample_p_x_accept"><span class="math display">\[
 \begin{align}
@@ -1201,28 +1201,28 @@ p(\mathrm{accept}) &amp;= \int_{X}p(x,\mathrm{accept})\d x \\
 <p><span id="eq:reject_sample_p"><span class="math display">\[
 p(x\mid\mathrm{accept}) = \frac{p(x,\mathrm{accept})}{p(\mathrm{accept})} = \pi(x)
 \qquad(5)\]</span></span></p>
-<h2 id="重要性采样">重要性采样</h2>
-<h2 id="mcmc-采样">MCMC 采样</h2>
+<h2 data-number="2.3" id="重要性采样"><span class="header-section-number">2.3</span> 重要性采样</h2>
+<h2 data-number="2.4" id="mcmc-采样"><span class="header-section-number">2.4</span> MCMC 采样</h2>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#中位数">中位数</a></li>
-  <li><a href="#通用采样方法">通用采样方法</a>
+  <li><a href="#中位数"><span class="toc-section-number">1</span> 中位数</a></li>
+  <li><a href="#通用采样方法"><span class="toc-section-number">2</span> 通用采样方法</a>
   <ul>
-  <li><a href="#逆变换采样">逆变换采样</a>
+  <li><a href="#逆变换采样"><span class="toc-section-number">2.1</span> 逆变换采样</a>
   <ul>
-  <li><a href="#问题">问题</a></li>
-  <li><a href="#步骤">步骤</a></li>
+  <li><a href="#问题"><span class="toc-section-number">2.1.1</span> 问题</a></li>
+  <li><a href="#步骤"><span class="toc-section-number">2.1.2</span> 步骤</a></li>
   </ul></li>
-  <li><a href="#拒绝采样">拒绝采样</a>
+  <li><a href="#拒绝采样"><span class="toc-section-number">2.2</span> 拒绝采样</a>
   <ul>
-  <li><a href="#问题-1">问题</a></li>
-  <li><a href="#步骤-1">步骤</a></li>
-  <li><a href="#证明">证明</a></li>
+  <li><a href="#问题-1"><span class="toc-section-number">2.2.1</span> 问题</a></li>
+  <li><a href="#步骤-1"><span class="toc-section-number">2.2.2</span> 步骤</a></li>
+  <li><a href="#证明"><span class="toc-section-number">2.2.3</span> 证明</a></li>
   </ul></li>
-  <li><a href="#重要性采样">重要性采样</a></li>
-  <li><a href="#mcmc-采样">MCMC 采样</a></li>
+  <li><a href="#重要性采样"><span class="toc-section-number">2.3</span> 重要性采样</a></li>
+  <li><a href="#mcmc-采样"><span class="toc-section-number">2.4</span> MCMC 采样</a></li>
   </ul></li>
   </ul>
 </nav>

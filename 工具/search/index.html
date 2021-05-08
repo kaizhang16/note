@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="搜索命令 navi 安装 NAVI_VERSION=2.4.1 curl -LO &quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 使用 Ctrl-g。
-搜索目录 zoxide 安装 curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &#39;C-^&#39; 在 pandoc 文件里搜索短线 rg -g &#39;*.pandoc&#39; -- ---- grep[1] grep -rl &quot;string&quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.   目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   ">
+<meta name="description" content="1 搜索命令 1.1 navi 1.1.1 安装 NAVI_VERSION=2.4.1 curl -LO &quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 1.1.2 使用 Ctrl-g。
+2 搜索目录 2.1 zoxide 2.1.1 安装 curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 2.1.2 使用 zi 3 查找字符串 3.1 ripgrep 3.1.1 在 python 文件里搜索 rg -tpy foo 3.1.2 非正则匹配 rg -F &#39;C-^&#39; 3.1.3 在 pandoc 文件里搜索短线 rg -g &#39;*.pandoc&#39; -- ---- 3.2 grep[1] grep -rl &quot;string&quot; /path 参考文献 [1] ASKUBUNTU.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="搜索" />
-<meta property="og:description" content="搜索命令 navi 安装 NAVI_VERSION=2.4.1 curl -LO &quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 使用 Ctrl-g。
-搜索目录 zoxide 安装 curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &#39;C-^&#39; 在 pandoc 文件里搜索短线 rg -g &#39;*.pandoc&#39; -- ---- grep[1] grep -rl &quot;string&quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.   目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   " />
+<meta property="og:description" content="1 搜索命令 1.1 navi 1.1.1 安装 NAVI_VERSION=2.4.1 curl -LO &quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 1.1.2 使用 Ctrl-g。
+2 搜索目录 2.1 zoxide 2.1.1 安装 curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 2.1.2 使用 zi 3 查找字符串 3.1 ripgrep 3.1.1 在 python 文件里搜索 rg -tpy foo 3.1.2 非正则匹配 rg -F &#39;C-^&#39; 3.1.3 在 pandoc 文件里搜索短线 rg -g &#39;*.pandoc&#39; -- ---- 3.2 grep[1] grep -rl &quot;string&quot; /path 参考文献 [1] ASKUBUNTU." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/" /><meta property="article:section" content="工具" />
 
@@ -16,8 +16,8 @@
 <title>搜索 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -673,7 +673,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -936,7 +936,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1133,30 +1133,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="搜索命令">搜索命令</h1>
-<h2 id="navi">navi</h2>
-<h3 id="安装">安装</h3>
+  <article class="markdown"><h1 data-number="1" id="搜索命令"><span class="header-section-number">1</span> 搜索命令</h1>
+<h2 data-number="1.1" id="navi"><span class="header-section-number">1.1</span> navi</h2>
+<h3 data-number="1.1.1" id="安装"><span class="header-section-number">1.1.1</span> 安装</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">NAVI_VERSION</span><span class="op">=</span>2.4.1</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-LO</span> <span class="st">&quot;https://github.com/denisidoro/navi/releases/download/v</span><span class="va">$NAVI_VERSION</span><span class="st">/navi-v</span><span class="va">$NAVI_VERSION</span><span class="st">-x86_64-unknown-linux-musl.tar.gz&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-xzvf</span> navi-v<span class="va">$NAVI_VERSION</span>-x86_64-unknown-linux-musl.tar.gz</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="at">-i</span> navi ~/.local/bin/</span></code></pre></div>
-<h3 id="使用">使用</h3>
+<h3 data-number="1.1.2" id="使用"><span class="header-section-number">1.1.2</span> 使用</h3>
 <p><code>Ctrl-g</code>。</p>
-<h1 id="搜索目录">搜索目录</h1>
-<h2 id="zoxide">zoxide</h2>
-<h3 id="安装-1">安装</h3>
+<h1 data-number="2" id="搜索目录"><span class="header-section-number">2</span> 搜索目录</h1>
+<h2 data-number="2.1" id="zoxide"><span class="header-section-number">2.1</span> zoxide</h2>
+<h3 data-number="2.1.1" id="安装-1"><span class="header-section-number">2.1.1</span> 安装</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">--proto</span> <span class="st">&#39;=https&#39;</span> <span class="at">--tlsv1.2</span> <span class="at">-sSf</span> https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh <span class="kw">|</span> <span class="fu">sh</span></span></code></pre></div>
-<h3 id="使用-1">使用</h3>
+<h3 data-number="2.1.2" id="使用-1"><span class="header-section-number">2.1.2</span> 使用</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">zi</span></span></code></pre></div>
-<h1 id="查找字符串">查找字符串</h1>
-<h2 id="ripgrep">ripgrep</h2>
-<h3 id="在-python-文件里搜索">在 python 文件里搜索</h3>
+<h1 data-number="3" id="查找字符串"><span class="header-section-number">3</span> 查找字符串</h1>
+<h2 data-number="3.1" id="ripgrep"><span class="header-section-number">3.1</span> ripgrep</h2>
+<h3 data-number="3.1.1" id="在-python-文件里搜索"><span class="header-section-number">3.1.1</span> 在 python 文件里搜索</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-tpy</span> foo</span></code></pre></div>
-<h3 id="非正则匹配">非正则匹配</h3>
+<h3 data-number="3.1.2" id="非正则匹配"><span class="header-section-number">3.1.2</span> 非正则匹配</h3>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-F</span> <span class="st">&#39;C-^&#39;</span></span></code></pre></div>
-<h3 id="在-pandoc-文件里搜索短线">在 pandoc 文件里搜索短线</h3>
+<h3 data-number="3.1.3" id="在-pandoc-文件里搜索短线"><span class="header-section-number">3.1.3</span> 在 pandoc 文件里搜索短线</h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">rg</span> <span class="at">-g</span> <span class="st">&#39;*.pandoc&#39;</span> <span class="at">--</span> <span class="at">----</span></span></code></pre></div>
-<h2 id="grepgrep">grep<span class="citation" data-cites="grep"><sup>[<a href="#ref-grep" role="doc-biblioref">1</a>]</sup></span></h2>
+<h2 data-number="3.2" id="grepgrep"><span class="header-section-number">3.2</span> grep<span class="citation" data-cites="grep"><sup>[<a href="#ref-grep" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-rl</span> <span class="st">&quot;string&quot;</span> /path</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1168,31 +1168,31 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#搜索命令">搜索命令</a>
+  <li><a href="#搜索命令"><span class="toc-section-number">1</span> 搜索命令</a>
   <ul>
-  <li><a href="#navi">navi</a>
+  <li><a href="#navi"><span class="toc-section-number">1.1</span> navi</a>
   <ul>
-  <li><a href="#安装">安装</a></li>
-  <li><a href="#使用">使用</a></li>
+  <li><a href="#安装"><span class="toc-section-number">1.1.1</span> 安装</a></li>
+  <li><a href="#使用"><span class="toc-section-number">1.1.2</span> 使用</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#搜索目录">搜索目录</a>
+  <li><a href="#搜索目录"><span class="toc-section-number">2</span> 搜索目录</a>
   <ul>
-  <li><a href="#zoxide">zoxide</a>
+  <li><a href="#zoxide"><span class="toc-section-number">2.1</span> zoxide</a>
   <ul>
-  <li><a href="#安装-1">安装</a></li>
-  <li><a href="#使用-1">使用</a></li>
+  <li><a href="#安装-1"><span class="toc-section-number">2.1.1</span> 安装</a></li>
+  <li><a href="#使用-1"><span class="toc-section-number">2.1.2</span> 使用</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#查找字符串">查找字符串</a>
+  <li><a href="#查找字符串"><span class="toc-section-number">3</span> 查找字符串</a>
   <ul>
-  <li><a href="#ripgrep">ripgrep</a>
+  <li><a href="#ripgrep"><span class="toc-section-number">3.1</span> ripgrep</a>
   <ul>
-  <li><a href="#在-python-文件里搜索">在 python 文件里搜索</a></li>
-  <li><a href="#非正则匹配">非正则匹配</a></li>
-  <li><a href="#在-pandoc-文件里搜索短线">在 pandoc 文件里搜索短线</a></li>
+  <li><a href="#在-python-文件里搜索"><span class="toc-section-number">3.1.1</span> 在 python 文件里搜索</a></li>
+  <li><a href="#非正则匹配"><span class="toc-section-number">3.1.2</span> 非正则匹配</a></li>
+  <li><a href="#在-pandoc-文件里搜索短线"><span class="toc-section-number">3.1.3</span> 在 pandoc 文件里搜索短线</a></li>
   </ul></li>
-  <li><a href="#grepgrep">grep<span class="citation" data-cites="grep"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#grepgrep"><span class="toc-section-number">3.2</span> grep<span class="citation" data-cites="grep"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>

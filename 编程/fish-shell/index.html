@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="添加 PATH fish_add_path /usr/local/bin 语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
-赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
- [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.   目录  添加 PATH 语法  变量  表示 赋值   find   ">
+<meta name="description" content="1 添加 PATH fish_add_path /usr/local/bin 2 语法 2.1 变量 2.1.1 表示 用 {$WORD}s 将变量与文本区分开。
+2.1.2 赋值 set a b 3 find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
+ [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.   目录  1 添加 PATH 2 语法  2.1 变量  2.1.1 表示 2.1.2 赋值   3 find   ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="fish-shell" />
-<meta property="og:description" content="添加 PATH fish_add_path /usr/local/bin 语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
-赋值 set a b find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
- [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.   目录  添加 PATH 语法  变量  表示 赋值   find   " />
+<meta property="og:description" content="1 添加 PATH fish_add_path /usr/local/bin 2 语法 2.1 变量 2.1.1 表示 用 {$WORD}s 将变量与文本区分开。
+2.1.2 赋值 set a b 3 find find . -type f -exec echo &#39;{}&#39; \;  括号需要加引号[1]。
+ [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.   目录  1 添加 PATH 2 语法  2.1 变量  2.1.1 表示 2.1.2 赋值   3 find   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/" /><meta property="article:section" content="编程" />
 
@@ -18,8 +18,8 @@
 <title>fish-shell | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -675,7 +675,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -938,7 +938,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1135,15 +1135,15 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="添加-path">添加 PATH</h1>
+  <article class="markdown"><h1 data-number="1" id="添加-path"><span class="header-section-number">1</span> 添加 PATH</h1>
 <pre class="fish"><code>fish_add_path /usr/local/bin</code></pre>
-<h1 id="语法">语法</h1>
-<h2 id="变量">变量</h2>
-<h3 id="表示">表示</h3>
+<h1 data-number="2" id="语法"><span class="header-section-number">2</span> 语法</h1>
+<h2 data-number="2.1" id="变量"><span class="header-section-number">2.1</span> 变量</h2>
+<h3 data-number="2.1.1" id="表示"><span class="header-section-number">2.1.1</span> 表示</h3>
 <p>用 <code>{$WORD}s</code> 将变量与文本区分开。</p>
-<h3 id="赋值">赋值</h3>
+<h3 data-number="2.1.2" id="赋值"><span class="header-section-number">2.1.2</span> 赋值</h3>
 <pre class="fish"><code>set a b</code></pre>
-<h1 id="find">find</h1>
+<h1 data-number="3" id="find"><span class="header-section-number">3</span> find</h1>
 <pre class="fish"><code>find . -type f -exec echo &#39;{}&#39; \;</code></pre>
 <blockquote>
 <p>括号需要加引号<span class="citation" data-cites="fish_find_exec"><sup>[<a href="#ref-fish_find_exec" role="doc-biblioref">1</a>]</sup></span>。</p>
@@ -1157,16 +1157,16 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#添加-path">添加 PATH</a></li>
-  <li><a href="#语法">语法</a>
+  <li><a href="#添加-path"><span class="toc-section-number">1</span> 添加 PATH</a></li>
+  <li><a href="#语法"><span class="toc-section-number">2</span> 语法</a>
   <ul>
-  <li><a href="#变量">变量</a>
+  <li><a href="#变量"><span class="toc-section-number">2.1</span> 变量</a>
   <ul>
-  <li><a href="#表示">表示</a></li>
-  <li><a href="#赋值">赋值</a></li>
+  <li><a href="#表示"><span class="toc-section-number">2.1.1</span> 表示</a></li>
+  <li><a href="#赋值"><span class="toc-section-number">2.1.2</span> 赋值</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#find">find</a></li>
+  <li><a href="#find"><span class="toc-section-number">3</span> find</a></li>
   </ul>
 </nav>
 </article>

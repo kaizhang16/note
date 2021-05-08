@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
-快速幂 &#43; 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &gt;= 0 ?">
+<meta name="description" content="1 50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
+1.1 快速幂 &#43; 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &gt;= 0 ?">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="数字" />
-<meta property="og:description" content="50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
-快速幂 &#43; 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &gt;= 0 ?" />
+<meta property="og:description" content="1 50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
+1.1 快速幂 &#43; 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &gt;= 0 ?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/" /><meta property="article:section" content="LeetCode" />
 
@@ -16,8 +16,8 @@
 <title>数字 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -673,7 +673,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -936,7 +936,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1133,9 +1133,9 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="powx-n">50 Pow(x, n)</h1>
+  <article class="markdown"><h1 data-number="1" id="powx-n"><span class="header-section-number">1</span> 50 Pow(x, n)</h1>
 <p>实现 <code>pow(x, n)</code>，即计算 x 的 n 次幂函数。</p>
-<h2 id="快速幂-递归">快速幂 + 递归</h2>
+<h2 data-number="1.1" id="快速幂-递归"><span class="header-section-number">1.1</span> 快速幂 + 递归</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
@@ -1153,7 +1153,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> <span class="dt">long</span> N <span class="op">=</span> n<span class="op">;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n <span class="op">&gt;=</span> <span class="dv">0</span> <span class="op">?</span> quick_pow<span class="op">(</span>x<span class="op">,</span> N<span class="op">)</span> <span class="op">:</span> <span class="fl">1.0</span> <span class="op">/</span> quick_pow<span class="op">(</span>x<span class="op">,</span> <span class="op">-</span>N<span class="op">);</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h2 id="快速幂-迭代">快速幂 + 迭代</h2>
+<h2 data-number="1.2" id="快速幂-迭代"><span class="header-section-number">1.2</span> 快速幂 + 迭代</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(\log n)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
@@ -1175,9 +1175,9 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> <span class="dt">long</span> N <span class="op">=</span> n<span class="op">;</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> n <span class="op">&gt;=</span> <span class="dv">0</span> <span class="op">?</span> quick_pow_v2<span class="op">(</span>x<span class="op">,</span> N<span class="op">)</span> <span class="op">:</span> <span class="fl">1.0</span> <span class="op">/</span> quick_pow_v2<span class="op">(</span>x<span class="op">,</span> <span class="op">-</span>N<span class="op">);</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="x-的平方根">69 x 的平方根</h1>
+<h1 data-number="2" id="x-的平方根"><span class="header-section-number">2</span> 69 x 的平方根</h1>
 <p>实现 <code>int sqrt(int x)</code> 函数。计算并返回 x 的平方根，其中 x 是非负整数。由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。</p>
-<h2 id="二分查找">二分查找</h2>
+<h2 data-number="2.1" id="二分查找"><span class="header-section-number">2.1</span> 二分查找</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(\log x)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
@@ -1197,7 +1197,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result<span class="op">;</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h2 id="牛顿迭代法">牛顿迭代法</h2>
+<h2 data-number="2.2" id="牛顿迭代法"><span class="header-section-number">2.2</span> 牛顿迭代法</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(\log x)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
@@ -1217,7 +1217,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span><span class="dt">int</span><span class="op">)</span>x0<span class="op">;</span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h2 id="数学函数法">数学函数法</h2>
+<h2 data-number="2.3" id="数学函数法"><span class="header-section-number">2.3</span> 数学函数法</h2>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(1)\)</span></li>
 <li>空间复杂度：<span class="math inline">\(O(1)\)</span></li>
@@ -1229,7 +1229,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> result <span class="op">=</span> exp<span class="op">(</span><span class="fl">0.5</span> <span class="op">*</span> log<span class="op">(</span>x<span class="op">));</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">(</span><span class="dt">long</span> <span class="dt">long</span><span class="op">)(</span>result <span class="op">+</span> <span class="dv">1</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span>result <span class="op">+</span> <span class="dv">1</span><span class="op">)</span> <span class="op">&lt;=</span> x <span class="op">?</span> result <span class="op">+</span> <span class="dv">1</span> <span class="op">:</span> result<span class="op">;</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<h1 id="可被-5-整除的二进制前缀">1018 可被 5 整除的二进制前缀</h1>
+<h1 data-number="3" id="可被-5-整除的二进制前缀"><span class="header-section-number">3</span> 1018 可被 5 整除的二进制前缀</h1>
 <p>给定由若干 0 和 1 组成的数组 A。我们定义 N_i：从 A[0] 到 A[i] 的第 i 个子数组被解释为一个二进制数（从最高有效位到最低有效位）。返回布尔值列表 answer，只有当 N_i 可以被 5 整除时，答案 answer[i] 为 true，否则为 false。</p>
 <ul>
 <li>时间复杂度：<span class="math inline">\(O(n)\)</span></li>
@@ -1249,18 +1249,18 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#powx-n">50 Pow(x, n)</a>
+  <li><a href="#powx-n"><span class="toc-section-number">1</span> 50 Pow(x, n)</a>
   <ul>
-  <li><a href="#快速幂-递归">快速幂 + 递归</a></li>
-  <li><a href="#快速幂-迭代">快速幂 + 迭代</a></li>
+  <li><a href="#快速幂-递归"><span class="toc-section-number">1.1</span> 快速幂 + 递归</a></li>
+  <li><a href="#快速幂-迭代"><span class="toc-section-number">1.2</span> 快速幂 + 迭代</a></li>
   </ul></li>
-  <li><a href="#x-的平方根">69 x 的平方根</a>
+  <li><a href="#x-的平方根"><span class="toc-section-number">2</span> 69 x 的平方根</a>
   <ul>
-  <li><a href="#二分查找">二分查找</a></li>
-  <li><a href="#牛顿迭代法">牛顿迭代法</a></li>
-  <li><a href="#数学函数法">数学函数法</a></li>
+  <li><a href="#二分查找"><span class="toc-section-number">2.1</span> 二分查找</a></li>
+  <li><a href="#牛顿迭代法"><span class="toc-section-number">2.2</span> 牛顿迭代法</a></li>
+  <li><a href="#数学函数法"><span class="toc-section-number">2.3</span> 数学函数法</a></li>
   </ul></li>
-  <li><a href="#可被-5-整除的二进制前缀">1018 可被 5 整除的二进制前缀</a></li>
+  <li><a href="#可被-5-整除的二进制前缀"><span class="toc-section-number">3</span> 1018 可被 5 整除的二进制前缀</a></li>
   </ul>
 </nav>
 </article>

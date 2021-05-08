@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/bash/</guid>
-      <description>快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     IO 重定向 将 stderr 和 stdout 追加到同一个文件：
-cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     例子 $ test_file_path=&amp;quot;/a/b.</description>
+      <description>1 快捷键  表 1: Bash 快捷键  功能 快捷键    将光标移动到行首 Ctrl-a  将光标移动到行尾 Ctrl-e  将光标向前移动一个单词 Alt-f  将光标向后移动一个单词 Alt-b     2 IO 重定向 将 stderr 和 stdout 追加到同一个文件：
+cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 3 变量替换（Parameter Substitution）  表 2: Bash 变量替换  语法 含义    ${#var} String length  ${var#Pattern} 从 $var 前面移除最短匹配 $Pattern 的部分  ${var##Pattern} 从 $var 前面移除最长匹配 $Pattern 的部分  ${var%Pattern} 从 $var 后面移除最短匹配 $Pattern 的部分  ${var%%Pattern} 从 $var 后面移除最长匹配 $Pattern 的部分     3.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/c&#43;&#43;/</guid>
-      <description>开发环境 cmake 安装 CMAKE_VERSION=3.19.1 curl -LO &amp;quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&amp;quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 教程  https://cliutils.gitlab.io/modern-cmake/  工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&amp;gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 代码风格 文件后缀  源代码：cpp  命名规范  Type names  名词 TextFileReader  Function names  动词 openFile    请参考：</description>
+      <description>1 开发环境 1.1 cmake 1.1.1 安装 CMAKE_VERSION=3.19.1 curl -LO &amp;quot;https://github.com/Kitware/CMake/releases/download/v$CMAKE_VERSION/cmake-$CMAKE_VERSION-Linux-x86_64.sh&amp;quot; sudo sh ./cmake-$CMAKE_VERSION-Linux-x86_64.sh --skip-license --prefix=/usr/local 1.1.2 教程  https://cliutils.gitlab.io/modern-cmake/  1.2 工程目录结构[1] project ├── CMakeLists.txt ├── compile_commands.json -&amp;gt; build/compile_commands.json ├── include │ └── CLI │ ├── App.hpp │ ├── Config.hpp │ └── Formatter.hpp ├── README.md └── src  ├── CMakeLists.txt  └── main.cpp 1.3 clangd[2] cd build cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=1 cd .. ln -s build/compile_commands.json compile_commands.json 2 代码风格 2.1 文件后缀  源代码：cpp  2.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/css/</guid>
-      <description>selector  表 1: CSS selector  例子 含义    div &amp;gt; p 父元素为 &amp;lt;div&amp;gt; 的所有 &amp;lt;p&amp;gt; 元素     对齐 # 靠右对齐 text-align: right; width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.   目录  selector 对齐 width[1] 参考文献   </description>
+      <description>1 selector  表 1: CSS selector  例子 含义    div &amp;gt; p 父元素为 &amp;lt;div&amp;gt; 的所有 &amp;lt;p&amp;gt; 元素     2 对齐 # 靠右对齐 text-align: right; 3 width[1]  默认值：auto  参考文献 [1] W3SCHOOLS. CSS width Property[EB/OL]([日期不详]). https://www.w3schools.com/cssref/pr_dim_width.asp.   目录  1 selector 2 对齐 3 width[1] 参考文献   </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/dhall/</guid>
-      <description>安装  表 1: Dhall 安装命令  操作系统 命令    Arch Linux sudo pacman -S dhall     目录  安装   </description>
+      <description>1 安装  表 1: Dhall 安装命令  操作系统 命令    Arch Linux sudo pacman -S dhall     目录  1 安装   </description>
     </item>
     
     <item>
@@ -49,9 +49,9 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/fish-shell/</guid>
-      <description>添加 PATH fish_add_path /usr/local/bin 语法 变量 表示 用 {$WORD}s 将变量与文本区分开。
-赋值 set a b find find . -type f -exec echo &amp;#39;{}&amp;#39; \;  括号需要加引号[1]。
- [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.   目录  添加 PATH 语法  变量  表示 赋值   find   </description>
+      <description>1 添加 PATH fish_add_path /usr/local/bin 2 语法 2.1 变量 2.1.1 表示 用 {$WORD}s 将变量与文本区分开。
+2.1.2 赋值 set a b 3 find find . -type f -exec echo &amp;#39;{}&amp;#39; \;  括号需要加引号[1]。
+ [1] CHAZELAS S. find -exec not working in fish[EB/OL](2016–08–04). https://unix.stackexchange.com/a/301232.   目录  1 添加 PATH 2 语法  2.1 变量  2.1.1 表示 2.1.2 赋值   3 find   </description>
     </item>
     
     <item>
@@ -60,9 +60,9 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/flutter/</guid>
-      <description>Dart 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     合并数组 var newList = [...list1, ...list2, ...list3]; Flutter 联网权限[2] &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; 开发 Android 手机打开 USB 调试 请参考 https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html。
-编译 flutter build apk --split-per-abi --verbose 安装  把手机连到电脑上。
- flutter install 语法 switch var command = &amp;#39;OPEN&amp;#39;; switch (command) { case &amp;#39;CLOSED&amp;#39;: executeClosed(); break; case &amp;#39;PENDING&amp;#39;: executePending(); break; case &amp;#39;APPROVED&amp;#39;: executeApproved(); break; case &amp;#39;DENIED&amp;#39;: executeDenied(); break; case &amp;#39;OPEN&amp;#39;: executeOpen(); break; default: executeUnknown(); } 参考文献 [1] SURAGCH.</description>
+      <description>1 Dart 1.1 运算符  表 1: Dart 运算符  符号 含义    ?? if null[1]     1.2 合并数组 var newList = [...list1, ...list2, ...list3]; 2 Flutter 2.1 联网权限[2] &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot; /&amp;gt; 2.2 开发 2.2.1 Android 手机打开 USB 调试 请参考 https://jingyan.baidu.com/article/91f5db1b1d51be1c7e05e35f.html。
+2.2.2 编译 flutter build apk --split-per-abi --verbose 2.2.3 安装  把手机连到电脑上。
+ flutter install 2.3 语法 2.3.1 switch var command = &amp;#39;OPEN&amp;#39;; switch (command) { case &amp;#39;CLOSED&amp;#39;: executeClosed(); break; case &amp;#39;PENDING&amp;#39;: executePending(); break; case &amp;#39;APPROVED&amp;#39;: executeApproved(); break; case &amp;#39;DENIED&amp;#39;: executeDenied(); break; case &amp;#39;OPEN&amp;#39;: executeOpen(); break; default: executeUnknown(); } 参考文献 [1] SURAGCH.</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/</guid>
-      <description>常见操作 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.</description>
+      <description>1 常见操作 1.1 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; 2 diff 2.1 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     3 Git Submodule 3.1 下载 submodule git submodule update --init --force --recursive --depth=1 3.</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/golang/</guid>
-      <description>time 时间格式  2006-01-02 15:04:05 -0700  目录  time  时间格式    </description>
+      <description>1 time 1.1 时间格式  2006-01-02 15:04:05 -0700  目录  1 time  1.1 时间格式    </description>
     </item>
     
     <item>
@@ -89,8 +89,8 @@ cmd &amp;gt;&amp;gt;file.txt 2&amp;gt;&amp;amp;1 变量替换（Parameter Substi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/NLP/GPT-2/</guid>
-      <description>Auto-Regression[1]  图 1: Auto-Regression  每个记号产生后加入输入序列。
-Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.   目录  Auto-Regression[1] Masked Self-Attention[1] Q、K 和 V 输出 参考文献   </description>
+      <description>1 Auto-Regression[1]  图 1: Auto-Regression  每个记号产生后加入输入序列。
+2 Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Attention 具体例子  3 Q、K 和 V  图 4: Self-Attention 的 Q、K 与 V  4 输出  图 5: 输出  参考文献 [1] ALAMMAR J. The Illustrated GPT-2[EB/OL](2019–08–12). http://jalammar.github.io/illustrated-gpt2/.   目录  1 Auto-Regression[1] 2 Masked Self-Attention[1] 3 Q、K 和 V 4 输出 参考文献   </description>
     </item>
     
     <item>
@@ -99,7 +99,7 @@ Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Atte
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/html/</guid>
-      <description>Language Code[1]  表 1: ISO 639-1 Language Codes  Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.   目录  Language Code[1] 参考文献   </description>
+      <description>1 Language Code[1]  表 1: ISO 639-1 Language Codes  Language ISO Code    Chinese (Simplified) zh-Hans     参考文献 [1] W3SCHOOLS. HTML Language Code Reference[EB/OL]([日期不详]). https://www.w3schools.com/tags/ref_language_codes.asp.   目录  1 Language Code[1] 参考文献   </description>
     </item>
     
     <item>
@@ -108,9 +108,9 @@ Masked Self-Attention[1]  图 2: Masked Self-Attention   图 3: Masked Self-Atte
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/http/</guid>
-      <description>URL vs URI[1] URL 用于定位，URI 用于标识。
-httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     用法 Query Parameters param==value 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     NGINX 编译安装  推荐安装 mainline 版本[3]。
- # Environment variables NGINX_VERSION=1.17.9 PCRE_VESION=8.44 ZLIB_VERSION=1.2.11 NGINX_UPLOAD_MODULE_VERSION=2.3.0  # Download source code curl -LO https://nginx.</description>
+      <description>1 URL vs URI[1] URL 用于定位，URI 用于标识。
+2 httpie 2.1 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix-env -iA nixpkgs.httpie     2.2 用法 2.2.1 Query Parameters param==value 3 状态码  表 2: HTTP 状态码[2]  状态码 含义    401 认证失败  403 已认证，但没有权限     4 NGINX 4.1 编译安装  推荐安装 mainline 版本[3]。
+ # Environment variables NGINX_VERSION=1.</description>
     </item>
     
     <item>
@@ -119,8 +119,8 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</guid>
-      <description>多任务 分屏 如何调整分屏浏览[1]：
- 要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.   目录  多任务  分屏  参考文献   </description>
+      <description>1 多任务 1.1 分屏 如何调整分屏浏览[1]：
+ 要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.   目录  1 多任务  1.1 分屏  参考文献   </description>
     </item>
     
     <item>
@@ -129,9 +129,9 @@ httpie 安装 httpie  表 1: httpie 安装命令  操作系统 命令    Nix nix
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/js/</guid>
-      <description>字符串拼接[1] 要使用 + 而不是 string.concat()。
-Array flatMap[2] 等价于先 map() 再 flat()。
-let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&amp;gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&amp;gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义     \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window.</description>
+      <description>1 字符串拼接[1] 要使用 + 而不是 string.concat()。
+2 Array 2.1 flatMap[2] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&amp;gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&amp;gt; [[x * 2]]); // [[2], [4], [6], [8]] 3 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义     \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     4 导航到新地址[3] window.</description>
     </item>
     
     <item>
@@ -140,7 +140,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/Linux/</guid>
-      <description>目录结构 / ├── media # 系统挂载 removable media 的目录 └── mnt # 用户临时挂载点 发行版 Arch Linux 清除缓存 sudo paccache -rk0 Ubuntu add-apt-repository: command not found sudo apt install software-properties-common nix Virtual Box sudo pacman -S xf86-video-vmware 硬盘 判断是否为 SSD[1] cat /sys/block/sda/queue/rotational # 假设在判断 sda # - 0 为 SSD # - 1 为机械硬盘 挂载 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     查看目录 broot 安装 broot  表 2: broot 安装命令  操作系统 命令    Arch Linux sudo pacman -S broot     Core Pattern # ulimit -c unlimited # sysctl -w kernel.</description>
+      <description>1 目录结构 / ├── media # 系统挂载 removable media 的目录 └── mnt # 用户临时挂载点 2 发行版 2.1 Arch Linux 2.1.1 清除缓存 sudo paccache -rk0 2.2 Ubuntu 2.2.1 add-apt-repository: command not found sudo apt install software-properties-common 2.3 nix 3 Virtual Box sudo pacman -S xf86-video-vmware 4 硬盘 4.1 判断是否为 SSD[1] cat /sys/block/sda/queue/rotational # 假设在判断 sda # - 0 为 SSD # - 1 为机械硬盘 4.2 挂载 4.2.1 samba  表 1: samba 组件安装命令  操作系统 命令    Ubuntu sudo apt install cifs-utils     5 查看目录 5.</description>
     </item>
     
     <item>
@@ -149,8 +149,8 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</guid>
-      <description>窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     i3lockr https://github.com/owenthewizard/i3lockr
-手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
+      <description>1 窗口管理器 1.1 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     1.2 i3lockr https://github.com/owenthewizard/i3lockr
+2 手册 2.1 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     3 rsync 3.1 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 3.2 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.</description>
     </item>
     
     <item>
@@ -160,7 +160,7 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang16.github.io/note/NLP/LSTM_GRU/</guid>
       <description>请参考 https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21。
- LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
+ 0.1 LSTM 请参考 https://colah.github.io/posts/2015-08-Understanding-LSTMs/。
 Forget gate:
 \[ f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \qquad(1)\]
 Input gate:
@@ -177,7 +177,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/oauth2/</guid>
-      <description>教程  https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2  目录  教程   </description>
+      <description>1 教程  https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2  目录  1 教程   </description>
     </item>
     
     <item>
@@ -186,7 +186,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/</guid>
-      <description>引用  在方括号里 分号分隔  [@smith04; @doe99] 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&amp;#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items. This paragraph won&amp;#39;t be part of the note, because it isn&amp;#39;t indented.</description>
+      <description>1 引用  在方括号里 分号分隔  [@smith04; @doe99] 2 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&amp;#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items. This paragraph won&amp;#39;t be part of the note, because it isn&amp;#39;t indented.</description>
     </item>
     
     <item>
@@ -195,19 +195,19 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/</guid>
-      <description>安装 从 https://github.com/PowerShell/PowerShell/releases 下载 x64.msi 安装。
-配置 路径为 C:&amp;lt;user&amp;gt;.ps1。
-语法 别名 Set-Alias -Name br -Value broot 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 目录  安装 配置 语法  别名 代理    </description>
+      <description>1 安装 从 https://github.com/PowerShell/PowerShell/releases 下载 x64.msi 安装。
+2 配置 路径为 C:&amp;lt;user&amp;gt;.ps1。
+3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 目录  1 安装 2 配置 3 语法  3.1 别名 3.2 代理    </description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/</link>
+      <link>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/</guid>
-      <description>开发环境 miniconda 安装 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
-初始化 conda init fish 格式化 pip install black 内建函数[1] 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     字典[2] 遍历 list 并获取 index[3] for idx, val in enumerate(ints):  print(idx, val) 遍历字典 &amp;gt;&amp;gt;&amp;gt; knights = {&amp;#39;gallahad&amp;#39;: &amp;#39;the pure&amp;#39;, &amp;#39;robin&amp;#39;: &amp;#39;the brave&amp;#39;} &amp;gt;&amp;gt;&amp;gt; for k, v in knights.</description>
+      <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/</guid>
+      <description>1 开发环境 1.1 miniconda 1.1.1 安装 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
+1.1.2 初始化 conda init fish 1.2 格式化 pip install black isort 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2.</description>
     </item>
     
     <item>
@@ -216,10 +216,10 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/AI/QA/</guid>
-      <description>怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  如何缓解梯度爆炸  梯度裁剪 权重正则化  为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
-样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   GBDT 的优缺点 优点：
+      <description>1 怎么降低过拟合？  获得更多的训练数据。使用更多的训练数据是解决过拟合问题最有效的手段。可以通过图像的平移、旋转和缩放等方式扩充数据；也可以使用生成式对抗网络来合成新数据 降低模型复杂度  神经网络减少网络层数、神经元个数 决策树降低树的深度、剪枝  正则化方法 集成学习，比如 bagging 和 boosting  2 如何缓解梯度消失？  使用 ReLU、PReLU 等激活函数，而不是 Sigmoid 和 Tanh Batch Normalization 残差网络 LSTM、GRU  3 如何缓解梯度爆炸  梯度裁剪 权重正则化  4 为什么训练模型时样本不平衡会有问题？ 本质原因是模型在训练时优化的目标函数和人们在测试时使用的评价标准不一致。比如，训练时优化的是整个训练集（正负样本比例可能是 1:99）的准确率，而测试时可能想要模型在正样本和负样本上的平均准确率尽可能大（实际上是期望正负样本比例为 1:1）。
+5 样本不平衡，如何处理？  基于数据：  SMOTE 算法，构造新样本  基于算法：  改损失函数，不同类别不同权重 转化为单类学习或者异常检测   6 GBDT 的优缺点 优点：
  预测阶段的计算速度快，树与树之间可并行计算 在分布稠密的数据集上，泛化能力和表达能力都很好，实战表现好 具有较好的解释性和鲁棒性，能够自动发现特征间的高阶关系，且不需要归一化等预处理  缺点：
- 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  GBDT + LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。</description>
+ 在高维稀疏的数据集上，表现不如支持向量机或者神经网络 在处理分类特征时的优势不如处理数值特征时明显 需要迭代训练，即串行计算  7 XGBoost 与 GBDT 的区别  GBDT 是机器学习算法，XGBoost 是该算法的工程实现 在使用 CART 作为基分类器时，XGBoost 显式地加入了正则项来控制模型的复杂度，有利于防止过拟合，从而提高模型的泛化能力 用了二阶导数 除了支持 CART 树，还支持线性分类器 支持列抽样 可以自动学习缺失值的分裂方向 预先排序，并行计算不同特征的增益  8 LightGBM 与 GBDT 的区别  XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低 XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算  9 GBDT + LR 比 GBDT 好在哪里？ LR 可以实时在线训练；GBDT 训练比较耗时，几天更新一次。</description>
     </item>
     
     <item>
@@ -228,8 +228,8 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/rust/</guid>
-      <description>Cargo 新建项目 cargo new ${name}  默认使用 --bin 参数。
- 语法 命名惯例[1]  表 1: Rust 命名惯例  项目 惯例    Crates snake_case, prefer single word  Modules snake_case  Types CamelCase  Traits CamelCase  Functions snake_case  Methods snake_case  一般的构造函数 new 或者 with_more_details  转换构造函数 from_some_other_type  Local variables snake_case  Static variables SCREAMING_SNAKE_CASE  Constant variables SCREAMING_SNAKE_CASE  Type parameters 简洁的 CamelCase，比如 T  Lifetimes 简短的小写字母，比如 &#39;a       首字母缩写词写成 Uuid，而不是 UUID   module[2]  如果模块 foo 没有子模块，则代码放在 foo.</description>
+      <description>1 Cargo 1.1 新建项目 cargo new ${name}  默认使用 --bin 参数。
+ 2 语法 2.1 命名惯例[1]  表 1: Rust 命名惯例  项目 惯例    Crates snake_case, prefer single word  Modules snake_case  Types CamelCase  Traits CamelCase  Functions snake_case  Methods snake_case  一般的构造函数 new 或者 with_more_details  转换构造函数 from_some_other_type  Local variables snake_case  Static variables SCREAMING_SNAKE_CASE  Constant variables SCREAMING_SNAKE_CASE  Type parameters 简洁的 CamelCase，比如 T  Lifetimes 简短的小写字母，比如 &#39;a       首字母缩写词写成 Uuid，而不是 UUID   2.</description>
     </item>
     
     <item>
@@ -238,7 +238,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/TeX/</guid>
-      <description>符号  表 1: 符号  数学表达式 含义 \(\TeX\) 表示    \(\infty\) 无穷 \infty  \(\forall\) 任意 \forall     矩阵  表 2: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     函数  表 3: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     集合  表 4: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     统计  表 5: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     数论  表 6: 数论相关表示  数学表达式 含义 \(\TeX\) 表示    \(\lfloor x\rfloor\) 向下取整 \lfloor x\rfloor     运算符  表 7: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     数学表达式  表 8: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     公式对齐[2] \[ \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align} \]</description>
+      <description>1 符号  表 1: 符号  数学表达式 含义 \(\TeX\) 表示    \(\infty\) 无穷 \infty  \(\forall\) 任意 \forall     2 矩阵  表 2: 矩阵相关表示  数学表达式 含义 \(\TeX\) 表示    \(\m{A}\) 矩阵 \m{A}  \(\T{A}\) 转置 \T{A}  \(\langle, \rangle\) 内积 \langle, \rangle  \(\otimes\) 外积 \otimes  \(\odot\) Hadamard product \odot[1]  \(\lVert a\rVert\) 模长 \lVert a\rVert     3 函数  表 3: 函数相关表示  数学表达式 含义 \(\TeX\) 表示    \(f: \R^2\to\R\) 函数的作用域 f: \R^2\to\R  \(\int_0^1 p(r)\d r\) 积分 \int_0^1 p(r)\d r     4 集合  表 4: 集合相关表示  数学表达式 含义 \(\TeX\) 表示    \(\{n \mid 0 \le n \le 19\}\) 集合 \{n \mid 0 \le n \le 19\}  \(\R\) 实数集 \R  \(A\cap B\) A 与 B 的交集 A\cap B  \(\vert A\vert\) A 的元素个数 \vert A\vert     5 统计  表 5: 统计相关表示  数学表达式 含义 \(\TeX\) 表示    \(\mean{p}\) 平均值 \mean{p}     6 数论  表 6: 数论相关表示  数学表达式 含义 \(\TeX\) 表示    \(\lfloor x\rfloor\) 向下取整 \lfloor x\rfloor     7 运算符  表 7: 运算符  运算符 含义 \(\TeX\) 表示    \(\sum_{k=1}^n P(k)\) 求和 \sum_{k=1}^n P(k)     8 数学表达式  表 8: 数学表达式  数学表达式 含义 \(\TeX\) 表示    \(\tilde{A}\) 变体 \tilde{A}  \(\hat{y}\) 计算值 \hat{y}     9 公式对齐[2] \[ \begin{align} 2x - 5y &amp;amp;= 8 \\ 3x + 9y &amp;amp;= -12 \end{align} \]</description>
     </item>
     
     <item>
@@ -247,7 +247,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/toml/</guid>
-      <description>Table[1] [table] 参考文献 [1] TOML. TOML[EB/OL]([日期不详]). https://github.com/toml-lang/toml.   目录  Table[1] 参考文献   </description>
+      <description>1 Table[1] [table] 参考文献 [1] TOML. TOML[EB/OL]([日期不详]). https://github.com/toml-lang/toml.   目录  1 Table[1] 参考文献   </description>
     </item>
     
     <item>
@@ -256,10 +256,10 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/NLP/Transformer/</guid>
-      <description>输入输出[1]  图 1: 输入输出  Self-Attention 步骤[1] Embedding  图 2: Embedding  把符号变成向量。
+      <description>1 输入输出[1]  图 1: 输入输出  2 Self-Attention 步骤[1] 2.1 Embedding  图 2: Embedding  把符号变成向量。
  \(d_e = 512\)
- Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
-  \(d_q = d_k = 64\) \(d_v = 64\)   Self-Attention  图 4: Self-Attention  矩阵形式  图 5: 矩阵形式的 Self-Attention  Multi-Head  图 6: Multi-Head  多头可以区分不同的表示子空间。</description>
+ 2.2 Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
+  \(d_q = d_k = 64\) \(d_v = 64\)   2.3 Self-Attention  图 4: Self-Attention  2.4 矩阵形式  图 5: 矩阵形式的 Self-Attention  2.</description>
     </item>
     
     <item>
@@ -268,7 +268,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/unity/</guid>
-      <description>导入 .obj 文件时 x 轴会取反[1] 参考文献 [1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). https://stackoverflow.com/a/52044185.   目录  导入 .obj 文件时 x 轴会取反[1] 参考文献   </description>
+      <description>1 导入 .obj 文件时 x 轴会取反[1] 参考文献 [1] STACKOVERFLOW. Unity flips x coordinate in obj using importer at runtime[EB/OL](2018–08–27). https://stackoverflow.com/a/52044185.   目录  1 导入 .obj 文件时 x 轴会取反[1] 参考文献   </description>
     </item>
     
     <item>
@@ -277,7 +277,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
-      <description>常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     Scoop 安装 iwr -useb get.scoop.sh | iex 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  Adobe Acrobat Pro DC 2019 请参考 https://www.</description>
+      <description>1 常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     1.1 Scoop 1.1.1 安装 iwr -useb get.scoop.sh | iex 1.1.2 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 1.2 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  1.</description>
     </item>
     
     <item>
@@ -286,20 +286,19 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Word/</guid>
-      <description>参考文献相关操作 合并连续引用 请参考 https://hzfans.github.io/2018/06/10/2018-6-10%20Word%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%A4%9A%E9%A1%B9%E5%BC%95%E7%94%A8/。
-对齐列表 在任一编号上右键单击 -&amp;gt; 调整列表缩进：
- 文本缩进位置可以调大一点，比如 0.9 厘米 点击更多：  编号之后，选制表符 选中制表符添加位置，写与文本缩进位置相同的值，本例中为 0.9 厘米   插入引用 请参考 https://jingyan.baidu.com/article/cd4c2979113a05756f6e6047.html。
-更新文档中的所有域[1] Ctrl + A -&amp;gt; F9。
-显示或隐藏文档中所有表格的网格线 请参考 https://support.office.com/zh-cn/article/%E6%98%BE%E7%A4%BA%E6%88%96%E9%9A%90%E8%97%8F%E6%96%87%E6%A1%A3%E4%B8%AD%E6%89%80%E6%9C%89%E8%A1%A8%E6%A0%BC%E7%9A%84%E7%BD%91%E6%A0%BC%E7%BA%BF-84780485-af90-49b1-82a0-682cd7fc9dad。
-输入上下标 请参考 https://jingyan.baidu.com/article/f3ad7d0fc4ca3209c3345b84.html。
-特殊符号 波浪号 请参考 https://zhuanlan.zhihu.com/p/76387600。
-正负号 请参考 https://zhidao.baidu.com/question/538973023.html。
-分页符 请参考 https://www.office68.com/word/8512.html。
-横向纸张 请参考 https://support.office.com/zh-cn/article/%E5%B0%86%E9%A1%B5%E9%9D%A2%E6%96%B9%E5%90%91%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%A8%AA%E5%90%91%E6%88%96%E7%BA%B5%E5%90%91-9b5ac1af-9998-4a37-962b-a82b689572a9。
-调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
-删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
-修改脚注上方的横线 请参考 https://zhidao.baidu.com/question/1895317289698826500.html。
-参考文献 [1] MICROSOFT. 更新文档中的所有域[EB/OL]([日期不详]). https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%96%B0%E5%9F%9F-7339a049-cb0d-4d5a-8679-97c20c643d4e#_updateallfields.   目录  参考文献相关操作  合并连续引用 对齐列表 插入引用 更新文档中的所有域[1]  显示或隐藏文档中所有表格的网格线 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线 修改脚注上方的横线 参考文献   </description>
+      <description>1 参考文献相关操作 1.1 合并连续引用 请参考 https://hzfans.github.io/2018/06/10/2018-6-10%20Word%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%A4%9A%E9%A1%B9%E5%BC%95%E7%94%A8/。
+1.2 对齐列表 在任一编号上右键单击 -&amp;gt; 调整列表缩进：
+ 文本缩进位置可以调大一点，比如 0.9 厘米 点击更多：  编号之后，选制表符 选中制表符添加位置，写与文本缩进位置相同的值，本例中为 0.9 厘米   1.3 插入引用 请参考 https://jingyan.baidu.com/article/cd4c2979113a05756f6e6047.html。
+1.4 更新文档中的所有域[1] Ctrl + A -&amp;gt; F9。
+2 显示或隐藏文档中所有表格的网格线 请参考 https://support.office.com/zh-cn/article/%E6%98%BE%E7%A4%BA%E6%88%96%E9%9A%90%E8%97%8F%E6%96%87%E6%A1%A3%E4%B8%AD%E6%89%80%E6%9C%89%E8%A1%A8%E6%A0%BC%E7%9A%84%E7%BD%91%E6%A0%BC%E7%BA%BF-84780485-af90-49b1-82a0-682cd7fc9dad。
+3 输入上下标 请参考 https://jingyan.baidu.com/article/f3ad7d0fc4ca3209c3345b84.html。
+4 特殊符号 4.1 波浪号 请参考 https://zhuanlan.zhihu.com/p/76387600。
+4.2 正负号 请参考 https://zhidao.baidu.com/question/538973023.html。
+5 分页符 请参考 https://www.office68.com/word/8512.html。
+6 横向纸张 请参考 https://support.office.com/zh-cn/article/%E5%B0%86%E9%A1%B5%E9%9D%A2%E6%96%B9%E5%90%91%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%A8%AA%E5%90%91%E6%88%96%E7%BA%B5%E5%90%91-9b5ac1af-9998-4a37-962b-a82b689572a9。
+7 调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
+8 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
+9 修改脚注上方的横线 请参考 https://zhidao.</description>
     </item>
     
     <item>
@@ -308,7 +307,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/zsh/</guid>
-      <description>插件管理 antibody 静态加载 antibody bundle &amp;lt; ~/.config/antibody/zsh_plugins.txt &amp;gt; ~/.config/antibody/zsh_plugins.sh 更新插件 antibody update 删除插件 antibody purge robbyrussell/oh-my-zsh 目录  插件管理  antibody  静态加载 更新插件 删除插件     </description>
+      <description>1 插件管理 1.1 antibody 1.1.1 静态加载 antibody bundle &amp;lt; ~/.config/antibody/zsh_plugins.txt &amp;gt; ~/.config/antibody/zsh_plugins.sh 1.1.2 更新插件 antibody update 1.1.3 删除插件 antibody purge robbyrussell/oh-my-zsh 目录  1 插件管理  1.1 antibody  1.1.1 静态加载 1.1.2 更新插件 1.1.3 删除插件     </description>
     </item>
     
     <item>
@@ -317,13 +316,11 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/transmission/</guid>
-      <description>SSH Secure Shell。
-只让某些用户使用密码登录 PasswordAuthentication no Match User &amp;lt;username&amp;gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
- SFTP SSH File Transfer Protocol。
-常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &amp;lt;local_dir&amp;gt;/*.mp4 &amp;lt;remote_dir&amp;gt;/ -r，递归  下载 put &amp;lt;remote_dir&amp;gt;/*.mp4 &amp;lt;local_dir&amp;gt;/ -r，递归  移动文件 rename      internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
-vsftpd Very Secure FTP Daemon。
-只允许某些用户访问[2] /etc/vsftpd.conf:
-userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDARGUMENT[3] /etc/vsftpd.</description>
+      <description>1 SSH Secure Shell。
+1.1 只让某些用户使用密码登录 PasswordAuthentication no Match User &amp;lt;username&amp;gt; PasswordAuthentication yes  Match 在遇到下一个 Match 前一直有效，与缩进无关。
+ 2 SFTP SSH File Transfer Protocol。
+2.1 常见命令  表 1: SFTP 常见命令  功能 命令 选项    上传 put &amp;lt;local_dir&amp;gt;/*.mp4 &amp;lt;remote_dir&amp;gt;/ -r，递归  下载 put &amp;lt;remote_dir&amp;gt;/*.mp4 &amp;lt;local_dir&amp;gt;/ -r，递归  移动文件 rename      2.2 internal-sftp vs sftp-server 推荐使用 internal-sftp。[1]
+3 vsftpd Very Secure FTP Daemon。</description>
     </item>
     
     <item>
@@ -332,9 +329,9 @@ userlist_enable=YES userlist_file=/etc/vsftpd.userlist userlist_deny=NO INVALIDA
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/</guid>
-      <description>Pandoc 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 打印默认模板 pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
-Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot; id=&amp;quot;MathJax-script&amp;quot; async src=&amp;quot;https://cdn.</description>
+      <description>1 Pandoc 1.1 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 1.2 打印默认模板 pandoc --print-default-template=html 2 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
+2.1 Hugo 2.1.1 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 2.1.2 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  2.2 部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
+2.3 MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot; id=&amp;quot;MathJax-script&amp;quot; async src=&amp;quot;https://cdn.</description>
     </item>
     
     <item>
@@ -343,11 +340,11 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-      <description>一维 91 解码方法 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ：
+      <description>1 一维 1.1 91 解码方法 一条包含字母 A-Z 的消息通过以下映射进行了 编码 ：
 &amp;#39;A&amp;#39; -&amp;gt; 1 &amp;#39;B&amp;#39; -&amp;gt; 2 ... &amp;#39;Z&amp;#39; -&amp;gt; 26 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。例如，“111” 可以将 “1” 中的每个 “1” 映射为 “A” ，从而得到 “AAA” ，或者可以将 “11” 和 “1”（分别为 “K” 和 “A” ）映射为 “KA” 。注意，“06” 不能映射为 “F” ，因为 “6” 和 “06” 不同。
 给你一个只含数字的 非空 字符串 num ，请计算并返回 解码 方法的 总数 。
 题目数据保证答案肯定是一个 32 位 的整数。
-动态规划 int num_decode(string s) {  int n = s.size();  if (n == 0) {  return 0;  }  // dp[i]: num_decode(s[:i])  vector&amp;lt;int&amp;gt; dp(n + 1, 0);  dp[0] = 1;  dp[1] = (s[0] - &amp;#39;0&amp;#39; == 0 ?</description>
+1.1.1 动态规划 int num_decode(string s) {  int n = s.</description>
     </item>
     
     <item>
@@ -356,7 +353,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/compress/</guid>
-      <description>tar 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 查看压缩包内容 tar -tvf filename.tar.gz 7z 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.   目录  tar  打包时排除某些目录[1] 查看压缩包内容  7z  安装  参考文献   </description>
+      <description>1 tar 1.1 打包时排除某些目录[1] tar --exclude=&amp;#39;./folder1&amp;#39; --exclude=&amp;#39;./folder2&amp;#39; -czvf filename.tar.gz . 1.2 查看压缩包内容 tar -tvf filename.tar.gz 2 7z 2.1 安装 nix-env -iA nixpkgs.p7zip 参考文献 [1] STACKOVERFLOW. Shell command to tar directory excluding certain files/folders[EB/OL](2009–06–11). https://stackoverflow.com/a/984259.   目录  1 tar  1.1 打包时排除某些目录[1] 1.2 查看压缩包内容  2 7z  2.1 安装  参考文献   </description>
     </item>
     
     <item>
@@ -365,9 +362,9 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E5%9B%9E%E6%BA%AF/</guid>
-      <description>17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
+      <description>1 17 电话号码的字母组合 给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按 任意顺序 返回。
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
-回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m + n)\)  void backtrack(string &amp;amp;digits, int i,  std::unordered_map&amp;lt;char, string&amp;gt; &amp;amp;digit2str, string &amp;amp;combination,  vector&amp;lt;string&amp;gt; &amp;amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i + 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&amp;lt;string&amp;gt; letter_combination(string digits) {  vector&amp;lt;string&amp;gt; result;  if (digits.</description>
+1.1 回溯  时间复杂度：\(O(3^m\times 4^n)\) 空间复杂度：\(O(m + n)\)  void backtrack(string &amp;amp;digits, int i,  std::unordered_map&amp;lt;char, string&amp;gt; &amp;amp;digit2str, string &amp;amp;combination,  vector&amp;lt;string&amp;gt; &amp;amp;result) {  if (i == digits.size()) {  result.push_back(combination);  } else {  for (auto c : digit2str[digits[i]]) {  combination.push_back(c);  backtrack(digits, i + 1, digit2str, combination, result);  combination.pop_back();  }  } }  vector&amp;lt;string&amp;gt; letter_combination(string digits) {  vector&amp;lt;string&amp;gt; result;  if (digits.</description>
     </item>
     
     <item>
@@ -376,7 +373,7 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/</guid>
-      <description>文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384+0+0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .</description>
+      <description>1 文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     2 ImageMagick 2.1 裁剪中间部分 convert a.png -gravity center -crop 16384x16384+0+0 b.png 3 压缩 3.1 JPG 3.1.1 jpegoptim 3.1.1.1 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     4 colmap 4.1 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g++ cmake .</description>
     </item>
     
     <item>
@@ -385,9 +382,9 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
-      <description>647 回文子串 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
+      <description>1 647 回文子串 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
 具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
-中心扩展  时间复杂度：\(O(n^2)\) 空间复杂度：\(O(1)\)  void helper(string s, int l, int r, int &amp;amp;result) {  while (l &amp;gt;= 0 &amp;amp;&amp;amp; r &amp;lt; s.size() &amp;amp;&amp;amp; s[l] == s[r]) {  result++;  l--;  r++;  } }  int count_substring(string s) {  int result = 0;  for (int i = 0; i &amp;lt; s.size(); i++) {  helper(s, i, i, result);  helper(s, i, i + 1, result);  }  return result; } 目录  647 回文子串  中心扩展    </description>
+1.1 中心扩展  时间复杂度：\(O(n^2)\) 空间复杂度：\(O(1)\)  void helper(string s, int l, int r, int &amp;amp;result) {  while (l &amp;gt;= 0 &amp;amp;&amp;amp; r &amp;lt; s.size() &amp;amp;&amp;amp; s[l] == s[r]) {  result++;  l--;  r++;  } }  int count_substring(string s) {  int result = 0;  for (int i = 0; i &amp;lt; s.size(); i++) {  helper(s, i, i, result);  helper(s, i, i + 1, result);  }  return result; } 目录  1 647 回文子串  1.</description>
     </item>
     
     <item>
@@ -396,8 +393,8 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/security/</guid>
-      <description>SSH FAQ pam_access(sshd:account): access denied for user 请修改 /etc/security/access.conf 配置。
-GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  SSH  FAQ  pam_access(sshd:account): access denied for user   GPG  FAQ  gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
+      <description>1 SSH 1.1 FAQ 1.1.1 pam_access(sshd:account): access denied for user 请修改 /etc/security/access.conf 配置。
+2 GPG 2.1 FAQ 2.1.1 gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v gpg-agent 目录  1 SSH  1.1 FAQ  1.1.1 pam_access(sshd:account): access denied for user   2 GPG  2.1 FAQ  2.1.1 gpg: WARNING: server ‘gpg-agent’ is older than us     </description>
     </item>
     
     <item>
@@ -406,7 +403,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/AI/dev_env/</guid>
-      <description>CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &amp;gt;= 455.23.04  CUDA 11.0 &amp;gt;= 450.36.06  CUDA 10.2 &amp;gt;= 440.33  CUDA 10.1 &amp;gt;= 418.39     安装驱动 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 Docker Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi Jupyter Lab 安装 pip install jupyterlab 使用 jupyter lab Jupyter jupyter_contrib_nbextensions 安装 pip install jupyter_contrib_nbextensions jupyter contrib nbextension install --user 使用 打开 http://&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;/nbextensions 管理。</description>
+      <description>1 CUDA  表 1: CUDA 与驱动的版本对应关系[1]  CUDA 版本 驱动版本    CUDA 11.1 &amp;gt;= 455.23.04  CUDA 11.0 &amp;gt;= 450.36.06  CUDA 10.2 &amp;gt;= 440.33  CUDA 10.1 &amp;gt;= 418.39     1.1 安装驱动 1.1.1 Ubuntu sudo add-apt-repository ppa:graphics-drivers/ppa ubuntu-drivers devices # 查看推荐的驱动 sudo apt install nvidia-430 # 安装驱动 2 Docker 2.1 Docker &amp;gt;= 19.03 docker run --gpus=all --shm-size=64G kaizhang91/cuda:10.2 nvidia-smi 2.2 Docker &amp;lt; 19.03 nvidia-docker run --shm-size=64G kaizhang91/cuda:10.</description>
     </item>
     
     <item>
@@ -415,7 +412,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/</guid>
-      <description>Ansible 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
+      <description>1 Ansible 1.1 安装  表 1: 安装 ansible  操作系统 命令    nix nix-env -iA nixpkgs.ansible     1.2 目录结构[1] inventories/  production/  hosts # inventory file for production servers  group_vars/  group1.yml # here we assign variables to particular groups  group2.yml  host_vars/  hostname1.yml # here we assign variables to particular systems  hostname2.yml   staging/  hosts # inventory file for staging environment  group_vars/  group1.</description>
     </item>
     
     <item>
@@ -424,7 +421,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/AI/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
-      <description>术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  FFM Field-aware Factorization Machine 域感知因子分解机  FM Factorization Machine 因子分解机  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     架构  图 1: 推荐系统架构  算法 不同算法的优缺点  表 2: 不同算法的优缺点  算法 优点 缺点    UserCF 符合直觉（兴趣相似的朋友喜欢的物品，我也喜欢） 用户数远大于物品数   社交特性更强，适于发现热点 用户历史数据向量很稀疏  ItemCF 适于兴趣变化较为稳定的应用 泛化能力弱，头部效应强   直观，可解释性强 无法有效引入场景信息  矩阵分解 泛化能力强 不方便融合特征   空间复杂度低 不好冷启动   便于与神经网络集成   逻辑回归 融合多种特征 无法特征交叉、筛选   假设 \(y\) 服从伯努利分布，有物理意义    是各特征的加权和，可解释性强    易于并行化、模型简单、易于训练   POLY2 特征交叉 特征向量更稀疏，不好训练    参数增多  FM 参数从 POLY2 的 \(n^2\) 下降到 \(nk\)    比 POLY2 更适于稀疏数据，泛化能力强    易于上线   FFM 比 FM 表达能力强 计算复杂度上升到 \(kn^2\)  GBDT+LR 特征工程模型化   LS-PLM 能挖掘非线性模式    引入 L1 惩罚，模型稀疏   AutoRec 第一次使用深度学习框架   Deep Crossing 特征间深度交叉   NeuralCF 用户向量和物品向量更充分地交叉 没有引入更多特征   表达能力比矩阵分解强    可以灵活选择互操作层   PNN 强调不同特征之间的交互 简化操作丢失信息  Wide &amp;amp; Deep 综合记忆能力和泛化能力    开拓了融合不同网络结构的新思路   Deep &amp;amp; Cross Wide 部分的特征自动交叉   DIEN 预测下一次购买，更符合业务目标 训练复杂度高    串行推断  DRN 变静态为动态，在线训练      协同过滤 共现矩阵 用户为行坐标（记用户总数为 \(m\)）、物品为列坐标（即物品总数为 \(n\)）的 \(m\times n\) 维矩阵。</description>
+      <description>1 术语  表 1: 术语  缩写 全称 含义    C Context 场景  CTR Click Through Rate 点击率  CVR Conversion Rate 转化率  DMP Data Management Platform 数据管理平台  FFM Field-aware Factorization Machine 域感知因子分解机  FM Factorization Machine 因子分解机  I Item 物品  MLP Multilayer Perception 多层感知机  U User 用户     2 架构  图 1: 推荐系统架构  3 算法 3.</description>
     </item>
     
     <item>
@@ -433,8 +430,8 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/</guid>
-      <description>搜索命令 navi 安装 NAVI_VERSION=2.4.1 curl -LO &amp;quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&amp;quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 使用 Ctrl-g。
-搜索目录 zoxide 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.   目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   </description>
+      <description>1 搜索命令 1.1 navi 1.1.1 安装 NAVI_VERSION=2.4.1 curl -LO &amp;quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&amp;quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 1.1.2 使用 Ctrl-g。
+2 搜索目录 2.1 zoxide 2.1.1 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 2.1.2 使用 zi 3 查找字符串 3.1 ripgrep 3.1.1 在 python 文件里搜索 rg -tpy foo 3.1.2 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 3.1.3 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- 3.2 grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU.</description>
     </item>
     
     <item>
@@ -443,8 +440,8 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E5%AD%97/</guid>
-      <description>50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
-快速幂 + 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &amp;gt;= 0 ?</description>
+      <description>1 50 Pow(x, n) 实现 pow(x, n)，即计算 x 的 n 次幂函数。
+1.1 快速幂 + 递归  时间复杂度：\(O(\log n)\) 空间复杂度：\(O(\log n)\)  double quick_pow(double x, long long N) {  if (N == 0) {  return 1.0;  } else {  double y = quick_pow(x, N / 2);  return N % 2 == 0 ? y * y : y * y * x;  } }  double my_pow(double x, int n) {  long long N = n;  return n &amp;gt;= 0 ?</description>
     </item>
     
     <item>
@@ -453,7 +450,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
-      <description>Entity Relationship Diagram 安装 curl -LO &amp;#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&amp;#39; chmod u+x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     PostgreSQL 最佳实践  表 2: Create table 最佳实践  类别 最佳实践    主键 integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY[3]  字符串 text[4]  时间 timestamptz[5]     安装 Arch Linux $ sudo pacman -S postgres $ sudo -iu postgres [postgres]$ initdb -D /var/lib/postgres/data [postgres]$ exit $ sudo systemctl start postgresql.</description>
+      <description>1 Entity Relationship Diagram 1.1 安装 curl -LO &amp;#39;https://github.com/BurntSushi/erd/releases/download/v0.2.1.0-RC1/erd_static-x86-64&amp;#39; chmod u+x erd_static-x86-64 cp -i erd_static-x86-64 ~/.local/bin/erd 2 SQL 命名规范  表 1: SQL 命名规范  类别 规范 例子    表名 单数[1] user  identifiers snake case[2] lower_case_with_underscores  user 使用非保留关键词 user_     3 PostgreSQL 3.1 最佳实践  表 2: Create table 最佳实践  类别 最佳实践    主键 integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY[3]  字符串 text[4]  时间 timestamptz[5]     3.</description>
     </item>
     
     <item>
@@ -462,8 +459,8 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/data-type/</guid>
-      <description>科学计数法[1] mEn 表示 \(m \times 10^n\)。
-数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.   目录  科学计数法[1] 数据类型 时间格式 参考文献   </description>
+      <description>1 科学计数法[1] mEn 表示 \(m \times 10^n\)。
+2 数据类型  表 1: 数据类型  数据类型 bit 数 精度    double 64 \(2^{-52}\)，即 \(2.22\times 10^{-16}\)     3 时间格式  表 2: 时间格式  标准 例子 命令    rfc-3339 2020-05-05 22:59:40+08:00 date --rfc-3339=seconds  iso-8601 2020-05-05T22:58:30+08:00 date -Iseconds     参考文献 [1] WIKIPEDIA. Scientific notation[EB/OL]([日期不详]). https://en.wikipedia.org/wiki/Scientific_notation.   目录  1 科学计数法[1] 2 数据类型 3 时间格式 参考文献   </description>
     </item>
     
     <item>
@@ -472,7 +469,7 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E6%95%B0%E7%BB%84/</guid>
-      <description>一维数组 未排序的数组 15 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
+      <description>1 一维数组 1.1 未排序的数组 1.1.1 15 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
  注意：答案中不可以包含重复的三元组。
   时间复杂度：\(O(n^2)\) 空间复杂度：\(O(\log n)\)  vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; three_sum(vector&amp;lt;int&amp;gt; &amp;amp;nums) {  std::sort(nums.begin(), nums.end());  vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; result;  int n = nums.size();  for (int i = 0; i &amp;lt; n; i++) {  if (i &amp;gt; 0 &amp;amp;&amp;amp; nums[i] == nums[i - 1]) {  continue;  }  int k = n - 1;  for (int j = i + 1; j &amp;lt; k; j++) {  if (j &amp;gt; i + 1 &amp;amp;&amp;amp; nums[j] == nums[j - 1]) {  continue;  }  while (k &amp;gt; j &amp;amp;&amp;amp; nums[k] + nums[j] &amp;gt; -nums[i]) {  k--;  }  if (k == j) {  break;  }  if (nums[j] + nums[k] == -nums[i]) {  result.</description>
     </item>
@@ -483,8 +480,8 @@ GPG FAQ gpg: WARNING: server ‘gpg-agent’ is older than us gpgconf --kill -v 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</guid>
-      <description>Zotero 安装 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
-Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github.</description>
+      <description>1 Zotero 1.1 安装 1.1.1 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   1.1.2 Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
+1.1.3 Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    1.</description>
     </item>
     
     <item>
@@ -493,10 +490,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
-      <description>采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
-\[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]
-在信息检索领域这样定义[3]：
-\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]</description>
+      <description>1 采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     2 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     2.1 精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
+\[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]</description>
     </item>
     
     <item>
@@ -505,8 +500,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E6%A0%91/</guid>
-      <description>二叉树 94 二叉树的中序遍历 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
-递归  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  void helper(TreeNode *root, vector&amp;lt;int&amp;gt; &amp;amp;result) {  if (!root) {  return;  }  helper(root-&amp;gt;left, result);  result.push_back(root-&amp;gt;val);  helper(root-&amp;gt;right, result); }  vector&amp;lt;int&amp;gt; in_order(TreeNode *root) {  vector&amp;lt;int&amp;gt; result;  helper(root, result);  return result; } 迭代  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  vector&amp;lt;int&amp;gt; in_order(TreeNode *root) {  std::stack&amp;lt;TreeNode *&amp;gt; s;  vector&amp;lt;int&amp;gt; result;  while (root || !</description>
+      <description>1 二叉树 1.1 94 二叉树的中序遍历 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+1.1.1 递归  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  void helper(TreeNode *root, vector&amp;lt;int&amp;gt; &amp;amp;result) {  if (!root) {  return;  }  helper(root-&amp;gt;left, result);  result.push_back(root-&amp;gt;val);  helper(root-&amp;gt;right, result); }  vector&amp;lt;int&amp;gt; in_order(TreeNode *root) {  vector&amp;lt;int&amp;gt; result;  helper(root, result);  return result; } 1.1.2 迭代  时间复杂度：\(O(n)\) 空间复杂度：\(O(n)\)  vector&amp;lt;int&amp;gt; in_order(TreeNode *root) {  std::stack&amp;lt;TreeNode *&amp;gt; s;  vector&amp;lt;int&amp;gt; result;  while (root || !</description>
     </item>
     
     <item>
@@ -515,7 +510,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/format/</guid>
-      <description>json2toml pip3 install --user remarshal 目录  json2toml   </description>
+      <description>1 json2toml pip3 install --user remarshal 目录  1 json2toml   </description>
     </item>
     
     <item>
@@ -524,8 +519,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
-      <description>在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1]  图 1: x + y + z &amp;lt; 1 所占空间  如图. 1 所示，四面体所占体积为 \(\frac{1}{3}\times\frac{1}{2}\times 1\times 1\times 1 = \frac{1}{6}\)。
-不同样本个数的期望[2] 有 10000 个电影，用户刷新页面时随机返回 1 个电影；用户刷新 1000 次，看到不同的电影个数的期望是多少？
+      <description>1 在 0 到 1 之间随机选择 3 个小数，他们的和小于 1 的概率是？[1]  图 1: x + y + z &amp;lt; 1 所占空间  如图. 1 所示，四面体所占体积为 \(\frac{1}{3}\times\frac{1}{2}\times 1\times 1\times 1 = \frac{1}{6}\)。
+2 不同样本个数的期望[2] 有 10000 个电影，用户刷新页面时随机返回 1 个电影；用户刷新 1000 次，看到不同的电影个数的期望是多少？
 记随机变量 \(I_i\)，表示电影 \(i\) 是否出现，即：
 \[ I_i = \begin{cases} 1, &amp;amp;\text{如果电影 } i \text{ 出现} \\ 0, &amp;amp;\text{如果电影 } i \text{ 没有出现} \end{cases} \qquad(1)\]
 则不同电影个数的期望为：
@@ -538,16 +533,17 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/template/</guid>
-      <description>Jinja for 循环 {% for item in navigation %} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ item.href }}&amp;quot;&amp;gt;{{ item.caption }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% endfor %} Tera raw {% raw %} Hello {{ name }} {% endraw %} 目录  Jinja  for 循环  Tera  raw    </description>
+      <description>1 Jinja 1.1 for 循环 {% for item in navigation %} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;{{ item.href }}&amp;quot;&amp;gt;{{ item.caption }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% endfor %} 2 Tera 2.1 raw {% raw %} Hello {{ name }} {% endraw %} 目录  1 Jinja  1.1 for 循环  2 Tera  2.1 raw    </description>
     </item>
     
     <item>
       <title>浏览器</title>
-      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</guid>
-      <description>Firefox Tridactyl 设置 主题 : set theme dark 搜索 : unbind &amp;lt;C-f&amp;gt; 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  Firefox  Tridactyl  设置 快捷键     </description>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+      <description>1 Firefox 1.1 搜索标签页 在查询词前面或者后面输入 %。
+1.2 Tridactyl 1.2.1 设置 1.2.1.1 主题 : set theme dark 1.2.1.2 搜索 : unbind &amp;lt;C-f&amp;gt; 1.2.2 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  1 Firefox  1.1 搜索标签页 1.2 Tridactyl  1.2.1 设置 1.2.2 快捷键     </description>
     </item>
     
     <item>
@@ -556,7 +552,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
-      <description>Fine-tuning vs Feature Extraction[1]  图 1: Fine-tuning 与 Feature Extraction  参考文献 [1] LI Z, HOIEM D. Learning without forgetting[J]. IEEE transactions on pattern analysis and machine intelligence, 2017, 40(12): 2935–2947.   目录  Fine-tuning vs Feature Extraction[1] 参考文献   </description>
+      <description>1 Fine-tuning vs Feature Extraction[1]  图 1: Fine-tuning 与 Feature Extraction  参考文献 [1] LI Z, HOIEM D. Learning without forgetting[J]. IEEE transactions on pattern analysis and machine intelligence, 2017, 40(12): 2935–2947.   目录  1 Fine-tuning vs Feature Extraction[1] 参考文献   </description>
     </item>
     
     <item>
@@ -565,8 +561,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/%E7%AE%97%E6%B3%95/</guid>
-      <description>数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。
-遍历数组 void traverse(int[] arr) {  for (int i = 0; i &amp;lt; arr.length; i++) {  // 迭代访问 arr[i]  } } 遍历链表 class ListNode {  int val;  ListNode next; }  void traverse(ListNode head) {  for (ListNode p = head; p !</description>
+      <description>1 数据结构的存储方式  表 1: 数据结构的存储方式  存储方式 特点 优点 缺点    数组 顺序存储 - 支持随机访问 - 扩容时间复杂度 O(N)    - 节约存储空间 - 插入和删除时间复杂度 O(N)  链表 链式存储 - 扩容时间复杂度 O(1) - 不支持随机访问    - 插入和删除时间复杂度 O(1) - 需要存储指针     2 数据结构的基本操作 任何数据结构的基本操作都是增删查改。不同数据结构的目的是在不同的应用场景，尽可能高效地增删查改。
+2.1 遍历数组 void traverse(int[] arr) {  for (int i = 0; i &amp;lt; arr.length; i++) {  // 迭代访问 arr[i]  } } 2.</description>
     </item>
     
     <item>
@@ -575,15 +571,14 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
-      <description>术语 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
+      <description>1 术语 1.1 共轭转置[1] \[(\m{A}^*)_{ij} = (\m{A}_{ji})^*\qquad(1)\]
 其中，若记 \(\m{A}_{ji} = a + bi\)，则 \((\m{A}_{ji})^* = a - bi\)。
-相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
-酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
-正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
+1.2 相似矩阵  同一个线性变换在不同基下的矩阵称为相似矩阵  1.3 正交矩阵[2] \[\T{\m{Q}}\m{Q} = \m{Q}\T{\m{Q}} = \m{I}\qquad(2)\]
+1.4 酉矩阵[2] \[\m{U}^*\m{U} = \m{U}\m{U}^* = \m{I}\qquad(3)\]
+1.5 正规矩阵 \[\m{A}^*\m{A} = \m{A}\m{A}^*\qquad(4)\]
 当且仅当 \(\m{A} = \m{U}\m{\Lambda}\m{U}^*\) 时，方阵 \(\m{A}\) 是正规矩阵。其中， \(\m{U}\) 是酉矩阵；\(\m{\Lambda} = \diag(\lambda_1,\dots,\lambda_n)\) 是对角阵； \(\m{U}\) 的列向量是对应于特征值 \(\lambda_1,\dots,\lambda_n\) 的特征向量。
-旋转矩阵[3] 旋转矩阵的集合：
-\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]
-外积[4] \[\v{u} \otimes \v{v} = \v{u}\T{\v{v}}\qquad(6)\]</description>
+1.6 旋转矩阵[3] 旋转矩阵的集合：
+\[ \SO(n) = \{\m{R} \in \set{R}^{n\times n} \mid \m{R}\T{\m{R}} = \m{I}, \det(\m{R}) = 1\} \qquad(5)\]</description>
     </item>
     
     <item>
@@ -592,15 +587,15 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/</guid>
-      <description>中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
+      <description>1 中位数 先把 \(x_1, x_2, \dots, x_n\) 从小到大排序，得到
 \[x_{(1)}, x_{(2)}, \dots, x_{(n)}\]
 则中位数为：
 \[ \median(x) = \begin{cases} x_{((n+1)/2)}, &amp;amp; n \text{为奇数} \\ \frac{1}{2}(x_{(n/2)} + x_{(n/2+1)}), &amp;amp; n \text{为偶数} \end{cases} \qquad(1)\]
-通用采样方法 逆变换采样 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
-步骤 记 \(u\) 为 \(x\) 的累积分布函数：
+2 通用采样方法 2.1 逆变换采样 2.1.1 问题 已实现从均匀分布采样，如何从 \(p(x)\) 采样？
+2.1.2 步骤 记 \(u\) 为 \(x\) 的累积分布函数：
 \[u = \Phi(x) = \int_{-\infty}^x p(t)\d t\qquad(2)\]
 那么按照以下步骤即可从 \(p(x)\) 采样：
- 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  拒绝采样 问题 已实现从均匀分布、\(q(x)\) 采样，如何从 \(\pi(x)\) 采样？</description>
+ 从均匀分布 \(U(0, 1)\) 产生一个随机数 \(u_i\) 计算 \(x_i = \Phi^{-1}(u_i)\)，得到的 \(x_i\) 服从 \(p(x)\) 分布  2.</description>
     </item>
     
     <item>
@@ -609,8 +604,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/encoding/</guid>
-      <description>GB2312、GBK 和 GB18030 的关系[1] GBK 兼容 GB2312，GB18030 兼容 GBK 与 GB2312。
-参考文献 [1] 知乎. GB2312、GBK、GB18030 这几种字符集的主要区别是什么？[EB/OL](2016–11–08). https://www.zhihu.com/question/19677619/answer/12616362.   目录  GB2312、GBK 和 GB18030 的关系[1] 参考文献   </description>
+      <description>1 GB2312、GBK 和 GB18030 的关系[1] GBK 兼容 GB2312，GB18030 兼容 GBK 与 GB2312。
+参考文献 [1] 知乎. GB2312、GBK、GB18030 这几种字符集的主要区别是什么？[EB/OL](2016–11–08). https://www.zhihu.com/question/19677619/answer/12616362.   目录  1 GB2312、GBK 和 GB18030 的关系[1] 参考文献   </description>
     </item>
     
     <item>
@@ -619,7 +614,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
-      <description>Visual Studio Code 插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.code-spell-checker 拼写检查   stkb.rewrap 断行   llvm-vs-code-extensions.vscode-clangd C、C++   ms-vscode.cmake-tools cmake     快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    Vim 包管理器 安装 curl -fLo ~/.</description>
+      <description>1 Visual Studio Code 1.1 插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.code-spell-checker 拼写检查   stkb.rewrap 断行   llvm-vs-code-extensions.vscode-clangd C、C++   ms-vscode.cmake-tools cmake     1.2 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    2 Vim 2.</description>
     </item>
     
     <item>
@@ -628,7 +623,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/CS/network/</guid>
-      <description>iptables 列出 nat 规则 iptables -t nat -L 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &amp;lt;rule_number&amp;gt; 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  iptables  列出 nat 规则 列出 prerouting 规则 删除 prerouting 规则 端口转发    </description>
+      <description>1 iptables 1.1 列出 nat 规则 iptables -t nat -L 1.2 列出 prerouting 规则 sudo iptables -t nat -v -L PREROUTING -n --line-number 1.3 删除 prerouting 规则 sudo iptables -t nat -D PREROUTING &amp;lt;rule_number&amp;gt; 1.4 端口转发 iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080 目录  1 iptables  1.1 列出 nat 规则 1.2 列出 prerouting 规则 1.3 删除 prerouting 规则 1.4 端口转发    </description>
     </item>
     
     <item>
@@ -637,8 +632,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
-      <description>全屏 选中 Auto-resize Guest Display。
-目录  全屏   </description>
+      <description>1 全屏 选中 Auto-resize Guest Display。
+目录  1 全屏   </description>
     </item>
     
     <item>
@@ -647,7 +642,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/video/</guid>
-      <description>ffmpeg 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  ffmpeg  查看视频时长    </description>
+      <description>1 ffmpeg 1.1 查看视频时长 ffmpeg -i {} 2&amp;gt;&amp;amp;1 | grep Duration 目录  1 ffmpeg  1.1 查看视频时长    </description>
     </item>
     
     <item>
@@ -656,9 +651,9 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/LeetCode/%E9%93%BE%E8%A1%A8/</guid>
-      <description>19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+      <description>1 19 删除链表的倒数第 N 个结点 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
 进阶：你能尝试使用一趟扫描实现吗？
-ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &amp;lt; n; i++) {  p1 = p1-&amp;gt;next;  }  while (p1) {  p0 = p0-&amp;gt;next;  p1 = p1-&amp;gt;next;  }  auto next = p0-&amp;gt;next;  p0-&amp;gt;next = next-&amp;gt;next;  delete next;  head = dummy-&amp;gt;next;  delete dummy;  return head; } 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</description>
+ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0, head);  auto p0 = dummy;  auto p1 = head;  for (int i = 0; i &amp;lt; n; i++) {  p1 = p1-&amp;gt;next;  }  while (p1) {  p0 = p0-&amp;gt;next;  p1 = p1-&amp;gt;next;  }  auto next = p0-&amp;gt;next;  p0-&amp;gt;next = next-&amp;gt;next;  delete next;  head = dummy-&amp;gt;next;  delete dummy;  return head; } 2 21 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</description>
     </item>
     
     <item>
@@ -667,8 +662,8 @@ ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/AI/%E9%A1%B9%E7%9B%AE/</guid>
-      <description>移动推荐比赛 题目 提供 2 万用户 30 天的移动端行为数据，具体行为包括“浏览”、“收藏”、“加购物车”和“购买”，预测用户第 31 天购买的商品。评价标准是 F1 Score。
-  F1 Score 是精确率和召回率的调和平均数 精确率指：你认为的正样本，有多少猜对了 召回率指：正样本有多少被找回来了   特征  时间型：  ui &amp;amp;&amp;amp; uc：  最近一次加购物车到现在多少小时 最近一次购买到现在多少小时 最近一次浏览到现在多少小时 最近一次收藏到现在多少小时 用户从浏览到购买经历多少小时   统计型：  ui &amp;amp;&amp;amp; uc：  用户对商品浏览多少次 用户对商品购买多少次 用户对商品加购物车多少次  i:  商品被购买了多少次    模型 GBDT 优点  防止过拟合（基分类器简单，通过拟合残差来减小偏差） 表达能力强 可解释性强，是发现特征组合的有效工具  类别型特征  Xgboost：One-Hot 编码，one vs rest LightGBM：直接支持，many vs many  word2vec  架构：三层神经网络，softmax 损失函数：条件概率，nll -&amp;gt; 简化成负采样  腾讯广告算法 题目 提供 91 天的广告点击历史记录，包含日期、用户信息（年龄、性别）、广告信息（广告 id、产品 id、产品类目 id、广告主 id、广告主行业 id）以及该用户当天点击该广告的次数，预测测试集中用户的年龄和性别。评分标准为年龄预测和性别预测的 accuracy 之和。</description>
+      <description>1 移动推荐比赛 1.1 题目 提供 2 万用户 30 天的移动端行为数据，具体行为包括“浏览”、“收藏”、“加购物车”和“购买”，预测用户第 31 天购买的商品。评价标准是 F1 Score。
+  F1 Score 是精确率和召回率的调和平均数 精确率指：你认为的正样本，有多少猜对了 召回率指：正样本有多少被找回来了   1.2 特征  时间型：  ui &amp;amp;&amp;amp; uc：  最近一次加购物车到现在多少小时 最近一次购买到现在多少小时 最近一次浏览到现在多少小时 最近一次收藏到现在多少小时 用户从浏览到购买经历多少小时   统计型：  ui &amp;amp;&amp;amp; uc：  用户对商品浏览多少次 用户对商品购买多少次 用户对商品加购物车多少次  i:  商品被购买了多少次    1.3 模型 1.3.1 GBDT 1.3.1.1 优点  防止过拟合（基分类器简单，通过拟合残差来减小偏差） 表达能力强 可解释性强，是发现特征组合的有效工具  1.3.1.2 类别型特征  Xgboost：One-Hot 编码，one vs rest LightGBM：直接支持，many vs many  1.</description>
     </item>
     
     <item>
@@ -677,8 +672,8 @@ ListNode *rm_nth_from_end(ListNode *head, int n) {  auto dummy = new ListNode(0,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</guid>
-      <description>confluence 新建子页面 创建页面 -&amp;gt; 创建页面。
-目录  confluence  新建子页面    </description>
+      <description>1 confluence 1.1 新建子页面 创建页面 -&amp;gt; 创建页面。
+目录  1 confluence  1.1 新建子页面    </description>
     </item>
     
   </channel>

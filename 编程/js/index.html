@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="字符串拼接[1] 要使用 &#43; 而不是 string.concat()。
-Array flatMap[2] 等价于先 map() 再 flat()。
-let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义     \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window.">
+<meta name="description" content="1 字符串拼接[1] 要使用 &#43; 而不是 string.concat()。
+2 Array 2.1 flatMap[2] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 3 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义     \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     4 导航到新地址[3] window.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="JavaScript" />
-<meta property="og:description" content="字符串拼接[1] 要使用 &#43; 而不是 string.concat()。
-Array flatMap[2] 等价于先 map() 再 flat()。
-let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义     \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     导航到新地址[3] window." />
+<meta property="og:description" content="1 字符串拼接[1] 要使用 &#43; 而不是 string.concat()。
+2 Array 2.1 flatMap[2] 等价于先 map() 再 flat()。
+let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  arr1.flatMap(x =&gt; [x * 2]); // [2, 4, 6, 8]  // only one level is flattened arr1.flatMap(x =&gt; [[x * 2]]); // [[2], [4], [6], [8]] 3 正则表达式  表 1: JavaScript 常用正则表达式    代码 含义     \s 单个空白字符，等价于 [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]  \W 非基本拉丁字母，等价于 [^A-Za-z0-9_]     4 导航到新地址[3] window." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/js/" /><meta property="article:section" content="编程" />
 
@@ -18,8 +18,8 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&gt; [x * 2]);  // [[2], [4], [6], [8]]  a
 <title>JavaScript | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -675,7 +675,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -938,7 +938,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1135,10 +1135,10 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="字符串拼接jsconcat">字符串拼接<span class="citation" data-cites="jsConcat"><sup>[<a href="#ref-jsConcat" role="doc-biblioref">1</a>]</sup></span></h1>
+  <article class="markdown"><h1 data-number="1" id="字符串拼接jsconcat"><span class="header-section-number">1</span> 字符串拼接<span class="citation" data-cites="jsConcat"><sup>[<a href="#ref-jsConcat" role="doc-biblioref">1</a>]</sup></span></h1>
 <p>要使用 <code>+</code> 而不是 <code>string.concat()</code>。</p>
-<h1 id="array">Array</h1>
-<h2 id="flatmapjsarrayflatmap">flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<a href="#ref-jsArrayFlatMap" role="doc-biblioref">2</a>]</sup></span></h2>
+<h1 data-number="2" id="array"><span class="header-section-number">2</span> Array</h1>
+<h2 data-number="2.1" id="flatmapjsarrayflatmap"><span class="header-section-number">2.1</span> flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<a href="#ref-jsArrayFlatMap" role="doc-biblioref">2</a>]</sup></span></h2>
 <p>等价于先 <code>map()</code> 再 <code>flat()</code>。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> arr1 <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">4</span>]<span class="op">;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1151,7 +1151,7 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">// only one level is flattened</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>arr1<span class="op">.</span><span class="fu">flatMap</span>(x <span class="kw">=&gt;</span> [[x <span class="op">*</span> <span class="dv">2</span>]])<span class="op">;</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">// [[2], [4], [6], [8]]</span></span></code></pre></div>
-<h1 id="正则表达式">正则表达式</h1>
+<h1 data-number="3" id="正则表达式"><span class="header-section-number">3</span> 正则表达式</h1>
 <div id="tbl:jsCommonRegex">
 <table>
 <caption>表 1: JavaScript 常用正则表达式</caption>
@@ -1177,15 +1177,15 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<a href="#ref-jsNavigateURL" role="doc-biblioref">3</a>]</sup></span></h1>
+<h1 data-number="4" id="导航到新地址jsnavigateurl"><span class="header-section-number">4</span> 导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<a href="#ref-jsNavigateURL" role="doc-biblioref">3</a>]</sup></span></h1>
 <div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="at">location</span><span class="op">.</span><span class="at">href</span> <span class="op">=</span> <span class="st">&#39;...&#39;</span><span class="op">;</span></span></code></pre></div>
-<h1 id="得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<a href="#ref-jsAHref" role="doc-biblioref">4</a>]</sup></span></h1>
+<h1 data-number="5" id="得到链接的-href-属性jsahref"><span class="header-section-number">5</span> 得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<a href="#ref-jsAHref" role="doc-biblioref">4</a>]</sup></span></h1>
 <div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;aaa&quot;</span>)<span class="op">.</span><span class="at">href</span><span class="op">;</span></span></code></pre></div>
-<h1 id="寻找元素">寻找元素</h1>
+<h1 data-number="6" id="寻找元素"><span class="header-section-number">6</span> 寻找元素</h1>
 <div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> matches <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&quot;p&quot;</span>)<span class="op">;</span></span></code></pre></div>
-<h1 id="移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<a href="#ref-jsMoveElement" role="doc-biblioref">5</a>]</sup></span></h1>
+<h1 data-number="7" id="移动元素jsmoveelement"><span class="header-section-number">7</span> 移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<a href="#ref-jsMoveElement" role="doc-biblioref">5</a>]</sup></span></h1>
 <div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>newParent<span class="op">.</span><span class="fu">appendChild</span>(element)<span class="op">;</span></span></code></pre></div>
-<h1 id="改变元素的类jschangeelementclass">改变元素的类<span class="citation" data-cites="jsChangeElementClass"><sup>[<a href="#ref-jsChangeElementClass" role="doc-biblioref">6</a>]</sup></span></h1>
+<h1 data-number="8" id="改变元素的类jschangeelementclass"><span class="header-section-number">8</span> 改变元素的类<span class="citation" data-cites="jsChangeElementClass"><sup>[<a href="#ref-jsChangeElementClass" role="doc-biblioref">6</a>]</sup></span></h1>
 <div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;MyElement&quot;</span>)<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">&#39;MyClass&#39;</span>)<span class="op">;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;MyElement&quot;</span>)<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">&#39;MyClass&#39;</span>)<span class="op">;</span></span>
@@ -1218,17 +1218,17 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#字符串拼接jsconcat">字符串拼接<span class="citation" data-cites="jsConcat"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#array">Array</a>
+  <li><a href="#字符串拼接jsconcat"><span class="toc-section-number">1</span> 字符串拼接<span class="citation" data-cites="jsConcat"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#array"><span class="toc-section-number">2</span> Array</a>
   <ul>
-  <li><a href="#flatmapjsarrayflatmap">flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#flatmapjsarrayflatmap"><span class="toc-section-number">2.1</span> flatMap<span class="citation" data-cites="jsArrayFlatMap"><sup>[<span>2</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#正则表达式">正则表达式</a></li>
-  <li><a href="#导航到新地址jsnavigateurl">导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#得到链接的-href-属性jsahref">得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<span>4</span>]</sup></span></a></li>
-  <li><a href="#寻找元素">寻找元素</a></li>
-  <li><a href="#移动元素jsmoveelement">移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<span>5</span>]</sup></span></a></li>
-  <li><a href="#改变元素的类jschangeelementclass">改变元素的类<span class="citation" data-cites="jsChangeElementClass"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#正则表达式"><span class="toc-section-number">3</span> 正则表达式</a></li>
+  <li><a href="#导航到新地址jsnavigateurl"><span class="toc-section-number">4</span> 导航到新地址<span class="citation" data-cites="jsNavigateURL"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#得到链接的-href-属性jsahref"><span class="toc-section-number">5</span> 得到链接的 href 属性<span class="citation" data-cites="jsAHref"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#寻找元素"><span class="toc-section-number">6</span> 寻找元素</a></li>
+  <li><a href="#移动元素jsmoveelement"><span class="toc-section-number">7</span> 移动元素<span class="citation" data-cites="jsMoveElement"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#改变元素的类jschangeelementclass"><span class="toc-section-number">8</span> 改变元素的类<span class="citation" data-cites="jsChangeElementClass"><sup>[<span>6</span>]</sup></span></a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>

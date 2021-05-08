@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="输入输出[1]  图 1: 输入输出  Self-Attention 步骤[1] Embedding  图 2: Embedding  把符号变成向量。
+<meta name="description" content="1 输入输出[1]  图 1: 输入输出  2 Self-Attention 步骤[1] 2.1 Embedding  图 2: Embedding  把符号变成向量。
  \(d_e = 512\)
- Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
-  \(d_q = d_k = 64\) \(d_v = 64\)   Self-Attention  图 4: Self-Attention  矩阵形式  图 5: 矩阵形式的 Self-Attention  Multi-Head  图 6: Multi-Head  多头可以区分不同的表示子空间。">
+ 2.2 Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
+  \(d_q = d_k = 64\) \(d_v = 64\)   2.3 Self-Attention  图 4: Self-Attention  2.4 矩阵形式  图 5: 矩阵形式的 Self-Attention  2.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Transformer" />
-<meta property="og:description" content="输入输出[1]  图 1: 输入输出  Self-Attention 步骤[1] Embedding  图 2: Embedding  把符号变成向量。
+<meta property="og:description" content="1 输入输出[1]  图 1: 输入输出  2 Self-Attention 步骤[1] 2.1 Embedding  图 2: Embedding  把符号变成向量。
  \(d_e = 512\)
- Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
-  \(d_q = d_k = 64\) \(d_v = 64\)   Self-Attention  图 4: Self-Attention  矩阵形式  图 5: 矩阵形式的 Self-Attention  Multi-Head  图 6: Multi-Head  多头可以区分不同的表示子空间。" />
+ 2.2 Query、Key 和 Value 向量  图 3: Q、K 和 V  通过乘 \(\m{W}^{\m{Q}}, \m{W}^{\m{K}}, \m{W}^{\m{V}}\)，每个单词都可以得到自己的 \(\v{q}, \v{k}, \v{v}\) 向量。
+  \(d_q = d_k = 64\) \(d_v = 64\)   2.3 Self-Attention  图 4: Self-Attention  2.4 矩阵形式  图 5: 矩阵形式的 Self-Attention  2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/NLP/Transformer/" /><meta property="article:section" content="NLP" />
 
@@ -20,8 +20,8 @@
 <title>Transformer | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -677,7 +677,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -940,7 +940,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1137,12 +1137,12 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="输入输出jay2018transformer">输入输出<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
+  <article class="markdown"><h1 data-number="1" id="输入输出jay2018transformer"><span class="header-section-number">1</span> 输入输出<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
 <figure>
 <img src="io.png" id="fig:io" alt="图 1: 输入输出" /><figcaption aria-hidden="true">图 1: 输入输出</figcaption>
 </figure>
-<h1 id="self-attention-步骤jay2018transformer">Self-Attention 步骤<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
-<h2 id="embedding">Embedding</h2>
+<h1 data-number="2" id="self-attention-步骤jay2018transformer"><span class="header-section-number">2</span> Self-Attention 步骤<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
+<h2 data-number="2.1" id="embedding"><span class="header-section-number">2.1</span> Embedding</h2>
 <figure>
 <img src="embedding.png" id="fig:embedding" alt="图 2: Embedding" /><figcaption aria-hidden="true">图 2: Embedding</figcaption>
 </figure>
@@ -1150,7 +1150,7 @@ https://github.com/alex-shpak/hugo-book
 <blockquote>
 <p><span class="math inline">\(d_e = 512\)</span></p>
 </blockquote>
-<h2 id="querykey-和-value-向量">Query、Key 和 Value 向量</h2>
+<h2 data-number="2.2" id="querykey-和-value-向量"><span class="header-section-number">2.2</span> Query、Key 和 Value 向量</h2>
 <figure>
 <img src="q_k_v.png" id="fig:q_k_v" alt="图 3: Q、K 和 V" /><figcaption aria-hidden="true">图 3: Q、K 和 V</figcaption>
 </figure>
@@ -1161,15 +1161,15 @@ https://github.com/alex-shpak/hugo-book
 <li><span class="math inline">\(d_v = 64\)</span></li>
 </ul>
 </blockquote>
-<h2 id="self-attention">Self-Attention</h2>
+<h2 data-number="2.3" id="self-attention"><span class="header-section-number">2.3</span> Self-Attention</h2>
 <figure>
 <img src="self_attention.png" id="fig:self_attention" alt="图 4: Self-Attention" /><figcaption aria-hidden="true">图 4: Self-Attention</figcaption>
 </figure>
-<h2 id="矩阵形式">矩阵形式</h2>
+<h2 data-number="2.4" id="矩阵形式"><span class="header-section-number">2.4</span> 矩阵形式</h2>
 <figure>
 <img src="self_attention_matrix.png" id="fig:self_attention_matrix" alt="图 5: 矩阵形式的 Self-Attention" /><figcaption aria-hidden="true">图 5: 矩阵形式的 Self-Attention</figcaption>
 </figure>
-<h2 id="multi-head">Multi-Head</h2>
+<h2 data-number="2.5" id="multi-head"><span class="header-section-number">2.5</span> Multi-Head</h2>
 <figure>
 <img src="attention_multi_head.png" id="fig:attention_multi_head" alt="图 6: Multi-Head" /><figcaption aria-hidden="true">图 6: Multi-Head</figcaption>
 </figure>
@@ -1177,19 +1177,19 @@ https://github.com/alex-shpak/hugo-book
 <figure>
 <img src="attention_multi_head_output.png" id="fig:attention_multi_head_output" alt="图 7: Multi-Head 输出" /><figcaption aria-hidden="true">图 7: Multi-Head 输出</figcaption>
 </figure>
-<h2 id="总结">总结</h2>
+<h2 data-number="2.6" id="总结"><span class="header-section-number">2.6</span> 总结</h2>
 <figure>
 <img src="attention_summary.png" id="fig:attention_summary" alt="图 8: Self-Attention 总结" /><figcaption aria-hidden="true">图 8: Self-Attention 总结</figcaption>
 </figure>
-<h1 id="positional-encodingjay2018transformer">Positional Encoding<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
+<h1 data-number="3" id="positional-encodingjay2018transformer"><span class="header-section-number">3</span> Positional Encoding<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
 <figure>
 <img src="positional_encoding.png" id="fig:positional_encoding" alt="图 9: Positional Encoding" /><figcaption aria-hidden="true">图 9: Positional Encoding</figcaption>
 </figure>
-<h1 id="residualjay2018transformer">Residual<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
+<h1 data-number="4" id="residualjay2018transformer"><span class="header-section-number">4</span> Residual<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
 <figure>
 <img src="residual_layer_norm.png" id="fig:residual_layer_norm" alt="图 10: 残差与 LayerNorm" /><figcaption aria-hidden="true">图 10: 残差与 LayerNorm</figcaption>
 </figure>
-<h1 id="decoderjay2018transformer">Decoder<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
+<h1 data-number="5" id="decoderjay2018transformer"><span class="header-section-number">5</span> Decoder<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
 <figure>
 <img src="decoder.gif" id="fig:decoder" alt="图 11: Decoder" /><figcaption aria-hidden="true">图 11: Decoder</figcaption>
 </figure>
@@ -1197,11 +1197,11 @@ https://github.com/alex-shpak/hugo-book
 <li>Masked Multi-Head Attention 层只考虑上文，会屏蔽下文</li>
 <li>Encoder-Decoder Attention 层的 Q 来自于下层，K、V 来自于 encoder</li>
 </ul>
-<h1 id="模型输出jay2018transformer">模型输出<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
+<h1 data-number="6" id="模型输出jay2018transformer"><span class="header-section-number">6</span> 模型输出<span class="citation" data-cites="jay2018transformer"><sup>[<a href="#ref-jay2018transformer" role="doc-biblioref">1</a>]</sup></span></h1>
 <figure>
 <img src="decoder_output_softmax.png" id="fig:decoder_output_softmax" alt="图 12: 模型输出" /><figcaption aria-hidden="true">图 12: 模型输出</figcaption>
 </figure>
-<h1 id="模型结构vaswani2017attention">模型结构<span class="citation" data-cites="vaswani2017attention"><sup>[<a href="#ref-vaswani2017attention" role="doc-biblioref">2</a>]</sup></span></h1>
+<h1 data-number="7" id="模型结构vaswani2017attention"><span class="header-section-number">7</span> 模型结构<span class="citation" data-cites="vaswani2017attention"><sup>[<a href="#ref-vaswani2017attention" role="doc-biblioref">2</a>]</sup></span></h1>
 <figure>
 <img src="model_architecture.png" id="fig:model_architecture" style="width:40.0%" alt="图 13: 模型结构" /><figcaption aria-hidden="true">图 13: 模型结构</figcaption>
 </figure>
@@ -1218,21 +1218,21 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#输入输出jay2018transformer">输入输出<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#self-attention-步骤jay2018transformer">Self-Attention 步骤<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a>
+  <li><a href="#输入输出jay2018transformer"><span class="toc-section-number">1</span> 输入输出<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#self-attention-步骤jay2018transformer"><span class="toc-section-number">2</span> Self-Attention 步骤<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a>
   <ul>
-  <li><a href="#embedding">Embedding</a></li>
-  <li><a href="#querykey-和-value-向量">Query、Key 和 Value 向量</a></li>
-  <li><a href="#self-attention">Self-Attention</a></li>
-  <li><a href="#矩阵形式">矩阵形式</a></li>
-  <li><a href="#multi-head">Multi-Head</a></li>
-  <li><a href="#总结">总结</a></li>
+  <li><a href="#embedding"><span class="toc-section-number">2.1</span> Embedding</a></li>
+  <li><a href="#querykey-和-value-向量"><span class="toc-section-number">2.2</span> Query、Key 和 Value 向量</a></li>
+  <li><a href="#self-attention"><span class="toc-section-number">2.3</span> Self-Attention</a></li>
+  <li><a href="#矩阵形式"><span class="toc-section-number">2.4</span> 矩阵形式</a></li>
+  <li><a href="#multi-head"><span class="toc-section-number">2.5</span> Multi-Head</a></li>
+  <li><a href="#总结"><span class="toc-section-number">2.6</span> 总结</a></li>
   </ul></li>
-  <li><a href="#positional-encodingjay2018transformer">Positional Encoding<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#residualjay2018transformer">Residual<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#decoderjay2018transformer">Decoder<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#模型输出jay2018transformer">模型输出<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#模型结构vaswani2017attention">模型结构<span class="citation" data-cites="vaswani2017attention"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#positional-encodingjay2018transformer"><span class="toc-section-number">3</span> Positional Encoding<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#residualjay2018transformer"><span class="toc-section-number">4</span> Residual<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#decoderjay2018transformer"><span class="toc-section-number">5</span> Decoder<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#模型输出jay2018transformer"><span class="toc-section-number">6</span> 模型输出<span class="citation" data-cites="jay2018transformer"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#模型结构vaswani2017attention"><span class="toc-section-number">7</span> 模型结构<span class="citation" data-cites="vaswani2017attention"><sup>[<span>2</span>]</sup></span></a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>

@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
-\[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]
-在信息检索领域这样定义[3]：
-\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]">
+<meta name="description" content="1 采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     2 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     2.1 精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
+\[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="机器学习" />
-<meta property="og:description" content="采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
-\[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]
-在信息检索领域这样定义[3]：
-\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]" />
+<meta property="og:description" content="1 采样[1]  表 1: 是否放回的区别  放回？ 英文 含义    不放回 without replacement 每个样本最多被采样一次  放回 with replacement 一个样本可能被采样多次     2 评估指标  表 2: 混淆矩阵   实际 Positive 实际 Negative    预测 Positive True Positive False Positive（误报，Type I Error）  预测 Negative False Negative（漏报，Type II Error） True Negative     2.1 精确率（Precision） 你认为的正样本，有多少猜对了（猜的精确性如何）[2]：
+\[ P = \frac{\TP}{\TP &#43; \FP}\qquad(1)\]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/AI/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" /><meta property="article:section" content="AI" />
 
@@ -20,8 +16,8 @@
 <title>机器学习 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -677,7 +673,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -940,7 +936,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1137,7 +1133,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="采样wiki_sampling">采样<span class="citation" data-cites="wiki_sampling"><sup>[<a href="#ref-wiki_sampling" role="doc-biblioref">1</a>]</sup></span></h1>
+  <article class="markdown"><h1 data-number="1" id="采样wiki_sampling"><span class="header-section-number">1</span> 采样<span class="citation" data-cites="wiki_sampling"><sup>[<a href="#ref-wiki_sampling" role="doc-biblioref">1</a>]</sup></span></h1>
 <div id="tbl:sample_replacement">
 <table>
 <caption>表 1: 是否放回的区别</caption>
@@ -1162,7 +1158,7 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="评估指标">评估指标</h1>
+<h1 data-number="2" id="评估指标"><span class="header-section-number">2</span> 评估指标</h1>
 <div id="tbl:confusion_matrix">
 <table>
 <caption>表 2: 混淆矩阵</caption>
@@ -1187,55 +1183,55 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="精确率precision">精确率（Precision）</h2>
+<h2 data-number="2.1" id="精确率precision"><span class="header-section-number">2.1</span> 精确率（Precision）</h2>
 <p>你认为的正样本，有多少猜对了（猜的精确性如何）<span class="citation" data-cites="ml_precision_recall"><sup>[<a href="#ref-ml_precision_recall" role="doc-biblioref">2</a>]</sup></span>：</p>
 <p><span id="eq:precision"><span class="math display">\[ P = \frac{\TP}{\TP + \FP}\qquad(1)\]</span></span></p>
 <p>在信息检索领域这样定义<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">3</a>]</sup></span>：</p>
 <p><span id="eq:precision_information_retrieval"><span class="math display">\[ P = \frac{\vert\{\textrm{relevant documents}\}\cap\{\textrm{retrieved documents}\}\vert}{\vert\{\textrm{retrieved documents}\}\vert}\qquad(2)\]</span></span></p>
-<h3 id="pn">P@n</h3>
+<h3 data-number="2.1.1" id="pn"><span class="header-section-number">2.1.1</span> P@n</h3>
 <p>只考虑 top n 个查询结果。<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">3</a>]</sup></span></p>
-<h2 id="召回率recall">召回率（Recall）</h2>
+<h2 data-number="2.2" id="召回率recall"><span class="header-section-number">2.2</span> 召回率（Recall）</h2>
 <p>正样本有多少被找出来了（召回了多少）<span class="citation" data-cites="ml_precision_recall"><sup>[<a href="#ref-ml_precision_recall" role="doc-biblioref">2</a>]</sup></span>：</p>
 <p><span id="eq:recall"><span class="math display">\[R = \frac{\TP}{\TP + \FN}\qquad(3)\]</span></span></p>
-<h2 id="准确率accuracy">准确率（Accuracy）</h2>
+<h2 data-number="2.3" id="准确率accuracy"><span class="header-section-number">2.3</span> 准确率（Accuracy）</h2>
 <p>预测正确的结果占总样本的比例<span class="citation" data-cites="ml_accuracy"><sup>[<a href="#ref-ml_accuracy" role="doc-biblioref">4</a>]</sup></span>：</p>
 <p><span id="eq:accuracy"><span class="math display">\[A = \frac{\TP+\TN}{\TP+\TN+\FP+\FN}\qquad(4)\]</span></span></p>
-<h2 id="f_1"><span class="math inline">\(F_1\)</span></h2>
+<h2 data-number="2.4" id="f_1"><span class="header-section-number">2.4</span> <span class="math inline">\(F_1\)</span></h2>
 <p>Precision 与 Recall 的调和均值：</p>
 <p><span id="eq:f1"><span class="math display">\[\frac{2}{F_1} = \frac{1}{P} + \frac{1}{R}\qquad(5)\]</span></span></p>
 <blockquote>
 <p>调和均值受极小值的影响更大</p>
 </blockquote>
-<h2 id="真阳性率tprml_tpr_fpr">真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">5</a>]</sup></span></h2>
+<h2 data-number="2.5" id="真阳性率tprml_tpr_fpr"><span class="header-section-number">2.5</span> 真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">5</a>]</sup></span></h2>
 <p>在所有实际为阳性的样本中，被正确地判断为阳性之比率：</p>
 <p><span id="eq:tpr"><span class="math display">\[ \TPR = \frac{\TP}{\TP + \FN}\qquad(6)\]</span></span></p>
 <p>与召回率定义相同。</p>
-<h2 id="伪阳性率fprml_tpr_fpr">伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">5</a>]</sup></span></h2>
+<h2 data-number="2.6" id="伪阳性率fprml_tpr_fpr"><span class="header-section-number">2.6</span> 伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<a href="#ref-ml_tpr_fpr" role="doc-biblioref">5</a>]</sup></span></h2>
 <p>在所有实际为阴性的样本中，被错误地判断为阳性之比率：</p>
 <p><span id="eq:fpr"><span class="math display">\[ \FPR = \frac{\FP}{\FP + \TN}\qquad(7)\]</span></span></p>
-<h2 id="roc-与-precision-recall-曲线ml_roc">ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">6</a>]</sup></span></h2>
+<h2 data-number="2.7" id="roc-与-precision-recall-曲线ml_roc"><span class="header-section-number">2.7</span> ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">6</a>]</sup></span></h2>
 <figure>
 <img src="https://kaizhang16.github.io/note/fig/AI/机器学习/roc_pr.png" id="fig:roc_pr" style="width:80.0%" alt="图 1: 一个 ROC 与 Precision-Recall 曲线例子" /><figcaption aria-hidden="true">图 1: 一个 ROC 与 Precision-Recall 曲线例子</figcaption>
 </figure>
 <figure>
 <img src="https://kaizhang16.github.io/note/fig/AI/机器学习/roc_pr.gif" id="fig:roc_pr_dynamic" style="width:80.0%" alt="图 2: ROC 与 Precision-Recall 曲线随阈值的动态变化" /><figcaption aria-hidden="true">图 2: ROC 与 Precision-Recall 曲线随阈值的动态变化</figcaption>
 </figure>
-<h3 id="roc-与-p-r-曲线的比较ml_roc">ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">6</a>]</sup></span></h3>
+<h3 data-number="2.7.1" id="roc-与-p-r-曲线的比较ml_roc"><span class="header-section-number">2.7.1</span> ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<a href="#ref-ml_roc" role="doc-biblioref">6</a>]</sup></span></h3>
 <figure>
 <img src="https://kaizhang16.github.io/note/fig/AI/机器学习/roc_pr_imbalance.png" id="fig:roc_pr_imbalance" style="width:80.0%" alt="图 3: 样本不平衡时，ROC 与 Precision-Recall 曲线的比较" /><figcaption aria-hidden="true">图 3: 样本不平衡时，ROC 与 Precision-Recall 曲线的比较</figcaption>
 </figure>
 <ul>
 <li>当正负样本不平衡时，P-R 曲线对误报更敏感</li>
 </ul>
-<h3 id="aucarea-under-the-curve">AUC(Area Under the Curve)</h3>
-<h4 id="roc-auc">ROC AUC</h4>
+<h3 data-number="2.7.2" id="aucarea-under-the-curve"><span class="header-section-number">2.7.2</span> AUC(Area Under the Curve)</h3>
+<h4 data-number="2.7.2.1" id="roc-auc"><span class="header-section-number">2.7.2.1</span> ROC AUC</h4>
 <figure>
 <img src="https://kaizhang16.github.io/note/fig/AI/机器学习/roc_auc.svg" id="fig:roc_auc" style="width:80.0%" alt="图 4: ROC AUC 示意图" /><figcaption aria-hidden="true">图 4: ROC AUC 示意图</figcaption>
 </figure>
 <p>ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。<span class="citation" data-cites="ml_roc_auc"><sup>[<a href="#ref-ml_roc_auc" role="doc-biblioref">7</a>]</sup></span></p>
-<h4 id="pr-auc">PR AUC</h4>
+<h4 data-number="2.7.2.2" id="pr-auc"><span class="header-section-number">2.7.2.2</span> PR AUC</h4>
 <p>PR AUC 表示在不同召回率阈值下的平均精确率。<span class="citation" data-cites="ml_pr_auc"><sup>[<a href="#ref-ml_pr_auc" role="doc-biblioref">8</a>]</sup></span></p>
-<h2 id="avepaverage-precision-ml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">3</a>]</sup></span></h2>
+<h2 data-number="2.8" id="avepaverage-precision-ml_evaluation_measures"><span class="header-section-number">2.8</span> AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<a href="#ref-ml_evaluation_measures" role="doc-biblioref">3</a>]</sup></span></h2>
 <p>AveP 为 PR AUC，具体地：</p>
 <p><span id="eq:AveP"><span class="math display">\[\AveP = \int_0^1 p(r)\d r\qquad(8)\]</span></span> <span id="eq:AveP_sum"><span class="math display">\[\AveP = \sum_{k=1}^n P(k)\Delta r(k)\qquad(9)\]</span></span> <span id="eq:AveP_k"><span class="math display">\[\AveP = \frac{\sum_{k=1}^n P(k)\times \rel(k)}{\vert\{\textrm{relevant documents}\}\vert}\qquad(10)\]</span></span></p>
 <p>其中，</p>
@@ -1245,32 +1241,32 @@ https://github.com/alex-shpak/hugo-book
 <li><span class="math inline">\(\Delta r(k)\)</span> 表示从项 <span class="math inline">\(k-1\)</span> 到 <span class="math inline">\(k\)</span> 的召回率变化</li>
 <li><span class="math inline">\(\rel(k)\)</span> 是指示函数，项 <span class="math inline">\(k\)</span> 是相关文档时为 <span class="math inline">\(1\)</span>，项 <span class="math inline">\(k\)</span> 不是相关文档时为 <span class="math inline">\(0\)</span></li>
 </ul>
-<h2 id="mapmean-average-precision">MAP(Mean Average Precision)</h2>
+<h2 data-number="2.9" id="mapmean-average-precision"><span class="header-section-number">2.9</span> MAP(Mean Average Precision)</h2>
 <p><span id="eq:map"><span class="math display">\[\MAP = \frac{\sum_{q=1}^Q \AveP(q)}{Q}\qquad(11)\]</span></span></p>
 <p>其中 <span class="math inline">\(Q\)</span> 表示查询总数。</p>
-<h1 id="信息论">信息论</h1>
-<h2 id="条件熵conditional_entropy">条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<a href="#ref-conditional_entropy" role="doc-biblioref">9</a>]</sup></span></h2>
+<h1 data-number="3" id="信息论"><span class="header-section-number">3</span> 信息论</h1>
+<h2 data-number="3.1" id="条件熵conditional_entropy"><span class="header-section-number">3.1</span> 条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<a href="#ref-conditional_entropy" role="doc-biblioref">9</a>]</sup></span></h2>
 <p><span id="eq:conditional_entropy"><span class="math display">\[
 \begin{align}
 H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 &amp;= -\sum_{x\in\mathcal{X},y\in\mathcal{Y}}p(x,y)\log\frac{p(x,y)}{p(x)}
 \end{align}
 \qquad(12)\]</span></span></p>
-<h1 id="输出层">输出层</h1>
-<h2 id="sigmoid">sigmoid</h2>
+<h1 data-number="4" id="输出层"><span class="header-section-number">4</span> 输出层</h1>
+<h2 data-number="4.1" id="sigmoid"><span class="header-section-number">4.1</span> sigmoid</h2>
 <p><span id="eq:sigmoid"><span class="math display">\[f(z) = \frac{1}{1+e^{-z}}\qquad(13)\]</span></span></p>
-<h1 id="损失函数">损失函数</h1>
-<h2 id="交叉熵cross_entropy">交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<a href="#ref-cross_entropy" role="doc-biblioref">10</a>]</sup></span></h2>
+<h1 data-number="5" id="损失函数"><span class="header-section-number">5</span> 损失函数</h1>
+<h2 data-number="5.1" id="交叉熵cross_entropy"><span class="header-section-number">5.1</span> 交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<a href="#ref-cross_entropy" role="doc-biblioref">10</a>]</sup></span></h2>
 <p><span id="eq:cross_entropy"><span class="math display">\[H(p, q) = -E_p[\log q]\qquad(14)\]</span></span></p>
 <p>在离散情况下为</p>
 <p><span id="eq:cross_entropy_discrete"><span class="math display">\[H(p, q) = -\sum_{x\in\mathcal{X}}p(x)\log q(x)\qquad(15)\]</span></span></p>
-<h1 id="传统机器学习算法">传统机器学习算法</h1>
-<h2 id="决策树">决策树</h2>
+<h1 data-number="6" id="传统机器学习算法"><span class="header-section-number">6</span> 传统机器学习算法</h1>
+<h2 data-number="6.1" id="决策树"><span class="header-section-number">6.1</span> 决策树</h2>
 <ul>
 <li>分类树：<span class="math inline">\(y\)</span> 离散</li>
 <li>回归树：<span class="math inline">\(y\)</span> 连续</li>
 </ul>
-<h3 id="id3decision_tree">ID3<span class="citation" data-cites="decision_tree"><sup>[<a href="#ref-decision_tree" role="doc-biblioref">11</a>]</sup></span></h3>
+<h3 data-number="6.1.1" id="id3decision_tree"><span class="header-section-number">6.1.1</span> ID3<span class="citation" data-cites="decision_tree"><sup>[<a href="#ref-decision_tree" role="doc-biblioref">11</a>]</sup></span></h3>
 <p>父节点的熵：</p>
 <p><span class="math display">\[H(D) = -\sum_{k=1}^K\frac{|C_k|}{|D|}\log\frac{|C_k|}{|D|}\]</span></p>
 <p>知道某个属性 A 后的条件熵：</p>
@@ -1281,7 +1277,7 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <ul>
 <li>信息增益偏向 <span class="math inline">\(|A|\)</span> 大的属性</li>
 </ul>
-<h3 id="c4.5">C4.5</h3>
+<h3 data-number="6.1.2" id="c4.5"><span class="header-section-number">6.1.2</span> C4.5</h3>
 <p>信息增益比：</p>
 <p><span class="math display">\[\mathrm{Gain_{\mathrm{ratio}}}(D, A) = \frac{\mathrm{Gain}(D,A)}{H_A(D)}\]</span></p>
 <p>其中，<span class="math inline">\(H_A(D) = -\sum_{i=1}^n\frac{|D_i|}{|D|}\log\frac{|D_i|}{|D|}\)</span>。</p>
@@ -1290,16 +1286,16 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <li>多叉树</li>
 <li>只能分类</li>
 </ul>
-<h3 id="cart">CART</h3>
-<h4 id="分类">分类</h4>
+<h3 data-number="6.1.3" id="cart"><span class="header-section-number">6.1.3</span> CART</h3>
+<h4 data-number="6.1.3.1" id="分类"><span class="header-section-number">6.1.3.1</span> 分类</h4>
 <p>基尼系数：</p>
 <p><span class="math display">\[\mathrm{Gini}(D) = \sum_{k=1}^K\frac{|C_k|}{|D|}\left(1-\frac{|C_k|}{|D|}\right)\]</span> <span class="math display">\[\mathrm{Gini}(D, A) = \frac{|D_1|}{|D|}\mathrm{Gini}(D_1) + \frac{|D_2|}{|D|}\mathrm{Gini}(D_2)\]</span></p>
 <p>用 <span class="math inline">\(\mathrm{Gini}(D, A)\)</span> 最小的属性 A 及切分点 a 分割 D。</p>
-<h4 id="回归">回归</h4>
+<h4 data-number="6.1.3.2" id="回归"><span class="header-section-number">6.1.3.2</span> 回归</h4>
 <p>按照</p>
 <p><span class="math display">\[\min_{a, s}\left[\min_{c_1}\sum_{x_i\in D_1}(y_i - c_1)^2 + \min_{c_2}\sum_{x_i\in D_2}(y_i - c_2)^2\right]\]</span></p>
 <p>选择属性 <span class="math inline">\(a\)</span> 与切分点 <span class="math inline">\(s\)</span>。</p>
-<h2 id="随机森林">随机森林</h2>
+<h2 data-number="6.2" id="随机森林"><span class="header-section-number">6.2</span> 随机森林</h2>
 <p>对 <span class="math inline">\(b=1,\dots,B\)</span>：</p>
 <ul>
 <li>从 <span class="math inline">\(X,Y\)</span> 进行 <span class="math inline">\(n\)</span> 次有放回的抽样，记为 <span class="math inline">\(X_b,Y_b\)</span></li>
@@ -1318,7 +1314,7 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <li>黑盒</li>
 <li>噪声较大时容易过拟合</li>
 </ul>
-<h2 id="gbdt">GBDT</h2>
+<h2 data-number="6.3" id="gbdt"><span class="header-section-number">6.3</span> GBDT</h2>
 <p>全称为 Gradient Boosting Decision Tree。</p>
 <p>优点：</p>
 <ul>
@@ -1332,7 +1328,7 @@ H(Y\mid X) &amp;= \sum_{x\in\mathcal{X}}p(x)H(Y\mid X=x) \\
 <li>在处理分类特征时的优势不如处理数值特征时明显</li>
 <li>需要迭代训练，即串行计算</li>
 </ul>
-<h3 id="损失函数-1">损失函数</h3>
+<h3 data-number="6.3.1" id="损失函数-1"><span class="header-section-number">6.3.1</span> 损失函数</h3>
 <p>Square loss:</p>
 <p><span class="math display">\[L(y, F) = \frac{1}{2}(y-F(x))^2\]</span></p>
 <p>Absolute loss:</p>
@@ -1374,7 +1370,7 @@ L(y, F) =
 </tbody>
 </table>
 </div>
-<h3 id="回归的学习步骤">回归的学习步骤</h3>
+<h3 data-number="6.3.2" id="回归的学习步骤"><span class="header-section-number">6.3.2</span> 回归的学习步骤</h3>
 <ol type="1">
 <li>初始化 <span class="math inline">\(F(x) = \frac{\sum_{i=1}^n y_i}{n}\)</span></li>
 <li>计算负梯度：<span class="math inline">\(-g(x_i) = -\frac{\partial L(y_i,F(x_i))}{\partial F(x_i)}\)</span></li>
@@ -1382,23 +1378,23 @@ L(y, F) =
 <li>更新 F，<span class="math inline">\(F := F + \rho h\)</span></li>
 <li>终止或者跳到步骤 2</li>
 </ol>
-<h3 id="特征重要性">特征重要性</h3>
+<h3 data-number="6.3.3" id="特征重要性"><span class="header-section-number">6.3.3</span> 特征重要性</h3>
 <ul>
 <li>split：使用该特征的次数</li>
 <li>gain：该特征的总增益</li>
 </ul>
-<h3 id="局部特征的贡献">局部特征的贡献</h3>
+<h3 data-number="6.3.4" id="局部特征的贡献"><span class="header-section-number">6.3.4</span> 局部特征的贡献</h3>
 <figure>
 <img src="gbdt_local_feature_contribution.png" id="fig:gbdt_local_feature_contribution" style="width:80.0%" alt="图 5: GBDT 局部特征的贡献" /><figcaption aria-hidden="true">图 5: GBDT 局部特征的贡献</figcaption>
 </figure>
-<h2 id="xgboost">XGBoost</h2>
-<h3 id="树的输出">树的输出</h3>
+<h2 data-number="6.4" id="xgboost"><span class="header-section-number">6.4</span> XGBoost</h2>
+<h3 data-number="6.4.1" id="树的输出"><span class="header-section-number">6.4.1</span> 树的输出</h3>
 <p><span class="math display">\[f^{(t)}(\v{x}) = w_{q(\v{x})}, \v{w}\in \R^T, q: \R^d\to \{1,2,\cdots,T\}\]</span></p>
 <p>其中，<span class="math inline">\(T\)</span> 为叶子节点的数量；<span class="math inline">\(d\)</span> 为 <span class="math inline">\(\v{x}\)</span> 的维度；<span class="math inline">\(q\)</span> 把 <span class="math inline">\(\v{x}\)</span> 映射到某个叶子序号。</p>
 <p><span class="math display">\[w_j = -\frac{G_j}{H_j + \lambda}\]</span> <span class="math display">\[G_j = \sum_{i\in I_j}g_i\]</span> <span class="math display">\[H_j = \sum_{i\in I_j}h_i\]</span> <span class="math display">\[I_j = \{i\mid q(\v{x}_i) = j\}\]</span> <span class="math display">\[g_i = \frac{\partial l(y_i, \hat{y}_i^{(t-1)})}{\partial\hat{y}_i^{(t-1)}}\]</span> <span class="math display">\[h_i = \frac{\partial^2 l(y_i, \hat{y}_i^{(t-1)})}{{\partial\hat{y}_i^{(t-1)}}^2}\]</span></p>
-<h3 id="树的损失函数">树的损失函数</h3>
+<h3 data-number="6.4.2" id="树的损失函数"><span class="header-section-number">6.4.2</span> 树的损失函数</h3>
 <p><span class="math display">\[J(f^{(t)}) = -\frac{1}{2}\sum_{j=1}^T\frac{G_j^2}{H_j+\lambda} + \gamma T\]</span></p>
-<h3 id="节点分裂的增益">节点分裂的增益</h3>
+<h3 data-number="6.4.3" id="节点分裂的增益"><span class="header-section-number">6.4.3</span> 节点分裂的增益</h3>
 <p><span class="math display">\[\mathrm{Gain} = \frac{1}{2}\left[\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{(G_L+G_R)^2}{H_L+H_R+\lambda}\right] - \gamma\]</span></p>
 <p>优点：</p>
 <ul>
@@ -1414,26 +1410,26 @@ L(y, F) =
 <li>可以自动学习缺失值的分裂方向</li>
 <li>预先排序，并行计算不同特征的增益</li>
 </ul>
-<h2 id="lightgbm">LightGBM</h2>
+<h2 data-number="6.5" id="lightgbm"><span class="header-section-number">6.5</span> LightGBM</h2>
 <p>与 XGBoost 的区别：</p>
 <ul>
 <li>XGBoost 是 pre-sorted 算法，寻找数据分割点更精确；LightGBM 是 histogram 算法，占用内存小，计算复杂度低</li>
 <li>XGBoost 是 level-wise 分裂，LightGBM 是 leaf-wise</li>
 <li>XGBoost 使用 pre-sorted 算法，通信代价大；LightGBM 使用 histogram 算法，通信代价小，能并行计算</li>
 </ul>
-<h2 id="k-means">K means</h2>
-<h3 id="背景">背景</h3>
+<h2 data-number="6.6" id="k-means"><span class="header-section-number">6.6</span> K means</h2>
+<h3 data-number="6.6.1" id="背景"><span class="header-section-number">6.6.1</span> 背景</h3>
 <p>给定样本 <span class="math inline">\(\{\v{x}_1, \v{x}_2, \dots, \v{x}_n\}\)</span>，K means 希望把样本分成 <span class="math inline">\(k\)</span> 类 <span class="math inline">\(\set{S} = \{\set{S}_1, \set{S}_2, \dots, \set{S}_k\}\)</span>，并且满足式. 16：</p>
 <p><span id="eq:k_means_object"><span class="math display">\[
 \argmin_{\set{S}}\sum_{i=1}^k\sum_{\v{x}\in\set{S}_i}\lVert\v{x}-\v{\mu}_i\rVert^2
 \qquad(16)\]</span></span></p>
-<h3 id="迭代步骤">迭代步骤</h3>
+<h3 data-number="6.6.2" id="迭代步骤"><span class="header-section-number">6.6.2</span> 迭代步骤</h3>
 <p>给定 k 个质心的初始值，然后重复以下步骤</p>
 <ul>
 <li>赋值：把每个样本赋成距离最近的质心所在的类</li>
 <li>更新：重新计算每个类的质心</li>
 </ul>
-<h3 id="初始化方法">初始化方法</h3>
+<h3 data-number="6.6.3" id="初始化方法"><span class="header-section-number">6.6.3</span> 初始化方法</h3>
 <ul>
 <li>Forgy：随机选择 k 个样本作为质心</li>
 <li>Random Partition：每个样本随机赋一个类，计算每个类的质心</li>
@@ -1478,66 +1474,66 @@ L(y, F) =
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#采样wiki_sampling">采样<span class="citation" data-cites="wiki_sampling"><sup>[<span>1</span>]</sup></span></a></li>
-  <li><a href="#评估指标">评估指标</a>
+  <li><a href="#采样wiki_sampling"><span class="toc-section-number">1</span> 采样<span class="citation" data-cites="wiki_sampling"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#评估指标"><span class="toc-section-number">2</span> 评估指标</a>
   <ul>
-  <li><a href="#精确率precision">精确率（Precision）</a>
+  <li><a href="#精确率precision"><span class="toc-section-number">2.1</span> 精确率（Precision）</a>
   <ul>
-  <li><a href="#pn">P@n</a></li>
+  <li><a href="#pn"><span class="toc-section-number">2.1.1</span> P@n</a></li>
   </ul></li>
-  <li><a href="#召回率recall">召回率（Recall）</a></li>
-  <li><a href="#准确率accuracy">准确率（Accuracy）</a></li>
-  <li><a href="#f_1"><span class="math inline">\(F_1\)</span></a></li>
-  <li><a href="#真阳性率tprml_tpr_fpr">真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<span>5</span>]</sup></span></a></li>
-  <li><a href="#伪阳性率fprml_tpr_fpr">伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<span>5</span>]</sup></span></a></li>
-  <li><a href="#roc-与-precision-recall-曲线ml_roc">ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<span>6</span>]</sup></span></a>
+  <li><a href="#召回率recall"><span class="toc-section-number">2.2</span> 召回率（Recall）</a></li>
+  <li><a href="#准确率accuracy"><span class="toc-section-number">2.3</span> 准确率（Accuracy）</a></li>
+  <li><a href="#f_1"><span class="toc-section-number">2.4</span> <span class="math inline">\(F_1\)</span></a></li>
+  <li><a href="#真阳性率tprml_tpr_fpr"><span class="toc-section-number">2.5</span> 真阳性率（TPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#伪阳性率fprml_tpr_fpr"><span class="toc-section-number">2.6</span> 伪阳性率（FPR）<span class="citation" data-cites="ml_tpr_fpr"><sup>[<span>5</span>]</sup></span></a></li>
+  <li><a href="#roc-与-precision-recall-曲线ml_roc"><span class="toc-section-number">2.7</span> ROC 与 Precision-Recall 曲线<span class="citation" data-cites="ml_roc"><sup>[<span>6</span>]</sup></span></a>
   <ul>
-  <li><a href="#roc-与-p-r-曲线的比较ml_roc">ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<span>6</span>]</sup></span></a></li>
-  <li><a href="#aucarea-under-the-curve">AUC(Area Under the Curve)</a></li>
+  <li><a href="#roc-与-p-r-曲线的比较ml_roc"><span class="toc-section-number">2.7.1</span> ROC 与 P-R 曲线的比较<span class="citation" data-cites="ml_roc"><sup>[<span>6</span>]</sup></span></a></li>
+  <li><a href="#aucarea-under-the-curve"><span class="toc-section-number">2.7.2</span> AUC(Area Under the Curve)</a></li>
   </ul></li>
-  <li><a href="#avepaverage-precision-ml_evaluation_measures">AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#mapmean-average-precision">MAP(Mean Average Precision)</a></li>
+  <li><a href="#avepaverage-precision-ml_evaluation_measures"><span class="toc-section-number">2.8</span> AveP(Average Precision)<span class="citation" data-cites="ml_evaluation_measures"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#mapmean-average-precision"><span class="toc-section-number">2.9</span> MAP(Mean Average Precision)</a></li>
   </ul></li>
-  <li><a href="#信息论">信息论</a>
+  <li><a href="#信息论"><span class="toc-section-number">3</span> 信息论</a>
   <ul>
-  <li><a href="#条件熵conditional_entropy">条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<span>9</span>]</sup></span></a></li>
+  <li><a href="#条件熵conditional_entropy"><span class="toc-section-number">3.1</span> 条件熵<span class="citation" data-cites="conditional_entropy"><sup>[<span>9</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#输出层">输出层</a>
+  <li><a href="#输出层"><span class="toc-section-number">4</span> 输出层</a>
   <ul>
-  <li><a href="#sigmoid">sigmoid</a></li>
+  <li><a href="#sigmoid"><span class="toc-section-number">4.1</span> sigmoid</a></li>
   </ul></li>
-  <li><a href="#损失函数">损失函数</a>
+  <li><a href="#损失函数"><span class="toc-section-number">5</span> 损失函数</a>
   <ul>
-  <li><a href="#交叉熵cross_entropy">交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<span>10</span>]</sup></span></a></li>
+  <li><a href="#交叉熵cross_entropy"><span class="toc-section-number">5.1</span> 交叉熵<span class="citation" data-cites="cross_entropy"><sup>[<span>10</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#传统机器学习算法">传统机器学习算法</a>
+  <li><a href="#传统机器学习算法"><span class="toc-section-number">6</span> 传统机器学习算法</a>
   <ul>
-  <li><a href="#决策树">决策树</a>
+  <li><a href="#决策树"><span class="toc-section-number">6.1</span> 决策树</a>
   <ul>
-  <li><a href="#id3decision_tree">ID3<span class="citation" data-cites="decision_tree"><sup>[<span>11</span>]</sup></span></a></li>
-  <li><a href="#c4.5">C4.5</a></li>
-  <li><a href="#cart">CART</a></li>
+  <li><a href="#id3decision_tree"><span class="toc-section-number">6.1.1</span> ID3<span class="citation" data-cites="decision_tree"><sup>[<span>11</span>]</sup></span></a></li>
+  <li><a href="#c4.5"><span class="toc-section-number">6.1.2</span> C4.5</a></li>
+  <li><a href="#cart"><span class="toc-section-number">6.1.3</span> CART</a></li>
   </ul></li>
-  <li><a href="#随机森林">随机森林</a></li>
-  <li><a href="#gbdt">GBDT</a>
+  <li><a href="#随机森林"><span class="toc-section-number">6.2</span> 随机森林</a></li>
+  <li><a href="#gbdt"><span class="toc-section-number">6.3</span> GBDT</a>
   <ul>
-  <li><a href="#损失函数-1">损失函数</a></li>
-  <li><a href="#回归的学习步骤">回归的学习步骤</a></li>
-  <li><a href="#特征重要性">特征重要性</a></li>
-  <li><a href="#局部特征的贡献">局部特征的贡献</a></li>
+  <li><a href="#损失函数-1"><span class="toc-section-number">6.3.1</span> 损失函数</a></li>
+  <li><a href="#回归的学习步骤"><span class="toc-section-number">6.3.2</span> 回归的学习步骤</a></li>
+  <li><a href="#特征重要性"><span class="toc-section-number">6.3.3</span> 特征重要性</a></li>
+  <li><a href="#局部特征的贡献"><span class="toc-section-number">6.3.4</span> 局部特征的贡献</a></li>
   </ul></li>
-  <li><a href="#xgboost">XGBoost</a>
+  <li><a href="#xgboost"><span class="toc-section-number">6.4</span> XGBoost</a>
   <ul>
-  <li><a href="#树的输出">树的输出</a></li>
-  <li><a href="#树的损失函数">树的损失函数</a></li>
-  <li><a href="#节点分裂的增益">节点分裂的增益</a></li>
+  <li><a href="#树的输出"><span class="toc-section-number">6.4.1</span> 树的输出</a></li>
+  <li><a href="#树的损失函数"><span class="toc-section-number">6.4.2</span> 树的损失函数</a></li>
+  <li><a href="#节点分裂的增益"><span class="toc-section-number">6.4.3</span> 节点分裂的增益</a></li>
   </ul></li>
-  <li><a href="#lightgbm">LightGBM</a></li>
-  <li><a href="#k-means">K means</a>
+  <li><a href="#lightgbm"><span class="toc-section-number">6.5</span> LightGBM</a></li>
+  <li><a href="#k-means"><span class="toc-section-number">6.6</span> K means</a>
   <ul>
-  <li><a href="#背景">背景</a></li>
-  <li><a href="#迭代步骤">迭代步骤</a></li>
-  <li><a href="#初始化方法">初始化方法</a></li>
+  <li><a href="#背景"><span class="toc-section-number">6.6.1</span> 背景</a></li>
+  <li><a href="#迭代步骤"><span class="toc-section-number">6.6.2</span> 迭代步骤</a></li>
+  <li><a href="#初始化方法"><span class="toc-section-number">6.6.3</span> 初始化方法</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#参考文献">参考文献</a></li>

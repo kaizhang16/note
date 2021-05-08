@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/git/</guid>
-      <description>常见操作 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; diff 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     Git Submodule 下载 submodule git submodule update --init --force --recursive --depth=1 更新 url git submodule set-url themes/book https://github.</description>
+      <description>1 常见操作 1.1 恢复文件[1] # this restores the file status in the index git reset -- &amp;lt;file&amp;gt; # then check out a copy from the index git checkout -- &amp;lt;file&amp;gt; 2 diff 2.1 安装 delta  表 1: delta 安装命令  操作系统 命令    Arch Linux yay -S git-delta  Nix nix-env -iA nixpkgs.gitAndTools.delta     3 Git Submodule 3.1 下载 submodule git submodule update --init --force --recursive --depth=1 3.</description>
     </item>
     
     <item>
@@ -21,8 +21,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/ipad/</guid>
-      <description>多任务 分屏 如何调整分屏浏览[1]：
- 要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.   目录  多任务  分屏  参考文献   </description>
+      <description>1 多任务 1.1 分屏 如何调整分屏浏览[1]：
+ 要让两个应用均匀分布在屏幕上，请将应用分隔条拖移到屏幕中央； 要将分屏浏览转为侧拉，请从应用顶部向下轻扫； 要关闭分屏浏览，请将应用分隔条从想要关闭的应用上方拖过。  参考文献 [1] APPLE. 在 iPad 上使用多任务处理功能[EB/OL]([日期不详]). https://support.apple.com/zh-cn/HT207582.   目录  1 多任务  1.1 分屏  参考文献   </description>
     </item>
     
     <item>
@@ -31,8 +31,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/</guid>
-      <description>窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     i3lockr https://github.com/owenthewizard/i3lockr
-手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.ssh/somekey&amp;quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.</description>
+      <description>1 窗口管理器 1.1 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     1.2 i3lockr https://github.com/owenthewizard/i3lockr
+2 手册 2.1 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     3 rsync 3.1 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 3.2 指定私钥文件[1] rsync -Pav -e &amp;quot;ssh -i $HOME/.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
-      <description>常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     Scoop 安装 iwr -useb get.scoop.sh | iex 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  Adobe Acrobat Pro DC 2019 请参考 https://www.</description>
+      <description>1 常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     1.1 Scoop 1.1.1 安装 iwr -useb get.scoop.sh | iex 1.1.2 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 1.2 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  1.</description>
     </item>
     
     <item>
@@ -50,20 +50,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Word/</guid>
-      <description>参考文献相关操作 合并连续引用 请参考 https://hzfans.github.io/2018/06/10/2018-6-10%20Word%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%A4%9A%E9%A1%B9%E5%BC%95%E7%94%A8/。
-对齐列表 在任一编号上右键单击 -&amp;gt; 调整列表缩进：
- 文本缩进位置可以调大一点，比如 0.9 厘米 点击更多：  编号之后，选制表符 选中制表符添加位置，写与文本缩进位置相同的值，本例中为 0.9 厘米   插入引用 请参考 https://jingyan.baidu.com/article/cd4c2979113a05756f6e6047.html。
-更新文档中的所有域[1] Ctrl + A -&amp;gt; F9。
-显示或隐藏文档中所有表格的网格线 请参考 https://support.office.com/zh-cn/article/%E6%98%BE%E7%A4%BA%E6%88%96%E9%9A%90%E8%97%8F%E6%96%87%E6%A1%A3%E4%B8%AD%E6%89%80%E6%9C%89%E8%A1%A8%E6%A0%BC%E7%9A%84%E7%BD%91%E6%A0%BC%E7%BA%BF-84780485-af90-49b1-82a0-682cd7fc9dad。
-输入上下标 请参考 https://jingyan.baidu.com/article/f3ad7d0fc4ca3209c3345b84.html。
-特殊符号 波浪号 请参考 https://zhuanlan.zhihu.com/p/76387600。
-正负号 请参考 https://zhidao.baidu.com/question/538973023.html。
-分页符 请参考 https://www.office68.com/word/8512.html。
-横向纸张 请参考 https://support.office.com/zh-cn/article/%E5%B0%86%E9%A1%B5%E9%9D%A2%E6%96%B9%E5%90%91%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%A8%AA%E5%90%91%E6%88%96%E7%BA%B5%E5%90%91-9b5ac1af-9998-4a37-962b-a82b689572a9。
-调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
-删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
-修改脚注上方的横线 请参考 https://zhidao.baidu.com/question/1895317289698826500.html。
-参考文献 [1] MICROSOFT. 更新文档中的所有域[EB/OL]([日期不详]). https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%96%B0%E5%9F%9F-7339a049-cb0d-4d5a-8679-97c20c643d4e#_updateallfields.   目录  参考文献相关操作  合并连续引用 对齐列表 插入引用 更新文档中的所有域[1]  显示或隐藏文档中所有表格的网格线 输入上下标 特殊符号  波浪号 正负号  分页符 横向纸张 调整页边距 删除页眉横线 修改脚注上方的横线 参考文献   </description>
+      <description>1 参考文献相关操作 1.1 合并连续引用 请参考 https://hzfans.github.io/2018/06/10/2018-6-10%20Word%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%A4%9A%E9%A1%B9%E5%BC%95%E7%94%A8/。
+1.2 对齐列表 在任一编号上右键单击 -&amp;gt; 调整列表缩进：
+ 文本缩进位置可以调大一点，比如 0.9 厘米 点击更多：  编号之后，选制表符 选中制表符添加位置，写与文本缩进位置相同的值，本例中为 0.9 厘米   1.3 插入引用 请参考 https://jingyan.baidu.com/article/cd4c2979113a05756f6e6047.html。
+1.4 更新文档中的所有域[1] Ctrl + A -&amp;gt; F9。
+2 显示或隐藏文档中所有表格的网格线 请参考 https://support.office.com/zh-cn/article/%E6%98%BE%E7%A4%BA%E6%88%96%E9%9A%90%E8%97%8F%E6%96%87%E6%A1%A3%E4%B8%AD%E6%89%80%E6%9C%89%E8%A1%A8%E6%A0%BC%E7%9A%84%E7%BD%91%E6%A0%BC%E7%BA%BF-84780485-af90-49b1-82a0-682cd7fc9dad。
+3 输入上下标 请参考 https://jingyan.baidu.com/article/f3ad7d0fc4ca3209c3345b84.html。
+4 特殊符号 4.1 波浪号 请参考 https://zhuanlan.zhihu.com/p/76387600。
+4.2 正负号 请参考 https://zhidao.baidu.com/question/538973023.html。
+5 分页符 请参考 https://www.office68.com/word/8512.html。
+6 横向纸张 请参考 https://support.office.com/zh-cn/article/%E5%B0%86%E9%A1%B5%E9%9D%A2%E6%96%B9%E5%90%91%E6%9B%B4%E6%94%B9%E4%B8%BA%E6%A8%AA%E5%90%91%E6%88%96%E7%BA%B5%E5%90%91-9b5ac1af-9998-4a37-962b-a82b689572a9。
+7 调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
+8 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
+9 修改脚注上方的横线 请参考 https://zhidao.</description>
     </item>
     
     <item>
@@ -72,9 +71,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/</guid>
-      <description>Pandoc 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 打印默认模板 pandoc --print-default-template=html 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
-Hugo 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
-MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot; id=&amp;quot;MathJax-script&amp;quot; async src=&amp;quot;https://cdn.</description>
+      <description>1 Pandoc 1.1 安装 nix-env -iA nixpkgs.haskellPackages.pandoc-citeproc nix-env -iA nixpkgs.haskellPackages.pandoc-crossref 1.2 打印默认模板 pandoc --print-default-template=html 2 静态网站生成器 静态网站生成器列表：https://www.staticgen.com/。
+2.1 Hugo 2.1.1 常用命令 # 查看程序版本 hugo version  # 创建网站 hugo new site quickstart  # 添加主题 git submodule add https://github.com/ribice/kiss.git themes/kiss  # 添加内容 hugo new posts/my-first-post.md 2.1.2 主题  文档：https://github.com/alex-shpak/hugo-book 博客：https://github.com/ribice/kiss  2.2 部署到 GitHub Pages 请参考 https://github.com/peaceiris/actions-gh-pages#getting-started。
+2.3 MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp;#39;, &amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;, &amp;#39;\\)&amp;#39;]]  },  svg: {  fontCache: &amp;#39;global&amp;#39;  } }; &amp;lt;/script&amp;gt; &amp;lt;scripttype=&amp;quot;text/javascript&amp;quot; id=&amp;quot;MathJax-script&amp;quot; async src=&amp;quot;https://cdn.</description>
     </item>
     
     <item>
@@ -83,8 +82,8 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/search/</guid>
-      <description>搜索命令 navi 安装 NAVI_VERSION=2.4.1 curl -LO &amp;quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&amp;quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 使用 Ctrl-g。
-搜索目录 zoxide 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 使用 zi 查找字符串 ripgrep 在 python 文件里搜索 rg -tpy foo 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU. How to use &#34;grep&#34; command to find text including subdirectories[EB/OL](2011–08–01). https://askubuntu.com/questions/55325/how-to-use-grep-command-to-find-text-including-subdirectories.   目录  搜索命令  navi  安装 使用   搜索目录  zoxide  安装 使用   查找字符串  ripgrep  在 python 文件里搜索 非正则匹配 在 pandoc 文件里搜索短线  grep[1]  参考文献   </description>
+      <description>1 搜索命令 1.1 navi 1.1.1 安装 NAVI_VERSION=2.4.1 curl -LO &amp;quot;https://github.com/denisidoro/navi/releases/download/v$NAVI_VERSION/navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz&amp;quot; tar -xzvf navi-v$NAVI_VERSION-x86_64-unknown-linux-musl.tar.gz mv -i navi ~/.local/bin/ 1.1.2 使用 Ctrl-g。
+2 搜索目录 2.1 zoxide 2.1.1 安装 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/install.sh | sh 2.1.2 使用 zi 3 查找字符串 3.1 ripgrep 3.1.1 在 python 文件里搜索 rg -tpy foo 3.1.2 非正则匹配 rg -F &amp;#39;C-^&amp;#39; 3.1.3 在 pandoc 文件里搜索短线 rg -g &amp;#39;*.pandoc&amp;#39; -- ---- 3.2 grep[1] grep -rl &amp;quot;string&amp;quot; /path 参考文献 [1] ASKUBUNTU.</description>
     </item>
     
     <item>
@@ -93,8 +92,8 @@ MathJax &amp;lt;script&amp;gt; MathJax = {  tex: {  inlineMath: [[&amp;#39;$&amp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/</guid>
-      <description>Zotero 安装 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
-Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    zotero-fullcreator  访问 https://github.</description>
+      <description>1 Zotero 1.1 安装 1.1.1 Zotero  从 https://www.zotero.org/download/ 下载 Zotero，安装到本地 打开编辑 -&amp;gt; 首选项 -&amp;gt; 同步：  登录 zotero 账户，用于同步元信息 取消勾选同步全文内容（Zotero 只有 300M 免费空间，容量不够） 取消勾选同步文献库中的附件 取消勾选使用 Zotero 云存储同步群组文献库中的附件   1.1.2 Zotero Connector 访问 https://www.zotero.org/download/，把 Zotero Connector 安装到浏览器。
+1.1.3 Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具 -&amp;gt; 插件 -&amp;gt; 齿轮图标 -&amp;gt; Install Add-on From File...，安装到 Zotero 重启 Zotero 打开编辑 -&amp;gt; 首选项 -&amp;gt; 高级 -&amp;gt; 文件和文件夹，把根目录改为坚果云的某个目录，将来 pdf 等文件会存到这里 打开工具 -&amp;gt; Zotfile Preferences...：  打开 General Settings：  把 Source Folder For Attaching New Files 改为浏览器的下载目录，将来使用 Attach New File 的时候会从这个目录移动最新的文件 把 Location of Files 改为 Custom Location: 坚果云的某个目录，注意需要与上面的根目录保持一致 选中 Use subfolder defined by，后面填入 /%c，表示会按条目左侧的分类创建文件夹存储文件  打开 Renaming Rules：  Format for all Item Type except Patents 写 {%a_}{%y_}{%t} Format for Patents 写 {%a_}{%y_}{%t}  打开 Advanced Settings：  Only work with the following filetypes 写 pdf,doc,docx,txt,rtf,djvu,caj,epub    1.</description>
     </item>
     
     <item>
@@ -103,16 +102,17 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/format/</guid>
-      <description>json2toml pip3 install --user remarshal 目录  json2toml   </description>
+      <description>1 json2toml pip3 install --user remarshal 目录  1 json2toml   </description>
     </item>
     
     <item>
       <title>浏览器</title>
-      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</link>
+      <link>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/</guid>
-      <description>Firefox Tridactyl 设置 主题 : set theme dark 搜索 : unbind &amp;lt;C-f&amp;gt; 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  Firefox  Tridactyl  设置 快捷键     </description>
+      <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+      <description>1 Firefox 1.1 搜索标签页 在查询词前面或者后面输入 %。
+1.2 Tridactyl 1.2.1 设置 1.2.1.1 主题 : set theme dark 1.2.1.2 搜索 : unbind &amp;lt;C-f&amp;gt; 1.2.2 快捷键  表 1: Tridactyl 快捷键  功能 快捷键    标签页：关闭 d  标签页：恢复上一个 u  标签页：跳转 b  标签页：创建 t     目录  1 Firefox  1.1 搜索标签页 1.2 Tridactyl  1.2.1 设置 1.2.2 快捷键     </description>
     </item>
     
     <item>
@@ -121,7 +121,7 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
-      <description>Visual Studio Code 插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.code-spell-checker 拼写检查   stkb.rewrap 断行   llvm-vs-code-extensions.vscode-clangd C、C++   ms-vscode.cmake-tools cmake     快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    Vim 包管理器 安装 curl -fLo ~/.</description>
+      <description>1 Visual Studio Code 1.1 插件  Visual Studio Code 插件  插件 ID 用途 依赖    xaver.clang-format 格式化   esbenp.prettier-vscode 格式化   fcrespo82.markdown-table-formatter 表格格式化   cheshirekow.cmake-format cmake 格式化 pip install cmake_format  streetsidesoftware.code-spell-checker 拼写检查   stkb.rewrap 断行   llvm-vs-code-extensions.vscode-clangd C、C++   ms-vscode.cmake-tools cmake     1.2 快捷键  Visual Studio Code 快捷键  快捷键 含义    Ctrl + P Go to File…  Ctrl + Shift + P Show All Commands  Alt + Q 断行    2 Vim 2.</description>
     </item>
     
     <item>
@@ -130,8 +130,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
-      <description>全屏 选中 Auto-resize Guest Display。
-目录  全屏   </description>
+      <description>1 全屏 选中 Auto-resize Guest Display。
+目录  1 全屏   </description>
     </item>
     
     <item>
@@ -140,8 +140,8 @@ Zotfile  插件在坚果云里的小宝贝/zotfile-5.1.0.kai-fx.xpi 打开工具
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/project-management/</guid>
-      <description>confluence 新建子页面 创建页面 -&amp;gt; 创建页面。
-目录  confluence  新建子页面    </description>
+      <description>1 confluence 1.1 新建子页面 创建页面 -&amp;gt; 创建页面。
+目录  1 confluence  1.1 新建子页面    </description>
     </item>
     
   </channel>

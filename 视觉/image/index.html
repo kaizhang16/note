@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake .">
+<meta name="description" content="1 文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     2 ImageMagick 2.1 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 3 压缩 3.1 JPG 3.1.1 jpegoptim 3.1.1.1 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     4 colmap 4.1 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake .">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="图像" />
-<meta property="og:description" content="文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     ImageMagick 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 压缩 JPG jpegoptim 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     colmap 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake ." />
+<meta property="og:description" content="1 文件格式  表 1: 图像文件格式  图像格式 无损？    PNG ✅  JPG ❌     2 ImageMagick 2.1 裁剪中间部分 convert a.png -gravity center -crop 16384x16384&#43;0&#43;0 b.png 3 压缩 3.1 JPG 3.1.1 jpegoptim 3.1.1.1 安装  表 2: jpegoptim 安装命令  操作系统 命令    Arch Linux sudo pacman -S jpegoptim     4 colmap 4.1 安装[1] git clone https://github.com/colmap/colmap.git cd colmap git checkout dev mkdir build cd build CC=/usr/bin/gcc CXX=/usr/bin/g&#43;&#43; cmake ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E8%A7%86%E8%A7%89/image/" /><meta property="article:section" content="视觉" />
 
@@ -14,8 +14,8 @@
 <title>图像 | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -671,7 +671,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -934,7 +934,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1131,7 +1131,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="文件格式">文件格式</h1>
+  <article class="markdown"><h1 data-number="1" id="文件格式"><span class="header-section-number">1</span> 文件格式</h1>
 <div id="tbl:imageFileFormats">
 <table>
 <caption>表 1: 图像文件格式</caption>
@@ -1153,13 +1153,13 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="imagemagick">ImageMagick</h1>
-<h2 id="裁剪中间部分">裁剪中间部分</h2>
+<h1 data-number="2" id="imagemagick"><span class="header-section-number">2</span> ImageMagick</h1>
+<h2 data-number="2.1" id="裁剪中间部分"><span class="header-section-number">2.1</span> 裁剪中间部分</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">convert</span> a.png <span class="at">-gravity</span> center <span class="at">-crop</span> 16384x16384+0+0 b.png</span></code></pre></div>
-<h1 id="压缩">压缩</h1>
-<h2 id="jpg">JPG</h2>
-<h3 id="jpegoptim">jpegoptim</h3>
-<h4 id="安装">安装</h4>
+<h1 data-number="3" id="压缩"><span class="header-section-number">3</span> 压缩</h1>
+<h2 data-number="3.1" id="jpg"><span class="header-section-number">3.1</span> JPG</h2>
+<h3 data-number="3.1.1" id="jpegoptim"><span class="header-section-number">3.1.1</span> jpegoptim</h3>
+<h4 data-number="3.1.1.1" id="安装"><span class="header-section-number">3.1.1.1</span> 安装</h4>
 <div id="tbl:jpegoptimInstall">
 <table>
 <caption>表 2: jpegoptim 安装命令</caption>
@@ -1177,8 +1177,8 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="colmap">colmap</h1>
-<h2 id="安装colmap_installation">安装<span class="citation" data-cites="colmap_installation"><sup>[<a href="#ref-colmap_installation" role="doc-biblioref">1</a>]</sup></span></h2>
+<h1 data-number="4" id="colmap"><span class="header-section-number">4</span> colmap</h1>
+<h2 data-number="4.1" id="安装colmap_installation"><span class="header-section-number">4.1</span> 安装<span class="citation" data-cites="colmap_installation"><sup>[<a href="#ref-colmap_installation" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/colmap/colmap.git</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> colmap</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout dev</span>
@@ -1196,21 +1196,21 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#文件格式">文件格式</a></li>
-  <li><a href="#imagemagick">ImageMagick</a>
+  <li><a href="#文件格式"><span class="toc-section-number">1</span> 文件格式</a></li>
+  <li><a href="#imagemagick"><span class="toc-section-number">2</span> ImageMagick</a>
   <ul>
-  <li><a href="#裁剪中间部分">裁剪中间部分</a></li>
+  <li><a href="#裁剪中间部分"><span class="toc-section-number">2.1</span> 裁剪中间部分</a></li>
   </ul></li>
-  <li><a href="#压缩">压缩</a>
+  <li><a href="#压缩"><span class="toc-section-number">3</span> 压缩</a>
   <ul>
-  <li><a href="#jpg">JPG</a>
+  <li><a href="#jpg"><span class="toc-section-number">3.1</span> JPG</a>
   <ul>
-  <li><a href="#jpegoptim">jpegoptim</a></li>
+  <li><a href="#jpegoptim"><span class="toc-section-number">3.1.1</span> jpegoptim</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#colmap">colmap</a>
+  <li><a href="#colmap"><span class="toc-section-number">4</span> colmap</a>
   <ul>
-  <li><a href="#安装colmap_installation">安装<span class="citation" data-cites="colmap_installation"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#安装colmap_installation"><span class="toc-section-number">4.1</span> 安装<span class="citation" data-cites="colmap_installation"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
   </ul>
 </nav>

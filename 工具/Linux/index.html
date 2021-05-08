@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     i3lockr https://github.com/owenthewizard/i3lockr
-手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github.">
+<meta name="description" content="1 窗口管理器 1.1 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     1.2 i3lockr https://github.com/owenthewizard/i3lockr
+2 手册 2.1 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     3 rsync 3.1 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 3.2 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Linux" />
-<meta property="og:description" content="窗口管理器 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     i3lockr https://github.com/owenthewizard/i3lockr
-手册 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     rsync 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/.ssh/somekey&quot; username@hostname:/from/dir/ /to/dir/ 终端 tmux # 列出会话 tmux ls  # 创建新会话 tmux new -s myname  # 连接会话 tmux a -t myname 硬盘  https://github." />
+<meta property="og:description" content="1 窗口管理器 1.1 i3  表 1: i3 常见命令  命令 功能    i3-msg exit 登出     1.2 i3lockr https://github.com/owenthewizard/i3lockr
+2 手册 2.1 tldr  表 2: tldr 安装命令  操作系统 命令    Arch Linux sudo pacman -S tldr  其他 yarn global add tldr     3 rsync 3.1 带进度条的复制 rsync --info=progress2 -rh ${source} ${dest} 3.2 指定私钥文件[1] rsync -Pav -e &quot;ssh -i $HOME/." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Linux/" /><meta property="article:section" content="工具" />
 
@@ -16,8 +16,8 @@
 <title>Linux | 凯的笔记</title>
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/note/book.min.af8567210752be3341e9f7269720e30c8b3c1b1863bfbc3b7fbd1826b39b180a.css" integrity="sha256-r4VnIQdSvjNB6fcmlyDjDIs8Gxhjv7w7f70YJrObGAo=">
-<script defer src="/note/cn.search.min.34b1a7666138c0124088f80d67b97fabf65aa5a5b5cfb37fb769d2d5777c0955.js" integrity="sha256-NLGnZmE4wBJAiPgNZ7l/q/ZapaW1z7N/t2nS1Xd8CVU="></script>
+<link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
+<script defer src="/note/cn.search.min.05be900f8a5c23e1cfdaf2727ba026a910162fb67dfe81bdef8ac332fc4aecf5.js" integrity="sha256-Bb6QD4pcI&#43;HP2vJye6AmqRAWL7Z9/oG974rDMvxK7PU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -673,7 +673,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/browser/" class="">浏览器</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="">浏览器</a>
   
 
         </li>
@@ -936,7 +936,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/python/" class="">Python</a>
+    <a href="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" class="">Python</a>
   
 
         </li>
@@ -1133,8 +1133,8 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="窗口管理器">窗口管理器</h1>
-<h2 id="i3">i3</h2>
+  <article class="markdown"><h1 data-number="1" id="窗口管理器"><span class="header-section-number">1</span> 窗口管理器</h1>
+<h2 data-number="1.1" id="i3"><span class="header-section-number">1.1</span> i3</h2>
 <div id="tbl:i3_common_command">
 <table>
 <caption>表 1: i3 常见命令</caption>
@@ -1152,10 +1152,10 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h2 id="i3lockr">i3lockr</h2>
+<h2 data-number="1.2" id="i3lockr"><span class="header-section-number">1.2</span> i3lockr</h2>
 <p><a href="https://github.com/owenthewizard/i3lockr" class="uri">https://github.com/owenthewizard/i3lockr</a></p>
-<h1 id="手册">手册</h1>
-<h2 id="tldr">tldr</h2>
+<h1 data-number="2" id="手册"><span class="header-section-number">2</span> 手册</h1>
+<h2 data-number="2.1" id="tldr"><span class="header-section-number">2.1</span> tldr</h2>
 <div id="tbl:tldrInstall">
 <table>
 <caption>表 2: tldr 安装命令</caption>
@@ -1177,13 +1177,13 @@ https://github.com/alex-shpak/hugo-book
 </tbody>
 </table>
 </div>
-<h1 id="rsync">rsync</h1>
-<h2 id="带进度条的复制">带进度条的复制</h2>
+<h1 data-number="3" id="rsync"><span class="header-section-number">3</span> rsync</h1>
+<h2 data-number="3.1" id="带进度条的复制"><span class="header-section-number">3.1</span> 带进度条的复制</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">--info</span><span class="op">=</span>progress2 <span class="at">-rh</span> <span class="va">${source}</span> <span class="va">${dest}</span></span></code></pre></div>
-<h2 id="指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<a href="#ref-rsyncPrivateKey" role="doc-biblioref">1</a>]</sup></span></h2>
+<h2 data-number="3.2" id="指定私钥文件rsyncprivatekey"><span class="header-section-number">3.2</span> 指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<a href="#ref-rsyncPrivateKey" role="doc-biblioref">1</a>]</sup></span></h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-Pav</span> <span class="at">-e</span> <span class="st">&quot;ssh -i </span><span class="va">$HOME</span><span class="st">/.ssh/somekey&quot;</span> username@hostname:/from/dir/ /to/dir/</span></code></pre></div>
-<h1 id="终端">终端</h1>
-<h2 id="tmux">tmux</h2>
+<h1 data-number="4" id="终端"><span class="header-section-number">4</span> 终端</h1>
+<h2 data-number="4.1" id="tmux"><span class="header-section-number">4.1</span> tmux</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 列出会话</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">tmux</span> ls</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1192,18 +1192,18 @@ https://github.com/alex-shpak/hugo-book
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 连接会话</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ex">tmux</span> a <span class="at">-t</span> myname</span></code></pre></div>
-<h1 id="硬盘">硬盘</h1>
+<h1 data-number="5" id="硬盘"><span class="header-section-number">5</span> 硬盘</h1>
 <ul>
 <li><a href="https://github.com/bootandy/dust" class="uri">https://github.com/bootandy/dust</a></li>
 </ul>
-<h2 id="dudu">du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">2</a>]</sup></span></h2>
+<h2 data-number="5.1" id="dudu"><span class="header-section-number">5.1</span> du<span class="citation" data-cites="du"><sup>[<a href="#ref-du" role="doc-biblioref">2</a>]</sup></span></h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">du</span> <span class="at">-sh</span> /a/<span class="pp">*</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-rh</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-5</span></span></code></pre></div>
-<h1 id="jq">jq</h1>
-<h2 id="过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">3</a>]</sup></span></h2>
+<h1 data-number="6" id="jq"><span class="header-section-number">6</span> jq</h1>
+<h2 data-number="6.1" id="过滤jqcookbook"><span class="header-section-number">6.1</span> 过滤<span class="citation" data-cites="jqCookbook"><sup>[<a href="#ref-jqCookbook" role="doc-biblioref">3</a>]</sup></span></h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">select</span><span class="kw">(</span><span class="ex">.name</span> == <span class="st">&quot;TAG&quot;</span><span class="kw">)</span></span></code></pre></div>
-<h2 id="print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">4</a>]</sup></span></h2>
+<h2 data-number="6.2" id="print-strings-without-quotesjqnoquotes"><span class="header-section-number">6.2</span> Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<a href="#ref-jqNoQuotes" role="doc-biblioref">4</a>]</sup></span></h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jq</span> <span class="at">--raw-output</span></span></code></pre></div>
-<h1 id="cpu">CPU</h1>
+<h1 data-number="7" id="cpu"><span class="header-section-number">7</span> CPU</h1>
 <div class="sourceCode" id="cb7"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /proc/cpuinfo</span></code></pre></div>
 <h1 class="unnumbered" id="参考文献">参考文献</h1>
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -1224,34 +1224,34 @@ https://github.com/alex-shpak/hugo-book
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
   <ul>
-  <li><a href="#窗口管理器">窗口管理器</a>
+  <li><a href="#窗口管理器"><span class="toc-section-number">1</span> 窗口管理器</a>
   <ul>
-  <li><a href="#i3">i3</a></li>
-  <li><a href="#i3lockr">i3lockr</a></li>
+  <li><a href="#i3"><span class="toc-section-number">1.1</span> i3</a></li>
+  <li><a href="#i3lockr"><span class="toc-section-number">1.2</span> i3lockr</a></li>
   </ul></li>
-  <li><a href="#手册">手册</a>
+  <li><a href="#手册"><span class="toc-section-number">2</span> 手册</a>
   <ul>
-  <li><a href="#tldr">tldr</a></li>
+  <li><a href="#tldr"><span class="toc-section-number">2.1</span> tldr</a></li>
   </ul></li>
-  <li><a href="#rsync">rsync</a>
+  <li><a href="#rsync"><span class="toc-section-number">3</span> rsync</a>
   <ul>
-  <li><a href="#带进度条的复制">带进度条的复制</a></li>
-  <li><a href="#指定私钥文件rsyncprivatekey">指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<span>1</span>]</sup></span></a></li>
+  <li><a href="#带进度条的复制"><span class="toc-section-number">3.1</span> 带进度条的复制</a></li>
+  <li><a href="#指定私钥文件rsyncprivatekey"><span class="toc-section-number">3.2</span> 指定私钥文件<span class="citation" data-cites="rsyncPrivateKey"><sup>[<span>1</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#终端">终端</a>
+  <li><a href="#终端"><span class="toc-section-number">4</span> 终端</a>
   <ul>
-  <li><a href="#tmux">tmux</a></li>
+  <li><a href="#tmux"><span class="toc-section-number">4.1</span> tmux</a></li>
   </ul></li>
-  <li><a href="#硬盘">硬盘</a>
+  <li><a href="#硬盘"><span class="toc-section-number">5</span> 硬盘</a>
   <ul>
-  <li><a href="#dudu">du<span class="citation" data-cites="du"><sup>[<span>2</span>]</sup></span></a></li>
+  <li><a href="#dudu"><span class="toc-section-number">5.1</span> du<span class="citation" data-cites="du"><sup>[<span>2</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#jq">jq</a>
+  <li><a href="#jq"><span class="toc-section-number">6</span> jq</a>
   <ul>
-  <li><a href="#过滤jqcookbook">过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>3</span>]</sup></span></a></li>
-  <li><a href="#print-strings-without-quotesjqnoquotes">Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>4</span>]</sup></span></a></li>
+  <li><a href="#过滤jqcookbook"><span class="toc-section-number">6.1</span> 过滤<span class="citation" data-cites="jqCookbook"><sup>[<span>3</span>]</sup></span></a></li>
+  <li><a href="#print-strings-without-quotesjqnoquotes"><span class="toc-section-number">6.2</span> Print strings without quotes<span class="citation" data-cites="jqNoQuotes"><sup>[<span>4</span>]</sup></span></a></li>
   </ul></li>
-  <li><a href="#cpu">CPU</a></li>
+  <li><a href="#cpu"><span class="toc-section-number">7</span> CPU</a></li>
   <li><a href="#参考文献">参考文献</a></li>
   </ul>
 </nav>
