@@ -3,6 +3,14 @@ title: "Linux"
 markup: pandoc
 ---
 
+# 目录结构
+
+```sh
+/
+├── media   # 系统挂载 removable media 的目录
+└── mnt     # 用户临时挂载点
+```
+
 # 发行版
 
 ## Arch Linux
