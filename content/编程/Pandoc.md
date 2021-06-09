@@ -1,6 +1,14 @@
 ---
 title: "Pandoc"
+markup: pandoc
 ---
+
+# 开发环境
+
+```sh
+pip install pandocfilters  # pandoc-minted
+pip install Pygments  # gpoore/minted
+```
 
 # 引用
 
