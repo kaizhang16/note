@@ -182,11 +182,11 @@ Output:
     
     <item>
       <title>Pandoc</title>
-      <link>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/</link>
+      <link>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Pandoc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/pandoc/</guid>
-      <description>1 引用  在方括号里 分号分隔  [@smith04; @doe99] 2 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&amp;#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items. This paragraph won&amp;#39;t be part of the note, because it isn&amp;#39;t indented.</description>
+      <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Pandoc/</guid>
+      <description>1 开发环境 pip install pandocfilters # pandoc-minted pip install Pygments # gpoore/minted 2 引用  在方括号里 分号分隔  [@smith04; @doe99] 3 脚注 Here is a footnote reference,[^1] and another.[^longnote] [^1]: Here is the footnote. [^longnote]: Here&amp;#39;s one with multiple blocks. Subsequent paragraphs are indented to show that they belong to the previous footnote. { some.code } The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.</description>
     </item>
     
     <item>
