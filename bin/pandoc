@@ -4,17 +4,12 @@
   --from=markdown+emoji+east_asian_line_breaks \
   --to=html \
   --mathjax \
-  --filter=pandoc-crossref \
-  --citeproc \
-  --bibliography=参考文献.bib \
-  --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
-  --metadata=link-citations:true \
   --table-of-contents \
   --number-sections \
+  --filter=pandoc-crossref \
+  --citeproc \
+  --bibliography=data/ref.bib \
+  --csl=china-national-standard-gb-t-7714-2015-numeric.csl \
   --template=layouts/partials/pandoc.html.template \
-  --quiet \
-  --metadata=toc-title:目录 \
-  --metadata=tableTitle:表 \
-  --metadata=figureTitle:图 \
-  --metadata=figPrefix:图. \
-  --metadata=eqnPrefix:式.
+  --metadata-file=data/metadata.yaml \
+  --quiet
