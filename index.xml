@@ -197,7 +197,7 @@ Output:
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/</guid>
       <description>1 安装 从 https://github.com/PowerShell/PowerShell/releases 下载 x64.msi 安装。
 2 配置 路径为 C:&amp;lt;user&amp;gt;.ps1。
-3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 目录  1 安装 2 配置 3 语法  3.1 别名 3.2 代理    </description>
+3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 查询命令的路径 (Get-Command python).Path 目录  1 安装 2 配置 3 语法  3.1 别名 3.2 代理 3.3 查询命令的路径    </description>
     </item>
     
     <item>
@@ -277,7 +277,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
-      <description>1 常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     1.1 Scoop 1.1.1 安装 iwr -useb get.scoop.sh | iex 1.1.2 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 1.2 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  1.</description>
+      <description>1 快捷键  表 1: Windows 快捷键  快捷键 功能    Alt + Tab 切换应用     2 常用软件  表 2: Windows 常用软件  软件名 功能    7-zip 压缩  Hugo 静态网站  Pandoc 格式转换  Scoop 软件管理  搜狗输入法 输入中文  Total Commander 文件管理     2.1 Scoop 2.1.1 安装 iwr -useb get.scoop.sh | iex 2.1.2 设置代理 scoop config proxy 127.</description>
     </item>
     
     <item>
@@ -299,6 +299,16 @@ Output:
 7 调整页边距 请参考 https://support.microsoft.com/zh-cn/office/%E5%9C%A8-word-%E4%B8%AD%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E9%A1%B5%E8%BE%B9%E8%B7%9D-72fa6264-7df4-48f3-b805-2ffb6f32bd54。
 8 删除页眉横线 请参考 https://jingyan.baidu.com/article/f79b7cb3bb3c629144023e05.html。
 9 修改脚注上方的横线 请参考 https://zhidao.</description>
+    </item>
+    
+    <item>
+      <title>YAML</title>
+      <link>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/YAML/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/YAML/</guid>
+      <description>1 文件后缀[1] .yaml
+参考文献 [1] YAML. FAQ[EB/OL]([日期不详]). https://yaml.org/faq.html.   目录  1 文件后缀[1] 参考文献   </description>
     </item>
     
     <item>

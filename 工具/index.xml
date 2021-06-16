@@ -41,7 +41,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
-      <description>1 常用软件  表 1: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  Total Commander 文件管理     1.1 Scoop 1.1.1 安装 iwr -useb get.scoop.sh | iex 1.1.2 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 1.2 Total Commander  配置 -&amp;gt; 深色模式 配置 -&amp;gt; 选项 -&amp;gt; 显示 -&amp;gt; 制表位 -&amp;gt; 文件大小显示 -&amp;gt; 动态(x KB/MB/GB) 配置 -&amp;gt; 选项 -&amp;gt; 操作方式 -&amp;gt; 鼠标选择方式 -&amp;gt; 通过左键选择  1.</description>
+      <description>1 快捷键  表 1: Windows 快捷键  快捷键 功能    Alt + Tab 切换应用     2 常用软件  表 2: Windows 常用软件  软件名 功能    7-zip 压缩  Hugo 静态网站  Pandoc 格式转换  Scoop 软件管理  搜狗输入法 输入中文  Total Commander 文件管理     2.1 Scoop 2.1.1 安装 iwr -useb get.scoop.sh | iex 2.1.2 设置代理 scoop config proxy 127.</description>
     </item>
     
     <item>
