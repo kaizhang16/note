@@ -1,5 +1,6 @@
 ---
 title: "PowerShell"
+markup: pandoc
 ---
 
 # 安装
@@ -24,4 +25,10 @@ Set-Alias -Name br -Value broot
 netsh winhttp show proxy  # 显示当前代理
 netsh winhttp set proxy "127.0.0.1:3128"  # 设置代理
 netsh winhttp reset proxy  # 重置代理
+```
+
+## 查询命令的路径
+
+```ps1
+(Get-Command python).Path
 ```

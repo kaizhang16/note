@@ -1,13 +1,25 @@
 ---
 title: "Windows"
+markup: pandoc
 ---
+
+# 快捷键
+
+| 快捷键        | 功能     |
+|---------------|----------|
+| `Alt` + `Tab` | 切换应用 |
+
+: Windows 快捷键 {#tbl:windows_shortcut}
 
 # 常用软件
 
 | 软件名          | 功能     |
 |-----------------|----------|
 | 7-zip           | 压缩     |
+| Hugo            | 静态网站 |
+| Pandoc          | 格式转换 |
 | Scoop           | 软件管理 |
+| 搜狗输入法      | 输入中文 |
 | Total Commander | 文件管理 |
 
 : Windows 常用软件 {#tbl:windows_common_software}
@@ -26,6 +38,17 @@ iwr -useb get.scoop.sh | iex
 scoop config proxy 127.0.0.1:3128
 scoop config proxy none  # 绕过系统代理
 ```
+
+### 安装软件
+
+```ps1
+hugo install hugo-extended
+hugo install pandoc
+```
+
+## 搜狗输入法
+
+- 皮肤：【先生】我是真的熊猫哦
 
 ## Total Commander
 
