@@ -9,7 +9,7 @@ markup: pandoc
 
 # 配置
 
-路径为 C:\Users\<user>\Documents\PowerShell\profile.ps1。
+路径为 `C:\Users\<user>\Documents\PowerShell\profile.ps1`。
 
 # 语法
 
@@ -27,8 +27,29 @@ netsh winhttp set proxy "127.0.0.1:3128"  # 设置代理
 netsh winhttp reset proxy  # 重置代理
 ```
 
+## 删除项目
+
+```ps1
+Remove-Item -Recurse -Force <some_dir>
+```
+
 ## 查询命令的路径
 
 ```ps1
 (Get-Command python).Path
+```
+
+# bat
+
+## 关闭回显
+
+```bat
+@ECHO OFF
+```
+
+## 多行命令
+
+```bat
+copy file1.txt ^
+    file2.txt
 ```

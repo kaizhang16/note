@@ -16,8 +16,6 @@ markup: pandoc
 | 软件名          | 功能     |
 |-----------------|----------|
 | 7-zip           | 压缩     |
-| Hugo            | 静态网站 |
-| Pandoc          | 格式转换 |
 | Scoop           | 软件管理 |
 | 搜狗输入法      | 输入中文 |
 | Total Commander | 文件管理 |
@@ -42,8 +40,13 @@ scoop config proxy none  # 绕过系统代理
 ### 安装软件
 
 ```ps1
-hugo install hugo-extended
-hugo install pandoc
+scoop install broot
+scoop install fd
+scoop install hugo-extended
+scoop install pandoc
+scoop install ripgrep
+scoop install starship
+scoop install <app>@<version>
 ```
 
 ## 搜狗输入法
