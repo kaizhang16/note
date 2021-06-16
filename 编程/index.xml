@@ -110,8 +110,8 @@ let arr1 = [1, 2, 3, 4];  arr1.map(x =&amp;gt; [x * 2]);  // [[2], [4], [6], [8]
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/</guid>
       <description>1 安装 从 https://github.com/PowerShell/PowerShell/releases 下载 x64.msi 安装。
-2 配置 路径为 C:&amp;lt;user&amp;gt;.ps1。
-3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 查询命令的路径 (Get-Command python).Path 目录  1 安装 2 配置 3 语法  3.1 别名 3.2 代理 3.3 查询命令的路径    </description>
+2 配置 路径为 C:\Users\&amp;lt;user&amp;gt;\Documents\PowerShell\profile.ps1。
+3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &amp;quot;127.0.0.1:3128&amp;quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 删除项目 Remove-Item -Recurse -Force &amp;lt;some_dir&amp;gt; 3.4 查询命令的路径 (Get-Command python).Path 4 bat 4.1 关闭回显 @ECHO OFF 4.2 多行命令 copy file1.txt ^ file2.txt 目录  1 安装 2 配置 3 语法  3.</description>
     </item>
     
     <item>

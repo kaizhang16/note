@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="1 安装 从 https://github.com/PowerShell/PowerShell/releases 下载 x64.msi 安装。
-2 配置 路径为 C:&lt;user&gt;.ps1。
-3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &quot;127.0.0.1:3128&quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 查询命令的路径 (Get-Command python).Path 目录  1 安装 2 配置 3 语法  3.1 别名 3.2 代理 3.3 查询命令的路径    ">
+2 配置 路径为 C:\Users\&lt;user&gt;\Documents\PowerShell\profile.ps1。
+3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &quot;127.0.0.1:3128&quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 删除项目 Remove-Item -Recurse -Force &lt;some_dir&gt; 3.4 查询命令的路径 (Get-Command python).Path 4 bat 4.1 关闭回显 @ECHO OFF 4.2 多行命令 copy file1.txt ^ file2.txt 目录  1 安装 2 配置 3 语法  3.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="PowerShell" />
 <meta property="og:description" content="1 安装 从 https://github.com/PowerShell/PowerShell/releases 下载 x64.msi 安装。
-2 配置 路径为 C:&lt;user&gt;.ps1。
-3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &quot;127.0.0.1:3128&quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 查询命令的路径 (Get-Command python).Path 目录  1 安装 2 配置 3 语法  3.1 别名 3.2 代理 3.3 查询命令的路径    " />
+2 配置 路径为 C:\Users\&lt;user&gt;\Documents\PowerShell\profile.ps1。
+3 语法 3.1 别名 Set-Alias -Name br -Value broot 3.2 代理 netsh winhttp show proxy # 显示当前代理 netsh winhttp set proxy &quot;127.0.0.1:3128&quot; # 设置代理 netsh winhttp reset proxy # 重置代理 3.3 删除项目 Remove-Item -Recurse -Force &lt;some_dir&gt; 3.4 查询命令的路径 (Get-Command python).Path 4 bat 4.1 关闭回显 @ECHO OFF 4.2 多行命令 copy file1.txt ^ file2.txt 目录  1 安装 2 配置 3 语法  3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/PowerShell/" /><meta property="article:section" content="编程" />
 
@@ -19,7 +19,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
-<script defer src="/note/cn.search.min.61b8ec1724234a02bac27e20d622340703b74d570002a653f0fdb04c3e5631ca.js" integrity="sha256-YbjsFyQjSgK6wn4g1iI0BwO3TVcAAqZT8P2wTD5WMco="></script>
+<script defer src="/note/cn.search.min.5d40e9b5d7c4cea84be2561b275cf4f99d5587258bede8789afef7b0d6916218.js" integrity="sha256-XUDptdfEzqhL4lYbJ1z0&#43;Z1VhyWL7eh4mv73sNaRYhg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -623,7 +623,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/writing/" class="">写作</a>
+    <a href="https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/%E5%86%99%E4%BD%9C/" class="">写作</a>
   
 
         </li>
@@ -1151,7 +1151,7 @@ https://github.com/alex-shpak/hugo-book
   <article class="markdown"><h1 data-number="1" id="安装"><span class="header-section-number">1</span> 安装</h1>
 <p>从 <a href="https://github.com/PowerShell/PowerShell/releases" class="uri">https://github.com/PowerShell/PowerShell/releases</a> 下载 x64.msi 安装。</p>
 <h1 data-number="2" id="配置"><span class="header-section-number">2</span> 配置</h1>
-<p>路径为 C:&lt;user&gt;.ps1。</p>
+<p>路径为 <code>C:\Users\&lt;user&gt;\Documents\PowerShell\profile.ps1</code>。</p>
 <h1 data-number="3" id="语法"><span class="header-section-number">3</span> 语法</h1>
 <h2 data-number="3.1" id="别名"><span class="header-section-number">3.1</span> 别名</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Set-Alias</span> <span class="op">-</span>Name br <span class="op">-</span>Value broot</span></code></pre></div>
@@ -1159,8 +1159,16 @@ https://github.com/alex-shpak/hugo-book
 <div class="sourceCode" id="cb2"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>netsh winhttp show proxy  <span class="co"># 显示当前代理</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>netsh winhttp <span class="fu">set</span> proxy <span class="st">&quot;127.0.0.1:3128&quot;</span>  <span class="co"># 设置代理</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>netsh winhttp reset proxy  <span class="co"># 重置代理</span></span></code></pre></div>
-<h2 data-number="3.3" id="查询命令的路径"><span class="header-section-number">3.3</span> 查询命令的路径</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="fu">Get-Command</span> python<span class="op">).</span><span class="fu">Path</span></span></code></pre></div>
+<h2 data-number="3.3" id="删除项目"><span class="header-section-number">3.3</span> 删除项目</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Remove-Item</span> <span class="op">-</span>Recurse <span class="op">-</span>Force <span class="op">&lt;</span>some_dir<span class="op">&gt;</span></span></code></pre></div>
+<h2 data-number="3.4" id="查询命令的路径"><span class="header-section-number">3.4</span> 查询命令的路径</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode ps1"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="fu">Get-Command</span> python<span class="op">).</span><span class="fu">Path</span></span></code></pre></div>
+<h1 data-number="4" id="bat"><span class="header-section-number">4</span> bat</h1>
+<h2 data-number="4.1" id="关闭回显"><span class="header-section-number">4.1</span> 关闭回显</h2>
+<pre class="bat"><code>@ECHO OFF</code></pre>
+<h2 data-number="4.2" id="多行命令"><span class="header-section-number">4.2</span> 多行命令</h2>
+<pre class="bat"><code>copy file1.txt ^
+    file2.txt</code></pre>
 
 <nav id="TableOfContents" role="doc-toc">
   <h2 id="toc-title">目录</h2>
@@ -1171,7 +1179,13 @@ https://github.com/alex-shpak/hugo-book
   <ul>
   <li><a href="#别名"><span class="toc-section-number">3.1</span> 别名</a></li>
   <li><a href="#代理"><span class="toc-section-number">3.2</span> 代理</a></li>
-  <li><a href="#查询命令的路径"><span class="toc-section-number">3.3</span> 查询命令的路径</a></li>
+  <li><a href="#删除项目"><span class="toc-section-number">3.3</span> 删除项目</a></li>
+  <li><a href="#查询命令的路径"><span class="toc-section-number">3.4</span> 查询命令的路径</a></li>
+  </ul></li>
+  <li><a href="#bat"><span class="toc-section-number">4</span> bat</a>
+  <ul>
+  <li><a href="#关闭回显"><span class="toc-section-number">4.1</span> 关闭回显</a></li>
+  <li><a href="#多行命令"><span class="toc-section-number">4.2</span> 多行命令</a></li>
   </ul></li>
   </ul>
 </nav>
