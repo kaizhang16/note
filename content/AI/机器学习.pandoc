@@ -84,9 +84,9 @@ $$ \FPR = \frac{\FP}{\FP + \TN}$$ {#eq:fpr}
 
 #### ROC AUC
 
-![ROC AUC 示意图]({{< static_ref "fig/AI/机器学习/roc_auc.svg" >}}){#fig:roc_auc width=80%}
+ROC AUC 表示随机正样本比随机负样本评分高的概率。[@statistics_roc_auc_meaning]
 
-ROC AUC 表示随机正类别（绿色）样本位于随机负类别（红色）样本右侧的概率。[@ml_roc_auc]
+![ROC AUC 的物理含义]({{< static_ref "fig/AI/机器学习/roc_auc_meaning.png" >}}){#fig:roc_auc_meaning width=80%}
 
 #### PR AUC
 

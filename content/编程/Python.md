@@ -17,10 +17,10 @@ markup: pandoc
 conda init fish
 ```
 
-## 格式化
+## 常用库
 
 ```sh
-pip install black isort
+pip install black isort matplotlib
 ```
 
 ## JupyterLab
