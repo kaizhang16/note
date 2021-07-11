@@ -207,7 +207,7 @@ Output:
       
       <guid>https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/</guid>
       <description>1 开发环境 1.1 miniconda 1.1.1 安装 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
-1.1.2 初始化 conda init fish 1.2 格式化 pip install black isort 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2.</description>
+1.1.2 初始化 conda init fish 1.2 常用库 pip install black isort matplotlib 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2.</description>
     </item>
     
     <item>
@@ -277,7 +277,7 @@ Output:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://kaizhang16.github.io/note/%E5%B7%A5%E5%85%B7/Windows/</guid>
-      <description>1 快捷键  表 1: Windows 快捷键  快捷键 功能    Alt + Tab 切换应用     2 常用软件  表 2: Windows 常用软件  软件名 功能    7-zip 压缩  Scoop 软件管理  搜狗输入法 输入中文  Total Commander 文件管理     2.1 Scoop 2.1.1 安装 iwr -useb get.scoop.sh | iex 2.1.2 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 2.</description>
+      <description>1 快捷键  表 1: Windows 快捷键  快捷键 功能    Alt + Tab 切换应用     2 常用软件  表 2: Windows 常用软件  软件名 功能    Motrix 下载  7-zip 压缩  Scoop 软件管理  搜狗输入法 输入中文  Total Commander 文件管理     2.1 Scoop 2.1.1 安装 iwr -useb get.scoop.sh | iex 2.1.2 设置代理 scoop config proxy 127.0.0.1:3128 scoop config proxy none # 绕过系统代理 2.</description>
     </item>
     
     <item>

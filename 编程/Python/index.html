@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="1 开发环境 1.1 miniconda 1.1.1 安装 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
-1.1.2 初始化 conda init fish 1.2 格式化 pip install black isort 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2.">
+1.1.2 初始化 conda init fish 1.2 常用库 pip install black isort matplotlib 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Python" />
 <meta property="og:description" content="1 开发环境 1.1 miniconda 1.1.1 安装 从 https://docs.conda.io/en/latest/miniconda.html 下载最新版本。
-1.1.2 初始化 conda init fish 1.2 格式化 pip install black isort 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2." />
+1.1.2 初始化 conda init fish 1.2 常用库 pip install black isort matplotlib 1.3 JupyterLab 1.3.1 安装 pip install jupyterlab pip install jupyterlab_code_formatter 1.3.2 使用 jupyter-lab --no-browser 2 内建函数[1] 2.1 数据类型  表 1: Python 数据类型  数据类型 含义    str 字符串     2.2 运算符  表 2: Python 运算符  运算符 含义 例子    ** 幂 2**3 == 8     2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://kaizhang16.github.io/note/%E7%BC%96%E7%A8%8B/Python/" /><meta property="article:section" content="编程" />
 
@@ -17,7 +17,7 @@
 <link rel="manifest" href="/note/manifest.json">
 <link rel="icon" href="/note/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/note/book.min.34c9a047c1f27a4b55389b94cd3f2fb1df24a54da7c6c83eaf62cced820bf578.css" integrity="sha256-NMmgR8HyektVOJuUzT8vsd8kpU2nxsg&#43;r2LM7YIL9Xg=">
-<script defer src="/note/cn.search.min.5d40e9b5d7c4cea84be2561b275cf4f99d5587258bede8789afef7b0d6916218.js" integrity="sha256-XUDptdfEzqhL4lYbJ1z0&#43;Z1VhyWL7eh4mv73sNaRYhg="></script>
+<script defer src="/note/cn.search.min.1eec25db026ace8f3d8f6ef68735b4fd9f912448120a4993eb6e29800c81e421.js" integrity="sha256-Huwl2wJqzo89j272hzW0/Z&#43;RJEgSCkmT624pgAyB5CE="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -1152,8 +1152,8 @@ https://github.com/alex-shpak/hugo-book
 <p>从 <a href="https://docs.conda.io/en/latest/miniconda.html" class="uri">https://docs.conda.io/en/latest/miniconda.html</a> 下载最新版本。</p>
 <h3 data-number="1.1.2" id="初始化"><span class="header-section-number">1.1.2</span> 初始化</h3>
 <pre class="fish"><code>conda init fish</code></pre>
-<h2 data-number="1.2" id="格式化"><span class="header-section-number">1.2</span> 格式化</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install black isort</span></code></pre></div>
+<h2 data-number="1.2" id="常用库"><span class="header-section-number">1.2</span> 常用库</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install black isort matplotlib</span></code></pre></div>
 <h2 data-number="1.3" id="jupyterlab"><span class="header-section-number">1.3</span> JupyterLab</h2>
 <h3 data-number="1.3.1" id="安装-1"><span class="header-section-number">1.3.1</span> 安装</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install jupyterlab</span>
@@ -1568,7 +1568,7 @@ https://github.com/alex-shpak/hugo-book
   <li><a href="#安装"><span class="toc-section-number">1.1.1</span> 安装</a></li>
   <li><a href="#初始化"><span class="toc-section-number">1.1.2</span> 初始化</a></li>
   </ul></li>
-  <li><a href="#格式化"><span class="toc-section-number">1.2</span> 格式化</a></li>
+  <li><a href="#常用库"><span class="toc-section-number">1.2</span> 常用库</a></li>
   <li><a href="#jupyterlab"><span class="toc-section-number">1.3</span> JupyterLab</a>
   <ul>
   <li><a href="#安装-1"><span class="toc-section-number">1.3.1</span> 安装</a></li>
