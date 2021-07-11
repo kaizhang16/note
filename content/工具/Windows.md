@@ -15,6 +15,7 @@ markup: pandoc
 
 | 软件名          | 功能     |
 |-----------------|----------|
+| Motrix          | 下载     |
 | 7-zip           | 压缩     |
 | Scoop           | 软件管理 |
 | 搜狗输入法      | 输入中文 |
@@ -42,10 +43,12 @@ scoop config proxy none  # 绕过系统代理
 ```ps1
 scoop install broot
 scoop install fd
+scoop install fzf
 scoop install hugo-extended
 scoop install pandoc
 scoop install ripgrep
 scoop install starship
+scoop install zoxide
 scoop install <app>@<version>
 ```
 
